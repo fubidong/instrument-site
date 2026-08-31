@@ -442,16 +442,33 @@ model SiteSetting {
 
 // ============ 素材库（媒体库） ============
 
+model MediaFolder {
+  id        String       @id @default(uuid())
+  name      String
+  parentId  String?
+  createdAt DateTime     @default(now())
+
+  parent      MediaFolder?  @relation("FolderTree", fields: [parentId], references: [id], onDelete: SetNull)
+  children    MediaFolder[] @relation("FolderTree")
+  assets      MediaAsset[]
+
+  @@index([parentId])
+}
+
 model MediaAsset {
-  id        String   @id @default(uuid())
+  id        String       @id @default(uuid())
   filename  String
-  path      String   @unique
+  path      String       @unique
   mimeType  String
-  kind      String   @default("image") // image | doc
+  kind      String       @default("image") // image | doc
   size      Int?
-  category  String   @default("other") // product | brand | doc | news | other
-  createdAt DateTime @default(now())
+  category  String       @default("other") // product | brand | doc | news | other
+  folderId  String?
+  createdAt DateTime     @default(now())
+
+  folder MediaFolder? @relation(fields: [folderId], references: [id], onDelete: SetNull)
 
   @@index([kind, category])
+  @@index([folderId])
   @@index([createdAt])
 }

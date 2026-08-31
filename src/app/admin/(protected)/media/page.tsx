@@ -21,9 +21,9 @@ const KINDS = [
 export default async function MediaPage({
   searchParams,
 }: {
-  searchParams: Promise<{ kind?: string; category?: string; q?: string }>;
+  searchParams: Promise<{ kind?: string; category?: string; q?: string; folder?: string }>;
 }) {
-  const { kind, category, q } = await searchParams;
+  const { kind, category, q, folder } = await searchParams;
 
   const where: any = {};
   if (kind && kind !== "all") where.kind = kind;
@@ -31,10 +31,16 @@ export default async function MediaPage({
   if (q?.trim()) {
     where.filename = { contains: q.trim(), mode: "insensitive" };
   }
+  const folderId = folder || null;
+  // 素材库当前文件夹视图：folder 存在时只显示该文件夹内素材；无 folder 时显示全部
+  // （注意：全部素材视图包含所有，含已归类的）
+  if (folderId) where.folderId = folderId;
 
-  const [assets, counts] = await Promise.all([
+  const [assets, counts, allFolders, folderCounts] = await Promise.all([
     db.mediaAsset.findMany({ where, orderBy: { createdAt: "desc" }, take: 200 }),
     db.mediaAsset.groupBy({ by: ["kind"], _count: true }),
+    db.mediaFolder.findMany({ orderBy: { createdAt: "asc" } }),
+    db.mediaAsset.groupBy({ by: ["folderId"], _count: true }),
   ]);
 
   const kindCounts = {
@@ -42,6 +48,14 @@ export default async function MediaPage({
     doc: counts.find((c) => c.kind === "doc")?._count ?? 0,
   };
   const total = kindCounts.image + kindCounts.doc;
+
+  const countMap = new Map(folderCounts.map((c) => [c.folderId, c._count]));
+  const folders = allFolders.map((f) => ({
+    id: f.id,
+    name: f.name,
+    parentId: f.parentId,
+    assetCount: countMap.get(f.id) ?? 0,
+  }));
 
   return (
     <MediaClient
@@ -51,8 +65,10 @@ export default async function MediaPage({
       currentKind={kind ?? "all"}
       currentCategory={category ?? "all"}
       currentQ={q ?? ""}
+      currentFolderId={folderId}
       categories={CATEGORIES}
       kinds={KINDS}
+      folders={folders}
     />
   );
 }

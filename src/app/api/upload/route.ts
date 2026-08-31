@@ -21,6 +21,7 @@ export async function POST(request: NextRequest) {
   const file = formData.get("file");
   const kind = (formData.get("kind") as string) || "image"; // image | doc
   const category = (formData.get("category") as string) || "other"; // product|brand|doc|news|other
+  const folderId = (formData.get("folderId") as string) || null;
 
   if (!(file instanceof File)) {
     return NextResponse.json({ error: "未找到文件" }, { status: 400 });
@@ -71,6 +72,7 @@ export async function POST(request: NextRequest) {
       kind,
       size: file.size,
       category,
+      folderId,
     },
   });
 
