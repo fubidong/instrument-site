@@ -4,7 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import { db } from "@/lib/db";
 import { t } from "@/lib/site";
 import { routing } from "@/i18n/routing";
-import ProductGrid from "../../products/product-grid";
+import BrandFilterExplorer from "../brand-filter";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -18,21 +18,30 @@ export default async function BrandDetailPage({
   const { locale, code } = await params;
   setRequestLocale(locale);
   const isEn = locale === "en";
-  const brand = await db.brand.findUnique({
-    where: { code },
-    include: {
-      translations: true,
-      productLines: {
-        where: { isActive: true },
-        include: { translations: true },
-        orderBy: { sortOrder: "asc" },
-      },
-    },
-  });
+  const brand =
+    (await db.brand.findUnique({ where: { code }, include: { translations: true } })) ??
+    (await db.brand.findMany({ include: { translations: true } })).find(
+      (b) => b.code.toLowerCase() === code.toLowerCase()
+    ) ??
+    null;
   if (!brand || !brand.isActive) notFound();
 
   const bt = Object.fromEntries(brand.translations.map((tr) => [tr.locale, tr]));
   const brandName = bt[locale]?.name ?? bt["zh"]?.name ?? brand.code;
+
+  // 品牌分类树（含系列统计）
+  const cats = await db.category.findMany({
+    where: { brandId: brand.id },
+    include: {
+      translations: true,
+      productLines: {
+        where: { isActive: true },
+        include: { translations: true, _count: { select: { products: { where: { isActive: true } } } } },
+        orderBy: { sortOrder: "asc" },
+      },
+    },
+    orderBy: { sortOrder: "asc" },
+  });
 
   const products = await db.product.findMany({
     where: { brandId: brand.id, isActive: true },
@@ -43,6 +52,40 @@ export default async function BrandDetailPage({
       },
     },
     orderBy: [{ sortOrder: "asc" }, { model: "asc" }],
+  });
+
+  // 产品计数（按分类）
+  const countByCat = new Map<string, number>();
+  for (const p of products) {
+    countByCat.set(p.categoryId, (countByCat.get(p.categoryId) ?? 0) + 1);
+  }
+  // 顶层品类计数 = 自身 + 所有子孙分类
+  const catById = new Map(cats.map((c) => [c.id, c]));
+  const countWithDescendants = (id: string): number => {
+    let n = countByCat.get(id) ?? 0;
+    for (const c of cats) {
+      if (c.parentId === id) n += countWithDescendants(c.id);
+    }
+    return n;
+  };
+
+  const categories = cats.map((c) => {
+    return {
+      id: c.id,
+      code: c.code,
+      name: t(c.translations, locale, "name") || c.code,
+      parentId: c.parentId,
+      icon: c.icon,
+      count: countWithDescendants(c.id),
+      series: c.productLines
+        .filter((l) => l._count.products > 0)
+        .map((l) => ({
+          id: l.id,
+          code: l.code,
+          name: t(l.translations, locale, "name") || l.code,
+          count: l._count.products,
+        })),
+    };
   });
 
   return (
@@ -95,41 +138,8 @@ export default async function BrandDetailPage({
         )}
       </div>
 
-      {brand.productLines.length > 0 && (
-        <div className="mt-8">
-          <h2 className="mb-3 text-lg font-bold text-slate-900">
-            {isEn ? "Product Series" : "产品系列"}
-          </h2>
-          <div className="flex flex-wrap gap-2">
-            {brand.productLines.map((line) => {
-              const lt = Object.fromEntries(line.translations.map((tr) => [tr.locale, tr]));
-              const cnt = products.filter((p) => p.productLineId === line.id).length;
-              return (
-                <Link
-                  key={line.id}
-                  href={`/products?line=${line.id}`}
-                  className="rounded-md border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 hover:border-sky-300"
-                >
-                  {lt[locale]?.name ?? line.code}
-                  <span className="ml-1 text-xs text-slate-400">({cnt})</span>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      <div className="mt-8">
-        <div className="mb-3 flex items-center justify-between">
-          <h2 className="text-lg font-bold text-slate-900">
-            {isEn ? "Products" : "产品列表"}
-          </h2>
-          <span className="text-sm text-slate-400">
-            {isEn ? `Total ${products.length}` : `共 ${products.length} 款`}
-          </span>
-        </div>
-        <ProductGrid products={products as any} />
-      </div>
+      {/* 品类 → 系列 → 产品 联动筛选 */}
+      <BrandFilterExplorer categories={categories} products={products as any} />
     </div>
   );
 }

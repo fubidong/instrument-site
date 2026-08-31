@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { db } from "@/lib/db";
 import { t } from "@/lib/site";
+import { canonicalParamName } from "@/lib/param-alias";
 
 export const metadata = { title: "产品对比 | 仪器仪表" };
 
@@ -65,7 +66,7 @@ export default async function ComparePage({
   });
   if (products.length === 0) notFound();
 
-  // 按参数名对齐：name -> { groupName, unit, order, values: {productId: value} }
+  // 按参数名对齐（归一化）：name -> { groupName, unit, order, values: {productId: value} }
   type Row = {
     name: string;
     groupName: string;
@@ -77,7 +78,8 @@ export default async function ComparePage({
     // 1. paramValues（结构化，带组）
     for (const pv of p.paramValues) {
       const def = pv.paramDefinition;
-      const nm = t(def.translations, locale, "name") || t(def.translations, "zh", "name") || def.key;
+      const rawNm = t(def.translations, locale, "name") || t(def.translations, "zh", "name") || def.key;
+      const nm = canonicalParamName(rawNm);
       let row = rowMap.get(nm);
       if (!row) {
         const g = def.paramGroup;
@@ -97,10 +99,11 @@ export default async function ComparePage({
     let specRows = parseSpecs(pt?.specsOverview ?? null);
     if (locale === "en") specRows = specRows.filter((r) => !/[\u4e00-\u9fff]/.test(r.name));
     for (const sr of specRows) {
-      let row = rowMap.get(sr.name);
+      const nm = canonicalParamName(sr.name);
+      let row = rowMap.get(nm);
       if (!row) {
-        row = { name: sr.name, groupName: "规格参数", unit: null, values: {} };
-        rowMap.set(sr.name, row);
+        row = { name: nm, groupName: "规格参数", unit: null, values: {} };
+        rowMap.set(nm, row);
       }
       if (row.values[p.id] === undefined) row.values[p.id] = sr.value;
     }

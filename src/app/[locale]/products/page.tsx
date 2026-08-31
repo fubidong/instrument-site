@@ -3,6 +3,7 @@ import { db } from "@/lib/db";
 import { t } from "@/lib/site";
 import { routing } from "@/i18n/routing";
 import ProductFilters from "./product-filters";
+import ProductParamFilter from "./product-param-filter";
 import ProductGrid from "./product-grid";
 
 export function generateStaticParams() {
@@ -240,18 +241,6 @@ export default async function ProductsPage({
             parentId: c.parentId,
           }))}
           currentCategory={currentCategory?.code}
-          filterDefs={filterDefs.map((d) => ({
-            id: d.id,
-            key: d.key,
-            type: d.type,
-            unit: d.unit,
-            options: d.options,
-            name:
-              ((d as any).translations ?? []).find((tr: any) => tr.locale === locale)?.name ??
-              ((d as any).translations ?? [])[0]?.name ??
-              (d as any).key,
-          }))}
-          currentParams={sp}
           brands={brands.map((b) => ({
             id: b.id,
             code: b.code,
@@ -277,6 +266,24 @@ export default async function ProductsPage({
         />
 
         <div className="flex-1">
+          <ProductParamFilter
+            locale={locale}
+            filterDefs={filterDefs.map((d) => ({
+              id: d.id,
+              key: d.key,
+              type: d.type,
+              unit: d.unit,
+              options: d.options,
+              name:
+                ((d as any).translations ?? []).find((tr: any) => tr.locale === locale)?.name ??
+                ((d as any).translations ?? [])[0]?.name ??
+                (d as any).key,
+            }))}
+            currentParams={sp}
+            currentCategory={categoryCode}
+            currentBrand={brandId}
+            currentLine={lineId}
+          />
           <div className="mb-4 flex items-center justify-between gap-3">
             <h1 className="text-xl font-bold text-slate-900">
               {currentCategory ? t(currentCategory.translations, locale, "name") : I.allProducts}
