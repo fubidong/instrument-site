@@ -42,5 +42,7 @@ next-env.d.ts
 
 # runtime logs
 dev-server.log
+# uploaded files (runtime data, not source)
+public/uploads/
 # generated prisma client
 src/generated/
