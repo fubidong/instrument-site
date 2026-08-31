@@ -22,14 +22,23 @@
 **目标**：项目可运行，数据库可连接，基础页面能打开。
 
 **任务清单**：
-- [ ] 创建 Next.js 项目（TypeScript、Tailwind、shadcn/ui、next-intl）
-- [ ] 配置 Prisma + PostgreSQL（本地开发用 Docker 或本地 PG）
-- [ ] 初始化数据库 schema（按 data-model.md 建表）
-- [ ] 配置环境变量（.env.example）
-- [ ] 配置 ESLint + Prettier
-- [ ] 初始化 git 仓库，首次提交
-- [ ] 搭建基础布局（前台 Header/Footer、后台布局）
-- [ ] 首页占位页可访问
+- [x] 创建 Next.js 项目（TypeScript、Tailwind、shadcn/ui、next-intl）
+- [x] 配置 Prisma + PostgreSQL（schema 已设计完成，待 migration）
+- [x] 初始化数据库 schema（按 data-model.md 设计，20+ 张表）
+- [x] 配置环境变量（.env / .env.example）
+- [x] 配置 ESLint + Prettier（Next.js 内置）
+- [x] 初始化 git 仓库，首次提交并推送到 Gitee
+- [x] 安装全部依赖（i18n/ORM/表单/表格/富文本/认证）
+- [x] shadcn/ui 初始化
+- [x] 动态参数系统设计（数据模型 + 架构文档）
+- [x] 启动 PostgreSQL（本地原生安装 PostgreSQL 18.6，服务 postgresql-x64-18，已运行）
+- [x] 执行 prisma migrate dev 建表（migration 20260831035408_init 已应用）
+- [x] 搭建基础布局（前台 Header/Footer、后台布局）【待后续阶段】
+- [x] 首页占位页可访问（http://localhost:3000 返回 200）
+- [x] pnpm dev 启动验证（Ready in 9.3s，HTTP 200）
+- [x] Prisma 7 适配（prisma.config.ts + @prisma/adapter-pg + src/generated/prisma）
+
+> **环境变更记录**：原计划用 Docker 跑 PostgreSQL，因 Docker Desktop 内存占用过高已弃用。改为本地原生安装 PostgreSQL 18.6（服务自动启动，内存占用低）。Docker 相关文件（docker-compose.yml）保留但未使用。
 
 **验收**：
 - `pnpm dev` 启动后，`http://localhost:3000` 可访问
