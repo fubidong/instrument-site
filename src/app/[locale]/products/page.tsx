@@ -61,35 +61,50 @@ export default async function ProductsPage({
   const q = sp.q;
 
   const categories = await db.category.findMany({
+    where: { brandId: null },
     include: { translations: true, children: { include: { translations: true } } },
     orderBy: { sortOrder: "asc" },
   });
+  // 全站品类 → 对应品牌分类（用于聚合筛选）
+  const siteCatToBrandCats = new Map<string, string[]>();
+  const brandCats = await db.category.findMany({ where: { brandId: { not: null } }, select: { id: true, siteCategoryId: true } });
+  for (const bc of brandCats) {
+    if (!bc.siteCategoryId) continue;
+    const arr = siteCatToBrandCats.get(bc.siteCategoryId) ?? [];
+    arr.push(bc.id);
+    siteCatToBrandCats.set(bc.siteCategoryId, arr);
+  }
   const catMap = new Map(categories.map((c) => [c.code, c]));
   let currentCategory = categoryCode ? catMap.get(categoryCode) : undefined;
   let categoryIds: string[] = [];
   if (currentCategory) {
+    // 综合站聚合：该全站品类 + 其子品类 + 对应品牌分类
     categoryIds = [currentCategory.id, ...currentCategory.children.map((c) => c.id)];
+    const brandIdsForSite = categoryIds.flatMap((id) => siteCatToBrandCats.get(id) ?? []);
+    categoryIds.push(...brandIdsForSite);
   }
 
-  // 参数模板建在顶层类别；子类别继承其顶层父类的可筛参数
-  let filterCategoryId = currentCategory?.id;
+  // 参数筛选：综合站用品牌分类的参数定义（产品参数挂在品牌定义上）
+  // 选中全站品类 → 找对应品牌顶层分类 → 取参数定义（按 key 合并）
+  let filterDefs: any[] = [];
   if (currentCategory) {
-    let top = currentCategory as any;
-    let guard = 0;
-    while (top.parentId && guard < 10) {
-      top = categories.find((c) => c.id === top.parentId);
-      if (!top) break;
-      guard++;
-    }
-    filterCategoryId = top.id;
-  }
-  const filterDefs = currentCategory
-    ? await db.paramDefinition.findMany({
-        where: { categoryId: filterCategoryId, isFilterable: true },
+    // 找到该全站品类对应的品牌顶层分类（siteCategoryId 指向该品类、且无 parent）
+    const brandTopCats = brandCats.filter(
+      (bc) => bc.siteCategoryId && categoryIds.includes(bc.siteCategoryId)
+    );
+    const defsById = new Map<string, any>();
+    for (const btc of brandTopCats) {
+      const defs = await db.paramDefinition.findMany({
+        where: { categoryId: btc.id, isFilterable: true },
         include: { translations: true },
         orderBy: { sortOrder: "asc" },
-      })
-    : [];
+      });
+      for (const d of defs) {
+        if (!defsById.has(d.key)) defsById.set(d.key, d);
+      }
+    }
+    filterDefs = [...defsById.values()];
+  }
 
   const filters = parseParamFilters(searchParamsObj, filterDefs);
 
@@ -220,7 +235,10 @@ export default async function ProductsPage({
             type: d.type,
             unit: d.unit,
             options: d.options,
-            name: t(d.translations, locale, "name") || d.key,
+            name:
+              ((d as any).translations ?? []).find((tr: any) => tr.locale === locale)?.name ??
+              ((d as any).translations ?? [])[0]?.name ??
+              (d as any).key,
           }))}
           currentParams={sp}
           brands={brands.map((b) => ({

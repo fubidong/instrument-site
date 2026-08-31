@@ -1,0 +1,6128 @@
+[
+ {
+  "id": 776,
+  "slug": "sds6054-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6054 H10 PRO 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6054-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000 Pro",
+    "slug": "sds6000-pro",
+    "id": 354
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS6054-H10-Pro-1.jpg",
+  "model": "SDS6054 H10 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 777,
+  "slug": "sds6104-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6104 H10 PRO 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6104-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000 Pro",
+    "slug": "sds6000-pro",
+    "id": 354
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS6104-H10-Pro-1.jpg",
+  "model": "SDS6104 H10 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 778,
+  "slug": "sds6204-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6204 H10 PRO 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6204-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000 Pro",
+    "slug": "sds6000-pro",
+    "id": 354
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6204-H10-Pro-1.jpg",
+  "model": "SDS6204 H10 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 775,
+  "slug": "sds6034-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6034 H10 PRO 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6034-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000 Pro",
+    "slug": "sds6000-pro",
+    "id": 354
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS6034-H10-Pro-1.jpg",
+  "model": "SDS6034 H10 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 826,
+  "slug": "sds802x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS802X HD 高清示波器",
+  "link": "https://store.siglent.com/product/sds802x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "SDS800X HD",
+    "slug": "sds800x-hd",
+    "id": 64
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDS802X-HD-2.jpg",
+  "model": "SDS802X HD",
+  "series": "SDS800X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 827,
+  "slug": "sds804x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS804X HD 高清示波器",
+  "link": "https://store.siglent.com/product/sds804x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "SDS800X HD",
+    "slug": "sds800x-hd",
+    "id": 64
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDS804X-HD-4.jpg",
+  "model": "SDS804X HD",
+  "series": "SDS800X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 828,
+  "slug": "sds812x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS812X HD 高清示波器",
+  "link": "https://store.siglent.com/product/sds812x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "SDS800X HD",
+    "slug": "sds800x-hd",
+    "id": 64
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDS812X-HD-3.jpg",
+  "model": "SDS812X HD",
+  "series": "SDS800X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 829,
+  "slug": "sds814x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS814X HD 高清示波器",
+  "link": "https://store.siglent.com/product/sds814x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "SDS800X HD",
+    "slug": "sds800x-hd",
+    "id": 64
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDS814X-HD-3.jpg",
+  "model": "SDS814X HD",
+  "series": "SDS800X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 830,
+  "slug": "sds822x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS822X HD 高清示波器",
+  "link": "https://store.siglent.com/product/sds822x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "SDS800X HD",
+    "slug": "sds800x-hd",
+    "id": 64
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS822X-HD.jpg",
+  "model": "SDS822X HD",
+  "series": "SDS800X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 831,
+  "slug": "sds824x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS824X HD 高清示波器",
+  "link": "https://store.siglent.com/product/sds824x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "SDS800X HD",
+    "slug": "sds800x-hd",
+    "id": 64
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS824X-HD.jpg",
+  "model": "SDS824X HD",
+  "series": "SDS800X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 836,
+  "slug": "sds1204x-c-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1204X-C 数字示波器",
+  "link": "https://store.siglent.com/product/sds1204x-c-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000X-C",
+    "slug": "sds1000x-c",
+    "id": 340
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1204X-C.jpg",
+  "model": "SDS1204X-C",
+  "series": "SDS1000X-C",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 833,
+  "slug": "sds1102x-c-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1102X-C 数字示波器",
+  "link": "https://store.siglent.com/product/sds1102x-c-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000X-C",
+    "slug": "sds1000x-c",
+    "id": 340
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1102X-C-4.jpg",
+  "model": "SDS1102X-C",
+  "series": "SDS1000X-C",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 834,
+  "slug": "sds1202x-c-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1202X-C 数字示波器",
+  "link": "https://store.siglent.com/product/sds1202x-c-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000X-C",
+    "slug": "sds1000x-c",
+    "id": 340
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1202X-C.jpg",
+  "model": "SDS1202X-C",
+  "series": "SDS1000X-C",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 835,
+  "slug": "sds1104x-c-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1104X-C 数字示波器",
+  "link": "https://store.siglent.com/product/sds1104x-c-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000X-C",
+    "slug": "sds1000x-c",
+    "id": 340
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1104X-C.jpg",
+  "model": "SDS1104X-C",
+  "series": "SDS1000X-C",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 820,
+  "slug": "sds1072x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1072X HD 高清示波器",
+  "link": "https://store.siglent.com/product/sds1072x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS1000X HD",
+    "slug": "sds1000x-hd",
+    "id": 339
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1072X-HD.jpg",
+  "model": "SDS1072X HD",
+  "series": "SDS1000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 821,
+  "slug": "sds1074x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1074X HD 高清示波器",
+  "link": "https://store.siglent.com/product/sds1074x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS1000X HD",
+    "slug": "sds1000x-hd",
+    "id": 339
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1074X-HD-1.jpg",
+  "model": "SDS1074X HD",
+  "series": "SDS1000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 822,
+  "slug": "sds1102x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1102X HD 高清示波器",
+  "link": "https://store.siglent.com/product/sds1102x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS1000X HD",
+    "slug": "sds1000x-hd",
+    "id": 339
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1102X-HD.jpg",
+  "model": "SDS1102X HD",
+  "series": "SDS1000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 823,
+  "slug": "sds1104x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1104X HD 高清示波器",
+  "link": "https://store.siglent.com/product/sds1104x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS1000X HD",
+    "slug": "sds1000x-hd",
+    "id": 339
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1104X-HD-1.jpg",
+  "model": "SDS1104X HD",
+  "series": "SDS1000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 824,
+  "slug": "sds1202x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1202X HD 高清示波器",
+  "link": "https://store.siglent.com/product/sds1202x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS1000X HD",
+    "slug": "sds1000x-hd",
+    "id": 339
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1202X-HD.jpg",
+  "model": "SDS1202X HD",
+  "series": "SDS1000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 825,
+  "slug": "sds1204x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1204X HD 高清示波器",
+  "link": "https://store.siglent.com/product/sds1204x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS1000X HD",
+    "slug": "sds1000x-hd",
+    "id": 339
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1204X-HD.jpg",
+  "model": "SDS1204X HD",
+  "series": "SDS1000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 832,
+  "slug": "sds1104x-u-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1104X-U 数字示波器",
+  "link": "https://store.siglent.com/product/sds1104x-u-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1104X-U",
+    "slug": "sds1104x-u",
+    "id": 342
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1104X-U.jpg",
+  "model": "SDS1104X-U",
+  "series": "SDS1104X-U",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 807,
+  "slug": "sds2204x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS2204X HD 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds2204x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS2000X HD",
+    "slug": "sds2000x-hd",
+    "id": 341
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS2204X-HD.jpg",
+  "model": "SDS2204X HD",
+  "series": "SDS2000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 808,
+  "slug": "sds2354x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS2354X HD 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds2354x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS2000X HD",
+    "slug": "sds2000x-hd",
+    "id": 341
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS2354X-HD.jpg",
+  "model": "SDS2354X HD",
+  "series": "SDS2000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 809,
+  "slug": "sds2504x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS2504X HD 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds2504x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS2000X HD",
+    "slug": "sds2000x-hd",
+    "id": 341
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS2504X-HD.jpg",
+  "model": "SDS2504X HD",
+  "series": "SDS2000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 804,
+  "slug": "sds3034x-hd%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS3034X HD高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds3034x-hd%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS3000X HD",
+    "slug": "sds3000x",
+    "id": 27
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS3034X-HD.jpg",
+  "model": "SDS3034X HD",
+  "series": "SDS3000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 805,
+  "slug": "sds3054x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS3054X HD 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds3054x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS3000X HD",
+    "slug": "sds3000x",
+    "id": 27
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS3054X-HD.jpg",
+  "model": "SDS3054X HD",
+  "series": "SDS3000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 806,
+  "slug": "sds3104x-hd%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS3104X HD高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds3104x-hd%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS3000X HD",
+    "slug": "sds3000x",
+    "id": 27
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS3104X-HD.jpg",
+  "model": "SDS3104X HD",
+  "series": "SDS3000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 816,
+  "slug": "sds2352x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS2352X Plus数字示波器",
+  "link": "https://store.siglent.com/product/sds2352x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS2000X Plus",
+    "slug": "sds2000x-plus",
+    "id": 358
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS2352X-Plus.jpg",
+  "model": "SDS2352X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 817,
+  "slug": "sds2354x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS2354X Plus数字示波器",
+  "link": "https://store.siglent.com/product/sds2354x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS2000X Plus",
+    "slug": "sds2000x-plus",
+    "id": 358
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS2354X-Plus.jpg",
+  "model": "SDS2354X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 818,
+  "slug": "sds2502x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS2502X Plus数字示波器",
+  "link": "https://store.siglent.com/product/sds2502x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS2000X Plus",
+    "slug": "sds2000x-plus",
+    "id": 358
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS2502X-Plus.jpg",
+  "model": "SDS2502X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 819,
+  "slug": "sds2504x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS2504X Plus数字示波器",
+  "link": "https://store.siglent.com/product/sds2504x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS2000X Plus",
+    "slug": "sds2000x-plus",
+    "id": 358
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS2504X-Plus.jpg",
+  "model": "SDS2504X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 810,
+  "slug": "sds2072x-plus",
+  "title": "SDS2072X Plus 数字示波器",
+  "link": "https://store.siglent.com/product/sds2072x-plus/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS2000X Plus",
+    "slug": "sds2000x-plus",
+    "id": 358
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS2072X-Plus.jpg",
+  "model": "SDS2072X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 811,
+  "slug": "sds2074x-plus-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS2074X Plus 数字示波器",
+  "link": "https://store.siglent.com/product/sds2074x-plus-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS2000X Plus",
+    "slug": "sds2000x-plus",
+    "id": 358
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS2074X-Plus.jpg",
+  "model": "SDS2074X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 812,
+  "slug": "sds2102x-plus-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS2102X Plus 数字示波器",
+  "link": "https://store.siglent.com/product/sds2102x-plus-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS2000X Plus",
+    "slug": "sds2000x-plus",
+    "id": 358
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS2102X-Plus.jpg",
+  "model": "SDS2102X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 813,
+  "slug": "sds2104x-plus-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS2104X Plus 数字示波器",
+  "link": "https://store.siglent.com/product/sds2104x-plus-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS2000X Plus",
+    "slug": "sds2000x-plus",
+    "id": 358
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS2104X-Plus.jpg",
+  "model": "SDS2104X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 814,
+  "slug": "sds2202x-plus-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS2202X Plus 数字示波器",
+  "link": "https://store.siglent.com/product/sds2202x-plus-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS2000X Plus",
+    "slug": "sds2000x-plus",
+    "id": 358
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS2202X-Plus.jpg",
+  "model": "SDS2202X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 815,
+  "slug": "sds2204x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS2204X Plus数字示波器",
+  "link": "https://store.siglent.com/product/sds2204x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS2000X Plus",
+    "slug": "sds2000x-plus",
+    "id": 358
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS2204X-Plus.jpg",
+  "model": "SDS2204X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 837,
+  "slug": "sds1072x-e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1072X-E 数字示波器",
+  "link": "https://store.siglent.com/product/sds1072x-e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000X-E",
+    "slug": "sds1000x-e",
+    "id": 359
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1072X-E.jpg",
+  "model": "SDS1072X-E",
+  "series": "SDS1000X-E",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 839,
+  "slug": "sds1202x-e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1202X-E 数字示波器",
+  "link": "https://store.siglent.com/product/sds1202x-e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000X-E",
+    "slug": "sds1000x-e",
+    "id": 359
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1202X-E.jpg",
+  "model": "SDS1202X-E",
+  "series": "SDS1000X-E",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 840,
+  "slug": "sds1074x-e%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1074X-E数字示波器",
+  "link": "https://store.siglent.com/product/sds1074x-e%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000X-E",
+    "slug": "sds1000x-e",
+    "id": 359
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1074X-E.jpg",
+  "model": "SDS1074X-E",
+  "series": "SDS1000X-E",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 841,
+  "slug": "sds1104x-e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1104X-E 数字示波器",
+  "link": "https://store.siglent.com/product/sds1104x-e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000X-E",
+    "slug": "sds1000x-e",
+    "id": 359
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1104X-E.jpg",
+  "model": "SDS1104X-E",
+  "series": "SDS1000X-E",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 842,
+  "slug": "sds1204x-e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1204X-E 数字示波器",
+  "link": "https://store.siglent.com/product/sds1204x-e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000X-E",
+    "slug": "sds1000x-e",
+    "id": 359
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1204X-E.jpg",
+  "model": "SDS1204X-E",
+  "series": "SDS1000X-E",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 843,
+  "slug": "sds1122e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1122E+ 数字示波器",
+  "link": "https://store.siglent.com/product/sds1122e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000E+/F+",
+    "slug": "sds1000e-f",
+    "id": 360
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1122E.jpg",
+  "model": "SDS1122E+",
+  "series": "SDS1000E+/F+",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 844,
+  "slug": "sds1202f-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1202F+ 数字示波器",
+  "link": "https://store.siglent.com/product/sds1202f-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000E+/F+",
+    "slug": "sds1000e-f",
+    "id": 360
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1202F.jpg",
+  "model": "SDS1202F+",
+  "series": "SDS1000E+/F+",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 845,
+  "slug": "sds1102cnl-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1102CNL+ 数字示波器",
+  "link": "https://store.siglent.com/product/sds1102cnl-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000CNL+/DL+",
+    "slug": "sds1000cnl-dl",
+    "id": 361
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1102CNL.jpg",
+  "model": "SDS1102CNL+",
+  "series": "SDS1000CNL+/DL+",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 846,
+  "slug": "sds1102dl-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1102DL+ 数字示波器",
+  "link": "https://store.siglent.com/product/sds1102dl-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000CNL+/DL+",
+    "slug": "sds1000cnl-dl",
+    "id": 361
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1102DL.jpg",
+  "model": "SDS1102DL+",
+  "series": "SDS1000CNL+/DL+",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 847,
+  "slug": "sds1202dl-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1202DL+ 数字示波器",
+  "link": "https://store.siglent.com/product/sds1202dl-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000CNL+/DL+",
+    "slug": "sds1000cnl-dl",
+    "id": 361
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1202DL.jpg",
+  "model": "SDS1202DL+",
+  "series": "SDS1000CNL+/DL+",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 848,
+  "slug": "sds1052a-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1052A 数字示波器",
+  "link": "https://store.siglent.com/product/sds1052a-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000A",
+    "slug": "sds1000a",
+    "id": 362
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1052A.jpg",
+  "model": "SDS1052A",
+  "series": "SDS1000A",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 849,
+  "slug": "sds1072a%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1072A数字示波器",
+  "link": "https://store.siglent.com/product/sds1072a%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000A",
+    "slug": "sds1000a",
+    "id": 362
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1072A.jpg",
+  "model": "SDS1072A",
+  "series": "SDS1000A",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 850,
+  "slug": "sds1102a-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1102A 数字示波器",
+  "link": "https://store.siglent.com/product/sds1102a-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000A",
+    "slug": "sds1000a",
+    "id": 362
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1102A.jpg",
+  "model": "SDS1102A",
+  "series": "SDS1000A",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 851,
+  "slug": "sds1152a-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS1152A 数字示波器",
+  "link": "https://store.siglent.com/product/sds1152a-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS1000A",
+    "slug": "sds1000a",
+    "id": 362
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS1152A.jpg",
+  "model": "SDS1152A",
+  "series": "SDS1000A",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 856,
+  "slug": "shs810x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SHS810X 手持示波器",
+  "link": "https://store.siglent.com/product/shs810x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "SHS800X",
+    "slug": "shs800x",
+    "id": 364
+   },
+   {
+    "name": "手持示波表",
+    "slug": "%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e8%a1%a8",
+    "id": 125
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SHS810X-2.jpg",
+  "model": "SHS810X",
+  "series": "SHS800X",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 857,
+  "slug": "shs820x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SHS820X 手持示波器",
+  "link": "https://store.siglent.com/product/shs820x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "SHS800X",
+    "slug": "shs800x",
+    "id": 364
+   },
+   {
+    "name": "手持示波表",
+    "slug": "%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e8%a1%a8",
+    "id": 125
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SHS820X-2.jpg",
+  "model": "SHS820X",
+  "series": "SHS800X",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 855,
+  "slug": "shs807x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SHS807X 手持示波器",
+  "link": "https://store.siglent.com/product/shs807x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "SHS800X",
+    "slug": "shs800x",
+    "id": 364
+   },
+   {
+    "name": "手持示波表",
+    "slug": "%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e8%a1%a8",
+    "id": 125
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SHS807X-3.jpg",
+  "model": "SHS807X",
+  "series": "SHS800X",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 852,
+  "slug": "shs1072x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SHS1072X 手持示波器",
+  "link": "https://store.siglent.com/product/shs1072x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "SHS1000X",
+    "slug": "shs1000x",
+    "id": 363
+   },
+   {
+    "name": "手持示波表",
+    "slug": "%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e8%a1%a8",
+    "id": 125
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SHS1072X-3.jpg",
+  "model": "SHS1072X",
+  "series": "SHS1000X",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 853,
+  "slug": "shs1102x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SHS1102X 手持示波器",
+  "link": "https://store.siglent.com/product/shs1102x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "SHS1000X",
+    "slug": "shs1000x",
+    "id": 363
+   },
+   {
+    "name": "手持示波表",
+    "slug": "%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e8%a1%a8",
+    "id": 125
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SHS1102X-2.jpg",
+  "model": "SHS1102X",
+  "series": "SHS1000X",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 854,
+  "slug": "shs1202x%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SHS1202X手持示波器",
+  "link": "https://store.siglent.com/product/shs1202x%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "SHS800X",
+    "slug": "shs800x",
+    "id": 364
+   },
+   {
+    "name": "手持示波表",
+    "slug": "%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e8%a1%a8",
+    "id": 125
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SHS1202X-2.jpg",
+  "model": "SHS1202X",
+  "series": "SHS1000X",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 779,
+  "slug": "sds6034-h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6034 H12 PRO 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6034-h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000 Pro",
+    "slug": "sds6000-pro",
+    "id": 354
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS6034-H12-Pro.jpg",
+  "model": "SDS6034 H12 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 781,
+  "slug": "sds6104-h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6104 H12 PRO 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6104-h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000 Pro",
+    "slug": "sds6000-pro",
+    "id": 354
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS6104-H12-Pro.jpg",
+  "model": "SDS6104 H12 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 782,
+  "slug": "sds6204h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6204 H12 PRO 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6204h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000 Pro",
+    "slug": "sds6000-pro",
+    "id": 354
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS6204-H12-Pro.jpg",
+  "model": "SDS6204 H12 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 783,
+  "slug": "sds6058-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6058 H10 PRO 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6058-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000 Pro",
+    "slug": "sds6000-pro",
+    "id": 354
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6058-H10-Pro-1.jpg",
+  "model": "SDS6058 H10 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 784,
+  "slug": "sds6108-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6108 H10 Pro 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6108-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000 Pro",
+    "slug": "sds6000-pro",
+    "id": 354
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6108-H10-Pro-1.jpg",
+  "model": "SDS6108 H10 Pro",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 785,
+  "slug": "sds6208-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6208 H10 Pro 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6208-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000 Pro",
+    "slug": "sds6000-pro",
+    "id": 354
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6208-H10-Pro-1.jpg",
+  "model": "SDS6208 H10 Pro",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 786,
+  "slug": "sds6058-h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6058 H12 PRO 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6058-h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000 Pro",
+    "slug": "sds6000-pro",
+    "id": 354
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6058-H12-Pro-1.jpg",
+  "model": "SDS6058 H12 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 787,
+  "slug": "sds6108-h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6108 H12 Pro 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6108-h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000L",
+    "slug": "sds6000l",
+    "id": 353
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6108-H12-Pro-1.jpg",
+  "model": "SDS6108 H12 Pro",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 788,
+  "slug": "sds6208-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8-2",
+  "title": "SDS6208 H12 Pro 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6208-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8-2/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000 Pro",
+    "slug": "sds6000-pro",
+    "id": 354
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6208-H12-Pro-1.jpg",
+  "model": "SDS6208 H12 Pro",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 796,
+  "slug": "sds5058x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5058X HD 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds5058x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS5000X HD",
+    "slug": "sds5000x-hd",
+    "id": 355
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS5058X-HD-1.jpg",
+  "model": "SDS5058X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 797,
+  "slug": "sds5108x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5108X HD 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds5108x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS5000X HD",
+    "slug": "sds5000x-hd",
+    "id": 355
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS5108X-HD-1.jpg",
+  "model": "SDS5108X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 789,
+  "slug": "sds5034x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5034X HD 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds5034x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS5000X HD",
+    "slug": "sds5000x-hd",
+    "id": 355
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5034X-HD-2.jpg",
+  "model": "SDS5034X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 790,
+  "slug": "sds5054x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5054X HD 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds5054x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS5000X HD",
+    "slug": "sds5000x-hd",
+    "id": 355
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS5054X-HD-1.jpg",
+  "model": "SDS5054X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 791,
+  "slug": "sds5104x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5104X HD 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds5104x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS5000X HD",
+    "slug": "sds5000x-hd",
+    "id": 355
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS5104X-HD-1.jpg",
+  "model": "SDS5104X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 792,
+  "slug": "sds5036x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5036X HD 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds5036x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS5000X HD",
+    "slug": "sds5000x-hd",
+    "id": 355
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5036X-HD-3.jpg",
+  "model": "SDS5036X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 793,
+  "slug": "sds5056x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5056X HD 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds5056x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS5000X HD",
+    "slug": "sds5000x-hd",
+    "id": 355
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS5056X-HD-1.jpg",
+  "model": "SDS5056X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 794,
+  "slug": "sds5106x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5106X HD 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds5106x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS5000X HD",
+    "slug": "sds5000x-hd",
+    "id": 355
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS5106X-HD-1.jpg",
+  "model": "SDS5106X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 795,
+  "slug": "sds5038x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5038X HD 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds5038x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS5000X HD",
+    "slug": "sds5000x-hd",
+    "id": 355
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5038X-HD-2.jpg",
+  "model": "SDS5038X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 798,
+  "slug": "sds5038l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5038L 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds5038l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS5000L",
+    "slug": "sds5000l",
+    "id": 356
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS5038L.jpg",
+  "model": "SDS5038L",
+  "series": "SDS5000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 799,
+  "slug": "sds5058l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5058L 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds5058l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS5000L",
+    "slug": "sds5000l",
+    "id": 356
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS5058L.jpg",
+  "model": "SDS5058L",
+  "series": "SDS5000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 800,
+  "slug": "sds5108l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5108L 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds5108l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS5000L",
+    "slug": "sds5000l",
+    "id": 356
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS5108L.jpg",
+  "model": "SDS5108L",
+  "series": "SDS5000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 801,
+  "slug": "sds5034x-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5034X 数字示波器",
+  "link": "https://store.siglent.com/product/sds5034x-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS5000X",
+    "slug": "sds5000x",
+    "id": 26
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS5034X.jpg",
+  "model": "SDS5034X",
+  "series": "SDS5000X",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 802,
+  "slug": "sds5054x-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5054X 数字示波器",
+  "link": "https://store.siglent.com/product/sds5054x-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS5000X",
+    "slug": "sds5000x",
+    "id": 26
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS5054X.jpg",
+  "model": "SDS5054X",
+  "series": "SDS5000X",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 803,
+  "slug": "sds5104x-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS5104X 数字示波器",
+  "link": "https://store.siglent.com/product/sds5104x-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "数字示波器",
+    "slug": "%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 22
+   },
+   {
+    "name": "SDS5000X",
+    "slug": "sds5000x",
+    "id": 26
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDS5104X.jpg",
+  "model": "SDS5104X",
+  "series": "SDS5000X",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 764,
+  "slug": "sds6104l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6104L H10 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6104l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000L",
+    "slug": "sds6000l",
+    "id": 353
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6104L-H10-1.jpg",
+  "model": "SDS6104L H10",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 765,
+  "slug": "sds6054l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6054L H10 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6054l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000L",
+    "slug": "sds6000l",
+    "id": 353
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6054L-H10-1.jpg",
+  "model": "SDS6054L H10",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 766,
+  "slug": "sds6204l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6204L H12 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6204l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000L",
+    "slug": "sds6000l",
+    "id": 353
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6204L-H12-2.jpg",
+  "model": "SDS6204L H12",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 767,
+  "slug": "sds6104l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6104L H12 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6104l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000L",
+    "slug": "sds6000l",
+    "id": 353
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6104L-H12-1.jpg",
+  "model": "SDS6104L H12",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 768,
+  "slug": "sds6054l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6054L H12 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6054l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000L",
+    "slug": "sds6000l",
+    "id": 353
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6054L-H12-1.jpg",
+  "model": "SDS6054L H12",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 769,
+  "slug": "sds6208l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6208L H10 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6208l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000L",
+    "slug": "sds6000l",
+    "id": 353
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6208L-H10-1.jpg",
+  "model": "SDS6208L H10",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 770,
+  "slug": "sds6108l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6108L H10 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6108l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000L",
+    "slug": "sds6000l",
+    "id": 353
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6108L-H10-1.jpg",
+  "model": "SDS6108L H10",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 771,
+  "slug": "sds6058l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6058L H10 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6058l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000L",
+    "slug": "sds6000l",
+    "id": 353
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6058L-H10-1.jpg",
+  "model": "SDS6058L H10",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 772,
+  "slug": "sds6208l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6208L H12 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6208l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000L",
+    "slug": "sds6000l",
+    "id": 353
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6208L-H12-1.jpg",
+  "model": "SDS6208L H12",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 773,
+  "slug": "sds6108l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6108L H12 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6108l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000L",
+    "slug": "sds6000l",
+    "id": 353
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6108L-H12-1.jpg",
+  "model": "SDS6108L H12",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 774,
+  "slug": "sds6058l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6058L H12 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6058l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000L",
+    "slug": "sds6000l",
+    "id": 353
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6058L-H12-1.jpg",
+  "model": "SDS6058L H12",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 756,
+  "slug": "sds7204a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS7204A H12 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds7204a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS7000A",
+    "slug": "sds7000a-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 352
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS7204A-H12-1.jpg",
+  "model": "SDS7204A H12",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 757,
+  "slug": "sds7304a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS7304A H12 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds7304a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS7000A",
+    "slug": "sds7000a-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 352
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS7304A-H12-1.jpg",
+  "model": "SDS7304A H12",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 758,
+  "slug": "sds7404a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS7404A H12 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds7404a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS7000A",
+    "slug": "sds7000a-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 352
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS7404A-H12-1.jpg",
+  "model": "SDS7404A H12",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 759,
+  "slug": "sds7604a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS7604A H12 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds7604a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS7000A",
+    "slug": "sds7000a-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 352
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS7604A-H12-1.jpg",
+  "model": "SDS7604A H12",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 760,
+  "slug": "sds7804a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS7804A H12 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds7804a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS7000A",
+    "slug": "sds7000a-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 352
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS7804A-H12-1.jpg",
+  "model": "SDS7804A H12",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 761,
+  "slug": "sds7604ap-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS7604AP 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds7604ap-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS7000A",
+    "slug": "sds7000a-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 352
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS7604AP-1.jpg",
+  "model": "SDS7604AP",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 762,
+  "slug": "sds7804ap-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS7804AP 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds7804ap-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS7000A",
+    "slug": "sds7000a-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 352
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS7804AP-1.jpg",
+  "model": "SDS7804AP",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 763,
+  "slug": "sds6204l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS6204L H10 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds6204l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS6000L",
+    "slug": "sds6000l",
+    "id": 353
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6204L-H10-1.jpg",
+  "model": "SDS6204L H10",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 862,
+  "slug": "ssg5040x-%e5%b0%84%e9%a2%91%e6%a8%a1%e6%8b%9f-%e7%9f%a2%e9%87%8f%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+  "title": "SSG5040X 射频模拟/矢量信号发生器",
+  "link": "https://store.siglent.com/product/ssg5040x-%e5%b0%84%e9%a2%91%e6%a8%a1%e6%8b%9f-%e7%9f%a2%e9%87%8f%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/",
+  "cats": [
+   {
+    "name": "模拟源",
+    "slug": "%e6%a8%a1%e6%8b%9f%e6%ba%90",
+    "id": 132
+   },
+   {
+    "name": "SSG5000X",
+    "slug": "ssg5000x",
+    "id": 367
+   },
+   {
+    "name": "射频/微波信号发生器",
+    "slug": "%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 131
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SSG5040X.jpg",
+  "model": "SSG5040X",
+  "series": "SSG5000X",
+  "line": "RF_GEN"
+ },
+ {
+  "id": 863,
+  "slug": "ssg5060x-%e5%b0%84%e9%a2%91%e6%a8%a1%e6%8b%9f-%e7%9f%a2%e9%87%8f%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+  "title": "SSG5060X 射频模拟/矢量信号发生器",
+  "link": "https://store.siglent.com/product/ssg5060x-%e5%b0%84%e9%a2%91%e6%a8%a1%e6%8b%9f-%e7%9f%a2%e9%87%8f%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/",
+  "cats": [
+   {
+    "name": "模拟源",
+    "slug": "%e6%a8%a1%e6%8b%9f%e6%ba%90",
+    "id": 132
+   },
+   {
+    "name": "SSG5000X",
+    "slug": "ssg5000x",
+    "id": 367
+   },
+   {
+    "name": "射频/微波信号发生器",
+    "slug": "%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 131
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SSG5060X.jpg",
+  "model": "SSG5060X",
+  "series": "SSG5000X",
+  "line": "RF_GEN"
+ },
+ {
+  "id": 864,
+  "slug": "ssg5040x-v-%e5%b0%84%e9%a2%91%e6%a8%a1%e6%8b%9f-%e7%9f%a2%e9%87%8f%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+  "title": "SSG5040X-V 射频模拟/矢量信号发生器",
+  "link": "https://store.siglent.com/product/ssg5040x-v-%e5%b0%84%e9%a2%91%e6%a8%a1%e6%8b%9f-%e7%9f%a2%e9%87%8f%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/",
+  "cats": [
+   {
+    "name": "矢量源",
+    "slug": "%e7%9f%a2%e9%87%8f%e6%ba%90",
+    "id": 135
+   },
+   {
+    "name": "SSG5000X",
+    "slug": "ssg5000x-%e7%9f%a2%e9%87%8f%e6%ba%90",
+    "id": 368
+   },
+   {
+    "name": "射频/微波信号发生器",
+    "slug": "%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 131
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SSG5040X-V.jpg",
+  "model": "SSG5040X-V",
+  "series": "SSG5000X",
+  "line": "RF_GEN"
+ },
+ {
+  "id": 865,
+  "slug": "ssg5060x-v-%e5%b0%84%e9%a2%91%e6%a8%a1%e6%8b%9f-%e7%9f%a2%e9%87%8f%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+  "title": "SSG5060X-V 射频模拟/矢量信号发生器",
+  "link": "https://store.siglent.com/product/ssg5060x-v-%e5%b0%84%e9%a2%91%e6%a8%a1%e6%8b%9f-%e7%9f%a2%e9%87%8f%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/",
+  "cats": [
+   {
+    "name": "矢量源",
+    "slug": "%e7%9f%a2%e9%87%8f%e6%ba%90",
+    "id": 135
+   },
+   {
+    "name": "SSG5000X",
+    "slug": "ssg5000x-%e7%9f%a2%e9%87%8f%e6%ba%90",
+    "id": 368
+   },
+   {
+    "name": "射频/微波信号发生器",
+    "slug": "%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 131
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SSG5060X-V.jpg",
+  "model": "SSG5060X-V",
+  "series": "SSG5000X",
+  "line": "RF_GEN"
+ },
+ {
+  "id": 866,
+  "slug": "ssg5083a-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+  "title": "SSG5083A 微波信号发生器",
+  "link": "https://store.siglent.com/product/ssg5083a-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/",
+  "cats": [
+   {
+    "name": "模拟源",
+    "slug": "%e6%a8%a1%e6%8b%9f%e6%ba%90",
+    "id": 132
+   },
+   {
+    "name": "射频/微波信号发生器",
+    "slug": "%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 131
+   },
+   {
+    "name": "SSG5000A",
+    "slug": "ssg5000a",
+    "id": 369
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SSG5083A-2.jpg",
+  "model": "SSG5083A",
+  "series": "SSG5000A",
+  "line": "RF_GEN"
+ },
+ {
+  "id": 867,
+  "slug": "ssg5085a-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+  "title": "SSG5085A 微波信号发生器",
+  "link": "https://store.siglent.com/product/ssg5085a-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/",
+  "cats": [
+   {
+    "name": "模拟源",
+    "slug": "%e6%a8%a1%e6%8b%9f%e6%ba%90",
+    "id": 132
+   },
+   {
+    "name": "射频/微波信号发生器",
+    "slug": "%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 131
+   },
+   {
+    "name": "SSG5000A",
+    "slug": "ssg5000a",
+    "id": 369
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SSG5085A-2.jpg",
+  "model": "SSG5085A",
+  "series": "SSG5000A",
+  "line": "RF_GEN"
+ },
+ {
+  "id": 868,
+  "slug": "ssg6083a-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+  "title": "SSG6083A 射频/微波信号发生器",
+  "link": "https://store.siglent.com/product/ssg6083a-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/",
+  "cats": [
+   {
+    "name": "模拟源",
+    "slug": "%e6%a8%a1%e6%8b%9f%e6%ba%90",
+    "id": 132
+   },
+   {
+    "name": "射频/微波信号发生器",
+    "slug": "%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 131
+   },
+   {
+    "name": "SSG6000A",
+    "slug": "ssg6000a",
+    "id": 370
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SSG6083A-1.jpg",
+  "model": "SSG6083A",
+  "series": "SSG6000A",
+  "line": "RF_GEN"
+ },
+ {
+  "id": 869,
+  "slug": "ssg6085a-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+  "title": "SSG6085A 射频/微波信号发生器",
+  "link": "https://store.siglent.com/product/ssg6085a-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/",
+  "cats": [
+   {
+    "name": "模拟源",
+    "slug": "%e6%a8%a1%e6%8b%9f%e6%ba%90",
+    "id": 132
+   },
+   {
+    "name": "射频/微波信号发生器",
+    "slug": "%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 131
+   },
+   {
+    "name": "SSG6000A",
+    "slug": "ssg6000a",
+    "id": 370
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SSG6085A-1.jpg",
+  "model": "SSG6085A",
+  "series": "SSG6000A",
+  "line": "RF_GEN"
+ },
+ {
+  "id": 870,
+  "slug": "ssg6087a-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+  "title": "SSG6087A 射频/微波信号发生器",
+  "link": "https://store.siglent.com/product/ssg6087a-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/",
+  "cats": [
+   {
+    "name": "模拟源",
+    "slug": "%e6%a8%a1%e6%8b%9f%e6%ba%90",
+    "id": 132
+   },
+   {
+    "name": "射频/微波信号发生器",
+    "slug": "%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 131
+   },
+   {
+    "name": "SSG6000A",
+    "slug": "ssg6000a",
+    "id": 370
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SSG6087A-1.jpg",
+  "model": "SSG6087A",
+  "series": "SSG6000A",
+  "line": "RF_GEN"
+ },
+ {
+  "id": 871,
+  "slug": "ssg6089a-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+  "title": "SSG6089A 射频/微波信号发生器",
+  "link": "https://store.siglent.com/product/ssg6089a-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/",
+  "cats": [
+   {
+    "name": "模拟源",
+    "slug": "%e6%a8%a1%e6%8b%9f%e6%ba%90",
+    "id": 132
+   },
+   {
+    "name": "射频/微波信号发生器",
+    "slug": "%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 131
+   },
+   {
+    "name": "SSG6000A",
+    "slug": "ssg6000a",
+    "id": 370
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SSG6089A-1.jpg",
+  "model": "SSG6089A",
+  "series": "SSG6000A",
+  "line": "RF_GEN"
+ },
+ {
+  "id": 872,
+  "slug": "ssg6082a-v-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+  "title": "SSG6082A-V 射频/微波信号发生器",
+  "link": "https://store.siglent.com/product/ssg6082a-v-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/",
+  "cats": [
+   {
+    "name": "矢量源",
+    "slug": "%e7%9f%a2%e9%87%8f%e6%ba%90",
+    "id": 135
+   },
+   {
+    "name": "射频/微波信号发生器",
+    "slug": "%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 131
+   },
+   {
+    "name": "SSG6082A-V",
+    "slug": "ssg6082a-v",
+    "id": 371
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SSG6082A-V-2.jpg",
+  "model": "SSG6082A-V",
+  "series": "SSG6082A-V",
+  "line": "RF_GEN"
+ },
+ {
+  "id": 876,
+  "slug": "sdg1032x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG1032X 函数任意波形发生器信号源",
+  "link": "https://store.siglent.com/product/sdg1032x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG1000X",
+    "slug": "sdg1000x",
+    "id": 373
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG1032X.jpg",
+  "model": "SDG1032X",
+  "series": "SDG1000X",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 877,
+  "slug": "sdg1062x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG1062X 函数任意波形发生器信号源",
+  "link": "https://store.siglent.com/product/sdg1062x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG1000X",
+    "slug": "sdg1000x",
+    "id": 373
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG1062X.jpg",
+  "model": "SDG1062X",
+  "series": "SDG1000X",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 875,
+  "slug": "sdg1022x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG1022X 函数任意波形发生器信号源",
+  "link": "https://store.siglent.com/product/sdg1022x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG1000X",
+    "slug": "sdg1000x",
+    "id": 373
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG1022X.jpg",
+  "model": "SDG1022X",
+  "series": "SDG1000X",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 878,
+  "slug": "sdg1022x-plus-%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG1022X Plus 波形发生器信号源",
+  "link": "https://store.siglent.com/product/sdg1022x-plus-%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG1000X Plus",
+    "slug": "sdg1000x-plus",
+    "id": 374
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG1022X-Plus.jpg",
+  "model": "SDG1022X Plus",
+  "series": "SDG1000X Plus",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 879,
+  "slug": "sdg1032x-plus-%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG1032X Plus 波形发生器信号源",
+  "link": "https://store.siglent.com/product/sdg1032x-plus-%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG1000X Plus",
+    "slug": "sdg1000x-plus",
+    "id": 374
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG1032X-Plus.jpg",
+  "model": "SDG1032X Plus",
+  "series": "SDG1000X Plus",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 880,
+  "slug": "sdg1062x-plus-%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG1062X Plus 波形发生器信号源",
+  "link": "https://store.siglent.com/product/sdg1062x-plus-%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG1000X Plus",
+    "slug": "sdg1000x-plus",
+    "id": 374
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG1062X-Plus.jpg",
+  "model": "SDG1062X Plus",
+  "series": "SDG1000X Plus",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 928,
+  "slug": "ssa3032x-r-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SSA3032X-R 频谱分析仪",
+  "link": "https://store.siglent.com/product/ssa3032x-r-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "SSA3000X-R",
+    "slug": "ssa3000x-r",
+    "id": 387
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SSA3032X-R.jpg",
+  "model": "SSA3032X-R",
+  "series": "SSA3000X-R",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 929,
+  "slug": "ssa3050x-r-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SSA3050X-R 频谱分析仪",
+  "link": "https://store.siglent.com/product/ssa3050x-r-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "SSA3000X-R",
+    "slug": "ssa3000x-r",
+    "id": 387
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SSA3050X-R.jpg",
+  "model": "SSA3050X-R",
+  "series": "SSA3000X-R",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 930,
+  "slug": "ssa3075x-r-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SSA3075X-R 频谱分析仪",
+  "link": "https://store.siglent.com/product/ssa3075x-r-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "SSA3000X-R",
+    "slug": "ssa3000x-r",
+    "id": 387
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SSA3075X-R.jpg",
+  "model": "SSA3075X-R",
+  "series": "SSA3000X-R",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 882,
+  "slug": "sdg2082x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG2082X 函数任意波形发生器信号源",
+  "link": "https://store.siglent.com/product/sdg2082x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG2000X",
+    "slug": "sdg2000x",
+    "id": 375
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG2082X.jpg",
+  "model": "SDG2082X",
+  "series": "SDG2000X",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 883,
+  "slug": "sdg2122x%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG2122X函数任意波形发生器信号源",
+  "link": "https://store.siglent.com/product/sdg2122x%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG2000X",
+    "slug": "sdg2000x",
+    "id": 375
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG2122X.jpg",
+  "model": "SDG2122X",
+  "series": "SDG2000X",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 931,
+  "slug": "ssa5083a-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SSA5083A 频谱分析仪",
+  "link": "https://store.siglent.com/product/ssa5083a-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   },
+   {
+    "name": "SSA5000A",
+    "slug": "ssa5000a",
+    "id": 388
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SSA5083A-1.jpg",
+  "model": "SSA5083A",
+  "series": "SSA5000A",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 932,
+  "slug": "ssa5085a-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SSA5085A 频谱分析仪",
+  "link": "https://store.siglent.com/product/ssa5085a-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   },
+   {
+    "name": "SSA5000A",
+    "slug": "ssa5000a",
+    "id": 388
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SSA5083A-1.jpg",
+  "model": "SSA5085A",
+  "series": "SSA5000A",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 884,
+  "slug": "sdg3202x%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG3202X函数任意波形发生器信号源",
+  "link": "https://store.siglent.com/product/sdg3202x%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG3000X",
+    "slug": "sdg3000x",
+    "id": 376
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG3202X.jpg",
+  "model": "SDG3202X",
+  "series": "SDG3000X",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 5590,
+  "slug": "sdg3082x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG3082X 函数任意波形发生器信号源",
+  "link": "https://store.siglent.com/product/sdg3082x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG3000X",
+    "slug": "sdg3000x",
+    "id": 376
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG3082X.jpg",
+  "model": "SDG3082X",
+  "series": "SDG3000X",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 5595,
+  "slug": "sdg3162x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG3162X 函数任意波形发生器信号源",
+  "link": "https://store.siglent.com/product/sdg3162x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG3000X",
+    "slug": "sdg3000x",
+    "id": 376
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG3162X.jpg",
+  "model": "SDG3162X",
+  "series": "SDG3000X",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 933,
+  "slug": "ssa6088a-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SSA6088A 频谱分析仪",
+  "link": "https://store.siglent.com/product/ssa6088a-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   },
+   {
+    "name": "SSA6000A",
+    "slug": "ssa6000a",
+    "id": 389
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SSA6088A-1.jpg",
+  "model": "SSA6088A",
+  "series": "SSA6000A",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 887,
+  "slug": "sdg6012x-e-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG6012X-E 函数任意波形发生器脉冲信号源",
+  "link": "https://store.siglent.com/product/sdg6012x-e-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG6000X-E",
+    "slug": "sdg6000x-e",
+    "id": 377
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG6012X-E.jpg",
+  "model": "SDG6012X-E",
+  "series": "SDG6000X-E",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 888,
+  "slug": "sdg6022x-e-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG6022X-E  函数任意波形发生器脉冲信号源",
+  "link": "https://store.siglent.com/product/sdg6022x-e-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG6000X-E",
+    "slug": "sdg6000x-e",
+    "id": 377
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG6022X-E.jpg",
+  "model": "SDG6022X-E",
+  "series": "SDG6000X-E",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 889,
+  "slug": "sdg6032x-e-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG6032X-E 函数任意波形发生器脉冲信号源",
+  "link": "https://store.siglent.com/product/sdg6032x-e-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG6000X-E",
+    "slug": "sdg6000x-e",
+    "id": 377
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG6032X-E.jpg",
+  "model": "SDG6032X-E",
+  "series": "SDG6000X-E",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 890,
+  "slug": "sdg6052x-e-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG6052X-E  函数任意波形发生器脉冲信号源",
+  "link": "https://store.siglent.com/product/sdg6052x-e-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG6000X-E",
+    "slug": "sdg6000x-e",
+    "id": 377
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG6052X-E.jpg",
+  "model": "SDG6052X-E",
+  "series": "SDG6000X-E",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 891,
+  "slug": "sdg6032x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG6032X 函数任意波形发生器脉冲信号源",
+  "link": "https://store.siglent.com/product/sdg6032x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG6000X",
+    "slug": "sdg6000x",
+    "id": 378
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG6032X.jpg",
+  "model": "SDG6032X",
+  "series": "SDG6000X",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 892,
+  "slug": "sdg6052x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG6052X  函数任意波形发生器脉冲信号源",
+  "link": "https://store.siglent.com/product/sdg6052x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG6000X",
+    "slug": "sdg6000x",
+    "id": 378
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDG6052X.jpg",
+  "model": "SDG6052X",
+  "series": "SDG6000X",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 936,
+  "slug": "sha863a-%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SHA863A 手持频谱分析仪",
+  "link": "https://store.siglent.com/product/sha863a-%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "SHA860A",
+    "slug": "sha860a",
+    "id": 390
+   },
+   {
+    "name": "手持频谱分析仪",
+    "slug": "%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 244
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SHA863A.jpg",
+  "model": "SHA863A",
+  "series": "SHA860A",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 937,
+  "slug": "sha864a-%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SHA864A 手持频谱分析仪",
+  "link": "https://store.siglent.com/product/sha864a-%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "SHA860A",
+    "slug": "sha860a",
+    "id": 390
+   },
+   {
+    "name": "手持频谱分析仪",
+    "slug": "%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 244
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SHA864A.jpg",
+  "model": "SHA864A",
+  "series": "SHA860A",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 938,
+  "slug": "sha865a-%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SHA865A 手持频谱分析仪",
+  "link": "https://store.siglent.com/product/sha865a-%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "SHA860A",
+    "slug": "sha860a",
+    "id": 390
+   },
+   {
+    "name": "手持频谱分析仪",
+    "slug": "%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 244
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SHA865A.jpg",
+  "model": "SHA865A",
+  "series": "SHA860A",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 934,
+  "slug": "sha861a%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SHA861A手持频谱分析仪",
+  "link": "https://store.siglent.com/product/sha861a%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "SHA860A",
+    "slug": "sha860a",
+    "id": 390
+   },
+   {
+    "name": "手持频谱分析仪",
+    "slug": "%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 244
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SHA861A.jpg",
+  "model": "SHA861A",
+  "series": "SHA860A",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 935,
+  "slug": "sha862a%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SHA862A手持频谱分析仪",
+  "link": "https://store.siglent.com/product/sha862a%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "SHA860A",
+    "slug": "sha860a",
+    "id": 390
+   },
+   {
+    "name": "手持频谱分析仪",
+    "slug": "%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 244
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SHA862A.jpg",
+  "model": "SHA862A",
+  "series": "SHA860A",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 893,
+  "slug": "sdg7032a-%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8-%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG7032A 任意波形发生器 信号源",
+  "link": "https://store.siglent.com/product/sdg7032a-%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8-%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG7000A",
+    "slug": "sdg7000a",
+    "id": 379
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDG7032A-3.jpg",
+  "model": "SDG7032A",
+  "series": "SDG7000A",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 894,
+  "slug": "sdg7052a-%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8-%e4%bf%a1%e5%8f%b7%e6%ba%90",
+  "title": "SDG7052A 任意波形发生器 信号源",
+  "link": "https://store.siglent.com/product/sdg7052a-%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8-%e4%bf%a1%e5%8f%b7%e6%ba%90/",
+  "cats": [
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG7000A",
+    "slug": "sdg7000a",
+    "id": 379
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDG7052A-2.jpg",
+  "model": "SDG7052A",
+  "series": "SDG7000A",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 895,
+  "slug": "sdg7052a-%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8-%e4%bf%a1%e5%8f%b7%e6%ba%90-2",
+  "title": "SDG7102A 任意波形发生器 信号源",
+  "link": "https://store.siglent.com/product/sdg7052a-%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8-%e4%bf%a1%e5%8f%b7%e6%ba%90-2/",
+  "cats": [
+   {
+    "name": "信号源",
+    "slug": "%e4%bf%a1%e5%8f%b7%e6%ba%90",
+    "id": 163
+   },
+   {
+    "name": "函数/任意波形发生器",
+    "slug": "%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8",
+    "id": 162
+   },
+   {
+    "name": "SDG7000A",
+    "slug": "sdg7000a",
+    "id": 379
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SDG7102A-2.jpg",
+  "model": "SDG7102A",
+  "series": "SDG7000A",
+  "line": "FUNCTION_GEN"
+ },
+ {
+  "id": 940,
+  "slug": "sha852a%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SHA852A手持频谱分析仪",
+  "link": "https://store.siglent.com/product/sha852a%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "手持频谱分析仪",
+    "slug": "%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 244
+   },
+   {
+    "name": "SHA850A",
+    "slug": "sha850a",
+    "id": 391
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SHA852A.jpg",
+  "model": "SHA852A",
+  "series": "SHA850A",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 896,
+  "slug": "sna5003x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA5003X-E 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna5003x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "SNA5000X-E",
+    "slug": "sna5000x-e",
+    "id": 381
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SNA5003X-E.jpg",
+  "model": "SNA5003X-E",
+  "series": "SNA5000X-E",
+  "line": "VNA"
+ },
+ {
+  "id": 897,
+  "slug": "sna5006x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA5006X-E 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna5006x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "SNA5000X-E",
+    "slug": "sna5000x-e",
+    "id": 381
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SNA5006X-E.jpg",
+  "model": "SNA5006X-E",
+  "series": "SNA5000X-E",
+  "line": "VNA"
+ },
+ {
+  "id": 898,
+  "slug": "sna5008x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA5008X-E 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna5008x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "SNA5000X-E",
+    "slug": "sna5000x-e",
+    "id": 381
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SNA5008X-E.jpg",
+  "model": "SNA5008X-E",
+  "series": "SNA5000X-E",
+  "line": "VNA"
+ },
+ {
+  "id": 899,
+  "slug": "sna5014x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA5014X-E 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna5014x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "SNA5000X-E",
+    "slug": "sna5000x-e",
+    "id": 381
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SNA5014X-E.jpg",
+  "model": "SNA5014X-E",
+  "series": "SNA5000X-E",
+  "line": "VNA"
+ },
+ {
+  "id": 900,
+  "slug": "sna5020x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA5020X-E 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna5020x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "SNA5000X-E",
+    "slug": "sna5000x-e",
+    "id": 381
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SNA5020X-E.jpg",
+  "model": "SNA5020X-E",
+  "series": "SNA5000X-E",
+  "line": "VNA"
+ },
+ {
+  "id": 901,
+  "slug": "sna5026x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA5026X-E 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna5026x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "SNA5000X-E",
+    "slug": "sna5000x-e",
+    "id": 381
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SNA5026X-E.jpg",
+  "model": "SNA5026X-E",
+  "series": "SNA5000X-E",
+  "line": "VNA"
+ },
+ {
+  "id": 902,
+  "slug": "sna5052x-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA5052X 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna5052x-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "SNA5000X",
+    "slug": "sna5000x",
+    "id": 382
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SNA5052X.jpg",
+  "model": "SNA5052X",
+  "series": "SNA5000X",
+  "line": "VNA"
+ },
+ {
+  "id": 903,
+  "slug": "sna5054x-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA5054X 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna5054x-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "SNA5000X",
+    "slug": "sna5000x",
+    "id": 382
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SNA5054X.jpg",
+  "model": "SNA5054X",
+  "series": "SNA5000X",
+  "line": "VNA"
+ },
+ {
+  "id": 904,
+  "slug": "sna5082x-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA5082X 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna5082x-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "SNA5000X",
+    "slug": "sna5000x",
+    "id": 382
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SNA5082X.jpg",
+  "model": "SNA5082X",
+  "series": "SNA5000X",
+  "line": "VNA"
+ },
+ {
+  "id": 905,
+  "slug": "sna5084x-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA5084X 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna5084x-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "SNA5000X",
+    "slug": "sna5000x",
+    "id": 382
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SNA5084X.jpg",
+  "model": "SNA5084X",
+  "series": "SNA5000X",
+  "line": "VNA"
+ },
+ {
+  "id": 944,
+  "slug": "ssa1015x-c-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SSA1015X-C 频谱分析仪",
+  "link": "https://store.siglent.com/product/ssa1015x-c-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "SSA1000X",
+    "slug": "ssa1000x",
+    "id": 393
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SSA1015X-C.jpg",
+  "model": "SSA1015X-C",
+  "series": "SSA1000X",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 906,
+  "slug": "sna5022a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA5022A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna5022a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "SNA5000A",
+    "slug": "sna5000a",
+    "id": 383
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA5022A-1.jpg",
+  "model": "SNA5022A",
+  "series": "SNA5000A",
+  "line": "VNA"
+ },
+ {
+  "id": 907,
+  "slug": "sna5032a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA5032A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna5032a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "SNA5000A",
+    "slug": "sna5000a",
+    "id": 383
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA5022A-1.jpg",
+  "model": "SNA5032A",
+  "series": "SNA5000A",
+  "line": "VNA"
+ },
+ {
+  "id": 945,
+  "slug": "spd1168x-c-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90-%e5%8d%95%e9%80%9a%e9%81%93",
+  "title": "SPD1168X-C 可编程线性直流稳压电源 单通道",
+  "link": "https://store.siglent.com/product/spd1168x-c-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90-%e5%8d%95%e9%80%9a%e9%81%93/",
+  "cats": [
+   {
+    "name": "可编程线性直流电源",
+    "slug": "%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 260
+   },
+   {
+    "name": "SPD1000X-C",
+    "slug": "spd1000x-c",
+    "id": 394
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPD1168X-C.jpg",
+  "model": "SPD1168X-C",
+  "series": "SPD1000X",
+  "line": "POWER"
+ },
+ {
+  "id": 946,
+  "slug": "spd1305x-c-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90-%e5%8d%95%e9%80%9a%e9%81%93",
+  "title": "SPD1305X-C 可编程线性直流稳压电源 单通道",
+  "link": "https://store.siglent.com/product/spd1305x-c-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90-%e5%8d%95%e9%80%9a%e9%81%93/",
+  "cats": [
+   {
+    "name": "可编程线性直流电源",
+    "slug": "%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 260
+   },
+   {
+    "name": "SPD1000X-C",
+    "slug": "spd1000x-c",
+    "id": 394
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPD1305X-C.jpg",
+  "model": "SPD1305X-C",
+  "series": "SPD1000X",
+  "line": "POWER"
+ },
+ {
+  "id": 947,
+  "slug": "spd1168x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90",
+  "title": "SPD1168X 可编程线性直流稳压电源",
+  "link": "https://store.siglent.com/product/spd1168x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "可编程线性直流电源",
+    "slug": "%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 260
+   },
+   {
+    "name": "SPD1000X",
+    "slug": "spd1000x",
+    "id": 395
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPD1168X.jpg",
+  "model": "SPD1168X",
+  "series": "SPD1000X",
+  "line": "POWER"
+ },
+ {
+  "id": 948,
+  "slug": "spd1305x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90",
+  "title": "SPD1305X 可编程线性直流稳压电源",
+  "link": "https://store.siglent.com/product/spd1305x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "可编程线性直流电源",
+    "slug": "%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 260
+   },
+   {
+    "name": "SPD1000X",
+    "slug": "spd1000x",
+    "id": 395
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPD1305X.jpg",
+  "model": "SPD1305X",
+  "series": "SPD1000X",
+  "line": "POWER"
+ },
+ {
+  "id": 916,
+  "slug": "sna6142a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA6142A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna6142a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   },
+   {
+    "name": "SNA6000A",
+    "slug": "sna6000a",
+    "id": 384
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA6142A-1.jpg",
+  "model": "SNA6142A",
+  "series": "SNA6000A",
+  "line": "VNA"
+ },
+ {
+  "id": 917,
+  "slug": "sna6144a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA6144A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna6144a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   },
+   {
+    "name": "SNA6000A",
+    "slug": "sna6000a",
+    "id": 384
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA6144A-1.jpg",
+  "model": "SNA6144A",
+  "series": "SNA6000A",
+  "line": "VNA"
+ },
+ {
+  "id": 918,
+  "slug": "sna6152a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA6152A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna6152a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   },
+   {
+    "name": "SNA6000A",
+    "slug": "sna6000a",
+    "id": 384
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA6152A-1.jpg",
+  "model": "SNA6152A",
+  "series": "SNA6000A",
+  "line": "VNA"
+ },
+ {
+  "id": 919,
+  "slug": "sna6154a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA6154A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna6154a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   },
+   {
+    "name": "SNA6000A",
+    "slug": "sna6000a",
+    "id": 384
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA6154A-1.jpg",
+  "model": "SNA6154A",
+  "series": "SNA6000A",
+  "line": "VNA"
+ },
+ {
+  "id": 908,
+  "slug": "sna6022a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA6022A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna6022a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   },
+   {
+    "name": "SNA6000A",
+    "slug": "sna6000a",
+    "id": 384
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA6022A-1.jpg",
+  "model": "SNA6022A",
+  "series": "SNA6000A",
+  "line": "VNA"
+ },
+ {
+  "id": 909,
+  "slug": "sna6024a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA6024A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna6024a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   },
+   {
+    "name": "SNA6000A",
+    "slug": "sna6000a",
+    "id": 384
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA6024A-1.jpg",
+  "model": "SNA6024A",
+  "series": "SNA6000A",
+  "line": "VNA"
+ },
+ {
+  "id": 910,
+  "slug": "sna6032a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA6032A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna6032a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   },
+   {
+    "name": "SNA6000A",
+    "slug": "sna6000a",
+    "id": 384
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA6032A-1.jpg",
+  "model": "SNA6032A",
+  "series": "SNA6000A",
+  "line": "VNA"
+ },
+ {
+  "id": 911,
+  "slug": "sna6034a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA6034A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna6034a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   },
+   {
+    "name": "SNA6000A",
+    "slug": "sna6000a",
+    "id": 384
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA6034A-1.jpg",
+  "model": "SNA6034A",
+  "series": "SNA6000A",
+  "line": "VNA"
+ },
+ {
+  "id": 912,
+  "slug": "sna6122a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA6122A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna6122a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   },
+   {
+    "name": "SNA6000A",
+    "slug": "sna6000a",
+    "id": 384
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA6122A-1.jpg",
+  "model": "SNA6122A",
+  "series": "SNA6000A",
+  "line": "VNA"
+ },
+ {
+  "id": 913,
+  "slug": "sna6124a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA6124A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna6124a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   },
+   {
+    "name": "SNA6000A",
+    "slug": "sna6000a",
+    "id": 384
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA6124A-1.jpg",
+  "model": "SNA6124A",
+  "series": "SNA6000A",
+  "line": "VNA"
+ },
+ {
+  "id": 914,
+  "slug": "sna6132a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA6132A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna6132a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   },
+   {
+    "name": "SNA6000A",
+    "slug": "sna6000a",
+    "id": 384
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA6132A-1.jpg",
+  "model": "SNA6132A",
+  "series": "SNA6000A",
+  "line": "VNA"
+ },
+ {
+  "id": 915,
+  "slug": "sna6134a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SNA6134A 矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sna6134a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 197
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   },
+   {
+    "name": "SNA6000A",
+    "slug": "sna6000a",
+    "id": 384
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/09/SNA6134A-1.jpg",
+  "model": "SNA6134A",
+  "series": "SNA6000A",
+  "line": "VNA"
+ },
+ {
+  "id": 949,
+  "slug": "spd3303x-c-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90",
+  "title": "SPD3303X-C 可编程线性直流稳压电源",
+  "link": "https://store.siglent.com/product/spd3303x-c-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "可编程线性直流电源",
+    "slug": "%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 260
+   },
+   {
+    "name": "SPD3000X",
+    "slug": "spd3000x",
+    "id": 396
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPD3303X-C.jpg",
+  "model": "SPD3303X-C",
+  "series": "SPD3303X/X-E/X-C",
+  "line": "POWER"
+ },
+ {
+  "id": 950,
+  "slug": "spd3303c%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90",
+  "title": "SPD3303C可编程线性直流稳压电源",
+  "link": "https://store.siglent.com/product/spd3303c%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "可编程线性直流电源",
+    "slug": "%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 260
+   },
+   {
+    "name": "SPD3000X",
+    "slug": "spd3000x",
+    "id": 396
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPD3303C.jpg",
+  "model": "SPD3303C",
+  "series": "SPD3303C",
+  "line": "POWER"
+ },
+ {
+  "id": 952,
+  "slug": "spd3303x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90",
+  "title": "SPD3303X 可编程线性直流稳压电源",
+  "link": "https://store.siglent.com/product/spd3303x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "可编程线性直流电源",
+    "slug": "%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 260
+   },
+   {
+    "name": "SPD3000X",
+    "slug": "spd3000x",
+    "id": 396
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPD3303X.jpg",
+  "model": "SPD3303X",
+  "series": "SPD3303X/X-E/X-C",
+  "line": "POWER"
+ },
+ {
+  "id": 920,
+  "slug": "shn914a-%e6%89%8b%e6%8c%81%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SHN914A 手持矢量网络分析仪",
+  "link": "https://store.siglent.com/product/shn914a-%e6%89%8b%e6%8c%81%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "SHN900A",
+    "slug": "shn900a",
+    "id": 385
+   },
+   {
+    "name": "手持矢量网络分析仪",
+    "slug": "%e6%89%8b%e6%8c%81%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 215
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SHN914A-1.jpg",
+  "model": "SHN914A",
+  "series": "SHN900A",
+  "line": "VNA"
+ },
+ {
+  "id": 921,
+  "slug": "shn920a-%e6%89%8b%e6%8c%81%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SHN920A 手持矢量网络分析仪",
+  "link": "https://store.siglent.com/product/shn920a-%e6%89%8b%e6%8c%81%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "SHN900A",
+    "slug": "shn900a",
+    "id": 385
+   },
+   {
+    "name": "手持矢量网络分析仪",
+    "slug": "%e6%89%8b%e6%8c%81%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 215
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SHN920A-1.jpg",
+  "model": "SHN920A",
+  "series": "SHN900A",
+  "line": "VNA"
+ },
+ {
+  "id": 922,
+  "slug": "shn926a-%e6%89%8b%e6%8c%81%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SHN926A 手持矢量网络分析仪",
+  "link": "https://store.siglent.com/product/shn926a-%e6%89%8b%e6%8c%81%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "SHN900A",
+    "slug": "shn900a",
+    "id": 385
+   },
+   {
+    "name": "手持矢量网络分析仪",
+    "slug": "%e6%89%8b%e6%8c%81%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 215
+   },
+   {
+    "name": "矢量网络分析仪",
+    "slug": "%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 196
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/07/SHN926A-1.jpg",
+  "model": "SHN926A",
+  "series": "SHN900A",
+  "line": "VNA"
+ },
+ {
+  "id": 953,
+  "slug": "spd4323x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+  "title": "SPD4323X 可编程线性直流电源",
+  "link": "https://store.siglent.com/product/spd4323x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "可编程线性直流电源",
+    "slug": "%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 260
+   },
+   {
+    "name": "SPD4000X",
+    "slug": "spd4000x",
+    "id": 397
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPD4323X.jpg",
+  "model": "SPD4323X",
+  "series": "SPD4000X",
+  "line": "POWER"
+ },
+ {
+  "id": 954,
+  "slug": "spd4121x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+  "title": "SPD4121X 可编程线性直流电源",
+  "link": "https://store.siglent.com/product/spd4121x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "可编程线性直流电源",
+    "slug": "%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 260
+   },
+   {
+    "name": "SPD4000X",
+    "slug": "spd4000x",
+    "id": 397
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPD4121X.jpg",
+  "model": "SPD4121X",
+  "series": "SPD4000X",
+  "line": "POWER"
+ },
+ {
+  "id": 955,
+  "slug": "spd4306x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+  "title": "SPD4306X 可编程线性直流电源",
+  "link": "https://store.siglent.com/product/spd4306x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "可编程线性直流电源",
+    "slug": "%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 260
+   },
+   {
+    "name": "SPD4000X",
+    "slug": "spd4000x",
+    "id": 397
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPD4306X.jpg",
+  "model": "SPD4306X",
+  "series": "SPD4000X",
+  "line": "POWER"
+ },
+ {
+  "id": 923,
+  "slug": "ssa3015x-plus-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SSA3015X PLUS 频谱分析仪",
+  "link": "https://store.siglent.com/product/ssa3015x-plus-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "SSA3000X Plus",
+    "slug": "ssa3000x-plus",
+    "id": 386
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SSA3015X-Plus.jpg",
+  "model": "SSA3015X PLUS",
+  "series": "SSA3000X Plus",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 924,
+  "slug": "ssa3021x-plus-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa%e9%85%8dtg",
+  "title": "SSA3021X Plus 频谱分析仪配TG",
+  "link": "https://store.siglent.com/product/ssa3021x-plus-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa%e9%85%8dtg/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "SSA3000X Plus",
+    "slug": "ssa3000x-plus",
+    "id": 386
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SSA3021X-Plus.jpg",
+  "model": "SSA3021X Plus",
+  "series": "SSA3000X Plus",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 925,
+  "slug": "ssa3032x-plus%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa%e9%85%8dtg",
+  "title": "SSA3032X Plus频谱分析仪配TG",
+  "link": "https://store.siglent.com/product/ssa3032x-plus%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa%e9%85%8dtg/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "SSA3000X Plus",
+    "slug": "ssa3000x-plus",
+    "id": 386
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SSA3032X-Plus.jpg",
+  "model": "SSA3032X Plus",
+  "series": "SSA3000X Plus",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 926,
+  "slug": "ssa3075x-plus-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SSA3075X Plus  频谱分析仪",
+  "link": "https://store.siglent.com/product/ssa3075x-plus-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "SSA3000X Plus",
+    "slug": "ssa3000x-plus",
+    "id": 386
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SSA3075X-Plus.jpg",
+  "model": "SSA3075X Plus",
+  "series": "SSA3000X Plus",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 927,
+  "slug": "ssa3075x-c%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+  "title": "SSA3075X-C频谱分析仪",
+  "link": "https://store.siglent.com/product/ssa3075x-c%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "SSA3000X Plus",
+    "slug": "ssa3000x-plus",
+    "id": 386
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SSA3075X-C.jpg",
+  "model": "SSA3075X-C",
+  "series": "SSA3000X Plus",
+  "line": "SPECTRUM"
+ },
+ {
+  "id": 956,
+  "slug": "sps5041x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5041X 单通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5041x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5041X.jpg",
+  "model": "SPS5041X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 957,
+  "slug": "sps5042x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5042X 单通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5042x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5042X.jpg",
+  "model": "SPS5042X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 958,
+  "slug": "sps5043x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5043X 单通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5043x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5043X.jpg",
+  "model": "SPS5043X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 959,
+  "slug": "sps5044x-%e5%8f%8c%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5044X 双通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5044x-%e5%8f%8c%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5044X.jpg",
+  "model": "SPS5044X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 960,
+  "slug": "sps5045x-%e4%b8%89%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5045X 三通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5045x-%e4%b8%89%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5045X.jpg",
+  "model": "SPS5045X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 961,
+  "slug": "sps5051x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5051X 单通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5051x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5051X.jpg",
+  "model": "SPS5051X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 962,
+  "slug": "sps5081x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5081X 单通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5081x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5081X.jpg",
+  "model": "SPS5081X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 963,
+  "slug": "sps5082x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5082X 单通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5082x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5082X.jpg",
+  "model": "SPS5082X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 964,
+  "slug": "sps5083x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5083X 单通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5083x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5083X.jpg",
+  "model": "SPS5083X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 965,
+  "slug": "sps5084x-%e5%8f%8c%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5084X 双通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5084x-%e5%8f%8c%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5084X.jpg",
+  "model": "SPS5084X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 966,
+  "slug": "sps5085x-%e4%b8%89%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5085X 三通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5085x-%e4%b8%89%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5085X.jpg",
+  "model": "SPS5085X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 967,
+  "slug": "sps5161x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5161X 单通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5161x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5161X.jpg",
+  "model": "SPS5161X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 968,
+  "slug": "sps5162x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5162X 单通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5162x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5162X.jpg",
+  "model": "SPS5162X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 969,
+  "slug": "sps5163x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5163X 单通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5163x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5163X.jpg",
+  "model": "SPS5163X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 970,
+  "slug": "sps5164x-%e5%8f%8c%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5164X 双通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5164x-%e5%8f%8c%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5164X.jpg",
+  "model": "SPS5164X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 971,
+  "slug": "sps5165x-%e4%b8%89%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS5165X 三通道直流开关电源",
+  "link": "https://store.siglent.com/product/sps5165x-%e4%b8%89%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "SPS5000X",
+    "slug": "sps5000x",
+    "id": 398
+   },
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS5165X.jpg",
+  "model": "SPS5165X",
+  "series": "SPS5000X",
+  "line": "POWER"
+ },
+ {
+  "id": 972,
+  "slug": "sps6225x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS6225X 可编程直流开关电源",
+  "link": "https://store.siglent.com/product/sps6225x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "SPS6000X",
+    "slug": "sps6000x",
+    "id": 399
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS6225X.jpg",
+  "model": "SPS6225X",
+  "series": "SPS6000X",
+  "line": "POWER"
+ },
+ {
+  "id": 973,
+  "slug": "sps6150x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS6150X 可编程直流开关电源",
+  "link": "https://store.siglent.com/product/sps6150x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "SPS6000X",
+    "slug": "sps6000x",
+    "id": 399
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS6150X.jpg",
+  "model": "SPS6150X",
+  "series": "SPS6000X",
+  "line": "POWER"
+ },
+ {
+  "id": 974,
+  "slug": "sps6412x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+  "title": "SPS6412X 可编程直流开关电源",
+  "link": "https://store.siglent.com/product/sps6412x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/",
+  "cats": [
+   {
+    "name": "开关电源",
+    "slug": "%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90",
+    "id": 285
+   },
+   {
+    "name": "SPS6000X",
+    "slug": "sps6000x",
+    "id": 399
+   },
+   {
+    "name": "直流电源",
+    "slug": "%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90",
+    "id": 259
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SPS6412X.jpg",
+  "model": "SPS6412X",
+  "series": "SPS6000X",
+  "line": "POWER"
+ },
+ {
+  "id": 977,
+  "slug": "sdl1020x-e-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd",
+  "title": "SDL1020X-E 可编程直流电子负载",
+  "link": "https://store.siglent.com/product/sdl1020x-e-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd/",
+  "cats": [
+   {
+    "name": "电子负载",
+    "slug": "%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd-%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd",
+    "id": 307
+   },
+   {
+    "name": "SDL1000X",
+    "slug": "sdl1000x",
+    "id": 400
+   },
+   {
+    "name": "电子负载",
+    "slug": "%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd",
+    "id": 306
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDL1020X-E.jpg",
+  "model": "SDL1020X-E",
+  "series": "SDL1000X",
+  "line": "LOAD"
+ },
+ {
+  "id": 978,
+  "slug": "sdl1020x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd",
+  "title": "SDL1020X 可编程直流电子负载",
+  "link": "https://store.siglent.com/product/sdl1020x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd/",
+  "cats": [
+   {
+    "name": "电子负载",
+    "slug": "%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd-%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd",
+    "id": 307
+   },
+   {
+    "name": "SDL1000X",
+    "slug": "sdl1000x",
+    "id": 400
+   },
+   {
+    "name": "电子负载",
+    "slug": "%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd",
+    "id": 306
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDL1020X.jpg",
+  "model": "SDL1020X",
+  "series": "SDL1000X",
+  "line": "LOAD"
+ },
+ {
+  "id": 979,
+  "slug": "sdl1030x-e-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd",
+  "title": "SDL1030X-E 可编程直流电子负载",
+  "link": "https://store.siglent.com/product/sdl1030x-e-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd/",
+  "cats": [
+   {
+    "name": "电子负载",
+    "slug": "%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd-%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd",
+    "id": 307
+   },
+   {
+    "name": "SDL1000X",
+    "slug": "sdl1000x",
+    "id": 400
+   },
+   {
+    "name": "电子负载",
+    "slug": "%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd",
+    "id": 306
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDL1030X-E.jpg",
+  "model": "SDL1030X-E",
+  "series": "SDL1000X",
+  "line": "LOAD"
+ },
+ {
+  "id": 980,
+  "slug": "sdl1030x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd",
+  "title": "SDL1030X 可编程直流电子负载",
+  "link": "https://store.siglent.com/product/sdl1030x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd/",
+  "cats": [
+   {
+    "name": "电子负载",
+    "slug": "%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd-%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd",
+    "id": 307
+   },
+   {
+    "name": "SDL1000X",
+    "slug": "sdl1000x",
+    "id": 400
+   },
+   {
+    "name": "电子负载",
+    "slug": "%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd",
+    "id": 306
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDL1030X.jpg",
+  "model": "SDL1030X",
+  "series": "SDL1000X",
+  "line": "LOAD"
+ },
+ {
+  "id": 984,
+  "slug": "sdm3065x-%e5%85%ad%e4%bd%8d%e5%8d%8a%e4%bd%8d%e5%8f%8c%e6%98%be%e5%8f%b0%e5%bc%8f%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+  "title": "SDM3065X 六位半位双显台式数字万用表",
+  "link": "https://store.siglent.com/product/sdm3065x-%e5%85%ad%e4%bd%8d%e5%8d%8a%e4%bd%8d%e5%8f%8c%e6%98%be%e5%8f%b0%e5%bc%8f%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8/",
+  "cats": [
+   {
+    "name": "数字万用表",
+    "slug": "%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+    "id": 320
+   },
+   {
+    "name": "SDM3000",
+    "slug": "sdm3000",
+    "id": 401
+   },
+   {
+    "name": "数字万用表",
+    "slug": "%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+    "id": 319
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDM3065X.jpg",
+  "model": "SDM3065X",
+  "series": "SDM3065X",
+  "line": "MULTIMETER"
+ },
+ {
+  "id": 986,
+  "slug": "sdm4055a-%e7%9c%9f6%e4%bd%8d%e5%8d%8a%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+  "title": "SDM4055A 真6位半数字万用表",
+  "link": "https://store.siglent.com/product/sdm4055a-%e7%9c%9f6%e4%bd%8d%e5%8d%8a%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8/",
+  "cats": [
+   {
+    "name": "数字万用表",
+    "slug": "%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+    "id": 320
+   },
+   {
+    "name": "SDM4000A",
+    "slug": "sdm4000a",
+    "id": 402
+   },
+   {
+    "name": "数字万用表",
+    "slug": "%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+    "id": 319
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDM4055A.jpg",
+  "model": "SDM4055A",
+  "series": "SDM4055A",
+  "line": "MULTIMETER"
+ },
+ {
+  "id": 988,
+  "slug": "sdm4065a-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+  "title": "SDM4065A 数字万用表",
+  "link": "https://store.siglent.com/product/sdm4065a-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8/",
+  "cats": [
+   {
+    "name": "数字万用表",
+    "slug": "%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+    "id": 320
+   },
+   {
+    "name": "SDM4000A",
+    "slug": "sdm4000a",
+    "id": 402
+   },
+   {
+    "name": "数字万用表",
+    "slug": "%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+    "id": 319
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDM4065A.jpg",
+  "model": "SDM4065A",
+  "series": "SDM4065A",
+  "line": "MULTIMETER"
+ },
+ {
+  "id": 989,
+  "slug": "sdm4065a-sc-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+  "title": "SDM4065A-SC 数字万用表",
+  "link": "https://store.siglent.com/product/sdm4065a-sc-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8/",
+  "cats": [
+   {
+    "name": "数字万用表",
+    "slug": "%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+    "id": 320
+   },
+   {
+    "name": "SDM4000A",
+    "slug": "sdm4000a",
+    "id": 402
+   },
+   {
+    "name": "数字万用表",
+    "slug": "%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+    "id": 319
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDM4065A-SC.jpg",
+  "model": "SDM4065A-SC",
+  "series": "SDM4065A",
+  "line": "MULTIMETER"
+ },
+ {
+  "id": 990,
+  "slug": "smm3311x-%e6%ba%90%e8%a1%a8",
+  "title": "SMM3311X 源表",
+  "link": "https://store.siglent.com/product/smm3311x-%e6%ba%90%e8%a1%a8/",
+  "cats": [
+   {
+    "name": "SMM3000X",
+    "slug": "smm3000x",
+    "id": 403
+   },
+   {
+    "name": "源测量单元",
+    "slug": "%e6%ba%90%e6%b5%8b%e9%87%8f%e5%8d%95%e5%85%83",
+    "id": 775
+   },
+   {
+    "name": "源表",
+    "slug": "%e6%ba%90%e8%a1%a8",
+    "id": 337
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SMM3311X.jpg",
+  "model": "SMM3311X",
+  "series": "SMM3000X",
+  "line": "POWER"
+ },
+ {
+  "id": 991,
+  "slug": "smm3312x-%e6%ba%90%e8%a1%a8",
+  "title": "SMM3312X 源表",
+  "link": "https://store.siglent.com/product/smm3312x-%e6%ba%90%e8%a1%a8/",
+  "cats": [
+   {
+    "name": "SMM3000X",
+    "slug": "smm3000x",
+    "id": 403
+   },
+   {
+    "name": "源测量单元",
+    "slug": "%e6%ba%90%e6%b5%8b%e9%87%8f%e5%8d%95%e5%85%83",
+    "id": 775
+   },
+   {
+    "name": "源表",
+    "slug": "%e6%ba%90%e8%a1%a8",
+    "id": 337
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SMM3312X.jpg",
+  "model": "SMM3312X",
+  "series": "SMM3000X",
+  "line": "POWER"
+ },
+ {
+  "id": 8374,
+  "slug": "sdm4075a-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+  "title": "SDM4075A 数字万用表",
+  "link": "https://store.siglent.com/product/sdm4075a-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8/",
+  "cats": [
+   {
+    "name": "数字万用表",
+    "slug": "%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+    "id": 320
+   },
+   {
+    "name": "SDM4000A",
+    "slug": "sdm4000a",
+    "id": 402
+   },
+   {
+    "name": "数字万用表",
+    "slug": "%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+    "id": 319
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDM4075A.jpg",
+  "model": "SDM4075A",
+  "series": "SDM4075A",
+  "line": "MULTIMETER"
+ },
+ {
+  "id": 8366,
+  "slug": "sdm4075a-sc-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+  "title": "SDM4075A-SC 数字万用表",
+  "link": "https://store.siglent.com/product/sdm4075a-sc-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8/",
+  "cats": [
+   {
+    "name": "数字万用表",
+    "slug": "%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+    "id": 320
+   },
+   {
+    "name": "SDM4000A",
+    "slug": "sdm4000a",
+    "id": 402
+   },
+   {
+    "name": "数字万用表",
+    "slug": "%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8",
+    "id": 319
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SDM4075A-SC.jpg",
+  "model": "SDM4075A-SC",
+  "series": "SDM4075A",
+  "line": "MULTIMETER"
+ },
+ {
+  "id": 8289,
+  "slug": "mn520a",
+  "title": "MN520A",
+  "link": "https://store.siglent.com/product/mn520a/",
+  "cats": [
+   {
+    "name": "模块化仪器",
+    "slug": "%e6%a8%a1%e5%9d%97%e5%8c%96%e4%bb%aa%e5%99%a8",
+    "id": 897
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/01/MN520A.jpg",
+  "model": "MN520A",
+  "series": "MN514A/MN520A",
+  "line": "MODULAR"
+ },
+ {
+  "id": 8274,
+  "slug": "mn514a",
+  "title": "MN514A",
+  "link": "https://store.siglent.com/product/mn514a/",
+  "cats": [
+   {
+    "name": "模块化仪器",
+    "slug": "%e6%a8%a1%e5%9d%97%e5%8c%96%e4%bb%aa%e5%99%a8",
+    "id": 897
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/01/MN514A.jpg",
+  "model": "MN514A",
+  "series": "MN514A/MN520A",
+  "line": "MODULAR"
+ },
+ {
+  "id": 8270,
+  "slug": "ms102a",
+  "title": "MS102A",
+  "link": "https://store.siglent.com/product/ms102a/",
+  "cats": [
+   {
+    "name": "模块化示波器",
+    "slug": "%e6%a8%a1%e5%9d%97%e5%8c%96%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 895
+   },
+   {
+    "name": "MS000A",
+    "slug": "ms000a",
+    "id": 896
+   },
+   {
+    "name": "模块化仪器",
+    "slug": "%e6%a8%a1%e5%9d%97%e5%8c%96%e4%bb%aa%e5%99%a8",
+    "id": 897
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/01/MS102A.jpg",
+  "model": "MS102A",
+  "series": "MS032A/MS052A/MS102A",
+  "line": "MODULAR"
+ },
+ {
+  "id": 8269,
+  "slug": "ms052a",
+  "title": "MS052A",
+  "link": "https://store.siglent.com/product/ms052a/",
+  "cats": [
+   {
+    "name": "模块化示波器",
+    "slug": "%e6%a8%a1%e5%9d%97%e5%8c%96%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 895
+   },
+   {
+    "name": "MS000A",
+    "slug": "ms000a",
+    "id": 896
+   },
+   {
+    "name": "模块化仪器",
+    "slug": "%e6%a8%a1%e5%9d%97%e5%8c%96%e4%bb%aa%e5%99%a8",
+    "id": 897
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/01/MS052A.jpg",
+  "model": "MS052A",
+  "series": "MS032A/MS052A/MS102A",
+  "line": "MODULAR"
+ },
+ {
+  "id": 8261,
+  "slug": "ms032a",
+  "title": "MS032A",
+  "link": "https://store.siglent.com/product/ms032a/",
+  "cats": [
+   {
+    "name": "模块化示波器",
+    "slug": "%e6%a8%a1%e5%9d%97%e5%8c%96%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 895
+   },
+   {
+    "name": "MS000A",
+    "slug": "ms000a",
+    "id": 896
+   },
+   {
+    "name": "模块化仪器",
+    "slug": "%e6%a8%a1%e5%9d%97%e5%8c%96%e4%bb%aa%e5%99%a8",
+    "id": 897
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/01/MS032A.jpg",
+  "model": "MS032A",
+  "series": "MS032A/MS052A/MS102A",
+  "line": "MODULAR"
+ },
+ {
+  "id": 6030,
+  "slug": "sds7804l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS7804L 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds7804l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS7000L",
+    "slug": "sds7000l",
+    "id": 778
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/08/SDS7604L-1.jpg",
+  "model": "SDS7804L",
+  "series": "SDS7000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 6019,
+  "slug": "sds7604l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+  "title": "SDS7604L 高分辨率示波器",
+  "link": "https://store.siglent.com/product/sds7604l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/",
+  "cats": [
+   {
+    "name": "示波器",
+    "slug": "%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 21
+   },
+   {
+    "name": "高分辨率示波器",
+    "slug": "%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8",
+    "id": 23
+   },
+   {
+    "name": "SDS7000L",
+    "slug": "sds7000l",
+    "id": 778
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2025/08/SDS7604L-1.jpg",
+  "model": "SDS7604L",
+  "series": "SDS7000L",
+  "line": "OSCILLOSCOPE"
+ },
+ {
+  "id": 941,
+  "slug": "sva1015x",
+  "title": "SVA1015X 频谱矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sva1015x/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "SVA1000X",
+    "slug": "sva1000x",
+    "id": 392
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SVA1015X.jpg",
+  "model": "SVA1015X",
+  "series": "SVA1000X",
+  "line": "VNA"
+ },
+ {
+  "id": 942,
+  "slug": "sva1032x",
+  "title": "SVA1032X 频谱矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sva1032x/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "SVA1000X",
+    "slug": "sva1000x",
+    "id": 392
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SVA1032X.jpg",
+  "model": "SVA1032X",
+  "series": "SVA1000X",
+  "line": "VNA"
+ },
+ {
+  "id": 943,
+  "slug": "sva1075x",
+  "title": "SVA1075X 频谱&amp;矢量网络分析仪",
+  "link": "https://store.siglent.com/product/sva1075x/",
+  "cats": [
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 224
+   },
+   {
+    "name": "SVA1000X",
+    "slug": "sva1000x",
+    "id": 392
+   },
+   {
+    "name": "频谱分析仪",
+    "slug": "%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa",
+    "id": 223
+   }
+  ],
+  "featured": "https://store.siglent.com/wp-content/uploads/2026/04/SVA1075X.jpg",
+  "model": "SVA1075X",
+  "series": "SVA1000X",
+  "line": "VNA"
+ },
+ {
+  "id": 2715,
+  "slug": "sha851a%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e4%bb%aa%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e6%89%a9%e5%b1%95",
+  "title": "SHA851A手持频谱仪+矢量网络分析扩展",
+  "link": "https://store.siglent.com/product/sha851a%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e4%bb%aa%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e6%89%a9%e5%b1%95/",
+  "cats": [
+   {
+    "name": "套餐",
+    "slug": "package",
+    "id": 40
+   },
+   {
+    "name": "套装",
+    "slug": "%e5%a5%97%e8%a3%85",
+    "id": 713
+   }
+  ],
+  "featured": null,
+  "model": "SHA851A",
+  "series": "SHA850A",
+  "line": "SPECTRUM"
+ }
+]

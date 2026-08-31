@@ -3,6 +3,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
+import SiteLink from "next/link";
 import { getSiteSettings, getSiteCategories, getSiteBrands } from "@/lib/site";
 import LocaleSwitcher from "./locale-switcher";
 
@@ -181,9 +182,9 @@ export default async function SiteLayout({
             <ul className="mt-3 grid grid-cols-2 gap-2 text-sm text-slate-500">
               {brands.slice(0, 8).map((b) => (
                 <li key={b.id}>
-                  <Link href={`/brands/${b.code}`} className="hover:text-sky-600">
+                  <SiteLink href={`/${b.code.toLowerCase()}`} className="hover:text-sky-600">
                     {b.name}
-                  </Link>
+                  </SiteLink>
                 </li>
               ))}
             </ul>

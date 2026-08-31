@@ -77,7 +77,6 @@ model Brand {
 
   translations   BrandTranslation[]
   categories     BrandCategory[]
-  ownCategories  Category[] // 品牌自己的分类（品牌站导航）
   productLines   ProductLine[]
   products       Product[]
   documents      Document[]
@@ -99,27 +98,22 @@ model BrandTranslation {
 // ============ 产品类别 ============
 
 model Category {
-  id             String    @id @default(uuid())
-  code           String    @unique
-  icon           String?
-  sortOrder      Int       @default(0)
-  parentId       String?
-  brandId        String? // null = 全站品类（综合站）；非空 = 品牌分类（品牌站）
-  siteCategoryId String? // 品牌分类关联的全站品类（综合站聚合用）
-  createdAt      DateTime  @default(now())
-  updatedAt      DateTime  @updatedAt
+  id        String    @id @default(uuid())
+  code      String    @unique
+  icon      String?
+  sortOrder Int       @default(0)
+  parentId  String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
 
-  parent        Category?         @relation("CategoryHierarchy", fields: [parentId], references: [id])
-  children      Category[]        @relation("CategoryHierarchy")
-  translations  CategoryTranslation[]
-  brands        BrandCategory[]
-  productLines  ProductLine[]
-  products      Product[]
-  paramGroups   ParamGroup[]
-  paramDefs     ParamDefinition[]
-  brand         Brand?            @relation(fields: [brandId], references: [id])
-  siteCategory  Category?         @relation("SiteCategoryLink", fields: [siteCategoryId], references: [id])
-  siteChildren  Category[]        @relation("SiteCategoryLink")
+  parent       Category?         @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children     Category[]        @relation("CategoryHierarchy")
+  translations CategoryTranslation[]
+  brands       BrandCategory[]
+  productLines ProductLine[]
+  products     Product[]
+  paramGroups  ParamGroup[]
+  paramDefs    ParamDefinition[]
 }
 
 model CategoryTranslation {

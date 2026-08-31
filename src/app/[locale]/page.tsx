@@ -1,4 +1,5 @@
 import { Link } from "@/i18n/navigation";
+import SiteLink from "next/link";
 import { setRequestLocale } from "next-intl/server";
 import { db } from "@/lib/db";
 import { getSiteSettings, getSiteCategories, getSiteBrands, t } from "@/lib/site";
@@ -145,9 +146,9 @@ export default async function HomePage({
           <p className="mt-1 text-center text-sm text-slate-500">{I.brandsSub}</p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             {brands.map((b) => (
-              <Link
+              <SiteLink
                 key={b.id}
-                href={`/brands/${b.code}`}
+                href={`/${b.code.toLowerCase()}`}
                 className="rounded-lg border border-slate-200 px-5 py-3 text-center transition hover:border-sky-300 hover:shadow-sm"
               >
                 <div className="text-sm font-semibold text-slate-800">{b.name}</div>
@@ -157,7 +158,7 @@ export default async function HomePage({
                     {countMap[b.id]} {I.productsCount}
                   </div>
                 ) : null}
-              </Link>
+              </SiteLink>
             ))}
           </div>
         </div>

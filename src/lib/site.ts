@@ -28,9 +28,10 @@ export const getSiteSettings = cache(async (locale: string = "zh") => {
   };
 });
 
-/** 前台主导航类别（有启用产品的顶层类别） */
+/** 前台主导航类别（有启用产品的顶层类别）—— 仅全站品类（brandId = null） */
 export const getSiteCategories = cache(async (locale: string = "zh") => {
   const categories = await db.category.findMany({
+    where: { brandId: null },
     include: { translations: true },
     orderBy: { sortOrder: "asc" },
   });

@@ -1,52 +1,23 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
+# 依赖与构建
+node_modules/
+.next/
+out/
 *.tsbuildinfo
-next-env.d.ts
 
-# runtime logs
-dev-server.log
-# uploaded files (runtime data, not source)
-public/uploads/
-# generated prisma client
-src/generated/
-dev-server.err.log
+# 环境变量
+.env
+.env.local
+.env.*.local
 
-# 采集缓存（可重跑 scrape 生成）
+# 采集的原始大数据（不入库，可重新采集）
+scripts/data/store-products.json
+scripts/data/store-matched.json
 scripts/data/siglent-raw.json
+
+# 上传的媒体（图片体积大，不入库；从线上可恢复）
+public/uploads/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+dev-server.log

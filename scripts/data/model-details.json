@@ -1,0 +1,7793 @@
+[
+ {
+  "model": "SDS6034 H10 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6034 H10 PRO 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "350 MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "在 2 GHz全带宽下低至153 μVrms"
+   },
+   {
+    "name": "存储深度",
+    "value": "250 Mpts"
+   },
+   {
+    "name": "波形刷新率",
+    "value": "750,000 wfm/s（Sequence模式"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6034-H10-Pro-2.jpg",
+  "imagePath": "/uploads/product/2026/SDS6034-H10-PRO.jpg",
+  "link": "https://store.siglent.com/product/sds6034-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6054 H10 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6054 H10 PRO 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500 MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "在 2 GHz全带宽下低至153 μVrms"
+   },
+   {
+    "name": "存储深度",
+    "value": "250 Mpts"
+   },
+   {
+    "name": "波形刷新率",
+    "value": "750,000 wfm/s（Sequence模式"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6034-H10-Pro-2.jpg",
+  "imagePath": "/uploads/product/2026/SDS6054-H10-PRO.jpg",
+  "link": "https://store.siglent.com/product/sds6054-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6104 H10 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6104 H10 PRO 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "1GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "在 2 GHz全带宽下低至153 μVrms"
+   },
+   {
+    "name": "存储深度",
+    "value": "250 Mpts"
+   },
+   {
+    "name": "波形刷新率",
+    "value": "750,000 wfm/s（Sequence模式"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6034-H10-Pro-2.jpg",
+  "imagePath": "/uploads/product/2026/SDS6104-H10-PRO.jpg",
+  "link": "https://store.siglent.com/product/sds6104-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS804X HD",
+  "series": "SDS800X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS804X HD 高清示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "70MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2 GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "50Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "50万帧/秒（Sequence模式）"
+   },
+   {
+    "name": "特性",
+    "value": "7英寸触摸屏，支持外接鼠标键盘"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS804X-HD-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS804X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds804x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS802X HD",
+  "series": "SDS800X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS802X HD 高清示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "70MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2 GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "50Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "50万帧/秒（Sequence模式）"
+   },
+   {
+    "name": "特性",
+    "value": "7英寸触摸屏，支持外接鼠标键盘"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS804X-HD-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS802X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds802x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6204 H10 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6204 H10 PRO 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "2GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "在 2 GHz全带宽下低至153 μVrms"
+   },
+   {
+    "name": "存储深度",
+    "value": "500 Mpts"
+   },
+   {
+    "name": "波形刷新率",
+    "value": "750,000 wfm/s（Sequence模式"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6034-H10-Pro-2.jpg",
+  "imagePath": "/uploads/product/2026/SDS6204-H10-PRO.jpg",
+  "link": "https://store.siglent.com/product/sds6204-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS822X HD",
+  "series": "SDS800X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS822X HD 高清示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "200MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2 GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "50Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "50万帧/秒（Sequence模式）"
+   },
+   {
+    "name": "特性",
+    "value": "7英寸触摸屏，支持外接鼠标键盘"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS804X-HD-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS822X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds822x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS814X HD",
+  "series": "SDS800X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS814X HD 高清示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "100MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2 GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "50Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "50万帧/秒（Sequence模式）"
+   },
+   {
+    "name": "特性",
+    "value": "7英寸触摸屏，支持外接鼠标键盘"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS804X-HD-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS814X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds814x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS824X HD",
+  "series": "SDS800X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS824X HD 高清示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "200MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2 GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "50Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "50万帧/秒（Sequence模式）"
+   },
+   {
+    "name": "特性",
+    "value": "7英寸触摸屏，支持外接鼠标键盘"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS804X-HD-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS824X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds824x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS812X HD",
+  "series": "SDS800X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS812X HD 高清示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "100MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2 GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "50Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "50万帧/秒（Sequence模式）"
+   },
+   {
+    "name": "特性",
+    "value": "7英寸触摸屏，支持外接鼠标键盘"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS804X-HD-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS812X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds812x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1204X-C",
+  "series": "SDS1000X-C",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1204X-C 数字示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "200 MHz"
+   },
+   {
+    "name": "最高实时采样率",
+    "value": "1 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "8-bit"
+   },
+   {
+    "name": "最大存储深度",
+    "value": "14 Mpts"
+   },
+   {
+    "name": "最高波形捕获率",
+    "value": "200,000 wfm/s"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1102X-C-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS1204X-C.jpg",
+  "link": "https://store.siglent.com/product/sds1204x-c-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1102X-C",
+  "series": "SDS1000X-C",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1102X-C 数字示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "100 MHz"
+   },
+   {
+    "name": "最高实时采样率",
+    "value": "1 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "8-bit"
+   },
+   {
+    "name": "最大存储深度",
+    "value": "14 Mpts"
+   },
+   {
+    "name": "最高波形捕获率",
+    "value": "200,000 wfm/s"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1102X-C-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS1102X-C.jpg",
+  "link": "https://store.siglent.com/product/sds1102x-c-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1202X-C",
+  "series": "SDS1000X-C",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1202X-C 数字示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "200 MHz"
+   },
+   {
+    "name": "最高实时采样率",
+    "value": "1 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "8-bit"
+   },
+   {
+    "name": "最大存储深度",
+    "value": "14 Mpts"
+   },
+   {
+    "name": "最高波形捕获率",
+    "value": "200,000 wfm/s"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1102X-C-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS1202X-C.jpg",
+  "link": "https://store.siglent.com/product/sds1202x-c-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1072X HD",
+  "series": "SDS1000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1072X HD 高清示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "70MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2 GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "100 Mpts/ch（单通道模式）"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "500 000帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "200 MHz全带宽下低至70 μVrms"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1072X-HD-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1072X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds1072x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1104X-C",
+  "series": "SDS1000X-C",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1104X-C 数字示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "100 MHz"
+   },
+   {
+    "name": "最高实时采样率",
+    "value": "1 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "8-bit"
+   },
+   {
+    "name": "最大存储深度",
+    "value": "14 Mpts"
+   },
+   {
+    "name": "最高波形捕获率",
+    "value": "200,000 wfm/s"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1102X-C-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS1104X-C.jpg",
+  "link": "https://store.siglent.com/product/sds1104x-c-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1102X HD",
+  "series": "SDS1000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1102X HD 高清示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "100MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2 GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "100 Mpts/ch（单通道模式）"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "500 000帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "200 MHz全带宽下低至70 μVrms"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1072X-HD-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1102X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds1102x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1074X HD",
+  "series": "SDS1000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1074X HD 高清示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "70MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2 GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "100 Mpts/ch（单通道模式）"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "500 000帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "200 MHz全带宽下低至70 μVrms"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1072X-HD-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1074X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds1074x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1104X HD",
+  "series": "SDS1000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1104X HD 高清示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "100MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2 GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "100 Mpts/ch（单通道模式）"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "500 000帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "200 MHz全带宽下低至70 μVrms"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-18.jpg",
+  "imagePath": "/uploads/product/2026/SDS1104X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds1104x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1104X-U",
+  "series": "SDS1104X-U",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1104X-U 数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "100MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "1 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "14Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "40万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-21.jpg",
+  "imagePath": "/uploads/product/2026/SDS1104X-U.jpg",
+  "link": "https://store.siglent.com/product/sds1104x-u-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1202X HD",
+  "series": "SDS1000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1202X HD 高清示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "200MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2 GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "100 Mpts/ch（单通道模式）"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "500 000帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "200 MHz全带宽下低至70 μVrms"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1072X-HD-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1202X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds1202x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1204X HD",
+  "series": "SDS1000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1204X HD 高清示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "200MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2 GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "100 Mpts/ch（单通道模式）"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "500 000帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "200 MHz全带宽下低至70 μVrms"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1072X-HD-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1204X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds1204x-hd-%e9%ab%98%e6%b8%85%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS2354X HD",
+  "series": "SDS2000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS2354X HD 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "350MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "200Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS2204X-HD-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS2354X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds2354x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS2204X HD",
+  "series": "SDS2000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS2204X HD 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "200MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "200Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS2204X-HD-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS2204X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds2204x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS2504X HD",
+  "series": "SDS2000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS2504X HD 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "200Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS2204X-HD-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS2504X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds2504x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS3034X HD",
+  "series": "SDS3000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS3034X HD高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "350MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "4GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "400Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS3034X-HD-3.jpg",
+  "imagePath": "/uploads/product/2026/SDS3034X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds3034x-hd%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS3054X HD",
+  "series": "SDS3000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS3054X HD 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "4GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "400Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SDS3034X-HD-1-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS3054X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds3054x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS3104X HD",
+  "series": "SDS3000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS3104X HD高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "1GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "4GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "400Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SDS3034X-HD-1-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS3104X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds3104x-hd%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS2352X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS2352X Plus数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "350MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "200Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "12 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS2072X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS2352X-Plus.jpg",
+  "link": "https://store.siglent.com/product/sds2352x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS2354X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS2354X Plus数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "350MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "200Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "12 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS2072X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS2354X-Plus.jpg",
+  "link": "https://store.siglent.com/product/sds2354x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS2502X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS2502X Plus数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "200Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "12 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS2072X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS2502X-Plus.jpg",
+  "link": "https://store.siglent.com/product/sds2502x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS2504X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS2504X Plus数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "200Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "12 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS2072X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS2504X-Plus.jpg",
+  "link": "https://store.siglent.com/product/sds2504x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS2072X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS2072X Plus 数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "70MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "200Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "12 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS2072X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS2072X-Plus.jpg",
+  "link": "https://store.siglent.com/product/sds2072x-plus/"
+ },
+ {
+  "model": "SDS2102X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS2102X Plus 数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "100MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "200Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "12 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS2072X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS2102X-Plus.jpg",
+  "link": "https://store.siglent.com/product/sds2102x-plus-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS2074X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS2074X Plus 数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "70MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "200Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "12 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS2072X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS2074X-Plus.jpg",
+  "link": "https://store.siglent.com/product/sds2074x-plus-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS2104X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS2104X Plus 数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "100MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "200Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "12 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS2072X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS2104X-Plus.jpg",
+  "link": "https://store.siglent.com/product/sds2104x-plus-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS2202X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS2202X Plus 数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "200MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "200Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "12 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS2072X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS2202X-Plus.jpg",
+  "link": "https://store.siglent.com/product/sds2202x-plus-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS2204X Plus",
+  "series": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS2204X Plus数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "200MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "2GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "200Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "12 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS2072X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS2204X-Plus.jpg",
+  "link": "https://store.siglent.com/product/sds2204x-plus%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1202X-E",
+  "series": "SDS1000X-E",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1202X-E 数字示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "200 MHz"
+   },
+   {
+    "name": "最高实时采样率",
+    "value": "1 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "8-bit"
+   },
+   {
+    "name": "最大存储深度",
+    "value": "14 Mpts"
+   },
+   {
+    "name": "最高波形捕获率",
+    "value": "400,000 wfm/s"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1072X-E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1202X-E.jpg",
+  "link": "https://store.siglent.com/product/sds1202x-e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1072X-E",
+  "series": "SDS1000X-E",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1072X-E 数字示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "70 MHz"
+   },
+   {
+    "name": "最高实时采样率",
+    "value": "1 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "8-bit"
+   },
+   {
+    "name": "最大存储深度",
+    "value": "14 Mpts"
+   },
+   {
+    "name": "最高波形捕获率",
+    "value": "400,000 wfm/s"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1072X-E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1072X-E.jpg",
+  "link": "https://store.siglent.com/product/sds1072x-e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1104X-E",
+  "series": "SDS1000X-E",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1104X-E 数字示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "100 MHz"
+   },
+   {
+    "name": "最高实时采样率",
+    "value": "1 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "8-bit"
+   },
+   {
+    "name": "最大存储深度",
+    "value": "14 Mpts"
+   },
+   {
+    "name": "最高波形捕获率",
+    "value": "400,000 wfm/s"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1072X-E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1104X-E.jpg",
+  "link": "https://store.siglent.com/product/sds1104x-e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1074X-E",
+  "series": "SDS1000X-E",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1074X-E数字示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "70 MHz"
+   },
+   {
+    "name": "最高实时采样率",
+    "value": "1 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "8-bit"
+   },
+   {
+    "name": "最大存储深度",
+    "value": "14 Mpts"
+   },
+   {
+    "name": "最高波形捕获率",
+    "value": "400,000 wfm/s"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1072X-E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1074X-E.jpg",
+  "link": "https://store.siglent.com/product/sds1074x-e%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1204X-E",
+  "series": "SDS1000X-E",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1204X-E 数字示波器",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "200 MHz"
+   },
+   {
+    "name": "最高实时采样率",
+    "value": "1 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "8-bit"
+   },
+   {
+    "name": "最大存储深度",
+    "value": "14 Mpts"
+   },
+   {
+    "name": "最高波形捕获率",
+    "value": "400,000 wfm/s"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1072X-E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1204X-E.jpg",
+  "link": "https://store.siglent.com/product/sds1204x-e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1202F+",
+  "series": "SDS1000E+/F+",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1202F+ 数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "200MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "1GSa/S"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "1 Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1122E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1202F+.jpg",
+  "link": "https://store.siglent.com/product/sds1202f-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1102CNL+",
+  "series": "SDS1000CNL+/DL+",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1102CNL+ 数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "100MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "1GSa/S"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "40Kpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1122E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1102CNL+.jpg",
+  "link": "https://store.siglent.com/product/sds1102cnl-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1122E+",
+  "series": "SDS1000E+/F+",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1122E+ 数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "120MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "1GSa/S"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "1 Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1122E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1122E+.jpg",
+  "link": "https://store.siglent.com/product/sds1122e-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1202DL+",
+  "series": "SDS1000CNL+/DL+",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1202DL+ 数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "200MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "500MSa/S"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "32Kpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1122E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1202DL+.jpg",
+  "link": "https://store.siglent.com/product/sds1202dl-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1102DL+",
+  "series": "SDS1000CNL+/DL+",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1102DL+ 数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "100MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "500MSa/S"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "存储深度",
+    "value": "32Kpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1122E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1102DL+.jpg",
+  "link": "https://store.siglent.com/product/sds1102dl-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1052A",
+  "series": "SDS1000A",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1052A 数字示波器",
+  "params": [
+   {
+    "name": "实时采样率高达",
+    "value": "500MSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度:32Kpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1122E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1052A.jpg",
+  "link": "https://store.siglent.com/product/sds1052a-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1072A",
+  "series": "SDS1000A",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1072A数字示波器",
+  "params": [
+   {
+    "name": "实时采样率高达",
+    "value": "1GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度:2Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1122E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1072A.jpg",
+  "link": "https://store.siglent.com/product/sds1072a%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SHS810X",
+  "series": "SHS800X",
+  "line": "OSCILLOSCOPE",
+  "title": "SHS810X 手持示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "100MHz"
+   },
+   {
+    "name": "实时采样率高达",
+    "value": "1GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度:12Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SHS807X-1.jpg",
+  "imagePath": "/uploads/product/2026/SHS810X.jpg",
+  "link": "https://store.siglent.com/product/shs810x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1102A",
+  "series": "SDS1000A",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1102A 数字示波器",
+  "params": [
+   {
+    "name": "特性",
+    "value": "带宽 100MHz"
+   },
+   {
+    "name": "实时采样率高达",
+    "value": "1GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度:2Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1122E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1102A.jpg",
+  "link": "https://store.siglent.com/product/sds1102a-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS1152A",
+  "series": "SDS1000A",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS1152A 数字示波器",
+  "params": [
+   {
+    "name": "特性",
+    "value": "带宽 150MHz"
+   },
+   {
+    "name": "实时采样率高达",
+    "value": "1GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度:2Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS1122E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS1152A.jpg",
+  "link": "https://store.siglent.com/product/sds1152a-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SHS820X",
+  "series": "SHS800X",
+  "line": "OSCILLOSCOPE",
+  "title": "SHS820X 手持示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "200MHz"
+   },
+   {
+    "name": "实时采样率高达",
+    "value": "1GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度:12Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SHS807X-1.jpg",
+  "imagePath": "/uploads/product/2026/SHS820X.jpg",
+  "link": "https://store.siglent.com/product/shs820x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SHS807X",
+  "series": "SHS800X",
+  "line": "OSCILLOSCOPE",
+  "title": "SHS807X 手持示波器",
+  "params": [
+   {
+    "name": "特性",
+    "value": "模拟通道带宽 200MHz"
+   },
+   {
+    "name": "实时采样率高达",
+    "value": "1GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度:12Mpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SHS807X-1.jpg",
+  "imagePath": "/uploads/product/2026/SHS807X.jpg",
+  "link": "https://store.siglent.com/product/shs807x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SHS1072X",
+  "series": "SHS1000X",
+  "line": "OSCILLOSCOPE",
+  "title": "SHS1072X 手持示波器",
+  "params": [
+   {
+    "name": "实时采样率高达",
+    "value": "1GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度:12Mpts"
+   },
+   {
+    "name": "隔离等级",
+    "value": "1000Vrms CATII、600Vrms CATIII"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SHS1072X-1.jpg",
+  "imagePath": "/uploads/product/2026/SHS1072X.jpg",
+  "link": "https://store.siglent.com/product/shs1072x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SHS1102X",
+  "series": "SHS1000X",
+  "line": "OSCILLOSCOPE",
+  "title": "SHS1102X 手持示波器",
+  "params": [
+   {
+    "name": "特性",
+    "value": "带宽 100MHz"
+   },
+   {
+    "name": "实时采样率高达",
+    "value": "1GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度:12Mpts"
+   },
+   {
+    "name": "隔离等级",
+    "value": "1000Vrms CATII、600Vrms CATIII"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SHS1072X-1.jpg",
+  "imagePath": "/uploads/product/2026/SHS1102X.jpg",
+  "link": "https://store.siglent.com/product/shs1102x-%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SHS1202X",
+  "series": "SHS1000X",
+  "line": "OSCILLOSCOPE",
+  "title": "SHS1202X手持示波器",
+  "params": [
+   {
+    "name": "特性",
+    "value": "带宽 200MHz"
+   },
+   {
+    "name": "实时采样率高达",
+    "value": "1GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度:12Mpts"
+   },
+   {
+    "name": "隔离等级",
+    "value": "1000Vrms CATII、600Vrms CATIII"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SHS1072X-1.jpg",
+  "imagePath": "/uploads/product/2026/SHS1202X.jpg",
+  "link": "https://store.siglent.com/product/shs1202x%e6%89%8b%e6%8c%81%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6034 H12 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6034 H12 PRO 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "350 MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "在 2 GHz全带宽下低至153 μVrms"
+   },
+   {
+    "name": "存储深度",
+    "value": "250 Mpts"
+   },
+   {
+    "name": "波形刷新率",
+    "value": "750,000 wfm/s（Sequence模式"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6034-H10-Pro-2.jpg",
+  "imagePath": "/uploads/product/2026/SDS6034-H12-PRO.jpg",
+  "link": "https://store.siglent.com/product/sds6034-h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6204 H12 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6204 H12 PRO 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "2GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "在 2 GHz全带宽下低至153 μVrms"
+   },
+   {
+    "name": "存储深度",
+    "value": "500 Mpts"
+   },
+   {
+    "name": "波形刷新率",
+    "value": "750,000 wfm/s（Sequence模式"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6034-H10-Pro-2.jpg",
+  "imagePath": "/uploads/product/2026/SDS6204-H12-PRO.jpg",
+  "link": "https://store.siglent.com/product/sds6204h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6104 H12 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6104 H12 PRO 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "1GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "在 2 GHz全带宽下低至153 μVrms"
+   },
+   {
+    "name": "存储深度",
+    "value": "250 Mpts"
+   },
+   {
+    "name": "波形刷新率",
+    "value": "750,000 wfm/s（Sequence模式"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6034-H10-Pro-2.jpg",
+  "imagePath": "/uploads/product/2026/SDS6104-H12-PRO.jpg",
+  "link": "https://store.siglent.com/product/sds6104-h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6108 H10 Pro",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6108 H10 Pro 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "1GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "在 2 GHz全带宽下低至153 μVrms"
+   },
+   {
+    "name": "存储深度",
+    "value": "500 Mpts"
+   },
+   {
+    "name": "波形刷新率",
+    "value": "750,000 wfm/s（Sequence模式"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6058-H10-Pro-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS6108-H10-Pro.jpg",
+  "link": "https://store.siglent.com/product/sds6108-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6058 H10 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6058 H10 PRO 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500 MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "在 2 GHz全带宽下低至153 μVrms"
+   },
+   {
+    "name": "存储深度",
+    "value": "500 Mpts"
+   },
+   {
+    "name": "波形刷新率",
+    "value": "750,000 wfm/s（Sequence模式"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6108-H10-Pro-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS6058-H10-PRO.jpg",
+  "link": "https://store.siglent.com/product/sds6058-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6208 H10 Pro",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6208 H10 Pro 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "2GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "在 2 GHz全带宽下低至153 μVrms"
+   },
+   {
+    "name": "存储深度",
+    "value": "500 Mpts"
+   },
+   {
+    "name": "波形刷新率",
+    "value": "750,000 wfm/s（Sequence模式"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6058-H12-Pro-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS6208-H10-Pro.jpg",
+  "link": "https://store.siglent.com/product/sds6208-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6058 H12 PRO",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6058 H12 PRO 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500 MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "在 2 GHz全带宽下低至153 μVrms"
+   },
+   {
+    "name": "存储深度",
+    "value": "500 Mpts"
+   },
+   {
+    "name": "波形刷新率",
+    "value": "750,000 wfm/s（Sequence模式"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6208-H12-Pro-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS6058-H12-PRO.jpg",
+  "link": "https://store.siglent.com/product/sds6058-h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6108 H12 Pro",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6108 H12 Pro 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "1GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "在 2 GHz全带宽下低至153 μVrms"
+   },
+   {
+    "name": "存储深度",
+    "value": "500 Mpts"
+   },
+   {
+    "name": "波形刷新率",
+    "value": "750,000 wfm/s（Sequence模式"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6208-H12-Pro-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS6108-H12-Pro.jpg",
+  "link": "https://store.siglent.com/product/sds6108-h12-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5058X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5058X HD 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "2.5Gpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 65 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-13.jpg",
+  "imagePath": "/uploads/product/2026/SDS5058X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds5058x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6208 H12 Pro",
+  "series": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6208 H12 Pro 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "2GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "低本底噪声",
+    "value": "在 2 GHz全带宽下低至153 μVrms"
+   },
+   {
+    "name": "存储深度",
+    "value": "500 Mpts"
+   },
+   {
+    "name": "波形刷新率",
+    "value": "750,000 wfm/s（Sequence模式"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SDS6108-H12-Pro-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS6208-H12-Pro.jpg",
+  "link": "https://store.siglent.com/product/sds6208-h10-pro-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8-2/"
+ },
+ {
+  "model": "SDS5108X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5108X HD 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "1GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "2.5Gpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 65 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-13.jpg",
+  "imagePath": "/uploads/product/2026/SDS5108X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds5108x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5034X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5034X HD 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "350MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "2.5Gpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 65 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SDS5034X-HD-2.jpg",
+  "imagePath": "/uploads/product/2026/SDS5034X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds5034x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5054X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5054X HD 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "2.5Gpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 65 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5036X-HD-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS5054X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds5054x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5104X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5104X HD 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "1GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "2.5Gpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 65 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5036X-HD-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS5104X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds5104x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5036X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5036X HD 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "350MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "6"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "2.5Gpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 65 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5036X-HD-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS5036X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds5036x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5056X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5056X HD 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "6"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "2.5Gpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 65 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5036X-HD-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS5056X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds5056x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5106X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5106X HD 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "1GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "6"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "2.5Gpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 65 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5036X-HD-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS5106X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds5106x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5038X HD",
+  "series": "SDS5000X HD",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5038X HD 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "350MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "2.5Gpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 65 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5036X-HD-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS5038X-HD.jpg",
+  "link": "https://store.siglent.com/product/sds5038x-hd-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5038L",
+  "series": "SDS5000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5038L 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "350MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "2.5Gpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 65 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5038L-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS5038L.jpg",
+  "link": "https://store.siglent.com/product/sds5038l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5058L",
+  "series": "SDS5000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5058L 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度2.5Gpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 65 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5038L-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS5058L.jpg",
+  "link": "https://store.siglent.com/product/sds5058l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5034X",
+  "series": "SDS5000X",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5034X 数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "350MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "8-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "250Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 50 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5034X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS5034X.jpg",
+  "link": "https://store.siglent.com/product/sds5034x-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5054X",
+  "series": "SDS5000X",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5054X 数字示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "8-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "250Mpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 50 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5034X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS5054X.jpg",
+  "link": "https://store.siglent.com/product/sds5054x-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5104X",
+  "series": "SDS5000X",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5104X 数字示波器",
+  "params": [
+   {
+    "name": "特性",
+    "value": "模拟带宽:1GHz"
+   },
+   {
+    "name": "特性",
+    "value": "最高实时采样率:5GSa/s"
+   },
+   {
+    "name": "特性",
+    "value": "垂直分辨率:8-bit"
+   },
+   {
+    "name": "特性",
+    "value": "最大存储深度:250Mpts/ch"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5034X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS5104X.jpg",
+  "link": "https://store.siglent.com/product/sds5104x-%e6%95%b0%e5%ad%97%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6054L H12",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6054L H12 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz；"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "特性",
+    "value": "支持最多512个模拟通道"
+   },
+   {
+    "name": "特性",
+    "value": "低本底噪声，在2 GHz带宽下低至153 μVrms"
+   },
+   {
+    "name": "特性",
+    "value": "采用SPO 技术，波形捕获率最高达750 000 帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度最高达500 Mpts/通道"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-11.jpg",
+  "imagePath": "/uploads/product/2026/SDS6054L-H12.jpg",
+  "link": "https://store.siglent.com/product/sds6054l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6104L H12",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6104L H12 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "1GHz；"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "特性",
+    "value": "支持最多512个模拟通道"
+   },
+   {
+    "name": "特性",
+    "value": "低本底噪声，在2 GHz带宽下低至153 μVrms"
+   },
+   {
+    "name": "特性",
+    "value": "采用SPO 技术，波形捕获率最高达750 000 帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度最高达500 Mpts/通道"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-11.jpg",
+  "imagePath": "/uploads/product/2026/SDS6104L-H12.jpg",
+  "link": "https://store.siglent.com/product/sds6104l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6054L H10",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6054L H10 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz；"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "特性",
+    "value": "支持最多512个模拟通道"
+   },
+   {
+    "name": "特性",
+    "value": "低本底噪声，在2 GHz带宽下低至153 μVrms"
+   },
+   {
+    "name": "特性",
+    "value": "采用SPO 技术，波形捕获率最高达750 000 帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度最高达500 Mpts/通道"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-11.jpg",
+  "imagePath": "/uploads/product/2026/SDS6054L-H10.jpg",
+  "link": "https://store.siglent.com/product/sds6054l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6104L H10",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6104L H10 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz；"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "特性",
+    "value": "支持最多512个模拟通道"
+   },
+   {
+    "name": "特性",
+    "value": "低本底噪声，在2 GHz带宽下低至153 μVrms"
+   },
+   {
+    "name": "特性",
+    "value": "采用SPO 技术，波形捕获率最高达750 000 帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度最高达500 Mpts/通道"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-11.jpg",
+  "imagePath": "/uploads/product/2026/SDS6104L-H10.jpg",
+  "link": "https://store.siglent.com/product/sds6104l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6204L H12",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6204L H12 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "2GHz；"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "特性",
+    "value": "支持最多512个模拟通道"
+   },
+   {
+    "name": "特性",
+    "value": "低本底噪声，在2 GHz带宽下低至153 μVrms"
+   },
+   {
+    "name": "特性",
+    "value": "采用SPO 技术，波形捕获率最高达750 000 帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度最高达500 Mpts/通道"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-11.jpg",
+  "imagePath": "/uploads/product/2026/SDS6204L-H12.jpg",
+  "link": "https://store.siglent.com/product/sds6204l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6108L H10",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6108L H10 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "1GHz；"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "特性",
+    "value": "支持最多512个模拟通道"
+   },
+   {
+    "name": "特性",
+    "value": "低本底噪声，在2 GHz带宽下低至153 μVrms"
+   },
+   {
+    "name": "特性",
+    "value": "采用SPO 技术，波形捕获率最高达750 000 帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度最高达500 Mpts/通道"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6054L-H10-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS6108L-H10.jpg",
+  "link": "https://store.siglent.com/product/sds6108l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS5108L",
+  "series": "SDS5000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS5108L 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "1GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "5GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "存储深度",
+    "value": "2.5Gpts"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 65 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS5038L-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS5108L.jpg",
+  "link": "https://store.siglent.com/product/sds5108l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6208L H12",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6208L H12 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "2GHz；"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "特性",
+    "value": "支持最多512个模拟通道"
+   },
+   {
+    "name": "特性",
+    "value": "低本底噪声，在2 GHz带宽下低至153 μVrms"
+   },
+   {
+    "name": "特性",
+    "value": "采用SPO 技术，波形捕获率最高达750 000 帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度最高达500 Mpts/通道"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6054L-H10-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS6208L-H12.jpg",
+  "link": "https://store.siglent.com/product/sds6208l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6058L H10",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6058L H10 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz；"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "特性",
+    "value": "支持最多512个模拟通道"
+   },
+   {
+    "name": "特性",
+    "value": "低本底噪声，在2 GHz带宽下低至153 μVrms"
+   },
+   {
+    "name": "特性",
+    "value": "采用SPO 技术，波形捕获率最高达750 000 帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度最高达500 Mpts/通道"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6054L-H10-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS6058L-H10.jpg",
+  "link": "https://store.siglent.com/product/sds6058l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6108L H12",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6108L H12 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "1GHz；"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "特性",
+    "value": "支持最多512个模拟通道"
+   },
+   {
+    "name": "特性",
+    "value": "低本底噪声，在2 GHz带宽下低至153 μVrms"
+   },
+   {
+    "name": "特性",
+    "value": "采用SPO 技术，波形捕获率最高达750 000 帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度最高达500 Mpts/通道"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6054L-H10-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS6108L-H12.jpg",
+  "link": "https://store.siglent.com/product/sds6108l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS7204A H12",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS7204A H12 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "2 GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "最高 20 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "1 Gpts/通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 100 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-10.jpg",
+  "imagePath": "/uploads/product/2026/SDS7204A-H12.jpg",
+  "link": "https://store.siglent.com/product/sds7204a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS7404A H12",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS7404A H12 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "4GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "最高 20 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "1 Gpts/通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 100 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-10.jpg",
+  "imagePath": "/uploads/product/2026/SDS7404A-H12.jpg",
+  "link": "https://store.siglent.com/product/sds7404a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS7804A H12",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS7804A H12 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "8GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "最高 20 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "1 Gpts/通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 100 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-10.jpg",
+  "imagePath": "/uploads/product/2026/SDS7804A-H12.jpg",
+  "link": "https://store.siglent.com/product/sds7804a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS7604A H12",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS7604A H12 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "6GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "最高 20 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "1 Gpts/通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 100 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-10.jpg",
+  "imagePath": "/uploads/product/2026/SDS7604A-H12.jpg",
+  "link": "https://store.siglent.com/product/sds7604a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS7604AP",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS7604AP 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "6GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "最高 20 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "2 Gpts/通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 100 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-10.jpg",
+  "imagePath": "/uploads/product/2026/SDS7604AP.jpg",
+  "link": "https://store.siglent.com/product/sds7604ap-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6208L H10",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6208L H10 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "2GHz；"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "特性",
+    "value": "支持最多512个模拟通道"
+   },
+   {
+    "name": "特性",
+    "value": "低本底噪声，在2 GHz带宽下低至153 μVrms"
+   },
+   {
+    "name": "特性",
+    "value": "采用SPO 技术，波形捕获率最高达750 000 帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度最高达500 Mpts/通道"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6054L-H10-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS6208L-H10.jpg",
+  "link": "https://store.siglent.com/product/sds6208l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS7304A H12",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS7304A H12 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "3GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "最高 20 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "1 Gpts/通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 100 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-10.jpg",
+  "imagePath": "/uploads/product/2026/SDS7304A-H12.jpg",
+  "link": "https://store.siglent.com/product/sds7304a-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SSG5040X",
+  "series": "SSG5000X",
+  "line": "RF_GEN",
+  "title": "SSG5040X 射频模拟/矢量信号发生器",
+  "params": [
+   {
+    "name": "特性",
+    "value": "输出频率范围 9 kHz ~ 4 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "指标电平范围 -140 dBm ~ +26 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt;-120 dBc/Hz@1 GHz 典型值，偏移 20 kHz(典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "内部基带源带宽150 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "支持AM/FM/PM模拟调制及IQ调制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SSG5040X-1.jpg",
+  "imagePath": "/uploads/product/2026/SSG5040X.jpg",
+  "link": "https://store.siglent.com/product/ssg5040x-%e5%b0%84%e9%a2%91%e6%a8%a1%e6%8b%9f-%e7%9f%a2%e9%87%8f%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/"
+ },
+ {
+  "model": "SDS6058L H12",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6058L H12 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "500MHz；"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "8"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "特性",
+    "value": "支持最多512个模拟通道"
+   },
+   {
+    "name": "特性",
+    "value": "低本底噪声，在2 GHz带宽下低至153 μVrms"
+   },
+   {
+    "name": "特性",
+    "value": "采用SPO 技术，波形捕获率最高达750 000 帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度最高达500 Mpts/通道"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDS6054L-H10-1.jpg",
+  "imagePath": "/uploads/product/2026/SDS6058L-H12.jpg",
+  "link": "https://store.siglent.com/product/sds6058l-h12-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDS6204L H10",
+  "series": "SDS6000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS6204L H10 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "2 GHz；"
+   },
+   {
+    "name": "实时采样率",
+    "value": "10GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "10-bit"
+   },
+   {
+    "name": "特性",
+    "value": "低本底噪声，在2 GHz带宽下低至153 μVrms"
+   },
+   {
+    "name": "特性",
+    "value": "采用SPO 技术，波形捕获率最高达750 000 帧/秒（Sequence 模式）"
+   },
+   {
+    "name": "特性",
+    "value": "存储深度最高达500 Mpts/通道"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-11.jpg",
+  "imagePath": "/uploads/product/2026/SDS6204L-H10.jpg",
+  "link": "https://store.siglent.com/product/sds6204l-h10-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SSG5040X-V",
+  "series": "SSG5000X",
+  "line": "RF_GEN",
+  "title": "SSG5040X-V 射频模拟/矢量信号发生器",
+  "params": [
+   {
+    "name": "特性",
+    "value": "输出频率范围 9 kHz ~ 4 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "指标电平范围 -140 dBm ~ +26 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt;-120 dBc/Hz@1 GHz 典型值，偏移 20 kHz(典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "内部基带源带宽150 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "支持AM/FM/PM模拟调制及IQ调制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SSG5040X-1.jpg",
+  "imagePath": "/uploads/product/2026/SSG5040X-V.jpg",
+  "link": "https://store.siglent.com/product/ssg5040x-v-%e5%b0%84%e9%a2%91%e6%a8%a1%e6%8b%9f-%e7%9f%a2%e9%87%8f%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/"
+ },
+ {
+  "model": "SSG5060X",
+  "series": "SSG5000X",
+  "line": "RF_GEN",
+  "title": "SSG5060X 射频模拟/矢量信号发生器",
+  "params": [
+   {
+    "name": "特性",
+    "value": "输出频率范围 9 kHz ~ 6 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "指标电平范围 -140 dBm ~ +26 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt;-120 dBc/Hz@1 GHz 典型值，偏移 20 kHz(典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "内部基带源带宽150 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "支持AM/FM/PM模拟调制及IQ调制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SSG5040X-1.jpg",
+  "imagePath": "/uploads/product/2026/SSG5060X.jpg",
+  "link": "https://store.siglent.com/product/ssg5060x-%e5%b0%84%e9%a2%91%e6%a8%a1%e6%8b%9f-%e7%9f%a2%e9%87%8f%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/"
+ },
+ {
+  "model": "SSG5060X-V",
+  "series": "SSG5000X",
+  "line": "RF_GEN",
+  "title": "SSG5060X-V 射频模拟/矢量信号发生器",
+  "params": [
+   {
+    "name": "特性",
+    "value": "输出频率范围 9 kHz ~ 6 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "指标电平范围 -140 dBm ~ +26 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt;-120 dBc/Hz@1 GHz 典型值，偏移 20 kHz(典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "内部基带源带宽150 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "支持AM/FM/PM模拟调制及IQ调制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SSG5040X-1.jpg",
+  "imagePath": "/uploads/product/2026/SSG5060X-V.jpg",
+  "link": "https://store.siglent.com/product/ssg5060x-v-%e5%b0%84%e9%a2%91%e6%a8%a1%e6%8b%9f-%e7%9f%a2%e9%87%8f%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/"
+ },
+ {
+  "model": "SSG5085A",
+  "series": "SSG5000A",
+  "line": "RF_GEN",
+  "title": "SSG5085A 微波信号发生器",
+  "params": [
+   {
+    "name": "输出频率范围",
+    "value": "9 kHz~20 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "电平设置范围 -130 dBm ~ 25 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "幅度精度≤0.7 dB（典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声＜-120 dBc/Hz@1 GHz，偏移20 kHz(典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "支持脉冲调制功能（选件），脉冲串发生器，用户可自定义脉冲序列（选件）"
+   },
+   {
+    "name": "特性",
+    "value": "5 英寸电容触摸屏，方便用户操作"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-28.jpg",
+  "imagePath": "/uploads/product/2026/SSG5085A.jpg",
+  "link": "https://store.siglent.com/product/ssg5085a-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/"
+ },
+ {
+  "model": "SSG6085A",
+  "series": "SSG6000A",
+  "line": "RF_GEN",
+  "title": "SSG6085A 射频/微波信号发生器",
+  "params": [
+   {
+    "name": "输出频率范围",
+    "value": "100 kHz ~ 20 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "电平设置范围 -130 dBm ~ 25 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "幅度精度≤0.7 dB（典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声＜-135 dBc/Hz@1 GHz，偏移20 kHz(典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "支持脉冲调制功能（选件），脉冲串发生器，用户可自定义脉冲序列（选件）"
+   },
+   {
+    "name": "特性",
+    "value": "5 英寸电容触摸屏，方便用户操作"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-29.jpg",
+  "imagePath": "/uploads/product/2026/SSG6085A.jpg",
+  "link": "https://store.siglent.com/product/ssg6085a-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/"
+ },
+ {
+  "model": "SSG6087A",
+  "series": "SSG6000A",
+  "line": "RF_GEN",
+  "title": "SSG6087A 射频/微波信号发生器",
+  "params": [
+   {
+    "name": "输出频率范围",
+    "value": "100 kHz ~ 40 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "电平设置范围 -130 dBm ~ 25 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "幅度精度≤0.7 dB（典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声＜-135 dBc/Hz@1 GHz，偏移20 kHz(典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "支持脉冲调制功能（选件），脉冲串发生器，用户可自定义脉冲序列（选件）"
+   },
+   {
+    "name": "特性",
+    "value": "5 英寸电容触摸屏，方便用户操作"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-29.jpg",
+  "imagePath": "/uploads/product/2026/SSG6087A.jpg",
+  "link": "https://store.siglent.com/product/ssg6087a-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/"
+ },
+ {
+  "model": "SSG6089A",
+  "series": "SSG6000A",
+  "line": "RF_GEN",
+  "title": "SSG6089A 射频/微波信号发生器",
+  "params": [
+   {
+    "name": "输出频率范围",
+    "value": "100 kHz~67 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "电平设置范围 -130 dBm ~ 25 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "幅度精度≤0.7 dB（典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声＜-146 dBc/Hz@1 GHz，偏移20 kHz(典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "支持脉冲调制功能（选件），脉冲串发生器，用户可自定义脉冲序列（选件）"
+   },
+   {
+    "name": "特性",
+    "value": "5 英寸电容触摸屏，方便用户操作"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-29.jpg",
+  "imagePath": "/uploads/product/2026/SSG6089A.jpg",
+  "link": "https://store.siglent.com/product/ssg6089a-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/"
+ },
+ {
+  "model": "SDG1032X",
+  "series": "SDG1000X",
+  "line": "FUNCTION_GEN",
+  "title": "SDG1032X 函数任意波形发生器信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "等性能双通道。正弦波、方波最大输出频率30MHz"
+   },
+   {
+    "name": "特性",
+    "value": "150 MSa/s采样率，14 bit垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出任意波，波形长度2pts~16 kpts"
+   },
+   {
+    "name": "特性",
+    "value": "脉冲上升/下降时间可调，脉宽精细可调"
+   },
+   {
+    "name": "特性",
+    "value": "4.3 英寸显示屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG1022X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG1032X.jpg",
+  "link": "https://store.siglent.com/product/sdg1032x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SDS7804AP",
+  "series": "SDS7000A",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS7804AP 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "8GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "最高20 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "2 Gpts/通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 100 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-10.jpg",
+  "imagePath": "/uploads/product/2026/SDS7804AP.jpg",
+  "link": "https://store.siglent.com/product/sds7804ap-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SDG1062X",
+  "series": "SDG1000X",
+  "line": "FUNCTION_GEN",
+  "title": "SDG1062X 函数任意波形发生器信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "等性能双通道。正弦波、方波最大输出频率60MHz"
+   },
+   {
+    "name": "特性",
+    "value": "150 MSa/s采样率，14 bit垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出任意波，波形长度2pts~16 kpts"
+   },
+   {
+    "name": "特性",
+    "value": "脉冲上升/下降时间可调，脉宽精细可调"
+   },
+   {
+    "name": "特性",
+    "value": "4.3 英寸显示屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG1022X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG1062X.jpg",
+  "link": "https://store.siglent.com/product/sdg1062x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SDG1022X",
+  "series": "SDG1000X",
+  "line": "FUNCTION_GEN",
+  "title": "SDG1022X 函数任意波形发生器信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "等性能双通道。正弦波、方波最大输出频率25MHz"
+   },
+   {
+    "name": "特性",
+    "value": "150 MSa/s采样率，14 bit垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出任意波，波形长度2pts~16 kpts"
+   },
+   {
+    "name": "特性",
+    "value": "脉冲上升/下降时间可调，脉宽精细可调"
+   },
+   {
+    "name": "特性",
+    "value": "4.3 英寸显示屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG1022X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG1022X.jpg",
+  "link": "https://store.siglent.com/product/sdg1022x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SDG1022X Plus",
+  "series": "SDG1000X Plus",
+  "line": "FUNCTION_GEN",
+  "title": "SDG1022X Plus 波形发生器信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "双通道，最大输出频率 25 MHz，最大输出幅度 20 Vpp"
+   },
+   {
+    "name": "特性",
+    "value": "1 GSa/s 数-模转换器采样率，16-bit 垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "支持序列波播放功能，每通道最大存储深度 8 Mpts"
+   },
+   {
+    "name": "特性",
+    "value": "最高输出40 Mbps 的 PRBS 码型"
+   },
+   {
+    "name": "特性",
+    "value": "支持双脉冲输出功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG1022X-Plus-2.jpg",
+  "imagePath": "/uploads/product/2026/SDG1022X-Plus.jpg",
+  "link": "https://store.siglent.com/product/sdg1022x-plus-%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SDG1032X Plus",
+  "series": "SDG1000X Plus",
+  "line": "FUNCTION_GEN",
+  "title": "SDG1032X Plus 波形发生器信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "双通道，最大输出频率 30 MHz，最大输出幅度 20 Vpp"
+   },
+   {
+    "name": "特性",
+    "value": "1 GSa/s 数-模转换器采样率，16-bit 垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "支持序列波播放功能，每通道最大存储深度 8 Mpts"
+   },
+   {
+    "name": "特性",
+    "value": "最高输出40 Mbps 的 PRBS 码型"
+   },
+   {
+    "name": "特性",
+    "value": "支持双脉冲输出功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG1022X-Plus-2.jpg",
+  "imagePath": "/uploads/product/2026/SDG1032X-Plus.jpg",
+  "link": "https://store.siglent.com/product/sdg1032x-plus-%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SDG1062X Plus",
+  "series": "SDG1000X Plus",
+  "line": "FUNCTION_GEN",
+  "title": "SDG1062X Plus 波形发生器信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "双通道，最大输出频率 60 MHz，最大输出幅度 20 Vpp"
+   },
+   {
+    "name": "特性",
+    "value": "1 GSa/s 数-模转换器采样率，16-bit 垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "支持序列波播放功能，每通道最大存储深度 8 Mpts"
+   },
+   {
+    "name": "特性",
+    "value": "最高输出40 Mbps 的 PRBS 码型"
+   },
+   {
+    "name": "特性",
+    "value": "支持双脉冲输出功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG1022X-Plus-2.jpg",
+  "imagePath": "/uploads/product/2026/SDG1062X-Plus.jpg",
+  "link": "https://store.siglent.com/product/sdg1062x-plus-%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SSA3032X-R",
+  "series": "SSA3000X-R",
+  "line": "SPECTRUM",
+  "title": "SSA3032X-R 频谱分析仪",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围从9 kHz ~ 3.2 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "最高实时分析带宽40 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "100% POI 最短信号持续时间 7.2 us"
+   },
+   {
+    "name": "特性",
+    "value": "频谱图采集量50000 帧"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平 DANL -165 dBm/Hz （典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -98 dBc/Hz（1 GHz，偏移 10 kHz，典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "标配矢量网络分析VNA功能以及DTF功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-42.jpg",
+  "imagePath": "/uploads/product/2026/SSA3032X-R.jpg",
+  "link": "https://store.siglent.com/product/ssa3032x-r-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SSG5083A",
+  "series": "SSG5000A",
+  "line": "RF_GEN",
+  "title": "SSG5083A 微波信号发生器",
+  "params": [
+   {
+    "name": "输出频率范围",
+    "value": "9 kHz~13.6 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "电平设置范围 -130 dBm ~ 25 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "幅度精度≤0.7 dB（典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声＜-120 dBc/Hz@1 GHz，偏移20 kHz(典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "支持脉冲调制功能（选件），脉冲串发生器，用户可自定义脉冲序列（选件）"
+   },
+   {
+    "name": "特性",
+    "value": "5 英寸电容触摸屏，方便用户操作"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-28.jpg",
+  "imagePath": "/uploads/product/2026/SSG5083A.jpg",
+  "link": "https://store.siglent.com/product/ssg5083a-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/"
+ },
+ {
+  "model": "SSA3050X-R",
+  "series": "SSA3000X-R",
+  "line": "SPECTRUM",
+  "title": "SSA3050X-R 频谱分析仪",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围从9 kHz ~ 5.0 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "最高实时分析带宽40 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "100% POI 最短信号持续时间 7.2 us"
+   },
+   {
+    "name": "特性",
+    "value": "频谱图采集量50000 帧"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平 DANL -165 dBm/Hz （典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -98 dBc/Hz（1 GHz，偏移 10 kHz，典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "标配矢量网络分析VNA功能以及DTF功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-42.jpg",
+  "imagePath": "/uploads/product/2026/SSA3050X-R.jpg",
+  "link": "https://store.siglent.com/product/ssa3050x-r-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SSA3075X-R",
+  "series": "SSA3000X-R",
+  "line": "SPECTRUM",
+  "title": "SSA3075X-R 频谱分析仪",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围从9 kHz ~ 7.5 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "最高实时分析带宽40 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "100% POI 最短信号持续时间 7.2 us"
+   },
+   {
+    "name": "特性",
+    "value": "频谱图采集量50000 帧"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平 DANL -165 dBm/Hz （典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -98 dBc/Hz（1 GHz，偏移 10 kHz，典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "标配矢量网络分析VNA功能以及DTF功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-42.jpg",
+  "imagePath": "/uploads/product/2026/SSA3075X-R.jpg",
+  "link": "https://store.siglent.com/product/ssa3075x-r-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SSG6083A",
+  "series": "SSG6000A",
+  "line": "RF_GEN",
+  "title": "SSG6083A 射频/微波信号发生器",
+  "params": [
+   {
+    "name": "输出频率范围",
+    "value": "100 kHz ~ 13.6 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "电平设置范围 -130 dBm ~ 25 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "幅度精度≤0.7 dB（典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声＜-135 dBc/Hz@1 GHz，偏移20 kHz(典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "支持脉冲调制功能（选件），脉冲串发生器，用户可自定义脉冲序列（选件）"
+   },
+   {
+    "name": "特性",
+    "value": "5 英寸电容触摸屏，方便用户操作"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-29.jpg",
+  "imagePath": "/uploads/product/2026/SSG6083A.jpg",
+  "link": "https://store.siglent.com/product/ssg6083a-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/"
+ },
+ {
+  "model": "SDG2082X",
+  "series": "SDG2000X",
+  "line": "FUNCTION_GEN",
+  "title": "SDG2082X 函数任意波形发生器信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "等性能双通道，最大输出频率80 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "1.2 GSa/s采样率，16 bit 垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出，波形长度8~8 Mpts"
+   },
+   {
+    "name": "特性",
+    "value": "低抖动的方波和脉冲；脉冲波的脉宽、上升/下降时间精细可调"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG2042X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG2082X.jpg",
+  "link": "https://store.siglent.com/product/sdg2082x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SDG2122X",
+  "series": "SDG2000X",
+  "line": "FUNCTION_GEN",
+  "title": "SDG2122X函数任意波形发生器信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "等性能双通道，最大输出频率120 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "1.2 GSa/s采样率，16 bit 垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出，波形长度8~8 Mpts"
+   },
+   {
+    "name": "特性",
+    "value": "低抖动的方波和脉冲；脉冲波的脉宽、上升/下降时间精细可调"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG2042X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG2122X.jpg",
+  "link": "https://store.siglent.com/product/sdg2122x%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SSA5083A",
+  "series": "SSA5000A",
+  "line": "SPECTRUM",
+  "title": "SSA5083A 频谱分析仪",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围从9 kHz ~ 13.6 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "最高实时分析带宽40 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "100% POI 最短信号持续时间 7.2 us"
+   },
+   {
+    "name": "特性",
+    "value": "频谱图采集量50000 帧"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平 DANL -165 dBm/Hz （典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -98 dBc/Hz（1 GHz，偏移 10 kHz，典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "标配矢量网络分析VNA功能以及DTF功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-43.jpg",
+  "imagePath": "/uploads/product/2026/SSA5083A.jpg",
+  "link": "https://store.siglent.com/product/ssa5083a-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SSA5085A",
+  "series": "SSA5000A",
+  "line": "SPECTRUM",
+  "title": "SSA5085A 频谱分析仪",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围从9 kHz ~ 26.5 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "最高实时分析带宽40 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "100% POI 最短信号持续时间 7.2 us"
+   },
+   {
+    "name": "特性",
+    "value": "频谱图采集量50000 帧"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平 DANL -165 dBm/Hz （典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -98 dBc/Hz（1 GHz，偏移 10 kHz，典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "标配矢量网络分析VNA功能以及DTF功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-43.jpg",
+  "imagePath": "/uploads/product/2026/SSA5085A.jpg",
+  "link": "https://store.siglent.com/product/ssa5085a-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SDG3202X",
+  "series": "SDG3000X",
+  "line": "FUNCTION_GEN",
+  "title": "SDG3202X函数任意波形发生器信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "双通道，最大输出频率200MHz，全频段1μHz分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "1.2 GSa/s数-模转换器采样率，16-bit垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出任意波，40Mpts波形存储器"
+   },
+   {
+    "name": "特性",
+    "value": "最高输出120Mbps的PRBS码型"
+   },
+   {
+    "name": "特性",
+    "value": "支持双脉冲输出功能"
+   },
+   {
+    "name": "特性",
+    "value": "可作为噪声发生器/谐波发生器/IQ信号发生器"
+   },
+   {
+    "name": "特性",
+    "value": "7英寸1024×600高分辨率显示触摸屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG3082X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG3202X.jpg",
+  "link": "https://store.siglent.com/product/sdg3202x%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SDG3082X",
+  "series": "SDG3000X",
+  "line": "FUNCTION_GEN",
+  "title": "SDG3082X 函数任意波形发生器信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "双通道，最大输出频率80MHz，全频段1μHz分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "1.2 GSa/s数-模转换器采样率，16-bit垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出任意波，40Mpts波形存储器"
+   },
+   {
+    "name": "特性",
+    "value": "最高输出120Mbps的PRBS码型"
+   },
+   {
+    "name": "特性",
+    "value": "支持双脉冲输出功能"
+   },
+   {
+    "name": "特性",
+    "value": "可作为噪声发生器/谐波发生器/IQ信号发生器"
+   },
+   {
+    "name": "特性",
+    "value": "7英寸1024×600高分辨率显示触摸屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG3082X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG3082X.jpg",
+  "link": "https://store.siglent.com/product/sdg3082x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SDG3162X",
+  "series": "SDG3000X",
+  "line": "FUNCTION_GEN",
+  "title": "SDG3162X 函数任意波形发生器信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "双通道，最大输出频率160MHz，全频段1μHz分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "1.2 GSa/s数-模转换器采样率，16-bit垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出任意波，40Mpts波形存储器"
+   },
+   {
+    "name": "特性",
+    "value": "最高输出120Mbps的PRBS码型"
+   },
+   {
+    "name": "特性",
+    "value": "支持双脉冲输出功能"
+   },
+   {
+    "name": "特性",
+    "value": "可作为噪声发生器/谐波发生器/IQ信号发生器"
+   },
+   {
+    "name": "特性",
+    "value": "7英寸1024×600高分辨率显示触摸屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG3082X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG3162X.jpg",
+  "link": "https://store.siglent.com/product/sdg3162x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SSA6088A",
+  "series": "SSA6000A",
+  "line": "SPECTRUM",
+  "title": "SSA6088A 频谱分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "2 Hz ~ 50 GHz"
+   },
+   {
+    "name": "最大实时带宽",
+    "value": "400MHz"
+   },
+   {
+    "name": "相位噪声(典型值)",
+    "value": "&lt;-123dBc/Hz"
+   },
+   {
+    "name": "显示平均噪声电平（DANL）",
+    "value": "-165 dBm/Hz"
+   },
+   {
+    "name": "IQ分析带宽",
+    "value": "1.2GHz"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-44.jpg",
+  "imagePath": "/uploads/product/2026/SSA6088A.jpg",
+  "link": "https://store.siglent.com/product/ssa6088a-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SDG6012X-E",
+  "series": "SDG6000X-E",
+  "line": "FUNCTION_GEN",
+  "title": "SDG6012X-E 函数任意波形发生器脉冲信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "等性能双通道，最大输出频率160 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "2.4 GSa/s采样率，16 bit 垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "脉冲信号最大频率120 MHz；上升/下降时间可调，最快可达2 ns"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出任意波，波形长度32pts~8 Mpts"
+   },
+   {
+    "name": "特性",
+    "value": "可作为噪声信号发生器"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG6012X-E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG6012X-E.jpg",
+  "link": "https://store.siglent.com/product/sdg6012x-e-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SDG6022X-E",
+  "series": "SDG6000X-E",
+  "line": "FUNCTION_GEN",
+  "title": "SDG6022X-E  函数任意波形发生器脉冲信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "等性能双通道，最大输出频率200 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "2.4 GSa/s采样率，16 bit 垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "脉冲信号最大频率120 MHz；上升/下降时间可调，最快可达2 ns"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出任意波，波形长度32pts~8 Mpts"
+   },
+   {
+    "name": "特性",
+    "value": "可作为噪声信号发生器"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG6012X-E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG6022X-E.jpg",
+  "link": "https://store.siglent.com/product/sdg6022x-e-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SDG6032X-E",
+  "series": "SDG6000X-E",
+  "line": "FUNCTION_GEN",
+  "title": "SDG6032X-E 函数任意波形发生器脉冲信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "等性能双通道，最大输出频率350 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "2.4 GSa/s采样率，16 bit 垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "脉冲信号最大频率120 MHz；上升/下降时间可调，最快可达2 ns"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出任意波，波形长度32pts~8 Mpts"
+   },
+   {
+    "name": "特性",
+    "value": "可作为噪声信号发生器"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG6012X-E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG6032X-E.jpg",
+  "link": "https://store.siglent.com/product/sdg6032x-e-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SDG6052X-E",
+  "series": "SDG6000X-E",
+  "line": "FUNCTION_GEN",
+  "title": "SDG6052X-E  函数任意波形发生器脉冲信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "等性能双通道，最大输出频率500 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "2.4 GSa/s采样率，16 bit 垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "脉冲信号最大频率120 MHz；上升/下降时间可调，最快可达2 ns"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出任意波，波形长度32pts~8 Mpts"
+   },
+   {
+    "name": "特性",
+    "value": "可作为噪声信号发生器"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG6012X-E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG6052X-E.jpg",
+  "link": "https://store.siglent.com/product/sdg6052x-e-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SDG6032X",
+  "series": "SDG6000X",
+  "line": "FUNCTION_GEN",
+  "title": "SDG6032X 函数任意波形发生器脉冲信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "等性能双通道，最大输出频率350 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "2.4 GSa/s采样率，16 bit 垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "脉冲信号最大频率150 MHz；上升/下降时间可调，最快可达1 ns"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出任意波，波形长度32pts~20 Mpts"
+   },
+   {
+    "name": "特性",
+    "value": "可作为 IQ 信号发生器（选件）"
+   },
+   {
+    "name": "特性",
+    "value": "可作为 PRBS 信号发生器"
+   },
+   {
+    "name": "特性",
+    "value": "可作为噪声信号发生器"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG6012X-E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG6032X.jpg",
+  "link": "https://store.siglent.com/product/sdg6032x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SSG6082A-V",
+  "series": "SSG6082A-V",
+  "line": "RF_GEN",
+  "title": "SSG6082A-V 射频/微波信号发生器",
+  "params": [
+   {
+    "name": "输出频率范围",
+    "value": "100 kHz~67 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "电平设置范围 -130 dBm ~ 25 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "幅度精度≤0.7 dB（典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声＜-146 dBc/Hz@1 GHz，偏移20 kHz(典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "支持脉冲调制功能（选件），脉冲串发生器，用户可自定义脉冲序列（选件）"
+   },
+   {
+    "name": "特性",
+    "value": "5 英寸电容触摸屏，方便用户操作"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-29.jpg",
+  "imagePath": "/uploads/product/2026/SSG6082A-V.jpg",
+  "link": "https://store.siglent.com/product/ssg6082a-v-%e5%b0%84%e9%a2%91-%e5%be%ae%e6%b3%a2%e4%bf%a1%e5%8f%b7%e5%8f%91%e7%94%9f%e5%99%a8/"
+ },
+ {
+  "model": "SDG6052X",
+  "series": "SDG6000X",
+  "line": "FUNCTION_GEN",
+  "title": "SDG6052X  函数任意波形发生器脉冲信号源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "等性能双通道，最大输出频率500 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "2.4 GSa/s采样率，16 bit 垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "脉冲信号最大频率150 MHz；上升/下降时间可调，最快可达1 ns"
+   },
+   {
+    "name": "特性",
+    "value": "逐点输出任意波，波形长度32pts~20 Mpts"
+   },
+   {
+    "name": "特性",
+    "value": "可作为 IQ 信号发生器（选件）"
+   },
+   {
+    "name": "特性",
+    "value": "可作为 PRBS 信号发生器"
+   },
+   {
+    "name": "特性",
+    "value": "可作为噪声信号发生器"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG6012X-E-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG6052X.jpg",
+  "link": "https://store.siglent.com/product/sdg6052x-%e5%87%bd%e6%95%b0%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8%e8%84%89%e5%86%b2%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SHA863A",
+  "series": "SHA860A",
+  "line": "SPECTRUM",
+  "title": "SHA863A 手持频谱分析仪",
+  "params": [
+   {
+    "name": "频谱分析频率范围",
+    "value": "9 kHz – 14GHz"
+   },
+   {
+    "name": "特性",
+    "value": "实时分析带宽最大110 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "支持 5G NR OTA测量分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持 LTE FDD/TDD OTA测量分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持GPS定位，在线地图显示"
+   },
+   {
+    "name": "特性",
+    "value": "典型工作时间 2.5 小时，净重 3.2 kg"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SHA851A-1.jpg",
+  "imagePath": "/uploads/product/2026/SHA863A.jpg",
+  "link": "https://store.siglent.com/product/sha863a-%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SHA865A",
+  "series": "SHA860A",
+  "line": "SPECTRUM",
+  "title": "SHA865A 手持频谱分析仪",
+  "params": [
+   {
+    "name": "频谱分析频率范围",
+    "value": "9 kHz – 20 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "实时分析带宽最大110 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "支持 5G NR OTA测量分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持 LTE FDD/TDD OTA测量分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持GPS定位，在线地图显示"
+   },
+   {
+    "name": "特性",
+    "value": "典型工作时间 2.5 小时，净重 3.2 kg"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SHA851A-1.jpg",
+  "imagePath": "/uploads/product/2026/SHA865A.jpg",
+  "link": "https://store.siglent.com/product/sha865a-%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SHA864A",
+  "series": "SHA860A",
+  "line": "SPECTRUM",
+  "title": "SHA864A 手持频谱分析仪",
+  "params": [
+   {
+    "name": "频谱分析频率范围",
+    "value": "9 kHz – 20 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "实时分析带宽最大110 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "支持 5G NR OTA测量分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持 LTE FDD/TDD OTA测量分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持GPS定位，在线地图显示"
+   },
+   {
+    "name": "特性",
+    "value": "典型工作时间 2.5 小时，净重 3.2 kg"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SHA851A-1.jpg",
+  "imagePath": "/uploads/product/2026/SHA864A.jpg",
+  "link": "https://store.siglent.com/product/sha864a-%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SHA861A",
+  "series": "SHA860A",
+  "line": "SPECTRUM",
+  "title": "SHA861A手持频谱分析仪",
+  "params": [
+   {
+    "name": "频谱分析频率范围",
+    "value": "9 kHz – 3.6 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "实时分析带宽最大110 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "支持 5G NR OTA测量分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持 LTE FDD/TDD OTA测量分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持GPS定位，在线地图显示"
+   },
+   {
+    "name": "特性",
+    "value": "典型工作时间 2.5 小时，净重 3.2 kg"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SHA851A-1.jpg",
+  "imagePath": "/uploads/product/2026/SHA861A.jpg",
+  "link": "https://store.siglent.com/product/sha861a%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SDG7032A",
+  "series": "SDG7000A",
+  "line": "FUNCTION_GEN",
+  "title": "SDG7032A 任意波形发生器 信号源",
+  "params": [
+   {
+    "name": "最高输出频率",
+    "value": "350MHz"
+   },
+   {
+    "name": "特性",
+    "value": "5 GSa/s数-模转换器采样率，14-bit垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "双通道差分/单端模拟输出，16-bit LVDS/LVTTL数字总线输出"
+   },
+   {
+    "name": "特性",
+    "value": "可输出最高500 MSymbol/s符号率的矢量信号"
+   },
+   {
+    "name": "特性",
+    "value": "24Vpp模拟输出能力叠加±12 V直流偏置，最大可提供±24 V（48 V）的输出范围"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG7032A-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG7032A.jpg",
+  "link": "https://store.siglent.com/product/sdg7032a-%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8-%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SHA862A",
+  "series": "SHA860A",
+  "line": "SPECTRUM",
+  "title": "SHA862A手持频谱分析仪",
+  "params": [
+   {
+    "name": "频谱分析频率范围",
+    "value": "9 kHz – 7.5 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "实时分析带宽最大110 MHz"
+   },
+   {
+    "name": "特性",
+    "value": "支持 5G NR OTA测量分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持 LTE FDD/TDD OTA测量分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持GPS定位，在线地图显示"
+   },
+   {
+    "name": "特性",
+    "value": "典型工作时间 2.5 小时，净重 3.2 kg"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SHA851A-1.jpg",
+  "imagePath": "/uploads/product/2026/SHA862A.jpg",
+  "link": "https://store.siglent.com/product/sha862a%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SDG7052A",
+  "series": "SDG7000A",
+  "line": "FUNCTION_GEN",
+  "title": "SDG7052A 任意波形发生器 信号源",
+  "params": [
+   {
+    "name": "最高输出频率",
+    "value": "500MHz"
+   },
+   {
+    "name": "特性",
+    "value": "5 GSa/s数-模转换器采样率，14-bit垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "双通道差分/单端模拟输出，16-bit LVDS/LVTTL数字总线输出"
+   },
+   {
+    "name": "特性",
+    "value": "可输出最高500 MSymbol/s符号率的矢量信号"
+   },
+   {
+    "name": "特性",
+    "value": "24Vpp模拟输出能力叠加±12 V直流偏置，最大可提供±24 V（48 V）的输出范围"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDG7032A-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG7052A.jpg",
+  "link": "https://store.siglent.com/product/sdg7052a-%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8-%e4%bf%a1%e5%8f%b7%e6%ba%90/"
+ },
+ {
+  "model": "SDG7102A",
+  "series": "SDG7000A",
+  "line": "FUNCTION_GEN",
+  "title": "SDG7102A 任意波形发生器 信号源",
+  "params": [
+   {
+    "name": "最高输出频率",
+    "value": "1GHz"
+   },
+   {
+    "name": "特性",
+    "value": "5 GSa/s数-模转换器采样率，14-bit垂直分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "双通道差分/单端模拟输出，16-bit LVDS/LVTTL数字总线输出"
+   },
+   {
+    "name": "特性",
+    "value": "可输出最高500 MSymbol/s符号率的矢量信号"
+   },
+   {
+    "name": "特性",
+    "value": "24Vpp模拟输出能力叠加±12 V直流偏置，最大可提供±24 V（48 V）的输出范围"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SDG7102A-1.jpg",
+  "imagePath": "/uploads/product/2026/SDG7102A.jpg",
+  "link": "https://store.siglent.com/product/sdg7052a-%e4%bb%bb%e6%84%8f%e6%b3%a2%e5%bd%a2%e5%8f%91%e7%94%9f%e5%99%a8-%e4%bf%a1%e5%8f%b7%e6%ba%90-2/"
+ },
+ {
+  "model": "SHA852A",
+  "series": "SHA850A",
+  "line": "SPECTRUM",
+  "title": "SHA852A手持频谱分析仪",
+  "params": [
+   {
+    "name": "频谱分析频率范围",
+    "value": "9 kHz – 7.5GHz"
+   },
+   {
+    "name": "天线和电缆测量频率范围",
+    "value": "100 kHz – 7.5GHz"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平 DANL 低于-165 dBm/Hz"
+   },
+   {
+    "name": "特性",
+    "value": "单边带相位噪声低于-104 dBc/Hz， 1 GHz 偏移 10 kHz"
+   },
+   {
+    "name": "特性",
+    "value": "全带宽独立信号源和前置放大器"
+   },
+   {
+    "name": "特性",
+    "value": "典型工作时间 4 小时，净重3.2 kg"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SHA851A-1.jpg",
+  "imagePath": "/uploads/product/2026/SHA852A.jpg",
+  "link": "https://store.siglent.com/product/sha852a%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA5003X-E",
+  "series": "SNA5000X-E",
+  "line": "VNA",
+  "title": "SNA5003X-E 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "9 kHz~3 GHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-40 dBm ~ 10 dBm"
+   },
+   {
+    "name": "动态范围",
+    "value": "125 dB (typ)"
+   },
+   {
+    "name": "特性",
+    "value": "支持 2端口 S参数测量、差分（平衡）测量、时域分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持端口阻抗转换、端口扩展、夹具仿真和去嵌入功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-38.jpg",
+  "imagePath": "/uploads/product/2026/SNA5003X-E.jpg",
+  "link": "https://store.siglent.com/product/sna5003x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA5006X-E",
+  "series": "SNA5000X-E",
+  "line": "VNA",
+  "title": "SNA5006X-E 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "9 kHz~6.5 GHz,"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-40 dBm ~ 10 dBm"
+   },
+   {
+    "name": "动态范围",
+    "value": "125 dB (typ)"
+   },
+   {
+    "name": "特性",
+    "value": "支持 2端口 S参数测量、差分（平衡）测量、时域分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持端口阻抗转换、端口扩展、夹具仿真和去嵌入功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-38.jpg",
+  "imagePath": "/uploads/product/2026/SNA5006X-E.jpg",
+  "link": "https://store.siglent.com/product/sna5006x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA5008X-E",
+  "series": "SNA5000X-E",
+  "line": "VNA",
+  "title": "SNA5008X-E 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "9 kHz~8.5 GHz,"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-40 dBm ~ 10 dBm"
+   },
+   {
+    "name": "动态范围",
+    "value": "125 dB (typ)"
+   },
+   {
+    "name": "特性",
+    "value": "支持 2端口 S参数测量、差分（平衡）测量、时域分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持端口阻抗转换、端口扩展、夹具仿真和去嵌入功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-38.jpg",
+  "imagePath": "/uploads/product/2026/SNA5008X-E.jpg",
+  "link": "https://store.siglent.com/product/sna5008x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA5014X-E",
+  "series": "SNA5000X-E",
+  "line": "VNA",
+  "title": "SNA5014X-E 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~14 GHz,"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-40 dBm ~ 10 dBm"
+   },
+   {
+    "name": "动态范围",
+    "value": "125 dB (typ)"
+   },
+   {
+    "name": "特性",
+    "value": "支持 2端口 S参数测量、差分（平衡）测量、时域分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持端口阻抗转换、端口扩展、夹具仿真和去嵌入功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-38.jpg",
+  "imagePath": "/uploads/product/2026/SNA5014X-E.jpg",
+  "link": "https://store.siglent.com/product/sna5014x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA5020X-E",
+  "series": "SNA5000X-E",
+  "line": "VNA",
+  "title": "SNA5020X-E 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~20 GHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-40 dBm ~ 10 dBm"
+   },
+   {
+    "name": "动态范围",
+    "value": "125 dB (typ)"
+   },
+   {
+    "name": "特性",
+    "value": "支持 2端口 S参数测量、差分（平衡）测量、时域分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持端口阻抗转换、端口扩展、夹具仿真和去嵌入功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-38.jpg",
+  "imagePath": "/uploads/product/2026/SNA5020X-E.jpg",
+  "link": "https://store.siglent.com/product/sna5020x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA5026X-E",
+  "series": "SNA5000X-E",
+  "line": "VNA",
+  "title": "SNA5026X-E 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~26.5 GHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-40 dBm ~ 10 dBm"
+   },
+   {
+    "name": "动态范围",
+    "value": "125 dB (typ)"
+   },
+   {
+    "name": "特性",
+    "value": "支持 2端口 S参数测量、差分（平衡）测量、时域分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持端口阻抗转换、端口扩展、夹具仿真和去嵌入功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-38.jpg",
+  "imagePath": "/uploads/product/2026/SNA5026X-E.jpg",
+  "link": "https://store.siglent.com/product/sna5026x-e-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA5052X",
+  "series": "SNA5000X",
+  "line": "VNA",
+  "title": "SNA5052X 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "9 kHz ~ 4.5GHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "动态范围",
+    "value": "125 dB"
+   },
+   {
+    "name": "特性",
+    "value": "支持2/4端口S参数测量、差分（平衡）测量、时域分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持滤波器插入损耗、带宽、Q值等一键测量"
+   },
+   {
+    "name": "特性",
+    "value": "支持端口阻抗转换、端口扩展、夹具仿真和去嵌入功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-38.jpg",
+  "imagePath": "/uploads/product/2026/SNA5052X.jpg",
+  "link": "https://store.siglent.com/product/sna5052x-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA5082X",
+  "series": "SNA5000X",
+  "line": "VNA",
+  "title": "SNA5082X 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "9 kHz ~ 8.5GHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "动态范围",
+    "value": "125 dB"
+   },
+   {
+    "name": "特性",
+    "value": "支持2/4端口S参数测量、差分（平衡）测量、时域分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持滤波器插入损耗、带宽、Q值等一键测量"
+   },
+   {
+    "name": "特性",
+    "value": "支持端口阻抗转换、端口扩展、夹具仿真和去嵌入功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-38.jpg",
+  "imagePath": "/uploads/product/2026/SNA5082X.jpg",
+  "link": "https://store.siglent.com/product/sna5082x-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA5084X",
+  "series": "SNA5000X",
+  "line": "VNA",
+  "title": "SNA5084X 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "9 kHz ~ 8.5GHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "动态范围",
+    "value": "125 dB"
+   },
+   {
+    "name": "特性",
+    "value": "支持2/4端口S参数测量、差分（平衡）测量、时域分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持滤波器插入损耗、带宽、Q值等一键测量"
+   },
+   {
+    "name": "特性",
+    "value": "支持端口阻抗转换、端口扩展、夹具仿真和去嵌入功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-38.jpg",
+  "imagePath": "/uploads/product/2026/SNA5084X.jpg",
+  "link": "https://store.siglent.com/product/sna5084x-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA5054X",
+  "series": "SNA5000X",
+  "line": "VNA",
+  "title": "SNA5054X 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "9 kHz ~ 4.5GHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "动态范围",
+    "value": "125 dB"
+   },
+   {
+    "name": "特性",
+    "value": "支持2/4端口S参数测量、差分（平衡）测量、时域分析"
+   },
+   {
+    "name": "特性",
+    "value": "支持滤波器插入损耗、带宽、Q值等一键测量"
+   },
+   {
+    "name": "特性",
+    "value": "支持端口阻抗转换、端口扩展、夹具仿真和去嵌入功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-38.jpg",
+  "imagePath": "/uploads/product/2026/SNA5054X.jpg",
+  "link": "https://store.siglent.com/product/sna5054x-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA5022A",
+  "series": "SNA5000A",
+  "line": "VNA",
+  "title": "SNA5022A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~13.5 GHz"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "10Hz~3 MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "可选配时域分析选件以及频谱分析仪选件"
+   },
+   {
+    "name": "校准类型",
+    "value": "响应校准，增强响应校准，单端口校准，全二端口校准，TRL 校准"
+   },
+   {
+    "name": "测量分析类型",
+    "value": "S 参数测量，差分(平衡)测量，接收机测量，时域分析、极限测试、纹波测试、带宽分析、阻抗转换、端口匹配、去嵌功能等"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-37.jpg",
+  "imagePath": "/uploads/product/2026/SNA5022A.jpg",
+  "link": "https://store.siglent.com/product/sna5022a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SSA1015X-C",
+  "series": "SSA1000X",
+  "line": "SPECTRUM",
+  "title": "SSA1015X-C 频谱分析仪",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围从9 kHz ~ 1.5 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平 DANL -155 dBm/Hz （典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -99 dBc/Hz（1 GHz，偏移 10 kHz，典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "全幅度精度&lt;1.2 dB"
+   },
+   {
+    "name": "特性",
+    "value": "最小分辨率带宽（RBW）1 Hz"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SSA1015X-C-1.jpg",
+  "imagePath": "/uploads/product/2026/SSA1015X-C.jpg",
+  "link": "https://store.siglent.com/product/ssa1015x-c-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA5032A",
+  "series": "SNA5000A",
+  "line": "VNA",
+  "title": "SNA5032A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~26.5 GHz"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "10Hz~3 MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "可选配时域分析选件以及频谱分析仪选件"
+   },
+   {
+    "name": "校准类型",
+    "value": "响应校准，增强响应校准，单端口校准，全二端口校准，TRL 校准"
+   },
+   {
+    "name": "测量分析类型",
+    "value": "S 参数测量，差分(平衡)测量，接收机测量，时域分析、极限测试、纹波测试、带宽分析、阻抗转换、端口匹配、去嵌功能等"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-37.jpg",
+  "imagePath": "/uploads/product/2026/SNA5032A.jpg",
+  "link": "https://store.siglent.com/product/sna5032a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SPD1305X-C",
+  "series": "SPD1000X",
+  "line": "POWER",
+  "title": "SPD1305X-C 可编程线性直流稳压电源 单通道",
+  "params": [
+   {
+    "name": "单路高精度可编程输出",
+    "value": "30V/5A/150 W"
+   },
+   {
+    "name": "低噪声",
+    "value": "≤ 350 μVrms/3 mVpp; 快速瞬态响应时间 &lt;50 μs"
+   },
+   {
+    "name": "特性",
+    "value": "最高 5 位电压和 4 位电流显示，最小分辨率为 10mV、10mA"
+   },
+   {
+    "name": "两种输出模式",
+    "value": "两线输出 ; 四线补偿输出模式，最大补偿 1 V"
+   },
+   {
+    "name": "特性",
+    "value": "100 V、120 V、220 V、230 V 兼容的设计"
+   },
+   {
+    "name": "特性",
+    "value": "清晰的图形化界面，具有波形显示功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SPD1168X-1.jpg",
+  "imagePath": "/uploads/product/2026/SPD1305X-C.jpg",
+  "link": "https://store.siglent.com/product/spd1305x-c-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90-%e5%8d%95%e9%80%9a%e9%81%93/"
+ },
+ {
+  "model": "SPD1168X-C",
+  "series": "SPD1000X",
+  "line": "POWER",
+  "title": "SPD1168X-C 可编程线性直流稳压电源 单通道",
+  "params": [
+   {
+    "name": "单路高精度可编程输出",
+    "value": "16V/8A,128W"
+   },
+   {
+    "name": "低噪声",
+    "value": "≤ 350 μVrms/3 mVpp; 快速瞬态响应时间 &lt;50 μs"
+   },
+   {
+    "name": "特性",
+    "value": "最高 5 位电压和 4 位电流显示，最小分辨率为 10mV、10mA"
+   },
+   {
+    "name": "两种输出模式",
+    "value": "两线输出 ; 四线补偿输出模式，最大补偿 1 V"
+   },
+   {
+    "name": "特性",
+    "value": "100 V、120 V、220 V、230 V 兼容的设计"
+   },
+   {
+    "name": "特性",
+    "value": "清晰的图形化界面，具有波形显示功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SPD1168X-1.jpg",
+  "imagePath": "/uploads/product/2026/SPD1168X-C.jpg",
+  "link": "https://store.siglent.com/product/spd1168x-c-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90-%e5%8d%95%e9%80%9a%e9%81%93/"
+ },
+ {
+  "model": "SPD1168X",
+  "series": "SPD1000X",
+  "line": "POWER",
+  "title": "SPD1168X 可编程线性直流稳压电源",
+  "params": [
+   {
+    "name": "单路高精度可编程输出",
+    "value": "16V/8A,128W"
+   },
+   {
+    "name": "低噪声",
+    "value": "≤ 350 μVrms/3 mVpp; 快速瞬态响应时间 &lt;50 μs"
+   },
+   {
+    "name": "特性",
+    "value": "最高 5 位电压和 4 位电流显示，最小分辨率为 1 mV、1 mA"
+   },
+   {
+    "name": "两种输出模式",
+    "value": "两线输出 ; 四线补偿输出模式，最大补偿 1 V"
+   },
+   {
+    "name": "特性",
+    "value": "100 V、120 V、220 V、230 V 兼容的设计"
+   },
+   {
+    "name": "特性",
+    "value": "清晰的图形化界面，具有波形显示功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SPD1168X-1.jpg",
+  "imagePath": "/uploads/product/2026/SPD1168X.jpg",
+  "link": "https://store.siglent.com/product/spd1168x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPD1305X",
+  "series": "SPD1000X",
+  "line": "POWER",
+  "title": "SPD1305X 可编程线性直流稳压电源",
+  "params": [
+   {
+    "name": "单路高精度可编程输出",
+    "value": "30V/5A/150 W"
+   },
+   {
+    "name": "低噪声",
+    "value": "≤ 350 μVrms/3 mVpp; 快速瞬态响应时间 &lt;50 μs"
+   },
+   {
+    "name": "特性",
+    "value": "最高 5 位电压和 4 位电流显示，最小分辨率为 1mV、1mA"
+   },
+   {
+    "name": "两种输出模式",
+    "value": "两线输出 ; 四线补偿输出模式，最大补偿 1 V"
+   },
+   {
+    "name": "特性",
+    "value": "100 V、120 V、220 V、230 V 兼容的设计"
+   },
+   {
+    "name": "特性",
+    "value": "清晰的图形化界面，具有波形显示功能"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SPD1168X-1.jpg",
+  "imagePath": "/uploads/product/2026/SPD1305X.jpg",
+  "link": "https://store.siglent.com/product/spd1305x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SNA6142A",
+  "series": "SNA6000A",
+  "line": "VNA",
+  "title": "SNA6142A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~44 GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "135 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1Hz~10MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "支持2端口S参数测量、差分（平衡）测量、时域分析、标量混频器测量等等"
+   },
+   {
+    "name": "特性",
+    "value": "可选配电子校准件、开关矩阵、机械开关"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-39.jpg",
+  "imagePath": "/uploads/product/2026/SNA6142A.jpg",
+  "link": "https://store.siglent.com/product/sna6142a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA6144A",
+  "series": "SNA6000A",
+  "line": "VNA",
+  "title": "SNA6144A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~44 GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "135 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1Hz~10MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "支持4端口S参数测量、差分（平衡）测量、时域分析、标量混频器测量等等"
+   },
+   {
+    "name": "特性",
+    "value": "可选配电子校准件、开关矩阵、机械开关"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-39.jpg",
+  "imagePath": "/uploads/product/2026/SNA6144A.jpg",
+  "link": "https://store.siglent.com/product/sna6144a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA6154A",
+  "series": "SNA6000A",
+  "line": "VNA",
+  "title": "SNA6154A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~50 GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "135 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1Hz~10MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "支持4端口S参数测量、差分（平衡）测量、时域分析、标量混频器测量等等"
+   },
+   {
+    "name": "特性",
+    "value": "可选配电子校准件、开关矩阵、机械开关"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-39.jpg",
+  "imagePath": "/uploads/product/2026/SNA6154A.jpg",
+  "link": "https://store.siglent.com/product/sna6154a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA6152A",
+  "series": "SNA6000A",
+  "line": "VNA",
+  "title": "SNA6152A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~50 GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "135 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1Hz~10MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "支持2端口S参数测量、差分（平衡）测量、时域分析、标量混频器测量等等"
+   },
+   {
+    "name": "特性",
+    "value": "可选配电子校准件、开关矩阵、机械开关"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-39.jpg",
+  "imagePath": "/uploads/product/2026/SNA6152A.jpg",
+  "link": "https://store.siglent.com/product/sna6152a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA6022A",
+  "series": "SNA6000A",
+  "line": "VNA",
+  "title": "SNA6022A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~13.5 GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "135 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1Hz~10MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "支持2端口S参数测量、差分（平衡）测量、时域分析、标量混频器测量等等"
+   },
+   {
+    "name": "特性",
+    "value": "可选配电子校准件、开关矩阵、机械开关"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-39.jpg",
+  "imagePath": "/uploads/product/2026/SNA6022A.jpg",
+  "link": "https://store.siglent.com/product/sna6022a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA6024A",
+  "series": "SNA6000A",
+  "line": "VNA",
+  "title": "SNA6024A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~13.5 GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "135 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1Hz~10MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "支持4端口S参数测量、差分（平衡）测量、时域分析、标量混频器测量等等"
+   },
+   {
+    "name": "特性",
+    "value": "可选配电子校准件、开关矩阵、机械开关"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-39.jpg",
+  "imagePath": "/uploads/product/2026/SNA6024A.jpg",
+  "link": "https://store.siglent.com/product/sna6024a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA6032A",
+  "series": "SNA6000A",
+  "line": "VNA",
+  "title": "SNA6032A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~26.5 GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "135 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1Hz~10MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "支持2端口S参数测量、差分（平衡）测量、时域分析、标量混频器测量等等"
+   },
+   {
+    "name": "特性",
+    "value": "可选配电子校准件、开关矩阵、机械开关"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-39.jpg",
+  "imagePath": "/uploads/product/2026/SNA6032A.jpg",
+  "link": "https://store.siglent.com/product/sna6032a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA6034A",
+  "series": "SNA6000A",
+  "line": "VNA",
+  "title": "SNA6034A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~26.5 GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "135 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1Hz~10MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "支持4端口S参数测量、差分（平衡）测量、时域分析、标量混频器测量等等"
+   },
+   {
+    "name": "特性",
+    "value": "可选配电子校准件、开关矩阵、机械开关"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-39.jpg",
+  "imagePath": "/uploads/product/2026/SNA6034A.jpg",
+  "link": "https://store.siglent.com/product/sna6034a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA6122A",
+  "series": "SNA6000A",
+  "line": "VNA",
+  "title": "SNA6122A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~13.5 GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "135 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1Hz~10MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "支持2端口S参数测量、差分（平衡）测量、时域分析、标量混频器测量等等"
+   },
+   {
+    "name": "特性",
+    "value": "可选配电子校准件、开关矩阵、机械开关"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-39.jpg",
+  "imagePath": "/uploads/product/2026/SNA6122A.jpg",
+  "link": "https://store.siglent.com/product/sna6122a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA6124A",
+  "series": "SNA6000A",
+  "line": "VNA",
+  "title": "SNA6124A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~13.5 GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "135 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1Hz~10MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "支持4端口S参数测量、差分（平衡）测量、时域分析、标量混频器测量等等"
+   },
+   {
+    "name": "特性",
+    "value": "可选配电子校准件、开关矩阵、机械开关"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-39.jpg",
+  "imagePath": "/uploads/product/2026/SNA6124A.jpg",
+  "link": "https://store.siglent.com/product/sna6124a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SNA6132A",
+  "series": "SNA6000A",
+  "line": "VNA",
+  "title": "SNA6132A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~26.5 GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "135 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1Hz~10MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "支持2端口S参数测量、差分（平衡）测量、时域分析、标量混频器测量等等"
+   },
+   {
+    "name": "特性",
+    "value": "可选配电子校准件、开关矩阵、机械开关"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-39.jpg",
+  "imagePath": "/uploads/product/2026/SNA6132A.jpg",
+  "link": "https://store.siglent.com/product/sna6132a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SPD3303X-C",
+  "series": "SPD3303X/X-E/X-C",
+  "line": "POWER",
+  "title": "SPD3303X-C 可编程线性直流稳压电源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "三路高精度电源独立可控输出"
+   },
+   {
+    "name": "特性",
+    "value": "5位电压和4位电流显示，最小分辨率为10mV，10mA"
+   },
+   {
+    "name": "特性",
+    "value": "100 V、120 V、220 V、230 V兼容的设计"
+   },
+   {
+    "name": "特性",
+    "value": "4.3英寸的TFT液晶显示屏，480 *272高分辨率"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SPD3303C-1.jpg",
+  "imagePath": "/uploads/product/2026/SPD3303X-C.jpg",
+  "link": "https://store.siglent.com/product/spd3303x-c-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SNA6134A",
+  "series": "SNA6000A",
+  "line": "VNA",
+  "title": "SNA6134A 矢量网络分析仪",
+  "params": [
+   {
+    "name": "频率范围",
+    "value": "100 kHz~26.5 GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "135 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1Hz~10MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-55 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "支持4端口S参数测量、差分（平衡）测量、时域分析、标量混频器测量等等"
+   },
+   {
+    "name": "特性",
+    "value": "可选配电子校准件、开关矩阵、机械开关"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-39.jpg",
+  "imagePath": "/uploads/product/2026/SNA6134A.jpg",
+  "link": "https://store.siglent.com/product/sna6134a-%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SPD3303X",
+  "series": "SPD3303X/X-E/X-C",
+  "line": "POWER",
+  "title": "SPD3303X 可编程线性直流稳压电源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "三路高精度电源独立可控输出"
+   },
+   {
+    "name": "特性",
+    "value": "5位电压和4位电流显示，最小分辨率为1mV，1mA"
+   },
+   {
+    "name": "特性",
+    "value": "100 V、120 V、220 V、230 V兼容的设计"
+   },
+   {
+    "name": "特性",
+    "value": "4.3英寸的TFT液晶显示屏，480 *272高分辨率"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SPD3303C-1.jpg",
+  "imagePath": "/uploads/product/2026/SPD3303X.jpg",
+  "link": "https://store.siglent.com/product/spd3303x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SHN920A",
+  "series": "SHN900A",
+  "line": "VNA",
+  "title": "SHN920A 手持矢量网络分析仪",
+  "params": [
+   {
+    "name": "矢量网络/频谱分析频率范围",
+    "value": "30 kHz~20GHz"
+   },
+   {
+    "name": "天线和电缆测量频率范围",
+    "value": "30 kHz~20GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "100 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "10 Hz~3 MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-45 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "大容量电池供电，待机4小时，GPS定位"
+   },
+   {
+    "name": "特性",
+    "value": "支持全双端口S参数测量、差分/平衡测量"
+   },
+   {
+    "name": "特性",
+    "value": "支持CAT/DTF测量，频谱分析，TDR时域分析"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-40.jpg",
+  "imagePath": "/uploads/product/2026/SHN920A.jpg",
+  "link": "https://store.siglent.com/product/shn920a-%e6%89%8b%e6%8c%81%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SPD4121X",
+  "series": "SPD4000X",
+  "line": "POWER",
+  "title": "SPD4121X 可编程线性直流电源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "四路高精度电源独立可控输出"
+   },
+   {
+    "name": "特性",
+    "value": "5位电压和5位电流显示，最小分辨率为1 mV，1 mA"
+   },
+   {
+    "name": "特性",
+    "value": "List时间精度 &lt;50 ms，设置分辨率1 ms"
+   },
+   {
+    "name": "特性",
+    "value": "支持远端电压补偿 Sense 功能"
+   },
+   {
+    "name": "特性",
+    "value": "4.3英寸的TFT液晶显示屏，480*272高分辨率"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SPD4121X-1.jpg",
+  "imagePath": "/uploads/product/2026/SPD4121X.jpg",
+  "link": "https://store.siglent.com/product/spd4121x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPD4323X",
+  "series": "SPD4000X",
+  "line": "POWER",
+  "title": "SPD4323X 可编程线性直流电源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "四路高精度电源独立可控输出"
+   },
+   {
+    "name": "特性",
+    "value": "5位电压和5位电流显示，最小分辨率为1 mV，1 mA"
+   },
+   {
+    "name": "特性",
+    "value": "List时间精度 &lt;50 ms，设置分辨率1 ms"
+   },
+   {
+    "name": "特性",
+    "value": "支持远端电压补偿 Sense 功能"
+   },
+   {
+    "name": "特性",
+    "value": "4.3英寸的TFT液晶显示屏，480*272高分辨率"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SPD4121X-1.jpg",
+  "imagePath": "/uploads/product/2026/SPD4323X.jpg",
+  "link": "https://store.siglent.com/product/spd4323x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SSA3015X PLUS",
+  "series": "SSA3000X Plus",
+  "line": "SPECTRUM",
+  "title": "SSA3015X PLUS 频谱分析仪",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围9 kHz-1.5 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平 DANL -165 dBm/Hz （典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -98 dBc/Hz（1 GHz，偏移 10 kHz，典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "全幅度精度&lt;0.7 dB"
+   },
+   {
+    "name": "特性",
+    "value": "最小分辨率带宽（RBW）1 Hz"
+   },
+   {
+    "name": "特性",
+    "value": "10.1英寸触摸屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SSA3015X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SSA3015X-PLUS.jpg",
+  "link": "https://store.siglent.com/product/ssa3015x-plus-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SSA3021X Plus",
+  "series": "SSA3000X Plus",
+  "line": "SPECTRUM",
+  "title": "SSA3021X Plus 频谱分析仪配TG",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围9 kHz ~ 2.1 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平 DANL -165 dBm/Hz （典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -98 dBc/Hz（1 GHz，偏移 10 kHz，典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "全幅度精度&lt;0.7 dB"
+   },
+   {
+    "name": "特性",
+    "value": "最小分辨率带宽（RBW）1 Hz"
+   },
+   {
+    "name": "特性",
+    "value": "10.1英寸触摸屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SSA3015X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SSA3021X-Plus.jpg",
+  "link": "https://store.siglent.com/product/ssa3021x-plus-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa%e9%85%8dtg/"
+ },
+ {
+  "model": "SPD4306X",
+  "series": "SPD4000X",
+  "line": "POWER",
+  "title": "SPD4306X 可编程线性直流电源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "四路高精度电源独立可控输出"
+   },
+   {
+    "name": "特性",
+    "value": "5位电压和5位电流显示，最小分辨率为1 mV，1 mA"
+   },
+   {
+    "name": "特性",
+    "value": "List时间精度 &lt;50 ms，设置分辨率1 ms"
+   },
+   {
+    "name": "特性",
+    "value": "支持远端电压补偿 Sense 功能"
+   },
+   {
+    "name": "特性",
+    "value": "4.3英寸的TFT液晶显示屏，480*272高分辨率"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SPD4121X-1.jpg",
+  "imagePath": "/uploads/product/2026/SPD4306X.jpg",
+  "link": "https://store.siglent.com/product/spd4306x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPD3303C",
+  "series": "SPD3303C",
+  "line": "POWER",
+  "title": "SPD3303C可编程线性直流稳压电源",
+  "params": [
+   {
+    "name": "特性",
+    "value": "4位电压和3位电流显示，最小分辨率为10 mV，10 mA"
+   },
+   {
+    "name": "特性",
+    "value": "100 V、120 V、220 V、230 V兼容的设计"
+   },
+   {
+    "name": "三种输出模式",
+    "value": "独立，串联和并联连接；提高输出功率范围"
+   },
+   {
+    "name": "三路高精度电源独立可控输出",
+    "value": "CH1：32 V/3.2 A，CH2：32 V/3.2 A，CH3：2.5 V/3.3 V/5 V/3 A"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SPD3303C-1.jpg",
+  "imagePath": "/uploads/product/2026/SPD3303C.jpg",
+  "link": "https://store.siglent.com/product/spd3303c%e5%8f%af%e7%bc%96%e7%a8%8b%e7%ba%bf%e6%80%a7%e7%9b%b4%e6%b5%81%e7%a8%b3%e5%8e%8b%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SSA3075X Plus",
+  "series": "SSA3000X Plus",
+  "line": "SPECTRUM",
+  "title": "SSA3075X Plus  频谱分析仪",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围9 kHz ~ 7.5 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平 DANL -165 dBm/Hz （典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -98 dBc/Hz（1 GHz，偏移 10 kHz，典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "全幅度精度&lt;0.7 dB"
+   },
+   {
+    "name": "特性",
+    "value": "最小分辨率带宽（RBW）1 Hz"
+   },
+   {
+    "name": "特性",
+    "value": "10.1英寸触摸屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SSA3015X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SSA3075X-Plus.jpg",
+  "link": "https://store.siglent.com/product/ssa3075x-plus-%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SSA3032X Plus",
+  "series": "SSA3000X Plus",
+  "line": "SPECTRUM",
+  "title": "SSA3032X Plus频谱分析仪配TG",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围9 kHz ~ 3.2 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平 DANL -165 dBm/Hz （典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -98 dBc/Hz（1 GHz，偏移 10 kHz，典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "全幅度精度&lt;0.7 dB"
+   },
+   {
+    "name": "特性",
+    "value": "最小分辨率带宽（RBW）1 Hz"
+   },
+   {
+    "name": "特性",
+    "value": "10.1英寸触摸屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SSA3015X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SSA3032X-Plus.jpg",
+  "link": "https://store.siglent.com/product/ssa3032x-plus%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa%e9%85%8dtg/"
+ },
+ {
+  "model": "SSA3075X-C",
+  "series": "SSA3000X Plus",
+  "line": "SPECTRUM",
+  "title": "SSA3075X-C频谱分析仪",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围9 kHz ~ 7.5 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平 DANL -165 dBm/Hz （典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -98 dBc/Hz（1 GHz，偏移 10 kHz，典型值）"
+   },
+   {
+    "name": "特性",
+    "value": "全幅度精度&lt;0.7 dB"
+   },
+   {
+    "name": "特性",
+    "value": "最小分辨率带宽（RBW）1 Hz"
+   },
+   {
+    "name": "特性",
+    "value": "10.1英寸触摸屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SSA3015X-Plus-1.jpg",
+  "imagePath": "/uploads/product/2026/SSA3075X-C.jpg",
+  "link": "https://store.siglent.com/product/ssa3075x-c%e9%a2%91%e8%b0%b1%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SPS5042X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5042X 单通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "40V/60A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "720W"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5042X.jpg",
+  "link": "https://store.siglent.com/product/sps5042x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS5041X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5041X 单通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压",
+    "value": "40V"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "360 W"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5041X.jpg",
+  "link": "https://store.siglent.com/product/sps5041x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS5043X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5043X 单通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "40V/90A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "1080W"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5043X.jpg",
+  "link": "https://store.siglent.com/product/sps5043x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS5045X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5045X 三通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "40V/30A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "360W*3"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5045X.jpg",
+  "link": "https://store.siglent.com/product/sps5045x-%e4%b8%89%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS5044X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5044X 双通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "40V/30A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "360W*2"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5044X.jpg",
+  "link": "https://store.siglent.com/product/sps5044x-%e5%8f%8c%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS5051X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5051X 单通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "50V/10A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "180W"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5051X.jpg",
+  "link": "https://store.siglent.com/product/sps5051x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS5081X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5081X 单通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "80V/15A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "360W"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5081X.jpg",
+  "link": "https://store.siglent.com/product/sps5081x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS5083X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5083X 单通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "80V/45A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "1080W"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5083X.jpg",
+  "link": "https://store.siglent.com/product/sps5083x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS5082X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5082X 单通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "80V/30A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "720W"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5082X.jpg",
+  "link": "https://store.siglent.com/product/sps5082x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SHN926A",
+  "series": "SHN900A",
+  "line": "VNA",
+  "title": "SHN926A 手持矢量网络分析仪",
+  "params": [
+   {
+    "name": "矢量网络/频谱分析频率范围",
+    "value": "30 kHz~26.5GHz"
+   },
+   {
+    "name": "天线和电缆测量频率范围",
+    "value": "30 kHz~26.5GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "100 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "10 Hz~3 MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-45 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "大容量电池供电，待机4小时，GPS定位"
+   },
+   {
+    "name": "特性",
+    "value": "支持全双端口S参数测量、差分/平衡测量"
+   },
+   {
+    "name": "特性",
+    "value": "支持CAT/DTF测量，频谱分析，TDR时域分析"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-40.jpg",
+  "imagePath": "/uploads/product/2026/SHN926A.jpg",
+  "link": "https://store.siglent.com/product/shn926a-%e6%89%8b%e6%8c%81%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SPS5084X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5084X 双通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "80V/15A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "360W*2"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5084X.jpg",
+  "link": "https://store.siglent.com/product/sps5084x-%e5%8f%8c%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SHN914A",
+  "series": "SHN900A",
+  "line": "VNA",
+  "title": "SHN914A 手持矢量网络分析仪",
+  "params": [
+   {
+    "name": "矢量网络/频谱分析频率范围",
+    "value": "30 kHz~14GHz"
+   },
+   {
+    "name": "天线和电缆测量频率范围",
+    "value": "30 kHz~14GHz"
+   },
+   {
+    "name": "动态范围",
+    "value": "100 dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "10 Hz~3 MHz"
+   },
+   {
+    "name": "输出功率设置范围",
+    "value": "-45 dBm ~ +10 dBm"
+   },
+   {
+    "name": "特性",
+    "value": "大容量电池供电，待机4小时，GPS定位"
+   },
+   {
+    "name": "特性",
+    "value": "支持全双端口S参数测量、差分/平衡测量"
+   },
+   {
+    "name": "特性",
+    "value": "支持CAT/DTF测量，频谱分析，TDR时域分析"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-40.jpg",
+  "imagePath": "/uploads/product/2026/SHN914A.jpg",
+  "link": "https://store.siglent.com/product/shn914a-%e6%89%8b%e6%8c%81%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e4%bb%aa/"
+ },
+ {
+  "model": "SPS5164X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5164X 双通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "160V/7.5A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "360W*2"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5164X.jpg",
+  "link": "https://store.siglent.com/product/sps5164x-%e5%8f%8c%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS5162X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5162X 单通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "160V/15A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "720W"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5162X.jpg",
+  "link": "https://store.siglent.com/product/sps5162x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS5085X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5085X 三通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "80V/15A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "360W*3"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5085X.jpg",
+  "link": "https://store.siglent.com/product/sps5085x-%e4%b8%89%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS5161X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5161X 单通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "160V/7.5A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "360W"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5161X.jpg",
+  "link": "https://store.siglent.com/product/sps5161x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS5163X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5163X 单通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "160V/22.5A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "1080W"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5163X.jpg",
+  "link": "https://store.siglent.com/product/sps5163x-%e5%8d%95%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SDL1020X",
+  "series": "SDL1000X",
+  "line": "LOAD",
+  "title": "SDL1020X 可编程直流电子负载",
+  "params": [
+   {
+    "name": "DC 150 V/30 A，最大总功率",
+    "value": "200 W"
+   },
+   {
+    "name": "特性",
+    "value": "可调电流上升/下降速率0.001 A/μs~2.5 A/μs"
+   },
+   {
+    "name": "四种静态/动态模式",
+    "value": "CC/CV/CP/CR"
+   },
+   {
+    "name": "CC动态模式",
+    "value": "连续模式、脉冲模式、翻转模式"
+   },
+   {
+    "name": "特性",
+    "value": "回读分辨率0.1 mV, 0.1 mA"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDL1020X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDL1020X.jpg",
+  "link": "https://store.siglent.com/product/sdl1020x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd/"
+ },
+ {
+  "model": "SPS5165X",
+  "series": "SPS5000X",
+  "line": "POWER",
+  "title": "SPS5165X 三通道直流开关电源",
+  "params": [
+   {
+    "name": "额定输出电压电流",
+    "value": "160V/7.5A"
+   },
+   {
+    "name": "额定输出功率",
+    "value": "360W*3"
+   },
+   {
+    "name": "特性",
+    "value": "宽范围输出，上升下降斜率可调"
+   },
+   {
+    "name": "特性",
+    "value": "CV/CC优先，尤其适用于电池和LED产业"
+   },
+   {
+    "name": "特性",
+    "value": "可配置三通道时序输出"
+   },
+   {
+    "name": "特性",
+    "value": "170°宽视角OLED屏，远程网页控制"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/1-51.jpg",
+  "imagePath": "/uploads/product/2026/SPS5165X.jpg",
+  "link": "https://store.siglent.com/product/sps5165x-%e4%b8%89%e9%80%9a%e9%81%93%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SDL1030X-E",
+  "series": "SDL1000X",
+  "line": "LOAD",
+  "title": "SDL1030X-E 可编程直流电子负载",
+  "params": [
+   {
+    "name": "DC 150 V/30 A，最大总功率",
+    "value": "300 W"
+   },
+   {
+    "name": "特性",
+    "value": "可调电流上升/下降速率0.001 A/μs~2.5 A/μs"
+   },
+   {
+    "name": "四种静态/动态模式",
+    "value": "CC/CV/CP/CR"
+   },
+   {
+    "name": "CC动态模式",
+    "value": "连续模式、脉冲模式、翻转模式"
+   },
+   {
+    "name": "特性",
+    "value": "回读分辨率1 mV, 1 mA"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDL1020X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDL1030X-E.jpg",
+  "link": "https://store.siglent.com/product/sdl1030x-e-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd/"
+ },
+ {
+  "model": "SPS6150X",
+  "series": "SPS6000X",
+  "line": "POWER",
+  "title": "SPS6150X 可编程直流开关电源",
+  "params": [
+   {
+    "name": "额定输出功率",
+    "value": "1500 W"
+   },
+   {
+    "name": "特性",
+    "value": "定功率输出，满足电压、电流宽范围输出"
+   },
+   {
+    "name": "特性",
+    "value": "CV，CC 优先模式选择，更好地保护待测物"
+   },
+   {
+    "name": "特性",
+    "value": "快速输出响应时间&lt;5ms"
+   },
+   {
+    "name": "特性",
+    "value": "配置 USB，LAN 标准通信接口，选配 USB-GPIB 模块"
+   },
+   {
+    "name": "特性",
+    "value": "44 mm 高度（1U）标准机架尺寸外形，3.12英寸OLED显示屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SPS6150X-1.jpg",
+  "imagePath": "/uploads/product/2026/SPS6150X.jpg",
+  "link": "https://store.siglent.com/product/sps6150x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS6412X",
+  "series": "SPS6000X",
+  "line": "POWER",
+  "title": "SPS6412X 可编程直流开关电源",
+  "params": [
+   {
+    "name": "额定输出功率",
+    "value": "1500 W"
+   },
+   {
+    "name": "特性",
+    "value": "定功率输出，满足电压、电流宽范围输出"
+   },
+   {
+    "name": "特性",
+    "value": "CV，CC 优先模式选择，更好地保护待测物"
+   },
+   {
+    "name": "特性",
+    "value": "快速输出响应时间&lt;5ms"
+   },
+   {
+    "name": "特性",
+    "value": "配置 USB，LAN 标准通信接口，选配 USB-GPIB 模块"
+   },
+   {
+    "name": "特性",
+    "value": "44 mm 高度（1U）标准机架尺寸外形，3.12英寸OLED显示屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SPS6412X-1.jpg",
+  "imagePath": "/uploads/product/2026/SPS6412X.jpg",
+  "link": "https://store.siglent.com/product/sps6412x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SPS6225X",
+  "series": "SPS6000X",
+  "line": "POWER",
+  "title": "SPS6225X 可编程直流开关电源",
+  "params": [
+   {
+    "name": "额定输出功率",
+    "value": "1500 W"
+   },
+   {
+    "name": "特性",
+    "value": "定功率输出，满足电压、电流宽范围输出"
+   },
+   {
+    "name": "特性",
+    "value": "CV，CC 优先模式选择，更好地保护待测物"
+   },
+   {
+    "name": "特性",
+    "value": "快速输出响应时间&lt;5ms"
+   },
+   {
+    "name": "特性",
+    "value": "配置 USB，LAN 标准通信接口，选配 USB-GPIB 模块"
+   },
+   {
+    "name": "特性",
+    "value": "44 mm 高度（1U）标准机架尺寸外形，3.12英寸OLED显示屏"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SPS6225X-1.jpg",
+  "imagePath": "/uploads/product/2026/SPS6225X.jpg",
+  "link": "https://store.siglent.com/product/sps6225x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e5%bc%80%e5%85%b3%e7%94%b5%e6%ba%90/"
+ },
+ {
+  "model": "SDL1030X",
+  "series": "SDL1000X",
+  "line": "LOAD",
+  "title": "SDL1030X 可编程直流电子负载",
+  "params": [
+   {
+    "name": "DC 150 V/30 A，最大总功率",
+    "value": "300 W"
+   },
+   {
+    "name": "特性",
+    "value": "可调电流上升/下降速率0.001 A/μs~2.5 A/μs"
+   },
+   {
+    "name": "四种静态/动态模式",
+    "value": "CC/CV/CP/CR"
+   },
+   {
+    "name": "CC动态模式",
+    "value": "连续模式、脉冲模式、翻转模式"
+   },
+   {
+    "name": "特性",
+    "value": "回读分辨率0.1 mV, 0.1 mA"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDL1020X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDL1030X.jpg",
+  "link": "https://store.siglent.com/product/sdl1030x-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd/"
+ },
+ {
+  "model": "SDM3065X",
+  "series": "SDM3065X",
+  "line": "MULTIMETER",
+  "title": "SDM3065X 六位半位双显台式数字万用表",
+  "params": [
+   {
+    "name": "特性",
+    "value": "6/1 位读数分辨率（2,200,000 count）"
+   },
+   {
+    "name": "特性",
+    "value": "真有效值交流电压和交流电流测量"
+   },
+   {
+    "name": "配置接口",
+    "value": "USB Device，USB Host，LAN，GPIB(选配)"
+   },
+   {
+    "name": "特性",
+    "value": "设置和测量数据可通过 VXI11，USBTMC, U 盘导入或 者导出以方便用户修改，查看，备份"
+   },
+   {
+    "name": "特性",
+    "value": "4.3 英寸真彩 TFT-LCD 大屏显示，分辨率 480*272"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDM3055-1.jpg",
+  "imagePath": "/uploads/product/2026/SDM3065X.jpg",
+  "link": "https://store.siglent.com/product/sdm3065x-%e5%85%ad%e4%bd%8d%e5%8d%8a%e4%bd%8d%e5%8f%8c%e6%98%be%e5%8f%b0%e5%bc%8f%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8/"
+ },
+ {
+  "model": "SDL1020X-E",
+  "series": "SDL1000X",
+  "line": "LOAD",
+  "title": "SDL1020X-E 可编程直流电子负载",
+  "params": [
+   {
+    "name": "DC 150 V/30 A，最大总功率",
+    "value": "200 W"
+   },
+   {
+    "name": "特性",
+    "value": "可调电流上升/下降速率0.001 A/μs~2.5 A/μs"
+   },
+   {
+    "name": "四种静态/动态模式",
+    "value": "CC/CV/CP/CR"
+   },
+   {
+    "name": "CC动态模式",
+    "value": "连续模式、脉冲模式、翻转模式"
+   },
+   {
+    "name": "特性",
+    "value": "回读分辨率1 mV, 1 mA"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDL1020X-1.jpg",
+  "imagePath": "/uploads/product/2026/SDL1020X-E.jpg",
+  "link": "https://store.siglent.com/product/sdl1020x-e-%e5%8f%af%e7%bc%96%e7%a8%8b%e7%9b%b4%e6%b5%81%e7%94%b5%e5%ad%90%e8%b4%9f%e8%bd%bd/"
+ },
+ {
+  "model": "SDM4065A-SC",
+  "series": "SDM4065A",
+  "line": "MULTIMETER",
+  "title": "SDM4065A-SC 数字万用表",
+  "params": [
+   {
+    "name": "特性",
+    "value": "6/1 位读数分辨率（2,200,000 count）"
+   },
+   {
+    "name": "特性",
+    "value": "最大读数速率50k rdgs/s，最小采样间隔20μs"
+   },
+   {
+    "name": "特性",
+    "value": "真有效值交流电压和交流电流测量"
+   },
+   {
+    "name": "特性",
+    "value": "记录仪功能和数字化仪功能"
+   },
+   {
+    "name": "特性",
+    "value": "5英寸触摸屏，分辨率800*480"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SDM4065A-SC-1.jpg",
+  "imagePath": "/uploads/product/2026/SDM4065A-SC.jpg",
+  "link": "https://store.siglent.com/product/sdm4065a-sc-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8/"
+ },
+ {
+  "model": "SMM3311X",
+  "series": "SMM3000X",
+  "line": "POWER",
+  "title": "SMM3311X 源表",
+  "params": [
+   {
+    "name": "特性",
+    "value": "6/1 显示位数（2,100,000 count）"
+   },
+   {
+    "name": "特性",
+    "value": "100,000 points/s最大采集速率"
+   },
+   {
+    "name": "特性",
+    "value": "10fA / 100nV最小编程及测量分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "±210V / ±3A(DC) /±10.5A(pulsed) 最大输出"
+   },
+   {
+    "name": "特性",
+    "value": "支持直流、脉冲、扫描及列表输出，最小脉宽50μs"
+   },
+   {
+    "name": "特性",
+    "value": "5英寸触摸屏，支持图形和数字视图"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SMM3311X.jpg",
+  "imagePath": "/uploads/product/2026/SMM3311X.jpg",
+  "link": "https://store.siglent.com/product/smm3311x-%e6%ba%90%e8%a1%a8/"
+ },
+ {
+  "model": "SDM4055A",
+  "series": "SDM4055A",
+  "line": "MULTIMETER",
+  "title": "SDM4055A 真6位半数字万用表",
+  "params": [
+   {
+    "name": "特性",
+    "value": "5/1 位读数分辨率（220,000 count）"
+   },
+   {
+    "name": "特性",
+    "value": "最大读数速率4.8k rdgs/s，最小5 rdgs/s"
+   },
+   {
+    "name": "特性",
+    "value": "真有效值交流电压和交流电流测量"
+   },
+   {
+    "name": "特性",
+    "value": "记录仪功能，最长可记录 100 小时"
+   },
+   {
+    "name": "特性",
+    "value": "5英寸触摸屏，分辨率800*480"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SDM4055A-1.jpg",
+  "imagePath": "/uploads/product/2026/SDM4055A.jpg",
+  "link": "https://store.siglent.com/product/sdm4055a-%e7%9c%9f6%e4%bd%8d%e5%8d%8a%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8/"
+ },
+ {
+  "model": "SMM3312X",
+  "series": "SMM3000X",
+  "line": "POWER",
+  "title": "SMM3312X 源表",
+  "params": [
+   {
+    "name": "特性",
+    "value": "6/1 显示位数（2,100,000 count）"
+   },
+   {
+    "name": "特性",
+    "value": "100,000 points/s最大采集速率"
+   },
+   {
+    "name": "特性",
+    "value": "10fA / 100nV最小编程及测量分辨率"
+   },
+   {
+    "name": "特性",
+    "value": "±210V / ±3A(DC) /±10.5A(pulsed) 最大输出"
+   },
+   {
+    "name": "特性",
+    "value": "支持直流、脉冲、扫描及列表输出，最小脉宽50μs"
+   },
+   {
+    "name": "特性",
+    "value": "5英寸触摸屏，支持图形和数字视图"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/09/SMM3311X.jpg",
+  "imagePath": "/uploads/product/2026/SMM3312X.jpg",
+  "link": "https://store.siglent.com/product/smm3312x-%e6%ba%90%e8%a1%a8/"
+ },
+ {
+  "model": "SDM4075A",
+  "series": "SDM4075A",
+  "line": "MULTIMETER",
+  "title": "SDM4075A 数字万用表",
+  "params": [
+   {
+    "name": "特性",
+    "value": "7/1 位读数分辨率（11,000,000 count）"
+   },
+   {
+    "name": "特性",
+    "value": "最大读数速率50k rdgs/s"
+   },
+   {
+    "name": "特性",
+    "value": "支持机械开关切换前/后面板信号输入"
+   },
+   {
+    "name": "特性",
+    "value": "记录仪功能和数字化仪功能"
+   },
+   {
+    "name": "特性",
+    "value": "5英寸触摸屏，分辨率800*480"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2026/02/SDM4075A-SC.jpg",
+  "imagePath": "/uploads/product/2026/SDM4075A.jpg",
+  "link": "https://store.siglent.com/product/sdm4075a-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8/"
+ },
+ {
+  "model": "SDM4065A",
+  "series": "SDM4065A",
+  "line": "MULTIMETER",
+  "title": "SDM4065A 数字万用表",
+  "params": [
+   {
+    "name": "特性",
+    "value": "6/1 位读数分辨率（2,200,000 count）"
+   },
+   {
+    "name": "特性",
+    "value": "最大读数速率50k rdgs/s，最小采样间隔20μs"
+   },
+   {
+    "name": "特性",
+    "value": "真有效值交流电压和交流电流测量"
+   },
+   {
+    "name": "特性",
+    "value": "记录仪功能和数字化仪功能"
+   },
+   {
+    "name": "特性",
+    "value": "5英寸触摸屏，分辨率800*480"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SDM4065A-SC-1.jpg",
+  "imagePath": "/uploads/product/2026/SDM4065A.jpg",
+  "link": "https://store.siglent.com/product/sdm4065a-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8/"
+ },
+ {
+  "model": "SDM4075A-SC",
+  "series": "SDM4075A",
+  "line": "MULTIMETER",
+  "title": "SDM4075A-SC 数字万用表",
+  "params": [
+   {
+    "name": "特性",
+    "value": "7/1 位读数分辨率（11,000,000 count）"
+   },
+   {
+    "name": "特性",
+    "value": "最大读数速率50k rdgs/s"
+   },
+   {
+    "name": "特性",
+    "value": "支持机械开关切换前/后面板信号输入"
+   },
+   {
+    "name": "特性",
+    "value": "记录仪功能和数字化仪功能"
+   },
+   {
+    "name": "特性",
+    "value": "5英寸触摸屏，分辨率800*480"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2026/02/SDM4075A-SC.jpg",
+  "imagePath": "/uploads/product/2026/SDM4075A-SC.jpg",
+  "link": "https://store.siglent.com/product/sdm4075a-sc-%e6%95%b0%e5%ad%97%e4%b8%87%e7%94%a8%e8%a1%a8/"
+ },
+ {
+  "model": "MN520A",
+  "series": "MN514A/MN520A",
+  "line": "MODULAR",
+  "title": "MN520A",
+  "params": [
+   {
+    "name": "输出频率范围",
+    "value": "100 kHz~20GHz"
+   },
+   {
+    "name": "端口数",
+    "value": "2"
+   },
+   {
+    "name": "频率分辨率",
+    "value": "0.1 Hz"
+   },
+   {
+    "name": "幅度分辨率",
+    "value": "0.05dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1 Hz-10 MHz"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2026/01/2-1.jpg",
+  "imagePath": "/uploads/product/2026/MN520A.jpg",
+  "link": "https://store.siglent.com/product/mn520a/"
+ },
+ {
+  "model": "MN514A",
+  "series": "MN514A/MN520A",
+  "line": "MODULAR",
+  "title": "MN514A",
+  "params": [
+   {
+    "name": "输出频率范围",
+    "value": "100 kHz~14 GHz"
+   },
+   {
+    "name": "端口数",
+    "value": "2"
+   },
+   {
+    "name": "频率分辨率",
+    "value": "0.1 Hz"
+   },
+   {
+    "name": "幅度分辨率",
+    "value": "0.05dB"
+   },
+   {
+    "name": "中频带宽范围",
+    "value": "1 Hz-10 MHz"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2026/01/2-1.jpg",
+  "imagePath": "/uploads/product/2026/MN514A.jpg",
+  "link": "https://store.siglent.com/product/mn514a/"
+ },
+ {
+  "model": "MS052A",
+  "series": "MS032A/MS052A/MS102A",
+  "line": "MODULAR",
+  "title": "MS052A",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "500 MHz"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "最高实时采样率",
+    "value": "5GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "最大存储深度",
+    "value": "1.25Gpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2026/01/1.jpg",
+  "imagePath": "/uploads/product/2026/MS052A.jpg",
+  "link": "https://store.siglent.com/product/ms052a/"
+ },
+ {
+  "model": "MS102A",
+  "series": "MS032A/MS052A/MS102A",
+  "line": "MODULAR",
+  "title": "MS102A",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "1GHz"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "最高实时采样率",
+    "value": "5GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "最大存储深度",
+    "value": "1.25Gpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2026/01/1.jpg",
+  "imagePath": "/uploads/product/2026/MS102A.jpg",
+  "link": "https://store.siglent.com/product/ms102a/"
+ },
+ {
+  "model": "SDS7804L",
+  "series": "SDS7000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS7804L 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "8 GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "最高 20 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "1 Gpts/通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 100 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/08/1.jpg",
+  "imagePath": "/uploads/product/2026/SDS7804L.jpg",
+  "link": "https://store.siglent.com/product/sds7804l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SVA1015X",
+  "series": "SVA1000X",
+  "line": "VNA",
+  "title": "SVA1015X 频谱矢量网络分析仪",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围9 kHz~1.5GHz"
+   },
+   {
+    "name": "特性",
+    "value": "矢量网络分析范围10 MHz ~1.5 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平DANL&lt; -165 dBm/Hz"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -99 dBc/Hz"
+   },
+   {
+    "name": "特性",
+    "value": "标配跟踪源和前置放大器"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SVA1015X-1.jpg",
+  "imagePath": "/uploads/product/2026/SVA1015X.jpg",
+  "link": "https://store.siglent.com/product/sva1015x/"
+ },
+ {
+  "model": "SDS7604L",
+  "series": "SDS7000L",
+  "line": "OSCILLOSCOPE",
+  "title": "SDS7604L 高分辨率示波器",
+  "params": [
+   {
+    "name": "带宽",
+    "value": "6 GHz"
+   },
+   {
+    "name": "实时采样率",
+    "value": "最高 20 GSa/s"
+   },
+   {
+    "name": "通道数",
+    "value": "4"
+   },
+   {
+    "name": "存储深度",
+    "value": "1 Gpts/通道"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "波形捕获率",
+    "value": "最高 100 万帧/秒"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/08/1.jpg",
+  "imagePath": "/uploads/product/2026/SDS7604L.jpg",
+  "link": "https://store.siglent.com/product/sds7604l-%e9%ab%98%e5%88%86%e8%be%a8%e7%8e%87%e7%a4%ba%e6%b3%a2%e5%99%a8/"
+ },
+ {
+  "model": "SVA1032X",
+  "series": "SVA1000X",
+  "line": "VNA",
+  "title": "SVA1032X 频谱矢量网络分析仪",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围9 kHz~3.2GHz"
+   },
+   {
+    "name": "特性",
+    "value": "矢量网络分析范围100KHz ~3.2 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平DANL&lt; -165 dBm/Hz"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -99 dBc/Hz"
+   },
+   {
+    "name": "特性",
+    "value": "标配跟踪源和前置放大器"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SVA1015X-1.jpg",
+  "imagePath": "/uploads/product/2026/SVA1032X.jpg",
+  "link": "https://store.siglent.com/product/sva1032x/"
+ },
+ {
+  "model": "MS032A",
+  "series": "MS032A/MS052A/MS102A",
+  "line": "MODULAR",
+  "title": "MS032A",
+  "params": [
+   {
+    "name": "模拟带宽",
+    "value": "350 MHz"
+   },
+   {
+    "name": "通道数",
+    "value": "2"
+   },
+   {
+    "name": "最高实时采样率",
+    "value": "5GSa/s"
+   },
+   {
+    "name": "垂直分辨率",
+    "value": "12-bit"
+   },
+   {
+    "name": "最大存储深度",
+    "value": "1.25Gpts"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2026/01/2.jpg",
+  "imagePath": "/uploads/product/2026/MS032A.jpg",
+  "link": "https://store.siglent.com/product/ms032a/"
+ },
+ {
+  "model": "SVA1075X",
+  "series": "SVA1000X",
+  "line": "VNA",
+  "title": "SVA1075X 频谱&amp;矢量网络分析仪",
+  "params": [
+   {
+    "name": "特性",
+    "value": "频率范围9 kHz~7.5GHz"
+   },
+   {
+    "name": "特性",
+    "value": "矢量网络分析范围100KHz ~7.5 GHz"
+   },
+   {
+    "name": "特性",
+    "value": "显示平均噪声电平DANL&lt; -165 dBm/Hz"
+   },
+   {
+    "name": "特性",
+    "value": "相位噪声&lt; -99 dBc/Hz"
+   },
+   {
+    "name": "特性",
+    "value": "标配跟踪源和前置放大器"
+   }
+  ],
+  "image": "https://store.siglent.com/wp-content/uploads/2025/07/SVA1015X-1.jpg",
+  "imagePath": "/uploads/product/2026/SVA1075X.jpg",
+  "link": "https://store.siglent.com/product/sva1075x/"
+ },
+ {
+  "model": "SHA851A",
+  "series": "SHA850A",
+  "line": "SPECTRUM",
+  "title": "SHA851A手持频谱仪+矢量网络分析扩展",
+  "params": [],
+  "image": null,
+  "imagePath": null,
+  "link": "https://store.siglent.com/product/sha851a%e6%89%8b%e6%8c%81%e9%a2%91%e8%b0%b1%e4%bb%aa%e7%9f%a2%e9%87%8f%e7%bd%91%e7%bb%9c%e5%88%86%e6%9e%90%e6%89%a9%e5%b1%95/"
+ }
+]
