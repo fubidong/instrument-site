@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useActionState } from "react";
 import { loginAction, type AuthActionState } from "../actions";
 
@@ -7,6 +8,13 @@ const initialState: AuthActionState = {};
 
 export default function LoginForm() {
   const [state, formAction, pending] = useActionState(loginAction, initialState);
+
+  // 登录成功（cookie 已设置）后整页跳转后台
+  useEffect(() => {
+    if (state.success) {
+      window.location.href = "/admin";
+    }
+  }, [state.success]);
 
   return (
     <form action={formAction} className="space-y-4">

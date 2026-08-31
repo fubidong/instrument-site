@@ -15,6 +15,7 @@ type ParamDef = {
   isComparable: boolean;
   isRequired: boolean;
   isHighlight: boolean;
+  filterUI: string | null;
   sortOrder: number;
   options: string | null;
   minValue: number | null;
@@ -32,6 +33,13 @@ const TYPE_LABELS: Record<string, string> = {
   boolean: "是/否",
   string: "文本",
 };
+
+const FILTER_UI_LABELS: { value: string; label: string; hint: string }[] = [
+  { value: "", label: "自动（推荐）", hint: "数值参数→滑块，其他→多选" },
+  { value: "slider", label: "滑动条（数值档位）", hint: "适合带宽/采样率等连续数值" },
+  { value: "multi", label: "多选（复选框）", hint: "可同时勾选多个值" },
+  { value: "single", label: "单选（点选一个）", hint: "同一时间只能选一个值" },
+];
 
 export default function ParamDefForm({
   categoryId,
@@ -272,6 +280,25 @@ export default function ParamDefForm({
           <input type="checkbox" name="isFilterable" defaultChecked={def?.isFilterable} className={checkbox} />
           可筛选（前台选型筛选用）
         </label>
+        <div>
+          <label className="mb-1 block text-xs font-medium text-slate-600">
+            前台筛选控件方式
+          </label>
+          <select
+            name="filterUI"
+            defaultValue={def?.filterUI ?? ""}
+            className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-sky-500"
+          >
+            {FILTER_UI_LABELS.map((o) => (
+              <option key={o.value} value={o.value}>
+                {o.label}
+              </option>
+            ))}
+          </select>
+          <p className="mt-1 text-xs text-slate-400">
+            {FILTER_UI_LABELS.find((o) => o.value === (def?.filterUI ?? ""))?.hint ?? ""}
+          </p>
+        </div>
         <label className="flex items-center gap-2 text-sm text-slate-700">
           <input type="checkbox" name="isComparable" defaultChecked={def?.isComparable} className={checkbox} />
           可对比（产品对比显示）

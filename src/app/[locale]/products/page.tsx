@@ -358,6 +358,7 @@ export default async function ProductsPage({
               type: d.type,
               unit: d.unit,
               options: d.options,
+              filterUI: d.filterUI ?? null,
               name:
                 ((d as any).translations ?? []).find((tr: any) => tr.locale === locale)?.name ??
                 ((d as any).translations ?? [])[0]?.name ??

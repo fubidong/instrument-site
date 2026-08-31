@@ -2416,6 +2416,7 @@ export const ParamDefinitionScalarFieldEnum = {
   isComparable: 'isComparable',
   isRequired: 'isRequired',
   isHighlight: 'isHighlight',
+  filterUI: 'filterUI',
   sortOrder: 'sortOrder',
   options: 'options',
   minValue: 'minValue',

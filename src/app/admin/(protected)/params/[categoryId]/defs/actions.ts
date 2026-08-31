@@ -28,6 +28,7 @@ export async function saveParamDefAction(
   const isComparable = formData.get("isComparable") === "on";
   const isRequired = formData.get("isRequired") === "on";
   const isHighlight = formData.get("isHighlight") === "on";
+  const filterUI = (formData.get("filterUI") as string)?.trim() || null;
   const precision = formData.get("precision") ? parseInt(formData.get("precision") as string) : null;
   const minValue = formData.get("minValue") ? parseFloat(formData.get("minValue") as string) : null;
   const maxValue = formData.get("maxValue") ? parseFloat(formData.get("maxValue") as string) : null;
@@ -80,6 +81,7 @@ export async function saveParamDefAction(
             isComparable,
             isRequired,
             isHighlight,
+            filterUI,
             sortOrder,
             options: optionsRaw || null,
             minValue,
@@ -111,6 +113,7 @@ export async function saveParamDefAction(
           isComparable,
           isRequired,
           isHighlight,
+          filterUI,
           sortOrder,
           options: optionsRaw || null,
           minValue,

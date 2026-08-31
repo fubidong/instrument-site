@@ -272,6 +272,7 @@ model ParamDefinition {
   isComparable  Boolean   @default(false)
   isRequired    Boolean   @default(false)
   isHighlight   Boolean   @default(false)
+  filterUI      String? // 前台筛选控件：slider | multi | single；空=自动推断
   sortOrder     Int       @default(0)
   options       String?   @db.Text // JSON array for enum type: [{value, label_zh, label_en}]
   minValue      Float?

@@ -12,6 +12,7 @@ type FilterDef = {
   options: string | null;
   name: string;
   defIds?: string[];
+  filterUI?: string | null; // slider | multi | single | null(自动)
 };
 
 type SliderStep = { value: string; mhz: number };
@@ -136,7 +137,11 @@ export default function ProductParamFilter({
         {visibleDefs.map((def) => {
           const opts = parseOptions(def.options);
           const sliderSteps = sliderStepsMap.get(def.id) ?? [];
-          const isSlider = sliderSteps.length > 1;
+          const canSlider = sliderSteps.length > 1;
+          // 前台筛选控件方式：后台配置优先；未配置时自动推断（可数值化→滑块，否则多选）
+          let uiMode = def.filterUI || "auto";
+          if (uiMode === "auto") uiMode = canSlider ? "slider" : "multi";
+          if (uiMode === "slider" && !canSlider) uiMode = "multi"; // 滑块不可用降级为多选
           // 滑块当前精确值（URL 里 p_<key> 存原始 token）
           const curValue = currentParams[`p_${def.key}`];
           const prevValues = (currentParams[`p_${def.key}`] ?? "").split(",").filter(Boolean);
@@ -150,13 +155,33 @@ export default function ProductParamFilter({
                 </span>
               </div>
 
-              {isSlider ? (
+              {uiMode === "slider" ? (
                 <SliderFilter
                   steps={sliderSteps}
                   currentValue={curValue}
                   isEn={isEn}
                   onCommit={(v) => push({ [`p_${def.key}`]: v !== null ? v : undefined })}
                 />
+              ) : uiMode === "single" ? (
+                <div className="flex flex-wrap gap-1.5">
+                  {opts.map((o) => {
+                    const active = prevValues.includes(o.value);
+                    return (
+                      <button
+                        key={o.value}
+                        type="button"
+                        onClick={() => push({ [`p_${def.key}`]: active ? undefined : o.value })}
+                        className={`cursor-pointer rounded-full border px-2 py-0.5 text-[11px] transition ${
+                          active
+                            ? "border-sky-500 bg-sky-50 text-sky-700"
+                            : "border-slate-200 bg-white text-slate-600 hover:border-sky-300"
+                        }`}
+                      >
+                        {locale === "en" && o.label_en ? o.label_en : o.label_zh}
+                      </button>
+                    );
+                  })}
+                </div>
               ) : def.type === "number" || def.type === "range" ? (
                 <div className="flex items-center gap-1.5">
                   <input

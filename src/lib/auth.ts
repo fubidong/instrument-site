@@ -1,15 +1,12 @@
-import { getIronSession, type IronSession } from "iron-session";
-import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { sessionOptions, type AdminSession } from "./session";
+import { getSession, type AdminSession } from "./session";
 
 /**
  * 获取当前请求的管理员 session（不抛出，未登录返回 isLoggedIn=false）
  */
-export async function getSession(): Promise<IronSession<AdminSession>> {
-  const cookieStore = await cookies();
-  return getIronSession<AdminSession>(cookieStore, sessionOptions);
-}
+export { getSession };
+
+export type { AdminSession };
 
 /**
  * 强制要求已登录；未登录跳转到 /admin/login

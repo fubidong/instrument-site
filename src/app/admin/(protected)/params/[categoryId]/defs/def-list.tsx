@@ -14,6 +14,7 @@ type ParamDef = {
   isComparable: boolean;
   isRequired: boolean;
   isHighlight: boolean;
+  filterUI: string | null;
   sortOrder: number;
   options: string | null;
   minValue: number | null;
@@ -30,6 +31,11 @@ const TYPE_BADGE: Record<string, { label: string; cls: string }> = {
   enum: { label: "枚举", cls: "bg-amber-100 text-amber-700" },
   boolean: { label: "布尔", cls: "bg-emerald-100 text-emerald-700" },
   string: { label: "文本", cls: "bg-slate-100 text-slate-600" },
+};
+const FILTER_UI_BADGE: Record<string, { label: string; cls: string }> = {
+  slider: { label: "滑块", cls: "bg-cyan-100 text-cyan-700" },
+  multi: { label: "多选", cls: "bg-violet-100 text-violet-700" },
+  single: { label: "单选", cls: "bg-amber-100 text-amber-700" },
 };
 
 export default function DefList({
@@ -105,6 +111,7 @@ export default function DefList({
                 <th className="px-4 py-3 font-medium">中文名</th>
                 <th className="px-4 py-3 font-medium">英文名</th>
                 <th className="px-4 py-3 font-medium">标记</th>
+                <th className="px-4 py-3 font-medium">筛选方式</th>
                 <th className="px-4 py-3 font-medium">排序</th>
                 <th className="px-4 py-3 font-medium">操作</th>
               </tr>
@@ -148,6 +155,15 @@ export default function DefList({
                         ))}
                         {marks.length === 0 && <span className="text-xs text-slate-300">-</span>}
                       </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      {d.isFilterable ? (
+                        <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${(FILTER_UI_BADGE[d.filterUI ?? ""] ?? { label: "自动", cls: "bg-slate-100 text-slate-500" }).cls}`}>
+                          {(FILTER_UI_BADGE[d.filterUI ?? ""] ?? { label: "自动", cls: "" }).label}
+                        </span>
+                      ) : (
+                        <span className="text-xs text-slate-300">-</span>
+                      )}
                     </td>
                     <td className="px-4 py-3 text-slate-500">{d.sortOrder}</td>
                     <td className="px-4 py-3">

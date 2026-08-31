@@ -53,6 +53,7 @@ export type ParamDefinitionMinAggregateOutputType = {
   isComparable: boolean | null
   isRequired: boolean | null
   isHighlight: boolean | null
+  filterUI: string | null
   sortOrder: number | null
   options: string | null
   minValue: number | null
@@ -74,6 +75,7 @@ export type ParamDefinitionMaxAggregateOutputType = {
   isComparable: boolean | null
   isRequired: boolean | null
   isHighlight: boolean | null
+  filterUI: string | null
   sortOrder: number | null
   options: string | null
   minValue: number | null
@@ -95,6 +97,7 @@ export type ParamDefinitionCountAggregateOutputType = {
   isComparable: number
   isRequired: number
   isHighlight: number
+  filterUI: number
   sortOrder: number
   options: number
   minValue: number
@@ -134,6 +137,7 @@ export type ParamDefinitionMinAggregateInputType = {
   isComparable?: true
   isRequired?: true
   isHighlight?: true
+  filterUI?: true
   sortOrder?: true
   options?: true
   minValue?: true
@@ -155,6 +159,7 @@ export type ParamDefinitionMaxAggregateInputType = {
   isComparable?: true
   isRequired?: true
   isHighlight?: true
+  filterUI?: true
   sortOrder?: true
   options?: true
   minValue?: true
@@ -176,6 +181,7 @@ export type ParamDefinitionCountAggregateInputType = {
   isComparable?: true
   isRequired?: true
   isHighlight?: true
+  filterUI?: true
   sortOrder?: true
   options?: true
   minValue?: true
@@ -284,6 +290,7 @@ export type ParamDefinitionGroupByOutputType = {
   isComparable: boolean
   isRequired: boolean
   isHighlight: boolean
+  filterUI: string | null
   sortOrder: number
   options: string | null
   minValue: number | null
@@ -328,6 +335,7 @@ export type ParamDefinitionWhereInput = {
   isComparable?: Prisma.BoolFilter<"ParamDefinition"> | boolean
   isRequired?: Prisma.BoolFilter<"ParamDefinition"> | boolean
   isHighlight?: Prisma.BoolFilter<"ParamDefinition"> | boolean
+  filterUI?: Prisma.StringNullableFilter<"ParamDefinition"> | string | null
   sortOrder?: Prisma.IntFilter<"ParamDefinition"> | number
   options?: Prisma.StringNullableFilter<"ParamDefinition"> | string | null
   minValue?: Prisma.FloatNullableFilter<"ParamDefinition"> | number | null
@@ -353,6 +361,7 @@ export type ParamDefinitionOrderByWithRelationInput = {
   isComparable?: Prisma.SortOrder
   isRequired?: Prisma.SortOrder
   isHighlight?: Prisma.SortOrder
+  filterUI?: Prisma.SortOrderInput | Prisma.SortOrder
   sortOrder?: Prisma.SortOrder
   options?: Prisma.SortOrderInput | Prisma.SortOrder
   minValue?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -382,6 +391,7 @@ export type ParamDefinitionWhereUniqueInput = Prisma.AtLeast<{
   isComparable?: Prisma.BoolFilter<"ParamDefinition"> | boolean
   isRequired?: Prisma.BoolFilter<"ParamDefinition"> | boolean
   isHighlight?: Prisma.BoolFilter<"ParamDefinition"> | boolean
+  filterUI?: Prisma.StringNullableFilter<"ParamDefinition"> | string | null
   sortOrder?: Prisma.IntFilter<"ParamDefinition"> | number
   options?: Prisma.StringNullableFilter<"ParamDefinition"> | string | null
   minValue?: Prisma.FloatNullableFilter<"ParamDefinition"> | number | null
@@ -407,6 +417,7 @@ export type ParamDefinitionOrderByWithAggregationInput = {
   isComparable?: Prisma.SortOrder
   isRequired?: Prisma.SortOrder
   isHighlight?: Prisma.SortOrder
+  filterUI?: Prisma.SortOrderInput | Prisma.SortOrder
   sortOrder?: Prisma.SortOrder
   options?: Prisma.SortOrderInput | Prisma.SortOrder
   minValue?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -436,6 +447,7 @@ export type ParamDefinitionScalarWhereWithAggregatesInput = {
   isComparable?: Prisma.BoolWithAggregatesFilter<"ParamDefinition"> | boolean
   isRequired?: Prisma.BoolWithAggregatesFilter<"ParamDefinition"> | boolean
   isHighlight?: Prisma.BoolWithAggregatesFilter<"ParamDefinition"> | boolean
+  filterUI?: Prisma.StringNullableWithAggregatesFilter<"ParamDefinition"> | string | null
   sortOrder?: Prisma.IntWithAggregatesFilter<"ParamDefinition"> | number
   options?: Prisma.StringNullableWithAggregatesFilter<"ParamDefinition"> | string | null
   minValue?: Prisma.FloatNullableWithAggregatesFilter<"ParamDefinition"> | number | null
@@ -455,6 +467,7 @@ export type ParamDefinitionCreateInput = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: string | null
   sortOrder?: number
   options?: string | null
   minValue?: number | null
@@ -480,6 +493,7 @@ export type ParamDefinitionUncheckedCreateInput = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: string | null
   sortOrder?: number
   options?: string | null
   minValue?: number | null
@@ -501,6 +515,7 @@ export type ParamDefinitionUpdateInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -526,6 +541,7 @@ export type ParamDefinitionUncheckedUpdateInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -549,6 +565,7 @@ export type ParamDefinitionCreateManyInput = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: string | null
   sortOrder?: number
   options?: string | null
   minValue?: number | null
@@ -568,6 +585,7 @@ export type ParamDefinitionUpdateManyMutationInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -589,6 +607,7 @@ export type ParamDefinitionUncheckedUpdateManyInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -625,6 +644,7 @@ export type ParamDefinitionCountOrderByAggregateInput = {
   isComparable?: Prisma.SortOrder
   isRequired?: Prisma.SortOrder
   isHighlight?: Prisma.SortOrder
+  filterUI?: Prisma.SortOrder
   sortOrder?: Prisma.SortOrder
   options?: Prisma.SortOrder
   minValue?: Prisma.SortOrder
@@ -654,6 +674,7 @@ export type ParamDefinitionMaxOrderByAggregateInput = {
   isComparable?: Prisma.SortOrder
   isRequired?: Prisma.SortOrder
   isHighlight?: Prisma.SortOrder
+  filterUI?: Prisma.SortOrder
   sortOrder?: Prisma.SortOrder
   options?: Prisma.SortOrder
   minValue?: Prisma.SortOrder
@@ -675,6 +696,7 @@ export type ParamDefinitionMinOrderByAggregateInput = {
   isComparable?: Prisma.SortOrder
   isRequired?: Prisma.SortOrder
   isHighlight?: Prisma.SortOrder
+  filterUI?: Prisma.SortOrder
   sortOrder?: Prisma.SortOrder
   options?: Prisma.SortOrder
   minValue?: Prisma.SortOrder
@@ -839,6 +861,7 @@ export type ParamDefinitionCreateWithoutCategoryInput = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: string | null
   sortOrder?: number
   options?: string | null
   minValue?: number | null
@@ -862,6 +885,7 @@ export type ParamDefinitionUncheckedCreateWithoutCategoryInput = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: string | null
   sortOrder?: number
   options?: string | null
   minValue?: number | null
@@ -914,6 +938,7 @@ export type ParamDefinitionScalarWhereInput = {
   isComparable?: Prisma.BoolFilter<"ParamDefinition"> | boolean
   isRequired?: Prisma.BoolFilter<"ParamDefinition"> | boolean
   isHighlight?: Prisma.BoolFilter<"ParamDefinition"> | boolean
+  filterUI?: Prisma.StringNullableFilter<"ParamDefinition"> | string | null
   sortOrder?: Prisma.IntFilter<"ParamDefinition"> | number
   options?: Prisma.StringNullableFilter<"ParamDefinition"> | string | null
   minValue?: Prisma.FloatNullableFilter<"ParamDefinition"> | number | null
@@ -933,6 +958,7 @@ export type ParamDefinitionCreateWithoutParamGroupInput = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: string | null
   sortOrder?: number
   options?: string | null
   minValue?: number | null
@@ -956,6 +982,7 @@ export type ParamDefinitionUncheckedCreateWithoutParamGroupInput = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: string | null
   sortOrder?: number
   options?: string | null
   minValue?: number | null
@@ -1003,6 +1030,7 @@ export type ParamDefinitionCreateWithoutTranslationsInput = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: string | null
   sortOrder?: number
   options?: string | null
   minValue?: number | null
@@ -1027,6 +1055,7 @@ export type ParamDefinitionUncheckedCreateWithoutTranslationsInput = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: string | null
   sortOrder?: number
   options?: string | null
   minValue?: number | null
@@ -1063,6 +1092,7 @@ export type ParamDefinitionUpdateWithoutTranslationsInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -1087,6 +1117,7 @@ export type ParamDefinitionUncheckedUpdateWithoutTranslationsInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -1107,6 +1138,7 @@ export type ParamDefinitionCreateWithoutValuesInput = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: string | null
   sortOrder?: number
   options?: string | null
   minValue?: number | null
@@ -1131,6 +1163,7 @@ export type ParamDefinitionUncheckedCreateWithoutValuesInput = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: string | null
   sortOrder?: number
   options?: string | null
   minValue?: number | null
@@ -1167,6 +1200,7 @@ export type ParamDefinitionUpdateWithoutValuesInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -1191,6 +1225,7 @@ export type ParamDefinitionUncheckedUpdateWithoutValuesInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -1212,6 +1247,7 @@ export type ParamDefinitionCreateManyCategoryInput = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: string | null
   sortOrder?: number
   options?: string | null
   minValue?: number | null
@@ -1231,6 +1267,7 @@ export type ParamDefinitionUpdateWithoutCategoryInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -1254,6 +1291,7 @@ export type ParamDefinitionUncheckedUpdateWithoutCategoryInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -1276,6 +1314,7 @@ export type ParamDefinitionUncheckedUpdateManyWithoutCategoryInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -1296,6 +1335,7 @@ export type ParamDefinitionCreateManyParamGroupInput = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: string | null
   sortOrder?: number
   options?: string | null
   minValue?: number | null
@@ -1315,6 +1355,7 @@ export type ParamDefinitionUpdateWithoutParamGroupInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -1338,6 +1379,7 @@ export type ParamDefinitionUncheckedUpdateWithoutParamGroupInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -1360,6 +1402,7 @@ export type ParamDefinitionUncheckedUpdateManyWithoutParamGroupInput = {
   isComparable?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isRequired?: Prisma.BoolFieldUpdateOperationsInput | boolean
   isHighlight?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  filterUI?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
   options?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   minValue?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
@@ -1421,6 +1464,7 @@ export type ParamDefinitionSelect<ExtArgs extends runtime.Types.Extensions.Inter
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: boolean
   sortOrder?: boolean
   options?: boolean
   minValue?: boolean
@@ -1447,6 +1491,7 @@ export type ParamDefinitionSelectCreateManyAndReturn<ExtArgs extends runtime.Typ
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: boolean
   sortOrder?: boolean
   options?: boolean
   minValue?: boolean
@@ -1470,6 +1515,7 @@ export type ParamDefinitionSelectUpdateManyAndReturn<ExtArgs extends runtime.Typ
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: boolean
   sortOrder?: boolean
   options?: boolean
   minValue?: boolean
@@ -1493,6 +1539,7 @@ export type ParamDefinitionSelectScalar = {
   isComparable?: boolean
   isRequired?: boolean
   isHighlight?: boolean
+  filterUI?: boolean
   sortOrder?: boolean
   options?: boolean
   minValue?: boolean
@@ -1503,7 +1550,7 @@ export type ParamDefinitionSelectScalar = {
   updatedAt?: boolean
 }
 
-export type ParamDefinitionOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "categoryId" | "paramGroupId" | "key" | "type" | "unit" | "isFilterable" | "isComparable" | "isRequired" | "isHighlight" | "sortOrder" | "options" | "minValue" | "maxValue" | "step" | "precision" | "createdAt" | "updatedAt", ExtArgs["result"]["paramDefinition"]>
+export type ParamDefinitionOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "categoryId" | "paramGroupId" | "key" | "type" | "unit" | "isFilterable" | "isComparable" | "isRequired" | "isHighlight" | "filterUI" | "sortOrder" | "options" | "minValue" | "maxValue" | "step" | "precision" | "createdAt" | "updatedAt", ExtArgs["result"]["paramDefinition"]>
 export type ParamDefinitionInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   category?: boolean | Prisma.CategoryDefaultArgs<ExtArgs>
   paramGroup?: boolean | Prisma.ParamGroupDefaultArgs<ExtArgs>
@@ -1539,6 +1586,7 @@ export type $ParamDefinitionPayload<ExtArgs extends runtime.Types.Extensions.Int
     isComparable: boolean
     isRequired: boolean
     isHighlight: boolean
+    filterUI: string | null
     sortOrder: number
     options: string | null
     minValue: number | null
@@ -1984,6 +2032,7 @@ export interface ParamDefinitionFieldRefs {
   readonly isComparable: Prisma.FieldRef<"ParamDefinition", 'Boolean'>
   readonly isRequired: Prisma.FieldRef<"ParamDefinition", 'Boolean'>
   readonly isHighlight: Prisma.FieldRef<"ParamDefinition", 'Boolean'>
+  readonly filterUI: Prisma.FieldRef<"ParamDefinition", 'String'>
   readonly sortOrder: Prisma.FieldRef<"ParamDefinition", 'Int'>
   readonly options: Prisma.FieldRef<"ParamDefinition", 'String'>
   readonly minValue: Prisma.FieldRef<"ParamDefinition", 'Float'>

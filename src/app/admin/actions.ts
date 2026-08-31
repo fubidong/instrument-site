@@ -1,6 +1,6 @@
 "use server";
 
-import { headers } from "next/headers";
+import { headers, cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import bcrypt from "bcryptjs";
 import { getSession } from "@/lib/auth";
@@ -65,7 +65,8 @@ export async function loginAction(
   session.isLoggedIn = true;
   await session.save();
 
-  redirect("/admin");
+  // 不在这里 redirect：改为前端检测成功后整页跳转，确保 cookie 先落到浏览器
+  return { success: "ok" };
 }
 
 /**
