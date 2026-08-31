@@ -32,3 +32,18 @@ export function canonicalParamName(name: string | null | undefined): string {
   const key = name.toLowerCase().trim();
   return ALIAS_TO_CANON.get(key) ?? name.trim();
 }
+
+/** 解析频率字符串为 MHz 数值（用于滑块范围筛选），解析失败返回 null */
+export function parseFreqMHz(s: string | null | undefined): number | null {
+  if (!s) return null;
+  const t = s.trim().replace(/[；;]/g, "");
+  const m = t.match(/([\d.]+)\s*(GHZ|MHZ|KHz|KHZ|HZ|G|M|K)/i);
+  if (!m) return null;
+  const num = parseFloat(m[1]);
+  const unit = m[2].toLowerCase();
+  if (unit.includes("ghz") || unit === "g") return num * 1000;
+  if (unit.includes("mhz") || unit === "m") return num;
+  if (unit.includes("khz") || unit === "k") return num / 1000;
+  if (unit.includes("hz")) return num / 1e6;
+  return null;
+}

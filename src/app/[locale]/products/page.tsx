@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { db } from "@/lib/db";
 import { t } from "@/lib/site";
+import { parseFreqMHz } from "@/lib/param-alias";
 import { routing } from "@/i18n/routing";
 import ProductFilters from "./product-filters";
 import ProductParamFilter from "./product-param-filter";
@@ -19,6 +20,7 @@ function parseParamFilters(searchParams: URLSearchParams, defs: any[]) {
     const min = searchParams.get(`p_${def.key}_min`);
     const max = searchParams.get(`p_${def.key}_max`);
     const values = searchParams.get(`p_${def.key}`);
+    const le = searchParams.get(`p_${def.key}_le`);
     if (def.type === "number" || def.type === "range") {
       if (min || max) {
         filters.push({
@@ -29,7 +31,9 @@ function parseParamFilters(searchParams: URLSearchParams, defs: any[]) {
         });
       }
     } else if (def.type === "enum") {
-      if (values) {
+      if (le) {
+        filters.push({ def, type: "enum_le", max: parseFloat(le) });
+      } else if (values) {
         filters.push({ def, type: "enum", values: values.split(",").filter(Boolean) });
       }
     } else if (def.type === "boolean") {
@@ -155,6 +159,23 @@ export default async function ProductsPage({
           .map((r) => r.productId);
         productIdsByDef[f.def.id] = matched;
         continue;
+      } else if (f.type === "enum_le") {
+        // 滑块：数值 ≤ 上限（解析 valueString 为 MHz）
+        const all = await db.productParamValue.findMany({
+          where: { paramDefinitionId: f.def.id },
+          select: { productId: true, valueString: true },
+        });
+        const matched = all
+          .filter((row) => {
+            if (!row.valueString) return false;
+            return row.valueString.split("|").some((tok) => {
+              const mhz = parseFreqMHz(tok);
+              return mhz !== null && f.max !== undefined && mhz <= f.max;
+            });
+          })
+          .map((r) => r.productId);
+        productIdsByDef[f.def.id] = matched;
+        continue;
       } else if (f.type === "boolean") {
         wherePv = { ...wherePv, valueBoolean: true };
       }
@@ -171,21 +192,43 @@ export default async function ProductsPage({
     }
   }
 
-  // 当前品类下的系列（用于系列筛选）：找品牌分类下的 ProductLine
-  const brandCatIdSet = new Set(categoryIds);
-  let lines: any[] = [];
-  if (currentCategory) {
-    lines = await db.productLine.findMany({
-      where: { isActive: true, categoryId: { in: [...brandCatIdSet] } },
-      include: {
-        translations: true,
-        brand: { include: { translations: true } },
-        _count: { select: { products: { where: { isActive: true } } } },
-      },
-      orderBy: [{ brand: { code: "asc" } }, { sortOrder: "asc" }],
-    });
-    lines = lines.filter((l: any) => l._count.products > 0);
+  // 系列按全站品类分组：品牌分类(挂系列) → siteCategoryId → 全站品类
+  const brandCatToSite = new Map<string, string | null>();
+  for (const bc of brandCats) brandCatToSite.set(bc.id, bc.siteCategoryId);
+  const allBrandCatIds = [...brandCatToSite.keys()];
+  const allLines = await db.productLine.findMany({
+    where: { isActive: true, categoryId: { in: allBrandCatIds } },
+    include: {
+      translations: true,
+      brand: { include: { translations: true } },
+      _count: { select: { products: { where: { isActive: true } } } },
+    },
+    orderBy: [{ brand: { code: "asc" } }, { sortOrder: "asc" }],
+  });
+  const linesBySiteCat = new Map<string, any[]>();
+  for (const l of allLines) {
+    if (l._count.products === 0) continue;
+    const siteId = brandCatToSite.get(l.categoryId);
+    if (!siteId) continue;
+    const arr = linesBySiteCat.get(siteId) ?? [];
+    arr.push(l);
+    linesBySiteCat.set(siteId, arr);
   }
+  const linesForCat = (catId: string) =>
+    (linesBySiteCat.get(catId) ?? []).map((l: any) => ({
+      id: l.id,
+      code: l.code,
+      name:
+        (l.translations ?? []).find((tr: any) => tr.locale === locale)?.name ??
+        (l.translations ?? [])[0]?.name ??
+        l.code,
+      brandCode: l.brand.code,
+      brandName:
+        (l.brand.translations ?? []).find((tr: any) => tr.locale === locale)?.name ??
+        (l.brand.translations ?? [])[0]?.name ??
+        l.brand.code,
+      count: l._count.products,
+    }));
 
   const [products, brands] = await Promise.all([
     db.product.findMany({
@@ -239,6 +282,15 @@ export default async function ProductsPage({
             code: c.code,
             name: t(c.translations, locale, "name") || c.code,
             parentId: c.parentId,
+            series: linesForCat(c.id),
+            children: c.children.map((ch) => ({
+              id: ch.id,
+              code: ch.code,
+              name: t(ch.translations, locale, "name") || ch.code,
+              parentId: ch.parentId,
+              series: linesForCat(ch.id),
+              children: [],
+            })),
           }))}
           currentCategory={currentCategory?.code}
           brands={brands.map((b) => ({
@@ -249,20 +301,6 @@ export default async function ProductsPage({
           currentBrand={brandId}
           currentQ={q ?? ""}
           currentLine={lineId}
-          lines={lines.map((l: any) => ({
-            id: l.id,
-            code: l.code,
-            name:
-              (l.translations ?? []).find((tr: any) => tr.locale === locale)?.name ??
-              (l.translations ?? [])[0]?.name ??
-              l.code,
-            brandCode: l.brand.code,
-            brandName:
-              (l.brand.translations ?? []).find((tr: any) => tr.locale === locale)?.name ??
-              (l.brand.translations ?? [])[0]?.name ??
-              l.brand.code,
-            count: l._count.products,
-          }))}
         />
 
         <div className="flex-1">
