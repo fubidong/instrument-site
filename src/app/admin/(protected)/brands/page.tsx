@@ -2,9 +2,26 @@ import Link from "next/link";
 import { db } from "@/lib/db";
 import { toggleBrandAction } from "./actions";
 import DeleteBrandButton from "./delete-brand-button";
+import ListFilterBar from "@/components/admin/list-filter-bar";
 
-export default async function BrandsPage() {
+export default async function BrandsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ status?: string; q?: string }>;
+}) {
+  const { status, q } = await searchParams;
+
+  const where: any = {};
+  if (status && status !== "all") where.isActive = status === "active";
+  if (q?.trim()) {
+    where.OR = [
+      { code: { contains: q.trim(), mode: "insensitive" } },
+      { translations: { some: { name: { contains: q.trim(), mode: "insensitive" } } } },
+    ];
+  }
+
   const brands = await db.brand.findMany({
+    where,
     include: {
       translations: true,
       _count: { select: { products: true, productLines: true } },
@@ -28,6 +45,22 @@ export default async function BrandsPage() {
           + 新增品牌
         </Link>
       </div>
+
+      {/* 筛选栏 */}
+      <ListFilterBar
+        basePath="/admin/brands"
+        fields={[
+          {
+            key: "status",
+            label: "全部状态",
+            options: [
+              { value: "active", label: "启用" },
+              { value: "inactive", label: "停用" },
+            ],
+          },
+        ]}
+        searchPlaceholder="搜索品牌名/代码..."
+      />
 
       <div className="rounded-lg border border-slate-200 bg-white">
         {brands.length === 0 ? (

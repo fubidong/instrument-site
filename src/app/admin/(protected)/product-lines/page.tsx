@@ -1,16 +1,45 @@
 import Link from "next/link";
 import { db } from "@/lib/db";
 import DeleteProductLineButton from "./delete-product-line-button";
+import ListFilterBar from "@/components/admin/list-filter-bar";
 
-export default async function ProductLinesPage() {
-  const lines = await db.productLine.findMany({
-    include: {
-      brand: { include: { translations: true } },
-      category: { include: { translations: true } },
-      translations: true,
-      _count: { select: { products: true } },
-    },
-    orderBy: [{ brand: { code: "asc" } }, { sortOrder: "asc" }],
+export default async function ProductLinesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ brand?: string; status?: string; q?: string }>;
+}) {
+  const { brand, status, q } = await searchParams;
+
+  const where: any = {};
+  if (brand && brand !== "all") where.brandId = brand;
+  if (status && status !== "all") where.isActive = status === "active";
+  if (q?.trim()) {
+    where.OR = [
+      { code: { contains: q.trim(), mode: "insensitive" } },
+      { translations: { some: { name: { contains: q.trim(), mode: "insensitive" } } } },
+    ];
+  }
+
+  const [lines, brands] = await Promise.all([
+    db.productLine.findMany({
+      where,
+      include: {
+        brand: { include: { translations: true } },
+        category: { include: { translations: true } },
+        translations: true,
+        _count: { select: { products: true } },
+      },
+      orderBy: [{ brand: { code: "asc" } }, { sortOrder: "asc" }],
+    }),
+    db.brand.findMany({
+      include: { translations: true },
+      orderBy: { sortOrder: "asc" },
+    }),
+  ]);
+
+  const brandOptions = brands.map((b) => {
+    const t = Object.fromEntries(b.translations.map((tr) => [tr.locale, tr]));
+    return { id: b.id, label: t["zh"]?.name ?? b.code };
   });
 
   return (
@@ -29,6 +58,27 @@ export default async function ProductLinesPage() {
           + 新增系列
         </Link>
       </div>
+
+      {/* 筛选栏 */}
+      <ListFilterBar
+        basePath="/admin/product-lines"
+        fields={[
+          {
+            key: "brand",
+            label: "全部品牌",
+            options: brandOptions.map((b) => ({ value: b.id, label: b.label })),
+          },
+          {
+            key: "status",
+            label: "全部状态",
+            options: [
+              { value: "active", label: "启用" },
+              { value: "inactive", label: "停用" },
+            ],
+          },
+        ]}
+        searchPlaceholder="搜索系列代码/名称..."
+      />
 
       <div className="rounded-lg border border-slate-200 bg-white">
         {lines.length === 0 ? (

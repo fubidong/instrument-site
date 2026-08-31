@@ -205,3 +205,107 @@ export async function deleteProductAction(formData: FormData) {
   await db.product.delete({ where: { id } });
   revalidatePath("/admin/products");
 }
+
+/**
+ * 批量删除产品（跳过有关联的产品，返回结果）
+ */
+export async function batchDeleteProductsAction(formData: FormData) {
+  await requireAdmin();
+  const ids = formData.getAll("ids").map(String).filter(Boolean);
+  if (ids.length === 0) return { error: "请选择产品" };
+
+  const products = await db.product.findMany({
+    where: { id: { in: ids } },
+    include: { _count: { select: { inquiries: true, documents: true } } },
+  });
+
+  const deletable = products.filter(
+    (p) => p._count.inquiries === 0 && p._count.documents === 0
+  );
+  const blocked = products.filter(
+    (p) => p._count.inquiries > 0 || p._count.documents > 0
+  );
+
+  if (deletable.length > 0) {
+    await db.product.deleteMany({ where: { id: { in: deletable.map((p) => p.id) } } });
+  }
+  revalidatePath("/admin/products");
+
+  const msg = `已删除 ${deletable.length} 个产品`;
+  return blocked.length > 0
+    ? { success: msg, warning: `跳过 ${blocked.length} 个有关联的产品` }
+    : { success: msg };
+}
+
+/**
+ * 批量启用/停用产品
+ */
+export async function batchToggleProductsAction(formData: FormData) {
+  await requireAdmin();
+  const ids = formData.getAll("ids").map(String).filter(Boolean);
+  const isActive = formData.get("isActive") === "on";
+  if (ids.length === 0) return { error: "请选择产品" };
+
+  await db.product.updateMany({ where: { id: { in: ids } }, data: { isActive } });
+  revalidatePath("/admin/products");
+  return { success: `已${isActive ? "启用" : "停用"} ${ids.length} 个产品` };
+}
+
+/**
+ * 复制产品（复制基本信息 + 参数值 + 翻译，新型号加后缀，跳转编辑）
+ */
+export async function duplicateProductAction(formData: FormData) {
+  await requireAdmin();
+  const id = formData.get("id") as string;
+
+  const product = await db.product.findUnique({
+    where: { id },
+    include: { translations: true, paramValues: true },
+  });
+  if (!product) return { error: "产品不存在" };
+
+  // 生成新型号：如 SDS1104X-E-copy
+  let newModel = `${product.model}-copy`;
+  let n = 1;
+  while (await db.product.findUnique({ where: { model: newModel } })) {
+    newModel = `${product.model}-copy${n}`;
+    n++;
+  }
+
+  const newProduct = await db.product.create({
+    data: {
+      productLineId: product.productLineId,
+      brandId: product.brandId,
+      categoryId: product.categoryId,
+      model: newModel,
+      sku: product.sku ? `${product.sku}-copy` : null,
+      coverImage: product.coverImage,
+      sortOrder: product.sortOrder,
+      isActive: false, // 复制品默认停用，避免误上线
+      isFeatured: false,
+      translations: {
+        create: product.translations.map((t) => ({
+          locale: t.locale,
+          name: `${t.name} (复制)`,
+          summary: t.summary,
+          description: t.description,
+          specsOverview: t.specsOverview,
+        })),
+      },
+      paramValues: {
+        create: product.paramValues.map((pv) => ({
+          paramDefinitionId: pv.paramDefinitionId,
+          valueNumber: pv.valueNumber,
+          valueMin: pv.valueMin,
+          valueMax: pv.valueMax,
+          valueString: pv.valueString,
+          valueBoolean: pv.valueBoolean,
+          isHighlight: pv.isHighlight,
+        })),
+      },
+    },
+  });
+
+  revalidatePath("/admin/products");
+  return { success: "已复制", redirect: `/admin/products/${newProduct.id}/edit` };
+}

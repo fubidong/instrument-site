@@ -46,3 +46,4 @@ dev-server.log
 public/uploads/
 # generated prisma client
 src/generated/
+dev-server.err.log

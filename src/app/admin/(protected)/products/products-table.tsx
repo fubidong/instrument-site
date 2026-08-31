@@ -1,0 +1,342 @@
+"use client";
+
+import { useState, useTransition } from "react";
+import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
+import {
+  deleteProductAction,
+  batchDeleteProductsAction,
+  batchToggleProductsAction,
+  duplicateProductAction,
+} from "./actions";
+
+type Product = {
+  id: string;
+  model: string;
+  sortOrder: number;
+  isActive: boolean;
+  isFeatured: boolean;
+  productLine: {
+    code: string;
+    translations: { locale: string; name: string }[];
+    brand: { translations: { locale: string; name: string }[] };
+  };
+  translations: { locale: string; name: string }[];
+};
+
+export default function ProductsTable({
+  products,
+  brandOptions,
+  categoryOptions,
+  lineOptions,
+  currentBrand,
+  currentCategory,
+  currentLine,
+  currentStatus,
+  currentQ,
+}: {
+  products: Product[];
+  brandOptions: { id: string; label: string }[];
+  categoryOptions: { id: string; label: string }[];
+  lineOptions: { id: string; label: string }[];
+  currentBrand: string;
+  currentCategory: string;
+  currentLine: string;
+  currentStatus: string;
+  currentQ: string;
+}) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [selected, setSelected] = useState<string[]>([]);
+  const [pending, startTransition] = useTransition();
+  const [msg, setMsg] = useState<string | null>(null);
+
+  function updateFilter(key: string, value: string) {
+    const params = new URLSearchParams(searchParams.toString());
+    if (value === "all" || value === "") params.delete(key);
+    else params.set(key, value);
+    router.push(`/admin/products?${params.toString()}`);
+  }
+
+  function notify(r: any) {
+    if (r?.error) alert(r.error);
+    else if (r?.success) setMsg(r.warning ? `${r.success}；${r.warning}` : r.success);
+    setTimeout(() => setMsg(null), 3000);
+  }
+
+  function handleDelete(id: string) {
+    if (!confirm("确定删除该产品？有关联将无法删除。")) return;
+    startTransition(async () => {
+      const fd = new FormData();
+      fd.append("id", id);
+      try {
+        await deleteProductAction(fd);
+        router.refresh();
+      } catch (e: any) {
+        alert(e.message || "删除失败");
+      }
+    });
+  }
+
+  function handleBatchDelete() {
+    if (selected.length === 0) return;
+    if (!confirm(`确定删除选中的 ${selected.length} 个产品？（有关联的将跳过）`)) return;
+    startTransition(async () => {
+      const fd = new FormData();
+      selected.forEach((id) => fd.append("ids", id));
+      const r = await batchDeleteProductsAction(fd);
+      notify(r);
+      setSelected([]);
+      router.refresh();
+    });
+  }
+
+  function handleBatchToggle(active: boolean) {
+    if (selected.length === 0) return;
+    startTransition(async () => {
+      const fd = new FormData();
+      selected.forEach((id) => fd.append("ids", id));
+      fd.append("isActive", active ? "on" : "");
+      const r = await batchToggleProductsAction(fd);
+      notify(r);
+      setSelected([]);
+      router.refresh();
+    });
+  }
+
+  function handleDuplicate(id: string) {
+    startTransition(async () => {
+      const fd = new FormData();
+      fd.append("id", id);
+      const r = (await duplicateProductAction(fd)) as { redirect?: string; error?: string };
+      if (r?.error) alert(r.error);
+      else if (r?.redirect) window.location.href = r.redirect;
+      else router.refresh();
+    });
+  }
+
+  const isAllSelected = products.length > 0 && selected.length === products.length;
+  const nameOf = (p: Product, locale: string) =>
+    p.translations.find((tr) => tr.locale === locale)?.name ?? "";
+
+  return (
+    <div className="space-y-4">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h1 className="text-xl font-bold text-slate-900">产品型号</h1>
+          <p className="mt-1 text-sm text-slate-500">
+            共 {products.length} 个型号{currentQ && `，搜索"${currentQ}"`}
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          {selected.length > 0 && (
+            <>
+              <button
+                type="button"
+                onClick={() => handleBatchToggle(true)}
+                disabled={pending}
+                className="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-600 hover:bg-slate-50 disabled:opacity-50"
+              >
+                批量启用
+              </button>
+              <button
+                type="button"
+                onClick={() => handleBatchToggle(false)}
+                disabled={pending}
+                className="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-600 hover:bg-slate-50 disabled:opacity-50"
+              >
+                批量停用
+              </button>
+              <button
+                type="button"
+                onClick={handleBatchDelete}
+                disabled={pending}
+                className="rounded-md border border-red-300 bg-red-50 px-3 py-2 text-sm font-semibold text-red-600 hover:bg-red-100 disabled:opacity-50"
+              >
+                批量删除 ({selected.length})
+              </button>
+            </>
+          )}
+          <Link
+            href="/admin/products/new"
+            className="rounded-md bg-sky-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-500"
+          >
+            + 新增产品
+          </Link>
+        </div>
+      </div>
+
+      {msg && (
+        <div className="rounded-md border border-green-500/40 bg-green-500/10 px-3 py-2 text-sm text-green-700">
+          {msg}
+        </div>
+      )}
+
+      {/* 筛选栏 */}
+      <div className="flex flex-wrap items-center gap-3 rounded-lg border border-slate-200 bg-white p-3">
+        <select
+          value={currentBrand}
+          onChange={(e) => updateFilter("brand", e.target.value)}
+          className="rounded-md border border-slate-300 px-3 py-1.5 text-sm outline-none focus:border-sky-500"
+        >
+          <option value="all">全部品牌</option>
+          {brandOptions.map((b) => (
+            <option key={b.id} value={b.id}>
+              {b.label}
+            </option>
+          ))}
+        </select>
+        <select
+          value={currentCategory}
+          onChange={(e) => updateFilter("category", e.target.value)}
+          className="rounded-md border border-slate-300 px-3 py-1.5 text-sm outline-none focus:border-sky-500"
+        >
+          <option value="all">全部类别</option>
+          {categoryOptions.map((c) => (
+            <option key={c.id} value={c.id}>
+              {c.label}
+            </option>
+          ))}
+        </select>
+        <select
+          value={currentLine}
+          onChange={(e) => updateFilter("line", e.target.value)}
+          className="rounded-md border border-slate-300 px-3 py-1.5 text-sm outline-none focus:border-sky-500"
+        >
+          <option value="all">全部系列</option>
+          {lineOptions.map((l) => (
+            <option key={l.id} value={l.id}>
+              {l.label}
+            </option>
+          ))}
+        </select>
+        <select
+          value={currentStatus}
+          onChange={(e) => updateFilter("status", e.target.value)}
+          className="rounded-md border border-slate-300 px-3 py-1.5 text-sm outline-none focus:border-sky-500"
+        >
+          <option value="all">全部状态</option>
+          <option value="active">启用</option>
+          <option value="inactive">停用</option>
+        </select>
+        <input
+          value={currentQ}
+          onChange={(e) => updateFilter("q", e.target.value)}
+          placeholder="搜索型号/名称..."
+          className="w-48 rounded-md border border-slate-300 px-3 py-1.5 text-sm outline-none focus:border-sky-500"
+        />
+        <button
+          type="button"
+          onClick={() => router.push("/admin/products")}
+          className="text-sm text-slate-400 hover:text-slate-600"
+        >
+          清除筛选
+        </button>
+      </div>
+
+      <div className="rounded-lg border border-slate-200 bg-white">
+        {products.length === 0 ? (
+          <p className="p-8 text-center text-sm text-slate-400">没有符合条件的产品</p>
+        ) : (
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-slate-200 text-left text-slate-500">
+                <th className="w-10 px-3 py-3">
+                  <input
+                    type="checkbox"
+                    checked={isAllSelected}
+                    onChange={() =>
+                      setSelected(isAllSelected ? [] : products.map((p) => p.id))
+                    }
+                    className="h-4 w-4"
+                  />
+                </th>
+                <th className="px-4 py-3 font-medium">型号</th>
+                <th className="px-4 py-3 font-medium">品牌</th>
+                <th className="px-4 py-3 font-medium">系列</th>
+                <th className="px-4 py-3 font-medium">中文名</th>
+                <th className="px-4 py-3 font-medium">英文名</th>
+                <th className="px-4 py-3 font-medium">排序</th>
+                <th className="px-4 py-3 font-medium">状态</th>
+                <th className="px-4 py-3 font-medium">操作</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100">
+              {products.map((p) => {
+                const bt = Object.fromEntries(
+                  p.productLine.brand.translations.map((tr) => [tr.locale, tr])
+                );
+                const lt = Object.fromEntries(p.productLine.translations.map((tr) => [tr.locale, tr]));
+                return (
+                  <tr
+                    key={p.id}
+                    className={`hover:bg-slate-50 ${selected.includes(p.id) ? "bg-sky-50/50" : ""}`}
+                  >
+                    <td className="px-3 py-3">
+                      <input
+                        type="checkbox"
+                        checked={selected.includes(p.id)}
+                        onChange={() =>
+                          setSelected((s) =>
+                            s.includes(p.id) ? s.filter((x) => x !== p.id) : [...s, p.id]
+                          )
+                        }
+                        className="h-4 w-4"
+                      />
+                    </td>
+                    <td className="px-4 py-3 font-mono text-xs font-semibold text-slate-800">
+                      {p.model}
+                    </td>
+                    <td className="px-4 py-3 text-slate-700">{bt["zh"]?.name ?? "-"}</td>
+                    <td className="px-4 py-3 text-slate-600">{lt["zh"]?.name ?? p.productLine.code}</td>
+                    <td className="px-4 py-3 text-slate-800">{nameOf(p, "zh") ?? "-"}</td>
+                    <td className="px-4 py-3 text-slate-600">{nameOf(p, "en") ?? "-"}</td>
+                    <td className="px-4 py-3 text-slate-500">{p.sortOrder}</td>
+                    <td className="px-4 py-3">
+                      <span
+                        className={`rounded-full px-2 py-0.5 text-xs font-medium ${
+                          p.isActive ? "bg-green-100 text-green-700" : "bg-slate-100 text-slate-500"
+                        }`}
+                      >
+                        {p.isActive ? "启用" : "停用"}
+                        {p.isFeatured && (
+                          <span className="ml-1 rounded bg-rose-100 px-1 text-rose-600">荐</span>
+                        )}
+                      </span>
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="flex items-center gap-2">
+                        <Link
+                          href={`/admin/products/${p.id}/edit`}
+                          className="text-sky-600 hover:underline"
+                        >
+                          编辑
+                        </Link>
+                        <button
+                          type="button"
+                          onClick={() => handleDuplicate(p.id)}
+                          disabled={pending}
+                          className="text-emerald-600 hover:underline disabled:opacity-50"
+                        >
+                          复制
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleDelete(p.id)}
+                          disabled={pending}
+                          className="text-red-500 hover:underline disabled:opacity-50"
+                        >
+                          删除
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        )}
+      </div>
+    </div>
+  );
+}

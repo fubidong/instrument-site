@@ -10,6 +10,7 @@ const navItems = [
   { href: "/admin/products", label: "产品管理" },
   { href: "/admin/params", label: "参数模板" },
   { href: "/admin/documents", label: "资料管理" },
+  { href: "/admin/media", label: "素材库" },
   { href: "/admin/posts", label: "内容管理" },
   { href: "/admin/settings", label: "站点设置" },
   { href: "/admin/login-log", label: "登录日志" },

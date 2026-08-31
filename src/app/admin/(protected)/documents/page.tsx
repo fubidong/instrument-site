@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { db } from "@/lib/db";
 import DeleteDocumentButton from "./delete-document-button";
+import ListFilterBar from "@/components/admin/list-filter-bar";
 
 const DOC_TYPE_LABEL: Record<string, string> = {
   datasheet: "数据手册",
@@ -18,14 +19,38 @@ const LANG_LABEL: Record<string, string> = {
   other: "其他",
 };
 
-export default async function DocumentsPage() {
-  const docs = await db.document.findMany({
-    include: {
-      brand: { include: { translations: true } },
-      productLine: { include: { translations: true } },
-      product: { include: { translations: true } },
-    },
-    orderBy: { createdAt: "desc" },
+export default async function DocumentsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ type?: string; lang?: string; brand?: string; q?: string }>;
+}) {
+  const { type, lang, brand, q } = await searchParams;
+
+  const where: any = {};
+  if (type && type !== "all") where.docType = type;
+  if (lang && lang !== "all") where.language = lang;
+  if (brand && brand !== "all") where.brandId = brand;
+  if (q?.trim()) where.title = { contains: q.trim(), mode: "insensitive" };
+
+  const [docs, brands] = await Promise.all([
+    db.document.findMany({
+      where,
+      include: {
+        brand: { include: { translations: true } },
+        productLine: { include: { translations: true } },
+        product: { include: { translations: true } },
+      },
+      orderBy: { createdAt: "desc" },
+    }),
+    db.brand.findMany({
+      include: { translations: true },
+      orderBy: { sortOrder: "asc" },
+    }),
+  ]);
+
+  const brandOptions = brands.map((b) => {
+    const t = Object.fromEntries(b.translations.map((tr) => [tr.locale, tr]));
+    return { id: b.id, label: t["zh"]?.name ?? b.code };
   });
 
   return (
@@ -42,6 +67,29 @@ export default async function DocumentsPage() {
           + 新增资料
         </Link>
       </div>
+
+      {/* 筛选栏 */}
+      <ListFilterBar
+        basePath="/admin/documents"
+        fields={[
+          {
+            key: "type",
+            label: "全部类型",
+            options: Object.entries(DOC_TYPE_LABEL).map(([v, l]) => ({ value: v, label: l })),
+          },
+          {
+            key: "lang",
+            label: "全部语言",
+            options: Object.entries(LANG_LABEL).map(([v, l]) => ({ value: v, label: l })),
+          },
+          {
+            key: "brand",
+            label: "全部品牌",
+            options: brandOptions.map((b) => ({ value: b.id, label: b.label })),
+          },
+        ]}
+        searchPlaceholder="搜索标题..."
+      />
 
       <div className="rounded-lg border border-slate-200 bg-white">
         {docs.length === 0 ? (

@@ -3,6 +3,7 @@ import { writeFile, mkdir } from "fs/promises";
 import path from "path";
 import crypto from "crypto";
 import { getAdminOrNull } from "@/lib/auth";
+import { db } from "@/lib/db";
 
 const ALLOWED_IMAGE_EXT = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"];
 const ALLOWED_DOC_EXT = [".pdf", ".doc", ".docx", ".xls", ".xlsx", ".zip"];
@@ -19,6 +20,7 @@ export async function POST(request: NextRequest) {
   const formData = await request.formData();
   const file = formData.get("file");
   const kind = (formData.get("kind") as string) || "image"; // image | doc
+  const category = (formData.get("category") as string) || "other"; // product|brand|doc|news|other
 
   if (!(file instanceof File)) {
     return NextResponse.json({ error: "未找到文件" }, { status: 400 });
@@ -60,9 +62,22 @@ export async function POST(request: NextRequest) {
 
   const publicPath = `/uploads/${kind}/${monthDir}/${filename}`;
 
+  // 写入素材库
+  const asset = await db.mediaAsset.create({
+    data: {
+      filename: file.name,
+      path: publicPath,
+      mimeType: file.type || (kind === "image" ? "image/*" : "application/octet-stream"),
+      kind,
+      size: file.size,
+      category,
+    },
+  });
+
   return NextResponse.json({
     url: publicPath,
     name: file.name,
     size: file.size,
+    assetId: asset.id,
   });
 }

@@ -1,97 +1,76 @@
 import Link from "next/link";
 import { db } from "@/lib/db";
-import DeleteProductButton from "./delete-product-button";
+import ProductsTable from "./products-table";
 
-export default async function ProductsPage() {
-  const products = await db.product.findMany({
-    include: {
-      productLine: {
-        include: { translations: true, brand: { include: { translations: true } } },
+export default async function ProductsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ brand?: string; category?: string; line?: string; status?: string; q?: string }>;
+}) {
+  const { brand, category, line, status, q } = await searchParams;
+
+  const where: any = {};
+  if (brand && brand !== "all") where.brandId = brand;
+  if (category && category !== "all") where.categoryId = category;
+  if (line && line !== "all") where.productLineId = line;
+  if (status && status !== "all") where.isActive = status === "active";
+  if (q?.trim()) {
+    where.OR = [
+      { model: { contains: q.trim(), mode: "insensitive" } },
+      { translations: { some: { name: { contains: q.trim(), mode: "insensitive" } } } },
+    ];
+  }
+
+  const [products, brands, categories, lines] = await Promise.all([
+    db.product.findMany({
+      where,
+      include: {
+        productLine: {
+          include: { translations: true, brand: { include: { translations: true } } },
+        },
+        translations: true,
       },
-      translations: true,
-    },
-    orderBy: [{ productLine: { code: "asc" } }, { sortOrder: "asc" }, { model: "asc" }],
+      orderBy: [{ productLine: { code: "asc" } }, { sortOrder: "asc" }, { model: "asc" }],
+    }),
+    db.brand.findMany({
+      include: { translations: true },
+      orderBy: { sortOrder: "asc" },
+    }),
+    db.category.findMany({
+      include: { translations: true },
+      orderBy: { sortOrder: "asc" },
+    }),
+    db.productLine.findMany({
+      include: { translations: true, brand: { include: { translations: true } } },
+      orderBy: [{ brand: { code: "asc" } }, { sortOrder: "asc" }],
+    }),
+  ]);
+
+  const brandOptions = brands.map((b) => {
+    const t = Object.fromEntries(b.translations.map((tr) => [tr.locale, tr]));
+    return { id: b.id, label: t["zh"]?.name ?? b.code };
+  });
+  const categoryOptions = categories.map((c) => {
+    const t = Object.fromEntries(c.translations.map((tr) => [tr.locale, tr]));
+    return { id: c.id, label: t["zh"]?.name ?? c.code };
+  });
+  const lineOptions = lines.map((l) => {
+    const lt = Object.fromEntries(l.translations.map((tr) => [tr.locale, tr]));
+    const bt = Object.fromEntries(l.brand.translations.map((tr) => [tr.locale, tr]));
+    return { id: l.id, label: `${bt["zh"]?.name ?? l.brand.code} / ${lt["zh"]?.name ?? l.code}`, code: l.code };
   });
 
   return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-xl font-bold text-slate-900">产品型号</h1>
-          <p className="mt-1 text-sm text-slate-500">共 {products.length} 个型号</p>
-        </div>
-        <Link
-          href="/admin/products/new"
-          className="rounded-md bg-sky-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-500"
-        >
-          + 新增产品
-        </Link>
-      </div>
-
-      <div className="rounded-lg border border-slate-200 bg-white">
-        {products.length === 0 ? (
-          <p className="p-8 text-center text-sm text-slate-400">暂无产品，点击右上角新增</p>
-        ) : (
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-slate-200 text-left text-slate-500">
-                <th className="px-4 py-3 font-medium">型号</th>
-                <th className="px-4 py-3 font-medium">品牌</th>
-                <th className="px-4 py-3 font-medium">系列</th>
-                <th className="px-4 py-3 font-medium">中文名</th>
-                <th className="px-4 py-3 font-medium">英文名</th>
-                <th className="px-4 py-3 font-medium">排序</th>
-                <th className="px-4 py-3 font-medium">状态</th>
-                <th className="px-4 py-3 font-medium">操作</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100">
-              {products.map((p) => {
-                const bt = Object.fromEntries(
-                  p.productLine.brand.translations.map((tr) => [tr.locale, tr])
-                );
-                const lt = Object.fromEntries(p.productLine.translations.map((tr) => [tr.locale, tr]));
-                const pt = Object.fromEntries(p.translations.map((tr) => [tr.locale, tr]));
-                return (
-                  <tr key={p.id} className="hover:bg-slate-50">
-                    <td className="px-4 py-3 font-mono text-xs font-semibold text-slate-800">
-                      {p.model}
-                    </td>
-                    <td className="px-4 py-3 text-slate-700">{bt["zh"]?.name ?? "-"}</td>
-                    <td className="px-4 py-3 text-slate-600">{lt["zh"]?.name ?? p.productLine.code}</td>
-                    <td className="px-4 py-3 text-slate-800">{pt["zh"]?.name ?? "-"}</td>
-                    <td className="px-4 py-3 text-slate-600">{pt["en"]?.name ?? "-"}</td>
-                    <td className="px-4 py-3 text-slate-500">{p.sortOrder}</td>
-                    <td className="px-4 py-3">
-                      <span
-                        className={`rounded-full px-2 py-0.5 text-xs font-medium ${
-                          p.isActive ? "bg-green-100 text-green-700" : "bg-slate-100 text-slate-500"
-                        }`}
-                      >
-                        {p.isActive ? "启用" : "停用"}
-                        {p.isFeatured && (
-                          <span className="ml-1 rounded bg-rose-100 px-1 text-rose-600">荐</span>
-                        )}
-                      </span>
-                    </td>
-                    <td className="px-4 py-3">
-                      <div className="flex items-center gap-2">
-                        <Link
-                          href={`/admin/products/${p.id}/edit`}
-                          className="text-sky-600 hover:underline"
-                        >
-                          编辑
-                        </Link>
-                        <DeleteProductButton id={p.id} />
-                      </div>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        )}
-      </div>
-    </div>
+    <ProductsTable
+      products={products as any}
+      brandOptions={brandOptions}
+      categoryOptions={categoryOptions}
+      lineOptions={lineOptions}
+      currentBrand={brand ?? "all"}
+      currentCategory={category ?? "all"}
+      currentLine={line ?? "all"}
+      currentStatus={status ?? "all"}
+      currentQ={q ?? ""}
+    />
   );
 }

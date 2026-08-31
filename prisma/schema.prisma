@@ -439,3 +439,19 @@ model SiteSetting {
 
   @@unique([key, locale])
 }
+
+// ============ 素材库（媒体库） ============
+
+model MediaAsset {
+  id        String   @id @default(uuid())
+  filename  String
+  path      String   @unique
+  mimeType  String
+  kind      String   @default("image") // image | doc
+  size      Int?
+  category  String   @default("other") // product | brand | doc | news | other
+  createdAt DateTime @default(now())
+
+  @@index([kind, category])
+  @@index([createdAt])
+}
