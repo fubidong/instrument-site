@@ -1,0 +1,423 @@
+// Prisma schema for 多品牌仪器仪表企业站点
+// 数据模型设计真源：dev-docs/data-model.md
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============ 枚举 ============
+
+enum Locale {
+  zh
+  en
+  ru
+}
+
+enum DocType {
+  datasheet
+  user_manual
+  programming_manual
+  quick_guide
+  service_manual
+  application_note
+  other
+}
+
+enum DocLanguage {
+  zh
+  en
+  ru
+  other
+}
+
+enum ParamType {
+  number
+  range
+  enum
+  boolean
+  string
+}
+
+enum InquiryStatus {
+  pending
+  quoted
+  closed_won
+  closed_lost
+}
+
+enum NotifyType {
+  in_site
+  email
+  both
+}
+
+enum PostCategory {
+  news
+  tech_article
+  case
+  announcement
+}
+
+// ============ 品牌 ============
+
+model Brand {
+  id        String   @id @default(uuid())
+  code      String   @unique
+  logo      String?
+  website   String?
+  sortOrder Int      @default(0)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  translations   BrandTranslation[]
+  categories     BrandCategory[]
+  productLines   ProductLine[]
+  products       Product[]
+  documents      Document[]
+}
+
+model BrandTranslation {
+  id            String @id @default(uuid())
+  brandId       String
+  locale        Locale
+  name          String
+  description   String?
+  fullDescription String? @db.Text
+
+  brand Brand @relation(fields: [brandId], references: [id], onDelete: Cascade)
+
+  @@unique([brandId, locale])
+}
+
+// ============ 产品类别 ============
+
+model Category {
+  id        String    @id @default(uuid())
+  code      String    @unique
+  icon      String?
+  sortOrder Int       @default(0)
+  parentId  String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  parent       Category?         @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children     Category[]        @relation("CategoryHierarchy")
+  translations CategoryTranslation[]
+  brands       BrandCategory[]
+  productLines ProductLine[]
+  products     Product[]
+  paramGroups  ParamGroup[]
+  paramDefs    ParamDefinition[]
+}
+
+model CategoryTranslation {
+  id          String @id @default(uuid())
+  categoryId  String
+  locale      Locale
+  name        String
+  description String?
+
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@unique([categoryId, locale])
+}
+
+model BrandCategory {
+  brandId    String
+  categoryId String
+
+  brand    Brand    @relation(fields: [brandId], references: [id], onDelete: Cascade)
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([brandId, categoryId])
+}
+
+// ============ 产品系列 ============
+
+model ProductLine {
+  id         String   @id @default(uuid())
+  brandId    String
+  categoryId String
+  code       String
+  sortOrder  Int      @default(0)
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  brand        Brand              @relation(fields: [brandId], references: [id], onDelete: Cascade)
+  category     Category           @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  translations ProductLineTranslation[]
+  products     Product[]
+  documents    Document[]
+
+  @@unique([brandId, categoryId, code])
+}
+
+model ProductLineTranslation {
+  id            String @id @default(uuid())
+  productLineId String
+  locale        Locale
+  name          String
+  description   String?
+  features      String? @db.Text // JSON array of selling points
+
+  productLine ProductLine @relation(fields: [productLineId], references: [id], onDelete: Cascade)
+
+  @@unique([productLineId, locale])
+}
+
+// ============ 产品型号 ============
+
+model Product {
+  id            String   @id @default(uuid())
+  productLineId String
+  model         String   @unique
+  sku           String?
+  coverImage    String?
+  sortOrder     Int      @default(0)
+  isActive      Boolean  @default(true)
+  isFeatured    Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  productLine  ProductLine         @relation(fields: [productLineId], references: [id], onDelete: Cascade)
+  brand        Brand               @relation(fields: [brandId], references: [id])
+  brandId      String
+  category     Category            @relation(fields: [categoryId], references: [id])
+  categoryId   String
+  translations ProductTranslation[]
+  paramValues  ProductParamValue[]
+  images       ProductImage[]
+  documents    Document[]
+  inquiries    Inquiry[]
+
+  @@index([isActive, productLineId, sortOrder])
+}
+
+model ProductTranslation {
+  id            String @id @default(uuid())
+  productId     String
+  locale        Locale
+  name          String
+  summary       String?
+  description   String? @db.Text
+  specsOverview String? @db.Text
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, locale])
+}
+
+model ProductImage {
+  id        String @id @default(uuid())
+  productId String
+  imagePath String
+  altText   String?
+  sortOrder Int    @default(0)
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@index([productId, sortOrder])
+}
+
+// ============ 动态参数系统 ============
+
+model ParamGroup {
+  id         String   @id @default(uuid())
+  categoryId String
+  code       String
+  sortOrder  Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  category     Category              @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  translations ParamGroupTranslation[]
+  paramDefs    ParamDefinition[]
+
+  @@unique([categoryId, code])
+  @@index([categoryId, sortOrder])
+}
+
+model ParamGroupTranslation {
+  id           String @id @default(uuid())
+  paramGroupId String
+  locale       Locale
+  name         String
+
+  paramGroup ParamGroup @relation(fields: [paramGroupId], references: [id], onDelete: Cascade)
+
+  @@unique([paramGroupId, locale])
+}
+
+model ParamDefinition {
+  id            String    @id @default(uuid())
+  categoryId    String
+  paramGroupId  String
+  key           String
+  type          ParamType
+  unit          String?
+  isFilterable  Boolean   @default(false)
+  isComparable  Boolean   @default(false)
+  isRequired    Boolean   @default(false)
+  isHighlight   Boolean   @default(false)
+  sortOrder     Int       @default(0)
+  options       String?   @db.Text // JSON array for enum type: [{value, label_zh, label_en}]
+  minValue      Float?
+  maxValue      Float?
+  step          Float?
+  precision     Int?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  category     Category                 @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  paramGroup   ParamGroup               @relation(fields: [paramGroupId], references: [id], onDelete: Cascade)
+  translations ParamDefinitionTranslation[]
+  values       ProductParamValue[]
+
+  @@unique([categoryId, key])
+  @@index([categoryId, paramGroupId, sortOrder])
+}
+
+model ParamDefinitionTranslation {
+  id                String @id @default(uuid())
+  paramDefinitionId String
+  locale            Locale
+  name              String
+  unit              String?
+  description       String?
+
+  paramDefinition ParamDefinition @relation(fields: [paramDefinitionId], references: [id], onDelete: Cascade)
+
+  @@unique([paramDefinitionId, locale])
+}
+
+model ProductParamValue {
+  id                String  @id @default(uuid())
+  productId         String
+  paramDefinitionId String
+  valueNumber       Float?
+  valueMin          Float?
+  valueMax          Float?
+  valueString       String?
+  valueBoolean      Boolean?
+  isHighlight       Boolean?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  product         Product         @relation(fields: [productId], references: [id], onDelete: Cascade)
+  paramDefinition ParamDefinition @relation(fields: [paramDefinitionId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, paramDefinitionId])
+  @@index([paramDefinitionId, valueNumber])
+  @@index([paramDefinitionId, valueMin, valueMax])
+}
+
+// ============ 资料文档 ============
+
+model Document {
+  id          String      @id @default(uuid())
+  title       String
+  docType     DocType     @default(other)
+  language    DocLanguage @default(zh)
+  version     String?
+  filePath    String
+  fileSize    Int?
+  publishDate DateTime?
+  downloadCount Int       @default(0)
+  brandId       String?
+  productLineId String?
+  productId     String?
+  isActive    Boolean     @default(true)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  brand       Brand?       @relation(fields: [brandId], references: [id])
+  productLine ProductLine? @relation(fields: [productLineId], references: [id])
+  product     Product?     @relation(fields: [productId], references: [id])
+
+  @@index([brandId, docType, language])
+  @@index([productLineId, docType])
+  @@index([productId, docType])
+}
+
+// ============ 询价线索 ============
+
+model Inquiry {
+  id            String       @id @default(uuid())
+  name          String
+  company       String?
+  contact       String
+  email         String?
+  country       String?
+  productId     String?
+  productLineId String?
+  message       String       @db.Text
+  status        InquiryStatus @default(pending)
+  notifyType    NotifyType   @default(in_site)
+  adminNote     String?      @db.Text
+  sourceIp      String?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+
+  product Product? @relation(fields: [productId], references: [id])
+
+  @@index([status, createdAt])
+}
+
+// ============ 新闻/文章 ============
+
+model Post {
+  id          String       @id @default(uuid())
+  code        String       @unique
+  coverImage  String?
+  category    PostCategory @default(news)
+  isPublished Boolean      @default(false)
+  publishedAt DateTime?
+  sortOrder   Int          @default(0)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  translations PostTranslation[]
+}
+
+model PostTranslation {
+  id      String @id @default(uuid())
+  postId  String
+  locale  Locale
+  title   String
+  summary String?
+  content String? @db.Text
+
+  post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@unique([postId, locale])
+}
+
+// ============ 管理员 ============
+
+model AdminUser {
+  id           String    @id @default(uuid())
+  username     String    @unique
+  passwordHash String
+  displayName  String
+  lastLoginAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+// ============ 站点设置 ============
+
+model SiteSetting {
+  id     String  @id @default(uuid())
+  key    String
+  value  String  @db.Text
+  locale String?
+
+  @@unique([key, locale])
+}

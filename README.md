@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 多品牌仪器仪表企业站点 (instrument-site)
 
-## Getting Started
+基于 Next.js + TypeScript + Tailwind + shadcn/ui + PostgreSQL 构建的多品牌仪器仪表代理商企业官网。
 
-First, run the development server:
+## 项目特性
+
+- 多品牌产品展示（品牌 → 类别 → 系列 → 型号）
+- 产品参数规格表、图片、PDF 技术资料下载
+- 在线询价/留言 → 后台线索管理
+- 中英双语（后期扩展俄语）
+- 单管理员后台运营
+- 产品批量导入（Excel/CSV）
+
+## 技术栈
+
+- **框架**：Next.js (App Router) + TypeScript
+- **UI**：Tailwind CSS + shadcn/ui
+- **多语言**：next-intl
+- **数据库**：PostgreSQL + Prisma ORM
+- **部署**：阿里云 ECS + 宝塔 + PM2 + Nginx
+
+## 快速开始
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# 安装依赖
+pnpm install
+
+# 配置环境变量
+cp .env.example .env
+
+# 初始化数据库
+pnpm prisma migrate dev
+
+# 启动开发服务器
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+访问 http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 项目结构
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/                    # Next.js 页面和路由
+│   ├── (admin)/           # 后台管理
+│   └── ...                # 前台页面
+├── components/             # React 组件
+│   └── ui/                # shadcn/ui 组件
+├── lib/                    # 工具库、数据库连接、类型
+├── prisma/                 # 数据库 schema 和 migrations
+├── messages/               # 多语言文案
+├── scripts/                # 批量导入、采集等脚本
+├── public/                 # 静态资源
+├── dev-docs/               # 内部文档（真源）
+└── AGENTS.md               # 项目宪法
+```
 
-## Learn More
+## 文档
 
-To learn more about Next.js, take a look at the following resources:
+- [项目宪法](AGENTS.md)
+- [立项章程](dev-docs/charter.md)
+- [数据模型](dev-docs/data-model.md)
+- [分阶段计划](dev-docs/stages.md)
+- [内部文档索引](dev-docs/README.md)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 开发规范
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+本项目遵循 `AGENTS.md` 中定义的开发规范。核心原则：真源优先、owner 唯一、严格验收、禁止补丁式开发。
 
-## Deploy on Vercel
+## 许可证
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+公司内部项目，未开源。
