@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "@/i18n/navigation";
 import { parseFreqMHz } from "@/lib/param-alias";
 
@@ -95,11 +95,6 @@ export default function ProductParamFilter({
     push({ [`p_${def.key}`]: next.length ? next.join(",") : undefined });
   }
 
-  /** 滑块变化立即筛选 */
-  function onSlider(def: FilterDef, mhz: number) {
-    push({ [`p_${def.key}_le`]: String(mhz) });
-  }
-
   const visibleDefs = expanded ? filterDefs : filterDefs.slice(0, 4);
 
   return (
@@ -134,7 +129,6 @@ export default function ProductParamFilter({
           const sliderSteps = sliderStepsMap.get(def.id) ?? [];
           const isSlider = sliderSteps.length > 1;
           const curLe = currentParams[`p_${def.key}_le`] ? parseFloat(currentParams[`p_${def.key}_le`]!) : null;
-          const sliderVal = curLe ?? (sliderSteps.length ? sliderSteps[sliderSteps.length - 1] : 0);
           const prevValues = (currentParams[`p_${def.key}`] ?? "").split(",").filter(Boolean);
 
           return (
@@ -147,27 +141,15 @@ export default function ProductParamFilter({
               </div>
 
               {isSlider ? (
-                <div>
-                  <div className="mb-1 text-center text-sm font-semibold text-sky-700">
-                    {curLe !== null ? formatMHz(curLe, isEn) : (isEn ? "Any" : "不限")}
-                  </div>
-                  <input
-                    type="range"
-                    min={sliderSteps[0]}
-                    max={sliderSteps[sliderSteps.length - 1]}
-                    step="auto"
-                    value={sliderVal}
-                    onChange={(e) => onSlider(def, parseFloat(e.target.value))}
-                    className="w-full accent-sky-600"
-                  />
-                  <div className="mt-0.5 flex justify-between text-[10px] text-slate-400">
-                    <span>{formatMHz(sliderSteps[0], isEn)}</span>
-                    <span>{formatMHz(sliderSteps[sliderSteps.length - 1], isEn)}</span>
-                  </div>
-                  <div className="mt-1 text-[10px] text-slate-400">
-                    {isEn ? "≤ selected value" : "≤ 选中值"}
-                  </div>
-                </div>
+                <SliderFilter
+                  defKey={def.key}
+                  steps={sliderSteps}
+                  currentLe={curLe}
+                  isEn={isEn}
+                  onCommit={(mhz) =>
+                    push({ [`p_${def.key}_le`]: mhz !== null ? String(mhz) : undefined })
+                  }
+                />
               ) : def.type === "number" || def.type === "range" ? (
                 <div className="flex items-center gap-1.5">
                   <input
@@ -242,4 +224,104 @@ export default function ProductParamFilter({
 function formatMHz(mhz: number, isEn: boolean): string {
   if (mhz >= 1000) return `${mhz / 1000} GHz`;
   return `${mhz} MHz`;
+}
+
+/** 离散档位滑块：只在真实存在的参数档位间滑动，拖动流畅，停顿后提交 */
+function SliderFilter({
+  defKey,
+  steps,
+  currentLe,
+  isEn,
+  onCommit,
+}: {
+  defKey: string;
+  steps: number[];
+  currentLe: number | null;
+  isEn: boolean;
+  onCommit: (mhz: number | null) => void; // null = 清除（不限）
+}) {
+  const last = steps.length - 1;
+  // 初始 index：找到 ≤ currentLe 的最大档位；无则最右（不限）
+  const initialIdx = useMemo(() => {
+    if (currentLe !== null) {
+      let best = last;
+      for (let i = 0; i < steps.length; i++) {
+        if (steps[i] <= currentLe) best = i;
+        else break;
+      }
+      return best;
+    }
+    return last;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const [idx, setIdx] = useState(initialIdx);
+  const timer = useRef<any>(null);
+
+  // URL 变化（外部 push 后）同步 index
+  useEffect(() => {
+    if (currentLe !== null) {
+      let best = last;
+      for (let i = 0; i < steps.length; i++) {
+        if (steps[i] <= currentLe) best = i;
+        else break;
+      }
+      setIdx(best);
+    } else {
+      setIdx(last);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentLe]);
+
+  function commit(i: number) {
+    if (i >= last) onCommit(null);
+    else onCommit(steps[i]);
+  }
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const i = parseInt(e.target.value, 10);
+    setIdx(i);
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(() => commit(i), 300);
+  }
+
+  useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
+
+  const isLimited = idx < last;
+
+  return (
+    <div>
+      <div className="mb-1 text-center text-sm font-semibold text-sky-700">
+        {isLimited ? `≤ ${formatMHz(steps[idx], isEn)}` : (isEn ? "Any" : "不限")}
+      </div>
+      <input
+        type="range"
+        min={0}
+        max={last}
+        step={1}
+        value={idx}
+        onChange={handleChange}
+        className="w-full accent-sky-600"
+      />
+      <div className="mt-0.5 flex justify-between text-[10px] text-slate-400">
+        <span>{formatMHz(steps[0], isEn)}</span>
+        <span>{formatMHz(steps[last], isEn)}</span>
+      </div>
+      <div className="mt-1 flex items-center justify-between text-[10px] text-slate-400">
+        <span>{isEn ? "drag to set limit" : "拖动设置上限"}</span>
+        {isLimited && (
+          <button
+            type="button"
+            onClick={() => {
+              setIdx(last);
+              if (timer.current) clearTimeout(timer.current);
+              onCommit(null);
+            }}
+            className="text-sky-600 hover:underline"
+          >
+            {isEn ? "Reset" : "重置"}
+          </button>
+        )}
+      </div>
+    </div>
+  );
 }
