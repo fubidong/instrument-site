@@ -1,0 +1,11079 @@
+[
+ {
+  "id": 17,
+  "slug": "sds7000a",
+  "name": "SDS7000A",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "示波器",
+   "高分辨率示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS7804AP",
+   "SDS7604AP",
+   "SDS7804A H12",
+   "SDS7604A H12",
+   "SDS7404A H12",
+   "SDS7304A H12",
+   "SDS7204A H12"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/sds71.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS7804AP",
+     "SDS7604AP",
+     "SDS7804A H12",
+     "SDS7604A H12",
+     "SDS7404A H12",
+     "SDS7304A H12",
+     "SDS7204A H12"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "2 GHz",
+     "3 GHz",
+     "4 GHz",
+     "6 GHz",
+     "8 GHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "4 + EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "20 GSa/s（交织模式）",
+     "20 GSa/s @所有通道"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "2 Gpts/ch",
+     "1 Gpts/ch"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "1,000,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "15.6英寸电容式触摸高清显示屏（分辨率1920x1080）"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "4G-8GHz",
+     "500M-4GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "≥20GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "≥1 Gpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "2~8GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "20 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "4 + EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 62,
+  "slug": "sds1000a",
+  "name": "SDS1000A",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "数字示波器",
+   "示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS1152A",
+   "SDS1052A",
+   "SDS1072A",
+   "SDS1102A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/05/SDS1000A-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS1152A",
+     "SDS1052A",
+     "SDS1072A",
+     "SDS1102A"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "50 MHz",
+     "70 MHz",
+     "100 MHz",
+     "150 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2+EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "500 MSa/s",
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "2 Mpts",
+     "32 Kpts"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "7 英寸TFT-LCD 显示屏，分辨率800*480"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "≤200MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "2 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "≤1GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "≤14Mpts",
+     "14M-140Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "50~150MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "500M~1GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2 + EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 65,
+  "slug": "sds1000e",
+  "name": "SDS1000E+/F+",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "数字示波器",
+   "示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS1122E+",
+   "SDS1202F+"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/05/SDS1000E-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS1122E+",
+     "SDS1202F+"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "120 MHz",
+     "200 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2+EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "500 MSa/s",
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "1 Mpts",
+     "32 Kpts"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "7 英寸TFT-LCD 显示屏，分辨率800*480"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "≤200MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "2 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "≤1GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "≤14Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "120~200MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "500M~1GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2 + EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 66,
+  "slug": "sds1000cd",
+  "name": "SDS1000CNL+/DL+",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "数字示波器",
+   "示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS1202DL+",
+   "SDS1102CNL+",
+   "SDS1102DL+"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/05/SDS1000CNL-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS1202DL+",
+     "SDS1102CNL+",
+     "SDS1102DL+"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "100 MHz",
+     "200 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2+EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "500 MSa/s",
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "40 Kpts",
+     "32 Kpts"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "≤200MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "2 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "≤1GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "≤14Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "100~200MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "500M~1GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2 + EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 119,
+  "slug": "sds3000hd",
+  "name": "SDS3000X HD",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "示波器",
+   "高分辨率示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS3034X HD",
+   "SDS3054X HD",
+   "SDS3104X HD"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/sds31.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS3034X HD",
+     "SDS3054X HD",
+     "SDS3104X HD"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "350 MHz",
+     "500 MHz",
+     "1 GHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "4 + EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "4 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "400 Mpts/ch"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "890,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "10.1 英寸电容式触摸显示屏，分辨率1024*600"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "200M-500MHz",
+     "500M-4GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "5-10GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "140M-400Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "350M~1GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "4 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "4 + EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 139,
+  "slug": "sds1000x-hd",
+  "name": "SDS1000X HD",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "示波器",
+   "高分辨率示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS1202X HD",
+   "SDS1204X HD",
+   "SDS1072X HD",
+   "SDS1074X HD",
+   "SDS1102X HD",
+   "SDS1104X HD"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/sds11.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS1202X HD",
+     "SDS1204X HD",
+     "SDS1072X HD",
+     "SDS1074X HD",
+     "SDS1102X HD",
+     "SDS1104X HD"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "70 MHz",
+     "100 MHz",
+     "200 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2+EXT",
+     "4+EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "100 Mpts/ch"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "500,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "10.1 英寸电容式触摸显示屏，分辨率1024*600"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "≤200MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "2 通道",
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "2-4GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "14M-140Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000",
+     "5000-1w"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "70~200MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2/4+EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 157,
+  "slug": "sds6000-pro",
+  "name": "SDS6000 Pro",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "示波器",
+   "高分辨率示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS6104 H10 Pro",
+   "SDS6204 H10 Pro",
+   "SDS6034 H12 Pro",
+   "SDS6054 H10 Pro",
+   "SDS6058 H10 Pro",
+   "SDS6108 H10 Pro",
+   "SDS6058 H12 Pro",
+   "SDS6108 H12 Pro",
+   "SDS6104 H12 Pro",
+   "SDS6204 H12 Pro",
+   "SDS6034 H10 Pro",
+   "SDS6208 H10 Pro",
+   "SDS6208 H12 Pro"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDS6P-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS6104 H10 Pro",
+     "SDS6204 H10 Pro",
+     "SDS6034 H12 Pro",
+     "SDS6054 H10 Pro",
+     "SDS6058 H10 Pro",
+     "SDS6108 H10 Pro",
+     "SDS6058 H12 Pro",
+     "SDS6108 H12 Pro",
+     "SDS6104 H12 Pro",
+     "SDS6204 H12 Pro",
+     "SDS6034 H10 Pro",
+     "SDS6208 H10 Pro",
+     "SDS6208 H12 Pro"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "350 MHz",
+     "500 MHz",
+     "1 GHz",
+     "2 GHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "4 + EXT",
+     "8 + EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "5 GSa/s",
+     "10 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "10-bit",
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "500 Mpts/ch",
+     "250 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "750,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价",
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "12.1 英寸电容式触摸显示屏，分辨率1280*800"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "200M-500MHz",
+     "500M-4GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "4 通道",
+     "8 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "5-10GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "140M-400Mpts",
+     "400 Mpts-1 Gpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "10-bit",
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "10W以上",
+     "1w-5w",
+     "5w-10w",
+     "询价机器"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "350M~2GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "10 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "4/8+EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 177,
+  "slug": "sds6000l",
+  "name": "SDS6000L",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "示波器",
+   "紧凑型示波器",
+   "高分辨率示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS6054L H12",
+   "SDS6104L H12",
+   "SDS6104L H10",
+   "SDS6054L H10",
+   "SDS6058L H10",
+   "SDS6058L H12",
+   "SDS6108L H10",
+   "SDS6108L H12",
+   "SDS6204L H10",
+   "SDS6204L H12",
+   "SDS6208L H10",
+   "SDS6208L H12"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDS6L-1-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS6054L H12",
+     "SDS6104L H12",
+     "SDS6104L H10",
+     "SDS6054L H10",
+     "SDS6058L H10",
+     "SDS6058L H12",
+     "SDS6108L H10",
+     "SDS6108L H12",
+     "SDS6204L H10",
+     "SDS6204L H12",
+     "SDS6208L H10",
+     "SDS6208L H12"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "500 MHz",
+     "1 GHz",
+     "2 GHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "4 + EXT",
+     "8 + EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "10 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "10-bit",
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "500 Mpts/ch"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "750,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "500M-4GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "4 通道",
+     "8 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "5-10GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "400 Mpts-1 Gpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "12-bit",
+     "10-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "500M~2GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "10 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "4/8+EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 197,
+  "slug": "sds2000hd",
+  "name": "SDS2000X HD",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "示波器",
+   "高分辨率示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS2204X HD",
+   "SDS2354X HD",
+   "SDS2504X HD"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDS2HD-1-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS2204X HD",
+     "SDS2354X HD",
+     "SDS2504X HD"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "200 MHz",
+     "350 MHz",
+     "500 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "4+EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "200 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "500,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "10.1 英寸电容式触摸显示屏，分辨率1024*600"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "200M-500MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "2-4GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "140M-400Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "200~500MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "4 + EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 209,
+  "slug": "ssg6000a",
+  "name": "SSG6000A",
+  "line": "RF_GEN",
+  "cats": [
+   "射频/微波信号发生器",
+   "模拟源"
+  ],
+  "series": [],
+  "models": [
+   "SSG6089A",
+   "SSG6083A",
+   "SSG6085A",
+   "SSG6087A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SSG6000-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SSG6089A",
+     "SSG6083A",
+     "SSG6085A",
+     "SSG6087A"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "CW MODE 100 kHz~13.6 GHz",
+     "CW MODE 100 kHz~20 GHz",
+     "CW MODE 100 kHz~40 GHz",
+     "CW MODE 100 kHz~67 GHz"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "0.001 Hz"
+    ]
+   },
+   {
+    "tax": "pa_iq调制",
+    "name": "IQ调制",
+    "values": [
+     "不支持"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "+16 dBm",
+     "+22 dBm"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声",
+    "name": "相位噪声",
+    "values": [
+     "&lt;-146 dBc/Hz@1 GHz, offset=10 kHz(测量值)（选件）"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "5 英寸电容触摸屏"
+    ]
+   },
+   {
+    "tax": "pa_通信接口",
+    "name": "通信接口",
+    "values": [
+     "USB-HOST，USB DEVICE（USB-TMC），LAN（VXI-11,Socket,Telnet）,选配GPIB"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率范围",
+    "name": "summary__输出频率范围",
+    "values": [
+     "100 kHz~67 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出功率",
+    "name": "summary__输出功率",
+    "values": [
+     "+24 dBm"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt;-146 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_filter__频率范围",
+    "name": "filter__频率范围",
+    "values": [
+     "10 GHz",
+     "20 GHz",
+     "40 GHz",
+     "67 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__i-q调制",
+    "name": "filter__I/Q调制",
+    "values": [
+     "不支持"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大输出功率",
+    "name": "filter__最大输出功率",
+    "values": [
+     "＜ +23 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__相位噪声",
+    "name": "filter__相位噪声",
+    "values": [
+     "-146 dBc/Hz@1 GHz, offset 10kHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssg",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 210,
+  "slug": "sds1000edu",
+  "name": "SDS1000X EDU",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "示波器",
+   "高分辨率示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS1202X EDU",
+   "SDS1204X EDU"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/sds1edu1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS1202X EDU",
+     "SDS1204X EDU"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "220 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2+EXT",
+     "4+EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "100 Mpts/ch"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "500,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "10.1 英寸电容式触摸显示屏，分辨率1024*600"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "200M-500MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "2 通道",
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "2-4GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "14M-140Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "220MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2/4+EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 229,
+  "slug": "sds800hd",
+  "name": "SDS800X HD",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "示波器",
+   "高分辨率示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS802X HD",
+   "SDS804X HD",
+   "SDS812X HD",
+   "SDS814X HD",
+   "SDS822X HD",
+   "SDS824X HD"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/sds81.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS802X HD",
+     "SDS804X HD",
+     "SDS812X HD",
+     "SDS814X HD",
+     "SDS822X HD",
+     "SDS824X HD"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "70 MHz",
+     "100 MHz",
+     "200 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "100 Mpts",
+     "50 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "7 英寸电容式触摸显示屏，分辨率1024*600"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "500,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "≤200MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "2 通道",
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "2-4GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "14M-140Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "70~200MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2/4+EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 241,
+  "slug": "sds800edu",
+  "name": "SDS800X EDU",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "示波器",
+   "高分辨率示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS812X EDU",
+   "SDS814X EDU",
+   "SDS822X EDU",
+   "SDS824X EDU"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/sds8edu1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS812X EDU",
+     "SDS814X EDU",
+     "SDS822X EDU",
+     "SDS824X EDU"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "120 MHz",
+     "220 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "100 Mpts/ch"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "500,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "7 英寸电容式触摸显示屏，分辨率1024*600"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "≤200MHz",
+     "200M-500MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "2 通道",
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "2-4GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "14M-140Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "120~220MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2/4+EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 332,
+  "slug": "ssg5000x-v",
+  "name": "SSG5000X-V",
+  "line": "RF_GEN",
+  "cats": [
+   "射频/微波信号发生器",
+   "矢量源"
+  ],
+  "series": [],
+  "models": [
+   "SSG5040X-V",
+   "SSG5060X-V"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SSG5000X-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SSG5040X-V",
+     "SSG5060X-V"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "CW MODE: 9 kHz ~ 4 GHz / IQ MODE: 10 MHz ~ 4 GHz",
+     "CW MODE: 9 kHz ~ 6 GHz / IQ MODE: 10 MHz ~ 6 GHz"
+    ]
+   },
+   {
+    "tax": "pa_i-q带宽",
+    "name": "I/Q带宽",
+    "values": [
+     "标配37.5 MHz，选配75 MHz"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "0.001 Hz"
+    ]
+   },
+   {
+    "tax": "pa_iq调制",
+    "name": "IQ调制",
+    "values": [
+     "支持"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "+20 dBm"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声",
+    "name": "相位噪声",
+    "values": [
+     "&lt;-120 dBc/Hz@1 GHz，偏移20 kHz(典型值）"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "5英寸电容触摸屏，800（RGB）*480"
+    ]
+   },
+   {
+    "tax": "pa_通信接口",
+    "name": "通信接口",
+    "values": [
+     "USB-HOST / USB DEVICE（USB-TMC) / LAN（VXI-11,Socket,Telnet) / 选配GPIB"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率范围",
+    "name": "summary__输出频率范围",
+    "values": [
+     "9 kHz ~ 6 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__i-q带宽",
+    "name": "summary__I/Q带宽",
+    "values": [
+     "75 MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt;-120 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_filter__频率范围",
+    "name": "filter__频率范围",
+    "values": [
+     "10 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__i-q调制",
+    "name": "filter__I/Q调制",
+    "values": [
+     "支持"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大输出功率",
+    "name": "filter__最大输出功率",
+    "values": [
+     "＜ +23 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__相位噪声",
+    "name": "filter__相位噪声",
+    "values": [
+     "-120 dBc/Hz@1GHz，offset20kHz（typ.）"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssg",
+    "name": "filter__含税价",
+    "values": [
+     "10W以上",
+     "5w-10w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 333,
+  "slug": "ssg6082a-v",
+  "name": "SSG6082A-V",
+  "line": "RF_GEN",
+  "cats": [
+   "射频/微波信号发生器",
+   "矢量源"
+  ],
+  "series": [],
+  "models": [
+   "SSG6082A-V"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/60821.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SSG6082A-V"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "9kHz~8GHz"
+    ]
+   },
+   {
+    "tax": "pa_i-q带宽",
+    "name": "I/Q带宽",
+    "values": [
+     "标配250 MHz，选配500 MHz"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "0.001 Hz"
+    ]
+   },
+   {
+    "tax": "pa_iq调制",
+    "name": "IQ调制",
+    "values": [
+     "支持"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "+30 dBm"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声",
+    "name": "相位噪声",
+    "values": [
+     "＜-132 dBc/Hz@1 GHz，offset 10 kHz(typ.)"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "5英寸电容触摸屏"
+    ]
+   },
+   {
+    "tax": "pa_通信接口",
+    "name": "通信接口",
+    "values": [
+     "USB-HOST、USB-DEVICE、 LAN、GPIB（选配）"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率范围",
+    "name": "summary__输出频率范围",
+    "values": [
+     "9kHz~8GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__i-q带宽",
+    "name": "summary__I/Q带宽",
+    "values": [
+     "500 MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "＜-132 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_filter__频率范围",
+    "name": "filter__频率范围",
+    "values": [
+     "10 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__i-q调制",
+    "name": "filter__I/Q调制",
+    "values": [
+     "支持"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大输出功率",
+    "name": "filter__最大输出功率",
+    "values": [
+     "≥ +23 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__相位噪声",
+    "name": "filter__相位噪声",
+    "values": [
+     "-132 dBc/Hz@1GHz，offset20kHz（typ.）"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssg",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 349,
+  "slug": "spd4000x",
+  "name": "SPD4000X",
+  "line": "POWER",
+  "cats": [
+   "直流电源/源表",
+   "线性电源"
+  ],
+  "series": [],
+  "models": [
+   "SPD4051X",
+   "SPD4121X",
+   "SPD4306X",
+   "SPD4323X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/01.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SPD4051X",
+     "SPD4121X",
+     "SPD4306X",
+     "SPD4323X"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流",
+    "name": "最大单路输出电流",
+    "values": [
+     "16A",
+     "3.2 A",
+     "6 A",
+     "10 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压",
+    "name": "最大单路输出电压",
+    "values": [
+     "6V",
+     "15 V",
+     "30 V",
+     "32 V"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "140 W",
+     "240 W",
+     "285 W",
+     "400 W"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "4.3 英寸真彩 TFT-LCD，五位电压、五位电流显示"
+    ]
+   },
+   {
+    "tax": "pa_分辨率",
+    "name": "分辨率",
+    "values": [
+     "0.1 mV/1 mA",
+     "1 mV/1 mA"
+    ]
+   },
+   {
+    "tax": "pa_设定精度",
+    "name": "设定精度",
+    "values": [
+     "电压 ±(0.03% of reading+10)mV 电流 ±(0.3% of reading+10)mA",
+     "电压≤ ±(0.05% reading + 5mV），电流≤ ±(0.1% reading+ 10mA）"
+    ]
+   },
+   {
+    "tax": "pa_回读精度",
+    "name": "回读精度",
+    "values": [
+     "电压 ±(0.03% of reading+10)mV 电流 ±(0.3% of reading+10)mA",
+     "电压≤ ±(0.05% reading + 5mV），电流≤ ±(0.1% reading+ 10mA）"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流1",
+    "name": "filter__最大单路输出电流",
+    "values": [
+     "&gt;8 A",
+     "≤8 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压1",
+    "name": "filter__最大单路输出电压",
+    "values": [
+     "≤32 V"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出功率",
+    "name": "filter__输出功率",
+    "values": [
+     "≤ 400W"
+    ]
+   },
+   {
+    "tax": "pa_filter__分辨率",
+    "name": "filter__分辨率",
+    "values": [
+     "0.1mV/1mA",
+     "1mV/1mA"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出通道",
+    "name": "filter__输出通道",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sps",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000",
+     "5000-1w"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大输出功率",
+    "name": "summary__最大输出功率",
+    "values": [
+     "400 W"
+    ]
+   },
+   {
+    "tax": "pa_summary__分辨率",
+    "name": "summary__分辨率",
+    "values": [
+     "1 mV/1 mA"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2/4"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 375,
+  "slug": "spd3303x",
+  "name": "SPD3303X/X-E/X-C",
+  "line": "POWER",
+  "cats": [
+   "直流电源/源表",
+   "线性电源"
+  ],
+  "series": [],
+  "models": [
+   "SPD3303X",
+   "SPD3303X-C",
+   "SPD3303X-E"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SPD3303X-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SPD3303X",
+     "SPD3303X-C",
+     "SPD3303X-E"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流",
+    "name": "最大单路输出电流",
+    "values": [
+     "3.2 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压",
+    "name": "最大单路输出电压",
+    "values": [
+     "32 V"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "220 W"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "3"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "4.3英寸真彩TFT-LCD 五位电压显示，四位电流显示",
+     "4.3英寸真彩TFT-LCD 四位电压显示，三位电流显示"
+    ]
+   },
+   {
+    "tax": "pa_分辨率",
+    "name": "分辨率",
+    "values": [
+     "1 mV/1 mA",
+     "10 mV/10 mA"
+    ]
+   },
+   {
+    "tax": "pa_设定精度",
+    "name": "设定精度",
+    "values": [
+     "电压 ±(0.5% of reading+2digits) 电流 ±(0.5% of reading+2digits)",
+     "电压 ±(0.8% of reading+10mV) 电流 ±(0.8% of reading+10mA)"
+    ]
+   },
+   {
+    "tax": "pa_回读精度",
+    "name": "回读精度",
+    "values": [
+     "电压 ±(0.8% of reading+10mV) 电流 ±(0.8% of reading+10mA)",
+     "电压±(0.03% of reading+10 mV) 电流±(0.3% of reading+10 mA）"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流1",
+    "name": "filter__最大单路输出电流",
+    "values": [
+     "≤8 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压1",
+    "name": "filter__最大单路输出电压",
+    "values": [
+     "≤32 V"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出功率",
+    "name": "filter__输出功率",
+    "values": [
+     "≤ 400W"
+    ]
+   },
+   {
+    "tax": "pa_filter__分辨率",
+    "name": "filter__分辨率",
+    "values": [
+     "10mV/10mA",
+     "1mV/1mA"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出通道",
+    "name": "filter__输出通道",
+    "values": [
+     "3"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大输出功率",
+    "name": "summary__最大输出功率",
+    "values": [
+     "220 W"
+    ]
+   },
+   {
+    "tax": "pa_summary__分辨率",
+    "name": "summary__分辨率",
+    "values": [
+     "1 mV/1 mA",
+     "10mV/1mA"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "3"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 378,
+  "slug": "spd1000x",
+  "name": "SPD1000X",
+  "line": "POWER",
+  "cats": [
+   "直流电源/源表",
+   "线性电源"
+  ],
+  "series": [],
+  "models": [
+   "SPD1168X",
+   "SPD1168X-C",
+   "SPD1305X",
+   "SPD1305X-C"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SPD1000-2.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SPD1168X",
+     "SPD1168X-C",
+     "SPD1305X",
+     "SPD1305X-C"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流",
+    "name": "最大单路输出电流",
+    "values": [
+     "5 A",
+     "8 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压",
+    "name": "最大单路输出电压",
+    "values": [
+     "16 V",
+     "30 V"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "128 W",
+     "150 W"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "1"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "2.8 英寸真彩 TFT-LCD 五位电压、四位电流显示",
+     "2.8 英寸真彩 TFT-LCD 四位电压、三位电流显示"
+    ]
+   },
+   {
+    "tax": "pa_分辨率",
+    "name": "分辨率",
+    "values": [
+     "1 mV/1 mA",
+     "10 mV/10 mA"
+    ]
+   },
+   {
+    "tax": "pa_设定精度",
+    "name": "设定精度",
+    "values": [
+     "电压 ±（0.03% of reading+10 mV） 电流 ±（0. 3% of reading+10 mA）",
+     "电压 ±（0.05% of reading+10 mV）电流 ±（0. 3% of reading+10 mA）"
+    ]
+   },
+   {
+    "tax": "pa_回读精度",
+    "name": "回读精度",
+    "values": [
+     "电压 ±（0.03% of reading+10 mV） 电流 ±（0. 3% of reading+10 mA）",
+     "电压 ±（0.05% of reading+10 mV） 电流 ±（0. 3% of reading+20 mA）"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流1",
+    "name": "filter__最大单路输出电流",
+    "values": [
+     "≤8 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压1",
+    "name": "filter__最大单路输出电压",
+    "values": [
+     "≤32 V"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出功率",
+    "name": "filter__输出功率",
+    "values": [
+     "≤ 400W"
+    ]
+   },
+   {
+    "tax": "pa_filter__分辨率",
+    "name": "filter__分辨率",
+    "values": [
+     "10mV/10mA",
+     "1mV/1mA"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出通道",
+    "name": "filter__输出通道",
+    "values": [
+     "1"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sps",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大输出功率",
+    "name": "summary__最大输出功率",
+    "values": [
+     "128 W",
+     "150 W"
+    ]
+   },
+   {
+    "tax": "pa_summary__分辨率",
+    "name": "summary__分辨率",
+    "values": [
+     "1 mV/1 mA",
+     "10mV/10mA"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "1"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 379,
+  "slug": "spd3303c",
+  "name": "SPD3303C",
+  "line": "POWER",
+  "cats": [
+   "直流电源/源表",
+   "线性电源"
+  ],
+  "series": [],
+  "models": [
+   "SPD3303C"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SPD3303C-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SPD3303C"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流",
+    "name": "最大单路输出电流",
+    "values": [
+     "3.2 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压",
+    "name": "最大单路输出电压",
+    "values": [
+     "32 V"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "220 W"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "3"
+    ]
+   },
+   {
+    "tax": "pa_分辨率",
+    "name": "分辨率",
+    "values": [
+     "10 mV/10 mA"
+    ]
+   },
+   {
+    "tax": "pa_设定精度",
+    "name": "设定精度",
+    "values": [
+     "电压 ±(0.5% of reading+3digits) 电流 ±(0.5% of reading+2digits)"
+    ]
+   },
+   {
+    "tax": "pa_回读精度",
+    "name": "回读精度",
+    "values": [
+     "电压±(0.5% of reading+3digits) 电流±(0.5% of reading+2digits)"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "LED数码管显示 四位电压显示，三位电流显示"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流1",
+    "name": "filter__最大单路输出电流",
+    "values": [
+     "≤8 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压1",
+    "name": "filter__最大单路输出电压",
+    "values": [
+     "≤32 V"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出功率",
+    "name": "filter__输出功率",
+    "values": [
+     "≤ 400W"
+    ]
+   },
+   {
+    "tax": "pa_filter__分辨率",
+    "name": "filter__分辨率",
+    "values": [
+     "10mV/10mA"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出通道",
+    "name": "filter__输出通道",
+    "values": [
+     "3"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sps",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大输出功率",
+    "name": "summary__最大输出功率",
+    "values": [
+     "220 W"
+    ]
+   },
+   {
+    "tax": "pa_summary__分辨率",
+    "name": "summary__分辨率",
+    "values": [
+     "10mV/10mA"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "3"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 386,
+  "slug": "sdm4065a",
+  "name": "SDM4065A",
+  "line": "MULTIMETER",
+  "cats": [
+   "数字万用表",
+   "数字万用表"
+  ],
+  "series": [],
+  "models": [
+   "SDM4065A-RE",
+   "SDM4065A",
+   "SDM4065A-SC"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/4065-1.1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDM4065A-RE",
+     "SDM4065A",
+     "SDM4065A-SC"
+    ]
+   },
+   {
+    "tax": "pa_读数分辨率",
+    "name": "读数分辨率",
+    "values": [
+     "6½ (2,200,000 count)"
+    ]
+   },
+   {
+    "tax": "pa_最大采样速率",
+    "name": "最大采样速率",
+    "values": [
+     "50,000 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_扫描卡",
+    "name": "扫描卡",
+    "values": [
+     "-",
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_dcv基本精度",
+    "name": "DCV基本精度",
+    "values": [
+     "35PPM"
+    ]
+   },
+   {
+    "tax": "pa_nplc",
+    "name": "NPLC",
+    "values": [
+     "0.001~100"
+    ]
+   },
+   {
+    "tax": "pa_存储",
+    "name": "存储",
+    "values": [
+     "256 MB Nand Flash"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__读数分辨率",
+    "name": "summary__读数分辨率",
+    "values": [
+     "6½"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大采样速率",
+    "name": "summary__最大采样速率",
+    "values": [
+     "50,000 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__扫描卡",
+    "name": "summary__扫描卡",
+    "values": [
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_filter__读数分辨率",
+    "name": "filter__读数分辨率",
+    "values": [
+     "6½ (2,200,000 count)"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大采样速率",
+    "name": "filter__最大采样速率",
+    "values": [
+     "50,000 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__扫描卡",
+    "name": "filter__扫描卡",
+    "values": [
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdm",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w",
+     "5000-1w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 398,
+  "slug": "sdg7000a",
+  "name": "SDG7000A",
+  "line": "FUNCTION_GEN",
+  "cats": [
+   "函数/任意波形发生器",
+   "函数/任意波形发生器"
+  ],
+  "series": [],
+  "models": [
+   "SDG7032A",
+   "SDG7052A",
+   "SDG7102A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDG7000-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDG7032A",
+     "SDG7052A",
+     "SDG7102A"
+    ]
+   },
+   {
+    "tax": "pa_最高输出频率",
+    "name": "最高输出频率",
+    "values": [
+     "350 MHz",
+     "500 MHz",
+     "1 GHz"
+    ]
+   },
+   {
+    "tax": "pa_最高采样率",
+    "name": "最高采样率",
+    "values": [
+     "5 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "14-bit"
+    ]
+   },
+   {
+    "tax": "pa_任意波长度",
+    "name": "任意波长度",
+    "values": [
+     "512 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": []
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率",
+    "name": "summary__输出频率",
+    "values": [
+     "350 MHz-1GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__任意波长度",
+    "name": "summary__任意波长度",
+    "values": [
+     "512 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2单端/差分"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高输出频率",
+    "name": "filter__最高输出频率",
+    "values": [
+     "≥500 MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高采样率",
+    "name": "filter__最高采样率",
+    "values": [
+     "≥5 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__垂直分辨率",
+    "name": "filter__垂直分辨率",
+    "values": [
+     "14-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__任意波长度",
+    "name": "filter__任意波长度",
+    "values": [
+     "512 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道",
+    "name": "filter__通道",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdg",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 405,
+  "slug": "sdm3065x",
+  "name": "SDM3065X",
+  "line": "MULTIMETER",
+  "cats": [
+   "数字万用表",
+   "数字万用表"
+  ],
+  "series": [],
+  "models": [
+   "SDM3065X",
+   "SDM3065X-SC（带扫描卡）"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDM3065X-2.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDM3065X",
+     "SDM3065X-SC（带扫描卡）"
+    ]
+   },
+   {
+    "tax": "pa_读数分辨率",
+    "name": "读数分辨率",
+    "values": [
+     "6½ (2,200,000 count)"
+    ]
+   },
+   {
+    "tax": "pa_最大采样速率",
+    "name": "最大采样速率",
+    "values": [
+     "10,000 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_扫描卡",
+    "name": "扫描卡",
+    "values": [
+     "-",
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_dcv基本精度",
+    "name": "DCV基本精度",
+    "values": [
+     "35PPM"
+    ]
+   },
+   {
+    "tax": "pa_nplc",
+    "name": "NPLC",
+    "values": [
+     "0.005~100"
+    ]
+   },
+   {
+    "tax": "pa_存储",
+    "name": "存储",
+    "values": [
+     "1 Gb Nand Flash"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__读数分辨率",
+    "name": "summary__读数分辨率",
+    "values": [
+     "6½"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大采样速率",
+    "name": "summary__最大采样速率",
+    "values": [
+     "10,000 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__扫描卡",
+    "name": "summary__扫描卡",
+    "values": [
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_filter__读数分辨率",
+    "name": "filter__读数分辨率",
+    "values": [
+     "6½ (2,200,000 count)"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大采样速率",
+    "name": "filter__最大采样速率",
+    "values": [
+     "10,000 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__扫描卡",
+    "name": "filter__扫描卡",
+    "values": [
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdm",
+    "name": "filter__含税价",
+    "values": [
+     "5000-1w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 417,
+  "slug": "sna6000a",
+  "name": "SNA6000A",
+  "line": "VNA",
+  "cats": [
+   "矢量网络分析仪",
+   "矢量网络分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SNA6144A",
+   "SNA6152A",
+   "SNA6154A",
+   "SNA6142A",
+   "SNA6134A",
+   "SNA6022A",
+   "SNA6024A",
+   "SNA6032A",
+   "SNA6034A",
+   "SNA6122A",
+   "SNA6124A",
+   "SNA6132A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SNA6000-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SNA6144A",
+     "SNA6152A",
+     "SNA6154A",
+     "SNA6142A",
+     "SNA6134A",
+     "SNA6022A",
+     "SNA6024A",
+     "SNA6032A",
+     "SNA6034A",
+     "SNA6122A",
+     "SNA6124A",
+     "SNA6132A"
+    ]
+   },
+   {
+    "tax": "pa_测量频率范围",
+    "name": "测量频率范围",
+    "values": [
+     "100 kHz - 13.5 GHz",
+     "100 kHz - 26.5 GHz",
+     "100 kHz - 44 GHz",
+     "100 kHz - 50 GHz"
+    ]
+   },
+   {
+    "tax": "pa_端口数",
+    "name": "端口数",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "1 Hz"
+    ]
+   },
+   {
+    "tax": "pa_幅度分辨率",
+    "name": "幅度分辨率",
+    "values": [
+     "0.05dB"
+    ]
+   },
+   {
+    "tax": "pa_中频带宽范围",
+    "name": "中频带宽范围",
+    "values": [
+     "1 Hz-10 MHz"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置范围",
+    "name": "输出功率设置范围",
+    "values": [
+     "-60 dBm ~ +20 dBm"
+    ]
+   },
+   {
+    "tax": "pa_动态范围",
+    "name": "动态范围",
+    "values": [
+     "135dB"
+    ]
+   },
+   {
+    "tax": "pa_前面板跳线",
+    "name": "前面板跳线",
+    "values": [
+     "/",
+     "有"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大测量频率",
+    "name": "filter__最大测量频率",
+    "values": [
+     "≥13.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__端口数",
+    "name": "filter__端口数",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置1",
+    "name": "filter__输出功率设置范围",
+    "values": [
+     "-60 dBm ~ +20 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__动态范围",
+    "name": "filter__动态范围",
+    "values": [
+     "135 dB"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sna",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "100 kHz-50 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__动态范围",
+    "name": "summary__动态范围",
+    "values": [
+     "135dB"
+    ]
+   },
+   {
+    "tax": "pa_summary__端口数",
+    "name": "summary__端口数",
+    "values": [
+     "2/4"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 487,
+  "slug": "sna5000a",
+  "name": "SNA5000A",
+  "line": "VNA",
+  "cats": [
+   "矢量网络分析仪",
+   "矢量网络分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SNA5022A",
+   "SNA5032A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SNA5000A-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SNA5022A",
+     "SNA5032A"
+    ]
+   },
+   {
+    "tax": "pa_测量频率范围",
+    "name": "测量频率范围",
+    "values": [
+     "100 kHz - 13.5 GHz",
+     "100 kHz - 26.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_端口数",
+    "name": "端口数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "1Hz"
+    ]
+   },
+   {
+    "tax": "pa_幅度分辨率",
+    "name": "幅度分辨率",
+    "values": [
+     "0.05dB"
+    ]
+   },
+   {
+    "tax": "pa_中频带宽范围",
+    "name": "中频带宽范围",
+    "values": [
+     "1 Hz-10 MHz"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置范围",
+    "name": "输出功率设置范围",
+    "values": [
+     "-55 dBm ~ +10 dBm"
+    ]
+   },
+   {
+    "tax": "pa_动态范围",
+    "name": "动态范围",
+    "values": [
+     "125dB"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大测量频率",
+    "name": "filter__最大测量频率",
+    "values": [
+     "≥13.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__端口数",
+    "name": "filter__端口数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置1",
+    "name": "filter__输出功率设置范围",
+    "values": [
+     "-55 dBm ~+10 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__动态范围",
+    "name": "filter__动态范围",
+    "values": [
+     "125 dB"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sna",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "100 kHz-26.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__动态范围",
+    "name": "summary__动态范围",
+    "values": [
+     "125dB"
+    ]
+   },
+   {
+    "tax": "pa_summary__端口数",
+    "name": "summary__端口数",
+    "values": [
+     "2"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 493,
+  "slug": "sna5000x",
+  "name": "SNA5000X",
+  "line": "VNA",
+  "cats": [
+   "矢量网络分析仪",
+   "矢量网络分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SNA5052X",
+   "SNA5054X",
+   "SNA5082X",
+   "SNA5084X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SNA5000X-2.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SNA5052X",
+     "SNA5054X",
+     "SNA5082X",
+     "SNA5084X"
+    ]
+   },
+   {
+    "tax": "pa_测量频率范围",
+    "name": "测量频率范围",
+    "values": [
+     "9 kHz- 4.5 GHz",
+     "9 kHz- 8.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_端口数",
+    "name": "端口数",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "1 Hz"
+    ]
+   },
+   {
+    "tax": "pa_幅度分辨率",
+    "name": "幅度分辨率",
+    "values": [
+     "0.05dB"
+    ]
+   },
+   {
+    "tax": "pa_中频带宽范围",
+    "name": "中频带宽范围",
+    "values": [
+     "1 Hz-10 MHz"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置范围",
+    "name": "输出功率设置范围",
+    "values": [
+     "-55 dBm ~ +10 dBm"
+    ]
+   },
+   {
+    "tax": "pa_动态范围",
+    "name": "动态范围",
+    "values": [
+     "125dB"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大测量频率",
+    "name": "filter__最大测量频率",
+    "values": [
+     "&lt;7.5 GHz",
+     "7.5 GHz - 13.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__端口数",
+    "name": "filter__端口数",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置1",
+    "name": "filter__输出功率设置范围",
+    "values": [
+     "-55 dBm ~+10 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__动态范围",
+    "name": "filter__动态范围",
+    "values": [
+     "125 dB"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sna",
+    "name": "filter__含税价",
+    "values": [
+     "10W以上",
+     "5w-10w"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "9 kHz~8.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__动态范围",
+    "name": "summary__动态范围",
+    "values": [
+     "125dB"
+    ]
+   },
+   {
+    "tax": "pa_summary__端口数",
+    "name": "summary__端口数",
+    "values": [
+     "2/4"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 504,
+  "slug": "shn900a",
+  "name": "SHN900A",
+  "line": "VNA",
+  "cats": [
+   "手持矢量网络分析仪",
+   "矢量网络分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SHN914A",
+   "SHN920A",
+   "SHN926A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SHN900-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SHN914A",
+     "SHN920A",
+     "SHN926A"
+    ]
+   },
+   {
+    "tax": "pa_测量频率范围",
+    "name": "测量频率范围",
+    "values": [
+     "30kHz~14GHz",
+     "30kHz~20GHz",
+     "30kHz~26.5GHz"
+    ]
+   },
+   {
+    "tax": "pa_端口数",
+    "name": "端口数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "1Hz"
+    ]
+   },
+   {
+    "tax": "pa_幅度分辨率",
+    "name": "幅度分辨率",
+    "values": [
+     "0.05dB"
+    ]
+   },
+   {
+    "tax": "pa_中频带宽范围",
+    "name": "中频带宽范围",
+    "values": [
+     "10 Hz~3 MHz"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置范围",
+    "name": "输出功率设置范围",
+    "values": [
+     "-45 dBm ~ + 10 dBm"
+    ]
+   },
+   {
+    "tax": "pa_动态范围",
+    "name": "动态范围",
+    "values": [
+     "100dB"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大测量频率",
+    "name": "filter__最大测量频率",
+    "values": [
+     "≥13.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__端口数",
+    "name": "filter__端口数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置1",
+    "name": "filter__输出功率设置范围",
+    "values": [
+     "-45 dBm ~+10 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__动态范围",
+    "name": "filter__动态范围",
+    "values": [
+     "100 dB"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "30 kHz~26.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__动态范围",
+    "name": "summary__动态范围",
+    "values": [
+     "100dB"
+    ]
+   },
+   {
+    "tax": "pa_summary__端口数",
+    "name": "summary__端口数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sna",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 513,
+  "slug": "sps6000x",
+  "name": "SPS6000X",
+  "line": "POWER",
+  "cats": [
+   "开关电源",
+   "直流电源/源表"
+  ],
+  "series": [],
+  "models": [
+   "SPS6151X",
+   "SPS6150X",
+   "SPS6225X",
+   "SPS6412X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SPS6000-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SPS6151X",
+     "SPS6150X",
+     "SPS6225X",
+     "SPS6412X"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流",
+    "name": "最大单路输出电流",
+    "values": [
+     "25 A",
+     "50 A",
+     "120 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压",
+    "name": "最大单路输出电压",
+    "values": [
+     "40 V",
+     "100 V",
+     "200 V"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "1500 W"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "1"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "3.12英寸OLED显示屏"
+    ]
+   },
+   {
+    "tax": "pa_分辨率",
+    "name": "分辨率",
+    "values": [
+     "10 mV/10 mA"
+    ]
+   },
+   {
+    "tax": "pa_设定精度",
+    "name": "设定精度",
+    "values": [
+     "电流：0.2%±30mA；/ 电压：0.1%±10mV"
+    ]
+   },
+   {
+    "tax": "pa_回读精度",
+    "name": "回读精度",
+    "values": [
+     "电流：0.2%±40mA；/ 电压：0.1%±20mV"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流1",
+    "name": "filter__最大单路输出电流",
+    "values": [
+     "&gt;8 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压1",
+    "name": "filter__最大单路输出电压",
+    "values": [
+     "&gt;32 V"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出功率",
+    "name": "filter__输出功率",
+    "values": [
+     "&gt; 400W"
+    ]
+   },
+   {
+    "tax": "pa_filter__分辨率",
+    "name": "filter__分辨率",
+    "values": [
+     "10mV/10mA"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出通道",
+    "name": "filter__输出通道",
+    "values": [
+     "1"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sps",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大输出功率",
+    "name": "summary__最大输出功率",
+    "values": [
+     "1500 W"
+    ]
+   },
+   {
+    "tax": "pa_summary__分辨率",
+    "name": "summary__分辨率",
+    "values": [
+     "10mV/10mA"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "1"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 522,
+  "slug": "sps5000x",
+  "name": "SPS5000X",
+  "line": "POWER",
+  "cats": [
+   "开关电源",
+   "直流电源/源表"
+  ],
+  "series": [],
+  "models": [
+   "SPS5041X",
+   "SPS5042X",
+   "SPS5043X",
+   "SPS5044X",
+   "SPS5045X",
+   "SPS5051X",
+   "SPS5081X",
+   "SPS5082X",
+   "SPS5083X",
+   "SPS5163X",
+   "SPS5084X",
+   "SPS5085X",
+   "SPS5164X",
+   "SPS5161X",
+   "SPS5162X",
+   "SPS5165X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SPS5000-2.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SPS5041X",
+     "SPS5042X",
+     "SPS5043X",
+     "SPS5044X",
+     "SPS5045X",
+     "SPS5051X",
+     "SPS5081X",
+     "SPS5082X",
+     "SPS5083X",
+     "SPS5163X",
+     "SPS5084X",
+     "SPS5085X",
+     "SPS5164X",
+     "SPS5161X",
+     "SPS5162X",
+     "SPS5165X"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流",
+    "name": "最大单路输出电流",
+    "values": [
+     "7.5 A",
+     "10 A",
+     "15 A",
+     "22.5 A",
+     "30 A",
+     "45 A",
+     "60 A",
+     "90 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压",
+    "name": "最大单路输出电压",
+    "values": [
+     "40 V",
+     "50 V",
+     "80 V",
+     "160 V"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "180 W",
+     "360 W",
+     "720 W",
+     "1080 W"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "2.4英寸OLED屏"
+    ]
+   },
+   {
+    "tax": "pa_分辨率",
+    "name": "分辨率",
+    "values": [
+     "1 mV/1 mA"
+    ]
+   },
+   {
+    "tax": "pa_设定精度",
+    "name": "设定精度",
+    "values": [
+     "电压：0.1%±10 mV 电流：0.1%±10 mA",
+     "电压：0.1%±10 mV 电流：0.1%±100 mA",
+     "电压：0.1%±10 mV 电流：0.1%±30 mA",
+     "电压：0.1%±10 mV 电流：0.1%±40 mA",
+     "电压：0.1%±10 mV 电流：0.1%±60 mA",
+     "电压：0.1%±100 mV 电流：0.1%±15 mA",
+     "电压：0.1%±100 mV 电流：0.1%±20 mA",
+     "电压：0.1%±100 mV 电流：0.1%±5 mA"
+    ]
+   },
+   {
+    "tax": "pa_回读精度",
+    "name": "回读精度",
+    "values": [
+     "电压：0.1%±100 mV 电流：0.1%±15 mA",
+     "电压：0.1%±100 mV 电流：0.1%±20 mA",
+     "电压：0.1%±100 mV 电流：0.1%±5 mA",
+     "电压：0.1%±20 mV 电流：0.1%±100 mA",
+     "电压：0.1%±20 mV 电流：0.1%±20 mA",
+     "电压：0.1%±20 mV 电流：0.1%±40 mA",
+     "电压：0.1%±20 mV 电流：0.1%±50 mA",
+     "电压：0.1%±20 mV 电流：0.1%±70 mA"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流1",
+    "name": "filter__最大单路输出电流",
+    "values": [
+     "&gt;8 A",
+     "≤8 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压1",
+    "name": "filter__最大单路输出电压",
+    "values": [
+     "&gt;32 V"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出功率",
+    "name": "filter__输出功率",
+    "values": [
+     "&gt; 400W",
+     "≤ 400W"
+    ]
+   },
+   {
+    "tax": "pa_filter__分辨率",
+    "name": "filter__分辨率",
+    "values": [
+     "1mV/1mA"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出通道",
+    "name": "filter__输出通道",
+    "values": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sps",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w",
+     "5000-1w"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大输出功率",
+    "name": "summary__最大输出功率",
+    "values": [
+     "1080 W"
+    ]
+   },
+   {
+    "tax": "pa_summary__分辨率",
+    "name": "summary__分辨率",
+    "values": [
+     "1 mV/1 mA"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "1",
+     "2",
+     "3"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 528,
+  "slug": "sdg6000x",
+  "name": "SDG6000X",
+  "line": "FUNCTION_GEN",
+  "cats": [
+   "函数/任意波形发生器",
+   "函数/任意波形发生器"
+  ],
+  "series": [],
+  "models": [
+   "SDG6032X",
+   "SDG6052X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDG6000X-2.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDG6032X",
+     "SDG6052X"
+    ]
+   },
+   {
+    "tax": "pa_最高输出频率",
+    "name": "最高输出频率",
+    "values": [
+     "350 MHz",
+     "500 MHz"
+    ]
+   },
+   {
+    "tax": "pa_最高采样率",
+    "name": "最高采样率",
+    "values": [
+     "2.4 GSa/s (2X 内插 )"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "16-bit"
+    ]
+   },
+   {
+    "tax": "pa_任意波长度",
+    "name": "任意波长度",
+    "values": [
+     "32pts ~ 20 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率",
+    "name": "summary__输出频率",
+    "values": [
+     "350-500MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__任意波长度",
+    "name": "summary__任意波长度",
+    "values": [
+     "32pts ~ 20 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高输出频率",
+    "name": "filter__最高输出频率",
+    "values": [
+     "≥500 MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高采样率",
+    "name": "filter__最高采样率",
+    "values": [
+     "1.2G-2.4 GSa/s",
+     "2.4G-5 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__垂直分辨率",
+    "name": "filter__垂直分辨率",
+    "values": [
+     "16-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__任意波长度",
+    "name": "filter__任意波长度",
+    "values": [
+     "20 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道",
+    "name": "filter__通道",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdg",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w",
+     "5w-10w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 529,
+  "slug": "sdm3055",
+  "name": "SDM3055",
+  "line": "MULTIMETER",
+  "cats": [
+   "数字万用表",
+   "数字万用表"
+  ],
+  "series": [],
+  "models": [
+   "SDM3055",
+   "SDM3055-SC"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDM3055-2.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDM3055",
+     "SDM3055-SC"
+    ]
+   },
+   {
+    "tax": "pa_读数分辨率",
+    "name": "读数分辨率",
+    "values": [
+     "5½ (240,000 count)"
+    ]
+   },
+   {
+    "tax": "pa_最大采样速率",
+    "name": "最大采样速率",
+    "values": [
+     "150 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_扫描卡",
+    "name": "扫描卡",
+    "values": [
+     "-",
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_dcv基本精度",
+    "name": "DCV基本精度",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_nplc",
+    "name": "NPLC",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_存储",
+    "name": "存储",
+    "values": [
+     "1 Gb Nand Flash"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__读数分辨率",
+    "name": "summary__读数分辨率",
+    "values": [
+     "5½"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大采样速率",
+    "name": "summary__最大采样速率",
+    "values": [
+     "150 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__扫描卡",
+    "name": "summary__扫描卡",
+    "values": [
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_filter__读数分辨率",
+    "name": "filter__读数分辨率",
+    "values": [
+     "5½ (240,000 count)"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大采样速率",
+    "name": "filter__最大采样速率",
+    "values": [
+     "150 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__扫描卡",
+    "name": "filter__扫描卡",
+    "values": [
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdm",
+    "name": "filter__含税价",
+    "values": [
+     "5000-1w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 544,
+  "slug": "sdm3055x-e",
+  "name": "SDM3055X-E",
+  "line": "MULTIMETER",
+  "cats": [
+   "数字万用表",
+   "数字万用表"
+  ],
+  "series": [],
+  "models": [
+   "SDM3055X-E"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDM3055XE-3.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDM3055X-E"
+    ]
+   },
+   {
+    "tax": "pa_读数分辨率",
+    "name": "读数分辨率",
+    "values": [
+     "5½ (240,000 count)"
+    ]
+   },
+   {
+    "tax": "pa_最大采样速率",
+    "name": "最大采样速率",
+    "values": [
+     "150 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_扫描卡",
+    "name": "扫描卡",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_dcv基本精度",
+    "name": "DCV基本精度",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_nplc",
+    "name": "NPLC",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_存储",
+    "name": "存储",
+    "values": [
+     "1 Gb Nand Flash"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__读数分辨率",
+    "name": "summary__读数分辨率",
+    "values": [
+     "5½"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大采样速率",
+    "name": "summary__最大采样速率",
+    "values": [
+     "150 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__扫描卡",
+    "name": "summary__扫描卡",
+    "values": [
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_filter__读数分辨率",
+    "name": "filter__读数分辨率",
+    "values": [
+     "5½ (240,000 count)"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大采样速率",
+    "name": "filter__最大采样速率",
+    "values": [
+     "150 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__扫描卡",
+    "name": "filter__扫描卡",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdm",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 633,
+  "slug": "sdl1000x",
+  "name": "SDL1000X",
+  "line": "LOAD",
+  "cats": [
+   "电子负载",
+   "电子负载"
+  ],
+  "series": [],
+  "models": [
+   "SDL1020X",
+   "SDL1020X-E",
+   "SDL1030X",
+   "SDL1030X-E"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDL1000-2.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDL1020X",
+     "SDL1020X-E",
+     "SDL1030X",
+     "SDL1030X-E"
+    ]
+   },
+   {
+    "tax": "pa_电压",
+    "name": "电压",
+    "values": [
+     "150 V"
+    ]
+   },
+   {
+    "tax": "pa_电流",
+    "name": "电流",
+    "values": [
+     "30 A"
+    ]
+   },
+   {
+    "tax": "pa_总功率",
+    "name": "总功率",
+    "values": [
+     "200 W",
+     "300 W"
+    ]
+   },
+   {
+    "tax": "pa_上升-下降速率",
+    "name": "可调电流上升/下降速率",
+    "values": [
+     "0.001 A/μs ~ 2.5 A/μs"
+    ]
+   },
+   {
+    "tax": "pa_回读分辨率",
+    "name": "回读分辨率",
+    "values": [
+     "0.1 mV, 0.1 mA",
+     "1 mV, 1 mA"
+    ]
+   },
+   {
+    "tax": "pa_最高速率",
+    "name": "电压电流测试最高速率",
+    "values": [
+     "500 kHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "1"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__回读分辨率",
+    "name": "filter__回读分辨率",
+    "values": [
+     "0.1 mV/0.1 mA",
+     "1 mV/1 mA"
+    ]
+   },
+   {
+    "tax": "pa_filter__输入功率",
+    "name": "filter__输入功率",
+    "values": [
+     "200W",
+     "300W"
+    ]
+   },
+   {
+    "tax": "pa_filter__电压",
+    "name": "filter__电压",
+    "values": [
+     "150V"
+    ]
+   },
+   {
+    "tax": "pa_filter__电流",
+    "name": "filter__电流",
+    "values": [
+     "30A"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000",
+     "5000-1w"
+    ]
+   },
+   {
+    "tax": "pa_summary__功率",
+    "name": "summary__功率",
+    "values": [
+     "200~300W"
+    ]
+   },
+   {
+    "tax": "pa_summary__电压",
+    "name": "summary__电压",
+    "values": [
+     "150V"
+    ]
+   },
+   {
+    "tax": "pa_summary__电流",
+    "name": "summary__电流",
+    "values": [
+     "30A"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 639,
+  "slug": "sds5000x",
+  "name": "SDS5000X",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "数字示波器",
+   "示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS5032X",
+   "SDS5034X",
+   "SDS5052X",
+   "SDS5054X",
+   "SDS5102X",
+   "SDS5104X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDS5000-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS5032X",
+     "SDS5034X",
+     "SDS5052X",
+     "SDS5054X",
+     "SDS5102X",
+     "SDS5104X"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "350 MHz",
+     "500 MHz",
+     "1 GHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2+EXT",
+     "4+EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "5 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "250 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "10.1 英寸电容式触摸显示屏，分辨率1024*600"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "500,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "停产",
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "200M-500MHz",
+     "500M-4GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "2 通道",
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "5-10GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "140M-400Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w",
+     "5w-10w"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "350M~1GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "5 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2/4+EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 659,
+  "slug": "sdg6000x-e",
+  "name": "SDG6000X-E",
+  "line": "FUNCTION_GEN",
+  "cats": [
+   "函数/任意波形发生器",
+   "函数/任意波形发生器"
+  ],
+  "series": [],
+  "models": [
+   "SDG6052X-E",
+   "SDG6032X-E",
+   "SDG6012X-E",
+   "SDG6022X-E"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDG6000XE-3.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDG6052X-E",
+     "SDG6032X-E",
+     "SDG6012X-E",
+     "SDG6022X-E"
+    ]
+   },
+   {
+    "tax": "pa_最高输出频率",
+    "name": "最高输出频率",
+    "values": [
+     "160 MHz",
+     "200 MHz",
+     "350 MHz",
+     "500 MHz"
+    ]
+   },
+   {
+    "tax": "pa_最高采样率",
+    "name": "最高采样率",
+    "values": [
+     "2.4 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "16 bit"
+    ]
+   },
+   {
+    "tax": "pa_任意波长度",
+    "name": "任意波长度",
+    "values": [
+     "32pts ~ 8 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率",
+    "name": "summary__输出频率",
+    "values": [
+     "160-500MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__任意波长度",
+    "name": "summary__任意波长度",
+    "values": [
+     "32pts ~ 8 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高输出频率",
+    "name": "filter__最高输出频率",
+    "values": [
+     "≥500 MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高采样率",
+    "name": "filter__最高采样率",
+    "values": [
+     "1.2G-2.4 GSa/s",
+     "2.4G-5 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__垂直分辨率",
+    "name": "filter__垂直分辨率",
+    "values": [
+     "16-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__任意波长度",
+    "name": "filter__任意波长度",
+    "values": [
+     "8 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道",
+    "name": "filter__通道",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdg",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 670,
+  "slug": "sdg2000x",
+  "name": "SDG2000X",
+  "line": "FUNCTION_GEN",
+  "cats": [
+   "函数/任意波形发生器",
+   "函数/任意波形发生器"
+  ],
+  "series": [],
+  "models": [
+   "SDG2042X",
+   "SDG2082X",
+   "SDG2122X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDG2000-2.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDG2042X",
+     "SDG2082X",
+     "SDG2122X"
+    ]
+   },
+   {
+    "tax": "pa_最高输出频率",
+    "name": "最高输出频率",
+    "values": [
+     "40 MHz",
+     "80 MHz",
+     "120 MHz"
+    ]
+   },
+   {
+    "tax": "pa_最高采样率",
+    "name": "最高采样率",
+    "values": [
+     "1.2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "16 bit"
+    ]
+   },
+   {
+    "tax": "pa_任意波长度",
+    "name": "任意波长度",
+    "values": [
+     "8 pts～8 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率",
+    "name": "summary__输出频率",
+    "values": [
+     "40-120MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__任意波长度",
+    "name": "summary__任意波长度",
+    "values": [
+     "8 pts～8 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高输出频率",
+    "name": "filter__最高输出频率",
+    "values": [
+     "100M -500 MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高采样率",
+    "name": "filter__最高采样率",
+    "values": [
+     "1.2G-2.4 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__垂直分辨率",
+    "name": "filter__垂直分辨率",
+    "values": [
+     "16-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__任意波长度",
+    "name": "filter__任意波长度",
+    "values": [
+     "8 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道",
+    "name": "filter__通道",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdg",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000",
+     "5000-1w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 685,
+  "slug": "sdg1000xp",
+  "name": "SDG1000X Plus",
+  "line": "FUNCTION_GEN",
+  "cats": [
+   "函数/任意波形发生器",
+   "函数/任意波形发生器"
+  ],
+  "series": [],
+  "models": [
+   "SDG1022X Plus",
+   "SDG1032X Plus",
+   "SDG1062X Plus"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDG1000XP-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDG1022X Plus",
+     "SDG1032X Plus",
+     "SDG1062X Plus"
+    ]
+   },
+   {
+    "tax": "pa_最高输出频率",
+    "name": "最高输出频率",
+    "values": [
+     "25 MHz",
+     "30 MHz",
+     "60 MHz"
+    ]
+   },
+   {
+    "tax": "pa_最高采样率",
+    "name": "最高采样率",
+    "values": [
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "16-bit"
+    ]
+   },
+   {
+    "tax": "pa_任意波长度",
+    "name": "任意波长度",
+    "values": [
+     "8 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率",
+    "name": "summary__输出频率",
+    "values": [
+     "25-60MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__任意波长度",
+    "name": "summary__任意波长度",
+    "values": [
+     "8 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高输出频率",
+    "name": "filter__最高输出频率",
+    "values": [
+     "≤100 MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高采样率",
+    "name": "filter__最高采样率",
+    "values": [
+     "&lt;1.2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__垂直分辨率",
+    "name": "filter__垂直分辨率",
+    "values": [
+     "16-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__任意波长度",
+    "name": "filter__任意波长度",
+    "values": [
+     "8 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道",
+    "name": "filter__通道",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdg",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 699,
+  "slug": "sdg1000x",
+  "name": "SDG1000X",
+  "line": "FUNCTION_GEN",
+  "cats": [
+   "函数/任意波形发生器",
+   "函数/任意波形发生器"
+  ],
+  "series": [],
+  "models": [
+   "SDG1022X",
+   "SDG1032X",
+   "SDG1062X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDG1000X-2.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDG1022X",
+     "SDG1032X",
+     "SDG1062X"
+    ]
+   },
+   {
+    "tax": "pa_最高输出频率",
+    "name": "最高输出频率",
+    "values": [
+     "25 MHz",
+     "30 MHz",
+     "60 MHz"
+    ]
+   },
+   {
+    "tax": "pa_最高采样率",
+    "name": "最高采样率",
+    "values": [
+     "150 MSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "14-bit"
+    ]
+   },
+   {
+    "tax": "pa_任意波长度",
+    "name": "任意波长度",
+    "values": [
+     "16 kpts"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率",
+    "name": "summary__输出频率",
+    "values": [
+     "25-60MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__任意波长度",
+    "name": "summary__任意波长度",
+    "values": [
+     "16 Kpts"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高输出频率",
+    "name": "filter__最高输出频率",
+    "values": [
+     "≤100 MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高采样率",
+    "name": "filter__最高采样率",
+    "values": [
+     "&lt;1.2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__垂直分辨率",
+    "name": "filter__垂直分辨率",
+    "values": [
+     "14-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__任意波长度",
+    "name": "filter__任意波长度",
+    "values": [
+     "16 kpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道",
+    "name": "filter__通道",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdg",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 713,
+  "slug": "sdg800",
+  "name": "SDG800",
+  "line": "FUNCTION_GEN",
+  "cats": [
+   "函数/任意波形发生器",
+   "函数/任意波形发生器"
+  ],
+  "series": [],
+  "models": [
+   "SDG810",
+   "SDG830"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDG800-2.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDG810",
+     "SDG830"
+    ]
+   },
+   {
+    "tax": "pa_最高输出频率",
+    "name": "最高输出频率",
+    "values": [
+     "10 MHz",
+     "30 MHz"
+    ]
+   },
+   {
+    "tax": "pa_最高采样率",
+    "name": "最高采样率",
+    "values": [
+     "125 MSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "14 bit"
+    ]
+   },
+   {
+    "tax": "pa_任意波长度",
+    "name": "任意波长度",
+    "values": [
+     "16 kpts"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "1"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率",
+    "name": "summary__输出频率",
+    "values": [
+     "10-30MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__任意波长度",
+    "name": "summary__任意波长度",
+    "values": [
+     "16 Kpts"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "1"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高输出频率",
+    "name": "filter__最高输出频率",
+    "values": [
+     "≤100 MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高采样率",
+    "name": "filter__最高采样率",
+    "values": [
+     "&lt;1.2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__垂直分辨率",
+    "name": "filter__垂直分辨率",
+    "values": [
+     "14-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__任意波长度",
+    "name": "filter__任意波长度",
+    "values": [
+     "16 kpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道",
+    "name": "filter__通道",
+    "values": [
+     "1"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdg",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 744,
+  "slug": "ssa5000a",
+  "name": "SSA5000A",
+  "line": "SPECTRUM",
+  "cats": [
+   "频谱/信号分析仪",
+   "频谱分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SSA5083A",
+   "SSA5085A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SSA5000-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SSA5083A",
+     "SSA5085A"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "9 kHz ~ 13.6 GHz",
+     "9 kHz ~ 26.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_最大实时带宽",
+    "name": "最大实时带宽",
+    "values": [
+     "40 MHz"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声典型值",
+    "name": "相位噪声(典型值)",
+    "values": [
+     "&lt;-105 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_danl",
+    "name": "显示平均噪声电平（DANL）",
+    "values": [
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析范围",
+    "name": "矢量网络分析范围",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_分辨率带宽（rbw）",
+    "name": "分辨率带宽（RBW）",
+    "values": [
+     "1 Hz ~ 10 MHz"
+    ]
+   },
+   {
+    "tax": "pa_跟踪源",
+    "name": "跟踪源",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "9 kHz~26.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大实时带宽",
+    "name": "summary__最大实时带宽",
+    "values": [
+     "40MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt;-105 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_最大输出频率范围1",
+    "name": "filter__最大输出频率范围",
+    "values": [
+     "&gt;8 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大实时带宽",
+    "name": "filter__最大实时带宽",
+    "values": [
+     "40 MHz"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声（典型值）",
+    "name": "filter__相位噪声（典型值）",
+    "values": [
+     "&lt;-105 dBc/Hz@1 GHz，频偏10 kHz"
+    ]
+   },
+   {
+    "tax": "pa_平均噪声电平",
+    "name": "filter__显示平均噪声电平",
+    "values": [
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_filter__跟踪源",
+    "name": "filter__跟踪源",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析",
+    "name": "filter__矢量网络分析功能",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssa",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 750,
+  "slug": "sds2000xp",
+  "name": "SDS2000X Plus",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "数字示波器",
+   "示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS2072X Plus",
+   "SDS2074X Plus",
+   "SDS2102X Plus",
+   "SDS2104X Plus",
+   "SDS2202X Plus",
+   "SDS2204X Plus",
+   "SDS2352X Plus",
+   "SDS2354X Plus",
+   "SDS2502X Plus",
+   "SDS2504X Plus"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDS2000XP-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS2072X Plus",
+     "SDS2074X Plus",
+     "SDS2102X Plus",
+     "SDS2104X Plus",
+     "SDS2202X Plus",
+     "SDS2204X Plus",
+     "SDS2352X Plus",
+     "SDS2354X Plus",
+     "SDS2502X Plus",
+     "SDS2504X Plus"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "70 MHz",
+     "100 MHz",
+     "200 MHz",
+     "350 MHz",
+     "500 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2+EXT",
+     "4+EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "8 bit，可选10-bit模式"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "200 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "10.1 英寸电容式触摸显示屏，分辨率1024*600"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "500,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "≤200MHz",
+     "200M-500MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "2 通道",
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "2-4GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "140M-400Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "10-bit",
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w",
+     "5000-1w"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "70~500MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2/4+EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 761,
+  "slug": "ssa3000xp",
+  "name": "SSA3000X Plus",
+  "line": "SPECTRUM",
+  "cats": [
+   "频谱/信号分析仪",
+   "频谱分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SSA3015X Plus",
+   "SSA3021X Plus",
+   "SSA3032X Plus",
+   "SSA3075X Plus",
+   "SSA3075X-C"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SSA3000XP-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SSA3015X Plus",
+     "SSA3021X Plus",
+     "SSA3032X Plus",
+     "SSA3075X Plus",
+     "SSA3075X-C"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "9 kHz ~ 1.5 GHz",
+     "9 kHz ~ 2.1 GHz",
+     "9 kHz ~ 3.2 GHz",
+     "9 kHz ~ 7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_最大实时带宽",
+    "name": "最大实时带宽",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声典型值",
+    "name": "相位噪声(典型值)",
+    "values": [
+     "&lt; -98 dBc/Hz",
+     "&lt; -99 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_danl",
+    "name": "显示平均噪声电平（DANL）",
+    "values": [
+     "-156 dBm/Hz",
+     "-161 dBm/Hz",
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析范围",
+    "name": "矢量网络分析范围",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_分辨率带宽（rbw）",
+    "name": "分辨率带宽（RBW）",
+    "values": [
+     "1 Hz ~ 1 MHz",
+     "1 Hz ~ 3 MHz"
+    ]
+   },
+   {
+    "tax": "pa_跟踪源",
+    "name": "跟踪源",
+    "values": [
+     "-",
+     "标配"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "100 kHz~7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大实时带宽",
+    "name": "summary__最大实时带宽",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt; -98 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_最大输出频率范围1",
+    "name": "filter__最大输出频率范围",
+    "values": [
+     "&lt;4 GHz",
+     "4.1-8 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大实时带宽",
+    "name": "filter__最大实时带宽",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声（典型值）",
+    "name": "filter__相位噪声（典型值）",
+    "values": [
+     "&lt;-98 dBc/Hz@1 GHz，频偏10 kHz"
+    ]
+   },
+   {
+    "tax": "pa_平均噪声电平",
+    "name": "filter__显示平均噪声电平",
+    "values": [
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_filter__跟踪源",
+    "name": "filter__跟踪源",
+    "values": [
+     "有"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析",
+    "name": "filter__矢量网络分析功能",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssa",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w",
+     "5000-1w",
+     "5w-10w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 790,
+  "slug": "sds1000x-e",
+  "name": "SDS1000X-E",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "数字示波器",
+   "示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS1104X-E",
+   "SDS1202X-E",
+   "SDS1204X-E",
+   "SDS1072X-E",
+   "SDS1074X-E",
+   "SDS1102X-E"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDS1000XE-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS1104X-E",
+     "SDS1202X-E",
+     "SDS1204X-E",
+     "SDS1072X-E",
+     "SDS1074X-E",
+     "SDS1102X-E"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "70 MHz",
+     "100 MHz",
+     "200 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2+EXT",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "14 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "7 英寸TFT-LCD 显示屏，分辨率800*480"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "400,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "≤200MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "≤1GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "≤14Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000",
+     "5000-1w"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "70~200MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2+EXT/4"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 806,
+  "slug": "sds1000x-c",
+  "name": "SDS1000X-C",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "数字示波器",
+   "示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS1202X-C",
+   "SDS1204X-C",
+   "SDS1102X-C",
+   "SDS1104X-C"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDS1000XC-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS1202X-C",
+     "SDS1204X-C",
+     "SDS1102X-C",
+     "SDS1104X-C"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "100 MHz",
+     "200 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "14 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "7 英寸TFT-LCD 显示屏，分辨率800*480"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "200,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "≤200MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "2 通道",
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "≤1GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "≤14Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "100~200MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2/4"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 811,
+  "slug": "ssa1000x",
+  "name": "SSA1000X",
+  "line": "SPECTRUM",
+  "cats": [
+   "频谱/信号分析仪",
+   "频谱分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SSA1015X-C",
+   "SSA1015X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SSA1000-2.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SSA1015X-C",
+     "SSA1015X"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "9 kHz~1.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_最大实时带宽",
+    "name": "最大实时带宽",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声典型值",
+    "name": "相位噪声(典型值)",
+    "values": [
+     "&lt;-99 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_danl",
+    "name": "显示平均噪声电平（DANL）",
+    "values": [
+     "-155 dBm/Hz",
+     "-156 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析范围",
+    "name": "矢量网络分析范围",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_分辨率带宽（rbw）",
+    "name": "分辨率带宽（RBW）",
+    "values": [
+     "1 Hz ~ 1 MHz",
+     "1 Hz~1 MHz，1-3-10 步进"
+    ]
+   },
+   {
+    "tax": "pa_跟踪源",
+    "name": "跟踪源",
+    "values": [
+     "-",
+     "选配"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "停产",
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "9 kHz~1.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大实时带宽",
+    "name": "summary__最大实时带宽",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt;-99 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_最大输出频率范围1",
+    "name": "filter__最大输出频率范围",
+    "values": [
+     "&lt;4 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大实时带宽",
+    "name": "filter__最大实时带宽",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声（典型值）",
+    "name": "filter__相位噪声（典型值）",
+    "values": [
+     "&lt;-99 dBc/Hz@1 GHz，频偏10 kHz"
+    ]
+   },
+   {
+    "tax": "pa_平均噪声电平",
+    "name": "filter__显示平均噪声电平",
+    "values": [
+     "-155 dBm/Hz",
+     "-156 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_filter__跟踪源",
+    "name": "filter__跟踪源",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析",
+    "name": "filter__矢量网络分析功能",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssa",
+    "name": "filter__含税价",
+    "values": [
+     "5000-1w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 820,
+  "slug": "sds1104x-u",
+  "name": "SDS1104X-U",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "数字示波器",
+   "示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS1104X-U"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SDS1104XU-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS1104X-U"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "100 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "14 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "7 英寸TFT-LCD 显示屏，分辨率800*480"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "400,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "≤200MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "≤1GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "≤14Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "100MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "4"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 826,
+  "slug": "sva1000x",
+  "name": "SVA1000X",
+  "line": "SPECTRUM",
+  "cats": [
+   "频谱/信号分析仪",
+   "频谱分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SVA1015X",
+   "SVA1032X",
+   "SVA1075X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SVA1000-2.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SVA1015X",
+     "SVA1032X",
+     "SVA1075X"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "9 kHz ~ 1.5 GHz",
+     "9 kHz~3.2 GHz",
+     "9 kHz - 7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_最大实时带宽",
+    "name": "最大实时带宽",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声典型值",
+    "name": "相位噪声(典型值)",
+    "values": [
+     "&lt;-98 dBc/Hz",
+     "&lt;-99 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_danl",
+    "name": "显示平均噪声电平（DANL）",
+    "values": [
+     "-156 dBm/Hz",
+     "-161 dBm/Hz",
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析范围",
+    "name": "矢量网络分析范围",
+    "values": [
+     "100 kHz ~ 1.5 GHz",
+     "100 kHz ~ 3.2 GHz",
+     "100 kHz ~ 7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_分辨率带宽（rbw）",
+    "name": "分辨率带宽（RBW）",
+    "values": [
+     "1 Hz ~ 1 MHz, 1-3-10步进",
+     "1 Hz ~ 3 MHz, 1-3-10步进"
+    ]
+   },
+   {
+    "tax": "pa_跟踪源",
+    "name": "跟踪源",
+    "values": [
+     "标配"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "100 kHz~7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大实时带宽",
+    "name": "summary__最大实时带宽",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt;-99 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_最大输出频率范围1",
+    "name": "filter__最大输出频率范围",
+    "values": [
+     "&lt;4 GHz",
+     "4.1-8 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大实时带宽",
+    "name": "filter__最大实时带宽",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声（典型值）",
+    "name": "filter__相位噪声（典型值）",
+    "values": [
+     "&lt;-99 dBc/Hz@1 GHz，频偏10 kHz"
+    ]
+   },
+   {
+    "tax": "pa_平均噪声电平",
+    "name": "filter__显示平均噪声电平",
+    "values": [
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_filter__跟踪源",
+    "name": "filter__跟踪源",
+    "values": [
+     "有"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析",
+    "name": "filter__矢量网络分析功能",
+    "values": [
+     "有"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大测量频率",
+    "name": "filter__最大测量频率",
+    "values": [
+     "&lt;7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssa",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w",
+     "5w-10w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 835,
+  "slug": "sha860a",
+  "name": "SHA860A",
+  "line": "SPECTRUM",
+  "cats": [
+   "信号分析仪",
+   "手持频谱分析仪",
+   "频谱分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SHA864A",
+   "SHA865A",
+   "SHA863A",
+   "SHA861A",
+   "SHA862A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SHA860-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SHA864A",
+     "SHA865A",
+     "SHA863A",
+     "SHA861A",
+     "SHA862A"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "9 kHz - 3.6 GHz",
+     "9 kHz - 7.5 GHz",
+     "9 kHz - 14 GHz",
+     "9 kHz - 20 GHz",
+     "9 kHz – 26.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_实时分析带宽",
+    "name": "实时分析带宽",
+    "values": [
+     "40 MHz，110 MHz（选件）"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声典型值",
+    "name": "相位噪声(典型值)",
+    "values": [
+     "&lt;-104 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析范围",
+    "name": "矢量网络分析范围",
+    "values": [
+     "100 kHz - 14 GHz",
+     "100 kHz - 20 GHz",
+     "100 kHz - 3.6 GHz",
+     "100 kHz - 7.5 GHz",
+     "100 kHz – 26.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_分辨率带宽（rbw）",
+    "name": "分辨率带宽（RBW）",
+    "values": [
+     "1 Hz ~ 10 MHz, 1-3-10 步进"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "1 Hz"
+    ]
+   },
+   {
+    "tax": "pa_danl",
+    "name": "显示平均噪声电平（DANL）",
+    "values": [
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "9 kHz~26.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大实时带宽",
+    "name": "summary__最大实时带宽",
+    "values": [
+     "110MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt;-104 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_最大输出频率范围1",
+    "name": "filter__最大输出频率范围",
+    "values": [
+     "&gt;8 GHz",
+     "&lt;4 GHz",
+     "4.1-8 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大实时带宽",
+    "name": "filter__最大实时带宽",
+    "values": [
+     "110 MHz"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声（典型值）",
+    "name": "filter__相位噪声（典型值）",
+    "values": [
+     "&lt;-104 dBc/Hz@1 GHz，频偏10 kHz"
+    ]
+   },
+   {
+    "tax": "pa_平均噪声电平",
+    "name": "filter__显示平均噪声电平",
+    "values": [
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析",
+    "name": "filter__矢量网络分析功能",
+    "values": [
+     "有"
+    ]
+   },
+   {
+    "tax": "pa_filter__跟踪源",
+    "name": "filter__跟踪源",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssa",
+    "name": "filter__含税价",
+    "values": [
+     "10W以上",
+     "5w-10w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 863,
+  "slug": "sha850a",
+  "name": "SHA850A",
+  "line": "SPECTRUM",
+  "cats": [
+   "手持频谱分析仪",
+   "频谱分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SHA851A",
+   "SHA852A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SHA850-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SHA851A",
+     "SHA852A"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "9 kHz - 3.6 GHz",
+     "9 kHz - 7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_最大实时带宽",
+    "name": "最大实时带宽",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声典型值",
+    "name": "相位噪声(典型值)",
+    "values": [
+     "&lt;-104 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_danl",
+    "name": "显示平均噪声电平（DANL）",
+    "values": [
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析范围",
+    "name": "矢量网络分析范围",
+    "values": [
+     "100 kHz - 3.6 GHz",
+     "100 kHz - 7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_端口数",
+    "name": "端口数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "1 Hz"
+    ]
+   },
+   {
+    "tax": "pa_幅度分辨率",
+    "name": "幅度分辨率",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置范围",
+    "name": "输出功率设置范围",
+    "values": [
+     "-40dBm ~ 0dBm"
+    ]
+   },
+   {
+    "tax": "pa_动态范围",
+    "name": "动态范围",
+    "values": [
+     "108dB"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "9 kHz ~ 7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大实时带宽",
+    "name": "summary__最大实时带宽",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt;-104 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_最大输出频率范围1",
+    "name": "filter__最大输出频率范围",
+    "values": [
+     "&lt;4 GHz",
+     "4.1-8 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大实时带宽",
+    "name": "filter__最大实时带宽",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声（典型值）",
+    "name": "filter__相位噪声（典型值）",
+    "values": [
+     "&lt;-104 dBc/Hz@1 GHz，频偏10 kHz"
+    ]
+   },
+   {
+    "tax": "pa_平均噪声电平",
+    "name": "filter__显示平均噪声电平",
+    "values": [
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_filter__跟踪源",
+    "name": "filter__跟踪源",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析",
+    "name": "filter__矢量网络分析功能",
+    "values": [
+     "有"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssa",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w",
+     "5w-10w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 878,
+  "slug": "ssa3000xr",
+  "name": "SSA3000X-R",
+  "line": "SPECTRUM",
+  "cats": [
+   "频谱/信号分析仪",
+   "频谱分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SSA3032X-R",
+   "SSA3050X-R",
+   "SSA3075X-R"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SSA3000XR-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SSA3032X-R",
+     "SSA3050X-R",
+     "SSA3075X-R"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "9 kHz ~ 3.2 GHz",
+     "9 kHz ~ 5.0 GHz",
+     "9 kHz ~ 7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_最大实时带宽",
+    "name": "最大实时带宽",
+    "values": [
+     "40 MHz"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声典型值",
+    "name": "相位噪声(典型值)",
+    "values": [
+     "&lt;-98 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_danl",
+    "name": "显示平均噪声电平（DANL）",
+    "values": [
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析范围",
+    "name": "矢量网络分析范围",
+    "values": [
+     "100 kHz ~ 3.2 GHz",
+     "100 kHz~ 5.0 GHz",
+     "100 kHz - 7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_分辨率带宽（rbw）",
+    "name": "分辨率带宽（RBW）",
+    "values": [
+     "1 Hz ~ 3 MHz"
+    ]
+   },
+   {
+    "tax": "pa_跟踪源",
+    "name": "跟踪源",
+    "values": [
+     "100 kHz~ 3.2 GHz",
+     "100 kHz~ 5.0 GHz",
+     "100 kHz~ 7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_实时分析带宽",
+    "name": "实时分析带宽",
+    "values": [
+     "25 MHz，40 MHz"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "100 kHz~7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大实时带宽",
+    "name": "summary__最大实时带宽",
+    "values": [
+     "40MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt;-98 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_最大输出频率范围1",
+    "name": "filter__最大输出频率范围",
+    "values": [
+     "&lt;4 GHz",
+     "4.1-8 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大实时带宽",
+    "name": "filter__最大实时带宽",
+    "values": [
+     "40 MHz"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声（典型值）",
+    "name": "filter__相位噪声（典型值）",
+    "values": [
+     "&lt;-98 dBc/Hz@1 GHz，频偏10 kHz"
+    ]
+   },
+   {
+    "tax": "pa_平均噪声电平",
+    "name": "filter__显示平均噪声电平",
+    "values": [
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析",
+    "name": "filter__矢量网络分析功能",
+    "values": [
+     "有"
+    ]
+   },
+   {
+    "tax": "pa_filter__跟踪源",
+    "name": "filter__跟踪源",
+    "values": [
+     "有"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssa",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w",
+     "5w-10w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 886,
+  "slug": "ssg5000a",
+  "name": "SSG5000A",
+  "line": "RF_GEN",
+  "cats": [
+   "射频/微波信号发生器",
+   "模拟源"
+  ],
+  "series": [],
+  "models": [
+   "SSG5083A",
+   "SSG5085A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SSG5000A-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SSG5083A",
+     "SSG5085A"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "9 kHz~13.6 GHz",
+     "9 kHz~20 GHz"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "0.001 Hz"
+    ]
+   },
+   {
+    "tax": "pa_iq调制",
+    "name": "IQ调制",
+    "values": [
+     "不支持"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "+23 dBm"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声",
+    "name": "相位噪声",
+    "values": [
+     "&lt;-120 dBc/Hz@1 GHz，偏移20 kHz(典型值）"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": []
+   },
+   {
+    "tax": "pa_通信接口",
+    "name": "通信接口",
+    "values": []
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率范围",
+    "name": "summary__输出频率范围",
+    "values": [
+     "9 kHz~20 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出功率",
+    "name": "summary__输出功率",
+    "values": [
+     "+23 dBm"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt;-120 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_filter__频率范围",
+    "name": "filter__频率范围",
+    "values": [
+     "20 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__i-q调制",
+    "name": "filter__I/Q调制",
+    "values": [
+     "不支持"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大输出功率",
+    "name": "filter__最大输出功率",
+    "values": [
+     "≥ +23 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__相位噪声",
+    "name": "filter__相位噪声",
+    "values": [
+     "-120 dBc/Hz@1GHz，offset20kHz（typ.）"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssg",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 898,
+  "slug": "ssg5000x",
+  "name": "SSG5000X",
+  "line": "RF_GEN",
+  "cats": [
+   "射频/微波信号发生器",
+   "模拟源"
+  ],
+  "series": [],
+  "models": [
+   "SSG5040X",
+   "SSG5040X-V",
+   "SSG5060X",
+   "SSG5060X-V"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SSG5000X-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SSG5040X",
+     "SSG5040X-V",
+     "SSG5060X",
+     "SSG5060X-V"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "CW MODE: 9 kHz ~ 4 GHz",
+     "CW MODE: 9 kHz ~ 4 GHz / IQ MODE: 10 MHz ~ 4 GHz",
+     "CW MODE: 9 kHz ~ 6 GHz",
+     "CW MODE: 9 kHz ~ 6 GHz / IQ MODE: 10 MHz ~ 6 GHz"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "0.001 Hz"
+    ]
+   },
+   {
+    "tax": "pa_iq调制",
+    "name": "IQ调制",
+    "values": [
+     "不支持",
+     "支持"
+    ]
+   },
+   {
+    "tax": "pa_i-q带宽",
+    "name": "I/Q带宽",
+    "values": [
+     "标配37.5 MHz，选配75 MHz",
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "+20 dBm"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声",
+    "name": "相位噪声",
+    "values": [
+     "&lt;-120 dBc/Hz@1 GHz，偏移20 kHz(典型值）"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "5英寸电容触摸屏，800（RGB）*480"
+    ]
+   },
+   {
+    "tax": "pa_通信接口",
+    "name": "通信接口",
+    "values": [
+     "USB-HOST / USB DEVICE（USB-TMC) / LAN（VXI-11,Socket,Telnet) / 选配GPIB"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率范围",
+    "name": "summary__输出频率范围",
+    "values": [
+     "9 kHz ~ 6 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出功率",
+    "name": "summary__输出功率",
+    "values": [
+     "+26 dBm"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt;-120 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_filter__频率范围",
+    "name": "filter__频率范围",
+    "values": [
+     "10 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__i-q调制",
+    "name": "filter__I/Q调制",
+    "values": [
+     "不支持",
+     "支持"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大输出功率",
+    "name": "filter__最大输出功率",
+    "values": [
+     "＜ +23 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__相位噪声",
+    "name": "filter__相位噪声",
+    "values": [
+     "-120 dBc/Hz@1GHz，offset20kHz（typ.）"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssg",
+    "name": "filter__含税价",
+    "values": [
+     "5w-10w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 919,
+  "slug": "shs1000x",
+  "name": "SHS1000X",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "手持示波表",
+   "示波器"
+  ],
+  "series": [],
+  "models": [
+   "SHS1072X",
+   "SHS1102X",
+   "SHS1202X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SHS1000X-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SHS1072X",
+     "SHS1102X",
+     "SHS1202X"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "70 MHz",
+     "100 MHz",
+     "200 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "12 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "400,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "5.6 英寸 TFT-LCD 显示屏，分辨率 640 * 480"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "≤200MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "2 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "≤1GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "≤14Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "70~200MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 928,
+  "slug": "shs800x",
+  "name": "SHS800X",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "手持示波表",
+   "示波器"
+  ],
+  "series": [],
+  "models": [
+   "SHS807X",
+   "SHS810X",
+   "SHS820X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SHS800X-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SHS807X",
+     "SHS810X",
+     "SHS820X"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "70 MHz",
+     "100 MHz",
+     "200 MHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "12 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "400,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "5.6 英寸 TFT-LCD 显示屏，分辨率 640 * 480"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "≤200MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "2 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "≤1GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "≤14Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "0-5000",
+     "5000-1w"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "70~200MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "1 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 1947,
+  "slug": "sdm4055a",
+  "name": "SDM4055A",
+  "line": "MULTIMETER",
+  "cats": [
+   "数字万用表",
+   "数字万用表"
+  ],
+  "series": [],
+  "models": [
+   "SDM4055A",
+   "SDM4055A-SC"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/10/SDM4055-1.1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDM4055A",
+     "SDM4055A-SC"
+    ]
+   },
+   {
+    "tax": "pa_读数分辨率",
+    "name": "读数分辨率",
+    "values": [
+     "5½（220,000 count）"
+    ]
+   },
+   {
+    "tax": "pa_dcv基本精度",
+    "name": "DCV基本精度",
+    "values": [
+     "150PPM"
+    ]
+   },
+   {
+    "tax": "pa_扫描卡",
+    "name": "扫描卡",
+    "values": [
+     "-",
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_最大采样速率",
+    "name": "最大采样速率",
+    "values": [
+     "4,800 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_nplc",
+    "name": "NPLC",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_存储",
+    "name": "存储",
+    "values": [
+     "256 MB Nand Flash"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__读数分辨率",
+    "name": "summary__读数分辨率",
+    "values": [
+     "5½"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大采样速率",
+    "name": "summary__最大采样速率",
+    "values": [
+     "4,800 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__扫描卡",
+    "name": "summary__扫描卡",
+    "values": [
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_filter__读数分辨率",
+    "name": "filter__读数分辨率",
+    "values": [
+     "5½ (220,000 count）"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大采样速率",
+    "name": "filter__最大采样速率",
+    "values": [
+     "4,800 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__扫描卡",
+    "name": "filter__扫描卡",
+    "values": [
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdm",
+    "name": "filter__含税价",
+    "values": [
+     "5000-1w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 1988,
+  "slug": "sva1000x-vna",
+  "name": "SVA1000X",
+  "line": "VNA",
+  "cats": [
+   "矢量网络分析仪",
+   "矢量网络分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SVA1015X",
+   "SVA1032X",
+   "SVA1075X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/08/SVA1000-2.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SVA1015X",
+     "SVA1032X",
+     "SVA1075X"
+    ]
+   },
+   {
+    "tax": "pa_测量频率范围",
+    "name": "测量频率范围",
+    "values": [
+     "100 kHz ~ 1.5 GHz",
+     "100 kHz ~ 3.2 GHz",
+     "100 kHz ~ 7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_端口数",
+    "name": "端口数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "1 Hz"
+    ]
+   },
+   {
+    "tax": "pa_幅度分辨率",
+    "name": "幅度分辨率",
+    "values": [
+     "/"
+    ]
+   },
+   {
+    "tax": "pa_中频带宽范围",
+    "name": "中频带宽范围",
+    "values": [
+     "10 kHz"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置范围",
+    "name": "输出功率设置范围",
+    "values": [
+     "-20dBm ~ 0dBm",
+     "-40dBm ~ 0dBm"
+    ]
+   },
+   {
+    "tax": "pa_动态范围",
+    "name": "动态范围",
+    "values": [
+     "90 dB"
+    ]
+   },
+   {
+    "tax": "pa_前面板跳线",
+    "name": "前面板跳线",
+    "values": [
+     "/"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "100 kHz~7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__动态范围",
+    "name": "summary__动态范围",
+    "values": [
+     "90 dB"
+    ]
+   },
+   {
+    "tax": "pa_summary__端口数",
+    "name": "summary__端口数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大测量频率",
+    "name": "filter__最大测量频率",
+    "values": [
+     "&lt;7.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__动态范围",
+    "name": "filter__动态范围",
+    "values": [
+     "90 dB"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置1",
+    "name": "filter__输出功率设置范围",
+    "values": [
+     "-20 dBm ~0 dBm",
+     "-40 dBm ~ 0 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__端口数",
+    "name": "filter__端口数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sna",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w",
+     "5w-10w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 2174,
+  "slug": "ssa6000a",
+  "name": "SSA6000A",
+  "line": "SPECTRUM",
+  "cats": [
+   "信号分析仪",
+   "频谱/信号分析仪",
+   "频谱分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SSA6088A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2024/12/SSA6A-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SSA6088A"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "2 Hz ~ 50 GHz"
+    ]
+   },
+   {
+    "tax": "pa_最大实时带宽",
+    "name": "最大实时带宽",
+    "values": [
+     "400MHz"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声典型值",
+    "name": "相位噪声(典型值)",
+    "values": [
+     "&lt;-123dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_danl",
+    "name": "显示平均噪声电平（DANL）",
+    "values": [
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_iq分析带宽",
+    "name": "IQ分析带宽",
+    "values": [
+     "1.2GHz"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析范围",
+    "name": "矢量网络分析范围",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_分辨率带宽（rbw）",
+    "name": "分辨率带宽（RBW）",
+    "values": [
+     "1 Hz ~ 10 MHz"
+    ]
+   },
+   {
+    "tax": "pa_跟踪源",
+    "name": "跟踪源",
+    "values": [
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "2 Hz~50 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大实时带宽",
+    "name": "summary__最大实时带宽",
+    "values": [
+     "400MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt;-123 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_最大输出频率范围1",
+    "name": "filter__最大输出频率范围",
+    "values": [
+     "&gt;8 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大实时带宽",
+    "name": "filter__最大实时带宽",
+    "values": [
+     "400MHz"
+    ]
+   },
+   {
+    "tax": "pa_平均噪声电平",
+    "name": "filter__显示平均噪声电平",
+    "values": [
+     "-165 dBm/Hz"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声（典型值）",
+    "name": "filter__相位噪声（典型值）",
+    "values": [
+     "&lt;-123 dBc/Hz@1 GHz，频偏10 kHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__跟踪源",
+    "name": "filter__跟踪源",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_矢量网络分析",
+    "name": "filter__矢量网络分析功能",
+    "values": [
+     "无"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssa",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 2318,
+  "slug": "sds5000x-hd",
+  "name": "SDS5000X HD",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "示波器",
+   "高分辨率示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS5034X HD",
+   "SDS5036X HD",
+   "SDS5038X HD",
+   "SDS5054X HD",
+   "SDS5056X HD",
+   "SDS5058X HD",
+   "SDS5104X HD",
+   "SDS5106X HD",
+   "SDS5108X HD"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2025/01/SDS5HD-11.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS5034X HD",
+     "SDS5036X HD",
+     "SDS5038X HD",
+     "SDS5054X HD",
+     "SDS5056X HD",
+     "SDS5058X HD",
+     "SDS5104X HD",
+     "SDS5106X HD",
+     "SDS5108X HD"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "350 MHz",
+     "500 MHz",
+     "1 GHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "4 + EXT",
+     "6 + EXT",
+     "8 + EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "5 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "2.5 Gpts/ch"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "650,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "12.1 英寸电容式触摸显示屏，分辨率1280*800"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "200M-500MHz",
+     "500M-4GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "4 通道",
+     "6通道",
+     "8 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "5-10GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "400 Mpts-1 Gpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "10W以上",
+     "5w-10w"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "350M~1GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "5 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "4/6/8+EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 2350,
+  "slug": "sds5000l",
+  "name": "SDS5000L",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "示波器",
+   "高分辨率示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS5038L",
+   "SDS5058L",
+   "SDS5108L"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2025/01/SDS5L-11.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS5038L",
+     "SDS5058L",
+     "SDS5108L"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "350 MHz",
+     "500 MHz",
+     "1 GHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "8 + EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "5 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "2.5 Gpts/ch"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "650,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "200M-500MHz",
+     "500M-4GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "8 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "5-10GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "400 Mpts-1 Gpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "10W以上",
+     "5w-10w"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "350M~1GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "5 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "8 + EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 2420,
+  "slug": "smm3000x",
+  "name": "SMM3000X",
+  "line": "POWER",
+  "cats": [
+   "源测量单元",
+   "直流电源/源表"
+  ],
+  "series": [],
+  "models": [
+   "SMM3311X",
+   "SMM3312X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2025/02/SMM3-11.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SMM3311X",
+     "SMM3312X"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流",
+    "name": "最大单路输出电流",
+    "values": [
+     "±3.03A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压",
+    "name": "最大单路输出电压",
+    "values": [
+     "±210V"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "31.8W"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_分辨率",
+    "name": "分辨率",
+    "values": [
+     "10fA/100nV"
+    ]
+   },
+   {
+    "tax": "pa_读数分辨率",
+    "name": "读数分辨率",
+    "values": [
+     "6½"
+    ]
+   },
+   {
+    "tax": "pa_最大输出",
+    "name": "最大输出",
+    "values": [
+     "±210V/3.03A/31.8W"
+    ]
+   },
+   {
+    "tax": "pa_脉冲特性",
+    "name": "脉冲特性",
+    "values": [
+     "±10.5A"
+    ]
+   },
+   {
+    "tax": "pa_采集速率",
+    "name": "采集速率",
+    "values": [
+     "100,000 points/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流1",
+    "name": "filter__最大单路输出电流",
+    "values": [
+     "≤8 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压1",
+    "name": "filter__最大单路输出电压",
+    "values": [
+     "&gt;32 V"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出功率",
+    "name": "filter__输出功率",
+    "values": [
+     "≤ 400W"
+    ]
+   },
+   {
+    "tax": "pa_filter__分辨率",
+    "name": "filter__分辨率",
+    "values": [
+     "10fA/100nV"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出通道",
+    "name": "filter__输出通道",
+    "values": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sps",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大输出功率",
+    "name": "summary__最大输出功率",
+    "values": [
+     "31.8W"
+    ]
+   },
+   {
+    "tax": "pa_summary__分辨率",
+    "name": "summary__分辨率",
+    "values": [
+     "10fA/100nV"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "1/2"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 2433,
+  "slug": "sdg3000x",
+  "name": "SDG3000X",
+  "line": "FUNCTION_GEN",
+  "cats": [
+   "函数/任意波形发生器",
+   "函数/任意波形发生器"
+  ],
+  "series": [],
+  "models": [
+   "SDG3082X",
+   "SDG3162X",
+   "SDG3202X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2025/02/SDG3X-11.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDG3082X",
+     "SDG3162X",
+     "SDG3202X"
+    ]
+   },
+   {
+    "tax": "pa_最高输出频率",
+    "name": "最高输出频率",
+    "values": [
+     "80 MHz",
+     "160 MHz",
+     "200 MHz"
+    ]
+   },
+   {
+    "tax": "pa_最高采样率",
+    "name": "最高采样率",
+    "values": [
+     "1.2 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "16-bit"
+    ]
+   },
+   {
+    "tax": "pa_任意波长度",
+    "name": "任意波长度",
+    "values": [
+     "40 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高输出频率",
+    "name": "filter__最高输出频率",
+    "values": [
+     "100M -500 MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高采样率",
+    "name": "filter__最高采样率",
+    "values": [
+     "1.2G-2.4 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__垂直分辨率",
+    "name": "filter__垂直分辨率",
+    "values": [
+     "16-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__任意波长度",
+    "name": "filter__任意波长度",
+    "values": [
+     "40 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道",
+    "name": "filter__通道",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdg",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率",
+    "name": "summary__输出频率",
+    "values": [
+     "80-200MHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__任意波长度",
+    "name": "summary__任意波长度",
+    "values": [
+     "40 Mpts"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 2645,
+  "slug": "sna5000x-e",
+  "name": "SNA5000X-E",
+  "line": "VNA",
+  "cats": [
+   "矢量网络分析仪",
+   "矢量网络分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SNA5006X-E",
+   "SNA5008X-E",
+   "SNA5003X-E",
+   "SNA5026X-E",
+   "SNA5014X-E",
+   "SNA5020X-E"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2025/04/SNA5XE-11.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SNA5006X-E",
+     "SNA5008X-E",
+     "SNA5003X-E",
+     "SNA5026X-E",
+     "SNA5014X-E",
+     "SNA5020X-E"
+    ]
+   },
+   {
+    "tax": "pa_测量频率范围",
+    "name": "测量频率范围",
+    "values": [
+     "9kHz-3GHz",
+     "9 kHz- 8.5 GHz",
+     "9kHz-6.5GHz",
+     "100kHz-14GHz",
+     "100kHz-20GHz",
+     "100kHz-26.5GHz"
+    ]
+   },
+   {
+    "tax": "pa_端口数",
+    "name": "端口数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "1 Hz"
+    ]
+   },
+   {
+    "tax": "pa_幅度分辨率",
+    "name": "幅度分辨率",
+    "values": [
+     "0.05dB"
+    ]
+   },
+   {
+    "tax": "pa_中频带宽范围",
+    "name": "中频带宽范围",
+    "values": [
+     "1 Hz-10 MHz"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置范围",
+    "name": "输出功率设置范围",
+    "values": [
+     "-40 dBm ~ +10 dBm"
+    ]
+   },
+   {
+    "tax": "pa_动态范围",
+    "name": "动态范围",
+    "values": [
+     "117dB"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大测量频率",
+    "name": "filter__最大测量频率",
+    "values": [
+     "&lt;7.5 GHz",
+     "≥13.5 GHz",
+     "7.5 GHz - 13.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__端口数",
+    "name": "filter__端口数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置1",
+    "name": "filter__输出功率设置范围",
+    "values": [
+     "-40 dBm ~ +10 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__动态范围",
+    "name": "filter__动态范围",
+    "values": [
+     "117 dB"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sna",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "100 kHz-26.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__动态范围",
+    "name": "summary__动态范围",
+    "values": [
+     "117 dB"
+    ]
+   },
+   {
+    "tax": "pa_summary__端口数",
+    "name": "summary__端口数",
+    "values": [
+     "2"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 2723,
+  "slug": "sdg8000a",
+  "name": "SDG8000A",
+  "line": "FUNCTION_GEN",
+  "cats": [
+   "函数/任意波形发生器",
+   "函数/任意波形发生器"
+  ],
+  "series": [],
+  "models": [
+   "SDG8002A",
+   "SDG8004A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2025/04/SDG8A-11.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDG8002A",
+     "SDG8004A"
+    ]
+   },
+   {
+    "tax": "pa_最高输出频率",
+    "name": "最高输出频率",
+    "values": [
+     "4 GHz@10 G采样率，5 GHz@12 G采样率"
+    ]
+   },
+   {
+    "tax": "pa_最高采样率",
+    "name": "最高采样率",
+    "values": [
+     "10 GSa/s（内插），可选配12 GSa/s（内插）"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "16-bit"
+    ]
+   },
+   {
+    "tax": "pa_任意波长度",
+    "name": "任意波长度",
+    "values": [
+     "2 Gpts，可选配4 Gpts"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率",
+    "name": "summary__输出频率",
+    "values": [
+     "4-5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__任意波长度",
+    "name": "summary__任意波长度",
+    "values": [
+     "4 Gpts"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2/4"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高输出频率",
+    "name": "filter__最高输出频率",
+    "values": [
+     "≥500 MHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__最高采样率",
+    "name": "filter__最高采样率",
+    "values": [
+     "≥5 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__垂直分辨率",
+    "name": "filter__垂直分辨率",
+    "values": [
+     "16-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__任意波长度",
+    "name": "filter__任意波长度",
+    "values": [
+     "2 Gpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道",
+    "name": "filter__通道",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdg",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 2779,
+  "slug": "sds7000l",
+  "name": "SDS7000L",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "示波器",
+   "高分辨率示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS7604L",
+   "SDS7804L"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2025/05/SDS7L-11.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS7604L",
+     "SDS7804L"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "6 GHz",
+     "8 GHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "4 + EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "20 GSa/s @所有通道"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "2 Gpts/ch"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "1,000,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "4G-8GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "≥20GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "≥1 Gpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "6~8 GHZ"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "20 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "4 + EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 16521,
+  "slug": "sdm4075a",
+  "name": "SDM4075A",
+  "line": "MULTIMETER",
+  "cats": [
+   "数字万用表",
+   "数字万用表"
+  ],
+  "series": [],
+  "models": [
+   "SDM4075A",
+   "SDM4075A-DV",
+   "SDM4075A-SC"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2025/09/SDM4075-11.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDM4075A",
+     "SDM4075A-DV",
+     "SDM4075A-SC"
+    ]
+   },
+   {
+    "tax": "pa_读数分辨率",
+    "name": "读数分辨率",
+    "values": [
+     "7½"
+    ]
+   },
+   {
+    "tax": "pa_dcv基本精度",
+    "name": "DCV基本精度",
+    "values": [
+     "16 ppm"
+    ]
+   },
+   {
+    "tax": "pa_最大采样速率",
+    "name": "最大采样速率",
+    "values": [
+     "50,000 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_nplc",
+    "name": "NPLC",
+    "values": [
+     "0.001~100"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_filter__读数分辨率",
+    "name": "filter__读数分辨率",
+    "values": [
+     "7½（11,000,000 count）"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大采样速率",
+    "name": "filter__最大采样速率",
+    "values": [
+     "50,000 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__扫描卡",
+    "name": "filter__扫描卡",
+    "values": [
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_summary__读数分辨率",
+    "name": "summary__读数分辨率",
+    "values": [
+     "7½"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大采样速率",
+    "name": "summary__最大采样速率",
+    "values": [
+     "50,000 rdgs/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__扫描卡",
+    "name": "summary__扫描卡",
+    "values": [
+     "SC1016"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sdm",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 16717,
+  "slug": "sds8000a",
+  "name": "SDS8000A",
+  "line": "OSCILLOSCOPE",
+  "cats": [
+   "示波器",
+   "高分辨率示波器"
+  ],
+  "series": [],
+  "models": [
+   "SDS8204AP H12",
+   "SDS8334AP H12",
+   "SDS8084A H12",
+   "SDS8134A H12",
+   "SDS8164A H12",
+   "SDS8204A",
+   "SDS8254AP H12"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2025/10/SDS8A-11.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SDS8204AP H12",
+     "SDS8334AP H12",
+     "SDS8084A H12",
+     "SDS8134A H12",
+     "SDS8164A H12",
+     "SDS8204A",
+     "SDS8254AP H12"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "8 GHz",
+     "13 GHz",
+     "16 GHz",
+     "20 GHz",
+     "25 GHz",
+     "33 GHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "4 + EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "40 GSa/s @所有通道",
+     "50 GSa/s @所有通道",
+     "80 GSa/s @所有通道"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "8-bit",
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "2.5 Gpts/ch",
+     "2 Gpts/ch"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "467,000 wfm/s",
+     "800,000 wfm/s",
+     "1,000,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_屏幕尺寸",
+    "name": "屏幕尺寸",
+    "values": [
+     "15.6英寸电容式触摸高清显示屏（分辨率1920x1080）"
+    ]
+   },
+   {
+    "tax": "pa_filter__模拟带宽",
+    "name": "filter__模拟带宽",
+    "values": [
+     "≥16GHz",
+     "4G-8GHz",
+     "8G-16GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__通道数",
+    "name": "filter__通道数",
+    "values": [
+     "4 通道"
+    ]
+   },
+   {
+    "tax": "pa_filter__max-sample-rate",
+    "name": "filter__最高实时采样率",
+    "values": [
+     "≥20GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大存储深度",
+    "name": "filter__最大存储深度",
+    "values": [
+     "≥1 Gpts"
+    ]
+   },
+   {
+    "tax": "pa_filter__adc分辨率",
+    "name": "filter__ADC分辨率",
+    "values": [
+     "12-bit",
+     "8-bit"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sds",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "8GHz~33GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "80 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "4 + EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 17083,
+  "slug": "ssg6m80a",
+  "name": "SSG6M80A",
+  "line": "RF_GEN",
+  "cats": [
+   "射频/微波信号发生器",
+   "模拟源"
+  ],
+  "series": [],
+  "models": [
+   "SSG6283A",
+   "SSG6285A",
+   "SSG6483A",
+   "SSG6485A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2025/11/SSG6080-11.1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SSG6283A",
+     "SSG6285A",
+     "SSG6483A",
+     "SSG6485A"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "CW MODE：9 kHz-13.6 GHz",
+     "CW MODE：9 kHz-20 GHz"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "0.001 Hz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_iq调制",
+    "name": "IQ调制",
+    "values": [
+     "不支持"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "+25 dBm"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声",
+    "name": "相位噪声",
+    "values": [
+     "＜-136 dBc/Hz@1 GHz，偏移10 kHz（测量值）"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "5英寸电容触摸屏，800（RGB）*480"
+    ]
+   },
+   {
+    "tax": "pa_通信接口",
+    "name": "通信接口",
+    "values": []
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率范围",
+    "name": "summary__输出频率范围",
+    "values": [
+     "9 kHz~20 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出功率",
+    "name": "summary__输出功率",
+    "values": [
+     "+25 dBm"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "＜-136 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_filter__频率范围",
+    "name": "filter__频率范围",
+    "values": [
+     "20 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__i-q调制",
+    "name": "filter__I/Q调制",
+    "values": [
+     "不支持"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大输出功率",
+    "name": "filter__最大输出功率",
+    "values": [
+     "≥ +23 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__相位噪声",
+    "name": "filter__相位噪声",
+    "values": [
+     "-136 dBc/Hz@1GHz，offset20kHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssg",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 17223,
+  "slug": "sna5000b",
+  "name": "SNA5000B",
+  "line": "VNA",
+  "cats": [
+   "矢量网络分析仪",
+   "矢量网络分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SNA5024B",
+   "SNA5032B",
+   "SNA5034B",
+   "SNA5022B"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2025/11/5034.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SNA5024B",
+     "SNA5032B",
+     "SNA5034B",
+     "SNA5022B"
+    ]
+   },
+   {
+    "tax": "pa_测量频率范围",
+    "name": "测量频率范围",
+    "values": [
+     "100kHz-14GHz",
+     "100kHz-26.5GHz"
+    ]
+   },
+   {
+    "tax": "pa_端口数",
+    "name": "端口数",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "0.1Hz"
+    ]
+   },
+   {
+    "tax": "pa_幅度分辨率",
+    "name": "幅度分辨率",
+    "values": [
+     "0.05dB"
+    ]
+   },
+   {
+    "tax": "pa_中频带宽范围",
+    "name": "中频带宽范围",
+    "values": [
+     "1 Hz-10 MHz"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置范围",
+    "name": "输出功率设置范围",
+    "values": [
+     "-55 dBm ~ +20 dBm"
+    ]
+   },
+   {
+    "tax": "pa_动态范围",
+    "name": "动态范围",
+    "values": [
+     "131 dB"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大测量频率",
+    "name": "filter__最大测量频率",
+    "values": [
+     "≥13.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__端口数",
+    "name": "filter__端口数",
+    "values": [
+     "2",
+     "4"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置1",
+    "name": "filter__输出功率设置范围",
+    "values": [
+     "-55 dBm ~ +20 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__动态范围",
+    "name": "filter__动态范围",
+    "values": [
+     "131 dB"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sna",
+    "name": "filter__含税价",
+    "values": [
+     "询价机器"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "100 kHz-26.5 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__动态范围",
+    "name": "summary__动态范围",
+    "values": [
+     "131dB"
+    ]
+   },
+   {
+    "tax": "pa_summary__端口数",
+    "name": "summary__端口数",
+    "values": [
+     "2/4"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 17759,
+  "slug": "spb3000x",
+  "name": "SPB3000X",
+  "line": "POWER",
+  "cats": [
+   "源载模拟器",
+   "直流电源/源表"
+  ],
+  "series": [],
+  "models": [
+   "SPB3132X",
+   "SPB3264X",
+   "SPB3332X"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2025/12/SPB3-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SPB3132X",
+     "SPB3264X",
+     "SPB3332X"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输入",
+    "name": "最大单路输入",
+    "values": [
+     "-",
+     "60V/40A/250W",
+     "60V/40A/300W"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出",
+    "name": "最大单路输出",
+    "values": [
+     "-",
+     "30V/20A/200W"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "5英寸TFT触摸屏"
+    ]
+   },
+   {
+    "tax": "pa_分辨率",
+    "name": "分辨率",
+    "values": [
+     "0.1mV/0.1mA",
+     "1 mV/1 mA"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电流1",
+    "name": "filter__最大单路输出电流",
+    "values": [
+     "&gt;8 A"
+    ]
+   },
+   {
+    "tax": "pa_最大单路输出电压1",
+    "name": "filter__最大单路输出电压",
+    "values": [
+     "≤32 V"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出功率",
+    "name": "filter__输出功率",
+    "values": [
+     "≤ 400W"
+    ]
+   },
+   {
+    "tax": "pa_filter__分辨率",
+    "name": "filter__分辨率",
+    "values": [
+     "1mV/1mA"
+    ]
+   },
+   {
+    "tax": "pa_filter__输出通道",
+    "name": "filter__输出通道",
+    "values": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价sps",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w"
+    ]
+   },
+   {
+    "tax": "pa_summary__最大输出功率",
+    "name": "summary__最大输出功率",
+    "values": [
+     "300W"
+    ]
+   },
+   {
+    "tax": "pa_summary__分辨率",
+    "name": "summary__分辨率",
+    "values": [
+     "1 mV/1 mA"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "1/2"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 19867,
+  "slug": "ms032a-052a-102a",
+  "name": "MS032A/MS052A/MS102A",
+  "line": "MODULAR",
+  "cats": [
+   "模块化仪器",
+   "模块化示波器"
+  ],
+  "series": [],
+  "models": [
+   "MS032A",
+   "MS052A",
+   "MS102A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2026/01/MS-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "MS032A",
+     "MS052A",
+     "MS102A"
+    ]
+   },
+   {
+    "tax": "pa_bandwidth",
+    "name": "模拟带宽",
+    "values": [
+     "350 MHz",
+     "500 MHz",
+     "1 GHz"
+    ]
+   },
+   {
+    "tax": "pa_number-of-channels",
+    "name": "通道数",
+    "values": [
+     "2+EXT"
+    ]
+   },
+   {
+    "tax": "pa_real-time-sample-rate",
+    "name": "最高实时采样率",
+    "values": [
+     "5 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_vertical-resolution",
+    "name": "垂直分辨率",
+    "values": [
+     "12-bit"
+    ]
+   },
+   {
+    "tax": "pa_max-storage-depth",
+    "name": "最大存储深度",
+    "values": [
+     "1.25 Gpts/ch"
+    ]
+   },
+   {
+    "tax": "pa_最高波形捕获率",
+    "name": "最高波形捕获率",
+    "values": [
+     "740,000 wfm/s"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__示波器__带宽",
+    "name": "summary__带宽",
+    "values": [
+     "350M~1GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__实时采样率",
+    "name": "summary__实时采样率",
+    "values": [
+     "5 GSa/s"
+    ]
+   },
+   {
+    "tax": "pa_summary__通道数",
+    "name": "summary__通道数",
+    "values": [
+     "2 + EXT"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 19898,
+  "slug": "mn514a-mn520a",
+  "name": "MN514A/MN520A",
+  "line": "MODULAR",
+  "cats": [
+   "模块化仪器",
+   "模块化矢量网络分析仪"
+  ],
+  "series": [],
+  "models": [
+   "MN514A",
+   "MN520A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2026/01/520-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "MN514A",
+     "MN520A"
+    ]
+   },
+   {
+    "tax": "pa_测量频率范围",
+    "name": "测量频率范围",
+    "values": [
+     "100kHz-14GHz",
+     "100kHz-20GHz"
+    ]
+   },
+   {
+    "tax": "pa_端口数",
+    "name": "端口数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "0.1Hz"
+    ]
+   },
+   {
+    "tax": "pa_功率分辨率",
+    "name": "功率分辨率",
+    "values": [
+     "0.01dB"
+    ]
+   },
+   {
+    "tax": "pa_中频带宽范围",
+    "name": "中频带宽范围",
+    "values": [
+     "1 Hz-10 MHz"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置范围",
+    "name": "输出功率设置范围",
+    "values": [
+     "-55 dBm ~ +20 dBm"
+    ]
+   },
+   {
+    "tax": "pa_动态范围",
+    "name": "动态范围",
+    "values": [
+     "106 dB"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "100 kHz- 20 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__动态范围",
+    "name": "summary__动态范围",
+    "values": [
+     "106 dB"
+    ]
+   },
+   {
+    "tax": "pa_summary__端口数",
+    "name": "summary__端口数",
+    "values": [
+     "2"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 19979,
+  "slug": "sun5000a",
+  "name": "SUN5000A",
+  "line": "MODULAR",
+  "cats": [
+   "模块化仪器",
+   "模块化矢量网络分析仪"
+  ],
+  "series": [],
+  "models": [
+   "SUN5014A",
+   "SUN5020A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2026/01/5020-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SUN5014A",
+     "SUN5020A"
+    ]
+   },
+   {
+    "tax": "pa_测量频率范围",
+    "name": "测量频率范围",
+    "values": [
+     "100kHz-14GHz",
+     "100kHz-20GHz"
+    ]
+   },
+   {
+    "tax": "pa_端口数",
+    "name": "端口数",
+    "values": [
+     "2"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "0.1Hz"
+    ]
+   },
+   {
+    "tax": "pa_功率分辨率",
+    "name": "功率分辨率",
+    "values": [
+     "0.01dB"
+    ]
+   },
+   {
+    "tax": "pa_中频带宽范围",
+    "name": "中频带宽范围",
+    "values": [
+     "1 Hz-10 MHz"
+    ]
+   },
+   {
+    "tax": "pa_输出功率设置范围",
+    "name": "输出功率设置范围",
+    "values": [
+     "-55 dBm ~ +20 dBm"
+    ]
+   },
+   {
+    "tax": "pa_动态范围",
+    "name": "动态范围",
+    "values": [
+     "106 dB"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   },
+   {
+    "tax": "pa_summary__测量频率范围",
+    "name": "summary__测量频率范围",
+    "values": [
+     "100 kHz- 20 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__动态范围",
+    "name": "summary__动态范围",
+    "values": [
+     "106 dB"
+    ]
+   },
+   {
+    "tax": "pa_summary__端口数",
+    "name": "summary__端口数",
+    "values": [
+     "2"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 20009,
+  "slug": "pxiexpress-embedded-controller",
+  "name": "PXIe嵌入式控制器",
+  "line": "MODULAR",
+  "cats": [
+   "模块化仪器",
+   "模块化附件"
+  ],
+  "series": [],
+  "models": [
+   "MC937A",
+   "MC977A",
+   "MC987A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2026/01/PXI-express-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "MC937A",
+     "MC977A",
+     "MC987A"
+    ]
+   },
+   {
+    "tax": "pa_处理器系列",
+    "name": "处理器系列",
+    "values": [
+     "11 代Intel® Core™ i7",
+     "11 代 Intel® Core\" i5",
+     "11 代 Intel® Core™ i3"
+    ]
+   },
+   {
+    "tax": "pa_处理器规格",
+    "name": "处理器规格",
+    "values": [
+     "2.6/4.7GHz、8核16线程",
+     "2.6/4.5GHz、6核12线程",
+     "2.4/4.4GHz、4核8线程"
+    ]
+   },
+   {
+    "tax": "pa_最大控制器带宽",
+    "name": "最大控制器带宽",
+    "values": [
+     "16 GB/s"
+    ]
+   },
+   {
+    "tax": "pa_内存",
+    "name": "内存",
+    "values": [
+     "16GB"
+    ]
+   },
+   {
+    "tax": "pa_硬盘",
+    "name": "硬盘",
+    "values": [
+     "512 GB SSD"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 20010,
+  "slug": "pxiexpress-hybrid-chassis",
+  "name": "PXIe混合机箱",
+  "line": "MODULAR",
+  "cats": [
+   "模块化仪器",
+   "模块化附件"
+  ],
+  "series": [],
+  "models": [
+   "MR301A",
+   "MR590A",
+   "MR785A"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2026/01/MR-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "MR301A",
+     "MR590A",
+     "MR785A"
+    ]
+   },
+   {
+    "tax": "pa_槽位数",
+    "name": "槽位数",
+    "values": [
+     "18",
+     "9",
+     "6"
+    ]
+   },
+   {
+    "tax": "pa_混合插槽数",
+    "name": "混合插槽数",
+    "values": [
+     "5",
+     "6",
+     "7"
+    ]
+   },
+   {
+    "tax": "pa_系统定时槽",
+    "name": "系统定时槽",
+    "values": [
+     "不支持",
+     "支持"
+    ]
+   },
+   {
+    "tax": "pa_最大系统带宽",
+    "name": "最大系统带宽",
+    "values": [
+     "24GB/s",
+     "8GB/s"
+    ]
+   },
+   {
+    "tax": "pa_外设带宽",
+    "name": "外设带宽",
+    "values": [
+     "2GB/s",
+     "8GB/s"
+    ]
+   },
+   {
+    "tax": "pa_最大直流功率",
+    "name": "最大直流功率",
+    "values": [
+     "320W",
+     "400W",
+     "900/1170W"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可询价"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 31605,
+  "slug": "ssg3000x-plus",
+  "name": "SSG3000X Plus",
+  "line": "RF_GEN",
+  "cats": [
+   "射频/微波信号发生器",
+   "模拟源"
+  ],
+  "series": [],
+  "models": [
+   "SSG3021X –IQE Plus",
+   "SSG3021X Plus",
+   "SSG3032X –IQE Plus",
+   "SSG3032X Plus"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2026/06/SSG3XP-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SSG3021X –IQE Plus",
+     "SSG3021X Plus",
+     "SSG3032X –IQE Plus",
+     "SSG3032X Plus"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "9 kHz~3.2 GHz",
+     "9 kHz~2.1GHz"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "0.01 Hz"
+    ]
+   },
+   {
+    "tax": "pa_iq调制",
+    "name": "IQ调制",
+    "values": [
+     "不支持",
+     "支持"
+    ]
+   },
+   {
+    "tax": "pa_i-q带宽",
+    "name": "I/Q带宽",
+    "values": [
+     "100 MHz",
+     "-"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "+20 dBm"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声",
+    "name": "相位噪声",
+    "values": [
+     "&lt;-117 dBc/Hz@1 GHz，偏移 20 kHz （典型值）"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "5英寸电容触摸屏"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率范围",
+    "name": "summary__输出频率范围",
+    "values": [
+     "9 kHz~3.2 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出功率",
+    "name": "summary__输出功率",
+    "values": [
+     "+20 dBm"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt;-117 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_filter__频率范围",
+    "name": "filter__频率范围",
+    "values": [
+     "3 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__i-q调制",
+    "name": "filter__I/Q调制",
+    "values": [
+     "不支持",
+     "支持"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大输出功率",
+    "name": "filter__最大输出功率",
+    "values": [
+     "＜ +23 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__相位噪声",
+    "name": "filter__相位噪声",
+    "values": [
+     "-117 dBc/Hz offset 20 kHz @1 GHz（typ.）"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssg",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 31639,
+  "slug": "ssg3000x-iqe-plus",
+  "name": "SSG3000X-IQE Plus",
+  "line": "RF_GEN",
+  "cats": [
+   "射频/微波信号发生器",
+   "矢量源"
+  ],
+  "series": [],
+  "models": [
+   "SSG3021X –IQE Plus",
+   "SSG3032X –IQE Plus"
+  ],
+  "image": "https://product-manage.siglent.com/wp-content/uploads/2026/06/SSG3XP-1.png",
+  "excerpt": "",
+  "attrs": [
+   {
+    "tax": "pa_product-model",
+    "name": "产品型号",
+    "values": [
+     "SSG3021X –IQE Plus",
+     "SSG3032X –IQE Plus"
+    ]
+   },
+   {
+    "tax": "pa_频率范围",
+    "name": "频率范围",
+    "values": [
+     "9 kHz~3.2 GHz",
+     "9 kHz~2.1GHz"
+    ]
+   },
+   {
+    "tax": "pa_频率分辨率",
+    "name": "频率分辨率",
+    "values": [
+     "0.01 Hz"
+    ]
+   },
+   {
+    "tax": "pa_iq调制",
+    "name": "IQ调制",
+    "values": [
+     "支持"
+    ]
+   },
+   {
+    "tax": "pa_i-q带宽",
+    "name": "I/Q带宽",
+    "values": [
+     "100 MHz"
+    ]
+   },
+   {
+    "tax": "pa_最大输出功率",
+    "name": "最大输出功率",
+    "values": [
+     "+20 dBm"
+    ]
+   },
+   {
+    "tax": "pa_相位噪声",
+    "name": "相位噪声",
+    "values": [
+     "&lt;-117 dBc/Hz@1 GHz，偏移 20 kHz （典型值）"
+    ]
+   },
+   {
+    "tax": "pa_显示",
+    "name": "显示",
+    "values": [
+     "5英寸电容触摸屏"
+    ]
+   },
+   {
+    "tax": "pa_purchase-status",
+    "name": "购买状态",
+    "values": [
+     "可购买"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出频率范围",
+    "name": "summary__输出频率范围",
+    "values": [
+     "9 kHz~3.2 GHz"
+    ]
+   },
+   {
+    "tax": "pa_summary__输出功率",
+    "name": "summary__输出功率",
+    "values": [
+     "+20 dBm"
+    ]
+   },
+   {
+    "tax": "pa_summary__相位噪声",
+    "name": "summary__相位噪声(典型值)",
+    "values": [
+     "&lt;-117 dBc/Hz"
+    ]
+   },
+   {
+    "tax": "pa_filter__频率范围",
+    "name": "filter__频率范围",
+    "values": [
+     "3 GHz"
+    ]
+   },
+   {
+    "tax": "pa_filter__i-q调制",
+    "name": "filter__I/Q调制",
+    "values": [
+     "支持"
+    ]
+   },
+   {
+    "tax": "pa_filter__最大输出功率",
+    "name": "filter__最大输出功率",
+    "values": [
+     "＜ +23 dBm"
+    ]
+   },
+   {
+    "tax": "pa_filter__相位噪声",
+    "name": "filter__相位噪声",
+    "values": [
+     "-117 dBc/Hz offset 20 kHz @1 GHz（typ.）"
+    ]
+   },
+   {
+    "tax": "pa_filter__含税价ssg",
+    "name": "filter__含税价",
+    "values": [
+     "1w-5w"
+    ]
+   }
+  ]
+ }
+]

@@ -47,3 +47,6 @@ public/uploads/
 # generated prisma client
 src/generated/
 dev-server.err.log
+
+# 采集缓存（可重跑 scrape 生成）
+scripts/data/siglent-raw.json

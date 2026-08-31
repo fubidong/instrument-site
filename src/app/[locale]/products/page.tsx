@@ -71,9 +71,21 @@ export default async function ProductsPage({
     categoryIds = [currentCategory.id, ...currentCategory.children.map((c) => c.id)];
   }
 
+  // 参数模板建在顶层类别；子类别继承其顶层父类的可筛参数
+  let filterCategoryId = currentCategory?.id;
+  if (currentCategory) {
+    let top = currentCategory as any;
+    let guard = 0;
+    while (top.parentId && guard < 10) {
+      top = categories.find((c) => c.id === top.parentId);
+      if (!top) break;
+      guard++;
+    }
+    filterCategoryId = top.id;
+  }
   const filterDefs = currentCategory
     ? await db.paramDefinition.findMany({
-        where: { categoryId: currentCategory.id, isFilterable: true },
+        where: { categoryId: filterCategoryId, isFilterable: true },
         include: { translations: true },
         orderBy: { sortOrder: "asc" },
       })
@@ -112,7 +124,21 @@ export default async function ProductsPage({
           wherePv = { ...wherePv, OR: [{ valueNumber: { lte: f.max } }, { valueMax: { lte: f.max } }] };
         }
       } else if (f.type === "enum") {
-        wherePv = { ...wherePv, valueString: { in: f.values } };
+        // valueString 是 "A | B | C" 格式：JS 层按选项 token 精确匹配（任一命中即入选）
+        const all = await db.productParamValue.findMany({
+          where: { paramDefinitionId: f.def.id },
+          select: { productId: true, valueString: true },
+        });
+        const wanted = new Set(f.values ?? []);
+        const matched = all
+          .filter((row) => {
+            if (!row.valueString) return false;
+            const tokens = row.valueString.split("|").map((s) => s.trim());
+            return tokens.some((tok) => wanted.has(tok));
+          })
+          .map((r) => r.productId);
+        productIdsByDef[f.def.id] = matched;
+        continue;
       } else if (f.type === "boolean") {
         wherePv = { ...wherePv, valueBoolean: true };
       }
