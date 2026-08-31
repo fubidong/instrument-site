@@ -128,7 +128,7 @@ export default async function BrandDetailPage({
             {isEn ? `Total ${products.length}` : `共 ${products.length} 款`}
           </span>
         </div>
-        <ProductGrid locale={locale} products={products as any} />
+        <ProductGrid products={products as any} />
       </div>
     </div>
   );

@@ -170,7 +170,23 @@ export default async function ProductsPage({
     }
   }
 
-  const [products, brands, lines] = await Promise.all([
+  // 当前品类下的系列（用于系列筛选）：找品牌分类下的 ProductLine
+  const brandCatIdSet = new Set(categoryIds);
+  let lines: any[] = [];
+  if (currentCategory) {
+    lines = await db.productLine.findMany({
+      where: { isActive: true, categoryId: { in: [...brandCatIdSet] } },
+      include: {
+        translations: true,
+        brand: { include: { translations: true } },
+        _count: { select: { products: { where: { isActive: true } } } },
+      },
+      orderBy: [{ brand: { code: "asc" } }, { sortOrder: "asc" }],
+    });
+    lines = lines.filter((l: any) => l._count.products > 0);
+  }
+
+  const [products, brands] = await Promise.all([
     db.product.findMany({
       where,
       include: {
@@ -186,11 +202,6 @@ export default async function ProductsPage({
       where: { isActive: true },
       include: { translations: true },
       orderBy: { sortOrder: "asc" },
-    }),
-    db.productLine.findMany({
-      where: { isActive: true },
-      include: { translations: true, brand: { include: { translations: true } } },
-      orderBy: [{ brand: { code: "asc" } }, { sortOrder: "asc" }],
     }),
   ]);
 
@@ -248,26 +259,51 @@ export default async function ProductsPage({
           }))}
           currentBrand={brandId}
           currentQ={q ?? ""}
+          currentLine={lineId}
+          lines={lines.map((l: any) => ({
+            id: l.id,
+            code: l.code,
+            name:
+              (l.translations ?? []).find((tr: any) => tr.locale === locale)?.name ??
+              (l.translations ?? [])[0]?.name ??
+              l.code,
+            brandCode: l.brand.code,
+            brandName:
+              (l.brand.translations ?? []).find((tr: any) => tr.locale === locale)?.name ??
+              (l.brand.translations ?? [])[0]?.name ??
+              l.brand.code,
+            count: l._count.products,
+          }))}
         />
 
         <div className="flex-1">
-          <div className="mb-4 flex items-center justify-between">
+          <div className="mb-4 flex items-center justify-between gap-3">
             <h1 className="text-xl font-bold text-slate-900">
               {currentCategory ? t(currentCategory.translations, locale, "name") : I.allProducts}
               <span className="ml-2 text-sm font-normal text-slate-400">
                 {isEn ? `Total ${products.length}` : `共 ${products.length} 款`}
               </span>
             </h1>
-            {filters.length > 0 && (
-              <a
-                href={`/${locale}/products${categoryCode ? `?category=${categoryCode}` : ""}`}
-                className="text-sm text-sky-600 hover:underline"
-              >
-                {I.clearFilter}
-              </a>
-            )}
+            <div className="flex items-center gap-3">
+              {lineId && products.length > 1 && (
+                <a
+                  href={`/${locale}/compare?line=${lineId}`}
+                  className="rounded-md border border-sky-300 px-3 py-1.5 text-sm font-semibold text-sky-700 hover:bg-sky-50"
+                >
+                  {isEn ? "Compare this Series" : "对比该系列全部型号"}
+                </a>
+              )}
+              {filters.length > 0 && (
+                <a
+                  href={`/${locale}/products${categoryCode ? `?category=${categoryCode}` : ""}`}
+                  className="text-sm text-sky-600 hover:underline"
+                >
+                  {I.clearFilter}
+                </a>
+              )}
+            </div>
           </div>
-          <ProductGrid locale={locale} products={products as any} />
+          <ProductGrid products={products as any} />
         </div>
       </div>
     </div>

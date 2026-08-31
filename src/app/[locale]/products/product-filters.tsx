@@ -31,6 +31,8 @@ export default function ProductFilters({
   brands,
   currentBrand,
   currentQ,
+  currentLine,
+  lines,
 }: {
   locale: string;
   categories: { id: string; code: string; name: string; parentId: string | null }[];
@@ -40,6 +42,8 @@ export default function ProductFilters({
   brands: { id: string; code: string; name: string }[];
   currentBrand?: string;
   currentQ: string;
+  currentLine?: string;
+  lines: { id: string; code: string; name: string; brandCode: string; brandName: string; count: number }[];
 }) {
   const router = useRouter();
   const [tempQ, setTempQ] = useState(currentQ);
@@ -50,7 +54,7 @@ export default function ProductFilters({
 
   function buildUrl(overrides: Record<string, string | undefined>) {
     const params = new URLSearchParams();
-    const merged = { category: currentCategory, brand: currentBrand, ...overrides };
+    const merged = { category: currentCategory, brand: currentBrand, line: currentLine, ...overrides };
     Object.entries(merged).forEach(([k, v]) => {
       if (v) params.set(k, v);
     });
@@ -61,6 +65,7 @@ export default function ProductFilters({
     const params = new URLSearchParams();
     if (currentCategory) params.set("category", currentCategory);
     if (currentBrand) params.set("brand", currentBrand);
+    if (currentLine) params.set("line", currentLine);
 
     for (const def of filterDefs) {
       if (def.type === "number" || def.type === "range") {
@@ -85,6 +90,7 @@ export default function ProductFilters({
     allProducts: isEn ? "All Products" : "全部产品",
     category: isEn ? "Category" : "产品类别",
     brand: isEn ? "Brand" : "品牌",
+    series: isEn ? "Series" : "系列",
     allBrands: isEn ? "All Brands" : "全部品牌",
     paramFilter: isEn ? "Parameter Filter" : "参数筛选",
     apply: isEn ? "Apply Filters" : "应用筛选",
@@ -92,6 +98,17 @@ export default function ProductFilters({
     max: isEn ? "Max" : "最大",
     support: isEn ? "Supported" : "支持",
     search: isEn ? "Search model/name..." : "搜索型号/名称...",
+  };
+
+  // 系列按品牌分组
+  const groupLines = () => {
+    const m = new Map<string, typeof lines>();
+    for (const ln of lines) {
+      const arr = m.get(ln.brandName) ?? [];
+      arr.push(ln);
+      m.set(ln.brandName, arr);
+    }
+    return [...m.entries()];
   };
 
   return (
@@ -167,6 +184,46 @@ export default function ProductFilters({
           ))}
         </div>
       </div>
+
+      {/* 系列筛选（按品牌分组） */}
+      {lines.length > 0 && (
+        <div className="mt-4 rounded-lg border border-slate-200 bg-white p-4">
+          <div className="mb-3 text-sm font-semibold text-slate-800">{labels.series}</div>
+          <div className="space-y-2">
+            {groupLines().map(([bn, items]) => (
+              <div key={bn}>
+                <div className="mb-1 text-xs font-semibold text-slate-400">{bn}</div>
+                <div className="space-y-0.5">
+                  <a
+                    href={buildUrl({ line: undefined })}
+                    className={`block rounded px-3 py-1 text-xs ${
+                      !currentLine
+                        ? "bg-sky-50 font-medium text-sky-700"
+                        : "text-slate-500 hover:bg-slate-50"
+                    }`}
+                  >
+                    {isEn ? "All Series" : "全部系列"}
+                  </a>
+                  {items.map((ln) => (
+                    <a
+                      key={ln.id}
+                      href={buildUrl({ line: ln.id })}
+                      className={`block rounded px-3 py-1 text-xs ${
+                        currentLine === ln.id
+                          ? "bg-sky-50 font-medium text-sky-700"
+                          : "text-slate-600 hover:bg-slate-50"
+                      }`}
+                    >
+                      {ln.name}
+                      <span className="ml-1 text-[10px] text-slate-400">({ln.count})</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {filterDefs.length > 0 && (
         <div className="mt-4 rounded-lg border border-slate-200 bg-white p-4">
@@ -251,6 +308,7 @@ export default function ProductFilters({
               const params = new URLSearchParams();
               if (currentCategory) params.set("category", currentCategory);
               if (currentBrand) params.set("brand", currentBrand);
+              if (currentLine) params.set("line", currentLine);
               if (tempQ.trim()) params.set("q", tempQ.trim());
               router.push(`/products${params.toString() ? `?${params.toString()}` : ""}`);
             }
