@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "brands": "Brands",
+    "documents": "Resources",
+    "contact": "Contact",
+    "getQuote": "Get a Quote",
+    "onlineInquiry": "Inquiry",
+    "hotline": "Hotline"
+  },
+  "footer": {
+    "tagline": "Professional supplier of test & measurement instruments from world-renowned brands, offering selection consulting, custom solutions and technical support.",
+    "products": "Products",
+    "brands": "Brands",
+    "contact": "Contact",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "onlineInquiry": "Send Inquiry",
+    "rights": "All Rights Reserved"
+  },
+  "common": {
+    "noImage": "No image",
+    "featured": "Featured",
+    "viewDetail": "View Details",
+    "all": "All",
+    "loading": "Loading..."
+  },
+  "home": {
+    "heroTitle": "Professional Test & Measurement Instrument Supplier",
+    "heroSub": "Authorized distributor of world-renowned test & measurement instruments. Covering oscilloscopes, signal generators, power supplies, multimeters, spectrum analyzers and more, with one-stop selection, comparison, bulk supply and technical support.",
+    "browseAll": "Browse All Products",
+    "getQuote": "Get a Quote",
+    "brandsTitle": "Partner Brands",
+    "brandsSub": "We represent {count} world-renowned test & measurement brands",
+    "productsCount": "{count} products",
+    "featuredTitle": "Featured Products",
+    "viewAll": "View All",
+    "categoriesTitle": "Product Categories",
+    "categoriesSub": "Browse and filter by category",
+    "aboutTitle": "About Us",
+    "aboutDefault": "{siteName} is a professional test & measurement instrument supplier in close partnership with several world-renowned instrument brands, serving R&D institutes, universities, electronics manufacturing, communications and new energy industries with instrument selection, parameter comparison, bulk supply and after-sales support. Our professional team offers one-on-one product selection advice.",
+    "statBrands": "Partner Brands",
+    "statModels": "Product Models",
+    "statSupport": "Tech Support"
+  },
+  "products": {
+    "title": "Products",
+    "subtitle": "Filter & Select by Parameters",
+    "allProducts": "All Products",
+    "category": "Category",
+    "brand": "Brand",
+    "paramFilter": "Parameter Filter",
+    "applyFilter": "Apply Filters",
+    "clearFilter": "Clear Filters",
+    "searchPlaceholder": "Search model/name...",
+    "count": "{count} products",
+    "empty": "No matching products found",
+    "emptySub": "Please adjust your filters and try again",
+    "min": "Min",
+    "max": "Max",
+    "support": "Supported"
+  },
+  "detail": {
+    "breadcrumbHome": "Home",
+    "breadcrumbProducts": "Products",
+    "brand": "Brand",
+    "series": "Series",
+    "model": "Model",
+    "highlights": "Key Highlights",
+    "params": "Technical Specifications",
+    "documents": "Downloads",
+    "noParams": "No specifications available",
+    "download": "Download",
+    "compare": "Compare",
+    "inCompare": "In Compare",
+    "goCompare": "Go to Compare",
+    "maxCompare": "Compare up to 5 products"
+  },
+  "inquiry": {
+    "title": "Get a Quote",
+    "product": "Product of Interest",
+    "name": "Your Name",
+    "company": "Company (optional)",
+    "contact": "Contact (phone/WeChat)",
+    "email": "Email (optional)",
+    "message": "Describe your needs (model, quantity, application...)",
+    "submit": "Submit Inquiry",
+    "submitting": "Submitting...",
+    "privacy": "By submitting you agree to be contacted by us (business purposes only)",
+    "successTitle": "✓",
+    "success": "Your inquiry has been submitted. We will contact you soon!",
+    "again": "Submit Another",
+    "errName": "Please enter your name",
+    "errContact": "Please enter your contact (phone or WeChat)",
+    "errEmail": "Invalid email format",
+    "errMessage": "Message too long",
+    "errSubmit": "Submission failed, please try again later"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Whether you need selection advice, bulk purchase quotes, or technical support, feel free to contact us.",
+    "infoTitle": "Contact Information",
+    "serviceTitle": "Our Services",
+    "services": [
+      "Instrument selection and parameter comparison",
+      "Bulk purchasing and long-term partnership quotes",
+      "Instrument rental, calibration and repair consultation",
+      "Custom industry solutions"
+    ],
+    "pending": "Coming soon"
+  },
+  "compare": {
+    "title": "Product Comparison",
+    "subtitle": "Click \"Compare\" on product detail pages to compare up to 5 products side by side.",
+    "empty": "No products selected for comparison",
+    "emptySub": "Please click \"Compare\" on a product detail page first",
+    "goProducts": "Browse Products",
+    "param": "Parameter",
+    "detail": "Details",
+    "inquiry": "Inquiry",
+    "remove": "Remove",
+    "noParams": "No parameters available to compare"
+  },
+  "brands": {
+    "title": "Partner Brands",
+    "subtitle": "We maintain deep partnerships with world-renowned test & measurement brands, providing genuine products and services.",
+    "visitOfficial": "Official Site",
+    "getQuote": "Get {brand} Quote",
+    "series": "Product Series",
+    "products": "Products",
+    "empty": "No brand information yet"
+  },
+  "documents": {
+    "title": "Resource Center",
+    "subtitle": "Datasheets, user manuals, application notes and more to help you understand and use our products.",
+    "allTypes": "All Types",
+    "allBrands": "All Brands",
+    "search": "Search title...",
+    "empty": "No documents yet",
+    "download": "Download"
+  },
+  "success": {
+    "title": "Inquiry Submitted",
+    "subtitle": "Thank you for your inquiry! We have received your request and our sales team will contact you soon.",
+    "continue": "Continue Browsing",
+    "home": "Back to Home"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "subtitle": "The page you are looking for may have been removed or the link is incorrect.",
+    "home": "Back to Home",
+    "products": "Browse Products"
+  },
+  "docType": {
+    "datasheet": "Datasheet",
+    "user_manual": "User Manual",
+    "programming_manual": "Programming Manual",
+    "quick_guide": "Quick Guide",
+    "service_manual": "Service Manual",
+    "application_note": "Application Note",
+    "other": "Other"
+  }
+}

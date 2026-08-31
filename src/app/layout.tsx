@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { getLocale } from "next-intl/server";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,10 +22,11 @@ export const metadata: Metadata = {
     "专业代理销售全球知名品牌的测试与测量仪器，提供选型咨询、参数对比与技术支持。",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await getLocale().catch(() => "zh");
   return (
     <html
-      lang="zh-CN"
+      lang={locale === "en" ? "en" : "zh-CN"}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

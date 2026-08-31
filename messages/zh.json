@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "首页",
+    "products": "产品中心",
+    "brands": "代理品牌",
+    "documents": "资料下载",
+    "contact": "联系我们",
+    "getQuote": "获取报价",
+    "onlineInquiry": "在线询价",
+    "hotline": "服务热线"
+  },
+  "footer": {
+    "tagline": "专业代理销售全球知名品牌的测试与测量仪器，提供选型咨询、方案定制与技术支持。",
+    "products": "产品中心",
+    "brands": "代理品牌",
+    "contact": "联系方式",
+    "phone": "电话",
+    "email": "邮箱",
+    "address": "地址",
+    "onlineInquiry": "在线提交询价",
+    "rights": "版权所有"
+  },
+  "common": {
+    "noImage": "暂无图片",
+    "featured": "推荐",
+    "viewDetail": "查看详情",
+    "all": "全部",
+    "loading": "加载中..."
+  },
+  "home": {
+    "heroTitle": "专业测试测量仪器供应服务商",
+    "heroSub": "专业代理全球知名品牌的测试测量仪器，覆盖示波器、信号源、电源、万用表、频谱分析等全品类，提供产品选型、参数对比、批量供应与技术支持一站式服务。",
+    "browseAll": "浏览全部产品",
+    "getQuote": "获取报价",
+    "brandsTitle": "代理品牌",
+    "brandsSub": "我们代理 {count} 个国际知名测试测量仪器品牌",
+    "productsCount": "{count} 款产品",
+    "featuredTitle": "推荐产品",
+    "viewAll": "查看全部",
+    "categoriesTitle": "产品类别",
+    "categoriesSub": "按类别浏览并筛选选型",
+    "aboutTitle": "关于我们",
+    "aboutDefault": "{siteName} 是一家专业的测试测量仪器供应服务商，与多家国际知名仪器品牌保持深度合作，为科研院所、高校、电子制造、通信、新能源等行业客户提供仪器选型、参数对比、批量供应与售后支持服务。我们拥有专业的技术团队，可为您提供一对一的产品选型建议。",
+    "statBrands": "代理品牌",
+    "statModels": "产品型号",
+    "statSupport": "技术支持"
+  },
+  "products": {
+    "title": "产品中心",
+    "subtitle": "按参数选型",
+    "allProducts": "全部产品",
+    "category": "产品类别",
+    "brand": "品牌",
+    "paramFilter": "参数筛选",
+    "applyFilter": "应用筛选",
+    "clearFilter": "清除参数筛选",
+    "searchPlaceholder": "搜索型号/名称...",
+    "count": "共 {count} 款",
+    "empty": "没有找到符合条件的产品",
+    "emptySub": "请调整筛选条件后重试",
+    "min": "最小",
+    "max": "最大",
+    "support": "支持"
+  },
+  "detail": {
+    "breadcrumbHome": "首页",
+    "breadcrumbProducts": "产品中心",
+    "brand": "品牌",
+    "series": "系列",
+    "model": "型号",
+    "highlights": "核心卖点",
+    "params": "技术参数",
+    "documents": "资料下载",
+    "noParams": "暂无参数信息",
+    "download": "下载",
+    "compare": "加入对比",
+    "inCompare": "已加入对比",
+    "goCompare": "去对比",
+    "maxCompare": "最多对比 5 个产品"
+  },
+  "inquiry": {
+    "title": "获取报价",
+    "product": "咨询产品",
+    "name": "您的姓名 / 称呼",
+    "company": "公司名称（选填）",
+    "contact": "联系方式（电话/微信）",
+    "email": "邮箱（选填）",
+    "message": "请描述您的需求（型号、数量、用途等）",
+    "submit": "提交询价",
+    "submitting": "提交中...",
+    "privacy": "提交即表示同意我们与您联系（仅用于业务沟通）",
+    "successTitle": "✓",
+    "success": "询价已提交，我们会尽快与您联系！",
+    "again": "再次询价",
+    "errName": "请填写您的姓名/称呼",
+    "errContact": "请填写联系方式（电话或微信）",
+    "errEmail": "邮箱格式不正确",
+    "errMessage": "留言内容过长",
+    "errSubmit": "提交失败，请稍后重试"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "无论您需要选型建议、批量采购报价，还是技术支持，欢迎随时与我们联系。",
+    "infoTitle": "联系方式",
+    "serviceTitle": "服务范围",
+    "services": [
+      "测试测量仪器选型与参数对比",
+      "批量采购与长期合作报价",
+      "仪器租赁、校准与维修咨询",
+      "行业解决方案定制"
+    ],
+    "pending": "敬请期待"
+  },
+  "compare": {
+    "title": "产品对比",
+    "subtitle": "在产品详情页点击\"加入对比\"，最多选择 5 个产品进行参数横向对比。",
+    "empty": "还没有选择对比的产品",
+    "emptySub": "请先在产品详情页点击\"加入对比\"",
+    "goProducts": "去浏览产品",
+    "param": "参数",
+    "detail": "详情",
+    "inquiry": "询价",
+    "remove": "移除",
+    "noParams": "这些产品暂无参数，无法对比"
+  },
+  "brands": {
+    "title": "代理品牌",
+    "subtitle": "我们与多家国际知名测试测量仪器品牌保持深度合作，为您提供原厂品质的产品与服务。",
+    "visitOfficial": "访问官网",
+    "getQuote": "获取 {brand} 产品报价",
+    "series": "产品系列",
+    "products": "产品列表",
+    "empty": "暂无品牌信息"
+  },
+  "documents": {
+    "title": "资料下载",
+    "subtitle": "产品数据手册、用户手册、应用笔记等资料，助您快速了解与使用产品。",
+    "allTypes": "全部类型",
+    "allBrands": "全部品牌",
+    "search": "搜索标题...",
+    "empty": "暂无资料",
+    "download": "下载"
+  },
+  "success": {
+    "title": "询价提交成功",
+    "subtitle": "感谢您的咨询！我们已收到您的需求，销售顾问会尽快通过您留下的联系方式与您联系。",
+    "continue": "继续浏览产品",
+    "home": "返回首页"
+  },
+  "notFound": {
+    "title": "页面不存在",
+    "subtitle": "您访问的页面可能已被移除或链接有误。",
+    "home": "返回首页",
+    "products": "浏览产品"
+  },
+  "docType": {
+    "datasheet": "数据手册",
+    "user_manual": "用户手册",
+    "programming_manual": "编程手册",
+    "quick_guide": "快速指南",
+    "service_manual": "服务手册",
+    "application_note": "应用笔记",
+    "other": "其他"
+  }
+}

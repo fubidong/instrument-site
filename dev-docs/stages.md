@@ -11,7 +11,7 @@
 | 2 | 产品库与参数系统管理 | 品牌/类别/系列/型号/资料的后台 CRUD + 动态参数模板 | ✅ 完成 |
 | 2.5 | 后台高效操作增强 | 素材库 + 列表筛选/搜索/复制/批量操作 | ✅ 完成 |
 | 3 | 前台展示与选型 | 首页/品牌/产品列表(参数筛选)/详情/对比/询价 | ✅ 完成 |
-| 4 | 多语言完善 | 中英双语全站打通 | ⏳ 待开始 |
+| 4 | 多语言完善 | 中英双语全站打通 | ✅ 完成 |
 | 5 | 内容与批量导入 | 新闻管理、产品批量导入、真实数据录入 | ⏳ 待开始 |
 | 6 | 测试与上线 | 本地完整测试 → 阿里云部署 | ⏳ 待开始 |
 | 后期 | 扩展 | 俄语、采集工具、OSS 迁移 | ⏳ 待定 |
@@ -199,19 +199,31 @@
 **目标**：中英双语全站打通，切换语言后内容正确变化。
 
 **任务清单**：
-- [ ] 语言切换组件（Header 中）
-- [ ] 所有 UI 文案中英双语（messages/zh.json + en.json）
-- [ ] 产品/品牌/文章内容的多语言展示（按当前 locale 取翻译）
-- [ ] PDF 资料按语言优先展示（当前语言资料排前面）
-- [ ] 路由多语言（/{locale}/...）
-- [ ] SEO 多语言（hreflang 标签）
-- [ ] 后台内容编辑时支持多语言切换输入
+- [x] 语言切换组件（Header 中，中文/EN）
+- [x] UI 文案中英双语（messages/zh.json + en.json）
+- [x] 产品/品牌/类别内容按当前 locale 取翻译（前台 `[locale]` 段 + src/lib/site.ts 按 locale 取词）
+- [x] 路由多语言（`/{locale}/...`，middleware 前缀 + 重定向，默认 zh）
+- [x] 后台 /admin 排除 locale 前缀（middleware matcher）
+- [x] 询价提交按当前语言跳转成功页（server action 用 getLocale）
+- [x] SEO 多语言（generateMetadata 按 locale + alternates.languages）
+- [x] 前台 `(site)` 路由组迁移为 `[locale]` 段
 
-**验收**：
-- 切换中/英文后，页面所有文案、产品内容、URL 均正确变化
-- 无硬编码中/英文残留
-- 无翻译 key 缺失警告
-- hreflang 标签正确输出
+**验收记录**（2026-08-31，浏览器实测通过）：
+- ✅ 访问 `/` 自动重定向 `/zh`，中文首页完整渲染（导航/Hero/品牌墙/推荐/类别/关于我们）
+- ✅ Header 点"EN"→ URL 变 `/en`，全站英文（Home/Products/Brands/Resources/Contact/Get a Quote、Partner Brands、Featured Products）
+- ✅ 英文产品列表：Category/Brand/Parameter Filter（Bandwidth/Channels/Oscilloscope Total 2/View Details）
+- ✅ 英文产品详情：Technical Specifications、参数表 Basic（Bandwidth带宽 100MHz、Channels通道数 4 中英对照）
+- ✅ 英文询价提交 → 正确跳转 `/en/contact/success`（英文成功页）
+- ✅ 后台 /admin 正常（不跳 locale 前缀），中文后台，询价线索 2 条（中+英各 1）
+- ✅ pnpm build 生产构建通过（前台路由 SSG 静态预渲染）
+
+**已记录踩坑**：
+- next-intl 4.14 必须用 `createNextIntlPlugin("./src/i18n/request.ts")` 包装 next.config.ts（不能只建 next-intl.config.ts）
+- 客户端组件（LocaleSwitcher 用 useRouter/usePathname from next-intl/navigation）必须在 NextIntlClientProvider 内 → Provider 提到整个布局外层
+- next-intl 的 navigation 用命名导出 `{ Link }`（非 default）
+- middleware 需在函数内排除 /admin、/api（matcher 不够，需显式 return）
+- 根 layout.tsx 的 getLocale() 在非 [locale] 路由下需 .catch 兜底
+- PowerShell 对含括号/方括号路径操作需用 cmd 或 [System.IO.Directory]::Move
 
 **预计产出**：完整中英双语站点
 

@@ -12,24 +12,24 @@ export function t<T extends { locale: string }>(
 }
 
 /** 站点设置读取（缓存） */
-export const getSiteSettings = cache(async () => {
+export const getSiteSettings = cache(async (locale: string = "zh") => {
   const rows = await db.siteSetting.findMany();
   const map: Record<string, string> = {};
   for (const r of rows) {
     map[`${r.key}${r.locale ? ":" + r.locale : ""}`] = r.value;
   }
   return {
-    siteName: map["site_name"] || map["site_name:zh"] || "仪器仪表站",
+    siteName: map["site_name"] || map[`site_name:${locale}`] || map["site_name:zh"] || "仪器仪表站",
     siteNameEn: map["site_name:en"] || "Test & Measurement",
     phone: map["contact_phone"] || "",
     email: map["contact_email"] || "",
     address: map["contact_address"] || "",
-    companyIntro: map["company_intro"] || "",
+    companyIntro: map[`company_intro:${locale}`] || map["company_intro"] || map["company_intro:zh"] || "",
   };
 });
 
 /** 前台主导航类别（有启用产品的顶层类别） */
-export const getSiteCategories = cache(async () => {
+export const getSiteCategories = cache(async (locale: string = "zh") => {
   const categories = await db.category.findMany({
     include: { translations: true },
     orderBy: { sortOrder: "asc" },
@@ -39,13 +39,14 @@ export const getSiteCategories = cache(async () => {
     code: c.code,
     zhName: t(c.translations, "zh", "name") || c.code,
     enName: t(c.translations, "en", "name") || c.code,
+    name: t(c.translations, locale, "name") || t(c.translations, "zh", "name") || c.code,
     parentId: c.parentId,
     icon: c.icon,
   }));
 });
 
 /** 前台启用品牌列表 */
-export const getSiteBrands = cache(async () => {
+export const getSiteBrands = cache(async (locale: string = "zh") => {
   const brands = await db.brand.findMany({
     where: { isActive: true },
     include: { translations: true },
@@ -56,6 +57,7 @@ export const getSiteBrands = cache(async () => {
     code: b.code,
     zhName: t(b.translations, "zh", "name") || b.code,
     enName: t(b.translations, "en", "name") || b.code,
+    name: t(b.translations, locale, "name") || t(b.translations, "zh", "name") || b.code,
     logo: b.logo,
     website: b.website,
     sortOrder: b.sortOrder,
