@@ -252,7 +252,23 @@ AdminUser（运营管理员）── 单账号
 
 > 第一版只有一个管理员账号，初始化时通过 seed 脚本创建。
 
-### 2.9 SiteSetting（站点设置）
+
+### 2.9 LoginLog（管理员登录日志）
+
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| id | uuid | 主键 |
+| adminId | uuid? | 关联管理员（失败登录可为空） |
+| username | string | 尝试登录的用户名 |
+| ip | string? | 登录 IP |
+| userAgent | string? | 浏览器 UA |
+| success | boolean | 是否成功 |
+| message | string? | 结果说明（如密码错误/成功） |
+| createdAt | datetime | 时间 |
+
+> 记录管理员每次登录尝试，用于安全审计。
+
+### 2.10 SiteSetting（站点设置）
 
 | 字段 | 类型 | 说明 |
 |---|---|---|

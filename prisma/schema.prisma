@@ -402,13 +402,31 @@ model PostTranslation {
 // ============ 管理员 ============
 
 model AdminUser {
-  id           String    @id @default(uuid())
-  username     String    @unique
+  id           String      @id @default(uuid())
+  username     String      @unique
   passwordHash String
   displayName  String
   lastLoginAt  DateTime?
-  createdAt    DateTime  @default(now())
-  updatedAt    DateTime  @updatedAt
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  loginLogs    LoginLog[]
+}
+
+// 管理员登录日志
+model LoginLog {
+  id        String    @id @default(uuid())
+  adminId   String?
+  username  String
+  ip        String?
+  userAgent String?
+  success   Boolean   @default(false)
+  message   String?
+  createdAt DateTime  @default(now())
+
+  admin AdminUser? @relation(fields: [adminId], references: [id], onDelete: SetNull)
+
+  @@index([adminId])
+  @@index([createdAt])
 }
 
 // ============ 站点设置 ============
