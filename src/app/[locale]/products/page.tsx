@@ -1,7 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { db } from "@/lib/db";
 import { t } from "@/lib/site";
-import { parseFreqMHz } from "@/lib/param-alias";
+import { parseFreqMHz, normParamValue, formatFreq } from "@/lib/param-alias";
 import { routing } from "@/i18n/routing";
 import ProductFilters from "./product-filters";
 import ProductParamFilter from "./product-param-filter";
@@ -14,9 +14,10 @@ export function generateStaticParams() {
 export const metadata = { title: "产品中心 | 按参数选型" };
 
 function parseParamFilters(searchParams: URLSearchParams, defs: any[]) {
-  const filters: { def: any; type: string; min?: number; max?: number; values?: string[]; on?: boolean }[] = [];
+  const filters: { def: any; defIds: string[]; type: string; min?: number; max?: number; values?: string[]; on?: boolean }[] = [];
   for (const def of defs) {
     if (!def.isFilterable) continue;
+    const defIds = def.defIds ?? [def.id];
     const min = searchParams.get(`p_${def.key}_min`);
     const max = searchParams.get(`p_${def.key}_max`);
     const values = searchParams.get(`p_${def.key}`);
@@ -25,6 +26,7 @@ function parseParamFilters(searchParams: URLSearchParams, defs: any[]) {
       if (min || max) {
         filters.push({
           def,
+          defIds,
           type: def.type,
           min: min ? parseFloat(min) : undefined,
           max: max ? parseFloat(max) : undefined,
@@ -32,13 +34,13 @@ function parseParamFilters(searchParams: URLSearchParams, defs: any[]) {
       }
     } else if (def.type === "enum") {
       if (le) {
-        filters.push({ def, type: "enum_le", max: parseFloat(le) });
+        filters.push({ def, defIds, type: "enum_le", max: parseFloat(le) });
       } else if (values) {
-        filters.push({ def, type: "enum", values: values.split(",").filter(Boolean) });
+        filters.push({ def, defIds, type: "enum", values: values.split(",").filter(Boolean) });
       }
     } else if (def.type === "boolean") {
       const on = searchParams.get(`p_${def.key}`);
-      if (on === "1" || on === "true") filters.push({ def, type: "boolean", on: true });
+      if (on === "1" || on === "true") filters.push({ def, defIds, type: "boolean", on: true });
     }
   }
   return filters;
@@ -90,25 +92,69 @@ export default async function ProductsPage({
   }
 
   // 参数筛选：综合站用品牌分类的参数定义（产品参数挂在品牌定义上）
-  // 选中全站品类 → 找对应品牌顶层分类 → 取参数定义（按 key 合并）
+  // 选中全站品类 → 找对应品牌顶层分类 → 按 key 跨品牌聚合参数定义
   let filterDefs: any[] = [];
   if (currentCategory) {
     // 找到该全站品类对应的品牌顶层分类（siteCategoryId 指向该品类、且无 parent）
     const brandTopCats = brandCats.filter(
       (bc) => bc.siteCategoryId && categoryIds.includes(bc.siteCategoryId)
     );
-    const defsById = new Map<string, any>();
-    for (const btc of brandTopCats) {
-      const defs = await db.paramDefinition.findMany({
-        where: { categoryId: btc.id, isFilterable: true },
-        include: { translations: true },
-        orderBy: { sortOrder: "asc" },
-      });
-      for (const d of defs) {
-        if (!defsById.has(d.key)) defsById.set(d.key, d);
-      }
+    const allDefs = await db.paramDefinition.findMany({
+      where: { categoryId: { in: brandTopCats.map((c) => c.id) }, isFilterable: true },
+      include: { translations: true },
+      orderBy: [{ sortOrder: "asc" }, { createdAt: "asc" }],
+    });
+    // 按 key 聚合：每个 key 保留所有品牌的 def id（用于跨品牌筛选与档位聚合）
+    const byKey = new Map<string, any[]>();
+    for (const d of allDefs) {
+      const arr = byKey.get(d.key) ?? [];
+      arr.push(d);
+      byKey.set(d.key, arr);
     }
-    filterDefs = [...defsById.values()];
+    for (const [key, defs] of byKey) {
+      filterDefs.push({ ...defs[0], defIds: defs.map((d: any) => d.id) });
+    }
+    // 聚合滑块/胶囊档位：从该 key 全部产品的实际参数值聚合（单值、规范格式、排除范围型）
+    filterDefs = await Promise.all(
+      filterDefs.map(async (fd: any) => {
+        const rows = await db.productParamValue.findMany({
+          where: { paramDefinitionId: { in: fd.defIds } },
+          select: { valueString: true },
+          distinct: ["valueString"],
+        });
+        const freqMap = new Map<number, string>();
+        const otherMap = new Map<string, string>(); // 归一化键 → 最短原始值
+        for (const r of rows) {
+          if (!r.valueString) continue;
+          const v = r.valueString.trim().replace(/[；;，,。、\u00A0]+$/g, "");
+          if (!v) continue;
+          if (/[~～\-–—]/.test(v)) continue; // 范围型（如频率范围）跳过
+          const mhz = parseFreqMHz(v);
+          if (mhz !== null) {
+            if (!freqMap.has(mhz)) freqMap.set(mhz, formatFreq(mhz));
+          } else {
+            const norm = normParamValue(v);
+            if (!norm) continue;
+            const existing = otherMap.get(norm);
+            if (!existing || v.length < existing.length) otherMap.set(norm, v);
+          }
+        }
+        if (freqMap.size > 1) {
+          // 滑块参数：数值升序
+          const arr = [...freqMap.entries()]
+            .sort((a, b) => a[0] - b[0])
+            .map(([, val]) => ({ value: val, label_zh: val, label_en: val }));
+          return { ...fd, type: "enum", options: JSON.stringify(arr) };
+        } else if (otherMap.size > 0) {
+          // 普通枚举（胶囊点选）
+          const arr = [...otherMap.entries()]
+            .sort((a, b) => a[0].localeCompare(b[0], "zh"))
+            .map(([, val]) => ({ value: val, label_zh: val, label_en: val }));
+          return { ...fd, type: "enum", options: JSON.stringify(arr) };
+        }
+        return fd;
+      })
+    );
   }
 
   const filters = parseParamFilters(searchParamsObj, filterDefs);
@@ -128,7 +174,7 @@ export default async function ProductsPage({
   if (filters.length > 0) {
     const productIdsByDef: Record<string, string[]> = {};
     for (const f of filters) {
-      let wherePv: any = { paramDefinitionId: f.def.id };
+      let wherePv: any = { paramDefinitionId: { in: f.defIds } };
       if (f.type === "number" || f.type === "range") {
         if (f.min !== undefined && f.max !== undefined) {
           wherePv = {
@@ -144,25 +190,25 @@ export default async function ProductsPage({
           wherePv = { ...wherePv, OR: [{ valueNumber: { lte: f.max } }, { valueMax: { lte: f.max } }] };
         }
       } else if (f.type === "enum") {
-        // valueString 是 "A | B | C" 格式：JS 层按选项 token 精确匹配（任一命中即入选）
+        // valueString 是 "A | B | C" 格式：归一化后精确匹配（任一命中即入选），跨品牌 defIds
         const all = await db.productParamValue.findMany({
-          where: { paramDefinitionId: f.def.id },
+          where: { paramDefinitionId: { in: f.defIds } },
           select: { productId: true, valueString: true },
         });
-        const wanted = new Set(f.values ?? []);
+        const wanted = new Set((f.values ?? []).map(normParamValue));
         const matched = all
           .filter((row) => {
             if (!row.valueString) return false;
-            const tokens = row.valueString.split("|").map((s) => s.trim());
+            const tokens = row.valueString.split("|").map((s) => normParamValue(s));
             return tokens.some((tok) => wanted.has(tok));
           })
           .map((r) => r.productId);
         productIdsByDef[f.def.id] = matched;
         continue;
       } else if (f.type === "enum_le") {
-        // 滑块：数值 ≤ 上限（解析 valueString 为 MHz）
+        // 兼容旧 URL（p_xxx_le=数值，≤ 筛选）；新滑块不再生成此参数
         const all = await db.productParamValue.findMany({
-          where: { paramDefinitionId: f.def.id },
+          where: { paramDefinitionId: { in: f.defIds } },
           select: { productId: true, valueString: true },
         });
         const matched = all

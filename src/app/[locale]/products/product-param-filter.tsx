@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "@/i18n/navigation";
-import { parseFreqMHz } from "@/lib/param-alias";
+import { parseFreqMHz, normParamValue } from "@/lib/param-alias";
 
 type FilterDef = {
   id: string;
@@ -11,7 +11,10 @@ type FilterDef = {
   unit: string | null;
   options: string | null;
   name: string;
+  defIds?: string[];
 };
+
+type SliderStep = { value: string; mhz: number };
 
 function parseOptions(raw: string | null): { value: string; label_zh: string; label_en: string }[] {
   if (!raw) return [];
@@ -53,16 +56,23 @@ export default function ProductParamFilter({
 
   // 顶层计算每个 def 的滑块档位（避免在 JSX 里调 hooks）
   const sliderStepsMap = useMemo(() => {
-    const m = new Map<string, number[]>();
+    const m = new Map<string, SliderStep[]>();
     for (const def of filterDefs) {
       if (!isSliderDef(def)) continue;
-      const set = new Set<number>();
+      const arr: SliderStep[] = [];
       for (const o of parseOptions(def.options)) {
         const v = parseFreqMHz(o.value);
-        if (v !== null) set.add(v);
+        if (v !== null) arr.push({ value: o.value, mhz: v });
       }
-      const arr = [...set].sort((a, b) => a - b);
-      if (arr.length > 1) m.set(def.id, arr);
+      const seen = new Set<number>();
+      const uniq = arr
+        .sort((a, b) => a.mhz - b.mhz)
+        .filter((x) => {
+          if (seen.has(x.mhz)) return false;
+          seen.add(x.mhz);
+          return true;
+        });
+      if (uniq.length > 1) m.set(def.id, uniq);
     }
     return m;
   }, [filterDefs]);
@@ -111,8 +121,7 @@ export default function ProductParamFilter({
               {expanded ? labels.collapse : `${labels.showMore} (${filterDefs.length - 4})`}
             </button>
           )}
-          {(currentParams[`p_${visibleDefs[0]?.key}_le`] ||
-            Object.keys(currentParams).some((k) => k.startsWith("p_"))) && (
+          {Object.keys(currentParams).some((k) => k.startsWith("p_")) && (
             <a
               href={`/products${currentCategory ? `?category=${currentCategory}` : ""}`}
               className="text-xs text-slate-400 hover:text-sky-600"
@@ -128,7 +137,8 @@ export default function ProductParamFilter({
           const opts = parseOptions(def.options);
           const sliderSteps = sliderStepsMap.get(def.id) ?? [];
           const isSlider = sliderSteps.length > 1;
-          const curLe = currentParams[`p_${def.key}_le`] ? parseFloat(currentParams[`p_${def.key}_le`]!) : null;
+          // 滑块当前精确值（URL 里 p_<key> 存原始 token）
+          const curValue = currentParams[`p_${def.key}`];
           const prevValues = (currentParams[`p_${def.key}`] ?? "").split(",").filter(Boolean);
 
           return (
@@ -142,13 +152,10 @@ export default function ProductParamFilter({
 
               {isSlider ? (
                 <SliderFilter
-                  defKey={def.key}
                   steps={sliderSteps}
-                  currentLe={curLe}
+                  currentValue={curValue}
                   isEn={isEn}
-                  onCommit={(mhz) =>
-                    push({ [`p_${def.key}_le`]: mhz !== null ? String(mhz) : undefined })
-                  }
+                  onCommit={(v) => push({ [`p_${def.key}`]: v !== null ? v : undefined })}
                 />
               ) : def.type === "number" || def.type === "range" ? (
                 <div className="flex items-center gap-1.5">
@@ -221,60 +228,39 @@ export default function ProductParamFilter({
   );
 }
 
-function formatMHz(mhz: number, isEn: boolean): string {
-  if (mhz >= 1000) return `${mhz / 1000} GHz`;
-  return `${mhz} MHz`;
-}
-
-/** 离散档位滑块：只在真实存在的参数档位间滑动，拖动流畅，停顿后提交 */
+/** 离散档位滑块：只在真实存在的参数档位间滑动，选中即精确匹配该值 */
 function SliderFilter({
-  defKey,
   steps,
-  currentLe,
+  currentValue,
   isEn,
   onCommit,
 }: {
-  defKey: string;
-  steps: number[];
-  currentLe: number | null;
+  steps: SliderStep[];
+  currentValue: string | undefined; // 当前 URL 里的精确值（原始 token）
   isEn: boolean;
-  onCommit: (mhz: number | null) => void; // null = 清除（不限）
+  onCommit: (value: string | null) => void; // null = 清除（不限）
 }) {
   const last = steps.length - 1;
-  // 初始 index：找到 ≤ currentLe 的最大档位；无则最右（不限）
-  const initialIdx = useMemo(() => {
-    if (currentLe !== null) {
-      let best = last;
-      for (let i = 0; i < steps.length; i++) {
-        if (steps[i] <= currentLe) best = i;
-        else break;
-      }
-      return best;
+  const findIdx = (val: string | undefined) => {
+    if (val) {
+      const norm = normParamValue(val);
+      const i = steps.findIndex((s) => normParamValue(s.value) === norm);
+      return i >= 0 ? i : last;
     }
     return last;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  const [idx, setIdx] = useState(initialIdx);
+  };
+  const [idx, setIdx] = useState(() => findIdx(currentValue));
   const timer = useRef<any>(null);
 
   // URL 变化（外部 push 后）同步 index
   useEffect(() => {
-    if (currentLe !== null) {
-      let best = last;
-      for (let i = 0; i < steps.length; i++) {
-        if (steps[i] <= currentLe) best = i;
-        else break;
-      }
-      setIdx(best);
-    } else {
-      setIdx(last);
-    }
+    setIdx(findIdx(currentValue));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentLe]);
+  }, [currentValue]);
 
   function commit(i: number) {
     if (i >= last) onCommit(null);
-    else onCommit(steps[i]);
+    else onCommit(steps[i].value);
   }
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -291,7 +277,7 @@ function SliderFilter({
   return (
     <div>
       <div className="mb-1 text-center text-sm font-semibold text-sky-700">
-        {isLimited ? `≤ ${formatMHz(steps[idx], isEn)}` : (isEn ? "Any" : "不限")}
+        {isLimited ? steps[idx].value : (isEn ? "Any" : "不限")}
       </div>
       <input
         type="range"
@@ -303,11 +289,11 @@ function SliderFilter({
         className="w-full accent-sky-600"
       />
       <div className="mt-0.5 flex justify-between text-[10px] text-slate-400">
-        <span>{formatMHz(steps[0], isEn)}</span>
-        <span>{formatMHz(steps[last], isEn)}</span>
+        <span>{steps[0].value}</span>
+        <span>{steps[last].value}</span>
       </div>
       <div className="mt-1 flex items-center justify-between text-[10px] text-slate-400">
-        <span>{isEn ? "drag to set limit" : "拖动设置上限"}</span>
+        <span>{isEn ? "select exact value" : "选择准确值"}</span>
         {isLimited && (
           <button
             type="button"

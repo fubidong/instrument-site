@@ -47,3 +47,26 @@ export function parseFreqMHz(s: string | null | undefined): number | null {
   if (unit.includes("hz")) return num / 1e6;
   return null;
 }
+
+/** 归一化参数值用于精确匹配：去所有空白、去尾部标点、去尾部"通道/ch/channels"、统一小写
+ * 例："100 MHz" / "100MHz" / "100MHz；" → "100mhz"
+ * 例："4" / "4通道" / "4 channels" → "4"
+ */
+export function normParamValue(s: string | null | undefined): string {
+  if (!s) return "";
+  return s
+    .replace(/[\s\u00A0]+/g, "")
+    .replace(/[；;，,。、\u00A0]+$/g, "")
+    .replace(/(通道|channels?)$/i, "")
+    .toLowerCase();
+}
+
+/** 把 MHz 数值规范化为可读频率文本：150→"150 MHz"，1000→"1 GHz" */
+export function formatFreq(mhz: number): string {
+  const fmt = (n: number) => {
+    const s = Number.isInteger(n) ? String(n) : n.toFixed(2).replace(/\.?0+$/, "");
+    return s;
+  };
+  if (mhz >= 1000) return `${fmt(mhz / 1000)} GHz`;
+  return `${fmt(mhz)} MHz`;
+}
