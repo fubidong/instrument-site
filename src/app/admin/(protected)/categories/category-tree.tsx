@@ -39,7 +39,7 @@ export default function CategoryTree({
     return (
       <>
         <tr className="hover:bg-slate-50">
-          <td className="px-4 py-3">
+          <td className="whitespace-nowrap px-4 py-3">
             <div className="flex items-center gap-2" style={{ paddingLeft: `${depth * 24}px` }}>
               {hasChildren ? (
                 <button
@@ -62,11 +62,11 @@ export default function CategoryTree({
               <span className="font-medium text-slate-800">{node.zhName}</span>
             </div>
           </td>
-          <td className="px-4 py-3 font-mono text-xs text-slate-500">{node.code}</td>
-          <td className="px-4 py-3 text-slate-600">{node.enName || "-"}</td>
-          <td className="px-4 py-3 text-slate-500">{node.sortOrder}</td>
-          <td className="px-4 py-3 text-slate-500">{node.productCount}</td>
-          <td className="px-4 py-3">
+          <td className="whitespace-nowrap px-4 py-3 font-mono text-xs text-slate-500">{node.code}</td>
+          <td className="whitespace-nowrap px-4 py-3 text-slate-600">{node.enName || "-"}</td>
+          <td className="whitespace-nowrap px-4 py-3 text-slate-500">{node.sortOrder}</td>
+          <td className="whitespace-nowrap px-4 py-3 text-slate-500">{node.productCount}</td>
+          <td className="whitespace-nowrap px-4 py-3">
             <div className="flex items-center gap-3">
               <Link href={`/admin/categories/${node.id}/edit`} className="text-sky-600 hover:underline">
                 编辑
@@ -112,21 +112,23 @@ export default function CategoryTree({
           </button>
         </div>
       </div>
-      <table className="w-full text-sm">
-        <thead>
-          <tr className="border-b border-slate-200 text-left text-slate-500">
-            <th className="px-4 py-3 font-medium">类别名称</th>
-            <th className="px-4 py-3 font-medium">代码</th>
-            <th className="px-4 py-3 font-medium">英文名</th>
-            <th className="px-4 py-3 font-medium">排序</th>
-            <th className="px-4 py-3 font-medium">产品数</th>
-            <th className="px-4 py-3 font-medium">操作</th>
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-slate-100">
-          {nodes.map((node) => renderNode(node, 0))}
-        </tbody>
-      </table>
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-[760px] text-sm">
+          <thead>
+            <tr className="border-b border-slate-200 text-left text-slate-500">
+              <th className="whitespace-nowrap px-4 py-3 font-medium">类别名称</th>
+              <th className="whitespace-nowrap px-4 py-3 font-medium">代码</th>
+              <th className="whitespace-nowrap px-4 py-3 font-medium">英文名</th>
+              <th className="whitespace-nowrap px-4 py-3 font-medium">排序</th>
+              <th className="whitespace-nowrap px-4 py-3 font-medium">产品数</th>
+              <th className="whitespace-nowrap px-4 py-3 font-medium">操作</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-100">
+            {nodes.map((node) => renderNode(node, 0))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

@@ -311,14 +311,14 @@ export default function ProductsTable({
         </button>
       </div>
 
-      <div className="rounded-lg border border-slate-200 bg-white">
+      <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
         {products.length === 0 ? (
           <p className="p-8 text-center text-sm text-slate-400">没有符合条件的产品</p>
         ) : (
-          <table className="w-full text-sm">
+          <table className="w-full min-w-[900px] text-sm">
             <thead>
               <tr className="border-b border-slate-200 text-left text-slate-500">
-                <th className="w-10 px-3 py-3">
+                <th className="w-10 whitespace-nowrap px-3 py-3">
                   <input
                     type="checkbox"
                     checked={isAllSelected}
@@ -328,14 +328,14 @@ export default function ProductsTable({
                     className="h-4 w-4"
                   />
                 </th>
-                <th className="px-4 py-3 font-medium">型号</th>
-                <th className="px-4 py-3 font-medium">品牌</th>
-                <th className="px-4 py-3 font-medium">系列</th>
-                <th className="px-4 py-3 font-medium">中文名</th>
-                <th className="px-4 py-3 font-medium">英文名</th>
-                <th className="px-4 py-3 font-medium">排序</th>
-                <th className="px-4 py-3 font-medium">状态</th>
-                <th className="px-4 py-3 font-medium">操作</th>
+                <th className="whitespace-nowrap px-4 py-3 font-medium">型号</th>
+                <th className="whitespace-nowrap px-4 py-3 font-medium">品牌</th>
+                <th className="whitespace-nowrap px-4 py-3 font-medium">系列</th>
+                <th className="whitespace-nowrap px-4 py-3 font-medium">中文名</th>
+                <th className="whitespace-nowrap px-4 py-3 font-medium">英文名</th>
+                <th className="whitespace-nowrap px-4 py-3 font-medium">排序</th>
+                <th className="whitespace-nowrap px-4 py-3 font-medium">状态</th>
+                <th className="whitespace-nowrap px-4 py-3 font-medium">操作</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
@@ -349,7 +349,7 @@ export default function ProductsTable({
                     key={p.id}
                     className={`hover:bg-slate-50 ${selected.includes(p.id) ? "bg-sky-50/50" : ""}`}
                   >
-                    <td className="px-3 py-3">
+                    <td className="whitespace-nowrap px-3 py-3">
                       <input
                         type="checkbox"
                         checked={selected.includes(p.id)}
@@ -361,15 +361,15 @@ export default function ProductsTable({
                         className="h-4 w-4"
                       />
                     </td>
-                    <td className="px-4 py-3 font-mono text-xs font-semibold text-slate-800">
+                    <td className="whitespace-nowrap px-4 py-3 font-mono text-xs font-semibold text-slate-800">
                       {p.model}
                     </td>
-                    <td className="px-4 py-3 text-slate-700">{bt["zh"]?.name ?? "-"}</td>
-                    <td className="px-4 py-3 text-slate-600">{lt["zh"]?.name ?? p.productLine.code}</td>
-                    <td className="px-4 py-3 text-slate-800">{nameOf(p, "zh") ?? "-"}</td>
-                    <td className="px-4 py-3 text-slate-600">{nameOf(p, "en") ?? "-"}</td>
-                    <td className="px-4 py-3 text-slate-500">{p.sortOrder}</td>
-                    <td className="px-4 py-3">
+                    <td className="whitespace-nowrap px-4 py-3 text-slate-700">{bt["zh"]?.name ?? "-"}</td>
+                    <td className="whitespace-nowrap px-4 py-3 text-slate-600">{lt["zh"]?.name ?? p.productLine.code}</td>
+                    <td className="whitespace-nowrap px-4 py-3 text-slate-800">{nameOf(p, "zh") ?? "-"}</td>
+                    <td className="whitespace-nowrap px-4 py-3 text-slate-600">{nameOf(p, "en") ?? "-"}</td>
+                    <td className="whitespace-nowrap px-4 py-3 text-slate-500">{p.sortOrder}</td>
+                    <td className="whitespace-nowrap px-4 py-3">
                       <span
                         className={`rounded-full px-2 py-0.5 text-xs font-medium ${
                           p.isActive ? "bg-green-100 text-green-700" : "bg-slate-100 text-slate-500"
