@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getSiteSettings } from "@/lib/site";
 import { getBrand, getBrandCategories } from "@/lib/brand";
+import { getNavTree } from "@/lib/nav";
+import SiteNav from "@/components/site-nav";
 import { getBrandLocale, brandPath } from "@/lib/brand-locale";
 import BrandLocaleSwitcher from "./brand-locale-switcher";
 
@@ -25,12 +27,13 @@ export default async function BrandLayout({
   const brandName = brand.name[locale]?.name ?? brand.name["zh"]?.name ?? brand.code;
 
   const categories = await getBrandCategories(brand.id, locale);
-  // 主导航仅展示 showInNav=true 的品类（后台可控制显示/隐藏），按 sortOrder 排序
+  // 页脚"产品中心"列仍用品类（导航本体由 NavMenu 驱动）
   const topCats = categories.filter((c) => !c.parentId && c.showInNav);
-  const childrenOf = (id: string) => categories.filter((c) => c.parentId === id && c.showInNav);
 
   const settings = await getSiteSettings(locale);
   const base = brandPath(brand.code, locale);
+  const navTree = await getNavTree({ brandId: brand.id, includeHidden: false });
+  const navHref = (n: { path: string }) => `${base}${n.path === "/" ? "" : n.path}`;
 
   return (
     <NextIntlClientProvider messages={messages}>
@@ -73,57 +76,7 @@ export default async function BrandLayout({
             </Link>
 
             <nav className="hidden items-center gap-1 md:flex">
-              <Link
-                href={base}
-                className="whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
-              >
-                {isEn ? "Home" : "首页"}
-              </Link>
-              {/* 产品中心下拉收纳（避免品类过多导致文字折行竖排） */}
-              <div className="group relative">
-                <Link
-                  href={`${base}/category/${topCats[0]?.code.toLowerCase() ?? ""}`}
-                  className="flex items-center gap-1 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
-                >
-                  {isEn ? "Products" : "产品中心"}
-                  <span className="text-xs">▾</span>
-                </Link>
-                <div className="invisible absolute left-0 top-full z-50 max-h-[70vh] w-64 overflow-y-auto rounded-lg border border-slate-200 bg-white p-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
-                  {topCats.map((c) => {
-                    const subs = childrenOf(c.id);
-                    return (
-                      <div key={c.id}>
-                        <Link
-                          href={`${base}/category/${c.code.toLowerCase()}`}
-                          className="flex items-center justify-between whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-700"
-                        >
-                          {c.name}
-                          {subs.length > 0 && <span className="ml-2 text-xs text-slate-400">▸</span>}
-                        </Link>
-                        {subs.length > 0 && (
-                          <div className="ml-3 border-l border-slate-100 pl-2">
-                            {subs.map((s) => (
-                              <Link
-                                key={s.id}
-                                href={`${base}/category/${s.code.toLowerCase()}`}
-                                className="block whitespace-nowrap rounded px-3 py-1.5 text-xs text-slate-500 hover:bg-sky-50 hover:text-sky-700"
-                              >
-                                {s.name}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-              <Link
-                href={`${base}/contact`}
-                className="whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
-              >
-                {isEn ? "Contact" : "联系我们"}
-              </Link>
+              <SiteNav nodes={navTree} hrefFor={navHref} isEn={isEn} />
             </nav>
 
             <Link

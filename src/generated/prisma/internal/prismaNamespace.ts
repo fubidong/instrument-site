@@ -418,6 +418,8 @@ export const ModelName = {
   PostTranslation: 'PostTranslation',
   AdminUser: 'AdminUser',
   LoginLog: 'LoginLog',
+  NavMenu: 'NavMenu',
+  NavMenuTranslation: 'NavMenuTranslation',
   SiteSetting: 'SiteSetting',
   MediaFolder: 'MediaFolder',
   MediaAsset: 'MediaAsset'
@@ -436,7 +438,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "brand" | "brandTranslation" | "category" | "categoryTranslation" | "brandCategory" | "productLine" | "productLineTranslation" | "product" | "productTranslation" | "productImage" | "paramGroup" | "paramGroupTranslation" | "paramDefinition" | "paramDefinitionTranslation" | "productParamValue" | "document" | "inquiry" | "post" | "postTranslation" | "adminUser" | "loginLog" | "siteSetting" | "mediaFolder" | "mediaAsset"
+    modelProps: "brand" | "brandTranslation" | "category" | "categoryTranslation" | "brandCategory" | "productLine" | "productLineTranslation" | "product" | "productTranslation" | "productImage" | "paramGroup" | "paramGroupTranslation" | "paramDefinition" | "paramDefinitionTranslation" | "productParamValue" | "document" | "inquiry" | "post" | "postTranslation" | "adminUser" | "loginLog" | "navMenu" | "navMenuTranslation" | "siteSetting" | "mediaFolder" | "mediaAsset"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -1994,6 +1996,154 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    NavMenu: {
+      payload: Prisma.$NavMenuPayload<ExtArgs>
+      fields: Prisma.NavMenuFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.NavMenuFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.NavMenuFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuPayload>
+        }
+        findFirst: {
+          args: Prisma.NavMenuFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.NavMenuFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuPayload>
+        }
+        findMany: {
+          args: Prisma.NavMenuFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuPayload>[]
+        }
+        create: {
+          args: Prisma.NavMenuCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuPayload>
+        }
+        createMany: {
+          args: Prisma.NavMenuCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.NavMenuCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuPayload>[]
+        }
+        delete: {
+          args: Prisma.NavMenuDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuPayload>
+        }
+        update: {
+          args: Prisma.NavMenuUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuPayload>
+        }
+        deleteMany: {
+          args: Prisma.NavMenuDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.NavMenuUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.NavMenuUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuPayload>[]
+        }
+        upsert: {
+          args: Prisma.NavMenuUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuPayload>
+        }
+        aggregate: {
+          args: Prisma.NavMenuAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateNavMenu>
+        }
+        groupBy: {
+          args: Prisma.NavMenuGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.NavMenuGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.NavMenuCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.NavMenuCountAggregateOutputType> | number
+        }
+      }
+    }
+    NavMenuTranslation: {
+      payload: Prisma.$NavMenuTranslationPayload<ExtArgs>
+      fields: Prisma.NavMenuTranslationFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.NavMenuTranslationFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuTranslationPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.NavMenuTranslationFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuTranslationPayload>
+        }
+        findFirst: {
+          args: Prisma.NavMenuTranslationFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuTranslationPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.NavMenuTranslationFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuTranslationPayload>
+        }
+        findMany: {
+          args: Prisma.NavMenuTranslationFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuTranslationPayload>[]
+        }
+        create: {
+          args: Prisma.NavMenuTranslationCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuTranslationPayload>
+        }
+        createMany: {
+          args: Prisma.NavMenuTranslationCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.NavMenuTranslationCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuTranslationPayload>[]
+        }
+        delete: {
+          args: Prisma.NavMenuTranslationDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuTranslationPayload>
+        }
+        update: {
+          args: Prisma.NavMenuTranslationUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuTranslationPayload>
+        }
+        deleteMany: {
+          args: Prisma.NavMenuTranslationDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.NavMenuTranslationUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.NavMenuTranslationUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuTranslationPayload>[]
+        }
+        upsert: {
+          args: Prisma.NavMenuTranslationUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$NavMenuTranslationPayload>
+        }
+        aggregate: {
+          args: Prisma.NavMenuTranslationAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateNavMenuTranslation>
+        }
+        groupBy: {
+          args: Prisma.NavMenuTranslationGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.NavMenuTranslationGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.NavMenuTranslationCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.NavMenuTranslationCountAggregateOutputType> | number
+        }
+      }
+    }
     SiteSetting: {
       payload: Prisma.$SiteSettingPayload<ExtArgs>
       fields: Prisma.SiteSettingFieldRefs
@@ -2556,6 +2706,36 @@ export const LoginLogScalarFieldEnum = {
 export type LoginLogScalarFieldEnum = (typeof LoginLogScalarFieldEnum)[keyof typeof LoginLogScalarFieldEnum]
 
 
+export const NavMenuScalarFieldEnum = {
+  id: 'id',
+  parentId: 'parentId',
+  icon: 'icon',
+  path: 'path',
+  permission: 'permission',
+  sort: 'sort',
+  isVisible: 'isVisible',
+  isExternal: 'isExternal',
+  target: 'target',
+  platform: 'platform',
+  brandId: 'brandId',
+  deletedAt: 'deletedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type NavMenuScalarFieldEnum = (typeof NavMenuScalarFieldEnum)[keyof typeof NavMenuScalarFieldEnum]
+
+
+export const NavMenuTranslationScalarFieldEnum = {
+  id: 'id',
+  navMenuId: 'navMenuId',
+  locale: 'locale',
+  name: 'name'
+} as const
+
+export type NavMenuTranslationScalarFieldEnum = (typeof NavMenuTranslationScalarFieldEnum)[keyof typeof NavMenuTranslationScalarFieldEnum]
+
+
 export const SiteSettingScalarFieldEnum = {
   id: 'id',
   key: 'key',
@@ -2953,6 +3133,8 @@ export type GlobalOmitConfig = {
   postTranslation?: Prisma.PostTranslationOmit
   adminUser?: Prisma.AdminUserOmit
   loginLog?: Prisma.LoginLogOmit
+  navMenu?: Prisma.NavMenuOmit
+  navMenuTranslation?: Prisma.NavMenuTranslationOmit
   siteSetting?: Prisma.SiteSettingOmit
   mediaFolder?: Prisma.MediaFolderOmit
   mediaAsset?: Prisma.MediaAssetOmit

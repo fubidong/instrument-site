@@ -1,59 +1,37 @@
 import { db } from "@/lib/db";
-import NavigationManager, { type NavCategory, type NavBrand } from "./navigation-manager";
+import { getNavTree, type NavNode } from "@/lib/nav";
+import NavigationManager from "./navigation-manager";
+
+export type NavBrandOpt = { id: string; code: string; zhName: string; enName: string };
 
 export default async function NavigationPage() {
-  const [cats, brands] = await Promise.all([
-    db.category.findMany({
-      include: {
-        translations: true,
-        _count: { select: { products: true } },
-      },
-      orderBy: [{ sortOrder: "asc" }, { code: "asc" }],
-    }),
+  const [tree, brands] = await Promise.all([
+    getNavTree({ includeHidden: true }),
     db.brand.findMany({
-      include: { translations: true },
       where: { isActive: true },
+      include: { translations: true },
       orderBy: [{ sortOrder: "asc" }, { code: "asc" }],
     }),
   ]);
 
-  const categories: NavCategory[] = cats.map((c) => {
-    const t = Object.fromEntries(c.translations.map((tr) => [tr.locale, tr]));
-    return {
-      id: c.id,
-      code: c.code,
-      parentId: c.parentId,
-      brandId: c.brandId,
-      sortOrder: c.sortOrder,
-      showInNav: c.showInNav,
-      zhName: t["zh"]?.name ?? c.code,
-      enName: t["en"]?.name ?? "",
-      productCount: c._count.products,
-    };
-  });
-
-  const navBrands: NavBrand[] = brands.map((b) => {
+  const navBrands: NavBrandOpt[] = brands.map((b) => {
     const t = Object.fromEntries(b.translations.map((tr) => [tr.locale, tr]));
-    return {
-      id: b.id,
-      code: b.code,
-      sortOrder: b.sortOrder,
-      zhName: t["zh"]?.name ?? b.code,
-      enName: t["en"]?.name ?? "",
-    };
+    return { id: b.id, code: b.code, zhName: t["zh"]?.name ?? b.code, enName: t["en"]?.name ?? "" };
   });
 
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-bold text-slate-900">导航设置</h1>
+          <h1 className="text-xl font-bold text-slate-900">导航菜单管理</h1>
           <p className="mt-1 text-sm text-slate-500">
-            集中控制各品类是否显示在站点主导航（综合站 + 各品牌站），支持按品牌筛选与批量显隐
+            独立的可配置导航（支持无限级层级、显示开关、排序、外链），综合站与各品牌站各自一套；软删除可恢复
           </p>
         </div>
       </div>
-      <NavigationManager categories={categories} brands={navBrands} />
+      <NavigationManager tree={tree} brands={navBrands} />
     </div>
   );
 }
+
+export type { NavNode };

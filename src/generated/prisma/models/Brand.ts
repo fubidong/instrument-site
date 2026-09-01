@@ -246,6 +246,7 @@ export type BrandWhereInput = {
   productLines?: Prisma.ProductLineListRelationFilter
   products?: Prisma.ProductListRelationFilter
   documents?: Prisma.DocumentListRelationFilter
+  navMenus?: Prisma.NavMenuListRelationFilter
 }
 
 export type BrandOrderByWithRelationInput = {
@@ -263,6 +264,7 @@ export type BrandOrderByWithRelationInput = {
   productLines?: Prisma.ProductLineOrderByRelationAggregateInput
   products?: Prisma.ProductOrderByRelationAggregateInput
   documents?: Prisma.DocumentOrderByRelationAggregateInput
+  navMenus?: Prisma.NavMenuOrderByRelationAggregateInput
 }
 
 export type BrandWhereUniqueInput = Prisma.AtLeast<{
@@ -283,6 +285,7 @@ export type BrandWhereUniqueInput = Prisma.AtLeast<{
   productLines?: Prisma.ProductLineListRelationFilter
   products?: Prisma.ProductListRelationFilter
   documents?: Prisma.DocumentListRelationFilter
+  navMenus?: Prisma.NavMenuListRelationFilter
 }, "id" | "code">
 
 export type BrandOrderByWithAggregationInput = {
@@ -330,6 +333,7 @@ export type BrandCreateInput = {
   productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateInput = {
@@ -347,6 +351,7 @@ export type BrandUncheckedCreateInput = {
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUpdateInput = {
@@ -364,6 +369,7 @@ export type BrandUpdateInput = {
   productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateInput = {
@@ -381,6 +387,7 @@ export type BrandUncheckedUpdateInput = {
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandCreateManyInput = {
@@ -579,6 +586,22 @@ export type BrandUpdateOneWithoutDocumentsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.BrandUpdateToOneWithWhereWithoutDocumentsInput, Prisma.BrandUpdateWithoutDocumentsInput>, Prisma.BrandUncheckedUpdateWithoutDocumentsInput>
 }
 
+export type BrandCreateNestedOneWithoutNavMenusInput = {
+  create?: Prisma.XOR<Prisma.BrandCreateWithoutNavMenusInput, Prisma.BrandUncheckedCreateWithoutNavMenusInput>
+  connectOrCreate?: Prisma.BrandCreateOrConnectWithoutNavMenusInput
+  connect?: Prisma.BrandWhereUniqueInput
+}
+
+export type BrandUpdateOneWithoutNavMenusNestedInput = {
+  create?: Prisma.XOR<Prisma.BrandCreateWithoutNavMenusInput, Prisma.BrandUncheckedCreateWithoutNavMenusInput>
+  connectOrCreate?: Prisma.BrandCreateOrConnectWithoutNavMenusInput
+  upsert?: Prisma.BrandUpsertWithoutNavMenusInput
+  disconnect?: Prisma.BrandWhereInput | boolean
+  delete?: Prisma.BrandWhereInput | boolean
+  connect?: Prisma.BrandWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.BrandUpdateToOneWithWhereWithoutNavMenusInput, Prisma.BrandUpdateWithoutNavMenusInput>, Prisma.BrandUncheckedUpdateWithoutNavMenusInput>
+}
+
 export type BrandCreateWithoutTranslationsInput = {
   id?: string
   code: string
@@ -593,6 +616,7 @@ export type BrandCreateWithoutTranslationsInput = {
   productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateWithoutTranslationsInput = {
@@ -609,6 +633,7 @@ export type BrandUncheckedCreateWithoutTranslationsInput = {
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandCreateOrConnectWithoutTranslationsInput = {
@@ -641,6 +666,7 @@ export type BrandUpdateWithoutTranslationsInput = {
   productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateWithoutTranslationsInput = {
@@ -657,6 +683,7 @@ export type BrandUncheckedUpdateWithoutTranslationsInput = {
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandCreateWithoutOwnCategoriesInput = {
@@ -673,6 +700,7 @@ export type BrandCreateWithoutOwnCategoriesInput = {
   productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateWithoutOwnCategoriesInput = {
@@ -689,6 +717,7 @@ export type BrandUncheckedCreateWithoutOwnCategoriesInput = {
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandCreateOrConnectWithoutOwnCategoriesInput = {
@@ -721,6 +750,7 @@ export type BrandUpdateWithoutOwnCategoriesInput = {
   productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateWithoutOwnCategoriesInput = {
@@ -737,6 +767,7 @@ export type BrandUncheckedUpdateWithoutOwnCategoriesInput = {
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandCreateWithoutCategoriesInput = {
@@ -753,6 +784,7 @@ export type BrandCreateWithoutCategoriesInput = {
   productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateWithoutCategoriesInput = {
@@ -769,6 +801,7 @@ export type BrandUncheckedCreateWithoutCategoriesInput = {
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandCreateOrConnectWithoutCategoriesInput = {
@@ -801,6 +834,7 @@ export type BrandUpdateWithoutCategoriesInput = {
   productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateWithoutCategoriesInput = {
@@ -817,6 +851,7 @@ export type BrandUncheckedUpdateWithoutCategoriesInput = {
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandCreateWithoutProductLinesInput = {
@@ -833,6 +868,7 @@ export type BrandCreateWithoutProductLinesInput = {
   ownCategories?: Prisma.CategoryCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateWithoutProductLinesInput = {
@@ -849,6 +885,7 @@ export type BrandUncheckedCreateWithoutProductLinesInput = {
   ownCategories?: Prisma.CategoryUncheckedCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandCreateOrConnectWithoutProductLinesInput = {
@@ -881,6 +918,7 @@ export type BrandUpdateWithoutProductLinesInput = {
   ownCategories?: Prisma.CategoryUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateWithoutProductLinesInput = {
@@ -897,6 +935,7 @@ export type BrandUncheckedUpdateWithoutProductLinesInput = {
   ownCategories?: Prisma.CategoryUncheckedUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandCreateWithoutProductsInput = {
@@ -913,6 +952,7 @@ export type BrandCreateWithoutProductsInput = {
   ownCategories?: Prisma.CategoryCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateWithoutProductsInput = {
@@ -929,6 +969,7 @@ export type BrandUncheckedCreateWithoutProductsInput = {
   ownCategories?: Prisma.CategoryUncheckedCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandCreateOrConnectWithoutProductsInput = {
@@ -961,6 +1002,7 @@ export type BrandUpdateWithoutProductsInput = {
   ownCategories?: Prisma.CategoryUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateWithoutProductsInput = {
@@ -977,6 +1019,7 @@ export type BrandUncheckedUpdateWithoutProductsInput = {
   ownCategories?: Prisma.CategoryUncheckedUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandCreateWithoutDocumentsInput = {
@@ -993,6 +1036,7 @@ export type BrandCreateWithoutDocumentsInput = {
   ownCategories?: Prisma.CategoryCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateWithoutDocumentsInput = {
@@ -1009,6 +1053,7 @@ export type BrandUncheckedCreateWithoutDocumentsInput = {
   ownCategories?: Prisma.CategoryUncheckedCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandCreateOrConnectWithoutDocumentsInput = {
@@ -1041,6 +1086,7 @@ export type BrandUpdateWithoutDocumentsInput = {
   ownCategories?: Prisma.CategoryUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateWithoutDocumentsInput = {
@@ -1057,6 +1103,91 @@ export type BrandUncheckedUpdateWithoutDocumentsInput = {
   ownCategories?: Prisma.CategoryUncheckedUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
+}
+
+export type BrandCreateWithoutNavMenusInput = {
+  id?: string
+  code: string
+  logo?: string | null
+  website?: string | null
+  sortOrder?: number
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  translations?: Prisma.BrandTranslationCreateNestedManyWithoutBrandInput
+  categories?: Prisma.BrandCategoryCreateNestedManyWithoutBrandInput
+  ownCategories?: Prisma.CategoryCreateNestedManyWithoutBrandInput
+  productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
+  products?: Prisma.ProductCreateNestedManyWithoutBrandInput
+  documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
+}
+
+export type BrandUncheckedCreateWithoutNavMenusInput = {
+  id?: string
+  code: string
+  logo?: string | null
+  website?: string | null
+  sortOrder?: number
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  translations?: Prisma.BrandTranslationUncheckedCreateNestedManyWithoutBrandInput
+  categories?: Prisma.BrandCategoryUncheckedCreateNestedManyWithoutBrandInput
+  ownCategories?: Prisma.CategoryUncheckedCreateNestedManyWithoutBrandInput
+  productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
+  products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
+  documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
+}
+
+export type BrandCreateOrConnectWithoutNavMenusInput = {
+  where: Prisma.BrandWhereUniqueInput
+  create: Prisma.XOR<Prisma.BrandCreateWithoutNavMenusInput, Prisma.BrandUncheckedCreateWithoutNavMenusInput>
+}
+
+export type BrandUpsertWithoutNavMenusInput = {
+  update: Prisma.XOR<Prisma.BrandUpdateWithoutNavMenusInput, Prisma.BrandUncheckedUpdateWithoutNavMenusInput>
+  create: Prisma.XOR<Prisma.BrandCreateWithoutNavMenusInput, Prisma.BrandUncheckedCreateWithoutNavMenusInput>
+  where?: Prisma.BrandWhereInput
+}
+
+export type BrandUpdateToOneWithWhereWithoutNavMenusInput = {
+  where?: Prisma.BrandWhereInput
+  data: Prisma.XOR<Prisma.BrandUpdateWithoutNavMenusInput, Prisma.BrandUncheckedUpdateWithoutNavMenusInput>
+}
+
+export type BrandUpdateWithoutNavMenusInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  code?: Prisma.StringFieldUpdateOperationsInput | string
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  website?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  translations?: Prisma.BrandTranslationUpdateManyWithoutBrandNestedInput
+  categories?: Prisma.BrandCategoryUpdateManyWithoutBrandNestedInput
+  ownCategories?: Prisma.CategoryUpdateManyWithoutBrandNestedInput
+  productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
+  products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
+  documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
+}
+
+export type BrandUncheckedUpdateWithoutNavMenusInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  code?: Prisma.StringFieldUpdateOperationsInput | string
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  website?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  translations?: Prisma.BrandTranslationUncheckedUpdateManyWithoutBrandNestedInput
+  categories?: Prisma.BrandCategoryUncheckedUpdateManyWithoutBrandNestedInput
+  ownCategories?: Prisma.CategoryUncheckedUpdateManyWithoutBrandNestedInput
+  productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
+  products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
+  documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 
@@ -1071,6 +1202,7 @@ export type BrandCountOutputType = {
   productLines: number
   products: number
   documents: number
+  navMenus: number
 }
 
 export type BrandCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -1080,6 +1212,7 @@ export type BrandCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.
   productLines?: boolean | BrandCountOutputTypeCountProductLinesArgs
   products?: boolean | BrandCountOutputTypeCountProductsArgs
   documents?: boolean | BrandCountOutputTypeCountDocumentsArgs
+  navMenus?: boolean | BrandCountOutputTypeCountNavMenusArgs
 }
 
 /**
@@ -1134,6 +1267,13 @@ export type BrandCountOutputTypeCountDocumentsArgs<ExtArgs extends runtime.Types
   where?: Prisma.DocumentWhereInput
 }
 
+/**
+ * BrandCountOutputType without action
+ */
+export type BrandCountOutputTypeCountNavMenusArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.NavMenuWhereInput
+}
+
 
 export type BrandSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -1150,6 +1290,7 @@ export type BrandSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = 
   productLines?: boolean | Prisma.Brand$productLinesArgs<ExtArgs>
   products?: boolean | Prisma.Brand$productsArgs<ExtArgs>
   documents?: boolean | Prisma.Brand$documentsArgs<ExtArgs>
+  navMenus?: boolean | Prisma.Brand$navMenusArgs<ExtArgs>
   _count?: boolean | Prisma.BrandCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["brand"]>
 
@@ -1194,6 +1335,7 @@ export type BrandInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs =
   productLines?: boolean | Prisma.Brand$productLinesArgs<ExtArgs>
   products?: boolean | Prisma.Brand$productsArgs<ExtArgs>
   documents?: boolean | Prisma.Brand$documentsArgs<ExtArgs>
+  navMenus?: boolean | Prisma.Brand$navMenusArgs<ExtArgs>
   _count?: boolean | Prisma.BrandCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type BrandIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -1208,6 +1350,7 @@ export type $BrandPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
     productLines: Prisma.$ProductLinePayload<ExtArgs>[]
     products: Prisma.$ProductPayload<ExtArgs>[]
     documents: Prisma.$DocumentPayload<ExtArgs>[]
+    navMenus: Prisma.$NavMenuPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1618,6 +1761,7 @@ export interface Prisma__BrandClient<T, Null = never, ExtArgs extends runtime.Ty
   productLines<T extends Prisma.Brand$productLinesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Brand$productLinesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProductLinePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   products<T extends Prisma.Brand$productsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Brand$productsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   documents<T extends Prisma.Brand$documentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Brand$documentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$DocumentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  navMenus<T extends Prisma.Brand$navMenusArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Brand$navMenusArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$NavMenuPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2189,6 +2333,30 @@ export type Brand$documentsArgs<ExtArgs extends runtime.Types.Extensions.Interna
   take?: number
   skip?: number
   distinct?: Prisma.DocumentScalarFieldEnum | Prisma.DocumentScalarFieldEnum[]
+}
+
+/**
+ * Brand.navMenus
+ */
+export type Brand$navMenusArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the NavMenu
+   */
+  select?: Prisma.NavMenuSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the NavMenu
+   */
+  omit?: Prisma.NavMenuOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.NavMenuInclude<ExtArgs> | null
+  where?: Prisma.NavMenuWhereInput
+  orderBy?: Prisma.NavMenuOrderByWithRelationInput | Prisma.NavMenuOrderByWithRelationInput[]
+  cursor?: Prisma.NavMenuWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.NavMenuScalarFieldEnum | Prisma.NavMenuScalarFieldEnum[]
 }
 
 /**

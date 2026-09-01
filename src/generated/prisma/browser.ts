@@ -123,6 +123,16 @@ export type AdminUser = Prisma.AdminUserModel
  */
 export type LoginLog = Prisma.LoginLogModel
 /**
+ * Model NavMenu
+ * 
+ */
+export type NavMenu = Prisma.NavMenuModel
+/**
+ * Model NavMenuTranslation
+ * 
+ */
+export type NavMenuTranslation = Prisma.NavMenuTranslationModel
+/**
  * Model SiteSetting
  * 
  */

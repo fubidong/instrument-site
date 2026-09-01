@@ -5,6 +5,8 @@ import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import SiteLink from "next/link";
 import { getSiteSettings, getSiteCategories, getSiteBrands } from "@/lib/site";
+import { getNavTree } from "@/lib/nav";
+import SiteNav from "@/components/site-nav";
 import LocaleSwitcher from "./locale-switcher";
 
 export function generateStaticParams() {
@@ -23,16 +25,17 @@ export default async function SiteLayout({
   setRequestLocale(locale);
 
   const messages = await getMessages();
-  const [settings, categories, brands] = await Promise.all([
+  const [settings, categories, brands, navTree] = await Promise.all([
     getSiteSettings(locale),
     getSiteCategories(locale),
     getSiteBrands(locale),
+    getNavTree({ brandId: null, includeHidden: false }),
   ]);
 
-  // 主导航仅展示 showInNav=true 的品类（后台可控制显示/隐藏）
+  // 页脚"产品中心"列仍用品类（导航本体由 NavMenu 驱动）
   const topCategories = categories.filter((c) => !c.parentId && c.showInNav);
-  const childrenOf = (id: string) => categories.filter((c) => c.parentId === id && c.showInNav);
   const isEn = locale === "en";
+  const navHref = (n: { path: string }) => `/${locale}${n.path === "/" ? "" : n.path}`;
 
   return (
     <NextIntlClientProvider messages={messages}>
@@ -76,68 +79,7 @@ export default async function SiteLayout({
           </Link>
 
           <nav className="hidden items-center gap-1 md:flex">
-            <Link
-              href="/"
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
-            >
-              {isEn ? "Home" : "首页"}
-            </Link>
-            {/* 产品中心下拉 */}
-            <div className="group relative">
-              <Link
-                href="/products"
-                className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
-              >
-                {isEn ? "Products" : "产品中心"}
-                <span className="ml-1 text-xs">▾</span>
-              </Link>
-              <div className="invisible absolute left-0 top-full z-50 w-56 rounded-lg border border-slate-200 bg-white p-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
-                {topCategories.map((c) => {
-                  const subs = childrenOf(c.id);
-                  return (
-                    <div key={c.id}>
-                      <Link
-                        href={`/products?category=${c.code}`}
-                        className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-700"
-                      >
-                        {c.name}
-                      </Link>
-                      {subs.length > 0 && (
-                        <div className="ml-3 border-l border-slate-100 pl-2">
-                          {subs.map((s) => (
-                            <Link
-                              key={s.id}
-                              href={`/products?category=${s.code}`}
-                              className="block rounded px-3 py-1.5 text-xs text-slate-500 hover:bg-sky-50 hover:text-sky-700"
-                            >
-                              {s.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-            <Link
-              href="/brands"
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
-            >
-              {isEn ? "Brands" : "代理品牌"}
-            </Link>
-            <Link
-              href="/documents"
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
-            >
-              {isEn ? "Resources" : "资料下载"}
-            </Link>
-            <Link
-              href="/contact"
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
-            >
-              {isEn ? "Contact" : "联系我们"}
-            </Link>
+            <SiteNav nodes={navTree} hrefFor={navHref} isEn={isEn} />
           </nav>
 
           <Link

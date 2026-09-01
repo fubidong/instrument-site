@@ -72,6 +72,8 @@ export const ModelName = {
   PostTranslation: 'PostTranslation',
   AdminUser: 'AdminUser',
   LoginLog: 'LoginLog',
+  NavMenu: 'NavMenu',
+  NavMenuTranslation: 'NavMenuTranslation',
   SiteSetting: 'SiteSetting',
   MediaFolder: 'MediaFolder',
   MediaAsset: 'MediaAsset'
@@ -392,6 +394,36 @@ export const LoginLogScalarFieldEnum = {
 } as const
 
 export type LoginLogScalarFieldEnum = (typeof LoginLogScalarFieldEnum)[keyof typeof LoginLogScalarFieldEnum]
+
+
+export const NavMenuScalarFieldEnum = {
+  id: 'id',
+  parentId: 'parentId',
+  icon: 'icon',
+  path: 'path',
+  permission: 'permission',
+  sort: 'sort',
+  isVisible: 'isVisible',
+  isExternal: 'isExternal',
+  target: 'target',
+  platform: 'platform',
+  brandId: 'brandId',
+  deletedAt: 'deletedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type NavMenuScalarFieldEnum = (typeof NavMenuScalarFieldEnum)[keyof typeof NavMenuScalarFieldEnum]
+
+
+export const NavMenuTranslationScalarFieldEnum = {
+  id: 'id',
+  navMenuId: 'navMenuId',
+  locale: 'locale',
+  name: 'name'
+} as const
+
+export type NavMenuTranslationScalarFieldEnum = (typeof NavMenuTranslationScalarFieldEnum)[keyof typeof NavMenuTranslationScalarFieldEnum]
 
 
 export const SiteSettingScalarFieldEnum = {

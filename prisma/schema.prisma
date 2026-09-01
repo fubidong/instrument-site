@@ -81,6 +81,7 @@ model Brand {
   productLines   ProductLine[]
   products       Product[]
   documents      Document[]
+  navMenus       NavMenu[] // 品牌站导航菜单
 }
 
 model BrandTranslation {
@@ -435,6 +436,44 @@ model LoginLog {
 
   @@index([adminId])
   @@index([createdAt])
+}
+
+// ============ 导航菜单（独立于品类的可配置导航） ============
+
+model NavMenu {
+  id         String    @id @default(uuid())
+  parentId   String? // 父级菜单（无限级树形自关联）
+  icon       String? // 图标：支持 emoji 或图标类名
+  path       String    @default("/") // 路由地址（外链时填完整 URL）
+  permission String? // 权限标识（预留，可为空）
+  sort       Int       @default(0) // 排序权重（同级内升序）
+  isVisible  Boolean   @default(true) // 是否在导航显示（后台可控制）
+  isExternal Boolean   @default(false) // 是否外链
+  target     String    @default("_self") // 打开方式：_self | _blank
+  platform   String    @default("web") // 端：web | admin | app（预留多端）
+  brandId    String? // null = 综合站导航；非空 = 品牌站导航
+  deletedAt  DateTime? // 软删除标记
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  parent   NavMenu?  @relation("NavTree", fields: [parentId], references: [id], onDelete: Cascade)
+  children NavMenu[] @relation("NavTree")
+  brand    Brand?    @relation(fields: [brandId], references: [id])
+  translations NavMenuTranslation[]
+
+  @@index([parentId, sort])
+  @@index([platform, brandId, isVisible, deletedAt])
+}
+
+model NavMenuTranslation {
+  id        String @id @default(uuid())
+  navMenuId String
+  locale    Locale
+  name      String // 菜单显示名称
+
+  navMenu NavMenu @relation(fields: [navMenuId], references: [id], onDelete: Cascade)
+
+  @@unique([navMenuId, locale])
 }
 
 // ============ 站点设置 ============
