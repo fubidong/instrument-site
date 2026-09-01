@@ -152,7 +152,8 @@ export default async function ProductsPage({
             .map(([, val]) => ({ value: val, label_zh: val, label_en: val }));
           return { ...fd, type: "enum", options: JSON.stringify(arr) };
         }
-        return fd;
+        // 无聚合结果：清空预置 options（避免 def.options 陈旧值污染筛选）
+        return { ...fd, options: null };
       })
     );
   }
