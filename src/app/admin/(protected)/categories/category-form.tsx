@@ -16,6 +16,7 @@ type CategoryOption = {
 export default function CategoryForm({
   category,
   categories,
+  presetParentId,
 }: {
   category: {
     id: string;
@@ -30,6 +31,7 @@ export default function CategoryForm({
     }[];
   } | null;
   categories: CategoryOption[];
+  presetParentId?: string | null;
 }) {
   const [state, formAction, pending] = useActionState(saveCategoryAction, initialState);
   const [icon, setIcon] = useState(category?.icon ?? "");
@@ -79,7 +81,7 @@ export default function CategoryForm({
             <label className="mb-1 block text-sm font-medium text-slate-700">父类别</label>
             <select
               name="parentId"
-              defaultValue={category?.parentId ?? ""}
+              defaultValue={category?.parentId ?? presetParentId ?? ""}
               className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
             >
               <option value="">无（顶级类别）</option>

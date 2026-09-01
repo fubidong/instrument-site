@@ -1,18 +1,6 @@
 import Link from "next/link";
 import { db } from "@/lib/db";
-import DeleteCategoryButton from "./delete-category-button";
-
-type CategoryNode = {
-  id: string;
-  code: string;
-  icon: string | null;
-  sortOrder: number;
-  parentId: string | null;
-  zhName: string;
-  enName: string;
-  children: CategoryNode[];
-  productCount: number;
-};
+import CategoryTree, { type CategoryTreeNode } from "./category-tree";
 
 function buildTree(
   cats: {
@@ -25,7 +13,7 @@ function buildTree(
     _count: { products: number };
   }[],
   parentId: string | null = null
-): CategoryNode[] {
+): CategoryTreeNode[] {
   return cats
     .filter((c) => c.parentId === parentId)
     .sort((a, b) => a.sortOrder - b.sortOrder || a.code.localeCompare(b.code))
@@ -45,40 +33,15 @@ function buildTree(
     });
 }
 
-function CategoryRow({ node, depth }: { node: CategoryNode; depth: number }) {
-  return (
-    <>
-      <tr className="hover:bg-slate-50">
-        <td className="px-4 py-3">
-          <div className="flex items-center gap-2" style={{ paddingLeft: `${depth * 24}px` }}>
-            {depth > 0 && <span className="text-slate-300">└</span>}
-            {node.icon ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={node.icon} alt="" className="h-6 w-6 rounded object-contain bg-white" />
-            ) : (
-              <span className="text-slate-300">▫</span>
-            )}
-            <span className="font-medium text-slate-800">{node.zhName}</span>
-          </div>
-        </td>
-        <td className="px-4 py-3 font-mono text-xs text-slate-500">{node.code}</td>
-        <td className="px-4 py-3 text-slate-600">{node.enName || "-"}</td>
-        <td className="px-4 py-3 text-slate-500">{node.sortOrder}</td>
-        <td className="px-4 py-3 text-slate-500">{node.productCount}</td>
-        <td className="px-4 py-3">
-          <div className="flex items-center gap-2">
-            <Link href={`/admin/categories/${node.id}/edit`} className="text-sky-600 hover:underline">
-              编辑
-            </Link>
-            <DeleteCategoryButton id={node.id} />
-          </div>
-        </td>
-      </tr>
-      {node.children.map((child) => (
-        <CategoryRow key={child.id} node={child} depth={depth + 1} />
-      ))}
-    </>
-  );
+/** 收集所有有子类的节点 id（用于默认全部展开） */
+function collectParentIds(nodes: CategoryTreeNode[], out: string[] = []) {
+  for (const n of nodes) {
+    if (n.children.length > 0) {
+      out.push(n.id);
+      collectParentIds(n.children, out);
+    }
+  }
+  return out;
 }
 
 export default async function CategoriesPage() {
@@ -90,6 +53,7 @@ export default async function CategoriesPage() {
   });
 
   const tree = buildTree(cats as any);
+  const defaultExpanded = collectParentIds(tree);
 
   return (
     <div className="space-y-4">
@@ -97,7 +61,7 @@ export default async function CategoriesPage() {
         <div>
           <h1 className="text-xl font-bold text-slate-900">产品类别</h1>
           <p className="mt-1 text-sm text-slate-500">
-            共 {cats.length} 个类别，树形结构
+            共 {cats.length} 个类别，树形结构（点击 ▾ 折叠 / ▸ 展开）
           </p>
         </div>
         <Link
@@ -125,11 +89,7 @@ export default async function CategoriesPage() {
                 <th className="px-4 py-3 font-medium">操作</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100">
-              {tree.map((node) => (
-                <CategoryRow key={node.id} node={node} depth={0} />
-              ))}
-            </tbody>
+            <CategoryTree nodes={tree} defaultExpanded={defaultExpanded} />
           </table>
         )}
       </div>
