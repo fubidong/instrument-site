@@ -4,6 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import { getBrand, getBrandCategories } from "@/lib/brand";
 import { getBrandCategoryStats } from "@/lib/brand-stats";
 import { getBrandLocale, brandPath } from "@/lib/brand-locale";
+import BrandSeriesExplorer from "@/components/brand-series-explorer";
 
 export default async function BrandHomePage({
   params,
@@ -114,26 +115,30 @@ export default async function BrandHomePage({
         </div>
       </section>
 
-      {/* 系列总览 */}
+      {/* 产品系列（按品类分组 + 交互切换） */}
       <section className="border-t border-slate-100 bg-slate-50 py-12">
         <div className="mx-auto max-w-7xl px-4">
           <h2 className="text-center text-xl font-bold text-slate-900">
             {isEn ? "Product Series" : "产品系列"}
           </h2>
-          <div className="mt-6 flex flex-wrap justify-center gap-2">
-            {topCats.map((c) => {
-              const st = stats[c.id];
-              return (st?.series ?? []).map((s) => (
-                <Link
-                  key={`${c.id}-${s.name}`}
-                  href={`${base}/category/${c.code.toLowerCase()}/${encodeURIComponent(s.code)}`}
-                  className="rounded-md border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 hover:border-sky-300"
-                >
-                  {s.name}
-                  <span className="ml-1 text-xs text-slate-400">({s.models})</span>
-                </Link>
-              ));
-            })}
+          <p className="mt-1 text-center text-sm text-slate-500">
+            {isEn
+              ? `Explore ${brandName} series by category`
+              : `按品类浏览 ${brandName} 全系列`}
+          </p>
+          <div className="mt-6">
+            <BrandSeriesExplorer
+              cats={topCats.map((c) => ({
+                id: c.id,
+                code: c.code,
+                name: c.name,
+                enName: c.enName,
+                icon: c.icon,
+              }))}
+              stats={stats}
+              base={base}
+              isEn={isEn}
+            />
           </div>
         </div>
       </section>
