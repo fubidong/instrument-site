@@ -53,7 +53,7 @@ export default async function CategoriesPage() {
   });
 
   const tree = buildTree(cats as any);
-  const defaultExpanded = collectParentIds(tree);
+  const defaultCollapsed = collectParentIds(tree);
 
   return (
     <div className="space-y-4">
@@ -61,7 +61,7 @@ export default async function CategoriesPage() {
         <div>
           <h1 className="text-xl font-bold text-slate-900">产品类别</h1>
           <p className="mt-1 text-sm text-slate-500">
-            共 {cats.length} 个类别，树形结构（点击 ▾ 折叠 / ▸ 展开）
+            共 {cats.length} 个类别，树形结构（支持展开/折叠）
           </p>
         </div>
         <Link
@@ -72,27 +72,13 @@ export default async function CategoriesPage() {
         </Link>
       </div>
 
-      <div className="rounded-lg border border-slate-200 bg-white">
-        {cats.length === 0 ? (
-          <p className="p-8 text-center text-sm text-slate-400">
-            暂无类别，点击右上角新增
-          </p>
-        ) : (
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-slate-200 text-left text-slate-500">
-                <th className="px-4 py-3 font-medium">类别名称</th>
-                <th className="px-4 py-3 font-medium">代码</th>
-                <th className="px-4 py-3 font-medium">英文名</th>
-                <th className="px-4 py-3 font-medium">排序</th>
-                <th className="px-4 py-3 font-medium">产品数</th>
-                <th className="px-4 py-3 font-medium">操作</th>
-              </tr>
-            </thead>
-            <CategoryTree nodes={tree} defaultExpanded={defaultExpanded} />
-          </table>
-        )}
-      </div>
+      {cats.length === 0 ? (
+        <div className="rounded-lg border border-slate-200 bg-white p-8 text-center text-sm text-slate-400">
+          暂无类别，点击右上角新增
+        </div>
+      ) : (
+        <CategoryTree nodes={tree} defaultCollapsed={defaultCollapsed} />
+      )}
     </div>
   );
 }

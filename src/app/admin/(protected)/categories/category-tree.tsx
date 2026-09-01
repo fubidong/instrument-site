@@ -18,12 +18,12 @@ export type CategoryTreeNode = {
 
 export default function CategoryTree({
   nodes,
-  defaultExpanded,
+  defaultCollapsed,
 }: {
   nodes: CategoryTreeNode[];
-  defaultExpanded: string[];
+  defaultCollapsed: string[];
 }) {
-  const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+  const [collapsed, setCollapsed] = useState<Set<string>>(new Set(defaultCollapsed));
   const toggle = (id: string) =>
     setCollapsed((s) => {
       const next = new Set(s);
@@ -31,7 +31,6 @@ export default function CategoryTree({
       else next.add(id);
       return next;
     });
-  // 折叠集合取反判断展开：默认全展开（defaultExpanded 全集），折叠过的才收起
   const isOpen = (id: string) => !collapsed.has(id);
 
   function renderNode(node: CategoryTreeNode, depth: number): React.ReactNode {
@@ -77,7 +76,7 @@ export default function CategoryTree({
                 className="text-emerald-600 hover:underline"
                 title="在此类别下新建子类别"
               >
-                + 新建下一类别
+                +
               </Link>
               <DeleteCategoryButton id={node.id} />
             </div>
@@ -91,8 +90,47 @@ export default function CategoryTree({
   }
 
   return (
-    <tbody className="divide-y divide-slate-100">
-      {nodes.map((node) => renderNode(node, 0))}
-    </tbody>
+    <div className="rounded-lg border border-slate-200 bg-white">
+      <div className="flex items-center justify-between border-b border-slate-200 px-4 py-2">
+        <span className="text-xs text-slate-400">
+          共 {countNodes(nodes)} 个类别 · 点击 ▾ 折叠 / ▸ 展开
+        </span>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setCollapsed(new Set())}
+            className="rounded border border-slate-200 px-2.5 py-1 text-xs text-slate-600 hover:bg-slate-50"
+          >
+            全部展开
+          </button>
+          <button
+            type="button"
+            onClick={() => setCollapsed(new Set(defaultCollapsed))}
+            className="rounded border border-slate-200 px-2.5 py-1 text-xs text-slate-600 hover:bg-slate-50"
+          >
+            全部折叠
+          </button>
+        </div>
+      </div>
+      <table className="w-full text-sm">
+        <thead>
+          <tr className="border-b border-slate-200 text-left text-slate-500">
+            <th className="px-4 py-3 font-medium">类别名称</th>
+            <th className="px-4 py-3 font-medium">代码</th>
+            <th className="px-4 py-3 font-medium">英文名</th>
+            <th className="px-4 py-3 font-medium">排序</th>
+            <th className="px-4 py-3 font-medium">产品数</th>
+            <th className="px-4 py-3 font-medium">操作</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-slate-100">
+          {nodes.map((node) => renderNode(node, 0))}
+        </tbody>
+      </table>
+    </div>
   );
+}
+
+function countNodes(nodes: CategoryTreeNode[]): number {
+  return nodes.reduce((n, x) => n + 1 + countNodes(x.children), 0);
 }
