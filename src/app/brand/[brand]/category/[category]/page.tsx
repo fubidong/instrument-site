@@ -95,7 +95,7 @@ export default async function BrandCategoryPage({
                   <tbody>
                     {/* 型号行（图片+型号） */}
                     <tr>
-                      <td className="w-36 border-r border-slate-100 bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-500 align-top">
+                      <td className="min-w-40 whitespace-nowrap border-r border-slate-100 bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-500 align-top">
                         {isEn ? "Model" : "型号"}
                       </td>
                       {series.models.map((m) => (
@@ -120,7 +120,7 @@ export default async function BrandCategoryPage({
                     {/* 关键参数行 */}
                     {series.compareKeys.map((key) => (
                       <tr key={key.id}>
-                        <td className="border-r border-slate-100 bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-600">
+                        <td className="min-w-40 whitespace-nowrap border-r border-slate-100 bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-600">
                           {key.name}
                           {key.unit && <span className="ml-0.5 text-slate-400">{key.unit}</span>}
                         </td>

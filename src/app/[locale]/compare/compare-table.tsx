@@ -109,7 +109,7 @@ export default function CompareTable({
       <table className="w-full min-w-[600px] text-sm">
         <thead>
           <tr className="border-b border-slate-200 bg-slate-50">
-            <th className="w-32 px-4 py-3 text-left font-semibold text-slate-500">{L.param}</th>
+            <th className="w-32 whitespace-nowrap px-4 py-3 text-left font-semibold text-slate-500">{L.param}</th>
             {products.map((p) => {
               const pt = Object.fromEntries(p.translations.map((tr) => [tr.locale, tr]));
               const bt = Object.fromEntries(p.productLine.brand.translations.map((tr) => [tr.locale, tr]));
@@ -154,7 +154,7 @@ export default function CompareTable({
             const hasDiff = unique.size > 1;
             return (
               <tr key={key} className={rowIdx % 2 ? "bg-slate-50/50" : "bg-white"}>
-                <td className="border-t border-slate-100 px-4 py-2.5 text-slate-500">
+                <td className="whitespace-nowrap border-t border-slate-100 px-4 py-2.5 text-slate-500">
                   {row.name}
                   {row.zhName && row.name !== row.zhName && (
                     <span className="ml-1 text-xs text-slate-300">{row.zhName}</span>
