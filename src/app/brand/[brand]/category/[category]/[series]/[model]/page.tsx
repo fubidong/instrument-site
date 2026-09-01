@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { getBrand, getBrandCategories, getBrandModel } from "@/lib/brand";
 import { getBrandLocale, brandPath } from "@/lib/brand-locale";
+import ProductGallery from "@/components/product-gallery";
 
 export default async function BrandModelPage({
   params,
@@ -64,15 +65,14 @@ export default async function BrandModelPage({
       <div className="rounded-lg border border-slate-200 bg-white p-6">
         <div className="flex flex-wrap gap-8">
           {/* 图片 */}
-          <div className="w-full sm:w-64">
-            {product.coverImage ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={product.coverImage} alt={product.model} className="w-full rounded object-contain" />
-            ) : (
-              <div className="flex h-48 w-full items-center justify-center rounded bg-slate-100 text-slate-400">
-                {isEn ? "N/A" : "无图"}
-              </div>
-            )}
+          <div className="w-full sm:w-80">
+            <ProductGallery
+              coverImage={product.coverImage}
+              images={product.images}
+              alt={product.model}
+              height="h-56"
+              noImageText={isEn ? "No image" : "无图"}
+            />
           </div>
           {/* 信息 */}
           <div className="flex-1">

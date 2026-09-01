@@ -6,6 +6,7 @@ import { t } from "@/lib/site";
 import { routing } from "@/i18n/routing";
 import InquiryForm from "../../contact/inquiry-form";
 import CompareBar from "./compare-bar";
+import ProductGallery from "@/components/product-gallery";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -146,33 +147,12 @@ export default async function ProductDetailPage({
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div className="lg:col-span-1">
-          <div className="rounded-lg border border-slate-200 bg-white p-4">
-            {product.coverImage ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={product.coverImage}
-                alt={pt[locale]?.name ?? pt["zh"]?.name ?? product.model}
-                className="mx-auto h-72 w-full object-contain"
-              />
-            ) : (
-              <div className="flex h-72 w-full items-center justify-center rounded bg-slate-50 text-slate-300">
-                {I.noImage}
-              </div>
-            )}
-          </div>
-          {product.images.length > 0 && (
-            <div className="mt-3 grid grid-cols-4 gap-2">
-              {product.images.map((img) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={img.id}
-                  src={img.imagePath}
-                  alt={img.altText ?? product.model}
-                  className="h-16 w-full rounded border border-slate-200 object-contain"
-                />
-              ))}
-            </div>
-          )}
+          <ProductGallery
+            coverImage={product.coverImage}
+            images={product.images}
+            alt={pt[locale]?.name ?? pt["zh"]?.name ?? product.model}
+            noImageText={I.noImage}
+          />
 
           <div className="mt-4">
             <InquiryForm
