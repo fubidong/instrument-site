@@ -39,6 +39,7 @@ export type CategoryMinAggregateOutputType = {
   code: string | null
   icon: string | null
   sortOrder: number | null
+  showInNav: boolean | null
   parentId: string | null
   brandId: string | null
   siteCategoryId: string | null
@@ -51,6 +52,7 @@ export type CategoryMaxAggregateOutputType = {
   code: string | null
   icon: string | null
   sortOrder: number | null
+  showInNav: boolean | null
   parentId: string | null
   brandId: string | null
   siteCategoryId: string | null
@@ -63,6 +65,7 @@ export type CategoryCountAggregateOutputType = {
   code: number
   icon: number
   sortOrder: number
+  showInNav: number
   parentId: number
   brandId: number
   siteCategoryId: number
@@ -85,6 +88,7 @@ export type CategoryMinAggregateInputType = {
   code?: true
   icon?: true
   sortOrder?: true
+  showInNav?: true
   parentId?: true
   brandId?: true
   siteCategoryId?: true
@@ -97,6 +101,7 @@ export type CategoryMaxAggregateInputType = {
   code?: true
   icon?: true
   sortOrder?: true
+  showInNav?: true
   parentId?: true
   brandId?: true
   siteCategoryId?: true
@@ -109,6 +114,7 @@ export type CategoryCountAggregateInputType = {
   code?: true
   icon?: true
   sortOrder?: true
+  showInNav?: true
   parentId?: true
   brandId?: true
   siteCategoryId?: true
@@ -208,6 +214,7 @@ export type CategoryGroupByOutputType = {
   code: string
   icon: string | null
   sortOrder: number
+  showInNav: boolean
   parentId: string | null
   brandId: string | null
   siteCategoryId: string | null
@@ -243,6 +250,7 @@ export type CategoryWhereInput = {
   code?: Prisma.StringFilter<"Category"> | string
   icon?: Prisma.StringNullableFilter<"Category"> | string | null
   sortOrder?: Prisma.IntFilter<"Category"> | number
+  showInNav?: Prisma.BoolFilter<"Category"> | boolean
   parentId?: Prisma.StringNullableFilter<"Category"> | string | null
   brandId?: Prisma.StringNullableFilter<"Category"> | string | null
   siteCategoryId?: Prisma.StringNullableFilter<"Category"> | string | null
@@ -266,6 +274,7 @@ export type CategoryOrderByWithRelationInput = {
   code?: Prisma.SortOrder
   icon?: Prisma.SortOrderInput | Prisma.SortOrder
   sortOrder?: Prisma.SortOrder
+  showInNav?: Prisma.SortOrder
   parentId?: Prisma.SortOrderInput | Prisma.SortOrder
   brandId?: Prisma.SortOrderInput | Prisma.SortOrder
   siteCategoryId?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -292,6 +301,7 @@ export type CategoryWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.CategoryWhereInput | Prisma.CategoryWhereInput[]
   icon?: Prisma.StringNullableFilter<"Category"> | string | null
   sortOrder?: Prisma.IntFilter<"Category"> | number
+  showInNav?: Prisma.BoolFilter<"Category"> | boolean
   parentId?: Prisma.StringNullableFilter<"Category"> | string | null
   brandId?: Prisma.StringNullableFilter<"Category"> | string | null
   siteCategoryId?: Prisma.StringNullableFilter<"Category"> | string | null
@@ -315,6 +325,7 @@ export type CategoryOrderByWithAggregationInput = {
   code?: Prisma.SortOrder
   icon?: Prisma.SortOrderInput | Prisma.SortOrder
   sortOrder?: Prisma.SortOrder
+  showInNav?: Prisma.SortOrder
   parentId?: Prisma.SortOrderInput | Prisma.SortOrder
   brandId?: Prisma.SortOrderInput | Prisma.SortOrder
   siteCategoryId?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -335,6 +346,7 @@ export type CategoryScalarWhereWithAggregatesInput = {
   code?: Prisma.StringWithAggregatesFilter<"Category"> | string
   icon?: Prisma.StringNullableWithAggregatesFilter<"Category"> | string | null
   sortOrder?: Prisma.IntWithAggregatesFilter<"Category"> | number
+  showInNav?: Prisma.BoolWithAggregatesFilter<"Category"> | boolean
   parentId?: Prisma.StringNullableWithAggregatesFilter<"Category"> | string | null
   brandId?: Prisma.StringNullableWithAggregatesFilter<"Category"> | string | null
   siteCategoryId?: Prisma.StringNullableWithAggregatesFilter<"Category"> | string | null
@@ -347,6 +359,7 @@ export type CategoryCreateInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   parent?: Prisma.CategoryCreateNestedOneWithoutChildrenInput
@@ -367,6 +380,7 @@ export type CategoryUncheckedCreateInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   brandId?: string | null
   siteCategoryId?: string | null
@@ -387,6 +401,7 @@ export type CategoryUpdateInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   parent?: Prisma.CategoryUpdateOneWithoutChildrenNestedInput
@@ -407,6 +422,7 @@ export type CategoryUncheckedUpdateInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -427,6 +443,7 @@ export type CategoryCreateManyInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   brandId?: string | null
   siteCategoryId?: string | null
@@ -439,6 +456,7 @@ export type CategoryUpdateManyMutationInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -448,6 +466,7 @@ export type CategoryUncheckedUpdateManyInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -475,6 +494,7 @@ export type CategoryCountOrderByAggregateInput = {
   code?: Prisma.SortOrder
   icon?: Prisma.SortOrder
   sortOrder?: Prisma.SortOrder
+  showInNav?: Prisma.SortOrder
   parentId?: Prisma.SortOrder
   brandId?: Prisma.SortOrder
   siteCategoryId?: Prisma.SortOrder
@@ -491,6 +511,7 @@ export type CategoryMaxOrderByAggregateInput = {
   code?: Prisma.SortOrder
   icon?: Prisma.SortOrder
   sortOrder?: Prisma.SortOrder
+  showInNav?: Prisma.SortOrder
   parentId?: Prisma.SortOrder
   brandId?: Prisma.SortOrder
   siteCategoryId?: Prisma.SortOrder
@@ -503,6 +524,7 @@ export type CategoryMinOrderByAggregateInput = {
   code?: Prisma.SortOrder
   icon?: Prisma.SortOrder
   sortOrder?: Prisma.SortOrder
+  showInNav?: Prisma.SortOrder
   parentId?: Prisma.SortOrder
   brandId?: Prisma.SortOrder
   siteCategoryId?: Prisma.SortOrder
@@ -766,6 +788,7 @@ export type CategoryCreateWithoutBrandInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   parent?: Prisma.CategoryCreateNestedOneWithoutChildrenInput
@@ -785,6 +808,7 @@ export type CategoryUncheckedCreateWithoutBrandInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   siteCategoryId?: string | null
   createdAt?: Date | string
@@ -833,6 +857,7 @@ export type CategoryScalarWhereInput = {
   code?: Prisma.StringFilter<"Category"> | string
   icon?: Prisma.StringNullableFilter<"Category"> | string | null
   sortOrder?: Prisma.IntFilter<"Category"> | number
+  showInNav?: Prisma.BoolFilter<"Category"> | boolean
   parentId?: Prisma.StringNullableFilter<"Category"> | string | null
   brandId?: Prisma.StringNullableFilter<"Category"> | string | null
   siteCategoryId?: Prisma.StringNullableFilter<"Category"> | string | null
@@ -845,6 +870,7 @@ export type CategoryCreateWithoutChildrenInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   parent?: Prisma.CategoryCreateNestedOneWithoutChildrenInput
@@ -864,6 +890,7 @@ export type CategoryUncheckedCreateWithoutChildrenInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   brandId?: string | null
   siteCategoryId?: string | null
@@ -888,6 +915,7 @@ export type CategoryCreateWithoutParentInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   children?: Prisma.CategoryCreateNestedManyWithoutParentInput
@@ -907,6 +935,7 @@ export type CategoryUncheckedCreateWithoutParentInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   brandId?: string | null
   siteCategoryId?: string | null
   createdAt?: Date | string
@@ -936,6 +965,7 @@ export type CategoryCreateWithoutSiteChildrenInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   parent?: Prisma.CategoryCreateNestedOneWithoutChildrenInput
@@ -955,6 +985,7 @@ export type CategoryUncheckedCreateWithoutSiteChildrenInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   brandId?: string | null
   siteCategoryId?: string | null
@@ -979,6 +1010,7 @@ export type CategoryCreateWithoutSiteCategoryInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   parent?: Prisma.CategoryCreateNestedOneWithoutChildrenInput
@@ -998,6 +1030,7 @@ export type CategoryUncheckedCreateWithoutSiteCategoryInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   brandId?: string | null
   createdAt?: Date | string
@@ -1038,6 +1071,7 @@ export type CategoryUpdateWithoutChildrenInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   parent?: Prisma.CategoryUpdateOneWithoutChildrenNestedInput
@@ -1057,6 +1091,7 @@ export type CategoryUncheckedUpdateWithoutChildrenInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1103,6 +1138,7 @@ export type CategoryUpdateWithoutSiteChildrenInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   parent?: Prisma.CategoryUpdateOneWithoutChildrenNestedInput
@@ -1122,6 +1158,7 @@ export type CategoryUncheckedUpdateWithoutSiteChildrenInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1157,6 +1194,7 @@ export type CategoryCreateWithoutTranslationsInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   parent?: Prisma.CategoryCreateNestedOneWithoutChildrenInput
@@ -1176,6 +1214,7 @@ export type CategoryUncheckedCreateWithoutTranslationsInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   brandId?: string | null
   siteCategoryId?: string | null
@@ -1211,6 +1250,7 @@ export type CategoryUpdateWithoutTranslationsInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   parent?: Prisma.CategoryUpdateOneWithoutChildrenNestedInput
@@ -1230,6 +1270,7 @@ export type CategoryUncheckedUpdateWithoutTranslationsInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1249,6 +1290,7 @@ export type CategoryCreateWithoutBrandsInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   parent?: Prisma.CategoryCreateNestedOneWithoutChildrenInput
@@ -1268,6 +1310,7 @@ export type CategoryUncheckedCreateWithoutBrandsInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   brandId?: string | null
   siteCategoryId?: string | null
@@ -1303,6 +1346,7 @@ export type CategoryUpdateWithoutBrandsInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   parent?: Prisma.CategoryUpdateOneWithoutChildrenNestedInput
@@ -1322,6 +1366,7 @@ export type CategoryUncheckedUpdateWithoutBrandsInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1341,6 +1386,7 @@ export type CategoryCreateWithoutProductLinesInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   parent?: Prisma.CategoryCreateNestedOneWithoutChildrenInput
@@ -1360,6 +1406,7 @@ export type CategoryUncheckedCreateWithoutProductLinesInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   brandId?: string | null
   siteCategoryId?: string | null
@@ -1395,6 +1442,7 @@ export type CategoryUpdateWithoutProductLinesInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   parent?: Prisma.CategoryUpdateOneWithoutChildrenNestedInput
@@ -1414,6 +1462,7 @@ export type CategoryUncheckedUpdateWithoutProductLinesInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1433,6 +1482,7 @@ export type CategoryCreateWithoutProductsInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   parent?: Prisma.CategoryCreateNestedOneWithoutChildrenInput
@@ -1452,6 +1502,7 @@ export type CategoryUncheckedCreateWithoutProductsInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   brandId?: string | null
   siteCategoryId?: string | null
@@ -1487,6 +1538,7 @@ export type CategoryUpdateWithoutProductsInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   parent?: Prisma.CategoryUpdateOneWithoutChildrenNestedInput
@@ -1506,6 +1558,7 @@ export type CategoryUncheckedUpdateWithoutProductsInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1525,6 +1578,7 @@ export type CategoryCreateWithoutParamGroupsInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   parent?: Prisma.CategoryCreateNestedOneWithoutChildrenInput
@@ -1544,6 +1598,7 @@ export type CategoryUncheckedCreateWithoutParamGroupsInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   brandId?: string | null
   siteCategoryId?: string | null
@@ -1579,6 +1634,7 @@ export type CategoryUpdateWithoutParamGroupsInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   parent?: Prisma.CategoryUpdateOneWithoutChildrenNestedInput
@@ -1598,6 +1654,7 @@ export type CategoryUncheckedUpdateWithoutParamGroupsInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1617,6 +1674,7 @@ export type CategoryCreateWithoutParamDefsInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
   parent?: Prisma.CategoryCreateNestedOneWithoutChildrenInput
@@ -1636,6 +1694,7 @@ export type CategoryUncheckedCreateWithoutParamDefsInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   brandId?: string | null
   siteCategoryId?: string | null
@@ -1671,6 +1730,7 @@ export type CategoryUpdateWithoutParamDefsInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   parent?: Prisma.CategoryUpdateOneWithoutChildrenNestedInput
@@ -1690,6 +1750,7 @@ export type CategoryUncheckedUpdateWithoutParamDefsInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -1709,6 +1770,7 @@ export type CategoryCreateManyBrandInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   siteCategoryId?: string | null
   createdAt?: Date | string
@@ -1720,6 +1782,7 @@ export type CategoryUpdateWithoutBrandInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   parent?: Prisma.CategoryUpdateOneWithoutChildrenNestedInput
@@ -1739,6 +1802,7 @@ export type CategoryUncheckedUpdateWithoutBrandInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1758,6 +1822,7 @@ export type CategoryUncheckedUpdateManyWithoutBrandInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1769,6 +1834,7 @@ export type CategoryCreateManyParentInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   brandId?: string | null
   siteCategoryId?: string | null
   createdAt?: Date | string
@@ -1780,6 +1846,7 @@ export type CategoryCreateManySiteCategoryInput = {
   code: string
   icon?: string | null
   sortOrder?: number
+  showInNav?: boolean
   parentId?: string | null
   brandId?: string | null
   createdAt?: Date | string
@@ -1791,6 +1858,7 @@ export type CategoryUpdateWithoutParentInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   children?: Prisma.CategoryUpdateManyWithoutParentNestedInput
@@ -1810,6 +1878,7 @@ export type CategoryUncheckedUpdateWithoutParentInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1829,6 +1898,7 @@ export type CategoryUncheckedUpdateManyWithoutParentInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1840,6 +1910,7 @@ export type CategoryUpdateWithoutSiteCategoryInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   parent?: Prisma.CategoryUpdateOneWithoutChildrenNestedInput
@@ -1859,6 +1930,7 @@ export type CategoryUncheckedUpdateWithoutSiteCategoryInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1878,6 +1950,7 @@ export type CategoryUncheckedUpdateManyWithoutSiteCategoryInput = {
   code?: Prisma.StringFieldUpdateOperationsInput | string
   icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
   parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1983,6 +2056,7 @@ export type CategorySelect<ExtArgs extends runtime.Types.Extensions.InternalArgs
   code?: boolean
   icon?: boolean
   sortOrder?: boolean
+  showInNav?: boolean
   parentId?: boolean
   brandId?: boolean
   siteCategoryId?: boolean
@@ -2007,6 +2081,7 @@ export type CategorySelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exte
   code?: boolean
   icon?: boolean
   sortOrder?: boolean
+  showInNav?: boolean
   parentId?: boolean
   brandId?: boolean
   siteCategoryId?: boolean
@@ -2022,6 +2097,7 @@ export type CategorySelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exte
   code?: boolean
   icon?: boolean
   sortOrder?: boolean
+  showInNav?: boolean
   parentId?: boolean
   brandId?: boolean
   siteCategoryId?: boolean
@@ -2037,6 +2113,7 @@ export type CategorySelectScalar = {
   code?: boolean
   icon?: boolean
   sortOrder?: boolean
+  showInNav?: boolean
   parentId?: boolean
   brandId?: boolean
   siteCategoryId?: boolean
@@ -2044,7 +2121,7 @@ export type CategorySelectScalar = {
   updatedAt?: boolean
 }
 
-export type CategoryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "code" | "icon" | "sortOrder" | "parentId" | "brandId" | "siteCategoryId" | "createdAt" | "updatedAt", ExtArgs["result"]["category"]>
+export type CategoryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "code" | "icon" | "sortOrder" | "showInNav" | "parentId" | "brandId" | "siteCategoryId" | "createdAt" | "updatedAt", ExtArgs["result"]["category"]>
 export type CategoryInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   parent?: boolean | Prisma.Category$parentArgs<ExtArgs>
   children?: boolean | Prisma.Category$childrenArgs<ExtArgs>
@@ -2090,6 +2167,7 @@ export type $CategoryPayload<ExtArgs extends runtime.Types.Extensions.InternalAr
     code: string
     icon: string | null
     sortOrder: number
+    showInNav: boolean
     parentId: string | null
     brandId: string | null
     siteCategoryId: string | null
@@ -2533,6 +2611,7 @@ export interface CategoryFieldRefs {
   readonly code: Prisma.FieldRef<"Category", 'String'>
   readonly icon: Prisma.FieldRef<"Category", 'String'>
   readonly sortOrder: Prisma.FieldRef<"Category", 'Int'>
+  readonly showInNav: Prisma.FieldRef<"Category", 'Boolean'>
   readonly parentId: Prisma.FieldRef<"Category", 'String'>
   readonly brandId: Prisma.FieldRef<"Category", 'String'>
   readonly siteCategoryId: Prisma.FieldRef<"Category", 'String'>

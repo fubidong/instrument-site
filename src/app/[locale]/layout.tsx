@@ -29,8 +29,9 @@ export default async function SiteLayout({
     getSiteBrands(locale),
   ]);
 
-  const topCategories = categories.filter((c) => !c.parentId);
-  const childrenOf = (id: string) => categories.filter((c) => c.parentId === id);
+  // 主导航仅展示 showInNav=true 的品类（后台可控制显示/隐藏）
+  const topCategories = categories.filter((c) => !c.parentId && c.showInNav);
+  const childrenOf = (id: string) => categories.filter((c) => c.parentId === id && c.showInNav);
   const isEn = locale === "en";
 
   return (

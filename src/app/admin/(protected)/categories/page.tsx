@@ -8,6 +8,7 @@ function buildTree(
     code: string;
     icon: string | null;
     sortOrder: number;
+    showInNav: boolean;
     parentId: string | null;
     translations: { locale: string; name: string }[];
     _count: { products: number };
@@ -24,6 +25,7 @@ function buildTree(
         code: c.code,
         icon: c.icon,
         sortOrder: c.sortOrder,
+        showInNav: c.showInNav,
         parentId: c.parentId,
         zhName: t["zh"]?.name ?? c.code,
         enName: t["en"]?.name ?? "",

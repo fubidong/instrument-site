@@ -103,6 +103,7 @@ model Category {
   code           String    @unique
   icon           String?
   sortOrder      Int       @default(0)
+  showInNav      Boolean   @default(true) // 是否在主导航显示（后台可控制）
   parentId       String?
   brandId        String? // null = 全站品类（综合站）；非空 = 品牌分类（品牌站）
   siteCategoryId String? // 品牌分类关联的全站品类（综合站聚合用）

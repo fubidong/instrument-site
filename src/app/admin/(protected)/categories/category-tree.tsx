@@ -3,12 +3,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import DeleteCategoryButton from "./delete-category-button";
+import { toggleCategoryNavAction } from "./actions";
 
 export type CategoryTreeNode = {
   id: string;
   code: string;
   icon: string | null;
   sortOrder: number;
+  showInNav: boolean;
   parentId: string | null;
   zhName: string;
   enName: string;
@@ -65,6 +67,25 @@ export default function CategoryTree({
           <td className="whitespace-nowrap px-4 py-3 font-mono text-xs text-slate-500">{node.code}</td>
           <td className="whitespace-nowrap px-4 py-3 text-slate-600">{node.enName || "-"}</td>
           <td className="whitespace-nowrap px-4 py-3 text-slate-500">{node.sortOrder}</td>
+          <td className="whitespace-nowrap px-4 py-3">
+            <form action={toggleCategoryNavAction}>
+              <input type="hidden" name="id" value={node.id} />
+              <input type="hidden" name="showInNav" value={String(!node.showInNav)} />
+              <button
+                type="submit"
+                title={node.showInNav ? "在导航显示（点击隐藏）" : "不在导航显示（点击显示）"}
+                className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
+                  node.showInNav ? "bg-emerald-500" : "bg-slate-300"
+                }`}
+              >
+                <span
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform ${
+                    node.showInNav ? "translate-x-4" : "translate-x-0.5"
+                  }`}
+                />
+              </button>
+            </form>
+          </td>
           <td className="whitespace-nowrap px-4 py-3 text-slate-500">{node.productCount}</td>
           <td className="whitespace-nowrap px-4 py-3">
             <div className="flex items-center gap-3">
@@ -113,13 +134,17 @@ export default function CategoryTree({
         </div>
       </div>
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[760px] text-sm">
+        <table className="w-full min-w-[860px] text-sm">
           <thead>
             <tr className="border-b border-slate-200 text-left text-slate-500">
               <th className="whitespace-nowrap px-4 py-3 font-medium">类别名称</th>
               <th className="whitespace-nowrap px-4 py-3 font-medium">代码</th>
               <th className="whitespace-nowrap px-4 py-3 font-medium">英文名</th>
               <th className="whitespace-nowrap px-4 py-3 font-medium">排序</th>
+              <th className="whitespace-nowrap px-4 py-3 font-medium">
+                导航显示
+                <span className="ml-1 text-xs font-normal text-slate-400" title="控制该类别是否在站点主导航显示">ⓘ</span>
+              </th>
               <th className="whitespace-nowrap px-4 py-3 font-medium">产品数</th>
               <th className="whitespace-nowrap px-4 py-3 font-medium">操作</th>
             </tr>

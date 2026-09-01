@@ -124,6 +124,7 @@ export const CategoryScalarFieldEnum = {
   code: 'code',
   icon: 'icon',
   sortOrder: 'sortOrder',
+  showInNav: 'showInNav',
   parentId: 'parentId',
   brandId: 'brandId',
   siteCategoryId: 'siteCategoryId',

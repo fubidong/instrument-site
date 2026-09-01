@@ -25,8 +25,9 @@ export default async function BrandLayout({
   const brandName = brand.name[locale]?.name ?? brand.name["zh"]?.name ?? brand.code;
 
   const categories = await getBrandCategories(brand.id, locale);
-  const topCats = categories.filter((c) => !c.parentId);
-  const childrenOf = (id: string) => categories.filter((c) => c.parentId === id);
+  // 主导航仅展示 showInNav=true 的品类（后台可控制显示/隐藏），按 sortOrder 排序
+  const topCats = categories.filter((c) => !c.parentId && c.showInNav);
+  const childrenOf = (id: string) => categories.filter((c) => c.parentId === id && c.showInNav);
 
   const settings = await getSiteSettings(locale);
   const base = brandPath(brand.code, locale);

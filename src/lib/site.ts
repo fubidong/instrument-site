@@ -43,6 +43,7 @@ export const getSiteCategories = cache(async (locale: string = "zh") => {
     name: t(c.translations, locale, "name") || t(c.translations, "zh", "name") || c.code,
     parentId: c.parentId,
     icon: c.icon,
+    showInNav: c.showInNav,
   }));
 });
 

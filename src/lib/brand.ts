@@ -36,6 +36,7 @@ export const getBrandCategories = cache(async (brandId: string, locale: string) 
     parentId: c.parentId,
     siteCategoryId: c.siteCategoryId,
     icon: c.icon,
+    showInNav: c.showInNav,
     name: t(c.translations, locale, "name") || t(c.translations, "zh", "name") || c.code,
     enName: t(c.translations, "en", "name") || c.code,
     zhName: t(c.translations, "zh", "name") || c.code,

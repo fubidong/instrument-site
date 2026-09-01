@@ -24,6 +24,7 @@ export async function saveCategoryAction(
   const parentId = (formData.get("parentId") as string) || "";
   const icon = (formData.get("icon") as string) || "";
   const sortOrder = parseInt(formData.get("sortOrder") as string) || 0;
+  const showInNav = formData.get("showInNav") === "true";
 
   const nameZh = (formData.get("name_zh") as string)?.trim() || "";
   const descZh = (formData.get("desc_zh") as string)?.trim() || "";
@@ -40,7 +41,7 @@ export async function saveCategoryAction(
       await db.$transaction([
         db.category.update({
           where: { id },
-          data: { code, parentId: parentId || null, icon: icon || null, sortOrder },
+          data: { code, parentId: parentId || null, icon: icon || null, sortOrder, showInNav },
         }),
         db.categoryTranslation.upsert({
           where: { categoryId_locale: { categoryId: id, locale: "zh" } },
@@ -78,6 +79,19 @@ export async function saveCategoryAction(
 
   revalidatePath("/admin/categories");
   return { success: "保存成功" };
+}
+
+/**
+ * 切换类别是否在主导航显示
+ */
+export async function toggleCategoryNavAction(formData: FormData) {
+  await requireAdmin();
+  const id = formData.get("id") as string;
+  if (!id) return;
+  const showInNav = formData.get("showInNav") === "true";
+  await db.category.update({ where: { id }, data: { showInNav } });
+  revalidatePath("/admin/categories");
+  revalidatePath("/", "layout");
 }
 
 /**

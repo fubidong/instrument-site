@@ -24,6 +24,7 @@ export default function CategoryForm({
     parentId: string | null;
     icon: string | null;
     sortOrder: number;
+    showInNav: boolean;
     translations: {
       locale: string;
       name: string;
@@ -35,6 +36,7 @@ export default function CategoryForm({
 }) {
   const [state, formAction, pending] = useActionState(saveCategoryAction, initialState);
   const [icon, setIcon] = useState(category?.icon ?? "");
+  const [showInNav, setShowInNav] = useState(category?.showInNav ?? true);
 
   useEffect(() => {
     if (state.redirect) window.location.href = state.redirect;
@@ -106,6 +108,23 @@ export default function CategoryForm({
           <div>
             <label className="mb-1 block text-sm font-medium text-slate-700">图标</label>
             <FileUpload kind="image" value={icon} onChange={setIcon} />
+          </div>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-slate-700">主导航显示</label>
+            <label className="flex cursor-pointer items-center gap-2 rounded-md border border-slate-300 px-3 py-2">
+              <input
+                type="checkbox"
+                name="showInNav"
+                value="true"
+                checked={showInNav}
+                onChange={(e) => setShowInNav(e.target.checked)}
+                className="h-4 w-4 rounded border-slate-300 text-sky-600 focus:ring-sky-500"
+              />
+              <span className="text-sm text-slate-700">
+                {showInNav ? "在站点主导航显示" : "不在主导航显示"}
+              </span>
+            </label>
+            <p className="mt-1 text-xs text-slate-400">关闭后该品类不会出现在前台导航中</p>
           </div>
         </div>
       </section>
