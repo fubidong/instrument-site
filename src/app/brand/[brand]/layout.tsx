@@ -72,37 +72,55 @@ export default async function BrandLayout({
             </Link>
 
             <nav className="hidden items-center gap-1 md:flex">
-              <Link href={base} className="rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">
+              <Link
+                href={base}
+                className="whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
+              >
                 {isEn ? "Home" : "首页"}
               </Link>
-              {topCats.map((c) => {
-                const subs = childrenOf(c.id);
-                return (
-                  <div key={c.id} className="group relative">
-                    <Link
-                      href={`${base}/category/${c.code.toLowerCase()}`}
-                      className="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
-                    >
-                      {c.name}
-                      {subs.length > 0 && <span className="ml-1 text-xs">▾</span>}
-                    </Link>
-                    {subs.length > 0 && (
-                      <div className="invisible absolute left-0 top-full z-50 w-56 rounded-lg border border-slate-200 bg-white p-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
-                        {subs.map((s) => (
-                          <Link
-                            key={s.id}
-                            href={`${base}/category/${s.code.toLowerCase()}`}
-                            className="block rounded-md px-3 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-sky-700"
-                          >
-                            {s.name}
-                          </Link>
-                        ))}
+              {/* 产品中心下拉收纳（避免品类过多导致文字折行竖排） */}
+              <div className="group relative">
+                <Link
+                  href={`${base}/category/${topCats[0]?.code.toLowerCase() ?? ""}`}
+                  className="flex items-center gap-1 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
+                >
+                  {isEn ? "Products" : "产品中心"}
+                  <span className="text-xs">▾</span>
+                </Link>
+                <div className="invisible absolute left-0 top-full z-50 max-h-[70vh] w-64 overflow-y-auto rounded-lg border border-slate-200 bg-white p-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
+                  {topCats.map((c) => {
+                    const subs = childrenOf(c.id);
+                    return (
+                      <div key={c.id}>
+                        <Link
+                          href={`${base}/category/${c.code.toLowerCase()}`}
+                          className="flex items-center justify-between whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-700"
+                        >
+                          {c.name}
+                          {subs.length > 0 && <span className="ml-2 text-xs text-slate-400">▸</span>}
+                        </Link>
+                        {subs.length > 0 && (
+                          <div className="ml-3 border-l border-slate-100 pl-2">
+                            {subs.map((s) => (
+                              <Link
+                                key={s.id}
+                                href={`${base}/category/${s.code.toLowerCase()}`}
+                                className="block whitespace-nowrap rounded px-3 py-1.5 text-xs text-slate-500 hover:bg-sky-50 hover:text-sky-700"
+                              >
+                                {s.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
                       </div>
-                    )}
-                  </div>
-                );
-              })}
-              <Link href={`${base}/contact`} className="rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100">
+                    );
+                  })}
+                </div>
+              </div>
+              <Link
+                href={`${base}/contact`}
+                className="whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
+              >
                 {isEn ? "Contact" : "联系我们"}
               </Link>
             </nav>
