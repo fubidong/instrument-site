@@ -36,6 +36,8 @@ export default function ProductGallery({
   const [selected, setSelected] = useState(0);
   // 放大镜状态（鼠标位置百分比 + 是否激活）
   const [zoom, setZoom] = useState({ x: 50, y: 50, active: false });
+  // 放大倍数（温和，不夸张）
+  const ZOOM = 1.8;
 
   if (!all.length) {
     return (
@@ -67,8 +69,11 @@ export default function ProductGallery({
           alt={current.altText ?? alt}
           className="h-full w-full object-contain transition-transform duration-150 ease-out"
           style={{
-            transform: zoom.active ? `scale(2.2) translate(${(50 - zoom.x) * 5}%, ${(50 - zoom.y) * 5}%)` : "scale(1)",
+            transform: zoom.active
+              ? `scale(${ZOOM}) translate(${(50 - zoom.x) * (ZOOM - 1)}%, ${(50 - zoom.y) * (ZOOM - 1)}%)`
+              : "scale(1)",
             transformOrigin: `${zoom.x}% ${zoom.y}%`,
+            willChange: "transform",
           }}
         />
         {/* 放大镜提示角标 */}
