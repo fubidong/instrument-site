@@ -17,9 +17,10 @@ interface Props {
 }
 
 /**
- * 产品图库：主图 + 缩略图切换
- * - 第一项为 coverImage（主图），其后为 ProductImage 附加图
- * - 点击缩略图切换主图显示
+ * 产品图库（电商风格）：
+ * - 主图为正方形适中尺寸（参考 store.siglent.com），白底、图片自然等比显示
+ * - 鼠标悬停主图 → 跟随鼠标局部放大（放大镜效果）
+ * - 缩略图点击切换主图
  */
 export default function ProductGallery({
   coverImage,
@@ -33,6 +34,8 @@ export default function ProductGallery({
     ...images.map((i) => ({ id: i.id, imagePath: i.imagePath, altText: i.altText ?? alt })),
   ];
   const [selected, setSelected] = useState(0);
+  // 放大镜状态（鼠标位置百分比 + 是否激活）
+  const [zoom, setZoom] = useState({ x: 50, y: 50, active: false });
 
   if (!all.length) {
     return (
@@ -43,14 +46,40 @@ export default function ProductGallery({
   }
   const current = all[Math.min(selected, all.length - 1)];
 
+  const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width) * 100;
+    const y = ((e.clientY - r.top) / r.height) * 100;
+    setZoom({ x: Math.min(100, Math.max(0, x)), y: Math.min(100, Math.max(0, y)), active: true });
+  };
+
   return (
     <div>
-      <div className="rounded-lg border border-slate-200 bg-white p-4">
+      {/* 主图：正方形 + 悬停放大镜 */}
+      <div
+        className="relative mx-auto aspect-square w-full max-w-[400px] cursor-zoom-in overflow-hidden rounded-lg border border-slate-200 bg-white"
+        onMouseMove={handleMove}
+        onMouseLeave={() => setZoom((z) => ({ ...z, active: false }))}
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={current.imagePath} alt={current.altText ?? alt} className={`mx-auto ${height} w-full object-contain`} />
+        <img
+          src={current.imagePath}
+          alt={current.altText ?? alt}
+          className="h-full w-full object-contain transition-transform duration-150 ease-out"
+          style={{
+            transform: zoom.active ? `scale(2.2) translate(${(50 - zoom.x) * 5}%, ${(50 - zoom.y) * 5}%)` : "scale(1)",
+            transformOrigin: `${zoom.x}% ${zoom.y}%`,
+          }}
+        />
+        {/* 放大镜提示角标 */}
+        <span className="pointer-events-none absolute bottom-2 right-2 rounded bg-white/80 px-1.5 py-0.5 text-[10px] text-slate-400">
+          {alt}
+        </span>
       </div>
+
+      {/* 缩略图 */}
       {all.length > 1 && (
-        <div className="mt-3 grid grid-cols-5 gap-2">
+        <div className="mx-auto mt-3 grid max-w-[400px] grid-cols-5 gap-2">
           {all.map((img, i) => (
             <button
               key={img.id}
