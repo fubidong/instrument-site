@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
+import { resolveParamCategoryId } from "@/lib/params";
 import ProductForm from "../../product-form";
 
 async function getParamGroups(categoryId: string) {
@@ -59,7 +60,8 @@ export default async function EditProductPage({
   });
   if (!product) notFound();
 
-  const paramGroups = await getParamGroups(product.categoryId);
+  const paramCatId = await resolveParamCategoryId(product.categoryId);
+  const paramGroups = await getParamGroups(paramCatId);
 
   // 参数值按 defId 索引
   const paramValues: Record<string, any> = {};

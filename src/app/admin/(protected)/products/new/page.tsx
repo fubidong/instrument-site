@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
+import { resolveParamCategoryId } from "@/lib/params";
 import ProductForm from "../product-form";
 
 async function getParamGroups(categoryId: string) {
@@ -107,7 +108,8 @@ export default async function NewProductPage({
   });
   if (!line) notFound();
 
-  const paramGroups = await getParamGroups(line.categoryId);
+  const paramCatId = await resolveParamCategoryId(line.categoryId);
+  const paramGroups = await getParamGroups(paramCatId);
   const ct = Object.fromEntries(line.category.translations.map((tr) => [tr.locale, tr]));
 
   return (

@@ -1,0 +1,1415 @@
+
+===== PAGE 1 =====
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SDS1000X-E 
+Digital Oscilloscope 
+Data Sheet 
+Rev. 04H 
+
+===== PAGE 2 =====
+ 
+WWW.SIGLENT.COM                                                                                        
+1 
+ 
+ 
+ 
+ 
+ 
+ 
+Product Overview 
+SIGLENT’s SDS1000X-E Super Phosphor Oscilloscopes feature two channel and four 
+channel models. The two channel model is available with a 200 MHz analog bandwidth, 
+a single ADC with 1 GSa/s maximum sample rate, and a single memory module with 14 
+Mpts of sample memory. The four channel scope is available in 100 and 200 MHz models 
+and incorporates two 1 GSa/s ADCs and two 14 Mpts memory modules. When all 
+channels are enabled, each channel has sample rate of 500 MSa/s and a standard record 
+length of 7 Mpts. When only a single channel per ADC is active, the maximum sample 
+rate is 1 GSa/s and the maximum record length is 14 Mpts. For ease-of-use, the most 
+commonly used functions can be accessed with its user-friendly front panel design. 
+The SDS1000X-E series employs a new generation of SPO (Super- Phosphor Oscilloscope) 
+technology that provides excellent signal fidelity and performance. The system noise is 
+also lower than similar products in the industry. It comes with a minimum vertical input 
+range of 500 uV/div, an innovative digital trigger system with high sensitivity and low 
+jitter, and a waveform capture rate of 400,000 frames/sec (sequence mode). The 
+SDS1000X-E also employs a 256-level intensity grading display function and a color 
+temperature display mode not found in other models in this class. SIGLENT’s latest 
+oscilloscope offering supports multiple powerful triggering modes including serial bus 
+triggering. Serial bus decoding for IIC, SPI, UART, CAN, LIN bus types are included. The X-
+E models also include History waveform recording, and sequential triggering that enable 
+extended waveform recording and analysis. Another powerful addition is the new 
+1 million points FFT math function that gives the SDS1000X-E very high frequency 
+resolution when observing signal spectra. The new digital design also includes a 
+hardware co-processor that delivers measurements quickly and accurately without 
+slowing acquisition and front-panel response. The features and performance of 
+SIGLENT’s new SDS1000X-E cannot be matched anywhere else in this price class. 
+The four channel series support even more functions, including: searching and 
+navigating, on-screen Bode plot, 16 digital channels (Option), an external USB powered 
+25 MHz AWG module (Option), and an embedded application that allows remote control 
+via web browser. 
+ 
+SDS1104X-E 
+SDS1204X-E 
+SDS1202X-E 
+Key Features 
+ 
+100 MHz, 200 MHz bandwidth models 
+ 
+Two channel series have one 1 GSa/s ADC, four channel series have two 1 
+GSa/s ADCs. When all channels are enabled, each channel has a maximum 
+sample rate of 500 MSa/s. When a single channel per ADC is active, it has 
+sample rate of 1 GSa/s 
+ 
+The Siglent SPO technology 
+◼ 
+Waveform capture rates up to 100,000 wfm/s (normal mode) and 400,000 
+wfm/s (sequence mode) 
+◼ 
+Supports 256-level intensity grading and color temperature display 
+modes 
+◼ 
+Record length up to 14 Mpts 
+◼ 
+Digital trigger system 
+ 
+Intelligent trigger: Edge, Slope, Pulse Width, Window, Runt, Interval, Time out 
+(Dropout), Pattern 
+ 
+Serial bus triggering and decoding (Standard), supports protocols IIC, SPI, 
+UART, CAN, LIN 
+ 
+Video trigger, supports HDTV 
+ 
+Low background noise with voltage scales from 500 μV/div to 10 V/div 
+ 
+10 types of one-button shortcuts, supports Auto Setup, Default, Cursors, 
+Measure, Roll, History, Display/Persist, Clear Sweep, Zoom and Print 
+ 
+Segmented acquisition (Sequence) mode, divides the maximum record length 
+into multiple segments (up to 80,000), according to trigger conditions set by 
+the user, with a very small dead time segment to capture the qualifying event 
+ 
+History waveform record (History) function (maximum recorded waveform 
+length is 80,000 frames) 
+ 
+Automatic measurement function for 38 parameters as well as Measurement 
+Statistics, Zoom, Gating, Math, History and Reference functions 
+ 
+1 Mpts FFT. Four channel series support Peaks and Markers 
+ 
+Math and measurement functions use all sampled data points (up to 14 Mpts) 
+ 
+Math 
+functions 
+(FFT, 
+addition, 
+subtraction, 
+multiplication, 
+division, 
+integration, differential, square root) 
+ 
+Preset key can be customized for user settings or factory “defaults” 
+ 
+Security Erase mode 
+ 
+High Speed hardware-based Pass/ Fail function 
+ 
+MSO, 16 digital channels (four channel series only, option) 
+ 
+Bode plot, Measuring Power Supply Control Loop Response (four-channel 
+series only) 
+ 
+Search and navigate (four-channel series only) 
+ 
+USB AWG module (four channel series only, option) 
+ 
+Web Browser based control (four channel series only) 
+ 
+Large 7-inch TFT-LCD display with 800 * 480 resolution 
+ 
+Multiple interface types: USB Host, USB Device (USB -TMC), LAN, Pass / Fail, 
+Trigger Out 
+ 
+Supports SCPI remote control commands 
+ 
+VXI-11+SCPI, Telnet (Port 5024) +SCPI and Socket (Port 5025) +SCPI 
+programming over LAN 
+ 
+Supports Multi-language display and embedded online help 
+ 
+Supports Label(four channel series only) 
+ 
+Supports counter(four channel series only) 
+ 
+Supports data logger including Sample Logger and Measurement 
+Logger(four channel series only) 
+ 
+Supports NTP(Network Time Protocol) (four channel series only) 
+
+===== PAGE 3 =====
+SDS1000X-E Series Digital Oscilloscope 
+2                                                                                               WWW.SIGLENT.COM 
+Models and Key Specifications 
+ 
+Model 
+SDS1104X-E 
+SDS1204X-E 
+SDS1202X-E 
+Bandwidth 
+100 MHz 
+200 MHz 
+Sample rate (Max.) 
+Two channel series have a single 1 GSa/s ADC, four channel series have two 1 GSa/s ADCs. When all 
+channels are enabled, each channel has a maximum sample rate of 500 MSa/s. When a single channel 
+per pair is active,  that channel has sample rate of 1 GSa/s 
+Channels 
+4 (four channel series) 
+2+EXT (two channel series) 
+Memory depth (Max.) 
+7 Mpts/CH (not interleave mode); 
+14 Mpts/CH (interleave mode) 
+Waveform capture rate (Max.) 
+100,000 wfm/s (normal mode), 400,000 wfm/s (sequence mode) 
+Trigger type 
+Edge, Slope, Pulse Width, Window, Runt, Interval, Dropout, Pattern, Video 
+Serial Trigger and decoder (Std) 
+IIC, SPI, UART, CAN, LIN 
+16 Digital Channels (four channel 
+series only, option) 
+Maximum waveform capture rate up to 1 GSa/s, Record length up to 14 Mpts/CH 
+USB AWG module (four channel 
+series only, option) 
+One channel, 25 MHz, sample rate of 125 MHz, wave length of 16 kpts,  
+isolated output (SAG1021I only) 
+Bode plot ( four channel series only) 
+Minimum start frequency of 10 Hz, minimum scan bandwith of 500 Hz, maximum scan bandwidth of 120 
+MHz (dependent on Oscilloscope and AWG bandwidth), 500 maximum scan frequency points 
+Data Logger(four channel series 
+only) 
+Sample Logger. The Max sample rate is 25kSa/s, the Min sample rate is 1Sa/s. 
+Measure Logger. The Max interval is 10 minutes, the Min interval is 0.1s. The Max number of measurements 
+that can be logged is 4. 
+I/O 
+USB Host, USB Device, LAN, Pass/Fail, Trigger Out, Sbus (Siglent MSO) 
+Probe (Std) 
+4 pcs passive probe PP510 
+4/2 pcs passive probe PP215 
+Display 
+7-inch TFT-LCD (800x480) 
+Weight 
+Four channel series: Without package 2.6 kg; With package 3.8 kg 
+Two channel series: Without package 2.5 kg; With package 3.5 kg 
+ 
+
+===== PAGE 4 =====
+ 
+WWW.SIGLENT.COM                                                                                        
+3 
+Functions & Characteristics 
+ 
+7 Inch TFT-LCD Display and 10 One-button Menus 
+ 
+ 
+Front panel of the four channel series 
+Front panel of the two channel series 
+ 
+7-inch TFT -LCD display with 800 * 480 resolution. Most commonly used functions are accessible using 10 different one-button operation keys: 
+Auto Setup, Default, Cursor, Measure, Roll, History, Persist, Clear Sweep, Zoom, Print. 
+ 
+ When all channels are enabled, each channel has a maximum sample rate of 500 MSa/s. When a single channel per 
+pair is active, that channel has sample rate of 1 GSa/s 
+ 
+ 
+The four channel series has two 1GSa/s ADC chips (channel 1 and 2 share one, channel 3 and 4 share another), so that each channel can achieve 
+sample rates up to 500 MSa/s and work on bandwidths of 200 MHz when all channels are enabled. 
+ 
+ Record Length of up to 14 Mpts  
+ 
+Waveform Capture Rate up to 400,000 wfm/s 
+ 
+ 
+Using hardware-based Zoom technologies and max record length of 
+up to 14 Mpts, users are able to oversample to capture for longer time 
+periods at higher resolution and use the zoom feature to see more 
+With a waveform capture rate of up to 400,000 wfm/s (sequence 
+mode), the oscilloscope can easily capture the unusual or low-
+probability events. 
+
+===== PAGE 5 =====
+SDS1000X-E Series Digital Oscilloscope 
+4                                                                                               WWW.SIGLENT.COM 
+details within each signal. 
+ 
+ 
+256-Level Intensity Grading and Color Temperature Display 
+ 
+ 
+SPO display technology provides fast refresh rates. The resulting 
+intensity-graded trace is brighter for events that occur with more 
+frequency and dims when the events occur with less frequency. 
+The color temperature display is similar to the intensity-graded trace 
+function, but the trace occurrence is represented by different colors 
+(color “temperature”) as opposed to changes in the intensity of one 
+color. Red colors represent events that occur more frequently, while 
+blue is used to mark points that occur less frequently. 
+ 
+ 
+Serial Bus Decoding Function (Standard) 
+ History Waveforms (History) Mode and Segmented 
+Acquisition (Sequence) 
+ 
+ 
+SDS1000X-E displays the decoding through the events list. Bus protocol 
+information can be quickly and intuitively displayed in a tabular format. 
+Playback the latest triggered events using the history function. 
+Segmented memory collection will store trigger events into multiple 
+(Up to 80,000) memory segments, each segment will store triggered 
+waveforms and timestamp of each frame. 
+ 
+True measurement to 14 M points 
+ 
+Gate and Zoom Measurement 
+ 
+ 
+
+===== PAGE 6 =====
+ 
+WWW.SIGLENT.COM                                                                                        
+5 
+SDS1000X-E can measure all sampled data points up to 14 Mpts. This 
+ensures the accuracy of measurements while the math co-processor 
+decreases measurement time and increases ease-of-use. 
+Through Gate and Zoom measurement, the user can specify an 
+arbitrary interval of waveform data analysis and statistics. This helps 
+avoid measurement errors that can be caused by invalid or extraneous 
+data, greatly enhancing the measurements’ validity and flexibility. 
+ 
+ 
+1M points used to calculate the FFT 
+ 
+Hardware-Based High-Speed Pass/Fail  
+ 
+ 
+The new math co-processor enables FFT analysis of incoming signals 
+using up to 1 M samples per waveform. This provides high frequency 
+resolution with a fast refresh rate. The FFT function also supports a 
+variety of window functions so that it can adapt to different spectrum 
+measurement needs. Four-channel series support Peaks, Markers, a 
+variety of numbers. 
+ 
+The SDS1000X-E utilizes a hardware-based Pass/Fail function, 
+performing up to 40,000 Pass / Fail decisions each second. Easily 
+generate user defined test templates provide trace mask comparison 
+making it suitable for long-term signal monitoring or automated 
+production line testing. 
+ 
+Customizable Default Key 
+ 16 Digital Channels/MSO (four-channel series only, 
+option) 
+ 
+ 
+The current parameters of the oscilloscope can be preset to Default Key 
+through the Save menu. 
+16 digital channels enables users to acquire and trigger on the 
+waveforms then analyze the pattern, simultaneously with one 
+instrument. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+===== PAGE 7 =====
+SDS1000X-E Series Digital Oscilloscope 
+6                                                                                               WWW.SIGLENT.COM 
+ Search and Navigate (four-channel series only) 
+ USB 25MHz AWG Module (four-channel series only, 
+option) 
+ 
+The SDS1000X-E can search events specified by the user in a frame. It 
+can also navigate by time (delay position) and historical frames. 
+The four channel series supports a USB 25 MHz function/arbitrary 
+waveform generator that is operated from the USB host connection. 
+Functions include Sine, Square, Ramp, Pulse, Noise, DC and 45 built-in 
+waveforms. The arbitrary waveforms can be accessed and edited by the 
+SIGLENT EasyWave PC software. 
+ 
+Bode Plot (four-channel series only) 
+ 
+ 
+SDS1000X-E can control the USB AWG module or control an independent SIGLENT SDG instrument, scan a devices amplitude and phase frequency 
+response, and display the data as a Bode Plot. There is also a Vari-level Mode for accurately measuring Power Supply Control Loop Response 
+(PSRR). It can also show the result lists, and export the data to a USB disk. 
+ 
+Label(four-channel series only) 
+ 
+Web control (four-channel series only) 
+ 
+When multi-channel measurement is used, corresponding labels are 
+set for different sources to facilitate observation and reading. 
+With the new embedded web server, users can control the SDS1xx4X-E 
+from a simple web page. This provides wonderful remote 
+troubleshooting and monitoring capabilities. The web page has PC and 
+mobile styles that include an embedded virtual control panel. 
+
+===== PAGE 8 =====
+ 
+WWW.SIGLENT.COM                                                                                        
+7 
+ 
+Sample Logger(four-channel series only) 
+ Measurement Logger (four-channel series only) 
+ 
+ 
+The Sample Logger is the mode of logging the sampling points over 
+long time durations. . Data is logged into the internal flash or external 
+U disk in real time. After logging is complete, the user can recall the 
+sampling points on the oscilloscope, or analyze the saved data on the 
+computer. 
+The measurement Logger is designed to collect measurement values 
+for a long time. The data is logged in memory. After logging is 
+complete, the data can be saved into the internal flash or external U 
+disk.  
+ 
+ 
+ 
+ 
+Complete Connectivity 
+ 
+Back panel of the four-channel series 
+Back panel of the two-channel series 
+ 
+SDS1000X-E supports USB Host, USB Device (USB -TMC), LAN (VXI -11), Pass/Fail and Trigger Out. 
+ 
+ 
+Specifications 
+Acquisition System  
+Sampling Rate (Max.) 
+1 GSa/s (single channel/pair), 500 MSa/s (two channels/pair) 
+Memory Depth (Max.) 
+Max 14 Mpts/Ch (single channel/pair), 7 Mpts/Ch (two channels/pair) 
+Peak Detect 
+2 ns (Four-channel series) 
+4 ns (Two-channel series) 
+Average 
+Averages:4,16, 32,64,128,256,512,1024 
+ERES 
+Enhance bits:0.5, 1.5, 2, 2.5, 3 
+Waveform interpolation 
+Sin(x)/x, Linear 
+ 
+Input  
+Channels 
+4 (Four-channel series) 
+2+EXT (Two-channel series) 
+
+===== PAGE 9 =====
+SDS1000X-E Series Digital Oscilloscope 
+8                                                                                               WWW.SIGLENT.COM 
+Coupling 
+DC, AC, GND 
+Impedance 
+DC: (1 MΩ±2%) || (17 pF ±3 pF) (Four-channel series) 
+DC: (1 MΩ±2%) || (16 pF ±3 pF) (Two-channel series) 
+Max. Input voltage 
+1 MΩ: ≤400 Vpk (DC + Peak AC <=10 kHz) 
+CH to CH Isolation 
+DC-Max BW :>40 dB 
+Probe attenuation 
+0.1X,0.2X,0.5X,1X,2X,5X,10X……1000X,2000X,5000X,10000X,Custom 
+ 
+Vertical System 
+Bandwidth (-3dB) 
+200 MHz (SDS1204X-E/SDS1202X-E) 
+100 MHz (SDS1104X-E) 
+Vertical Resolution 
+8-bit 
+Vertical Scale (Probe 1X) 
+500 μV/div–10 V/div (1-2-5 sequence ) 
+500 μV- 118 mV: ± 2 V 
+Offset Range (Probe 1X) 
+120 mV- 1.18 V: ± 20 V 
+1.2 V- 10 V: ± 200 V 
+Bandwidth limit 
+20 MHz ± 40% 
+Bandwidth Flatness 
+DC- 10% (BW): ± 1 dB 
+10%- 50% (BW): ± 2 dB 
+50%- 100% (BW): + 2 dB/-3 dB 
+Low frequency response 
+(AC coupling -3 dB) 
+≤2 Hz (at input BNC) 
+Noise 
+ST-DEV ≤0.5 division (<1 mV/div)  
+ST-DEV ≤0.2 division (<2 mV/div) 
+ST-DEV ≤0.1 division(≥ 2 mV/div) 
+SFDR including harmonics 
+≥ 35 dB 
+DC Gain Accuracy 
+≤±3.0%: 5 mV/div-10 V/div  
+≤±4.0%: ≤2 mV/div 
+Offset Accuracy 
+±(1%* Offset+1.5%*8*div+2 mV): ≥2 mV/div 
+±(1%* Offset+1.5%*8*div+500 uV): ≤1 mv/div 
+Rise time 
+Typical 1.8 ns (SDS1204X-E/SDS1202X-E) 
+Typical 3.5 ns (SDS1104X-E) 
+Overshoot (500 ps Pulse) 
+< 10% 
+ 
+Horizontal System 
+Timebase Scale 
+1.0 ns/div-100 s/div 
+Channel Skew 
+<100 ps 
+Waveform Capture Rate 
+Up to 100,000 wfm/s (normal mode), 400,000 wfm/s (sequence mode) 
+Intensity grading 
+256 Levels 
+Display Format 
+Y -T, X -Y, Roll 
+Timebase Accuracy 
+±25 ppm 
+Roll Mode 
+50 ms/div-100 s/div (1-2-5 sequence) 
+ 
+Trigger System 
+Mode 
+Auto, Normal, Single 
+Level 
+Internal: ±4.5 div from the center of the screen 
+EXT: ±0.6 V (Two channel series) 
+EXT/5: ±3 V(Two channel series) 
+Hold off range 
+80 ns- 1.5 s 
+Coupling 
+AC 
+DC 
+LFRJ 
+HFRJ 
+
+===== PAGE 10 =====
+ 
+WWW.SIGLENT.COM                                                                                        
+9 
+Noise RJ 
+Coupling 
+Frequency 
+Response 
+DC: Passes all components of the signal 
+AC: Blocks DC components and attenuates signals below 8Hz 
+LFRJ: Blocks the DC component and attenuates the low-frequency 
+ components below 2 MHz 
+HFRJ: Attenuates the high-frequency components above 1.2 MHz 
+Coupling 
+Frequency 
+Response 
+(EXT, Two channel series) 
+DC: Passes all components of the signal 
+AC: Blocks DC components and attenuates signals below 20 Hz 
+LFRJ: Blocks the DC component and attenuates the low-frequency 
+ components below 7 kHz 
+HFRJ: Attenuates the high-frequency components above 160 kHz 
+Accuracy (typical) 
+Internal: ±0.2 div 
+EXT(Two channel series): ±0.4 div 
+Sensitivity 
+DC - Max BW 0.6 div 
+EXT(Two channel series): 200 mVpp DC– 10 MHz 
+     300 mVpp 10 MHz - BW frequency 
+EXT/5 (Two-channel series): 1 Vpp DC – 10 MHz； 
+       1.5 Vpp 10 MHz -BW frequency 
+Jitter 
+<100 ps 
+Displacement 
+Pre-Trigger: 0 - 100% Memory 
+Delay Trigger: 0 to 10,000 div 
+Edge Trigger 
+Slope 
+Rising, Falling, Rising & Falling 
+Source 
+All channels/EXT/(EXT/5)/AC Line(Two-channel series) 
+All channels/ AC Line(Four-channel series) 
+Slope Trigger 
+Slope 
+Rising, Falling 
+Limit Range 
+＜, ＞, ＜＞, ＞＜ 
+Source 
+All channels 
+Time Range 
+2ns- 4.2s 
+Resolution 
+1ns 
+Pulse Width Trigger 
+Polarity 
++wid , -wid 
+Limit Range 
+＜, ＞, ＜＞, ＞＜ 
+Source 
+All channels 
+Pulse Range 
+2 ns - 4.2s 
+Resolution 
+1 ns  
+Video Trigger 
+Signal Standard 
+NTSC, PAL,720p/50,720p/60,1080p/50,1080p/60,1080i/50,1080i/60,Custom 
+Source 
+All channels 
+Sync 
+Any, Select 
+Trigger condition 
+Line, Field 
+Window Trigger 
+Window Type 
+Absolute, Relative 
+Source 
+All channels 
+Interval Trigger 
+Slope 
+Rising, Falling 
+Limit Range 
+＜, ＞, ＜＞, ＞＜ 
+Source 
+All channels 
+Time Range 
+2 ns  - 4.2 s 
+Resolution 
+1 ns 
+
+===== PAGE 11 =====
+SDS1000X-E Series Digital Oscilloscope 
+10                                                                                               
+WWW.SIGLENT.COM 
+Dropout Trigger 
+Timeout Type 
+Edge, State 
+Source 
+All channels 
+Slope  
+Rising, Falling 
+Time Range 
+2 ns - 4.2 s 
+Resolution 
+1ns  
+Runt Trigger 
+Polarity 
++wid ,  -wid 
+Limit Range 
+＜, ＞, ＜＞, ＞＜ 
+Source 
+All channels 
+Time Range 
+2 ns - 4.2 s 
+Resolution 
+1 ns 
+Pattern Trigger 
+Pattern Setting 
+Invalid, Low, High 
+Logic 
+AND, OR, NAND, NOR 
+Source 
+All channels 
+Limit Range 
+＜, ＞, ＜＞, ＞＜ 
+Time Range 
+2 ns - 4.2 s 
+Resolution 
+1 ns  
+Serial Trigger 
+I2C Trigger 
+Condition  
+Start, Stop, Restart, No Ack, EEPROM, 7-bits Address & Data, 10-bits Address & Data, Data Length 
+Source(SDA/SCL) 
+All channels 
+Data format 
+Hex 
+Limit Range 
+EEPROM: =, >, < 
+Data Length 
+EEPROM: 1byte 
+ 
+Addr & Data: 1-2byte 
+ 
+Data Length: 1-12byte 
+R/W bit 
+Addr & Data: Read, Write, Do not care 
+SPI Trigger 
+Condition 
+Data 
+Source(CS/CL/Data) 
+All channels 
+Data format 
+Binary 
+Data Length 
+4-96-bit 
+Bit Value 
+0, 1, X 
+Bit Order 
+LSB, MSB 
+UART Trigger 
+Condition 
+Start, Stop, Data, Parity Error 
+Source(RX/TX) 
+All channels 
+Data format 
+Hex 
+Limit Range 
+=, >, < 
+Data Length 
+1 byte 
+Data Width 
+5, 6, 7, 8-bits 
+Parity Check 
+None, Odd, Even, Space, Mark 
+Stop Bit 
+1, 1.5, 2-bits 
+Idle Level 
+High, Low 
+Baud Rate(Selectable) 
+600/1200/2400/4800/960019200/38400/57600/115200/Custom bit/s 
+Baud Rate (Custom) 
+300-5000000 bit/s 
+CAN Trigger 
+Condition 
+Start, Remote, ID, ID + Data, Error 
+
+===== PAGE 12 =====
+ 
+WWW.SIGLENT.COM                                                                                        
+11 
+Source 
+All channels 
+ID 
+STD (11-bits), EXT (29-bit) 
+Data Format 
+Hex 
+Data Length 
+1 -2 byte 
+Baud Rate 
+5k/10k/20k/50k/100k/125k/250k/500k/800k/1M/Custom bit/s 
+LIN Trigger 
+Condition 
+Break, Frame ID, ID+Data, Error 
+Source 
+All channels 
+ID 
+1byte 
+Data Format 
+Hex 
+Data Length 
+1-2byte 
+Baud Rate 
+ (Selectable) 
+600/1200/2400/4800/9600/19200/Custom bit/s 
+Baud Rate (Custom) 
+300 bit/s -20 kbit/s 
+ 
+Search  
+Event 
+Edge, Slope, Pulse, Interval, Runt 
+Event Number 
+Y-T: 700 
+ROLL: No limitation 
+Stop After ROLL: 700 
+ 
+Serial Decoder 
+Decoders 
+2 
+I2C 
+Signal 
+SCL, SDA 
+Address 
+7, 10 bits 
+Threshold  
+ -4.5 - 4.5 div 
+List 
+1- 7 lines 
+SPI 
+Signal 
+SCL,MISO, MOSI, CS (2 channel scopes can only use 2 signal) identifiers 
+Edge Select 
+Rising, Falling 
+Idle Level 
+Low, High 
+Bit Order  
+MSB, LSB 
+Threshold  
+ -4.5 - 4.5 div 
+List 
+1- 7 lines 
+UART 
+Signal 
+RX, TX 
+Data Width 
+5，6，7，8 bits 
+Parity Check 
+None, Odd, Even, Space, Mark 
+Stop Bit 
+1, 1.5, 2 bits 
+Idle Level 
+Low, High 
+Threshold  
+ -4.5 - 4.5 div 
+List 
+1- 7 lines 
+CAN 
+Signal 
+CAN_H, CAN_L 
+Source 
+CAN_H, CAN_L, CAN_H-CAN_L 
+Threshold 
+-4.5 - 4.5 div 
+List 
+1- 7 lines 
+LIN 
+
+===== PAGE 13 =====
+SDS1000X-E Series Digital Oscilloscope 
+12                                                                                               
+WWW.SIGLENT.COM 
+LIN Specification Package 
+Revision 
+Ver1.3, Ver2.0 
+Threshold 
+-4.5 - 4.5 div 
+List 
+1- 7 lines 
+ 
+Measurement 
+Source 
+All channels, All channels in Zoom, Math, All References, History 
+Number of  
+Measurements 
+Display 4 measurements at the same time. 5 measurements displayed in statistics table. 
+Measurement Range 
+Screen or Gate region 
+Measurement Parameters 
+38 Types 
+Vertical 
+Max 
+Highest value in input waveform 
+Min 
+Lowest value in input waveform 
+Pk-Pk 
+Difference between maximum and minimum data values 
+Ampl 
+Difference between top and base in a bimodal signal, or between max and min in an 
+unimodal signal 
+Top 
+Value of most probable higher state in a bimodal waveform 
+Base 
+Value of most probable lower state in a bimodal waveform 
+Mean 
+Average of all data values 
+Cmean 
+Average of data values in the first cycle 
+Stdev 
+Standard deviation of all data values 
+Cstd 
+Standard deviation of all data values in the first cycle 
+VRMS 
+Root mean square of all data values 
+Crms 
+Root mean square of all data values in the first cycle 
+FOV 
+Overshoot after a falling edge;(base -min)/Amplitude 
+FPRE 
+Overshoot before a falling edge;(max -top)/Amplitude 
+ROV 
+Overshoot after a rising edge;(max -top)/Amplitude 
+RPRE 
+Overshoot before a rising edge;(base -min)/Amplitude 
+Level@X 
+the voltage value of the trigger point 
+Horizontal 
+Period 
+Time between the middle threshold points of two consecutive, like-polarity edges 
+Freq 
+Reciprocal of period 
++Wid 
+Width measured at 50% level and positive slope 
+-Wid 
+Width measured at 50% level and negative slope 
+Rise Time 
+Duration of rising edge from 10 -90% 
+Fall Time 
+Duration of falling edge from 90 -10% 
+Bwid 
+Time from the first rising edge to the last falling edge, or the first falling edge to the last 
+rising edge at the 50% crossing 
++Dut 
+Time difference between the 50% threshold of a rising edge to the 50% threshold of the 
+next falling edge of the pulse 
+-Dut 
+Time difference between the 50% threshold of a falling edge to the 50% threshold of the 
+next rising edge of the pulse 
+Delay 
+Time from the trigger to the first transition at the 50% crossing 
+Time@Level 
+Time from the trigger to each rising edge at the 50% crossing. 
+When Statistics is Off, it shows the time from the trigger to the last rising edge at the 50% 
+crossing. 
+When Statistics is On, it shows the Mean, Min, Max, Standard Deviation of time from the 
+trigger to each rising edge at the 50% crossing in multiple frames (number = Count). The 
+Current shows the time of current frame from the trigger to the last rising edge at the 50% 
+crossing. 
+Delay 
+Phase 
+Phase difference between two edges 
+FRR 
+Time from the first rising edge of channel A to the following first rising edge of channel B 
+
+===== PAGE 14 =====
+ 
+WWW.SIGLENT.COM                                                                                        
+13 
+FRF 
+Time from the first rising edge of channel A to the following first falling edge of channel 
+B 
+FFR 
+Time from the first falling edge of channel A to the following first rising edge of channel 
+B 
+FFF 
+Time from the first falling edge of channel A to the following first falling edge of channel 
+B 
+LRR 
+Time from the first rising edge of channel A to the last rising edge of channel B 
+LRF 
+Time from the first rising edge of channel A to the last falling edge of channel B 
+LFR 
+Time from the first falling edge of channel A to the last rising edge of channel B 
+LFF 
+Time from the first falling edge of channel A to the last falling edge of channel B 
+Skew 
+Time of source A edge minus time of nearest source B edge 
+Cursors 
+Manual : Time X1, X2, (X1 -X2), (1/ΔT) 
+Voltage Y1, Y2, (Y1 -Y2) 
+Track: Time X1, X2, (X1 -X2) 
+Statistics 
+Current, Mean, Min, Max, Stdev, Count 
+Counter 
+Hardware 6-digit counter（channels are selectable） 
+ 
+Math 
+Operation 
++ ,   - ,  * ,  / ,  FFT ,  d/dt , ∫dt , √ 
+FFT window 
+Rectangular, Blackman, Hanning, Hamming, Flattop 
+FFT display  
+Full Screen, Split, Exclusive 
+ 
+USB AWG Module (four channel series only, option) 
+Channel 
+1 
+Max. Output Frequency 
+25 MHz 
+Sampling Rate 
+125 MSa/s 
+Frequency Resolution 
+1 μHz 
+Frequency Accuracy 
+±50 ppm 
+Vertical Resolution 
+14-bits 
+Amplitude Range 
+-1.5 ～ +1.5 V (50Ω load) 
+ 
+-3 ～ +3 V (High-Z load) 
+Waveform Type 
+Sine, Square, Ramp, Pulse, Noise, DC and 45 built-in waveforms 
+Output impedance 
+50Ω ± 2% 
+Protection 
+Over-Voltage Protection, Current-Limiting Protection 
+Insulation Voltage 
+±42 Vpk (for SAG2021I only) 
+Sine 
+Frequency 
+1 μHz～ 25 MHz 
+Offset Accuracy(10 kHz) 
+±(1%*Offset Setting Value +3 mVpp) 
+Amplitude flatness 
+(10 kHz, 5Vpp) 
+±0.3 dB  
+SFDR 
+DC～1 MHz      -60dBc 
+ 
+1 MHz～5 MHz   -55dBc 
+ 
+5 MHz～25 MHz  -50dBc 
+HD 
+DC～5 MHz      -50dBc 
+ 
+5 MHz～25 MHz  -45dBc 
+Square/Pulse 
+Frequency 
+1 μHz～ 1 0MHz 
+Duty Cycle 
+1% ～99% 
+Rise/Fall time 
+< 24 ns (10% ～ 90%)  
+Overshoot(1kHz,1Vpp, 
+< 3% (typical  1kHz, 1 Vpp) 
+
+===== PAGE 15 =====
+SDS1000X-E Series Digital Oscilloscope 
+14                                                                                               
+WWW.SIGLENT.COM 
+Typical) 
+Pulse Width 
+> 50 ns 
+Jitter 
+< 500 ps + 10 ppm 
+Ram 
+Frequency 
+1 μHz～ 300 kHz 
+Linearity(Typical) 
+< 0.1% of Pk-Pk (Typical, 1 kHz, 1 Vpp, 50% Symmetry) 
+Symmetry 
+0% ～ 100% 
+DC 
+Offset range 
+±1.5 V (50Ω load) 
+ 
+±3 V (High-Z load) 
+Accuracy 
+±(|offset|*1%+3 mV) 
+Noise 
+Bandwidth 
+>25 MHz (-3dB) 
+Arbitrary Wave 
+Frequency 
+1 μHz～ 5 MHz 
+Wave Length 
+16 kpts 
+Sampling Rate 
+125MSa/s 
+Lead in 
+EasyWave and U-Disk 
+ 
+Digital Channels (four channel series only, option) 
+No. of Channels 
+16 
+Max. Sampling Rate 
+1 GSa/s 
+Memory Depth 
+14 Mpts/CH 
+Min. 
+Detectable 
+Pulse 
+Width 
+4 ns 
+Level Group 
+D0~D7, D8~D15 
+Level Range 
+-8 V ~ 8 V 
+Logic Type 
+TTL, CMOS, LVCMOS3.3, LVCMOS2.5, Custom 
+Skew 
+D0~D15: ±1 sampling interval 
+Digital to Analog: ± (1 sampling interval +1ns) 
+ 
+I/O 
+Standard 
+USB Host (1 for two channel series, and 2 for four channel series), USB Device, LAN, Pass/Fail, Trigger Out 
+Pass/Fail 
+3.3V TTL Output 
+ 
+Display(Screen) 
+Display Type 
+7–inch TFT LCD 
+Display Resolution 
+800×480 pixels 
+Display Color 
+24-bit 
+Contrast(Typical) 
+500:1 
+Backlight 
+300 nits 
+ 
+Display(Waveform) 
+Range 
+8 x 14 divisions 
+Display Mode 
+Dot, Vector 
+Persist Time 
+Off, 1 Sec, 5 Sec, 10 Sec, 30 Sec, Infinite 
+Color Display 
+Normal, Color 
+Screen Saver 
+1 min, 5 min, 10 min, 30 min, 1 hour, Off 
+
+===== PAGE 16 =====
+ 
+WWW.SIGLENT.COM                                                                                        
+15 
+Language 
+Simplified Chinese, Traditional Chinese, English, French, Japanese, Korean, German, Russian, Italian, Portuguese 
+ 
+Environments 
+Temperature 
+Operating: 0℃ - +40℃ 
+Non-operating: -20℃ - + 60℃ 
+Humidity 
+Operating: 85% RH, 40 ℃, 24 hours 
+Non-operating: 85% RH, 65 ℃, 24 hours 
+Height 
+Operating: ≤ 3000 m 
+Non-operating: ≤ 15,000 m 
+ 
+Standards 
+Electromagnetic 
+compatibility 
+Meets EMC directive (2014/30/EU), meets or exceeds IEC 61326-1:2012/EN61326-1:2013 (Basic) 
+Conducted disturbance 
+CISPR 11/EN 55011 
+CLASS A group 1，150kHz-30MHz 
+Radiated disturbance 
+CISPR 11/EN 55011 
+CLASS A group 1， 30MHz-1GHz 
+Electrostatic discharge (ESD) 
+IEC 61000-4-2/EN 61000-4-2 
+4.0 kV（Contact），8.0 kV（Air） 
+Radio-frequency 
+electromagnetic 
+field Immunity 
+IEC 61000-4-3/EN 61000-4-3 
+10 V/m（80 MHz to 1 GHz）;  
+3 V/m（1.4 GHz to 2 GHz）;  
+1 V/m（2.0 GHz to 2.7GHz） 
+Electrical fast transients (EFT) 
+IEC 61000-4-4/EN 61000-4-4 
+2kV （Input AC Power Ports） 
+Surges 
+IEC 61000-4-5/EN 61000-4-5  
+1kV （Line to line） 
+2kV （Line to ground） 
+Radio-frequency 
+continuous 
+conducted Immunity 
+IEC 61000-4-6/EN 61000-4-6  
+3 V, 0.15-80MHz 
+Voltage dips and interruptions 
+IEC 61000-4-11/EN 61000-4-11 
+Voltage Dips： 
+0% UT during 1 cycle;  
+40% UT during 10/12 cycles;  
+70% UT during 25/30 cycles 
+Voltage interruptions：0% UT during 
+250/300 cycles 
+Safety 
+UL 61010-1:2012/R: 2018-11; CAN/CSA-C22.2 No. 61010-1:2012/A1:2018-11.  
+UL 61010-2-030:2018; CAN/CSA-C22.2 No. 61010-2-030:2018.  
+ 
+Power Supply 
+Input Voltage 
+100 ～ 240 Vrms 50/60Hz 
+100 ～ 120 Vrms 400Hz 
+Power 
+50 W Max (Four-channel series) 
+25 W Max (Two-channel series) 
+ 
+Mechanical (Four-channel series) 
+Dimensions 
+Length: 312 mm 
+Width: 132.6 mm 
+Height: 151 mm 
+Weight 
+N.W: 2.6 kg; G.W: 3.8 kg 
+ 
+Mechanical (Two-channel series) 
+Dimensions 
+Length: 312 mm 
+
+===== PAGE 17 =====
+SDS1000X-E Series Digital Oscilloscope 
+16                                                                                               
+WWW.SIGLENT.COM 
+Width: 134 mm 
+Height:150 mm 
+Weight 
+N.W:2.5 kg; G.W: 3.5 kg 
+ 
+ 
+Probes and Accessories 
+Probe 
+ 
+Picture 
+Model 
+Specifications &Description 
+Passive 
+ 
+PP470 
+Bandwidth: 70 MHz, 1X/10X, 1M/10Mohm, 150V/300V 
+PP510 
+Bandwidth: 100MHz, 1X/10X, 1M/10Mohm,150V/300V 
+PP215 
+Bandwidth: 200MHz, 1X/10X, 1M/10Mohm, 150V/300V 
+Current Probe 
+ 
+ 
+CP4020 
+ 
+Bandwidth: 100 KHz, Max. continuous current: 20Arms Peak current: 
+60A 
+Switch Ratio: 50mV/A, 5mV/A, Accuracy: 50mV/A (0.4A -10Apk)±2%, 
+5mV/A 
+(1A-60Apk) ±2%, 9V battery source 
+ 
+CP4050 
+ 
+ 
+ 
+Bandwidth: 1MHz, Max. continuous current: 50Arms, Peak current: 
+140A 
+Switch Ratio: 500mV/A, 50mV/A 
+Accuracy: 500mV/A (20mA -14ApK)±3%±20mA , 50mV/A (200mA -
+100ApK) 
+±4%±200mA, 50mV/A (100A -140ApK) ±15%max, 9V battery source 
+ 
+CP4070 
+ 
+Bandwidth: 150kHz, Max. continuous current: 70Arms, Peak current: 
+200A 
+Switch Ratio: 50mV/A, 5mV/A, Accuracy: 50mV/A (0.4A -10ApK)±2% , 
+5mV/A(1A -200ApK) ±2%, 9V battery source 
+ 
+CP5030 
+ 
+Bandwidth: 50 MHz, Max. continuous current: 30Arms, Peak current: 
+50A 
+Switch Ratio: 100mV/A, 1V/A, Accuracy: 1V/A (±1%±1mA), 100mV/A 
+(±1%±10mA), DC12V/1.2A power adapter 
+ 
+CP5030A 
+ 
+Bandwidth: 100 MHz, Max. continuous current: 30Arms, Peak current: 
+50A 
+Switch Ratio: 100mV/A, 1V/A, Accuracy: 1V/A (±1%±1mA), 100mV/A 
+(±1%±10mA), DC12V/1.2A power adapter 
+ 
+CP5150 
+ 
+Bandwidth: 12 MHz, Max. continuous current: 150Arms, Peak current: 
+300A 
+Switch Ratio: 100mV/A, 10mV/A, Accuracy: 100mV/A (±1%±10mA), 
+10mV/A (±1%±100mA), DC12V/1.2A power adapter 
+
+===== PAGE 18 =====
+ 
+WWW.SIGLENT.COM                                                                                        
+17 
+ 
+CP5500 
+ 
+Bandwidth: 5 MHz, Max. continuous current: 500Arms, Peak current: 
+750A 
+Switch Ratio: 100mV/A, 10mV/A, Accuracy: 100mV/A (±1%±10mA), 
+10mV/A(±1%±100mA), DC12V/1.2A power adapter 
+Differential Probe 
+ 
+DPB4080 
+ 
+Bandwidth: 50MHz, Differential Range: 800V (DC + Peak AC), 
+100X/200X/500X/1000X, Accuracy: ±1%, DC 9V/1A power adapter 
+ 
+DPB5150 
+ 
+Bandwidth: 70MHz, Differential Range: 1500V (DC + Peak AC),50X/500X 
+Accuracy: ±2%, DC 5V/1A USB adapter 
+DPB5150A 
+ 
+Bandwidth: 100MHz, Differential Range: 1500V (DC + Peak AC), 
+50X/500X , Accuracy: ±2% 
+DC 5V/1A USB adapter  
+DPB5700 
+ 
+Bandwidth: 70MHz, Differential Range: 7000V (DC + Peak AC), 
+100X/1000X , Accuracy: ±2%, 
+DC 5V/1A USB adapter  
+ 
+DPB5700A 
+ 
+Bandwidth: 100MHz 
+Differential Range: 7000V (DC + Peak AC), 
+100X/1000X 
+Accuracy: ±2% 
+DC 5V/1A USB adapter 
+High Voltage 
+ 
+HPB4010 
+ 
+Bandwidth: 40MHz 
+Differential Range: DC 10kV, AC (rms): 7kV (sine), AC (Vpp): 20kV (Pulse) 
+1000X 
+Accuracy: ≤3% 
+Isolated front end 
+ 
+ISFE 
+ 
+Provides isolation between standard oscilloscope channels, isolation 
+between 
+the measured signal and ground. Uses USB 5V power supply, plug and 
+play. 
+The maximum input voltage allowed is up to ± 600Vpk. 
+Demo Board 
+ 
+STB-3 Test  
+Board 
+ 
+Output signals including square, sine, AM, fast edge, pulse, PWM, I2C, 
+CAN, LIN etc. Used in teaching and demonstrations. 
+
+===== PAGE 19 =====
+SDS1000X-E Series Digital Oscilloscope 
+18                                                                                               
+WWW.SIGLENT.COM 
+USB Isolated AWG 
+Module 
+ 
+SAG1021I 
+Output Sine, Square, Ramp, pulse, Noise, DC and 45 built-in 
+waveforms. The arbitrary waveforms can be accessed and edited by 
+the EasyWave PC software. 
+Rack Mount 
+ 
+SDS1X-E-RMK 
+The height is 4U. 
+ 
+ 
+ 
+
+===== PAGE 20 =====
+ 
+WWW.SIGLENT.COM                                                                                        
+19 
+Ordering Information 
+Ordering information 
+Product Name 
+SDS1104X-E 100MHz  Four Channels 
+ 
+SDS1204X-E 200MHz  Four Channels 
+ 
+SDS1202X-E 200MHz  Two Channels 
+Standard Accessories 
+USB Cable -1 
+ 
+Quick Start  -1 
+ 
+Passive Probe -4/2 
+ 
+Certification  -1 
+ 
+Power Cord  -1 
+Optional Accessories 
+16 Channels Logic Analyzer (four-channel series only) 
+SLA1016 
+ 
+USB Isolated AWG Module Hardware (four channel series only) 
+SAG1021I 
+ 
+Isolated Front End 
+ISFE 
+ 
+STB Demo Source 
+STB-3 
+ 
+High Voltage Probe 
+HPB4010 
+ 
+Current Probes 
+CP4020/CP4050/CP4070/ 
+CP4070A/CP5030/CP5030A/ 
+CP5150/CP5500 
+ 
+Differential Probes 
+DPB4080/DPB5150/DPB5150A 
+/DPB5700/DPB5700A 
+ 
+Rack Mount 
+SDS1X-E-RMK 
+ 
+ 
+ 
+
+===== PAGE 21 =====
+SDS1000X-E Series Digital Oscilloscope 
+20                                                                                               
+WWW.SIGLENT.COM 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+About SIGLENT 
+ 
+SIGLENT is an international high-tech company, concentrating on R&D, 
+sales, production and services of electronic test & measurement 
+instruments. 
+ 
+SIGLENT first began developing digital oscilloscopes independently in 
+2002. After more than a decade of continuous development, SIGLENT has 
+extended its product line to include digital oscilloscopes, isolated handheld 
+oscilloscopes, function/arbitrary waveform generators, RF/MW signal 
+generators, spectrum analyzers, vector network analyzers, digital 
+multimeters, DC power supplies, electronic loads and other general 
+purpose test instrumentation. Since its first oscilloscope was launched in 
+2005, SIGLENT has become the fastest growing manufacturer of digital 
+oscilloscopes. We firmly believe that today SIGLENT is the best value in 
+electronic test & measurement. 
+Follow us on
+Facebook: SiglentTech
+Headquarters: 
+SIGLENT Technologies Co., Ltd 
+Add: No.26, Lane 2, 1st Liuxian Road, Bao’an District, 
+Shenzhen 518101, China 
+Tel: + 86 755 3688 7876 
+Fax: + 86 755 3359 1582 
+Email: sales@siglent.com 
+Website: int.siglent.com 
+ 
+North America: 
+SIGLENT Technologies America, Inc 
+6557 Cochran Rd Solon, Ohio 44139 
+Tel: 440-398-5800 
+Toll Free: 877-515-5551 
+Fax: 440-399-1211 
+Email: info@siglentna.com 
+Website: www.siglentna.com 
+ 
+Europe: 
+SIGLENT Technologies Germany GmbH 
+Add: Staetzlinger Str.  70 
+86165 Augsburg, Germany 
+Tel: +49(0)-821-666 0 111 0 
+Fax: +49(0)-821-666 0 111 22 
+Email: info-eu@siglent.com 
+Website: www.siglenteu.com 
