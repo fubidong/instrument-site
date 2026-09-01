@@ -110,6 +110,7 @@ export default async function EditProductPage({
           sortOrder: product.sortOrder,
           isActive: product.isActive,
           isFeatured: product.isFeatured,
+          isSampleEnabled: product.isSampleEnabled,
           translations: product.translations,
         }}
         lines={lineOptions}

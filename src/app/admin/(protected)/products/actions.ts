@@ -88,6 +88,7 @@ export async function saveProductAction(
   const sortOrder = parseInt(formData.get("sortOrder") as string) || 0;
   const isActive = formData.get("isActive") === "on";
   const isFeatured = formData.get("isFeatured") === "on";
+  const isSampleEnabled = formData.get("isSampleEnabled") === "on"; // 是否开启"申请样机"按钮
 
   const nameZh = (formData.get("name_zh") as string)?.trim() || "";
   const summaryZh = (formData.get("summary_zh") as string)?.trim() || "";
@@ -131,6 +132,7 @@ export async function saveProductAction(
             sortOrder,
             isActive,
             isFeatured,
+            isSampleEnabled,
           },
         });
         await tx.productTranslation.upsert({
@@ -163,6 +165,7 @@ export async function saveProductAction(
           sortOrder,
           isActive,
           isFeatured,
+          isSampleEnabled,
           translations: {
             create: [
               { locale: "zh", name: nameZh, summary: summaryZh || null },

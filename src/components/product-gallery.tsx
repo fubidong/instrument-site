@@ -63,7 +63,7 @@ export default function ProductGallery({
       <div className="relative">
         {/* 主图：原样显示，不缩放 */}
         <div
-          className="mx-auto aspect-square w-full max-w-[480px] overflow-hidden rounded-lg border border-slate-200 bg-white"
+          className="mx-auto aspect-square w-full max-w-[580px] overflow-hidden rounded-lg border border-slate-200 bg-white"
           onMouseMove={handleMove}
           onMouseLeave={() => setZoom((z) => ({ ...z, active: false }))}
         >
@@ -101,7 +101,7 @@ export default function ProductGallery({
 
       {/* 缩略图 */}
       {all.length > 1 && (
-        <div className="mx-auto mt-3 grid max-w-[480px] grid-cols-5 gap-2">
+        <div className="mx-auto mt-3 grid max-w-[580px] grid-cols-5 gap-2">
           {all.map((img, i) => (
             <button
               key={img.id}

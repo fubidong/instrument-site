@@ -133,6 +133,16 @@ export type NavMenu = Prisma.NavMenuModel
  */
 export type NavMenuTranslation = Prisma.NavMenuTranslationModel
 /**
+ * Model ProductTab
+ * 
+ */
+export type ProductTab = Prisma.ProductTabModel
+/**
+ * Model ProductTabTranslation
+ * 
+ */
+export type ProductTabTranslation = Prisma.ProductTabTranslationModel
+/**
  * Model SiteSetting
  * 
  */

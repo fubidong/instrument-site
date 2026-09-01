@@ -74,6 +74,8 @@ export const ModelName = {
   LoginLog: 'LoginLog',
   NavMenu: 'NavMenu',
   NavMenuTranslation: 'NavMenuTranslation',
+  ProductTab: 'ProductTab',
+  ProductTabTranslation: 'ProductTabTranslation',
   SiteSetting: 'SiteSetting',
   MediaFolder: 'MediaFolder',
   MediaAsset: 'MediaAsset'
@@ -191,6 +193,7 @@ export const ProductScalarFieldEnum = {
   sortOrder: 'sortOrder',
   isActive: 'isActive',
   isFeatured: 'isFeatured',
+  isSampleEnabled: 'isSampleEnabled',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
   brandId: 'brandId',
@@ -331,6 +334,7 @@ export const InquiryScalarFieldEnum = {
   productId: 'productId',
   productLineId: 'productLineId',
   message: 'message',
+  type: 'type',
   status: 'status',
   notifyType: 'notifyType',
   adminNote: 'adminNote',
@@ -424,6 +428,31 @@ export const NavMenuTranslationScalarFieldEnum = {
 } as const
 
 export type NavMenuTranslationScalarFieldEnum = (typeof NavMenuTranslationScalarFieldEnum)[keyof typeof NavMenuTranslationScalarFieldEnum]
+
+
+export const ProductTabScalarFieldEnum = {
+  id: 'id',
+  categoryId: 'categoryId',
+  code: 'code',
+  icon: 'icon',
+  sortOrder: 'sortOrder',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type ProductTabScalarFieldEnum = (typeof ProductTabScalarFieldEnum)[keyof typeof ProductTabScalarFieldEnum]
+
+
+export const ProductTabTranslationScalarFieldEnum = {
+  id: 'id',
+  productTabId: 'productTabId',
+  locale: 'locale',
+  title: 'title',
+  content: 'content'
+} as const
+
+export type ProductTabTranslationScalarFieldEnum = (typeof ProductTabTranslationScalarFieldEnum)[keyof typeof ProductTabTranslationScalarFieldEnum]
 
 
 export const SiteSettingScalarFieldEnum = {

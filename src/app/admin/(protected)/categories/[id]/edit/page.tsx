@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
 import CategoryForm from "../../category-form";
+import CategoryTabsManager from "../../category-tabs-manager";
 
 export default async function EditCategoryPage({
   params,
@@ -10,7 +11,10 @@ export default async function EditCategoryPage({
 }) {
   const { id } = await params;
   const [category, allCats] = await Promise.all([
-    db.category.findUnique({ where: { id }, include: { translations: true } }),
+    db.category.findUnique({
+      where: { id },
+      include: { translations: true, productTabs: { include: { translations: true } } },
+    }),
     db.category.findMany({ include: { translations: true } }),
   ]);
 
@@ -34,6 +38,7 @@ export default async function EditCategoryPage({
         </Link>
       </div>
       <CategoryForm category={category} categories={options} />
+      <CategoryTabsManager categoryId={category.id} tabs={category.productTabs as any} />
     </div>
   );
 }

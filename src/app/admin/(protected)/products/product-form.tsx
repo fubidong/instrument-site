@@ -22,6 +22,7 @@ export default function ProductForm({
     sortOrder: number;
     isActive: boolean;
     isFeatured: boolean;
+    isSampleEnabled: boolean;
     translations: { locale: string; name: string; summary: string | null }[];
   } | null;
   lines: { id: string; code: string; zhName: string; enName: string; brandZh: string; categoryZh: string }[];
@@ -132,6 +133,15 @@ export default function ProductForm({
                 className="h-4 w-4 rounded border-slate-300"
               />
               推荐（首页展示）
+            </label>
+            <label className="flex items-center gap-2 text-sm text-slate-700" title="开启后前台详情页显示“申请样机”按钮">
+              <input
+                type="checkbox"
+                name="isSampleEnabled"
+                defaultChecked={product?.isSampleEnabled ?? false}
+                className="h-4 w-4 rounded border-slate-300"
+              />
+              申请样机
             </label>
           </div>
           <div className="sm:col-span-2">

@@ -3,7 +3,10 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { getBrand, getBrandCategories, getBrandModel } from "@/lib/brand";
 import { getBrandLocale, brandPath } from "@/lib/brand-locale";
+import { db } from "@/lib/db";
 import ProductGallery from "@/components/product-gallery";
+import ProductDetailTabs, { type ParamGroup } from "@/components/product-detail-tabs";
+import LeadDialog from "@/components/lead-dialog";
 
 export default async function BrandModelPage({
   params,
@@ -27,6 +30,21 @@ export default async function BrandModelPage({
   const product = await getBrandModel(brand.id, decodeURIComponent(modelName));
   if (!product) notFound();
 
+  // 品类自定义选项卡（沿分类树向上找，子分类继承父分类选项卡）
+  const ancestors: string[] = [];
+  let curCatId: string | null = product.categoryId;
+  while (curCatId) {
+    ancestors.push(curCatId);
+    const cur = await db.category.findUnique({ where: { id: curCatId }, select: { parentId: true } });
+    if (!cur) break;
+    curCatId = cur.parentId;
+  }
+  const productTabs = await db.productTab.findMany({
+    where: { categoryId: { in: ancestors }, isActive: true },
+    include: { translations: true },
+    orderBy: { sortOrder: "asc" },
+  });
+
   // 解析 specsOverview 为参数表
   const pt = isEn ? product.en : product.zh;
   const specLines = (pt?.specsOverview ?? "")
@@ -38,10 +56,76 @@ export default async function BrandModelPage({
       return { name: "", value: l };
     });
 
+  // 重点参数（3-4 个）：优先 isHighlight，否则取前 4 个参数值
+  const pvList = (product.paramValues as any[]) ?? [];
+  let highlights = pvList
+    .filter((pv) => pv.isHighlight === true)
+    .slice(0, 4)
+    .map((pv) => {
+      const name =
+        pv.paramDefinition.translations.find((tr: any) => tr.locale === "zh")?.name ??
+        pv.paramDefinition.key;
+      const enName =
+        pv.paramDefinition.translations.find((tr: any) => tr.locale === "en")?.name ?? name;
+      const value =
+        pv.valueString ??
+        (pv.valueBoolean !== null && pv.valueBoolean !== undefined
+          ? pv.valueBoolean
+            ? isEn
+              ? "Yes"
+              : "支持"
+            : isEn
+              ? "No"
+              : "不支持"
+          : pv.valueNumber !== null && pv.valueNumber !== undefined
+            ? String(pv.valueNumber)
+            : "-");
+      const unit = pv.paramDefinition.unit ?? "";
+      return { name: isEn ? enName : name, value, unit };
+    });
+  if (highlights.length === 0) {
+    highlights = pvList
+      .slice(0, 4)
+      .map((pv) => {
+        const name =
+          pv.paramDefinition.translations.find((tr: any) => tr.locale === "zh")?.name ??
+          pv.paramDefinition.key;
+        const enName =
+          pv.paramDefinition.translations.find((tr: any) => tr.locale === "en")?.name ?? name;
+        const value =
+          pv.valueString ??
+          (pv.valueBoolean !== null && pv.valueBoolean !== undefined
+            ? pv.valueBoolean
+              ? isEn
+                ? "Yes"
+                : "支持"
+              : isEn
+                ? "No"
+                : "不支持"
+            : pv.valueNumber !== null && pv.valueNumber !== undefined
+              ? String(pv.valueNumber)
+              : "-");
+        const unit = pv.paramDefinition.unit ?? "";
+        return { name: isEn ? enName : name, value, unit };
+      });
+  }
+
+  // 技术参数：specsOverview 单组
+  const paramGroups: ParamGroup[] =
+    specLines.length > 0
+      ? [{ groupName: isEn ? "Specifications" : "技术参数", items: specLines.map((r: any) => ({ name: r.name, value: r.value })) }]
+      : [];
+
+  // 品类自定义选项卡
+  const customTabs = productTabs.map((tab) => {
+    const tr = tab.translations.find((x) => x.locale === locale) ?? tab.translations.find((x) => x.locale === "zh");
+    return { code: tab.code, title: tr?.title ?? tab.code, content: tr?.content ?? "" };
+  });
+
   const I = {
-    quote: isEn ? "Get a Quote" : "获取报价",
-    inquiry: isEn ? "Send Inquiry" : "在线询价",
+    intro: isEn ? "Overview" : "产品介绍",
     specs: isEn ? "Specifications" : "技术参数",
+    noParams: isEn ? "No specifications available" : "暂无参数信息",
   };
 
   return (
@@ -61,77 +145,99 @@ export default async function BrandModelPage({
         <span className="text-slate-800">{product.model}</span>
       </div>
 
-      {/* 型号头 */}
-      <div className="rounded-lg border border-slate-200 bg-white p-6">
-        <div className="flex flex-wrap gap-8">
-          {/* 图片 */}
-          <div className="w-full sm:w-80">
-            <ProductGallery
-              coverImage={product.coverImage}
-              images={product.images}
-              alt={product.model}
-              height="h-56"
-              noImageText={isEn ? "No image" : "无图"}
-            />
+      {/* 顶部两栏：左主图 + 右产品简介 */}
+      <div className="flex flex-col gap-8 lg:flex-row">
+        {/* 左：主图（580x580） */}
+        <div className="w-full lg:w-[580px] lg:shrink-0">
+          <ProductGallery
+            coverImage={product.coverImage}
+            images={product.images}
+            alt={product.model}
+            noImageText={isEn ? "No image" : "无图"}
+          />
+        </div>
+
+        {/* 右：产品简介 */}
+        <div className="flex-1">
+          <div className="flex items-center gap-2 text-sm text-slate-500">
+            <span className="font-medium text-sky-600">{brandName}</span>
+            <span>·</span>
+            <span>{product.seriesName}</span>
           </div>
-          {/* 信息 */}
-          <div className="flex-1">
-            <div className="text-xs font-medium text-sky-600">{brandName} · {product.seriesName}</div>
-            <h1 className="mt-1 font-mono text-2xl font-bold text-slate-900">{product.model}</h1>
-            {pt?.summary && <p className="mt-3 text-sm leading-6 text-slate-600">{pt.summary}</p>}
-            {/* 关键参数 chips */}
-            {product.paramValues.length > 0 && (
-              <div className="mt-4 flex flex-wrap gap-2">
-                {product.paramValues.slice(0, 6).map((pv: any) => {
-                  const name = pv.paramDefinition.translations.find((tr: any) => tr.locale === "zh")?.name ?? pv.paramDefinition.key;
-                  const val = pv.valueString ?? (pv.valueBoolean ? "Yes" : "No");
-                  return (
-                    <span key={pv.id} className="rounded-md bg-slate-100 px-3 py-1.5 text-xs text-slate-700">
-                      <span className="text-slate-400">{name}</span>{" "}
-                      <span className="font-semibold">{val}</span>
-                    </span>
-                  );
-                })}
-              </div>
-            )}
-            <div className="mt-6 flex gap-3">
-              <Link
-                href={`${base}/contact?model=${encodeURIComponent(product.model)}`}
-                className="rounded-md bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-sky-500"
-              >
-                {I.quote}
-              </Link>
-              <Link
-                href={`${base}/contact?model=${encodeURIComponent(product.model)}`}
-                className="rounded-md border border-sky-300 px-5 py-2.5 text-sm font-semibold text-sky-700 hover:bg-sky-50"
-              >
-                {I.inquiry}
-              </Link>
+          <h1 className="mt-2 font-mono text-3xl font-bold text-slate-900">{product.model}</h1>
+          {pt?.summary && <p className="mt-4 text-sm leading-6 text-slate-600">{pt.summary}</p>}
+
+          {/* 重点参数（3-4 个） */}
+          {highlights.length > 0 && (
+            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {highlights.map((h, i) => (
+                <div key={i} className="rounded-lg border border-slate-200 bg-white px-3 py-3">
+                  <div className="flex items-center gap-1.5 text-xs text-slate-400">
+                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-sky-500" />
+                    {h.name}
+                  </div>
+                  <div className="mt-1 truncate text-lg font-bold text-slate-800">
+                    {h.value}
+                    {h.unit && <span className="ml-0.5 text-xs font-normal text-slate-400">{h.unit}</span>}
+                  </div>
+                </div>
+              ))}
             </div>
+          )}
+
+          {/* 操作按钮组 */}
+          <div className="mt-7 flex flex-wrap gap-3">
+            <LeadDialog
+              type="inquiry"
+              locale={isEn ? "en" : "zh"}
+              productId={product.id}
+              productModel={product.model}
+              productName={pt?.name ?? product.model}
+            />
+            {/* 申请样机（后台开关控制） */}
+            <SampleDialogGate productId={product.id} productModel={product.model} productName={pt?.name ?? product.model} isEn={isEn} />
           </div>
         </div>
       </div>
 
-      {/* 技术参数表 */}
-      {specLines.length > 0 && (
-        <div className="mt-8 rounded-lg border border-slate-200 bg-white">
-          <div className="border-b border-slate-100 px-6 py-4">
-            <h2 className="text-lg font-bold text-slate-900">{I.specs}</h2>
-          </div>
-          <table className="w-full text-sm">
-            <tbody>
-              {specLines.map((row: any, i: number) => (
-                <tr key={i} className={i % 2 === 0 ? "bg-slate-50/50" : "bg-white"}>
-                  <td className="w-1/3 border-r border-slate-100 px-6 py-3 font-medium text-slate-600">
-                    {row.name || "—"}
-                  </td>
-                  <td className="px-6 py-3 text-slate-800">{row.value}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+      {/* 选项卡：产品介绍 / 技术参数 / 品类自定义 */}
+      <div className="mt-10">
+        <ProductDetailTabs
+          intro={pt?.description ?? pt?.summary ?? null}
+          highlights={highlights}
+          paramGroups={paramGroups}
+          customTabs={customTabs}
+          labels={{ intro: I.intro, params: I.specs, noParams: I.noParams }}
+        />
+      </div>
     </div>
+  );
+}
+
+/** 申请样机按钮（按产品 isSampleEnabled 开关控制显示） */
+async function SampleDialogGate({
+  productId,
+  productModel,
+  productName,
+  isEn,
+}: {
+  productId: string;
+  productModel: string;
+  productName: string;
+  isEn: boolean;
+}) {
+  const p = await db.product.findUnique({
+    where: { id: productId },
+    select: { isSampleEnabled: true },
+  });
+  if (!p?.isSampleEnabled) return null;
+  return (
+    <LeadDialog
+      type="sample"
+      locale={isEn ? "en" : "zh"}
+      productId={productId}
+      productModel={productModel}
+      productName={productName}
+    />
   );
 }

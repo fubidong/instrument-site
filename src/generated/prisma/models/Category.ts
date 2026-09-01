@@ -264,6 +264,7 @@ export type CategoryWhereInput = {
   products?: Prisma.ProductListRelationFilter
   paramGroups?: Prisma.ParamGroupListRelationFilter
   paramDefs?: Prisma.ParamDefinitionListRelationFilter
+  productTabs?: Prisma.ProductTabListRelationFilter
   brand?: Prisma.XOR<Prisma.BrandNullableScalarRelationFilter, Prisma.BrandWhereInput> | null
   siteCategory?: Prisma.XOR<Prisma.CategoryNullableScalarRelationFilter, Prisma.CategoryWhereInput> | null
   siteChildren?: Prisma.CategoryListRelationFilter
@@ -288,6 +289,7 @@ export type CategoryOrderByWithRelationInput = {
   products?: Prisma.ProductOrderByRelationAggregateInput
   paramGroups?: Prisma.ParamGroupOrderByRelationAggregateInput
   paramDefs?: Prisma.ParamDefinitionOrderByRelationAggregateInput
+  productTabs?: Prisma.ProductTabOrderByRelationAggregateInput
   brand?: Prisma.BrandOrderByWithRelationInput
   siteCategory?: Prisma.CategoryOrderByWithRelationInput
   siteChildren?: Prisma.CategoryOrderByRelationAggregateInput
@@ -315,6 +317,7 @@ export type CategoryWhereUniqueInput = Prisma.AtLeast<{
   products?: Prisma.ProductListRelationFilter
   paramGroups?: Prisma.ParamGroupListRelationFilter
   paramDefs?: Prisma.ParamDefinitionListRelationFilter
+  productTabs?: Prisma.ProductTabListRelationFilter
   brand?: Prisma.XOR<Prisma.BrandNullableScalarRelationFilter, Prisma.BrandWhereInput> | null
   siteCategory?: Prisma.XOR<Prisma.CategoryNullableScalarRelationFilter, Prisma.CategoryWhereInput> | null
   siteChildren?: Prisma.CategoryListRelationFilter
@@ -370,6 +373,7 @@ export type CategoryCreateInput = {
   products?: Prisma.ProductCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabCreateNestedManyWithoutCategoryInput
   brand?: Prisma.BrandCreateNestedOneWithoutOwnCategoriesInput
   siteCategory?: Prisma.CategoryCreateNestedOneWithoutSiteChildrenInput
   siteChildren?: Prisma.CategoryCreateNestedManyWithoutSiteCategoryInput
@@ -393,6 +397,7 @@ export type CategoryUncheckedCreateInput = {
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupUncheckedCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionUncheckedCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabUncheckedCreateNestedManyWithoutCategoryInput
   siteChildren?: Prisma.CategoryUncheckedCreateNestedManyWithoutSiteCategoryInput
 }
 
@@ -412,6 +417,7 @@ export type CategoryUpdateInput = {
   products?: Prisma.ProductUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUpdateManyWithoutCategoryNestedInput
   brand?: Prisma.BrandUpdateOneWithoutOwnCategoriesNestedInput
   siteCategory?: Prisma.CategoryUpdateOneWithoutSiteChildrenNestedInput
   siteChildren?: Prisma.CategoryUpdateManyWithoutSiteCategoryNestedInput
@@ -435,6 +441,7 @@ export type CategoryUncheckedUpdateInput = {
   products?: Prisma.ProductUncheckedUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUncheckedUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUncheckedUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUncheckedUpdateManyWithoutCategoryNestedInput
   siteChildren?: Prisma.CategoryUncheckedUpdateManyWithoutSiteCategoryNestedInput
 }
 
@@ -783,6 +790,20 @@ export type CategoryUpdateOneRequiredWithoutParamDefsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.CategoryUpdateToOneWithWhereWithoutParamDefsInput, Prisma.CategoryUpdateWithoutParamDefsInput>, Prisma.CategoryUncheckedUpdateWithoutParamDefsInput>
 }
 
+export type CategoryCreateNestedOneWithoutProductTabsInput = {
+  create?: Prisma.XOR<Prisma.CategoryCreateWithoutProductTabsInput, Prisma.CategoryUncheckedCreateWithoutProductTabsInput>
+  connectOrCreate?: Prisma.CategoryCreateOrConnectWithoutProductTabsInput
+  connect?: Prisma.CategoryWhereUniqueInput
+}
+
+export type CategoryUpdateOneRequiredWithoutProductTabsNestedInput = {
+  create?: Prisma.XOR<Prisma.CategoryCreateWithoutProductTabsInput, Prisma.CategoryUncheckedCreateWithoutProductTabsInput>
+  connectOrCreate?: Prisma.CategoryCreateOrConnectWithoutProductTabsInput
+  upsert?: Prisma.CategoryUpsertWithoutProductTabsInput
+  connect?: Prisma.CategoryWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.CategoryUpdateToOneWithWhereWithoutProductTabsInput, Prisma.CategoryUpdateWithoutProductTabsInput>, Prisma.CategoryUncheckedUpdateWithoutProductTabsInput>
+}
+
 export type CategoryCreateWithoutBrandInput = {
   id?: string
   code: string
@@ -799,6 +820,7 @@ export type CategoryCreateWithoutBrandInput = {
   products?: Prisma.ProductCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabCreateNestedManyWithoutCategoryInput
   siteCategory?: Prisma.CategoryCreateNestedOneWithoutSiteChildrenInput
   siteChildren?: Prisma.CategoryCreateNestedManyWithoutSiteCategoryInput
 }
@@ -820,6 +842,7 @@ export type CategoryUncheckedCreateWithoutBrandInput = {
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupUncheckedCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionUncheckedCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabUncheckedCreateNestedManyWithoutCategoryInput
   siteChildren?: Prisma.CategoryUncheckedCreateNestedManyWithoutSiteCategoryInput
 }
 
@@ -880,6 +903,7 @@ export type CategoryCreateWithoutChildrenInput = {
   products?: Prisma.ProductCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabCreateNestedManyWithoutCategoryInput
   brand?: Prisma.BrandCreateNestedOneWithoutOwnCategoriesInput
   siteCategory?: Prisma.CategoryCreateNestedOneWithoutSiteChildrenInput
   siteChildren?: Prisma.CategoryCreateNestedManyWithoutSiteCategoryInput
@@ -902,6 +926,7 @@ export type CategoryUncheckedCreateWithoutChildrenInput = {
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupUncheckedCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionUncheckedCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabUncheckedCreateNestedManyWithoutCategoryInput
   siteChildren?: Prisma.CategoryUncheckedCreateNestedManyWithoutSiteCategoryInput
 }
 
@@ -925,6 +950,7 @@ export type CategoryCreateWithoutParentInput = {
   products?: Prisma.ProductCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabCreateNestedManyWithoutCategoryInput
   brand?: Prisma.BrandCreateNestedOneWithoutOwnCategoriesInput
   siteCategory?: Prisma.CategoryCreateNestedOneWithoutSiteChildrenInput
   siteChildren?: Prisma.CategoryCreateNestedManyWithoutSiteCategoryInput
@@ -947,6 +973,7 @@ export type CategoryUncheckedCreateWithoutParentInput = {
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupUncheckedCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionUncheckedCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabUncheckedCreateNestedManyWithoutCategoryInput
   siteChildren?: Prisma.CategoryUncheckedCreateNestedManyWithoutSiteCategoryInput
 }
 
@@ -976,6 +1003,7 @@ export type CategoryCreateWithoutSiteChildrenInput = {
   products?: Prisma.ProductCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabCreateNestedManyWithoutCategoryInput
   brand?: Prisma.BrandCreateNestedOneWithoutOwnCategoriesInput
   siteCategory?: Prisma.CategoryCreateNestedOneWithoutSiteChildrenInput
 }
@@ -998,6 +1026,7 @@ export type CategoryUncheckedCreateWithoutSiteChildrenInput = {
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupUncheckedCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionUncheckedCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabUncheckedCreateNestedManyWithoutCategoryInput
 }
 
 export type CategoryCreateOrConnectWithoutSiteChildrenInput = {
@@ -1021,6 +1050,7 @@ export type CategoryCreateWithoutSiteCategoryInput = {
   products?: Prisma.ProductCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabCreateNestedManyWithoutCategoryInput
   brand?: Prisma.BrandCreateNestedOneWithoutOwnCategoriesInput
   siteChildren?: Prisma.CategoryCreateNestedManyWithoutSiteCategoryInput
 }
@@ -1042,6 +1072,7 @@ export type CategoryUncheckedCreateWithoutSiteCategoryInput = {
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupUncheckedCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionUncheckedCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabUncheckedCreateNestedManyWithoutCategoryInput
   siteChildren?: Prisma.CategoryUncheckedCreateNestedManyWithoutSiteCategoryInput
 }
 
@@ -1081,6 +1112,7 @@ export type CategoryUpdateWithoutChildrenInput = {
   products?: Prisma.ProductUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUpdateManyWithoutCategoryNestedInput
   brand?: Prisma.BrandUpdateOneWithoutOwnCategoriesNestedInput
   siteCategory?: Prisma.CategoryUpdateOneWithoutSiteChildrenNestedInput
   siteChildren?: Prisma.CategoryUpdateManyWithoutSiteCategoryNestedInput
@@ -1103,6 +1135,7 @@ export type CategoryUncheckedUpdateWithoutChildrenInput = {
   products?: Prisma.ProductUncheckedUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUncheckedUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUncheckedUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUncheckedUpdateManyWithoutCategoryNestedInput
   siteChildren?: Prisma.CategoryUncheckedUpdateManyWithoutSiteCategoryNestedInput
 }
 
@@ -1149,6 +1182,7 @@ export type CategoryUpdateWithoutSiteChildrenInput = {
   products?: Prisma.ProductUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUpdateManyWithoutCategoryNestedInput
   brand?: Prisma.BrandUpdateOneWithoutOwnCategoriesNestedInput
   siteCategory?: Prisma.CategoryUpdateOneWithoutSiteChildrenNestedInput
 }
@@ -1171,6 +1205,7 @@ export type CategoryUncheckedUpdateWithoutSiteChildrenInput = {
   products?: Prisma.ProductUncheckedUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUncheckedUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUncheckedUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUncheckedUpdateManyWithoutCategoryNestedInput
 }
 
 export type CategoryUpsertWithWhereUniqueWithoutSiteCategoryInput = {
@@ -1204,6 +1239,7 @@ export type CategoryCreateWithoutTranslationsInput = {
   products?: Prisma.ProductCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabCreateNestedManyWithoutCategoryInput
   brand?: Prisma.BrandCreateNestedOneWithoutOwnCategoriesInput
   siteCategory?: Prisma.CategoryCreateNestedOneWithoutSiteChildrenInput
   siteChildren?: Prisma.CategoryCreateNestedManyWithoutSiteCategoryInput
@@ -1226,6 +1262,7 @@ export type CategoryUncheckedCreateWithoutTranslationsInput = {
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupUncheckedCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionUncheckedCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabUncheckedCreateNestedManyWithoutCategoryInput
   siteChildren?: Prisma.CategoryUncheckedCreateNestedManyWithoutSiteCategoryInput
 }
 
@@ -1260,6 +1297,7 @@ export type CategoryUpdateWithoutTranslationsInput = {
   products?: Prisma.ProductUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUpdateManyWithoutCategoryNestedInput
   brand?: Prisma.BrandUpdateOneWithoutOwnCategoriesNestedInput
   siteCategory?: Prisma.CategoryUpdateOneWithoutSiteChildrenNestedInput
   siteChildren?: Prisma.CategoryUpdateManyWithoutSiteCategoryNestedInput
@@ -1282,6 +1320,7 @@ export type CategoryUncheckedUpdateWithoutTranslationsInput = {
   products?: Prisma.ProductUncheckedUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUncheckedUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUncheckedUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUncheckedUpdateManyWithoutCategoryNestedInput
   siteChildren?: Prisma.CategoryUncheckedUpdateManyWithoutSiteCategoryNestedInput
 }
 
@@ -1300,6 +1339,7 @@ export type CategoryCreateWithoutBrandsInput = {
   products?: Prisma.ProductCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabCreateNestedManyWithoutCategoryInput
   brand?: Prisma.BrandCreateNestedOneWithoutOwnCategoriesInput
   siteCategory?: Prisma.CategoryCreateNestedOneWithoutSiteChildrenInput
   siteChildren?: Prisma.CategoryCreateNestedManyWithoutSiteCategoryInput
@@ -1322,6 +1362,7 @@ export type CategoryUncheckedCreateWithoutBrandsInput = {
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupUncheckedCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionUncheckedCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabUncheckedCreateNestedManyWithoutCategoryInput
   siteChildren?: Prisma.CategoryUncheckedCreateNestedManyWithoutSiteCategoryInput
 }
 
@@ -1356,6 +1397,7 @@ export type CategoryUpdateWithoutBrandsInput = {
   products?: Prisma.ProductUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUpdateManyWithoutCategoryNestedInput
   brand?: Prisma.BrandUpdateOneWithoutOwnCategoriesNestedInput
   siteCategory?: Prisma.CategoryUpdateOneWithoutSiteChildrenNestedInput
   siteChildren?: Prisma.CategoryUpdateManyWithoutSiteCategoryNestedInput
@@ -1378,6 +1420,7 @@ export type CategoryUncheckedUpdateWithoutBrandsInput = {
   products?: Prisma.ProductUncheckedUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUncheckedUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUncheckedUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUncheckedUpdateManyWithoutCategoryNestedInput
   siteChildren?: Prisma.CategoryUncheckedUpdateManyWithoutSiteCategoryNestedInput
 }
 
@@ -1396,6 +1439,7 @@ export type CategoryCreateWithoutProductLinesInput = {
   products?: Prisma.ProductCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabCreateNestedManyWithoutCategoryInput
   brand?: Prisma.BrandCreateNestedOneWithoutOwnCategoriesInput
   siteCategory?: Prisma.CategoryCreateNestedOneWithoutSiteChildrenInput
   siteChildren?: Prisma.CategoryCreateNestedManyWithoutSiteCategoryInput
@@ -1418,6 +1462,7 @@ export type CategoryUncheckedCreateWithoutProductLinesInput = {
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupUncheckedCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionUncheckedCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabUncheckedCreateNestedManyWithoutCategoryInput
   siteChildren?: Prisma.CategoryUncheckedCreateNestedManyWithoutSiteCategoryInput
 }
 
@@ -1452,6 +1497,7 @@ export type CategoryUpdateWithoutProductLinesInput = {
   products?: Prisma.ProductUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUpdateManyWithoutCategoryNestedInput
   brand?: Prisma.BrandUpdateOneWithoutOwnCategoriesNestedInput
   siteCategory?: Prisma.CategoryUpdateOneWithoutSiteChildrenNestedInput
   siteChildren?: Prisma.CategoryUpdateManyWithoutSiteCategoryNestedInput
@@ -1474,6 +1520,7 @@ export type CategoryUncheckedUpdateWithoutProductLinesInput = {
   products?: Prisma.ProductUncheckedUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUncheckedUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUncheckedUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUncheckedUpdateManyWithoutCategoryNestedInput
   siteChildren?: Prisma.CategoryUncheckedUpdateManyWithoutSiteCategoryNestedInput
 }
 
@@ -1492,6 +1539,7 @@ export type CategoryCreateWithoutProductsInput = {
   productLines?: Prisma.ProductLineCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabCreateNestedManyWithoutCategoryInput
   brand?: Prisma.BrandCreateNestedOneWithoutOwnCategoriesInput
   siteCategory?: Prisma.CategoryCreateNestedOneWithoutSiteChildrenInput
   siteChildren?: Prisma.CategoryCreateNestedManyWithoutSiteCategoryInput
@@ -1514,6 +1562,7 @@ export type CategoryUncheckedCreateWithoutProductsInput = {
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupUncheckedCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionUncheckedCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabUncheckedCreateNestedManyWithoutCategoryInput
   siteChildren?: Prisma.CategoryUncheckedCreateNestedManyWithoutSiteCategoryInput
 }
 
@@ -1548,6 +1597,7 @@ export type CategoryUpdateWithoutProductsInput = {
   productLines?: Prisma.ProductLineUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUpdateManyWithoutCategoryNestedInput
   brand?: Prisma.BrandUpdateOneWithoutOwnCategoriesNestedInput
   siteCategory?: Prisma.CategoryUpdateOneWithoutSiteChildrenNestedInput
   siteChildren?: Prisma.CategoryUpdateManyWithoutSiteCategoryNestedInput
@@ -1570,6 +1620,7 @@ export type CategoryUncheckedUpdateWithoutProductsInput = {
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUncheckedUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUncheckedUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUncheckedUpdateManyWithoutCategoryNestedInput
   siteChildren?: Prisma.CategoryUncheckedUpdateManyWithoutSiteCategoryNestedInput
 }
 
@@ -1588,6 +1639,7 @@ export type CategoryCreateWithoutParamGroupsInput = {
   productLines?: Prisma.ProductLineCreateNestedManyWithoutCategoryInput
   products?: Prisma.ProductCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabCreateNestedManyWithoutCategoryInput
   brand?: Prisma.BrandCreateNestedOneWithoutOwnCategoriesInput
   siteCategory?: Prisma.CategoryCreateNestedOneWithoutSiteChildrenInput
   siteChildren?: Prisma.CategoryCreateNestedManyWithoutSiteCategoryInput
@@ -1610,6 +1662,7 @@ export type CategoryUncheckedCreateWithoutParamGroupsInput = {
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutCategoryInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutCategoryInput
   paramDefs?: Prisma.ParamDefinitionUncheckedCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabUncheckedCreateNestedManyWithoutCategoryInput
   siteChildren?: Prisma.CategoryUncheckedCreateNestedManyWithoutSiteCategoryInput
 }
 
@@ -1644,6 +1697,7 @@ export type CategoryUpdateWithoutParamGroupsInput = {
   productLines?: Prisma.ProductLineUpdateManyWithoutCategoryNestedInput
   products?: Prisma.ProductUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUpdateManyWithoutCategoryNestedInput
   brand?: Prisma.BrandUpdateOneWithoutOwnCategoriesNestedInput
   siteCategory?: Prisma.CategoryUpdateOneWithoutSiteChildrenNestedInput
   siteChildren?: Prisma.CategoryUpdateManyWithoutSiteCategoryNestedInput
@@ -1666,6 +1720,7 @@ export type CategoryUncheckedUpdateWithoutParamGroupsInput = {
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutCategoryNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUncheckedUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUncheckedUpdateManyWithoutCategoryNestedInput
   siteChildren?: Prisma.CategoryUncheckedUpdateManyWithoutSiteCategoryNestedInput
 }
 
@@ -1684,6 +1739,7 @@ export type CategoryCreateWithoutParamDefsInput = {
   productLines?: Prisma.ProductLineCreateNestedManyWithoutCategoryInput
   products?: Prisma.ProductCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabCreateNestedManyWithoutCategoryInput
   brand?: Prisma.BrandCreateNestedOneWithoutOwnCategoriesInput
   siteCategory?: Prisma.CategoryCreateNestedOneWithoutSiteChildrenInput
   siteChildren?: Prisma.CategoryCreateNestedManyWithoutSiteCategoryInput
@@ -1706,6 +1762,7 @@ export type CategoryUncheckedCreateWithoutParamDefsInput = {
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutCategoryInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutCategoryInput
   paramGroups?: Prisma.ParamGroupUncheckedCreateNestedManyWithoutCategoryInput
+  productTabs?: Prisma.ProductTabUncheckedCreateNestedManyWithoutCategoryInput
   siteChildren?: Prisma.CategoryUncheckedCreateNestedManyWithoutSiteCategoryInput
 }
 
@@ -1740,6 +1797,7 @@ export type CategoryUpdateWithoutParamDefsInput = {
   productLines?: Prisma.ProductLineUpdateManyWithoutCategoryNestedInput
   products?: Prisma.ProductUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUpdateManyWithoutCategoryNestedInput
   brand?: Prisma.BrandUpdateOneWithoutOwnCategoriesNestedInput
   siteCategory?: Prisma.CategoryUpdateOneWithoutSiteChildrenNestedInput
   siteChildren?: Prisma.CategoryUpdateManyWithoutSiteCategoryNestedInput
@@ -1762,6 +1820,107 @@ export type CategoryUncheckedUpdateWithoutParamDefsInput = {
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutCategoryNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUncheckedUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUncheckedUpdateManyWithoutCategoryNestedInput
+  siteChildren?: Prisma.CategoryUncheckedUpdateManyWithoutSiteCategoryNestedInput
+}
+
+export type CategoryCreateWithoutProductTabsInput = {
+  id?: string
+  code: string
+  icon?: string | null
+  sortOrder?: number
+  showInNav?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  parent?: Prisma.CategoryCreateNestedOneWithoutChildrenInput
+  children?: Prisma.CategoryCreateNestedManyWithoutParentInput
+  translations?: Prisma.CategoryTranslationCreateNestedManyWithoutCategoryInput
+  brands?: Prisma.BrandCategoryCreateNestedManyWithoutCategoryInput
+  productLines?: Prisma.ProductLineCreateNestedManyWithoutCategoryInput
+  products?: Prisma.ProductCreateNestedManyWithoutCategoryInput
+  paramGroups?: Prisma.ParamGroupCreateNestedManyWithoutCategoryInput
+  paramDefs?: Prisma.ParamDefinitionCreateNestedManyWithoutCategoryInput
+  brand?: Prisma.BrandCreateNestedOneWithoutOwnCategoriesInput
+  siteCategory?: Prisma.CategoryCreateNestedOneWithoutSiteChildrenInput
+  siteChildren?: Prisma.CategoryCreateNestedManyWithoutSiteCategoryInput
+}
+
+export type CategoryUncheckedCreateWithoutProductTabsInput = {
+  id?: string
+  code: string
+  icon?: string | null
+  sortOrder?: number
+  showInNav?: boolean
+  parentId?: string | null
+  brandId?: string | null
+  siteCategoryId?: string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  children?: Prisma.CategoryUncheckedCreateNestedManyWithoutParentInput
+  translations?: Prisma.CategoryTranslationUncheckedCreateNestedManyWithoutCategoryInput
+  brands?: Prisma.BrandCategoryUncheckedCreateNestedManyWithoutCategoryInput
+  productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutCategoryInput
+  products?: Prisma.ProductUncheckedCreateNestedManyWithoutCategoryInput
+  paramGroups?: Prisma.ParamGroupUncheckedCreateNestedManyWithoutCategoryInput
+  paramDefs?: Prisma.ParamDefinitionUncheckedCreateNestedManyWithoutCategoryInput
+  siteChildren?: Prisma.CategoryUncheckedCreateNestedManyWithoutSiteCategoryInput
+}
+
+export type CategoryCreateOrConnectWithoutProductTabsInput = {
+  where: Prisma.CategoryWhereUniqueInput
+  create: Prisma.XOR<Prisma.CategoryCreateWithoutProductTabsInput, Prisma.CategoryUncheckedCreateWithoutProductTabsInput>
+}
+
+export type CategoryUpsertWithoutProductTabsInput = {
+  update: Prisma.XOR<Prisma.CategoryUpdateWithoutProductTabsInput, Prisma.CategoryUncheckedUpdateWithoutProductTabsInput>
+  create: Prisma.XOR<Prisma.CategoryCreateWithoutProductTabsInput, Prisma.CategoryUncheckedCreateWithoutProductTabsInput>
+  where?: Prisma.CategoryWhereInput
+}
+
+export type CategoryUpdateToOneWithWhereWithoutProductTabsInput = {
+  where?: Prisma.CategoryWhereInput
+  data: Prisma.XOR<Prisma.CategoryUpdateWithoutProductTabsInput, Prisma.CategoryUncheckedUpdateWithoutProductTabsInput>
+}
+
+export type CategoryUpdateWithoutProductTabsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  code?: Prisma.StringFieldUpdateOperationsInput | string
+  icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  parent?: Prisma.CategoryUpdateOneWithoutChildrenNestedInput
+  children?: Prisma.CategoryUpdateManyWithoutParentNestedInput
+  translations?: Prisma.CategoryTranslationUpdateManyWithoutCategoryNestedInput
+  brands?: Prisma.BrandCategoryUpdateManyWithoutCategoryNestedInput
+  productLines?: Prisma.ProductLineUpdateManyWithoutCategoryNestedInput
+  products?: Prisma.ProductUpdateManyWithoutCategoryNestedInput
+  paramGroups?: Prisma.ParamGroupUpdateManyWithoutCategoryNestedInput
+  paramDefs?: Prisma.ParamDefinitionUpdateManyWithoutCategoryNestedInput
+  brand?: Prisma.BrandUpdateOneWithoutOwnCategoriesNestedInput
+  siteCategory?: Prisma.CategoryUpdateOneWithoutSiteChildrenNestedInput
+  siteChildren?: Prisma.CategoryUpdateManyWithoutSiteCategoryNestedInput
+}
+
+export type CategoryUncheckedUpdateWithoutProductTabsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  code?: Prisma.StringFieldUpdateOperationsInput | string
+  icon?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  showInNav?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  siteCategoryId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  children?: Prisma.CategoryUncheckedUpdateManyWithoutParentNestedInput
+  translations?: Prisma.CategoryTranslationUncheckedUpdateManyWithoutCategoryNestedInput
+  brands?: Prisma.BrandCategoryUncheckedUpdateManyWithoutCategoryNestedInput
+  productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutCategoryNestedInput
+  products?: Prisma.ProductUncheckedUpdateManyWithoutCategoryNestedInput
+  paramGroups?: Prisma.ParamGroupUncheckedUpdateManyWithoutCategoryNestedInput
+  paramDefs?: Prisma.ParamDefinitionUncheckedUpdateManyWithoutCategoryNestedInput
   siteChildren?: Prisma.CategoryUncheckedUpdateManyWithoutSiteCategoryNestedInput
 }
 
@@ -1793,6 +1952,7 @@ export type CategoryUpdateWithoutBrandInput = {
   products?: Prisma.ProductUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUpdateManyWithoutCategoryNestedInput
   siteCategory?: Prisma.CategoryUpdateOneWithoutSiteChildrenNestedInput
   siteChildren?: Prisma.CategoryUpdateManyWithoutSiteCategoryNestedInput
 }
@@ -1814,6 +1974,7 @@ export type CategoryUncheckedUpdateWithoutBrandInput = {
   products?: Prisma.ProductUncheckedUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUncheckedUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUncheckedUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUncheckedUpdateManyWithoutCategoryNestedInput
   siteChildren?: Prisma.CategoryUncheckedUpdateManyWithoutSiteCategoryNestedInput
 }
 
@@ -1868,6 +2029,7 @@ export type CategoryUpdateWithoutParentInput = {
   products?: Prisma.ProductUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUpdateManyWithoutCategoryNestedInput
   brand?: Prisma.BrandUpdateOneWithoutOwnCategoriesNestedInput
   siteCategory?: Prisma.CategoryUpdateOneWithoutSiteChildrenNestedInput
   siteChildren?: Prisma.CategoryUpdateManyWithoutSiteCategoryNestedInput
@@ -1890,6 +2052,7 @@ export type CategoryUncheckedUpdateWithoutParentInput = {
   products?: Prisma.ProductUncheckedUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUncheckedUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUncheckedUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUncheckedUpdateManyWithoutCategoryNestedInput
   siteChildren?: Prisma.CategoryUncheckedUpdateManyWithoutSiteCategoryNestedInput
 }
 
@@ -1921,6 +2084,7 @@ export type CategoryUpdateWithoutSiteCategoryInput = {
   products?: Prisma.ProductUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUpdateManyWithoutCategoryNestedInput
   brand?: Prisma.BrandUpdateOneWithoutOwnCategoriesNestedInput
   siteChildren?: Prisma.CategoryUpdateManyWithoutSiteCategoryNestedInput
 }
@@ -1942,6 +2106,7 @@ export type CategoryUncheckedUpdateWithoutSiteCategoryInput = {
   products?: Prisma.ProductUncheckedUpdateManyWithoutCategoryNestedInput
   paramGroups?: Prisma.ParamGroupUncheckedUpdateManyWithoutCategoryNestedInput
   paramDefs?: Prisma.ParamDefinitionUncheckedUpdateManyWithoutCategoryNestedInput
+  productTabs?: Prisma.ProductTabUncheckedUpdateManyWithoutCategoryNestedInput
   siteChildren?: Prisma.CategoryUncheckedUpdateManyWithoutSiteCategoryNestedInput
 }
 
@@ -1970,6 +2135,7 @@ export type CategoryCountOutputType = {
   products: number
   paramGroups: number
   paramDefs: number
+  productTabs: number
   siteChildren: number
 }
 
@@ -1981,6 +2147,7 @@ export type CategoryCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensio
   products?: boolean | CategoryCountOutputTypeCountProductsArgs
   paramGroups?: boolean | CategoryCountOutputTypeCountParamGroupsArgs
   paramDefs?: boolean | CategoryCountOutputTypeCountParamDefsArgs
+  productTabs?: boolean | CategoryCountOutputTypeCountProductTabsArgs
   siteChildren?: boolean | CategoryCountOutputTypeCountSiteChildrenArgs
 }
 
@@ -2046,6 +2213,13 @@ export type CategoryCountOutputTypeCountParamDefsArgs<ExtArgs extends runtime.Ty
 /**
  * CategoryCountOutputType without action
  */
+export type CategoryCountOutputTypeCountProductTabsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.ProductTabWhereInput
+}
+
+/**
+ * CategoryCountOutputType without action
+ */
 export type CategoryCountOutputTypeCountSiteChildrenArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   where?: Prisma.CategoryWhereInput
 }
@@ -2070,6 +2244,7 @@ export type CategorySelect<ExtArgs extends runtime.Types.Extensions.InternalArgs
   products?: boolean | Prisma.Category$productsArgs<ExtArgs>
   paramGroups?: boolean | Prisma.Category$paramGroupsArgs<ExtArgs>
   paramDefs?: boolean | Prisma.Category$paramDefsArgs<ExtArgs>
+  productTabs?: boolean | Prisma.Category$productTabsArgs<ExtArgs>
   brand?: boolean | Prisma.Category$brandArgs<ExtArgs>
   siteCategory?: boolean | Prisma.Category$siteCategoryArgs<ExtArgs>
   siteChildren?: boolean | Prisma.Category$siteChildrenArgs<ExtArgs>
@@ -2131,6 +2306,7 @@ export type CategoryInclude<ExtArgs extends runtime.Types.Extensions.InternalArg
   products?: boolean | Prisma.Category$productsArgs<ExtArgs>
   paramGroups?: boolean | Prisma.Category$paramGroupsArgs<ExtArgs>
   paramDefs?: boolean | Prisma.Category$paramDefsArgs<ExtArgs>
+  productTabs?: boolean | Prisma.Category$productTabsArgs<ExtArgs>
   brand?: boolean | Prisma.Category$brandArgs<ExtArgs>
   siteCategory?: boolean | Prisma.Category$siteCategoryArgs<ExtArgs>
   siteChildren?: boolean | Prisma.Category$siteChildrenArgs<ExtArgs>
@@ -2158,6 +2334,7 @@ export type $CategoryPayload<ExtArgs extends runtime.Types.Extensions.InternalAr
     products: Prisma.$ProductPayload<ExtArgs>[]
     paramGroups: Prisma.$ParamGroupPayload<ExtArgs>[]
     paramDefs: Prisma.$ParamDefinitionPayload<ExtArgs>[]
+    productTabs: Prisma.$ProductTabPayload<ExtArgs>[]
     brand: Prisma.$BrandPayload<ExtArgs> | null
     siteCategory: Prisma.$CategoryPayload<ExtArgs> | null
     siteChildren: Prisma.$CategoryPayload<ExtArgs>[]
@@ -2575,6 +2752,7 @@ export interface Prisma__CategoryClient<T, Null = never, ExtArgs extends runtime
   products<T extends Prisma.Category$productsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Category$productsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   paramGroups<T extends Prisma.Category$paramGroupsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Category$paramGroupsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ParamGroupPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   paramDefs<T extends Prisma.Category$paramDefsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Category$paramDefsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ParamDefinitionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  productTabs<T extends Prisma.Category$productTabsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Category$productTabsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProductTabPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   brand<T extends Prisma.Category$brandArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Category$brandArgs<ExtArgs>>): Prisma.Prisma__BrandClient<runtime.Types.Result.GetResult<Prisma.$BrandPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   siteCategory<T extends Prisma.Category$siteCategoryArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Category$siteCategoryArgs<ExtArgs>>): Prisma.Prisma__CategoryClient<runtime.Types.Result.GetResult<Prisma.$CategoryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   siteChildren<T extends Prisma.Category$siteChildrenArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Category$siteChildrenArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$CategoryPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
@@ -3202,6 +3380,30 @@ export type Category$paramDefsArgs<ExtArgs extends runtime.Types.Extensions.Inte
   take?: number
   skip?: number
   distinct?: Prisma.ParamDefinitionScalarFieldEnum | Prisma.ParamDefinitionScalarFieldEnum[]
+}
+
+/**
+ * Category.productTabs
+ */
+export type Category$productTabsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the ProductTab
+   */
+  select?: Prisma.ProductTabSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the ProductTab
+   */
+  omit?: Prisma.ProductTabOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.ProductTabInclude<ExtArgs> | null
+  where?: Prisma.ProductTabWhereInput
+  orderBy?: Prisma.ProductTabOrderByWithRelationInput | Prisma.ProductTabOrderByWithRelationInput[]
+  cursor?: Prisma.ProductTabWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.ProductTabScalarFieldEnum | Prisma.ProductTabScalarFieldEnum[]
 }
 
 /**

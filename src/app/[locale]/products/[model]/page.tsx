@@ -4,9 +4,10 @@ import { setRequestLocale } from "next-intl/server";
 import { db } from "@/lib/db";
 import { t } from "@/lib/site";
 import { routing } from "@/i18n/routing";
-import InquiryForm from "../../contact/inquiry-form";
 import CompareBar from "./compare-bar";
 import ProductGallery from "@/components/product-gallery";
+import ProductDetailTabs, { type ParamGroup } from "@/components/product-detail-tabs";
+import LeadDialog from "@/components/lead-dialog";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -68,6 +69,21 @@ export default async function ProductDetailPage({
   });
   if (!product || !product.isActive) notFound();
 
+  // 品类自定义选项卡（不同品类显示不同选项卡；沿分类树向上找，子分类继承父分类选项卡）
+  const ancestors: string[] = [];
+  let curCatId: string | null = product.categoryId;
+  while (curCatId) {
+    ancestors.push(curCatId);
+    const cur = await db.category.findUnique({ where: { id: curCatId }, select: { parentId: true } });
+    if (!cur) break;
+    curCatId = cur.parentId;
+  }
+  const productTabs = await db.productTab.findMany({
+    where: { categoryId: { in: ancestors }, isActive: true },
+    include: { translations: true },
+    orderBy: { sortOrder: "asc" },
+  });
+
   const pt = Object.fromEntries(product.translations.map((tr) => [tr.locale, tr]));
   const bt = Object.fromEntries(product.productLine.brand.translations.map((tr) => [tr.locale, tr]));
   const lt = Object.fromEntries(product.productLine.translations.map((tr) => [tr.locale, tr]));
@@ -106,6 +122,34 @@ export default async function ProductDetailPage({
     });
   }
 
+  // 重点参数（3-4 个）：优先取核心卖点(isHighlight)，否则取每组第一个
+  let highlights = grouped
+    .flatMap((g) => g.items)
+    .filter((it) => it.isHighlight)
+    .slice(0, 4);
+  if (highlights.length === 0) {
+    highlights = grouped
+      .map((g) => g.items[0])
+      .filter(Boolean)
+      .slice(0, 4);
+  }
+
+  // 选项卡参数分组
+  const paramGroups: ParamGroup[] = grouped.map((g) => ({
+    groupName: g.groupName || g.groupCode,
+    items: g.items.map((it) => ({ name: it.name, zhName: it.zhName, value: it.value, unit: it.unit })),
+  }));
+
+  // 品类自定义选项卡
+  const customTabs = productTabs.map((tab) => {
+    const tr = tab.translations.find((x) => x.locale === locale) ?? tab.translations.find((x) => x.locale === "zh");
+    return {
+      code: tab.code,
+      title: tr?.title ?? tab.code,
+      content: tr?.content ?? "",
+    };
+  });
+
   const I = {
     home: isEn ? "Home" : "首页",
     products: isEn ? "Products" : "产品中心",
@@ -114,6 +158,7 @@ export default async function ProductDetailPage({
     model: isEn ? "Model" : "型号",
     noImage: isEn ? "No image" : "暂无图片",
     highlights: isEn ? "Key Highlights" : "核心卖点",
+    intro: isEn ? "Overview" : "产品介绍",
     params: isEn ? "Technical Specifications" : "技术参数",
     documents: isEn ? "Downloads" : "资料下载",
     noParams: isEn ? "No specifications available" : "暂无参数信息",
@@ -133,6 +178,7 @@ export default async function ProductDetailPage({
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
+      {/* 面包屑 */}
       <div className="mb-6 text-sm text-slate-500">
         <Link href="/" className="hover:text-sky-600">
           {I.home}
@@ -145,150 +191,134 @@ export default async function ProductDetailPage({
         <span className="text-slate-800">{product.model}</span>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
-        <div className="lg:col-span-2">
+      {/* 顶部两栏：左主图 + 右产品简介 */}
+      <div className="flex flex-col gap-8 lg:flex-row">
+        {/* 左：主图（580x580） */}
+        <div className="w-full lg:w-[580px] lg:shrink-0">
           <ProductGallery
             coverImage={product.coverImage}
             images={product.images}
             alt={pt[locale]?.name ?? pt["zh"]?.name ?? product.model}
             noImageText={I.noImage}
           />
+        </div>
 
-          <div className="mt-4">
-            <InquiryForm
+        {/* 右：产品简介 */}
+        <div className="flex-1">
+          <div className="flex items-center gap-2 text-sm text-slate-500">
+            <span className="font-medium text-sky-600">
+              {bt[locale]?.name ?? bt["zh"]?.name ?? product.productLine.brand.code}
+            </span>
+            <span>·</span>
+            <span>{lt[locale]?.name ?? lt["zh"]?.name ?? product.productLine.code}</span>
+          </div>
+          <h1 className="mt-2 font-mono text-3xl font-bold text-slate-900">{product.model}</h1>
+          <div className="mt-1 text-lg text-slate-600">
+            {pt[locale]?.name ?? pt["zh"]?.name}
+          </div>
+          {pt[locale]?.summary && (
+            <p className="mt-4 text-sm leading-6 text-slate-600">{pt[locale].summary}</p>
+          )}
+
+          {/* 重点参数（3-4 个） */}
+          {highlights.length > 0 && (
+            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {highlights.map((h, i) => (
+                <div key={i} className="rounded-lg border border-slate-200 bg-white px-3 py-3">
+                  <div className="flex items-center gap-1.5 text-xs text-slate-400">
+                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-sky-500" />
+                    {h.name}
+                  </div>
+                  <div className="mt-1 truncate text-lg font-bold text-slate-800">
+                    {h.value}
+                    {h.unit && <span className="ml-0.5 text-xs font-normal text-slate-400">{h.unit}</span>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* 操作按钮组 */}
+          <div className="mt-7 flex flex-wrap gap-3">
+            <LeadDialog
+              type="inquiry"
               locale={locale}
               productId={product.id}
               productModel={product.model}
               productName={pt[locale]?.name ?? pt["zh"]?.name ?? product.model}
             />
-          </div>
-        </div>
-
-        <div className="lg:col-span-3">
-          <div className="rounded-lg border border-slate-200 bg-white p-6">
-            <div className="flex items-start justify-between">
-              <div>
-                <h1 className="text-2xl font-bold text-slate-900">{product.model}</h1>
-                <div className="mt-1 text-lg text-slate-600">
-                  {pt[locale]?.name ?? pt["zh"]?.name}
-                </div>
-                <div className="mt-1 text-sm text-slate-400">
-                  {pt[locale === "zh" ? "en" : "zh"]?.name}
-                </div>
-              </div>
-              <div className="text-right text-sm text-slate-500">
-                <div>
-                  {I.brand}：{bt[locale]?.name ?? bt["zh"]?.name ?? product.productLine.brand.code}
-                </div>
-                <div>
-                  {I.series}：{lt[locale]?.name ?? lt["zh"]?.name ?? product.productLine.code}
-                </div>
-                <div>
-                  {I.model}：{product.sku ?? product.model}
-                </div>
-              </div>
-            </div>
-            {pt[locale]?.summary && (
-              <p className="mt-4 rounded-md bg-sky-50 p-3 text-sm text-slate-700">
-                {pt[locale].summary}
-              </p>
-            )}
-
-            {grouped.some((g) => g.items.some((it) => it.isHighlight)) && (
-              <div className="mt-5">
-                <div className="mb-2 text-sm font-semibold text-slate-800">{I.highlights}</div>
-                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                  {grouped.flatMap((g) =>
-                    g.items
-                      .filter((it) => it.isHighlight)
-                      .map((it, idx) => (
-                        <div
-                          key={`${g.groupCode}-${idx}`}
-                          className="flex items-center justify-between rounded-md bg-rose-50 px-3 py-2"
-                        >
-                          <span className="text-sm text-slate-600">{it.name}</span>
-                          <span className="font-semibold text-rose-600">
-                            {it.value}
-                            {it.unit && <span className="ml-0.5 text-xs">{it.unit}</span>}
-                          </span>
-                        </div>
-                      ))
-                  )}
-                </div>
-              </div>
+            {product.isSampleEnabled && (
+              <LeadDialog
+                type="sample"
+                locale={locale}
+                productId={product.id}
+                productModel={product.model}
+                productName={pt[locale]?.name ?? pt["zh"]?.name ?? product.model}
+              />
             )}
           </div>
 
-          <div className="mt-6">
-            <h2 className="mb-3 text-lg font-bold text-slate-900">{I.params}</h2>
-            <div className="space-y-4">
-              {grouped.map((g) => (
-                <div key={g.groupCode} className="overflow-hidden rounded-lg border border-slate-200">
-                  <div className="bg-slate-50 px-4 py-2">
-                    <span className="text-sm font-semibold text-slate-700">{g.groupName}</span>
-                  </div>
-                  <table className="w-full bg-white text-sm">
-                    <tbody>
-                      {g.items.map((it, idx) => (
-                        <tr key={idx} className={it.isHighlight ? "bg-rose-50/50" : "border-t border-slate-100"}>
-                          <td className="w-1/3 px-4 py-2.5 text-slate-500">
-                            {it.name}
-                            {it.zhName && it.name !== it.zhName && (
-                              <span className="ml-1 text-xs text-slate-300">{it.zhName}</span>
-                            )}
-                          </td>
-                          <td className="px-4 py-2.5 font-medium text-slate-800">
-                            {it.value}
-                            {it.unit && <span className="ml-1 text-xs text-slate-400">{it.unit}</span>}
-                            {it.isHighlight && (
-                              <span className="ml-2 rounded bg-rose-100 px-1.5 py-0.5 text-xs text-rose-600">
-                                {I.highlight}
-                              </span>
-                            )}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              ))}
-              {grouped.length === 0 && (
-                <div className="rounded-lg border border-dashed border-slate-300 bg-white p-8 text-center text-slate-400">
-                  {I.noParams}
-                </div>
-              )}
+          {/* 型号信息 */}
+          <div className="mt-6 grid grid-cols-2 gap-x-8 gap-y-2 rounded-lg border border-slate-100 bg-slate-50/60 px-4 py-3 text-sm">
+            <div className="flex justify-between">
+              <span className="text-slate-400">{I.brand}</span>
+              <span className="font-medium text-slate-700">
+                {bt[locale]?.name ?? bt["zh"]?.name ?? product.productLine.brand.code}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-slate-400">{I.series}</span>
+              <span className="font-medium text-slate-700">
+                {lt[locale]?.name ?? lt["zh"]?.name ?? product.productLine.code}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-slate-400">{I.model}</span>
+              <span className="font-medium text-slate-700">{product.sku ?? product.model}</span>
             </div>
           </div>
-
-          {product.documents.length > 0 && (
-            <div className="mt-6">
-              <h2 className="mb-3 text-lg font-bold text-slate-900">{I.documents}</h2>
-              <div className="space-y-2">
-                {product.documents.map((doc) => (
-                  <a
-                    key={doc.id}
-                    href={doc.filePath}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center justify-between rounded-lg border border-slate-200 bg-white px-4 py-3 hover:border-sky-300"
-                  >
-                    <div>
-                      <div className="text-sm font-medium text-slate-800">{doc.title}</div>
-                      <div className="mt-0.5 text-xs text-slate-400">
-                        {docTypeLabel[doc.docType] ?? doc.docType}
-                        {doc.version && ` · v${doc.version}`}
-                        {doc.language === "en" && " · EN"}
-                        {doc.language === "ru" && " · RU"}
-                      </div>
-                    </div>
-                    <span className="text-sm text-sky-600">{I.download} →</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
+
+      {/* 选项卡：产品介绍 / 技术参数 / 品类自定义 */}
+      <div className="mt-10">
+        <ProductDetailTabs
+          intro={pt[locale]?.description ?? pt[locale]?.summary ?? null}
+          highlights={highlights.map((h) => ({ name: h.name, value: h.value, unit: h.unit }))}
+          paramGroups={paramGroups}
+          customTabs={customTabs}
+          labels={{ intro: I.intro, params: I.params, highlight: I.highlights, noParams: I.noParams }}
+        />
+      </div>
+
+      {/* 资料下载 */}
+      {product.documents.length > 0 && (
+        <div className="mt-8">
+          <h2 className="mb-3 text-lg font-bold text-slate-900">{I.documents}</h2>
+          <div className="space-y-2">
+            {product.documents.map((doc) => (
+              <a
+                key={doc.id}
+                href={doc.filePath}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-between rounded-lg border border-slate-200 bg-white px-4 py-3 hover:border-sky-300"
+              >
+                <div>
+                  <div className="text-sm font-medium text-slate-800">{doc.title}</div>
+                  <div className="mt-0.5 text-xs text-slate-400">
+                    {docTypeLabel[doc.docType] ?? doc.docType}
+                    {doc.version && ` · v${doc.version}`}
+                    {doc.language === "en" && " · EN"}
+                    {doc.language === "ru" && " · RU"}
+                  </div>
+                </div>
+                <span className="text-sm text-sky-600">{I.download} →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
 
       <CompareBar locale={locale} productId={product.id} productModel={product.model} />
     </div>

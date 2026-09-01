@@ -420,6 +420,8 @@ export const ModelName = {
   LoginLog: 'LoginLog',
   NavMenu: 'NavMenu',
   NavMenuTranslation: 'NavMenuTranslation',
+  ProductTab: 'ProductTab',
+  ProductTabTranslation: 'ProductTabTranslation',
   SiteSetting: 'SiteSetting',
   MediaFolder: 'MediaFolder',
   MediaAsset: 'MediaAsset'
@@ -438,7 +440,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "brand" | "brandTranslation" | "category" | "categoryTranslation" | "brandCategory" | "productLine" | "productLineTranslation" | "product" | "productTranslation" | "productImage" | "paramGroup" | "paramGroupTranslation" | "paramDefinition" | "paramDefinitionTranslation" | "productParamValue" | "document" | "inquiry" | "post" | "postTranslation" | "adminUser" | "loginLog" | "navMenu" | "navMenuTranslation" | "siteSetting" | "mediaFolder" | "mediaAsset"
+    modelProps: "brand" | "brandTranslation" | "category" | "categoryTranslation" | "brandCategory" | "productLine" | "productLineTranslation" | "product" | "productTranslation" | "productImage" | "paramGroup" | "paramGroupTranslation" | "paramDefinition" | "paramDefinitionTranslation" | "productParamValue" | "document" | "inquiry" | "post" | "postTranslation" | "adminUser" | "loginLog" | "navMenu" | "navMenuTranslation" | "productTab" | "productTabTranslation" | "siteSetting" | "mediaFolder" | "mediaAsset"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -2144,6 +2146,154 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         }
       }
     }
+    ProductTab: {
+      payload: Prisma.$ProductTabPayload<ExtArgs>
+      fields: Prisma.ProductTabFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.ProductTabFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.ProductTabFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabPayload>
+        }
+        findFirst: {
+          args: Prisma.ProductTabFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.ProductTabFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabPayload>
+        }
+        findMany: {
+          args: Prisma.ProductTabFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabPayload>[]
+        }
+        create: {
+          args: Prisma.ProductTabCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabPayload>
+        }
+        createMany: {
+          args: Prisma.ProductTabCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.ProductTabCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabPayload>[]
+        }
+        delete: {
+          args: Prisma.ProductTabDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabPayload>
+        }
+        update: {
+          args: Prisma.ProductTabUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabPayload>
+        }
+        deleteMany: {
+          args: Prisma.ProductTabDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.ProductTabUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.ProductTabUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabPayload>[]
+        }
+        upsert: {
+          args: Prisma.ProductTabUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabPayload>
+        }
+        aggregate: {
+          args: Prisma.ProductTabAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateProductTab>
+        }
+        groupBy: {
+          args: Prisma.ProductTabGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ProductTabGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.ProductTabCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ProductTabCountAggregateOutputType> | number
+        }
+      }
+    }
+    ProductTabTranslation: {
+      payload: Prisma.$ProductTabTranslationPayload<ExtArgs>
+      fields: Prisma.ProductTabTranslationFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.ProductTabTranslationFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabTranslationPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.ProductTabTranslationFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabTranslationPayload>
+        }
+        findFirst: {
+          args: Prisma.ProductTabTranslationFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabTranslationPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.ProductTabTranslationFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabTranslationPayload>
+        }
+        findMany: {
+          args: Prisma.ProductTabTranslationFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabTranslationPayload>[]
+        }
+        create: {
+          args: Prisma.ProductTabTranslationCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabTranslationPayload>
+        }
+        createMany: {
+          args: Prisma.ProductTabTranslationCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.ProductTabTranslationCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabTranslationPayload>[]
+        }
+        delete: {
+          args: Prisma.ProductTabTranslationDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabTranslationPayload>
+        }
+        update: {
+          args: Prisma.ProductTabTranslationUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabTranslationPayload>
+        }
+        deleteMany: {
+          args: Prisma.ProductTabTranslationDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.ProductTabTranslationUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.ProductTabTranslationUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabTranslationPayload>[]
+        }
+        upsert: {
+          args: Prisma.ProductTabTranslationUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ProductTabTranslationPayload>
+        }
+        aggregate: {
+          args: Prisma.ProductTabTranslationAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateProductTabTranslation>
+        }
+        groupBy: {
+          args: Prisma.ProductTabTranslationGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ProductTabTranslationGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.ProductTabTranslationCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ProductTabTranslationCountAggregateOutputType> | number
+        }
+      }
+    }
     SiteSetting: {
       payload: Prisma.$SiteSettingPayload<ExtArgs>
       fields: Prisma.SiteSettingFieldRefs
@@ -2501,6 +2651,7 @@ export const ProductScalarFieldEnum = {
   sortOrder: 'sortOrder',
   isActive: 'isActive',
   isFeatured: 'isFeatured',
+  isSampleEnabled: 'isSampleEnabled',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
   brandId: 'brandId',
@@ -2641,6 +2792,7 @@ export const InquiryScalarFieldEnum = {
   productId: 'productId',
   productLineId: 'productLineId',
   message: 'message',
+  type: 'type',
   status: 'status',
   notifyType: 'notifyType',
   adminNote: 'adminNote',
@@ -2734,6 +2886,31 @@ export const NavMenuTranslationScalarFieldEnum = {
 } as const
 
 export type NavMenuTranslationScalarFieldEnum = (typeof NavMenuTranslationScalarFieldEnum)[keyof typeof NavMenuTranslationScalarFieldEnum]
+
+
+export const ProductTabScalarFieldEnum = {
+  id: 'id',
+  categoryId: 'categoryId',
+  code: 'code',
+  icon: 'icon',
+  sortOrder: 'sortOrder',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type ProductTabScalarFieldEnum = (typeof ProductTabScalarFieldEnum)[keyof typeof ProductTabScalarFieldEnum]
+
+
+export const ProductTabTranslationScalarFieldEnum = {
+  id: 'id',
+  productTabId: 'productTabId',
+  locale: 'locale',
+  title: 'title',
+  content: 'content'
+} as const
+
+export type ProductTabTranslationScalarFieldEnum = (typeof ProductTabTranslationScalarFieldEnum)[keyof typeof ProductTabTranslationScalarFieldEnum]
 
 
 export const SiteSettingScalarFieldEnum = {
@@ -3135,6 +3312,8 @@ export type GlobalOmitConfig = {
   loginLog?: Prisma.LoginLogOmit
   navMenu?: Prisma.NavMenuOmit
   navMenuTranslation?: Prisma.NavMenuTranslationOmit
+  productTab?: Prisma.ProductTabOmit
+  productTabTranslation?: Prisma.ProductTabTranslationOmit
   siteSetting?: Prisma.SiteSettingOmit
   mediaFolder?: Prisma.MediaFolderOmit
   mediaAsset?: Prisma.MediaAssetOmit

@@ -34,6 +34,7 @@ export type InquiryMinAggregateOutputType = {
   productId: string | null
   productLineId: string | null
   message: string | null
+  type: string | null
   status: $Enums.InquiryStatus | null
   notifyType: $Enums.NotifyType | null
   adminNote: string | null
@@ -52,6 +53,7 @@ export type InquiryMaxAggregateOutputType = {
   productId: string | null
   productLineId: string | null
   message: string | null
+  type: string | null
   status: $Enums.InquiryStatus | null
   notifyType: $Enums.NotifyType | null
   adminNote: string | null
@@ -70,6 +72,7 @@ export type InquiryCountAggregateOutputType = {
   productId: number
   productLineId: number
   message: number
+  type: number
   status: number
   notifyType: number
   adminNote: number
@@ -90,6 +93,7 @@ export type InquiryMinAggregateInputType = {
   productId?: true
   productLineId?: true
   message?: true
+  type?: true
   status?: true
   notifyType?: true
   adminNote?: true
@@ -108,6 +112,7 @@ export type InquiryMaxAggregateInputType = {
   productId?: true
   productLineId?: true
   message?: true
+  type?: true
   status?: true
   notifyType?: true
   adminNote?: true
@@ -126,6 +131,7 @@ export type InquiryCountAggregateInputType = {
   productId?: true
   productLineId?: true
   message?: true
+  type?: true
   status?: true
   notifyType?: true
   adminNote?: true
@@ -217,6 +223,7 @@ export type InquiryGroupByOutputType = {
   productId: string | null
   productLineId: string | null
   message: string
+  type: string
   status: $Enums.InquiryStatus
   notifyType: $Enums.NotifyType
   adminNote: string | null
@@ -256,6 +263,7 @@ export type InquiryWhereInput = {
   productId?: Prisma.StringNullableFilter<"Inquiry"> | string | null
   productLineId?: Prisma.StringNullableFilter<"Inquiry"> | string | null
   message?: Prisma.StringFilter<"Inquiry"> | string
+  type?: Prisma.StringFilter<"Inquiry"> | string
   status?: Prisma.EnumInquiryStatusFilter<"Inquiry"> | $Enums.InquiryStatus
   notifyType?: Prisma.EnumNotifyTypeFilter<"Inquiry"> | $Enums.NotifyType
   adminNote?: Prisma.StringNullableFilter<"Inquiry"> | string | null
@@ -275,6 +283,7 @@ export type InquiryOrderByWithRelationInput = {
   productId?: Prisma.SortOrderInput | Prisma.SortOrder
   productLineId?: Prisma.SortOrderInput | Prisma.SortOrder
   message?: Prisma.SortOrder
+  type?: Prisma.SortOrder
   status?: Prisma.SortOrder
   notifyType?: Prisma.SortOrder
   adminNote?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -297,6 +306,7 @@ export type InquiryWhereUniqueInput = Prisma.AtLeast<{
   productId?: Prisma.StringNullableFilter<"Inquiry"> | string | null
   productLineId?: Prisma.StringNullableFilter<"Inquiry"> | string | null
   message?: Prisma.StringFilter<"Inquiry"> | string
+  type?: Prisma.StringFilter<"Inquiry"> | string
   status?: Prisma.EnumInquiryStatusFilter<"Inquiry"> | $Enums.InquiryStatus
   notifyType?: Prisma.EnumNotifyTypeFilter<"Inquiry"> | $Enums.NotifyType
   adminNote?: Prisma.StringNullableFilter<"Inquiry"> | string | null
@@ -316,6 +326,7 @@ export type InquiryOrderByWithAggregationInput = {
   productId?: Prisma.SortOrderInput | Prisma.SortOrder
   productLineId?: Prisma.SortOrderInput | Prisma.SortOrder
   message?: Prisma.SortOrder
+  type?: Prisma.SortOrder
   status?: Prisma.SortOrder
   notifyType?: Prisma.SortOrder
   adminNote?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -340,6 +351,7 @@ export type InquiryScalarWhereWithAggregatesInput = {
   productId?: Prisma.StringNullableWithAggregatesFilter<"Inquiry"> | string | null
   productLineId?: Prisma.StringNullableWithAggregatesFilter<"Inquiry"> | string | null
   message?: Prisma.StringWithAggregatesFilter<"Inquiry"> | string
+  type?: Prisma.StringWithAggregatesFilter<"Inquiry"> | string
   status?: Prisma.EnumInquiryStatusWithAggregatesFilter<"Inquiry"> | $Enums.InquiryStatus
   notifyType?: Prisma.EnumNotifyTypeWithAggregatesFilter<"Inquiry"> | $Enums.NotifyType
   adminNote?: Prisma.StringNullableWithAggregatesFilter<"Inquiry"> | string | null
@@ -357,6 +369,7 @@ export type InquiryCreateInput = {
   country?: string | null
   productLineId?: string | null
   message: string
+  type?: string
   status?: $Enums.InquiryStatus
   notifyType?: $Enums.NotifyType
   adminNote?: string | null
@@ -376,6 +389,7 @@ export type InquiryUncheckedCreateInput = {
   productId?: string | null
   productLineId?: string | null
   message: string
+  type?: string
   status?: $Enums.InquiryStatus
   notifyType?: $Enums.NotifyType
   adminNote?: string | null
@@ -393,6 +407,7 @@ export type InquiryUpdateInput = {
   country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   productLineId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   message?: Prisma.StringFieldUpdateOperationsInput | string
+  type?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.EnumInquiryStatusFieldUpdateOperationsInput | $Enums.InquiryStatus
   notifyType?: Prisma.EnumNotifyTypeFieldUpdateOperationsInput | $Enums.NotifyType
   adminNote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -412,6 +427,7 @@ export type InquiryUncheckedUpdateInput = {
   productId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   productLineId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   message?: Prisma.StringFieldUpdateOperationsInput | string
+  type?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.EnumInquiryStatusFieldUpdateOperationsInput | $Enums.InquiryStatus
   notifyType?: Prisma.EnumNotifyTypeFieldUpdateOperationsInput | $Enums.NotifyType
   adminNote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -430,6 +446,7 @@ export type InquiryCreateManyInput = {
   productId?: string | null
   productLineId?: string | null
   message: string
+  type?: string
   status?: $Enums.InquiryStatus
   notifyType?: $Enums.NotifyType
   adminNote?: string | null
@@ -447,6 +464,7 @@ export type InquiryUpdateManyMutationInput = {
   country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   productLineId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   message?: Prisma.StringFieldUpdateOperationsInput | string
+  type?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.EnumInquiryStatusFieldUpdateOperationsInput | $Enums.InquiryStatus
   notifyType?: Prisma.EnumNotifyTypeFieldUpdateOperationsInput | $Enums.NotifyType
   adminNote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -465,6 +483,7 @@ export type InquiryUncheckedUpdateManyInput = {
   productId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   productLineId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   message?: Prisma.StringFieldUpdateOperationsInput | string
+  type?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.EnumInquiryStatusFieldUpdateOperationsInput | $Enums.InquiryStatus
   notifyType?: Prisma.EnumNotifyTypeFieldUpdateOperationsInput | $Enums.NotifyType
   adminNote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -493,6 +512,7 @@ export type InquiryCountOrderByAggregateInput = {
   productId?: Prisma.SortOrder
   productLineId?: Prisma.SortOrder
   message?: Prisma.SortOrder
+  type?: Prisma.SortOrder
   status?: Prisma.SortOrder
   notifyType?: Prisma.SortOrder
   adminNote?: Prisma.SortOrder
@@ -511,6 +531,7 @@ export type InquiryMaxOrderByAggregateInput = {
   productId?: Prisma.SortOrder
   productLineId?: Prisma.SortOrder
   message?: Prisma.SortOrder
+  type?: Prisma.SortOrder
   status?: Prisma.SortOrder
   notifyType?: Prisma.SortOrder
   adminNote?: Prisma.SortOrder
@@ -529,6 +550,7 @@ export type InquiryMinOrderByAggregateInput = {
   productId?: Prisma.SortOrder
   productLineId?: Prisma.SortOrder
   message?: Prisma.SortOrder
+  type?: Prisma.SortOrder
   status?: Prisma.SortOrder
   notifyType?: Prisma.SortOrder
   adminNote?: Prisma.SortOrder
@@ -596,6 +618,7 @@ export type InquiryCreateWithoutProductInput = {
   country?: string | null
   productLineId?: string | null
   message: string
+  type?: string
   status?: $Enums.InquiryStatus
   notifyType?: $Enums.NotifyType
   adminNote?: string | null
@@ -613,6 +636,7 @@ export type InquiryUncheckedCreateWithoutProductInput = {
   country?: string | null
   productLineId?: string | null
   message: string
+  type?: string
   status?: $Enums.InquiryStatus
   notifyType?: $Enums.NotifyType
   adminNote?: string | null
@@ -660,6 +684,7 @@ export type InquiryScalarWhereInput = {
   productId?: Prisma.StringNullableFilter<"Inquiry"> | string | null
   productLineId?: Prisma.StringNullableFilter<"Inquiry"> | string | null
   message?: Prisma.StringFilter<"Inquiry"> | string
+  type?: Prisma.StringFilter<"Inquiry"> | string
   status?: Prisma.EnumInquiryStatusFilter<"Inquiry"> | $Enums.InquiryStatus
   notifyType?: Prisma.EnumNotifyTypeFilter<"Inquiry"> | $Enums.NotifyType
   adminNote?: Prisma.StringNullableFilter<"Inquiry"> | string | null
@@ -677,6 +702,7 @@ export type InquiryCreateManyProductInput = {
   country?: string | null
   productLineId?: string | null
   message: string
+  type?: string
   status?: $Enums.InquiryStatus
   notifyType?: $Enums.NotifyType
   adminNote?: string | null
@@ -694,6 +720,7 @@ export type InquiryUpdateWithoutProductInput = {
   country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   productLineId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   message?: Prisma.StringFieldUpdateOperationsInput | string
+  type?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.EnumInquiryStatusFieldUpdateOperationsInput | $Enums.InquiryStatus
   notifyType?: Prisma.EnumNotifyTypeFieldUpdateOperationsInput | $Enums.NotifyType
   adminNote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -711,6 +738,7 @@ export type InquiryUncheckedUpdateWithoutProductInput = {
   country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   productLineId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   message?: Prisma.StringFieldUpdateOperationsInput | string
+  type?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.EnumInquiryStatusFieldUpdateOperationsInput | $Enums.InquiryStatus
   notifyType?: Prisma.EnumNotifyTypeFieldUpdateOperationsInput | $Enums.NotifyType
   adminNote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -728,6 +756,7 @@ export type InquiryUncheckedUpdateManyWithoutProductInput = {
   country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   productLineId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   message?: Prisma.StringFieldUpdateOperationsInput | string
+  type?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.EnumInquiryStatusFieldUpdateOperationsInput | $Enums.InquiryStatus
   notifyType?: Prisma.EnumNotifyTypeFieldUpdateOperationsInput | $Enums.NotifyType
   adminNote?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -748,6 +777,7 @@ export type InquirySelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   productId?: boolean
   productLineId?: boolean
   message?: boolean
+  type?: boolean
   status?: boolean
   notifyType?: boolean
   adminNote?: boolean
@@ -767,6 +797,7 @@ export type InquirySelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exten
   productId?: boolean
   productLineId?: boolean
   message?: boolean
+  type?: boolean
   status?: boolean
   notifyType?: boolean
   adminNote?: boolean
@@ -786,6 +817,7 @@ export type InquirySelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exten
   productId?: boolean
   productLineId?: boolean
   message?: boolean
+  type?: boolean
   status?: boolean
   notifyType?: boolean
   adminNote?: boolean
@@ -805,6 +837,7 @@ export type InquirySelectScalar = {
   productId?: boolean
   productLineId?: boolean
   message?: boolean
+  type?: boolean
   status?: boolean
   notifyType?: boolean
   adminNote?: boolean
@@ -813,7 +846,7 @@ export type InquirySelectScalar = {
   updatedAt?: boolean
 }
 
-export type InquiryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "company" | "contact" | "email" | "country" | "productId" | "productLineId" | "message" | "status" | "notifyType" | "adminNote" | "sourceIp" | "createdAt" | "updatedAt", ExtArgs["result"]["inquiry"]>
+export type InquiryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "company" | "contact" | "email" | "country" | "productId" | "productLineId" | "message" | "type" | "status" | "notifyType" | "adminNote" | "sourceIp" | "createdAt" | "updatedAt", ExtArgs["result"]["inquiry"]>
 export type InquiryInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   product?: boolean | Prisma.Inquiry$productArgs<ExtArgs>
 }
@@ -839,6 +872,7 @@ export type $InquiryPayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     productId: string | null
     productLineId: string | null
     message: string
+    type: string
     status: $Enums.InquiryStatus
     notifyType: $Enums.NotifyType
     adminNote: string | null
@@ -1278,6 +1312,7 @@ export interface InquiryFieldRefs {
   readonly productId: Prisma.FieldRef<"Inquiry", 'String'>
   readonly productLineId: Prisma.FieldRef<"Inquiry", 'String'>
   readonly message: Prisma.FieldRef<"Inquiry", 'String'>
+  readonly type: Prisma.FieldRef<"Inquiry", 'String'>
   readonly status: Prisma.FieldRef<"Inquiry", 'InquiryStatus'>
   readonly notifyType: Prisma.FieldRef<"Inquiry", 'NotifyType'>
   readonly adminNote: Prisma.FieldRef<"Inquiry", 'String'>

@@ -119,6 +119,7 @@ model Category {
   products      Product[]
   paramGroups   ParamGroup[]
   paramDefs     ParamDefinition[]
+  productTabs   ProductTab[]
   brand         Brand?            @relation(fields: [brandId], references: [id])
   siteCategory  Category?         @relation("SiteCategoryLink", fields: [siteCategoryId], references: [id])
   siteChildren  Category[]        @relation("SiteCategoryLink")
@@ -191,6 +192,7 @@ model Product {
   sortOrder     Int      @default(0)
   isActive      Boolean  @default(true)
   isFeatured    Boolean  @default(false)
+  isSampleEnabled Boolean @default(false) // 是否开启"申请样机"按钮（后台可控制）
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 
@@ -367,6 +369,7 @@ model Inquiry {
   productId     String?
   productLineId String?
   message       String       @db.Text
+  type          String       @default("inquiry") // 线索类型：inquiry(询价) | sample(申请样机)
   status        InquiryStatus @default(pending)
   notifyType    NotifyType   @default(in_site)
   adminNote     String?      @db.Text
@@ -474,6 +477,37 @@ model NavMenuTranslation {
   navMenu NavMenu @relation(fields: [navMenuId], references: [id], onDelete: Cascade)
 
   @@unique([navMenuId, locale])
+}
+
+// ============ 详情页自定义选项卡（按品类） ============
+
+model ProductTab {
+  id         String   @id @default(uuid())
+  categoryId String // 归属品类（品牌分类或全站品类均可），不同品类显示不同选项卡
+  code       String // 选项卡标识，如 accessory / efficiency-curve
+  icon       String? // 图标（emoji 或类名）
+  sortOrder  Int      @default(0)
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  category     Category              @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  translations ProductTabTranslation[]
+
+  @@unique([categoryId, code])
+  @@index([categoryId, sortOrder])
+}
+
+model ProductTabTranslation {
+  id           String @id @default(uuid())
+  productTabId String
+  locale       Locale
+  title        String // 选项卡标题（如"探头配件"）
+  content      String? @db.Text // 选项卡内容（支持富文本/HTML）
+
+  productTab ProductTab @relation(fields: [productTabId], references: [id], onDelete: Cascade)
+
+  @@unique([productTabId, locale])
 }
 
 // ============ 站点设置 ============
