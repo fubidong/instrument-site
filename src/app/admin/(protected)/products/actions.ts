@@ -21,6 +21,17 @@ type ParamValueInput = {
 };
 
 /**
+ * 清理富文本 HTML：空内容（仅空段落/换行/空格）转为 null
+ */
+function cleanHtml(html: string | null): string | null {
+  if (!html) return null;
+  const t = html.trim();
+  if (!t) return null;
+  if (/^(<p>(\s|&nbsp;)*<\/p>|<br\s*\/?>|&nbsp;|\s)*$/i.test(t)) return null;
+  return t;
+}
+
+/**
  * 解析单条参数值（按参数类型）
  */
 function parseParamValue(def: any, formData: FormData): ParamValueInput | null {
@@ -92,10 +103,10 @@ export async function saveProductAction(
 
   const nameZh = (formData.get("name_zh") as string)?.trim() || "";
   const summaryZh = (formData.get("summary_zh") as string)?.trim() || "";
-  const descriptionZh = (formData.get("description_zh") as string)?.trim() || "";
+  const descriptionZh = cleanHtml(formData.get("description_zh") as string);
   const nameEn = (formData.get("name_en") as string)?.trim() || "";
   const summaryEn = (formData.get("summary_en") as string)?.trim() || "";
-  const descriptionEn = (formData.get("description_en") as string)?.trim() || "";
+  const descriptionEn = cleanHtml(formData.get("description_en") as string);
 
   if (!productLineId) return { error: "请选择产品系列" };
   if (!model) return { error: "型号不能为空" };

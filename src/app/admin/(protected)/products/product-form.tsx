@@ -3,6 +3,7 @@
 import { useActionState, useEffect } from "react";
 import { saveProductAction, type ProductFormState } from "./actions";
 import ProductParamsForm, { type ParamGroupWithDefs } from "./product-params-form";
+import RichTextEditor from "@/components/rich-text-editor";
 
 const initialState: ProductFormState = {};
 
@@ -192,13 +193,7 @@ export default function ProductForm({
             <label className="mb-1 block text-sm font-medium text-slate-700">
               产品介绍（中文）<span className="ml-1 text-xs font-normal text-slate-400">“产品介绍”选项卡内容，与简介分开</span>
             </label>
-            <textarea
-              name="description_zh"
-              defaultValue={t["zh"]?.description ?? ""}
-              rows={6}
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-              placeholder="产品介绍选项卡的详细内容（可多行）"
-            />
+            <RichTextEditor name="description_zh" defaultValue={t["zh"]?.description ?? ""} minHeight={220} />
           </div>
         </div>
       </section>
@@ -232,13 +227,7 @@ export default function ProductForm({
             <label className="mb-1 block text-sm font-medium text-slate-700">
               Description (EN) <span className="ml-1 text-xs font-normal text-slate-400">Overview tab content, separate from summary</span>
             </label>
-            <textarea
-              name="description_en"
-              defaultValue={t["en"]?.description ?? ""}
-              rows={6}
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-              placeholder="Detailed description for the Overview tab"
-            />
+            <RichTextEditor name="description_en" defaultValue={t["en"]?.description ?? ""} minHeight={220} />
           </div>
         </div>
       </section>

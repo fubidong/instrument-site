@@ -102,9 +102,11 @@ export default function ProductDetailTabs({
                     </div>
                   </div>
                 )}
-                {intro && (
+                {intro && (/<[a-z][\s\S]*>/i.test(intro) ? (
+                  <div className="rich-text" dangerouslySetInnerHTML={{ __html: intro }} />
+                ) : (
                   <div className="whitespace-pre-line text-sm leading-7 text-slate-600">{intro}</div>
-                )}
+                ))}
               </div>
             )}
 
@@ -144,7 +146,7 @@ export default function ProductDetailTabs({
             )}
 
             {activeTab.key.startsWith("custom-") && (
-              <div className="prose max-w-none text-sm leading-7 text-slate-700">
+              <div className="rich-text">
                 <div
                   dangerouslySetInnerHTML={{
                     __html: customTabs![parseInt(activeTab.key.split("-")[1])].content,
