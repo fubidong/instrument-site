@@ -181,7 +181,8 @@ export default function ProductParamsForm({
                               <option value="">请选择</option>
                               {opts.map((o) => (
                                 <option key={o.value} value={o.value}>
-                                  {o.label_zh} {o.label_en ? `/ ${o.label_en}` : ""}
+                                  {o.label_zh}
+                                  {o.label_en && o.label_en !== o.label_zh ? ` / ${o.label_en}` : ""}
                                 </option>
                               ))}
                             </select>

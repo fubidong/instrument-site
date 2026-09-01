@@ -193,7 +193,7 @@ export default function ProductForm({
             <label className="mb-1 block text-sm font-medium text-slate-700">
               产品介绍（中文）<span className="ml-1 text-xs font-normal text-slate-400">“产品介绍”选项卡内容，与简介分开</span>
             </label>
-            <RichTextEditor name="description_zh" defaultValue={t["zh"]?.description ?? ""} minHeight={220} />
+            <RichTextEditor name="description_zh" defaultValue={t["zh"]?.description ?? ""} minHeight={420} />
           </div>
         </div>
       </section>
@@ -227,7 +227,7 @@ export default function ProductForm({
             <label className="mb-1 block text-sm font-medium text-slate-700">
               Description (EN) <span className="ml-1 text-xs font-normal text-slate-400">Overview tab content, separate from summary</span>
             </label>
-            <RichTextEditor name="description_en" defaultValue={t["en"]?.description ?? ""} minHeight={220} />
+            <RichTextEditor name="description_en" defaultValue={t["en"]?.description ?? ""} minHeight={420} />
           </div>
         </div>
       </section>

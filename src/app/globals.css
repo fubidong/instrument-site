@@ -231,3 +231,18 @@
   background: rgb(248 250 252);
   font-weight: 600;
 }
+
+/* ===== AIEditor 富文本编辑区：撑满高度（后台产品介绍编辑用） ===== */
+.aie-ht {
+  min-height: 420px;
+}
+.aie-ht .aie-container {
+  height: 100%;
+}
+.aie-ht .aie-container > div[style*="flex-grow"] {
+  flex: 1;
+  min-height: 320px;
+}
+.aie-ht .aie-content {
+  min-height: 320px;
+}

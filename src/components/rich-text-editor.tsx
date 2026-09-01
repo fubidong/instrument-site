@@ -11,7 +11,7 @@ import "aieditor/dist/style.css";
 export default function RichTextEditor({
   name,
   defaultValue = "",
-  minHeight = 240,
+  minHeight = 420,
 }: {
   name: string;
   defaultValue?: string;
@@ -52,7 +52,7 @@ export default function RichTextEditor({
   return (
     <div className="overflow-hidden rounded-md border border-slate-300 bg-white focus-within:border-sky-500">
       <input type="hidden" name={name} value={html} />
-      <div ref={divRef} style={{ minHeight }} />
+      <div ref={divRef} className="aie-ht" style={{ minHeight }} />
     </div>
   );
 }
