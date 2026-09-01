@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { toggleCategoryNavAction, batchSetCategoryNavAction } from "./actions";
+import { toggleCategoryNavAction, batchSetCategoryNavAction, createNavCategoryAction } from "./actions";
 
 export type NavCategory = {
   id: string;
@@ -69,6 +69,11 @@ export default function NavigationManager({
   const [tab, setTab] = useState<string>("all");
   const [search, setSearch] = useState("");
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
+  const [showAdd, setShowAdd] = useState(false);
+  const [addBrand, setAddBrand] = useState<string>("");
+  const [addParent, setAddParent] = useState<string>("");
+  const [addNameEn, setAddNameEn] = useState("");
+  const [addCode, setAddCode] = useState("");
 
   // 当前 tab 对应的品类集
   const scoped = useMemo(() => {
@@ -105,6 +110,25 @@ export default function NavigationManager({
       else next.add(id);
       return next;
     });
+
+  // 新增表单的父级选项（当前所选站点分组下的品类，含层级缩进）
+  const parentOptions = useMemo(() => {
+    const scopedCats = addBrand
+      ? categories.filter((c) => c.brandId === addBrand)
+      : categories.filter((c) => c.brandId === null);
+    const out: { id: string; zhName: string; indent: string }[] = [];
+    const walk = (pid: string | null, depth: number) => {
+      scopedCats
+        .filter((c) => c.parentId === pid)
+        .sort((a, b) => a.sortOrder - b.sortOrder || a.code.localeCompare(b.code))
+        .forEach((c) => {
+          out.push({ id: c.id, zhName: c.zhName || c.code, indent: "　".repeat(depth) });
+          walk(c.id, depth + 1);
+        });
+    };
+    walk(null, 0);
+    return out;
+  }, [categories, addBrand]);
 
   const shownCount = scoped.filter((c) => c.showInNav).length;
   const brandScopeForBatch = tab === "all" ? "__all__" : tab === "global" ? "global" : tab;
@@ -229,12 +253,145 @@ export default function NavigationManager({
                 全部隐藏
               </button>
             </form>
+            <div className="mx-1 h-5 w-px bg-slate-200" />
+            <button
+              type="button"
+              onClick={() => {
+                const defaultBrand =
+                  tab === "all" || tab === "global" ? "" : tab;
+                setAddBrand(defaultBrand);
+                setAddParent("");
+                setAddNameEn("");
+                setAddCode("");
+                setShowAdd((v) => !v);
+              }}
+              className={`rounded-md px-3 py-1.5 text-sm font-medium transition ${
+                showAdd
+                  ? "bg-sky-600 text-white"
+                  : "border border-sky-200 bg-sky-50 text-sky-600 hover:bg-sky-100"
+              }`}
+            >
+              {showAdd ? "收起表单" : "+ 新增菜单项"}
+            </button>
           </div>
         </div>
         <p className="mt-2 text-xs text-slate-400">
           当前范围 {shownCount}/{scoped.length} 个品类在导航显示 · 点击开关即时生效，前台导航实时更新
         </p>
       </div>
+
+      {/* 新增菜单项表单 */}
+      {showAdd && (
+        <div className="rounded-lg border border-sky-200 bg-sky-50/60 p-4">
+          <h3 className="mb-3 text-sm font-semibold text-slate-700">
+            新增导航菜单项
+            <span className="ml-2 text-xs font-normal text-slate-400">
+              一级菜单 = 顶级导航项；二级菜单 = 挂在某个一级菜单下
+            </span>
+          </h3>
+          <form action={createNavCategoryAction} className="space-y-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              <div>
+                <label className="mb-1 block text-xs font-medium text-slate-500">所属站点</label>
+                <select
+                  name="brandId"
+                  value={addBrand}
+                  onChange={(e) => {
+                    setAddBrand(e.target.value);
+                    setAddParent("");
+                  }}
+                  className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-sky-500"
+                >
+                  <option value="">综合站（全站品类）</option>
+                  {brands.map((b) => (
+                    <option key={b.id} value={b.id}>
+                      {b.zhName}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="mb-1 block text-xs font-medium text-slate-500">上级菜单</label>
+                <select
+                  name="parentId"
+                  value={addParent}
+                  onChange={(e) => setAddParent(e.target.value)}
+                  className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:border-sky-500"
+                >
+                  <option value="">无（一级菜单）</option>
+                  {parentOptions.map((c) => (
+                    <option key={c.id} value={c.id}>
+                      {c.indent}
+                      {c.zhName}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="mb-1 block text-xs font-medium text-slate-500">中文名称 *</label>
+                <input
+                  name="name_zh"
+                  placeholder="如 示波器"
+                  required
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                />
+              </div>
+              <div>
+                <label className="mb-1 block text-xs font-medium text-slate-500">英文名称 *</label>
+                <input
+                  name="name_en"
+                  value={addNameEn}
+                  onChange={(e) => {
+                    const v = e.target.value;
+                    setAddNameEn(v);
+                    if (!addCode || addCode === autoCodeFromEn(addNameEn)) {
+                      setAddCode(autoCodeFromEn(v));
+                    }
+                  }}
+                  placeholder="如 Oscilloscope"
+                  required
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                />
+              </div>
+              <div>
+                <label className="mb-1 block text-xs font-medium text-slate-500">代码 *</label>
+                <input
+                  name="code"
+                  value={addCode}
+                  onChange={(e) => setAddCode(e.target.value)}
+                  placeholder="如 OSCILLOSCOPE"
+                  required
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                />
+              </div>
+              <div>
+                <label className="mb-1 block text-xs font-medium text-slate-500">排序</label>
+                <input
+                  name="sortOrder"
+                  type="number"
+                  defaultValue={0}
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                />
+              </div>
+              <div className="flex items-end gap-2">
+                <button
+                  type="submit"
+                  className="rounded-md bg-sky-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-500"
+                >
+                  保存菜单项
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowAdd(false)}
+                  className="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-600 hover:bg-slate-50"
+                >
+                  取消
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      )}
 
       {/* 分组卡片 */}
       {groups.map((g) => {
@@ -296,4 +453,13 @@ function TabBtn({
       {children}
     </button>
   );
+}
+
+/** 英文名 → 代码（大写 + 连字符，如 "Power Supply" → "POWER-SUPPLY"） */
+function autoCodeFromEn(en: string): string {
+  return en
+    .trim()
+    .toUpperCase()
+    .replace(/[^A-Z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
