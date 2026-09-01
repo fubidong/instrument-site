@@ -8,6 +8,7 @@ const navItems: NavItem[] = [
   { href: "/admin/inquiries", label: "询价线索", icon: "📩" },
   { href: "/admin/brands", label: "品牌管理", icon: "🏷" },
   { href: "/admin/categories", label: "产品类别", icon: "🗂" },
+  { href: "/admin/navigation", label: "导航设置", icon: "🧭" },
   { href: "/admin/products", label: "产品管理", icon: "📦" },
   { href: "/admin/params", label: "参数模板", icon: "⚙" },
   { href: "/admin/documents", label: "资料管理", icon: "📄" },
