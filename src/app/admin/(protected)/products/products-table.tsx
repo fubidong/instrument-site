@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useMemo, useState, useTransition } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
@@ -24,6 +24,25 @@ type Product = {
   translations: { locale: string; name: string }[];
 };
 
+type CategoryOption = {
+  id: string;
+  label: string;
+  code: string;
+  parentId: string | null;
+  brandId: string | null;
+  sortOrder: number;
+  matchIds: string[];
+  matchBrands: string[];
+};
+
+type LineOption = {
+  id: string;
+  label: string;
+  code: string;
+  brandId: string;
+  categoryId: string;
+};
+
 export default function ProductsTable({
   products,
   brandOptions,
@@ -37,8 +56,8 @@ export default function ProductsTable({
 }: {
   products: Product[];
   brandOptions: { id: string; label: string }[];
-  categoryOptions: { id: string; label: string }[];
-  lineOptions: { id: string; label: string }[];
+  categoryOptions: CategoryOption[];
+  lineOptions: LineOption[];
   currentBrand: string;
   currentCategory: string;
   currentLine: string;
@@ -56,6 +75,55 @@ export default function ProductsTable({
     if (value === "all" || value === "") params.delete(key);
     else params.set(key, value);
     router.push(`/admin/products?${params.toString()}`);
+  }
+
+  // 品类深度（缩进显示层级）
+  const catDepth = useMemo(() => {
+    const byId = new Map(categoryOptions.map((c) => [c.id, c]));
+    const depth = new Map<string, number>();
+    function d(id: string): number {
+      if (depth.has(id)) return depth.get(id)!;
+      const c = byId.get(id);
+      const v = c?.parentId ? d(c.parentId) + 1 : 0;
+      depth.set(id, v);
+      return v;
+    }
+    categoryOptions.forEach((c) => d(c.id));
+    return depth;
+  }, [categoryOptions]);
+
+  // 品类下拉：选品牌后只显示该品牌品类（品牌分类 + 关联全站品类）
+  const visibleCategories = useMemo(() => {
+    if (currentBrand === "all") return categoryOptions;
+    return categoryOptions.filter(
+      (c) => c.brandId === currentBrand || (c.brandId === null && c.matchBrands.includes(currentBrand))
+    );
+  }, [categoryOptions, currentBrand]);
+
+  // 系列下拉：按品牌 + 品类联动
+  const currentCatOption = useMemo(
+    () => categoryOptions.find((c) => c.id === currentCategory),
+    [categoryOptions, currentCategory]
+  );
+  const catMatchIds = useMemo(
+    () => new Set(currentCatOption?.matchIds ?? []),
+    [currentCatOption]
+  );
+  const visibleLines = useMemo(
+    () =>
+      lineOptions.filter(
+        (l) =>
+          (currentBrand === "all" || l.brandId === currentBrand) &&
+          (currentCategory === "all" || catMatchIds.has(l.categoryId))
+      ),
+    [lineOptions, currentBrand, currentCategory, catMatchIds]
+  );
+
+  // 当前选中项若被联动过滤掉，仍保留一个 option（避免 select 空白）
+  function withCurrent(list: any[], current: string) {
+    if (current === "all" || list.some((x) => x.id === current)) return list;
+    const cur = [...categoryOptions, ...lineOptions].find((x) => x.id === current);
+    return cur ? [cur, ...list] : list;
   }
 
   function notify(r: any) {
@@ -192,11 +260,14 @@ export default function ProductsTable({
           className="rounded-md border border-slate-300 px-3 py-1.5 text-sm outline-none focus:border-sky-500"
         >
           <option value="all">全部类别</option>
-          {categoryOptions.map((c) => (
-            <option key={c.id} value={c.id}>
-              {c.label}
-            </option>
-          ))}
+          {withCurrent(visibleCategories, currentCategory)
+            .slice()
+            .sort((a, b) => (a.brandId ? 1 : 0) - (b.brandId ? 1 : 0) || a.sortOrder - b.sortOrder)
+            .map((c) => (
+              <option key={c.id} value={c.id}>
+                {`${c.brandId ? "◆ " : ""}${"　".repeat(catDepth.get(c.id) ?? 0)}${c.label}`}
+              </option>
+            ))}
         </select>
         <select
           value={currentLine}
@@ -204,7 +275,7 @@ export default function ProductsTable({
           className="rounded-md border border-slate-300 px-3 py-1.5 text-sm outline-none focus:border-sky-500"
         >
           <option value="all">全部系列</option>
-          {lineOptions.map((l) => (
+          {withCurrent(visibleLines, currentLine).map((l) => (
             <option key={l.id} value={l.id}>
               {l.label}
             </option>
