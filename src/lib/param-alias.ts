@@ -37,6 +37,8 @@ export function canonicalParamName(name: string | null | undefined): string {
 export function parseFreqMHz(s: string | null | undefined): number | null {
   if (!s) return null;
   const t = s.trim().replace(/[；;]/g, "");
+  // 采样率（MSa/s、GSa/s、KSa/s）不是频率，不参与频率滑块解析
+  if (/sa\/?\s*s?$/i.test(t) || /sa\/?s/i.test(t)) return null;
   const m = t.match(/([\d.]+)\s*(GHZ|MHZ|KHz|KHZ|HZ|G|M|K)/i);
   if (!m) return null;
   const num = parseFloat(m[1]);
