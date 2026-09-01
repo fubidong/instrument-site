@@ -92,12 +92,14 @@ export default function ProductsTable({
     return depth;
   }, [categoryOptions]);
 
-  // 品类下拉：选品牌后只显示该品牌品类（品牌分类 + 关联全站品类）
+  // 类别下拉智能切换：
+  //  - 不选品牌 → 只显示全站主品类（顶层，扁平化，不分子品类）
+  //  - 选品牌   → 只显示该品牌的品牌分类（含子分类层级）
   const visibleCategories = useMemo(() => {
-    if (currentBrand === "all") return categoryOptions;
-    return categoryOptions.filter(
-      (c) => c.brandId === currentBrand || (c.brandId === null && c.matchBrands.includes(currentBrand))
-    );
+    if (currentBrand === "all") {
+      return categoryOptions.filter((c) => c.brandId === null && c.parentId === null);
+    }
+    return categoryOptions.filter((c) => c.brandId === currentBrand);
   }, [categoryOptions, currentBrand]);
 
   // 系列下拉：按品牌 + 品类联动
@@ -262,7 +264,11 @@ export default function ProductsTable({
           <option value="all">全部类别</option>
           {withCurrent(visibleCategories, currentCategory)
             .slice()
-            .sort((a, b) => (a.brandId ? 1 : 0) - (b.brandId ? 1 : 0) || a.sortOrder - b.sortOrder)
+            .sort(
+              (a, b) =>
+                (catDepth.get(a.id) ?? 0) - (catDepth.get(b.id) ?? 0) ||
+                a.sortOrder - b.sortOrder
+            )
             .map((c) => (
               <option key={c.id} value={c.id}>
                 {`${c.brandId ? "◆ " : ""}${"　".repeat(catDepth.get(c.id) ?? 0)}${c.label}`}
