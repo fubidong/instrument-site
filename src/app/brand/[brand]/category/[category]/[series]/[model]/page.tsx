@@ -65,7 +65,7 @@ export default async function BrandModelPage({
       <div className="rounded-lg border border-slate-200 bg-white p-6">
         <div className="flex flex-wrap gap-8">
           {/* 图片 */}
-          <div className="w-full sm:w-80">
+          <div className="w-full sm:w-[400px]">
             <ProductGallery
               coverImage={product.coverImage}
               images={product.images}

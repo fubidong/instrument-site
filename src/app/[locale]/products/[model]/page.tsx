@@ -145,8 +145,8 @@ export default async function ProductDetailPage({
         <span className="text-slate-800">{product.model}</span>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-        <div className="lg:col-span-1">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
+        <div className="lg:col-span-2">
           <ProductGallery
             coverImage={product.coverImage}
             images={product.images}
@@ -164,7 +164,7 @@ export default async function ProductDetailPage({
           </div>
         </div>
 
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-3">
           <div className="rounded-lg border border-slate-200 bg-white p-6">
             <div className="flex items-start justify-between">
               <div>
