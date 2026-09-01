@@ -1,0 +1,10 @@
+const fs = require("fs");
+const h = fs.readFileSync("C:/cxy/store-sdg.html", "utf8");
+console.log("HTML len:", h.length);
+const urls = new Set();
+const re = /https:\/\/store\.siglent\.com\/wp-content\/uploads\/[^\s"'\\]+\.(?:png|jpg|jpeg|webp)/g;
+let m;
+while ((m = re.exec(h))) urls.add(m[0]);
+console.log("图 URL 数:", urls.size);
+const arr = [...urls];
+arr.filter((u) => u.includes("SDG") || u.includes("sdg") || u.includes("150")).slice(0, 25).forEach((u) => console.log("  ", u.slice(0, 150)));
