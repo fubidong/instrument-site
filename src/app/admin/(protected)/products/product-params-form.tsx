@@ -56,6 +56,23 @@ export default function ProductParamsForm({
     }
   }
 
+  // 分组默认折叠（紧凑），可通过展开全部切换
+  const visibleGroups = groups.filter((g) => g.paramDefs.length > 0);
+  const totalParams = visibleGroups.reduce((sum, g) => sum + g.paramDefs.length, 0);
+  const allExpanded = visibleGroups.length > 0 && visibleGroups.every((g) => expanded[g.id] === true);
+
+  function toggleAll() {
+    if (allExpanded) {
+      const next: Record<string, boolean> = {};
+      visibleGroups.forEach((g) => (next[g.id] = false));
+      setExpanded(next);
+    } else {
+      const next: Record<string, boolean> = {};
+      visibleGroups.forEach((g) => (next[g.id] = true));
+      setExpanded(next);
+    }
+  }
+
   return (
     <div className="space-y-6">
       {groups.length === 0 ? (
@@ -63,10 +80,23 @@ export default function ProductParamsForm({
           该类别尚未定义参数模板，请先到「参数模板」为类别添加参数。
         </div>
       ) : (
-        groups.map((group) => {
+        <>
+          <div className="flex items-center justify-between">
+            <span className="text-xs text-slate-400">
+              共 {visibleGroups.length} 个分组 · {totalParams} 个参数
+            </span>
+            <button
+              type="button"
+              onClick={toggleAll}
+              className="rounded-md border border-slate-300 px-3 py-1.5 text-xs text-slate-600 hover:border-sky-400 hover:text-sky-600"
+            >
+              {allExpanded ? "全部收起" : "全部展开"}
+            </button>
+          </div>
+        {visibleGroups.map((group) => {
           const defs = group.paramDefs;
           if (defs.length === 0) return null;
-          const isOpen = expanded[group.id] ?? true;
+          const isOpen = expanded[group.id] === true;
           return (
             <section
               key={group.id}
@@ -206,7 +236,8 @@ export default function ProductParamsForm({
               )}
             </section>
           );
-        })
+        })}
+        </>
       )}
     </div>
   );

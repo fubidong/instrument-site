@@ -7,6 +7,7 @@ import { db } from "@/lib/db";
 import ProductGallery from "@/components/product-gallery";
 import ProductDetailTabs, { type ParamGroup } from "@/components/product-detail-tabs";
 import LeadDialog from "@/components/lead-dialog";
+import CompareBar, { CompareToggle } from "@/components/compare-bar";
 
 export default async function BrandModelPage({
   params,
@@ -196,6 +197,12 @@ export default async function BrandModelPage({
             />
             {/* 申请样机（后台开关控制） */}
             <SampleDialogGate productId={product.id} productModel={product.model} productName={pt?.name ?? product.model} isEn={isEn} />
+            <CompareToggle
+              locale={isEn ? "en" : "zh"}
+              productId={product.id}
+              productModel={product.model}
+              className="rounded-md border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-600 transition hover:border-sky-400 hover:text-sky-600"
+            />
           </div>
         </div>
       </div>
@@ -203,13 +210,15 @@ export default async function BrandModelPage({
       {/* 选项卡：产品介绍 / 技术参数 / 品类自定义 */}
       <div className="mt-10">
         <ProductDetailTabs
-          intro={pt?.description ?? pt?.summary ?? null}
+          intro={pt?.description ?? null}
           highlights={highlights}
           paramGroups={paramGroups}
           customTabs={customTabs}
           labels={{ intro: I.intro, params: I.specs, noParams: I.noParams }}
         />
       </div>
+
+      <CompareBar locale={isEn ? "en" : "zh"} />
     </div>
   );
 }

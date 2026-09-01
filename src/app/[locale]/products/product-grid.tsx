@@ -17,7 +17,9 @@ type ProductCard = {
   translations: { locale: string; name: string }[];
 };
 
-const STORAGE_KEY = "cmp_selected";
+const STORAGE_KEY = "compare_products";
+
+type CmpItem = { id: string; model: string };
 
 export default function ProductGrid({
   products,
@@ -26,7 +28,7 @@ export default function ProductGrid({
 }) {
   const locale = useLocale();
   const isEn = locale === "en";
-  const [selected, setSelected] = useState<string[]>([]);
+  const [selected, setSelected] = useState<CmpItem[]>([]);
 
   useEffect(() => {
     try {
@@ -49,11 +51,22 @@ export default function ProductGrid({
     clear: isEn ? "Clear" : "清空",
   };
 
-  function toggle(id: string) {
+  function toggle(id: string, model: string) {
     setSelected((prev) => {
-      const next = prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id];
+      const exists = prev.some((x) => x.id === id);
+      let next: CmpItem[];
+      if (exists) {
+        next = prev.filter((x) => x.id !== id);
+      } else {
+        if (prev.length >= 5) {
+          alert(isEn ? "Compare up to 5 products" : "最多对比 5 个产品");
+          return prev;
+        }
+        next = [...prev, { id, model }];
+      }
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+        window.dispatchEvent(new Event("compare-changed"));
       } catch {
         /* ignore */
       }
@@ -65,6 +78,7 @@ export default function ProductGrid({
     setSelected([]);
     try {
       localStorage.removeItem(STORAGE_KEY);
+      window.dispatchEvent(new Event("compare-changed"));
     } catch {
       /* ignore */
     }
@@ -87,7 +101,7 @@ export default function ProductGrid({
           const bt = Object.fromEntries(
             p.productLine.brand.translations.map((tr) => [tr.locale, tr])
           );
-          const isSelected = selected.includes(p.id);
+          const isSelected = selected.some((s) => s.id === p.id);
           return (
             <div
               key={p.id}
@@ -137,7 +151,7 @@ export default function ProductGrid({
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  toggle(p.id);
+                  toggle(p.id, p.model);
                 }}
                 aria-pressed={isSelected}
                 className={`absolute right-2 top-2 flex items-center gap-1 rounded-full border px-2 py-1 text-[11px] font-medium transition ${
@@ -163,11 +177,16 @@ export default function ProductGrid({
       {/* 底部浮动对比栏 */}
       {selected.length > 0 && (
         <div className="fixed bottom-4 left-1/2 z-50 flex -translate-x-1/2 items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-2.5 shadow-lg">
+          <div className="flex max-w-[240px] flex-wrap items-center gap-1">
+            {selected.map((s) => (
+              <span key={s.id} className="font-mono text-xs text-slate-600">{s.model}</span>
+            ))}
+          </div>
           <span className="text-sm text-slate-600">
             {isEn ? "Selected" : "已选"} {selected.length}
           </span>
           <Link
-            href={`/compare?ids=${selected.join(",")}`}
+            href={`/compare?ids=${selected.map((s) => s.id).join(",")}`}
             className="rounded-full bg-sky-600 px-4 py-1.5 text-sm font-semibold text-white hover:bg-sky-500"
           >
             {L.toCompare}

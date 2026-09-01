@@ -4,7 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import { db } from "@/lib/db";
 import { t } from "@/lib/site";
 import { routing } from "@/i18n/routing";
-import CompareBar from "./compare-bar";
+import CompareBar, { CompareToggle } from "@/components/compare-bar";
 import ProductGallery from "@/components/product-gallery";
 import ProductDetailTabs, { type ParamGroup } from "@/components/product-detail-tabs";
 import LeadDialog from "@/components/lead-dialog";
@@ -256,6 +256,12 @@ export default async function ProductDetailPage({
                 productName={pt[locale]?.name ?? pt["zh"]?.name ?? product.model}
               />
             )}
+            <CompareToggle
+              locale={locale}
+              productId={product.id}
+              productModel={product.model}
+              className="rounded-md border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-600 transition hover:border-sky-400 hover:text-sky-600"
+            />
           </div>
 
           {/* 型号信息 */}
@@ -283,7 +289,7 @@ export default async function ProductDetailPage({
       {/* 选项卡：产品介绍 / 技术参数 / 品类自定义 */}
       <div className="mt-10">
         <ProductDetailTabs
-          intro={pt[locale]?.description ?? pt[locale]?.summary ?? null}
+          intro={pt[locale]?.description ?? pt["zh"]?.description ?? null}
           highlights={highlights.map((h) => ({ name: h.name, value: h.value, unit: h.unit }))}
           paramGroups={paramGroups}
           customTabs={customTabs}

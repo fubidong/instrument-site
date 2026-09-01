@@ -23,7 +23,7 @@ export default function ProductForm({
     isActive: boolean;
     isFeatured: boolean;
     isSampleEnabled: boolean;
-    translations: { locale: string; name: string; summary: string | null }[];
+    translations: { locale: string; name: string; summary: string | null; description: string | null }[];
   } | null;
   lines: { id: string; code: string; zhName: string; enName: string; brandZh: string; categoryZh: string }[];
   paramGroups: ParamGroupWithDefs[];
@@ -178,12 +178,26 @@ export default function ProductForm({
             />
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">简介（中文）</label>
+            <label className="mb-1 block text-sm font-medium text-slate-700">
+              简介（中文）<span className="ml-1 text-xs font-normal text-slate-400">显示在主图右侧</span>
+            </label>
             <textarea
               name="summary_zh"
               defaultValue={t["zh"]?.summary ?? ""}
               rows={2}
               className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+            />
+          </div>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-slate-700">
+              产品介绍（中文）<span className="ml-1 text-xs font-normal text-slate-400">“产品介绍”选项卡内容，与简介分开</span>
+            </label>
+            <textarea
+              name="description_zh"
+              defaultValue={t["zh"]?.description ?? ""}
+              rows={6}
+              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+              placeholder="产品介绍选项卡的详细内容（可多行）"
             />
           </div>
         </div>
@@ -204,12 +218,26 @@ export default function ProductForm({
             />
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">Summary (EN)</label>
+            <label className="mb-1 block text-sm font-medium text-slate-700">
+              Summary (EN) <span className="ml-1 text-xs font-normal text-slate-400">shown next to main image</span>
+            </label>
             <textarea
               name="summary_en"
               defaultValue={t["en"]?.summary ?? ""}
               rows={2}
               className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+            />
+          </div>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-slate-700">
+              Description (EN) <span className="ml-1 text-xs font-normal text-slate-400">Overview tab content, separate from summary</span>
+            </label>
+            <textarea
+              name="description_en"
+              defaultValue={t["en"]?.description ?? ""}
+              rows={6}
+              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+              placeholder="Detailed description for the Overview tab"
             />
           </div>
         </div>

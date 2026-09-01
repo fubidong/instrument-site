@@ -92,8 +92,10 @@ export async function saveProductAction(
 
   const nameZh = (formData.get("name_zh") as string)?.trim() || "";
   const summaryZh = (formData.get("summary_zh") as string)?.trim() || "";
+  const descriptionZh = (formData.get("description_zh") as string)?.trim() || "";
   const nameEn = (formData.get("name_en") as string)?.trim() || "";
   const summaryEn = (formData.get("summary_en") as string)?.trim() || "";
+  const descriptionEn = (formData.get("description_en") as string)?.trim() || "";
 
   if (!productLineId) return { error: "请选择产品系列" };
   if (!model) return { error: "型号不能为空" };
@@ -137,13 +139,33 @@ export async function saveProductAction(
         });
         await tx.productTranslation.upsert({
           where: { productId_locale: { productId: id, locale: "zh" } },
-          create: { productId: id, locale: "zh", name: nameZh, summary: summaryZh || null },
-          update: { name: nameZh, summary: summaryZh || null },
+          create: {
+            productId: id,
+            locale: "zh",
+            name: nameZh,
+            summary: summaryZh || null,
+            description: descriptionZh || null,
+          },
+          update: {
+            name: nameZh,
+            summary: summaryZh || null,
+            description: descriptionZh || null,
+          },
         });
         await tx.productTranslation.upsert({
           where: { productId_locale: { productId: id, locale: "en" } },
-          create: { productId: id, locale: "en", name: nameEn, summary: summaryEn || null },
-          update: { name: nameEn, summary: summaryEn || null },
+          create: {
+            productId: id,
+            locale: "en",
+            name: nameEn,
+            summary: summaryEn || null,
+            description: descriptionEn || null,
+          },
+          update: {
+            name: nameEn,
+            summary: summaryEn || null,
+            description: descriptionEn || null,
+          },
         });
         // 删除旧参数值，重建（简单可靠）
         await tx.productParamValue.deleteMany({ where: { productId: id } });
@@ -168,8 +190,18 @@ export async function saveProductAction(
           isSampleEnabled,
           translations: {
             create: [
-              { locale: "zh", name: nameZh, summary: summaryZh || null },
-              { locale: "en", name: nameEn, summary: summaryEn || null },
+              {
+                locale: "zh",
+                name: nameZh,
+                summary: summaryZh || null,
+                description: descriptionZh || null,
+              },
+              {
+                locale: "en",
+                name: nameEn,
+                summary: summaryEn || null,
+                description: descriptionEn || null,
+              },
             ],
           },
           paramValues: {
