@@ -2,7 +2,7 @@
 
 import { useMemo, useState, useTransition } from "react";
 import type { NavNode } from "@/lib/nav";
-import type { NavBrandOpt } from "./page";
+import type { NavBrandOpt, NavPageOption } from "./page";
 import NavDialog, { type DialogMenu } from "./nav-dialog";
 import { toggleNavVisibleAction, deleteNavAction, batchSortNavAction } from "./actions";
 
@@ -43,9 +43,11 @@ function collectParentIds(nodes: NavNode[], out: string[] = []) {
 export default function NavigationManager({
   tree,
   brands,
+  pageOptions,
 }: {
   tree: NavNode[];
   brands: NavBrandOpt[];
+  pageOptions: NavPageOption[];
 }) {
   const [tab, setTab] = useState<string>("all");
   const [search, setSearch] = useState("");
@@ -206,7 +208,9 @@ export default function NavigationManager({
   }
 
   const flatten = (nodes: NavNode[]): React.ReactNode[] =>
-    nodes.map((n) => [renderNode(n, 0), ...flatten(n.children)]).flat();
+    nodes
+      .map((n) => [renderNode(n, 0), ...(isOpen(n.id) ? flatten(n.children) : [])])
+      .flat();
 
   return (
     <div className="space-y-4">
@@ -311,6 +315,7 @@ export default function NavigationManager({
           menu={dialog.menu}
           brands={brands}
           allMenus={allMenus}
+          pageOptions={pageOptions}
           presetBrandId={dialog.presetBrandId}
           presetParentId={dialog.presetParentId}
           onClose={() => setDialog(null)}
