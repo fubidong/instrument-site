@@ -75,6 +75,7 @@ export default async function ProductsPage({
           include: { translations: true, brand: { include: { translations: true } } },
         },
         translations: true,
+        images: { orderBy: { sortOrder: "asc" }, take: 1 },
       },
       orderBy: [{ productLine: { code: "asc" } }, { sortOrder: "asc" }, { model: "asc" }],
     }),

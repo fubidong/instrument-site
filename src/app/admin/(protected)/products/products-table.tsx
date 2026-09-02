@@ -16,6 +16,8 @@ type Product = {
   sortOrder: number;
   isActive: boolean;
   isFeatured: boolean;
+  coverImage: string | null;
+  images: { imagePath: string }[];
   productLine: {
     code: string;
     translations: { locale: string; name: string }[];
@@ -328,6 +330,7 @@ export default function ProductsTable({
                     className="h-4 w-4"
                   />
                 </th>
+                <th className="whitespace-nowrap px-4 py-3 font-medium">主图</th>
                 <th className="whitespace-nowrap px-4 py-3 font-medium">型号</th>
                 <th className="whitespace-nowrap px-4 py-3 font-medium">品牌</th>
                 <th className="whitespace-nowrap px-4 py-3 font-medium">系列</th>
@@ -359,6 +362,12 @@ export default function ProductsTable({
                           )
                         }
                         className="h-4 w-4"
+                      />
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-3">
+                      <MainImage
+                        src={p.coverImage ?? p.images[0]?.imagePath ?? ""}
+                        model={p.model}
                       />
                     </td>
                     <td className="whitespace-nowrap px-4 py-3 font-mono text-xs font-semibold text-slate-800">
@@ -415,5 +424,25 @@ export default function ProductsTable({
         )}
       </div>
     </div>
+  );
+}
+
+/** 产品主图缩略图：有图显示 44x44 缩略图，无图显示占位 */
+function MainImage({ src, model }: { src: string; model: string }) {
+  if (!src) {
+    return (
+      <span className="flex h-11 w-11 items-center justify-center rounded-md border border-slate-200 bg-slate-50 text-lg font-semibold text-slate-300">
+        {model.slice(0, 1)}
+      </span>
+    );
+  }
+  // eslint-disable-next-line @next/next/no-img-element
+  return (
+    <img
+      src={src}
+      alt={model}
+      className="h-11 w-11 rounded-md border border-slate-200 object-contain"
+      loading="lazy"
+    />
   );
 }
