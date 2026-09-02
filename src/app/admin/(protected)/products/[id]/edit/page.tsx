@@ -56,6 +56,7 @@ export default async function EditProductPage({
         },
       },
       paramValues: true,
+      images: { orderBy: { sortOrder: "asc" } },
     },
   });
   if (!product) notFound();
@@ -116,6 +117,11 @@ export default async function EditProductPage({
         lines={lineOptions}
         paramGroups={paramGroups}
         paramValues={paramValues}
+        gallery={product.images.map((img) => ({
+          id: img.id,
+          imagePath: img.imagePath,
+          sortOrder: img.sortOrder,
+        }))}
       />
     </div>
   );

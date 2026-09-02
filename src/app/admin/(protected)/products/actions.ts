@@ -355,3 +355,75 @@ export async function duplicateProductAction(formData: FormData) {
   revalidatePath("/admin/products");
   return { success: "已复制", redirect: `/admin/products/${newProduct.id}/edit` };
 }
+
+// ==================== 产品图库管理 ====================
+
+export type GalleryActionResult = { error?: string; success?: string };
+
+/** 新增图库图片（已通过 /api/upload 上传后拿到路径） */
+export async function addProductImageAction(formData: FormData): Promise<GalleryActionResult> {
+  await requireAdmin();
+  const productId = (formData.get("productId") as string) || "";
+  const imagePath = (formData.get("imagePath") as string)?.trim() || "";
+  if (!productId || !imagePath) return { error: "参数错误" };
+
+  const maxOrder = await db.productImage.aggregate({
+    where: { productId },
+    _max: { sortOrder: true },
+  });
+  await db.productImage.create({
+    data: { productId, imagePath, sortOrder: (maxOrder._max.sortOrder ?? 0) + 1 },
+  });
+  revalidatePath(`/admin/products/${productId}/edit`);
+  return { success: "已添加图片" };
+}
+
+/** 删除图库图片（仅移除记录，物理文件保留以防误删） */
+export async function deleteProductImageAction(formData: FormData): Promise<GalleryActionResult> {
+  await requireAdmin();
+  const id = (formData.get("id") as string) || "";
+  if (!id) return { error: "参数错误" };
+  const img = await db.productImage.findUnique({ where: { id } });
+  if (!img) return { error: "图片不存在" };
+  await db.productImage.delete({ where: { id } });
+  revalidatePath(`/admin/products/${img.productId}/edit`);
+  return { success: "已删除" };
+}
+
+/** 调整图库图片排序（上移/下移） */
+export async function moveProductImageAction(formData: FormData): Promise<GalleryActionResult> {
+  await requireAdmin();
+  const id = (formData.get("id") as string) || "";
+  const direction = (formData.get("direction") as string) || "up"; // up | down
+  if (!id) return { error: "参数错误" };
+
+  const img = await db.productImage.findUnique({ where: { id } });
+  if (!img) return { error: "图片不存在" };
+
+  const siblings = await db.productImage.findMany({
+    where: { productId: img.productId },
+    orderBy: { sortOrder: "asc" },
+  });
+  const idx = siblings.findIndex((s) => s.id === id);
+  const target = direction === "up" ? idx - 1 : idx + 1;
+  if (idx < 0 || target < 0 || target >= siblings.length) return { error: "已在边界" };
+
+  const other = siblings[target];
+  await db.$transaction([
+    db.productImage.update({ where: { id }, data: { sortOrder: other.sortOrder } }),
+    db.productImage.update({ where: { id: other.id }, data: { sortOrder: img.sortOrder } }),
+  ]);
+  revalidatePath(`/admin/products/${img.productId}/edit`);
+  return { success: "已调整顺序" };
+}
+
+/** 设为封面图 */
+export async function setCoverImageAction(formData: FormData): Promise<GalleryActionResult> {
+  await requireAdmin();
+  const productId = (formData.get("productId") as string) || "";
+  const imagePath = (formData.get("imagePath") as string)?.trim() || "";
+  if (!productId || !imagePath) return { error: "参数错误" };
+  await db.product.update({ where: { id: productId }, data: { coverImage: imagePath } });
+  revalidatePath(`/admin/products/${productId}/edit`);
+  return { success: "已设为主图" };
+}

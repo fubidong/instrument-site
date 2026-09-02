@@ -3,6 +3,7 @@
 import { useActionState, useEffect } from "react";
 import { saveProductAction, type ProductFormState } from "./actions";
 import ProductParamsForm, { type ParamGroupWithDefs } from "./product-params-form";
+import ProductGalleryManager from "./product-gallery-manager";
 import RichTextEditor from "@/components/rich-text-editor";
 
 const initialState: ProductFormState = {};
@@ -12,6 +13,7 @@ export default function ProductForm({
   lines,
   paramGroups,
   paramValues,
+  gallery,
   initialProductLineId,
 }: {
   product: {
@@ -29,6 +31,7 @@ export default function ProductForm({
   lines: { id: string; code: string; zhName: string; enName: string; brandZh: string; categoryZh: string }[];
   paramGroups: ParamGroupWithDefs[];
   paramValues: Record<string, any>;
+  gallery?: { id: string; imagePath: string; sortOrder: number }[];
   initialProductLineId?: string;
 }) {
   const [state, formAction, pending] = useActionState(saveProductAction, initialState);
@@ -163,6 +166,14 @@ export default function ProductForm({
           </div>
         </div>
       </section>
+
+      {product?.id && (
+        <ProductGalleryManager
+          productId={product.id}
+          coverImage={product.coverImage}
+          images={gallery ?? []}
+        />
+      )}
 
       <section className="rounded-lg border border-slate-200 bg-white p-5">
         <h2 className="mb-4 text-sm font-semibold text-slate-700">中文内容</h2>
