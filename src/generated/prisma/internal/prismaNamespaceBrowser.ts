@@ -210,7 +210,8 @@ export const ProductTranslationScalarFieldEnum = {
   name: 'name',
   summary: 'summary',
   description: 'description',
-  specsOverview: 'specsOverview'
+  specsOverview: 'specsOverview',
+  selection: 'selection'
 } as const
 
 export type ProductTranslationScalarFieldEnum = (typeof ProductTranslationScalarFieldEnum)[keyof typeof ProductTranslationScalarFieldEnum]

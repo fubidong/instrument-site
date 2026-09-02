@@ -104,9 +104,11 @@ export async function saveProductAction(
   const nameZh = (formData.get("name_zh") as string)?.trim() || "";
   const summaryZh = (formData.get("summary_zh") as string)?.trim() || "";
   const descriptionZh = cleanHtml(formData.get("description_zh") as string);
+  const selectionZh = cleanHtml(formData.get("selection_zh") as string);
   const nameEn = (formData.get("name_en") as string)?.trim() || "";
   const summaryEn = (formData.get("summary_en") as string)?.trim() || "";
   const descriptionEn = cleanHtml(formData.get("description_en") as string);
+  const selectionEn = cleanHtml(formData.get("selection_en") as string);
 
   if (!productLineId) return { error: "请选择产品系列" };
   if (!model) return { error: "型号不能为空" };
@@ -156,11 +158,13 @@ export async function saveProductAction(
             name: nameZh,
             summary: summaryZh || null,
             description: descriptionZh || null,
+            selection: selectionZh || null,
           },
           update: {
             name: nameZh,
             summary: summaryZh || null,
             description: descriptionZh || null,
+            selection: selectionZh || null,
           },
         });
         await tx.productTranslation.upsert({
@@ -171,11 +175,13 @@ export async function saveProductAction(
             name: nameEn,
             summary: summaryEn || null,
             description: descriptionEn || null,
+            selection: selectionEn || null,
           },
           update: {
             name: nameEn,
             summary: summaryEn || null,
             description: descriptionEn || null,
+            selection: selectionEn || null,
           },
         });
         // 删除旧参数值，重建（简单可靠）
@@ -206,12 +212,14 @@ export async function saveProductAction(
                 name: nameZh,
                 summary: summaryZh || null,
                 description: descriptionZh || null,
+                selection: selectionZh || null,
               },
               {
                 locale: "en",
                 name: nameEn,
                 summary: summaryEn || null,
                 description: descriptionEn || null,
+                selection: selectionEn || null,
               },
             ],
           },

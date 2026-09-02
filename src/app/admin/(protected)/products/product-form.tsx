@@ -26,7 +26,7 @@ export default function ProductForm({
     isActive: boolean;
     isFeatured: boolean;
     isSampleEnabled: boolean;
-    translations: { locale: string; name: string; summary: string | null; description: string | null }[];
+    translations: { locale: string; name: string; summary: string | null; description: string | null; selection: string | null }[];
   } | null;
   lines: { id: string; code: string; zhName: string; enName: string; brandZh: string; categoryZh: string }[];
   paramGroups: ParamGroupWithDefs[];
@@ -238,6 +238,12 @@ export default function ProductForm({
                 </label>
                 <RichTextEditor name="description_zh" defaultValue={t["zh"]?.description ?? ""} minHeight={420} />
               </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">
+                  产品选型（中文）<span className="ml-1 text-xs font-normal text-slate-400">“产品选型”选项卡内容（选型表可从此处粘贴）</span>
+                </label>
+                <RichTextEditor name="selection_zh" defaultValue={t["zh"]?.selection ?? ""} minHeight={360} />
+              </div>
             </>
           )}
         </div>
@@ -272,6 +278,12 @@ export default function ProductForm({
                   Description (EN) <span className="ml-1 text-xs font-normal text-slate-400">Overview tab content, separate from summary</span>
                 </label>
                 <RichTextEditor name="description_en" defaultValue={t["en"]?.description ?? ""} minHeight={420} />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">
+                  Product Selection (EN) <span className="ml-1 text-xs font-normal text-slate-400">Selection tab content (paste selection table here)</span>
+                </label>
+                <RichTextEditor name="selection_en" defaultValue={t["en"]?.selection ?? ""} minHeight={360} />
               </div>
             </>
           )}

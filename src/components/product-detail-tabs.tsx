@@ -1,43 +1,58 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export type ParamGroupItem = { name: string; zhName?: string; value: string; unit?: string };
 export type ParamGroup = { groupName: string; items: ParamGroupItem[] };
 export type CustomTab = { code: string; title: string; content: string };
+export type PdfDoc = { id: string; title: string; filePath: string; docType?: string };
 
 /**
- * 产品详情页选项卡（产品介绍 / 技术参数 / 品类自定义），平滑切换
+ * 产品详情页选项卡（产品介绍 / 技术参数 / 产品选型 / 产品规格手册 / 品类自定义）
+ * 平滑切换 + 下划线高亮反馈
  */
 export default function ProductDetailTabs({
   intro,
   highlights,
   paramGroups,
+  selection,
+  pdfs,
   customTabs,
   labels,
 }: {
   intro?: string | null;
   highlights?: { name: string; value: string; unit?: string }[];
   paramGroups?: ParamGroup[];
+  selection?: string | null;
+  pdfs?: PdfDoc[];
   customTabs?: CustomTab[];
   labels: {
     intro: string;
     params: string;
+    selection?: string;
+    manual?: string;
+    download?: string;
     highlight?: string;
     noParams?: string;
   };
 }) {
   const [active, setActive] = useState(0);
-  const tabs: { key: string; title: string }[] = [
+  const [pdfIdx, setPdfIdx] = useState(0);
+
+  const baseTabs: { key: string; title: string }[] = [
     { key: "intro", title: labels.intro },
     { key: "params", title: labels.params },
-    ...(customTabs ?? []).map((t, i) => ({ key: `custom-${i}`, title: t.title })),
   ];
+  const hasSelection = !!selection && selection.trim().length > 0 && !/^(<p>(\s|&nbsp;)*<\/p>|<br\s*\/?>|\s)*$/i.test(selection);
+  const hasPdf = !!pdfs && pdfs.length > 0;
+  if (hasSelection) baseTabs.push({ key: "selection", title: labels.selection ?? "产品选型" });
+  if (hasPdf) baseTabs.push({ key: "pdf", title: labels.manual ?? "产品规格手册" });
+  const tabs = [...baseTabs, ...(customTabs ?? []).map((t, i) => ({ key: `custom-${i}`, title: t.title }))];
 
   const introVisible = !!intro || (highlights && highlights.length > 0);
   const paramsVisible = (paramGroups ?? []).length > 0;
-  // 过滤出有内容的 tab（产品介绍/技术参数无内容则不显示）
+  // 过滤出有内容的 tab
   const visibleTabs = tabs.filter((t) => {
     if (t.key === "intro") return introVisible;
     if (t.key === "params") return paramsVisible;
@@ -48,37 +63,45 @@ export default function ProductDetailTabs({
   // 修正 active 索引
   const current = Math.min(active, visibleTabs.length - 1);
   const activeTab = visibleTabs[current];
+  const currentPdf = pdfs![Math.min(pdfIdx, pdfs!.length - 1)];
 
   return (
     <div>
-      {/* 选项卡头 */}
-      <div className="flex flex-wrap gap-1 border-b border-slate-200">
-        {visibleTabs.map((tab, i) => (
-          <button
-            key={tab.key}
-            type="button"
-            onClick={() => setActive(i)}
-            className={`rounded-t-lg px-5 py-2.5 text-sm font-semibold transition-colors ${
-              current === i
-                ? "border-b-2 border-sky-600 text-sky-700"
-                : "text-slate-500 hover:text-slate-700"
-            }`}
-          >
-            {tab.title}
-          </button>
-        ))}
+      {/* 选项卡头：下划线 + 颜色高亮 */}
+      <div className="flex flex-wrap gap-1 overflow-x-auto border-b border-slate-200">
+        {visibleTabs.map((tab, i) => {
+          const isActive = current === i;
+          return (
+            <button
+              key={tab.key}
+              type="button"
+              onClick={() => {
+                setActive(i);
+                if (tab.key === "pdf") setPdfIdx(0);
+              }}
+              className={`relative whitespace-nowrap px-5 py-3 text-sm font-semibold transition-colors ${
+                isActive ? "text-sky-700" : "text-slate-500 hover:text-slate-700"
+              }`}
+            >
+              {tab.title}
+              <span
+                className={`absolute inset-x-3 -bottom-px h-0.5 rounded-full bg-sky-600 transition-all duration-300 ${
+                  isActive ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+                }`}
+              />
+            </button>
+          );
+        })}
       </div>
 
-      {/* 内容区：平滑切换 */}
+      {/* 内容区：平滑切换（key 直接替换 + 位移动画，无 exit 依赖，内容始终可见） */}
       <div className="mt-5">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab.key}
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -4 }}
-            transition={{ duration: 0.18, ease: "easeOut" }}
-          >
+        <motion.div
+          key={activeTab.key}
+          initial={{ y: 8, opacity: 0.6 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+        >
             {activeTab.key === "intro" && (
               <div className="space-y-4">
                 {highlights && highlights.length > 0 && (
@@ -145,6 +168,57 @@ export default function ProductDetailTabs({
               </div>
             )}
 
+            {activeTab.key === "selection" && (
+              <div className="rich-text">
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: /<[a-z][\s\S]*>/i.test(selection ?? "")
+                      ? selection!
+                      : `<p>${selection}</p>`,
+                  }}
+                />
+              </div>
+            )}
+
+            {activeTab.key === "pdf" && pdfs && pdfs.length > 0 && (
+              <div className="space-y-4">
+                {pdfs.length > 1 && (
+                  <div className="flex flex-wrap gap-2">
+                    {pdfs.map((p, i) => (
+                      <button
+                        key={p.id}
+                        type="button"
+                        onClick={() => setPdfIdx(i)}
+                        className={`rounded-md border px-3 py-1.5 text-sm transition-colors ${
+                          i === Math.min(pdfIdx, pdfs.length - 1)
+                            ? "border-sky-500 bg-sky-50 font-medium text-sky-700"
+                            : "border-slate-200 text-slate-500 hover:border-sky-300"
+                        }`}
+                      >
+                        {p.title}
+                      </button>
+                    ))}
+                  </div>
+                )}
+                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                  {/* eslint-disable-next-line react/no-unknown-property */}
+                  <embed src={currentPdf.filePath} type="application/pdf" className="h-[68vh] w-full" />
+                </div>
+                <div className="flex justify-end">
+                  <a
+                    href={currentPdf.filePath}
+                    download
+                    className="inline-flex items-center gap-2 rounded-md bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-500"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                    {labels.download ?? "下载 PDF"}
+                  </a>
+                </div>
+              </div>
+            )}
+
             {activeTab.key.startsWith("custom-") && (
               <div className="rich-text">
                 <div
@@ -155,8 +229,7 @@ export default function ProductDetailTabs({
               </div>
             )}
           </motion.div>
-        </AnimatePresence>
-      </div>
+        </div>
     </div>
   );
 }

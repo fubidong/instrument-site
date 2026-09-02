@@ -3,11 +3,12 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { db } from "@/lib/db";
 import { t } from "@/lib/site";
+import { getSiteSettings } from "@/lib/site";
 import { routing } from "@/i18n/routing";
-import CompareBar, { CompareToggle } from "@/components/compare-bar";
+import CompareBar from "@/components/compare-bar";
 import ProductGallery from "@/components/product-gallery";
 import ProductDetailTabs, { type ParamGroup } from "@/components/product-detail-tabs";
-import LeadDialog from "@/components/lead-dialog";
+import ProductOverview from "@/components/product-overview";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -87,6 +88,18 @@ export default async function ProductDetailPage({
   const pt = Object.fromEntries(product.translations.map((tr) => [tr.locale, tr]));
   const bt = Object.fromEntries(product.productLine.brand.translations.map((tr) => [tr.locale, tr]));
   const lt = Object.fromEntries(product.productLine.translations.map((tr) => [tr.locale, tr]));
+
+  // 站点设置（联系电话等）
+  const settings = await getSiteSettings(locale);
+
+  // 产品规格手册 PDF 文档（datasheet 优先）
+  const pdfs = product.documents
+    .filter((d) => d.filePath.toLowerCase().endsWith(".pdf"))
+    .sort((a, b) => (a.docType === "datasheet" ? -1 : 1) - (b.docType === "datasheet" ? -1 : 1))
+    .map((d) => ({ id: d.id, title: d.title, filePath: d.filePath, docType: d.docType }));
+
+  // 产品选型内容（中英）
+  const selection = pt[locale]?.selection ?? pt["zh"]?.selection ?? null;
 
   const grouped: { groupCode: string; groupName: string; items: any[] }[] = [];
   const groupMap = new Map<string, typeof grouped[0]>();
@@ -191,7 +204,7 @@ export default async function ProductDetailPage({
         <span className="text-slate-800">{product.model}</span>
       </div>
 
-      {/* 顶部两栏：左主图 + 右产品简介 */}
+      {/* 顶部两栏：左主图 + 右产品概览 */}
       <div className="flex flex-col gap-8 lg:flex-row">
         {/* 左：主图（580x580） */}
         <div className="w-full lg:w-[580px] lg:shrink-0">
@@ -203,97 +216,42 @@ export default async function ProductDetailPage({
           />
         </div>
 
-        {/* 右：产品简介 */}
-        <div className="flex-1">
-          <div className="flex items-center gap-2 text-sm text-slate-500">
-            <span className="font-medium text-sky-600">
-              {bt[locale]?.name ?? bt["zh"]?.name ?? product.productLine.brand.code}
-            </span>
-            <span>·</span>
-            <span>{lt[locale]?.name ?? lt["zh"]?.name ?? product.productLine.code}</span>
-          </div>
-          <h1 className="mt-2 font-mono text-3xl font-bold text-slate-900">{product.model}</h1>
-          <div className="mt-1 text-lg text-slate-600">
-            {pt[locale]?.name ?? pt["zh"]?.name}
-          </div>
-          {pt[locale]?.summary && (
-            <p className="mt-4 text-sm leading-6 text-slate-600">{pt[locale].summary}</p>
-          )}
-
-          {/* 重点参数（3-4 个） */}
-          {highlights.length > 0 && (
-            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {highlights.map((h, i) => (
-                <div key={i} className="rounded-lg border border-slate-200 bg-white px-3 py-3">
-                  <div className="flex items-center gap-1.5 text-xs text-slate-400">
-                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-sky-500" />
-                    {h.name}
-                  </div>
-                  <div className="mt-1 truncate text-lg font-bold text-slate-800">
-                    {h.value}
-                    {h.unit && <span className="ml-0.5 text-xs font-normal text-slate-400">{h.unit}</span>}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {/* 操作按钮组 */}
-          <div className="mt-7 flex flex-wrap gap-3">
-            <LeadDialog
-              type="inquiry"
-              locale={locale}
-              productId={product.id}
-              productModel={product.model}
-              productName={pt[locale]?.name ?? pt["zh"]?.name ?? product.model}
-            />
-            {product.isSampleEnabled && (
-              <LeadDialog
-                type="sample"
-                locale={locale}
-                productId={product.id}
-                productModel={product.model}
-                productName={pt[locale]?.name ?? pt["zh"]?.name ?? product.model}
-              />
-            )}
-            <CompareToggle
-              locale={locale}
-              productId={product.id}
-              productModel={product.model}
-              className="rounded-md border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-600 transition hover:border-sky-400 hover:text-sky-600"
-            />
-          </div>
-
-          {/* 型号信息 */}
-          <div className="mt-6 grid grid-cols-2 gap-x-8 gap-y-2 rounded-lg border border-slate-100 bg-slate-50/60 px-4 py-3 text-sm">
-            <div className="flex justify-between">
-              <span className="text-slate-400">{I.brand}</span>
-              <span className="font-medium text-slate-700">
-                {bt[locale]?.name ?? bt["zh"]?.name ?? product.productLine.brand.code}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-slate-400">{I.series}</span>
-              <span className="font-medium text-slate-700">
-                {lt[locale]?.name ?? lt["zh"]?.name ?? product.productLine.code}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-slate-400">{I.model}</span>
-              <span className="font-medium text-slate-700">{product.sku ?? product.model}</span>
-            </div>
-          </div>
-        </div>
+        {/* 右：产品概览（标题/属性标签/简介/关键参数/联系方式/按钮组） */}
+        <ProductOverview
+          locale={locale}
+          isEn={isEn}
+          model={product.model}
+          name={pt[locale]?.name ?? pt["zh"]?.name ?? product.model}
+          brand={bt[locale]?.name ?? bt["zh"]?.name ?? product.productLine.brand.code}
+          series={lt[locale]?.name ?? lt["zh"]?.name ?? product.productLine.code}
+          summary={pt[locale]?.summary ?? pt["zh"]?.summary ?? null}
+          highlights={highlights}
+          phone={settings.phone || undefined}
+          productId={product.id}
+          productModel={product.model}
+          productName={pt[locale]?.name ?? pt["zh"]?.name ?? product.model}
+          isSampleEnabled={product.isSampleEnabled}
+        />
       </div>
 
-      {/* 选项卡：产品介绍 / 技术参数 / 品类自定义 */}
+      {/* 选项卡：产品介绍 / 技术参数 / 产品选型 / 产品规格手册 / 品类自定义 */}
       <div className="mt-10">
         <ProductDetailTabs
           intro={pt[locale]?.description ?? pt["zh"]?.description ?? null}
           highlights={highlights.map((h) => ({ name: h.name, value: h.value, unit: h.unit }))}
           paramGroups={paramGroups}
+          selection={selection}
+          pdfs={pdfs}
           customTabs={customTabs}
-          labels={{ intro: I.intro, params: I.params, highlight: I.highlights, noParams: I.noParams }}
+          labels={{
+            intro: I.intro,
+            params: I.params,
+            selection: isEn ? "Product Selection" : "产品选型",
+            manual: isEn ? "Specifications Manual" : "产品规格手册",
+            download: isEn ? "Download PDF" : "下载 PDF",
+            highlight: I.highlights,
+            noParams: I.noParams,
+          }}
         />
       </div>
 

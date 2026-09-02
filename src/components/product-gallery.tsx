@@ -99,9 +99,9 @@ export default function ProductGallery({
         </div>
       </div>
 
-      {/* 缩略图 */}
+      {/* 缩略图：横向一排（可左右滚动） */}
       {all.length > 1 && (
-        <div className="mx-auto mt-3 grid max-w-[580px] grid-cols-5 gap-2">
+        <div className="mx-auto mt-3 flex max-w-[580px] gap-2 overflow-x-auto pb-1">
           {all.map((img, i) => (
             <button
               key={img.id}
@@ -110,12 +110,12 @@ export default function ProductGallery({
                 setSelected(i);
                 setZoom((z) => ({ ...z, x: 50, y: 50, active: false }));
               }}
-              className={`overflow-hidden rounded p-0.5 ${
+              className={`h-14 w-14 shrink-0 overflow-hidden rounded p-0.5 ${
                 selected === i ? "border-2 border-sky-500" : "border border-slate-200 hover:border-sky-300"
               }`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={img.imagePath} alt={img.altText ?? alt} className="h-14 w-full object-contain" />
+              <img src={img.imagePath} alt={img.altText ?? alt} className="h-full w-full object-contain" />
             </button>
           ))}
         </div>

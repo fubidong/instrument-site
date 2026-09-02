@@ -4,10 +4,11 @@ import { setRequestLocale } from "next-intl/server";
 import { getBrand, getBrandCategories, getBrandModel } from "@/lib/brand";
 import { getBrandLocale, brandPath } from "@/lib/brand-locale";
 import { db } from "@/lib/db";
+import { getSiteSettings } from "@/lib/site";
 import ProductGallery from "@/components/product-gallery";
 import ProductDetailTabs, { type ParamGroup } from "@/components/product-detail-tabs";
-import LeadDialog from "@/components/lead-dialog";
-import CompareBar, { CompareToggle } from "@/components/compare-bar";
+import ProductOverview from "@/components/product-overview";
+import CompareBar from "@/components/compare-bar";
 
 export default async function BrandModelPage({
   params,
@@ -45,6 +46,20 @@ export default async function BrandModelPage({
     include: { translations: true },
     orderBy: { sortOrder: "asc" },
   });
+
+  // 站点设置（联系电话等）
+  const settings = await getSiteSettings(isEn ? "en" : "zh");
+
+  // 产品规格手册 PDF（datasheet 优先）+ 申请样机开关
+  const productMeta = await db.product.findUnique({
+    where: { id: product.id },
+    include: { documents: { where: { isActive: true } } },
+  });
+  const pdfs = (productMeta?.documents ?? [])
+    .filter((d) => d.filePath.toLowerCase().endsWith(".pdf"))
+    .sort((a, b) => (a.docType === "datasheet" ? -1 : 1) - (b.docType === "datasheet" ? -1 : 1))
+    .map((d) => ({ id: d.id, title: d.title, filePath: d.filePath, docType: d.docType }));
+  const isSampleEnabled = productMeta?.isSampleEnabled ?? false;
 
   // 解析 specsOverview 为参数表
   const pt = isEn ? product.en : product.zh;
@@ -146,7 +161,7 @@ export default async function BrandModelPage({
         <span className="text-slate-800">{product.model}</span>
       </div>
 
-      {/* 顶部两栏：左主图 + 右产品简介 */}
+      {/* 顶部两栏：左主图 + 右产品概览 */}
       <div className="flex flex-col gap-8 lg:flex-row">
         {/* 左：主图（580x580） */}
         <div className="w-full lg:w-[580px] lg:shrink-0">
@@ -158,95 +173,45 @@ export default async function BrandModelPage({
           />
         </div>
 
-        {/* 右：产品简介 */}
-        <div className="flex-1">
-          <div className="flex items-center gap-2 text-sm text-slate-500">
-            <span className="font-medium text-sky-600">{brandName}</span>
-            <span>·</span>
-            <span>{product.seriesName}</span>
-          </div>
-          <h1 className="mt-2 font-mono text-3xl font-bold text-slate-900">{product.model}</h1>
-          {pt?.summary && <p className="mt-4 text-sm leading-6 text-slate-600">{pt.summary}</p>}
-
-          {/* 重点参数（3-4 个） */}
-          {highlights.length > 0 && (
-            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {highlights.map((h, i) => (
-                <div key={i} className="rounded-lg border border-slate-200 bg-white px-3 py-3">
-                  <div className="flex items-center gap-1.5 text-xs text-slate-400">
-                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-sky-500" />
-                    {h.name}
-                  </div>
-                  <div className="mt-1 truncate text-lg font-bold text-slate-800">
-                    {h.value}
-                    {h.unit && <span className="ml-0.5 text-xs font-normal text-slate-400">{h.unit}</span>}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {/* 操作按钮组 */}
-          <div className="mt-7 flex flex-wrap gap-3">
-            <LeadDialog
-              type="inquiry"
-              locale={isEn ? "en" : "zh"}
-              productId={product.id}
-              productModel={product.model}
-              productName={pt?.name ?? product.model}
-            />
-            {/* 申请样机（后台开关控制） */}
-            <SampleDialogGate productId={product.id} productModel={product.model} productName={pt?.name ?? product.model} isEn={isEn} />
-            <CompareToggle
-              locale={isEn ? "en" : "zh"}
-              productId={product.id}
-              productModel={product.model}
-              className="rounded-md border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-600 transition hover:border-sky-400 hover:text-sky-600"
-            />
-          </div>
-        </div>
+        {/* 右：产品概览（标题/属性标签/简介/关键参数/联系方式/按钮组） */}
+        <ProductOverview
+          locale={isEn ? "en" : "zh"}
+          isEn={isEn}
+          model={product.model}
+          name={pt?.name ?? product.model}
+          brand={brandName}
+          series={product.seriesName}
+          summary={pt?.summary ?? null}
+          highlights={highlights}
+          phone={settings.phone || undefined}
+          productId={product.id}
+          productModel={product.model}
+          productName={pt?.name ?? product.model}
+          isSampleEnabled={isSampleEnabled}
+        />
       </div>
 
-      {/* 选项卡：产品介绍 / 技术参数 / 品类自定义 */}
+      {/* 选项卡：产品介绍 / 技术参数 / 产品选型 / 产品规格手册 / 品类自定义 */}
       <div className="mt-10">
         <ProductDetailTabs
           intro={pt?.description ?? null}
           highlights={highlights}
           paramGroups={paramGroups}
+          selection={pt?.selection ?? null}
+          pdfs={pdfs}
           customTabs={customTabs}
-          labels={{ intro: I.intro, params: I.specs, noParams: I.noParams }}
+          labels={{
+            intro: I.intro,
+            params: I.specs,
+            selection: isEn ? "Product Selection" : "产品选型",
+            manual: isEn ? "Specifications Manual" : "产品规格手册",
+            download: isEn ? "Download PDF" : "下载 PDF",
+            noParams: I.noParams,
+          }}
         />
       </div>
 
       <CompareBar locale={isEn ? "en" : "zh"} />
     </div>
-  );
-}
-
-/** 申请样机按钮（按产品 isSampleEnabled 开关控制显示） */
-async function SampleDialogGate({
-  productId,
-  productModel,
-  productName,
-  isEn,
-}: {
-  productId: string;
-  productModel: string;
-  productName: string;
-  isEn: boolean;
-}) {
-  const p = await db.product.findUnique({
-    where: { id: productId },
-    select: { isSampleEnabled: true },
-  });
-  if (!p?.isSampleEnabled) return null;
-  return (
-    <LeadDialog
-      type="sample"
-      locale={isEn ? "en" : "zh"}
-      productId={productId}
-      productModel={productModel}
-      productName={productName}
-    />
   );
 }
