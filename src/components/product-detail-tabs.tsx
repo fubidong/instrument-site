@@ -58,7 +58,8 @@ export default function ProductDetailTabs({
   if (hasDownloads) baseTabs.push({ key: "downloads", title: labels.downloads ?? "资料下载" });
   const tabs = [...baseTabs, ...(customTabs ?? []).map((t, i) => ({ key: `custom-${i}`, title: t.title }))];
 
-  const introVisible = !!intro || (highlights && highlights.length > 0);
+  // 产品介绍固定显示
+  const introVisible = true;
   // 技术参数固定显示（无参数时内容区显示空状态提示）
   const paramsVisible = true;
   // 过滤出有内容的 tab
@@ -113,27 +114,6 @@ export default function ProductDetailTabs({
         >
             {activeTab.key === "intro" && (
               <div className="space-y-4">
-                {highlights && highlights.length > 0 && (
-                  <div>
-                    {labels.highlight && (
-                      <div className="mb-2 text-sm font-semibold text-slate-800">{labels.highlight}</div>
-                    )}
-                    <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                      {highlights.map((h, i) => (
-                        <div
-                          key={i}
-                          className="flex items-center justify-between rounded-md bg-rose-50 px-3 py-2"
-                        >
-                          <span className="text-sm text-slate-600">{h.name}</span>
-                          <span className="font-semibold text-rose-600">
-                            {h.value}
-                            {h.unit && <span className="ml-0.5 text-xs">{h.unit}</span>}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
                 {intro && (/<[a-z][\s\S]*>/i.test(intro) ? (
                   <div className="rich-text" dangerouslySetInnerHTML={{ __html: intro }} />
                 ) : (
