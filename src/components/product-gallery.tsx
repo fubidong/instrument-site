@@ -35,9 +35,17 @@ export default function ProductGallery({
     ...images.map((i) => ({ id: i.id, imagePath: i.imagePath, altText: i.altText ?? alt })),
   ];
   const [selected, setSelected] = useState(0);
-  const [zoom, setZoom] = useState({ x: 50, y: 50, active: false, imgW: 1, imgH: 1 });
+  const [zoom, setZoom] = useState({
+    x: 50,
+    y: 50,
+    active: false,
+    imgW: 1,
+    imgH: 1,
+    side: "right" as "left" | "right",
+  });
   const boxRef = useRef<HTMLDivElement>(null);
-  const ZOOM = 2.5;
+  const ZOOM = 2;
+  const ZOOM_SIZE = 220;
 
   if (!all.length) {
     return (
@@ -55,7 +63,9 @@ export default function ProductGallery({
     if (r.width <= 0 || r.height <= 0) return;
     const x = Math.min(100, Math.max(0, ((e.clientX - r.left) / r.width) * 100));
     const y = Math.min(100, Math.max(0, ((e.clientY - r.top) / r.height) * 100));
-    setZoom({ x, y, active: true, imgW: r.width, imgH: r.height });
+    // 鼠标靠近主图左半 → 放大镜放右侧；右半 → 放大镜放左侧（贴近鼠标，避免突兀/溢出）
+    const side: "left" | "right" = x >= 50 ? "left" : "right";
+    setZoom({ x, y, active: true, imgW: r.width, imgH: r.height, side });
   };
 
   return (
@@ -75,14 +85,17 @@ export default function ProductGallery({
           />
         </div>
 
-        {/* 独立放大镜区域：主图右侧，淡入上浮/淡出下沉，移动端隐藏 */}
+        {/* 独立放大镜区域：贴近鼠标一侧显示，柔和淡入（透明度+缩放+轻微上浮） */}
         <div
-          className="pointer-events-none absolute left-full top-0 z-20 ml-3 hidden overflow-hidden rounded-lg border border-slate-200 bg-white shadow-lg transition-all duration-300 ease-out lg:block"
+          className={`pointer-events-none absolute top-0 z-20 hidden overflow-hidden rounded-lg border border-slate-100 bg-white shadow-md lg:block ${
+            zoom.side === "right" ? "left-full ml-3" : "right-full mr-3"
+          }`}
           style={{
-            width: 250,
-            height: 250,
+            width: ZOOM_SIZE,
+            height: ZOOM_SIZE,
             opacity: zoom.active ? 1 : 0,
-            transform: zoom.active ? "translateY(0)" : "translateY(8px)",
+            transform: zoom.active ? "translateY(0) scale(1)" : "translateY(6px) scale(0.96)",
+            transition: "opacity 220ms ease-out, transform 220ms ease-out",
           }}
         >
           {zoom.active && (
