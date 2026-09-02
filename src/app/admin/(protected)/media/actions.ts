@@ -106,3 +106,23 @@ export async function moveAssetsToFolderAction(formData: FormData): Promise<Fold
   revalidatePath("/admin/media");
   return { success: `已移动 ${ids.length} 个素材` };
 }
+
+/**
+ * 搜索素材库图片（供素材选择器弹窗使用）
+ */
+export async function searchMediaImagesAction(
+  query: string
+): Promise<{ items: { id: string; path: string; filename: string }[] }> {
+  await requireAdmin();
+  const q = query?.trim();
+  const items = await db.mediaAsset.findMany({
+    where: {
+      kind: "image",
+      ...(q ? { filename: { contains: q, mode: "insensitive" } } : {}),
+    },
+    orderBy: { createdAt: "desc" },
+    take: 80,
+    select: { id: true, path: true, filename: true },
+  });
+  return { items };
+}

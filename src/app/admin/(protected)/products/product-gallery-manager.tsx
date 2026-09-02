@@ -7,6 +7,7 @@ import {
   moveProductImageAction,
   setCoverImageAction,
 } from "./actions";
+import MediaPicker from "@/components/media-picker";
 
 type GalleryImage = {
   id: string;
@@ -30,6 +31,7 @@ export default function ProductGalleryManager({
   const [msg, setMsg] = useState<string | null>(null);
   const [uploading, setUploading] = useState(false);
   const [urlInput, setUrlInput] = useState("");
+  const [pickerOpen, setPickerOpen] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   function notify(r: any) {
@@ -200,6 +202,14 @@ export default function ProductGalleryManager({
             className="hidden"
             onChange={(e) => handleUpload(e.target.files?.[0])}
           />
+          <button
+            type="button"
+            onClick={() => setPickerOpen(true)}
+            disabled={pending}
+            className="rounded-md border border-sky-300 bg-sky-50 px-3 py-2 text-sm font-medium text-sky-700 hover:bg-sky-100 disabled:opacity-50"
+          >
+            从素材库选择
+          </button>
           <div className="flex flex-1 items-center gap-2">
             <input
               type="text"
@@ -225,6 +235,15 @@ export default function ProductGalleryManager({
           上传的图片会同时进入素材库。上传后如未显示，请刷新页面。
         </p>
       </div>
+
+      <MediaPicker
+        open={pickerOpen}
+        onClose={() => setPickerOpen(false)}
+        selectedPaths={[coverImage ?? "", ...images.map((i) => i.imagePath)]}
+        onSelect={(path) => {
+          doAdd(path);
+        }}
+      />
     </section>
   );
 }
