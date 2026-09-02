@@ -53,11 +53,35 @@ export default async function BrandModelPage({
   // 产品规格手册 PDF（datasheet 优先）+ 申请样机开关
   const productMeta = await db.product.findUnique({
     where: { id: product.id },
-    include: { documents: { where: { isActive: true } } },
+    include: {
+      documents: { where: { isActive: true } },
+      productLine: { include: { documents: { where: { isActive: true } } } },
+    },
   });
-  const pdfs = (productMeta?.documents ?? [])
-    .filter((d) => d.filePath.toLowerCase().endsWith(".pdf"))
-    .sort((a, b) => (a.docType === "datasheet" ? -1 : 1) - (b.docType === "datasheet" ? -1 : 1))
+  const allDocs = [...(productMeta?.documents ?? []), ...(productMeta?.productLine?.documents ?? [])];
+  const seen = new Set<string>();
+  const mergedDocs = allDocs.filter((d) => {
+    const k = d.title + "|" + d.filePath;
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+  const dsPdfs = mergedDocs.filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
+  const pdfs = (dsPdfs.length > 0 ? dsPdfs : mergedDocs.filter((d) => /\.pdf$/i.test(d.filePath)))
+    .sort((a, b) => {
+      const rank = (x: any) => (/^https?:\/\//i.test(x.filePath) ? 1 : 0);
+      return rank(a) - rank(b);
+    })
+    .map((d) => ({ id: d.id, title: d.title, filePath: d.filePath, docType: d.docType }));
+  const lineCode2 = productMeta?.productLine?.code ?? "";
+  const normKey2 = (s: string) => s.toLowerCase().replace(/[\s\-_/+]/g, "");
+  const downloads = mergedDocs
+    .filter((d) => {
+      if (!["datasheet", "programming_manual", "user_manual"].includes(d.docType)) return false;
+      if (d.docType === "user_manual") return normKey2(d.title).includes(normKey2(lineCode2));
+      return true;
+    })
+    .sort((a, b) => (a.docType === "datasheet" ? -1 : 0) - (b.docType === "datasheet" ? -1 : 0))
     .map((d) => ({ id: d.id, title: d.title, filePath: d.filePath, docType: d.docType }));
   const isSampleEnabled = productMeta?.isSampleEnabled ?? false;
 
@@ -199,13 +223,15 @@ export default async function BrandModelPage({
           paramGroups={paramGroups}
           selection={pt?.selection ?? null}
           pdfs={pdfs}
+          downloads={downloads}
           customTabs={customTabs}
           labels={{
             intro: I.intro,
             params: I.specs,
             selection: isEn ? "Product Selection" : "产品选型",
-            manual: isEn ? "Specifications Manual" : "产品规格手册",
+            manual: isEn ? "Product Specifications" : "产品规格",
             download: isEn ? "Download PDF" : "下载 PDF",
+            downloads: isEn ? "Downloads" : "资料下载",
             noParams: I.noParams,
           }}
         />

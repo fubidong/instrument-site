@@ -18,6 +18,7 @@ export default function ProductDetailTabs({
   paramGroups,
   selection,
   pdfs,
+  downloads,
   customTabs,
   labels,
 }: {
@@ -26,6 +27,7 @@ export default function ProductDetailTabs({
   paramGroups?: ParamGroup[];
   selection?: string | null;
   pdfs?: PdfDoc[];
+  downloads?: PdfDoc[];
   customTabs?: CustomTab[];
   labels: {
     intro: string;
@@ -33,9 +35,11 @@ export default function ProductDetailTabs({
     selection?: string;
     manual?: string;
     download?: string;
+    downloads?: string;
     highlight?: string;
     noParams?: string;
     noManual?: string;
+    noDownloads?: string;
   };
 }) {
   const [active, setActive] = useState(0);
@@ -50,6 +54,8 @@ export default function ProductDetailTabs({
   const hasPdf = true;
   if (hasSelection) baseTabs.push({ key: "selection", title: labels.selection ?? "产品选型" });
   if (hasPdf) baseTabs.push({ key: "pdf", title: labels.manual ?? "产品规格手册" });
+  const hasDownloads = !!downloads && downloads.length > 0;
+  if (hasDownloads) baseTabs.push({ key: "downloads", title: labels.downloads ?? "资料下载" });
   const tabs = [...baseTabs, ...(customTabs ?? []).map((t, i) => ({ key: `custom-${i}`, title: t.title }))];
 
   const introVisible = !!intro || (highlights && highlights.length > 0);
@@ -226,6 +232,54 @@ export default function ProductDetailTabs({
                       </a>
                     </div>
                   </>
+                )}
+              </div>
+            )}
+
+            {activeTab.key === "downloads" && (
+              <div className="space-y-3">
+                {(downloads ?? []).map((d) => {
+                  const isExternal = /^https?:\/\//i.test(d.filePath);
+                  const typeLabel =
+                    d.docType === "datasheet" ? "数据手册"
+                    : d.docType === "programming_manual" ? "编程手册"
+                    : d.docType === "user_manual" ? "用户手册"
+                    : "资料";
+                  return (
+                    <div
+                      key={d.id}
+                      className="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 transition hover:border-sky-300"
+                    >
+                      <div className="flex min-w-0 items-center gap-3">
+                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded bg-rose-50 text-rose-600">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                          </svg>
+                        </div>
+                        <div className="min-w-0">
+                          <div className="truncate text-sm font-medium text-slate-800">{d.title}</div>
+                          <span className="mt-0.5 inline-block rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-500">
+                            {typeLabel}
+                          </span>
+                        </div>
+                      </div>
+                      <a
+                        href={d.filePath}
+                        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : { download: true })}
+                        className="inline-flex shrink-0 items-center gap-1.5 rounded-md border border-sky-600 px-3 py-1.5 text-sm font-medium text-sky-600 transition hover:bg-sky-50"
+                      >
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                        </svg>
+                        下载
+                      </a>
+                    </div>
+                  );
+                })}
+                {(downloads ?? []).length === 0 && (
+                  <div className="rounded-lg border border-dashed border-slate-200 p-8 text-center text-sm text-slate-400">
+                    {labels.noDownloads ?? "暂无资料下载"}
+                  </div>
                 )}
               </div>
             )}

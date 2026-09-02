@@ -105,16 +105,6 @@ export default function BrandCategoryTree({
           <div className="ml-3 border-l border-slate-100 pl-2">
             {c.series.length > 0 && (
               <div className="space-y-0.5">
-                <Link
-                  href={catHref(c.code)}
-                  className={`block rounded px-2 py-1 text-xs ${
-                    currentCategory === c.code && !currentLine
-                      ? "bg-sky-50 font-medium text-sky-700"
-                      : "text-slate-400 hover:bg-slate-50"
-                  }`}
-                >
-                  {L.allSeries}
-                </Link>
                 {c.series.map((s) => (
                   <Link
                     key={s.id}

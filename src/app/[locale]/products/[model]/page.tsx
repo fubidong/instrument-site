@@ -51,6 +51,7 @@ export default async function ProductDetailPage({
         include: {
           translations: true,
           brand: { include: { translations: true } },
+          documents: { where: { isActive: true }, orderBy: { createdAt: "desc" } },
         },
       },
       images: { orderBy: { sortOrder: "asc" } },
@@ -92,10 +93,33 @@ export default async function ProductDetailPage({
   // 站点设置（联系电话等）
   const settings = await getSiteSettings(locale);
 
-  // 产品规格手册 PDF 文档（datasheet 优先）
-  const pdfs = product.documents
-    .filter((d) => d.filePath.toLowerCase().endsWith(".pdf"))
-    .sort((a, b) => (a.docType === "datasheet" ? -1 : 1) - (b.docType === "datasheet" ? -1 : 1))
+  // 文档合并：产品级 + 系列级（系列共享手册）
+  const allDocs = [...product.documents, ...(product.productLine.documents ?? [])];
+  const seen = new Set<string>();
+  const mergedDocs = allDocs.filter((d) => {
+    const k = d.title + "|" + d.filePath;
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+  // 产品规格手册 PDF 文档（仅系列规格手册 datasheet，无则回退全部 pdf）
+  const dsPdfs = mergedDocs.filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
+  const pdfs = (dsPdfs.length > 0 ? dsPdfs : mergedDocs.filter((d) => /\.pdf$/i.test(d.filePath)))
+    .sort((a, b) => {
+      const rank = (x: any) => (/^https?:\/\//i.test(x.filePath) ? 1 : 0);
+      return rank(a) - rank(b);
+    })
+    .map((d) => ({ id: d.id, title: d.title, filePath: d.filePath, docType: d.docType }));
+  // 资料下载选项卡：规格手册(datasheet) + 编程手册 + 系列专属用户手册
+  const lineCode = product.productLine.code;
+  const normKey = (s: string) => s.toLowerCase().replace(/[\s\-_/+]/g, "");
+  const downloads = mergedDocs
+    .filter((d) => {
+      if (!["datasheet", "programming_manual", "user_manual"].includes(d.docType)) return false;
+      if (d.docType === "user_manual") return normKey(d.title).includes(normKey(lineCode));
+      return true;
+    })
+    .sort((a, b) => (a.docType === "datasheet" ? -1 : 0) - (b.docType === "datasheet" ? -1 : 0))
     .map((d) => ({ id: d.id, title: d.title, filePath: d.filePath, docType: d.docType }));
 
   // 产品选型内容（中英）
@@ -242,47 +266,20 @@ export default async function ProductDetailPage({
           paramGroups={paramGroups}
           selection={selection}
           pdfs={pdfs}
+          downloads={downloads}
           customTabs={customTabs}
           labels={{
             intro: I.intro,
             params: I.params,
             selection: isEn ? "Product Selection" : "产品选型",
-            manual: isEn ? "Specifications Manual" : "产品规格手册",
+            manual: isEn ? "Product Specifications" : "产品规格",
             download: isEn ? "Download PDF" : "下载 PDF",
+            downloads: isEn ? "Downloads" : "资料下载",
             highlight: I.highlights,
             noParams: I.noParams,
           }}
         />
       </div>
-
-      {/* 资料下载 */}
-      {product.documents.length > 0 && (
-        <div className="mt-8">
-          <h2 className="mb-3 text-lg font-bold text-slate-900">{I.documents}</h2>
-          <div className="space-y-2">
-            {product.documents.map((doc) => (
-              <a
-                key={doc.id}
-                href={doc.filePath}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-between rounded-lg border border-slate-200 bg-white px-4 py-3 hover:border-sky-300"
-              >
-                <div>
-                  <div className="text-sm font-medium text-slate-800">{doc.title}</div>
-                  <div className="mt-0.5 text-xs text-slate-400">
-                    {docTypeLabel[doc.docType] ?? doc.docType}
-                    {doc.version && ` · v${doc.version}`}
-                    {doc.language === "en" && " · EN"}
-                    {doc.language === "ru" && " · RU"}
-                  </div>
-                </div>
-                <span className="text-sm text-sky-600">{I.download} →</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
 
       <CompareBar locale={locale} productId={product.id} productModel={product.model} />
     </div>
