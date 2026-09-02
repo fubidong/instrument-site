@@ -51,6 +51,7 @@ export default function DefList({
   const [editing, setEditing] = useState<ParamDef | null>(null);
   const [showNew, setShowNew] = useState(false);
   const [pending, startTransition] = useTransition();
+  const [groupFilter, setGroupFilter] = useState<string>("all");
 
   function handleDelete(d: ParamDef) {
     if (!confirm(`确定删除参数「${d.key}」？已有产品参数值将无法删除。`)) return;
@@ -69,6 +70,16 @@ export default function DefList({
     d.translations.find((tr) => tr.locale === locale)?.name ?? "";
   const groupNameOf = (d: ParamDef, locale: string) =>
     d.paramGroup.translations.find((tr) => tr.locale === locale)?.name ?? d.paramGroup.code;
+
+  // 按分组筛选
+  const filteredDefs =
+    groupFilter === "all" ? defs : defs.filter((d) => d.paramGroupId === groupFilter);
+  const countOf = (gid: string) => defs.filter((d) => d.paramGroupId === gid).length;
+
+  const chip =
+    "rounded-full px-3 py-1.5 text-xs font-medium transition-colors border";
+  const chipOn = "border-sky-500 bg-sky-600 text-white";
+  const chipOff = "border-slate-200 bg-white text-slate-600 hover:border-sky-300 hover:text-sky-600";
 
   return (
     <div className="space-y-4">
@@ -101,9 +112,29 @@ export default function DefList({
       )}
 
       <div className="rounded-lg border border-slate-200 bg-white">
-        {defs.length === 0 ? (
+        <div className="flex flex-wrap items-center gap-2 border-b border-slate-100 px-4 py-3">
+          <span className="mr-1 text-xs font-medium text-slate-400">按分组筛选：</span>
+          <button
+            type="button"
+            onClick={() => setGroupFilter("all")}
+            className={`${chip} ${groupFilter === "all" ? chipOn : chipOff}`}
+          >
+            全部 ({defs.length})
+          </button>
+          {groups.map((g) => (
+            <button
+              key={g.id}
+              type="button"
+              onClick={() => setGroupFilter(g.id)}
+              className={`${chip} ${groupFilter === g.id ? chipOn : chipOff}`}
+            >
+              {g.zhName} ({countOf(g.id)})
+            </button>
+          ))}
+        </div>
+        {filteredDefs.length === 0 ? (
           <p className="p-8 text-center text-sm text-slate-400">
-            暂无参数定义，点击右上角新增
+            {defs.length === 0 ? "暂无参数定义，点击右上角新增" : "该分组下暂无参数"}
           </p>
         ) : (
           <table className="w-full text-sm">
@@ -121,7 +152,7 @@ export default function DefList({
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              {defs.map((d) => {
+              {filteredDefs.map((d) => {
                 const badge = TYPE_BADGE[d.type] ?? TYPE_BADGE.string;
                 const marks: string[] = [
                   d.isFilterable && "筛选",
