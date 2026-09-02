@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { saveParamGroupAction, type ParamGroupState } from "./actions";
 
 const initialState: ParamGroupState = {};
@@ -23,6 +23,11 @@ export default function ParamGroupForm({
   const t = Object.fromEntries(
     (group?.translations ?? []).map((tr) => [tr.locale, tr])
   );
+
+  // 保存成功后自动关闭弹窗
+  useEffect(() => {
+    if (state.success) onDone();
+  }, [state.success, onDone]);
 
   return (
     <form action={formAction} className="space-y-4">

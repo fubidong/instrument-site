@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { saveParamDefAction, type ParamDefState } from "./actions";
 
 const initialState: ParamDefState = {};
@@ -55,6 +55,11 @@ export default function ParamDefForm({
   const [state, formAction, pending] = useActionState(saveParamDefAction, initialState);
   const [type, setType] = useState(def?.type ?? "number");
   const [optionsText, setOptionsText] = useState(def?.options ?? "");
+
+  // 保存成功后自动关闭弹窗
+  useEffect(() => {
+    if (state.success) onDone();
+  }, [state.success, onDone]);
 
   const t = Object.fromEntries(
     (def?.translations ?? []).map((tr) => [tr.locale, tr])

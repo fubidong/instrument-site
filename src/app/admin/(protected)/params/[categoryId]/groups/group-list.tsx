@@ -3,6 +3,7 @@
 import { useTransition, useState } from "react";
 import ParamGroupForm from "./group-form";
 import { deleteParamGroupAction } from "./actions";
+import Modal from "@/components/modal";
 
 type Group = {
   id: string;
@@ -55,14 +56,13 @@ export default function GroupList({
       </div>
 
       {showNew && (
-        <div className="rounded-lg border border-sky-200 bg-sky-50/50 p-5">
-          <h3 className="mb-3 text-sm font-semibold text-slate-700">新增参数分组</h3>
+        <Modal open={showNew} onClose={() => setShowNew(false)} title="新增参数分组">
           <ParamGroupForm
             categoryId={categoryId}
             group={null}
             onDone={() => setShowNew(false)}
           />
-        </div>
+        </Modal>
       )}
 
       <div className="rounded-lg border border-slate-200 bg-white">
@@ -120,16 +120,17 @@ export default function GroupList({
       </div>
 
       {editing && (
-        <div className="rounded-lg border border-sky-200 bg-sky-50/50 p-5">
-          <h3 className="mb-3 text-sm font-semibold text-slate-700">
-            编辑分组 · {editing.code}
-          </h3>
+        <Modal
+          open={!!editing}
+          onClose={() => setEditing(null)}
+          title={`编辑分组 · ${editing.code}`}
+        >
           <ParamGroupForm
             categoryId={categoryId}
             group={editing}
             onDone={() => setEditing(null)}
           />
-        </div>
+        </Modal>
       )}
     </div>
   );

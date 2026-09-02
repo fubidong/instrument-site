@@ -3,6 +3,7 @@
 import { useState, useTransition } from "react";
 import ParamDefForm from "./param-def-form";
 import { deleteParamDefAction } from "./actions";
+import Modal from "@/components/modal";
 
 type GroupOption = { id: string; code: string; zhName: string; enName: string };
 type ParamDef = {
@@ -85,15 +86,18 @@ export default function DefList({
       </div>
 
       {showNew && (
-        <div className="rounded-lg border border-sky-200 bg-sky-50/50 p-5">
-          <h3 className="mb-3 text-sm font-semibold text-slate-700">新增参数定义</h3>
+        <Modal
+          open={showNew}
+          onClose={() => setShowNew(false)}
+          title="新增参数定义"
+        >
           <ParamDefForm
             categoryId={categoryId}
             groups={groups}
             def={null}
             onDone={() => setShowNew(false)}
           />
-        </div>
+        </Modal>
       )}
 
       <div className="rounded-lg border border-slate-200 bg-white">
@@ -197,15 +201,19 @@ export default function DefList({
       </div>
 
       {editing && (
-        <div className="rounded-lg border border-sky-200 bg-sky-50/50 p-5">
-          <h3 className="mb-3 text-sm font-semibold text-slate-700">编辑参数 · {editing.key}</h3>
+        <Modal
+          open={!!editing}
+          onClose={() => setEditing(null)}
+          title={`编辑参数 · ${editing.key}`}
+          width="max-w-3xl"
+        >
           <ParamDefForm
             categoryId={categoryId}
             groups={groups}
             def={editing}
             onDone={() => setEditing(null)}
           />
-        </div>
+        </Modal>
       )}
     </div>
   );
