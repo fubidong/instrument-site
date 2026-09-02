@@ -41,6 +41,7 @@ export default function ProductParamFilter({
   currentCategory,
   currentBrand,
   currentLine,
+  basePath = "/products",
 }: {
   locale: string;
   filterDefs: FilterDef[];
@@ -48,6 +49,7 @@ export default function ProductParamFilter({
   currentCategory?: string;
   currentBrand?: string;
   currentLine?: string;
+  basePath?: string;
 }) {
   const router = useRouter();
   const isEn = locale === "en";
@@ -96,7 +98,7 @@ export default function ProductParamFilter({
     Object.entries(merged).forEach(([k, v]) => {
       if (v) params.set(k, v);
     });
-    router.push(`/products${params.toString() ? `?${params.toString()}` : ""}`);
+    router.push(`${basePath}${params.toString() ? `?${params.toString()}` : ""}`);
   }
 
   /** 勾选 enum 立即筛选（保留其他参数） */
@@ -124,7 +126,7 @@ export default function ProductParamFilter({
           )}
           {Object.keys(currentParams).some((k) => k.startsWith("p_")) && (
             <a
-              href={`/products${currentCategory ? `?category=${currentCategory}` : ""}`}
+              href={`${basePath}${currentCategory ? `?category=${currentCategory}` : ""}`}
               className="text-xs text-slate-400 hover:text-sky-600"
             >
               {isEn ? "Clear" : "清除"}

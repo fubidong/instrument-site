@@ -1,189 +1,159 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Link } from "@/i18n/navigation";
-import { useLocale } from "next-intl";
-import ProductGrid from "@/app/[locale]/products/product-grid";
 
-type Cat = {
+type SeriesItem = { id: string; code: string; name: string; count: number };
+export type BrandCatNode = {
   id: string;
   code: string;
   name: string;
-  parentId: string | null;
-  icon?: string | null;
   count: number;
-  series: { id: string; code: string; name: string; count: number }[];
+  parentId: string | null;
+  series: SeriesItem[];
+  children: BrandCatNode[];
 };
 
-type Prod = {
-  id: string;
-  model: string;
-  coverImage: string | null;
-  isFeatured: boolean;
-  categoryId: string;
-  productLineId: string;
-  productLine: {
-    code: string;
-    translations: { locale: string; name: string }[];
-    brand: { translations: { locale: string; name: string }[] };
-  };
-  translations: { locale: string; name: string }[];
-};
-
-export default function BrandFilterExplorer({
+/**
+ * 品牌页左侧品类树：品类 → 系列 联动折叠展示
+ * 默认全部折叠，点击箭头展开显示子品类/系列，点击系列筛选产品
+ */
+export default function BrandCategoryTree({
   categories,
-  products,
+  currentCategory,
+  currentLine,
+  basePath,
+  isEn,
 }: {
-  categories: Cat[];
-  products: Prod[];
+  categories: BrandCatNode[];
+  currentCategory?: string;
+  currentLine?: string;
+  basePath: string;
+  isEn: boolean;
 }) {
-  const locale = useLocale();
-  const isEn = locale === "en";
-  const [activeCat, setActiveCat] = useState<string | null>(null);
-  const [activeLine, setActiveLine] = useState<string | null>(null);
-
-  const topCats = useMemo(() => categories.filter((c) => !c.parentId), [categories]);
-  const childrenOf = (id: string) => categories.filter((c) => c.parentId === id);
-
-  const currentTop = topCats.find((c) => c.id === activeCat) ?? topCats[0];
-  const shownCats = currentTop ? [currentTop, ...childrenOf(currentTop.id)] : topCats;
-
-  // 当前品类范围（含子类）
-  const catScope = useMemo(() => {
-    if (!currentTop) return new Set<string>();
-    const set = new Set<string>([currentTop.id]);
-    childrenOf(currentTop.id).forEach((c) => set.add(c.id));
-    return set;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentTop?.id, categories]);
-
-  // 当前品类下的系列
-  const linesInCat = useMemo(() => {
-    if (!currentTop) return [];
-    const all = categories.flatMap((c) => c.series);
-    return all.filter((s) => catScope.has(currentTop.id)); // series 的品类归属由父级确定
-  }, [currentTop, categories, catScope]);
-
-  // 实际上 series 需关联到品类：用 Cat.series 分组
-  const seriesGrouped = useMemo(() => {
-    if (!currentTop) return [];
-    const own = currentTop.series.map((s) => ({ ...s, catId: currentTop.id }));
-    const subs = childrenOf(currentTop.id).flatMap((c) => c.series.map((s) => ({ ...s, catId: c.id })));
-    return [...own, ...subs];
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentTop, categories]);
-
-  const filteredProducts = useMemo(() => {
-    let list = products;
-    if (currentTop) list = list.filter((p) => catScope.has(p.categoryId));
-    if (activeLine) list = list.filter((p) => p.productLineId === activeLine);
-    return list;
-  }, [products, currentTop, catScope, activeLine]);
-
   const L = {
-    categories: isEn ? "Categories" : "品类",
-    series: isEn ? "Series" : "系列",
+    categories: isEn ? "Categories" : "产品品类",
     allSeries: isEn ? "All Series" : "全部系列",
-    products: isEn ? "Products" : "产品",
-    total: isEn ? "Total" : "共",
-    models: isEn ? "Models" : "型号",
+    allProducts: isEn ? "All Products" : "全部产品",
   };
 
-  return (
-    <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-4">
-      {/* 左：品类 */}
-      <aside className="rounded-lg border border-slate-200 bg-white p-4 lg:col-span-1">
-        <div className="mb-3 text-sm font-semibold text-slate-800">{L.categories}</div>
-        <div className="space-y-1">
-          {topCats.map((c) => (
-            <div key={c.id}>
-              <button
-                type="button"
-                onClick={() => {
-                  setActiveCat(c.id);
-                  setActiveLine(null);
-                }}
-                className={`block w-full rounded px-3 py-1.5 text-left text-sm ${
-                  activeCat === c.id || (activeCat === null && c.id === topCats[0]?.id)
-                    ? "bg-sky-50 font-medium text-sky-700"
-                    : "text-slate-600 hover:bg-slate-50"
-                }`}
-              >
-                <span className="text-base">{c.icon ?? ""} </span>
-                {c.name}
-                <span className="ml-1 text-[10px] text-slate-400">({c.count})</span>
-              </button>
-              {activeCat === c.id && childrenOf(c.id).length > 0 && (
-                <div className="ml-3 border-l border-slate-100 pl-2">
-                  {childrenOf(c.id).map((s) => (
-                    <button
-                      key={s.id}
-                      type="button"
-                      onClick={() => {
-                        setActiveCat(s.id);
-                        setActiveLine(null);
-                      }}
-                      className="block w-full rounded px-3 py-1 text-left text-xs text-slate-500 hover:bg-slate-50"
-                    >
-                      {s.name}
-                      <span className="ml-1 text-[10px] text-slate-400">({s.count})</span>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </aside>
+  // 找到当前品类的祖先链（用于初始展开）
+  function findPath(nodes: BrandCatNode[], code: string, path: string[] = []): string[] | null {
+    for (const n of nodes) {
+      const np = [...path, n.id];
+      if (n.code === code) return np;
+      const found = findPath(n.children, code, np);
+      if (found) return found;
+    }
+    return null;
+  }
+  const initialExpanded = (() => {
+    if (!currentCategory) return new Set<string>();
+    const path = findPath(categories, currentCategory);
+    return new Set((path ?? []).slice(0, -1)); // 展开祖先（不含自身），默认折叠
+  })();
+  const [expanded, setExpanded] = useState<Set<string>>(initialExpanded);
 
-      {/* 中：系列 */}
-      <div className="rounded-lg border border-slate-200 bg-white p-4 lg:col-span-1">
-        <div className="mb-3 text-sm font-semibold text-slate-800">
-          {L.series}
-          {currentTop && <span className="ml-1 font-normal text-slate-400">({currentTop.name})</span>}
+  function toggleExpand(id: string) {
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
+  function catHref(code: string) {
+    // 切换品类时清除参数筛选（旧参数不适用）
+    return `${basePath}?category=${code}`;
+  }
+
+  function lineHref(catCode: string, lineId: string) {
+    return `${basePath}?category=${catCode}&line=${lineId}`;
+  }
+
+  function renderNode(c: BrandCatNode, depth: number) {
+    const isExpanded = expanded.has(c.id);
+    const active = currentCategory === c.code;
+    return (
+      <div key={c.id}>
+        <div className="flex items-center">
+          <button
+            type="button"
+            onClick={() => toggleExpand(c.id)}
+            disabled={c.series.length === 0 && c.children.length === 0}
+            className={`w-4 shrink-0 text-xs text-slate-400 ${
+              c.series.length > 0 || c.children.length > 0
+                ? "cursor-pointer hover:text-sky-600"
+                : "cursor-default"
+            }`}
+          >
+            {c.series.length > 0 || c.children.length > 0 ? (isExpanded ? "▾" : "▸") : ""}
+          </button>
+          <Link
+            href={catHref(c.code)}
+            className={`block flex-1 rounded px-1 py-1.5 text-sm ${
+              active ? "bg-sky-50 font-medium text-sky-700" : "text-slate-700 hover:bg-slate-50"
+            }`}
+            style={{ marginLeft: depth * 8 }}
+          >
+            {c.name}
+            <span className="ml-1 text-[10px] text-slate-400">({c.count})</span>
+          </Link>
         </div>
-        {seriesGrouped.length === 0 ? (
-          <p className="text-sm text-slate-400">{isEn ? "No series" : "暂无系列"}</p>
-        ) : (
-          <div className="space-y-1">
-            <button
-              type="button"
-              onClick={() => setActiveLine(null)}
-              className={`block w-full rounded px-3 py-1.5 text-left text-sm ${
-                !activeLine ? "bg-sky-50 font-medium text-sky-700" : "text-slate-600 hover:bg-slate-50"
-              }`}
-            >
-              {L.allSeries}
-            </button>
-            {seriesGrouped.map((s) => (
-              <button
-                key={s.id}
-                type="button"
-                onClick={() => setActiveLine(s.id)}
-                className={`block w-full rounded px-3 py-1.5 text-left text-sm ${
-                  activeLine === s.id ? "bg-sky-50 font-medium text-sky-700" : "text-slate-600 hover:bg-slate-50"
-                }`}
-              >
-                {s.name}
-                <span className="ml-1 text-[10px] text-slate-400">({s.count})</span>
-              </button>
-            ))}
+        {isExpanded && (
+          <div className="ml-3 border-l border-slate-100 pl-2">
+            {c.series.length > 0 && (
+              <div className="space-y-0.5">
+                <Link
+                  href={catHref(c.code)}
+                  className={`block rounded px-2 py-1 text-xs ${
+                    currentCategory === c.code && !currentLine
+                      ? "bg-sky-50 font-medium text-sky-700"
+                      : "text-slate-400 hover:bg-slate-50"
+                  }`}
+                >
+                  {L.allSeries}
+                </Link>
+                {c.series.map((s) => (
+                  <Link
+                    key={s.id}
+                    href={lineHref(c.code, s.id)}
+                    className={`block rounded px-2 py-1 text-xs ${
+                      currentLine === s.id
+                        ? "bg-sky-50 font-medium text-sky-700"
+                        : "text-slate-600 hover:bg-slate-50"
+                    }`}
+                  >
+                    {s.name}
+                    <span className="ml-1 text-[10px] text-slate-400">({s.count})</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+            {c.children.map((ch) => renderNode(ch, depth + 1))}
           </div>
         )}
       </div>
+    );
+  }
 
-      {/* 右：产品 */}
-      <div className="lg:col-span-2">
-        <div className="mb-3 flex items-center justify-between">
-          <h3 className="text-sm font-semibold text-slate-800">
-            {L.products}
-            <span className="ml-2 text-xs font-normal text-slate-400">
-              {L.total} {filteredProducts.length} {L.models}
-            </span>
-          </h3>
+  return (
+    <aside className="w-full shrink-0 lg:w-64">
+      <div className="rounded-lg border border-slate-200 bg-white p-4">
+        <div className="mb-3 text-sm font-semibold text-slate-800">{L.categories}</div>
+        <div className="space-y-1">
+          <Link
+            href={`${basePath}`}
+            className={`block rounded px-3 py-1.5 text-sm ${
+              !currentCategory ? "bg-sky-50 font-medium text-sky-700" : "text-slate-600 hover:bg-slate-50"
+            }`}
+          >
+            {L.allProducts}
+          </Link>
+          {categories.map((c) => renderNode(c, 0))}
         </div>
-        <ProductGrid products={filteredProducts as any} />
       </div>
-    </div>
+    </aside>
   );
 }

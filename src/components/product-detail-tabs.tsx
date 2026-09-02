@@ -35,6 +35,7 @@ export default function ProductDetailTabs({
     download?: string;
     highlight?: string;
     noParams?: string;
+    noManual?: string;
   };
 }) {
   const [active, setActive] = useState(0);
@@ -45,7 +46,8 @@ export default function ProductDetailTabs({
     { key: "params", title: labels.params },
   ];
   const hasSelection = !!selection && selection.trim().length > 0 && !/^(<p>(\s|&nbsp;)*<\/p>|<br\s*\/?>|\s)*$/i.test(selection);
-  const hasPdf = !!pdfs && pdfs.length > 0;
+  // 规格手册固定显示（无 PDF 时内容区显示空状态提示）
+  const hasPdf = true;
   if (hasSelection) baseTabs.push({ key: "selection", title: labels.selection ?? "产品选型" });
   if (hasPdf) baseTabs.push({ key: "pdf", title: labels.manual ?? "产品规格手册" });
   const tabs = [...baseTabs, ...(customTabs ?? []).map((t, i) => ({ key: `custom-${i}`, title: t.title }))];
@@ -181,42 +183,50 @@ export default function ProductDetailTabs({
               </div>
             )}
 
-            {activeTab.key === "pdf" && pdfs && pdfs.length > 0 && (
+            {activeTab.key === "pdf" && (
               <div className="space-y-4">
-                {pdfs.length > 1 && (
-                  <div className="flex flex-wrap gap-2">
-                    {pdfs.map((p, i) => (
-                      <button
-                        key={p.id}
-                        type="button"
-                        onClick={() => setPdfIdx(i)}
-                        className={`rounded-md border px-3 py-1.5 text-sm transition-colors ${
-                          i === Math.min(pdfIdx, pdfs.length - 1)
-                            ? "border-sky-500 bg-sky-50 font-medium text-sky-700"
-                            : "border-slate-200 text-slate-500 hover:border-sky-300"
-                        }`}
-                      >
-                        {p.title}
-                      </button>
-                    ))}
+                {!pdfs || pdfs.length === 0 ? (
+                  <div className="rounded-lg border border-dashed border-slate-200 p-8 text-center text-sm text-slate-400">
+                    {labels.noManual ?? "暂无规格手册"}
                   </div>
+                ) : (
+                  <>
+                    {pdfs.length > 1 && (
+                      <div className="flex flex-wrap gap-2">
+                        {pdfs.map((p, i) => (
+                          <button
+                            key={p.id}
+                            type="button"
+                            onClick={() => setPdfIdx(i)}
+                            className={`rounded-md border px-3 py-1.5 text-sm transition-colors ${
+                              i === Math.min(pdfIdx, pdfs.length - 1)
+                                ? "border-sky-500 bg-sky-50 font-medium text-sky-700"
+                                : "border-slate-200 text-slate-500 hover:border-sky-300"
+                            }`}
+                          >
+                            {p.title}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                    <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
+                      {/* eslint-disable-next-line react/no-unknown-property */}
+                      <embed src={currentPdf.filePath} type="application/pdf" className="h-[68vh] w-full" />
+                    </div>
+                    <div className="flex justify-end">
+                      <a
+                        href={currentPdf.filePath}
+                        download
+                        className="inline-flex items-center gap-2 rounded-md bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-500"
+                      >
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                        </svg>
+                        {labels.download ?? "下载 PDF"}
+                      </a>
+                    </div>
+                  </>
                 )}
-                <div className="overflow-hidden rounded-lg border border-slate-200 bg-white">
-                  {/* eslint-disable-next-line react/no-unknown-property */}
-                  <embed src={currentPdf.filePath} type="application/pdf" className="h-[68vh] w-full" />
-                </div>
-                <div className="flex justify-end">
-                  <a
-                    href={currentPdf.filePath}
-                    download
-                    className="inline-flex items-center gap-2 rounded-md bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-500"
-                  >
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                    </svg>
-                    {labels.download ?? "下载 PDF"}
-                  </a>
-                </div>
               </div>
             )}
 
