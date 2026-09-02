@@ -51,7 +51,8 @@ export default function ProductDetailTabs({
   const tabs = [...baseTabs, ...(customTabs ?? []).map((t, i) => ({ key: `custom-${i}`, title: t.title }))];
 
   const introVisible = !!intro || (highlights && highlights.length > 0);
-  const paramsVisible = (paramGroups ?? []).length > 0;
+  // 技术参数固定显示（无参数时内容区显示空状态提示）
+  const paramsVisible = true;
   // 过滤出有内容的 tab
   const visibleTabs = tabs.filter((t) => {
     if (t.key === "intro") return introVisible;

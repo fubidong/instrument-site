@@ -207,31 +207,31 @@ export default function ProductForm({
           </div>
         </div>
 
-        {/* 中文内容 */}
+        {/* 中文内容（名称/简介始终渲染，富文本懒加载） */}
         <div className={`space-y-4 ${lang === "zh" ? "" : "hidden"}`}>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-slate-700">
+              产品名称（中文）<span className="text-red-500">*</span>
+            </label>
+            <input
+              name="name_zh"
+              defaultValue={t["zh"]?.name ?? ""}
+              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+            />
+          </div>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-slate-700">
+              简介（中文）<span className="ml-1 text-xs font-normal text-slate-400">显示在主图右侧</span>
+            </label>
+            <textarea
+              name="summary_zh"
+              defaultValue={t["zh"]?.summary ?? ""}
+              rows={2}
+              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+            />
+          </div>
           {mounted.zh && (
             <>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-slate-700">
-                  产品名称（中文）<span className="text-red-500">*</span>
-                </label>
-                <input
-                  name="name_zh"
-                  defaultValue={t["zh"]?.name ?? ""}
-                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-                />
-              </div>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-slate-700">
-                  简介（中文）<span className="ml-1 text-xs font-normal text-slate-400">显示在主图右侧</span>
-                </label>
-                <textarea
-                  name="summary_zh"
-                  defaultValue={t["zh"]?.summary ?? ""}
-                  rows={2}
-                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-                />
-              </div>
               <div>
                 <label className="mb-1 block text-sm font-medium text-slate-700">
                   产品介绍（中文）<span className="ml-1 text-xs font-normal text-slate-400">“产品介绍”选项卡内容，与简介分开</span>
@@ -248,31 +248,31 @@ export default function ProductForm({
           )}
         </div>
 
-        {/* 英文内容 */}
+        {/* 英文内容（名称/简介始终渲染，富文本懒加载） */}
         <div className={`space-y-4 ${lang === "en" ? "" : "hidden"}`}>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-slate-700">
+              Product Name (EN) <span className="text-red-500">*</span>
+            </label>
+            <input
+              name="name_en"
+              defaultValue={t["en"]?.name ?? ""}
+              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+            />
+          </div>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-slate-700">
+              Summary (EN) <span className="ml-1 text-xs font-normal text-slate-400">shown next to main image</span>
+            </label>
+            <textarea
+              name="summary_en"
+              defaultValue={t["en"]?.summary ?? ""}
+              rows={2}
+              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+            />
+          </div>
           {mounted.en && (
             <>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-slate-700">
-                  Product Name (EN) <span className="text-red-500">*</span>
-                </label>
-                <input
-                  name="name_en"
-                  defaultValue={t["en"]?.name ?? ""}
-                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-                />
-              </div>
-              <div>
-                <label className="mb-1 block text-sm font-medium text-slate-700">
-                  Summary (EN) <span className="ml-1 text-xs font-normal text-slate-400">shown next to main image</span>
-                </label>
-                <textarea
-                  name="summary_en"
-                  defaultValue={t["en"]?.summary ?? ""}
-                  rows={2}
-                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-                />
-              </div>
               <div>
                 <label className="mb-1 block text-sm font-medium text-slate-700">
                   Description (EN) <span className="ml-1 text-xs font-normal text-slate-400">Overview tab content, separate from summary</span>

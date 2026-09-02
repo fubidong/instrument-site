@@ -112,7 +112,10 @@ export async function saveProductAction(
 
   if (!productLineId) return { error: "请选择产品系列" };
   if (!model) return { error: "型号不能为空" };
-  if (!nameZh || !nameEn) return { error: "中英文名称不能为空" };
+  if (!nameZh && !nameEn) return { error: "产品名称不能为空（中文或英文至少填一个）" };
+  // 名称兜底：只填一种语言时自动复用，避免缺某一语言名称导致保存失败
+  const nameZhFinal = nameZh || nameEn;
+  const nameEnFinal = nameEn || nameZh;
 
   const line = await db.productLine.findUnique({
     where: { id: productLineId },
@@ -155,13 +158,13 @@ export async function saveProductAction(
           create: {
             productId: id,
             locale: "zh",
-            name: nameZh,
+            name: nameZhFinal,
             summary: summaryZh || null,
             description: descriptionZh || null,
             selection: selectionZh || null,
           },
           update: {
-            name: nameZh,
+            name: nameZhFinal,
             summary: summaryZh || null,
             description: descriptionZh || null,
             selection: selectionZh || null,
@@ -172,13 +175,13 @@ export async function saveProductAction(
           create: {
             productId: id,
             locale: "en",
-            name: nameEn,
+            name: nameEnFinal,
             summary: summaryEn || null,
             description: descriptionEn || null,
             selection: selectionEn || null,
           },
           update: {
-            name: nameEn,
+            name: nameEnFinal,
             summary: summaryEn || null,
             description: descriptionEn || null,
             selection: selectionEn || null,
@@ -209,14 +212,14 @@ export async function saveProductAction(
             create: [
               {
                 locale: "zh",
-                name: nameZh,
+                name: nameZhFinal,
                 summary: summaryZh || null,
                 description: descriptionZh || null,
                 selection: selectionZh || null,
               },
               {
                 locale: "en",
-                name: nameEn,
+                name: nameEnFinal,
                 summary: summaryEn || null,
                 description: descriptionEn || null,
                 selection: selectionEn || null,
