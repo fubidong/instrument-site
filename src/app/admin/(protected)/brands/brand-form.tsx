@@ -26,6 +26,13 @@ export default function BrandForm({
 }) {
   const [state, formAction, pending] = useActionState(saveBrandAction, initialState);
   const [logo, setLogo] = useState(brand?.logo ?? "");
+  const [lang, setLang] = useState<"zh" | "en">("zh");
+  const [mounted, setMounted] = useState<{ zh: boolean; en: boolean }>({ zh: true, en: false });
+
+  function switchLang(l: "zh" | "en") {
+    setMounted((m) => ({ ...m, [l]: true }));
+    setLang(l);
+  }
 
   // 创建成功后跳转
   useEffect(() => {
@@ -115,77 +122,102 @@ export default function BrandForm({
         </div>
       </section>
 
-      {/* 中文 */}
+      {/* 多语言内容（TAB） */}
       <section className="rounded-lg border border-slate-200 bg-white p-5">
-        <h2 className="mb-4 text-sm font-semibold text-slate-700">中文内容</h2>
-        <div className="space-y-4">
-          <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">
-              品牌名称（中文）<span className="text-red-500">*</span>
-            </label>
-            <input
-              name="name_zh"
-              defaultValue={t["zh"]?.name ?? ""}
-              required
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-              placeholder="如 鼎阳"
-            />
-          </div>
-          <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">简介（中文）</label>
-            <textarea
-              name="desc_zh"
-              defaultValue={t["zh"]?.description ?? ""}
-              rows={2}
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-            />
-          </div>
-          <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">详细介绍（中文）</label>
-            <textarea
-              name="fullDesc_zh"
-              defaultValue={t["zh"]?.fullDescription ?? ""}
-              rows={4}
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-            />
+        <div className="mb-4 flex items-center justify-between">
+          <h2 className="text-sm font-semibold text-slate-700">多语言内容</h2>
+          <div className="flex rounded-md border border-slate-200 p-0.5">
+            <button
+              type="button"
+              onClick={() => switchLang("zh")}
+              className={`rounded px-3 py-1 text-sm font-medium ${
+                lang === "zh" ? "bg-sky-600 text-white" : "text-slate-500 hover:text-slate-700"
+              }`}
+            >
+              中文
+            </button>
+            <button
+              type="button"
+              onClick={() => switchLang("en")}
+              className={`rounded px-3 py-1 text-sm font-medium ${
+                lang === "en" ? "bg-sky-600 text-white" : "text-slate-500 hover:text-slate-700"
+              }`}
+            >
+              English
+            </button>
           </div>
         </div>
-      </section>
 
-      {/* 英文 */}
-      <section className="rounded-lg border border-slate-200 bg-white p-5">
-        <h2 className="mb-4 text-sm font-semibold text-slate-700">English Content</h2>
-        <div className="space-y-4">
-          <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">
-              Brand Name (EN) <span className="text-red-500">*</span>
-            </label>
-            <input
-              name="name_en"
-              defaultValue={t["en"]?.name ?? ""}
-              required
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-              placeholder="e.g. SIGLENT"
-            />
-          </div>
-          <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">Description (EN)</label>
-            <textarea
-              name="desc_en"
-              defaultValue={t["en"]?.description ?? ""}
-              rows={2}
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-            />
-          </div>
-          <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">Full Description (EN)</label>
-            <textarea
-              name="fullDesc_en"
-              defaultValue={t["en"]?.fullDescription ?? ""}
-              rows={4}
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-            />
-          </div>
+        <div className={`space-y-4 ${lang === "zh" ? "" : "hidden"}`}>
+          {mounted.zh && (
+            <>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">
+                  品牌名称（中文）<span className="text-red-500">*</span>
+                </label>
+                <input
+                  name="name_zh"
+                  defaultValue={t["zh"]?.name ?? ""}
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                  placeholder="如 鼎阳"
+                />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">简介（中文）</label>
+                <textarea
+                  name="desc_zh"
+                  defaultValue={t["zh"]?.description ?? ""}
+                  rows={2}
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">详细介绍（中文）</label>
+                <textarea
+                  name="fullDesc_zh"
+                  defaultValue={t["zh"]?.fullDescription ?? ""}
+                  rows={4}
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                />
+              </div>
+            </>
+          )}
+        </div>
+
+        <div className={`space-y-4 ${lang === "en" ? "" : "hidden"}`}>
+          {mounted.en && (
+            <>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">
+                  Brand Name (EN) <span className="text-red-500">*</span>
+                </label>
+                <input
+                  name="name_en"
+                  defaultValue={t["en"]?.name ?? ""}
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                  placeholder="e.g. SIGLENT"
+                />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">Description (EN)</label>
+                <textarea
+                  name="desc_en"
+                  defaultValue={t["en"]?.description ?? ""}
+                  rows={2}
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">Full Description (EN)</label>
+                <textarea
+                  name="fullDesc_en"
+                  defaultValue={t["en"]?.fullDescription ?? ""}
+                  rows={4}
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                />
+              </div>
+            </>
+          )}
         </div>
       </section>
 

@@ -23,6 +23,13 @@ export default function ProductLineForm({
   categories: { id: string; zhName: string; enName: string }[];
 }) {
   const [state, formAction, pending] = useActionState(saveProductLineAction, initialState);
+  const [lang, setLang] = useState<"zh" | "en">("zh");
+  const [mounted, setMounted] = useState<{ zh: boolean; en: boolean }>({ zh: true, en: false });
+
+  function switchLang(l: "zh" | "en") {
+    setMounted((m) => ({ ...m, [l]: true }));
+    setLang(l);
+  }
 
   useEffect(() => {
     if (state.redirect) window.location.href = state.redirect;
@@ -123,57 +130,84 @@ export default function ProductLineForm({
         </div>
       </section>
 
+      {/* 多语言内容（TAB） */}
       <section className="rounded-lg border border-slate-200 bg-white p-5">
-        <h2 className="mb-4 text-sm font-semibold text-slate-700">中文内容</h2>
-        <div className="space-y-4">
-          <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">
-              系列名称（中文）<span className="text-red-500">*</span>
-            </label>
-            <input
-              name="name_zh"
-              defaultValue={t["zh"]?.name ?? ""}
-              required
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-              placeholder="如 SDS1000X 系列"
-            />
-          </div>
-          <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">描述（中文）</label>
-            <textarea
-              name="desc_zh"
-              defaultValue={t["zh"]?.description ?? ""}
-              rows={2}
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-            />
+        <div className="mb-4 flex items-center justify-between">
+          <h2 className="text-sm font-semibold text-slate-700">多语言内容</h2>
+          <div className="flex rounded-md border border-slate-200 p-0.5">
+            <button
+              type="button"
+              onClick={() => switchLang("zh")}
+              className={`rounded px-3 py-1 text-sm font-medium ${
+                lang === "zh" ? "bg-sky-600 text-white" : "text-slate-500 hover:text-slate-700"
+              }`}
+            >
+              中文
+            </button>
+            <button
+              type="button"
+              onClick={() => switchLang("en")}
+              className={`rounded px-3 py-1 text-sm font-medium ${
+                lang === "en" ? "bg-sky-600 text-white" : "text-slate-500 hover:text-slate-700"
+              }`}
+            >
+              English
+            </button>
           </div>
         </div>
-      </section>
 
-      <section className="rounded-lg border border-slate-200 bg-white p-5">
-        <h2 className="mb-4 text-sm font-semibold text-slate-700">English Content</h2>
-        <div className="space-y-4">
-          <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">
-              Series Name (EN) <span className="text-red-500">*</span>
-            </label>
-            <input
-              name="name_en"
-              defaultValue={t["en"]?.name ?? ""}
-              required
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-              placeholder="e.g. SDS1000X Series"
-            />
-          </div>
-          <div>
-            <label className="mb-1 block text-sm font-medium text-slate-700">Description (EN)</label>
-            <textarea
-              name="desc_en"
-              defaultValue={t["en"]?.description ?? ""}
-              rows={2}
-              className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
-            />
-          </div>
+        <div className={`space-y-4 ${lang === "zh" ? "" : "hidden"}`}>
+          {mounted.zh && (
+            <>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">
+                  系列名称（中文）<span className="text-red-500">*</span>
+                </label>
+                <input
+                  name="name_zh"
+                  defaultValue={t["zh"]?.name ?? ""}
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                  placeholder="如 SDS1000X 系列"
+                />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">描述（中文）</label>
+                <textarea
+                  name="desc_zh"
+                  defaultValue={t["zh"]?.description ?? ""}
+                  rows={2}
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                />
+              </div>
+            </>
+          )}
+        </div>
+
+        <div className={`space-y-4 ${lang === "en" ? "" : "hidden"}`}>
+          {mounted.en && (
+            <>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">
+                  Series Name (EN) <span className="text-red-500">*</span>
+                </label>
+                <input
+                  name="name_en"
+                  defaultValue={t["en"]?.name ?? ""}
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                  placeholder="e.g. SDS1000X Series"
+                />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">Description (EN)</label>
+                <textarea
+                  name="desc_en"
+                  defaultValue={t["en"]?.description ?? ""}
+                  rows={2}
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                />
+              </div>
+            </>
+          )}
         </div>
       </section>
 
