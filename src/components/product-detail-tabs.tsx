@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 export type ParamGroupItem = { name: string; zhName?: string; value: string; unit?: string };
@@ -44,6 +44,7 @@ export default function ProductDetailTabs({
 }) {
   const [active, setActive] = useState(0);
   const [pdfIdx, setPdfIdx] = useState(0);
+  const selRef = useRef<HTMLDivElement>(null);
 
   const baseTabs: { key: string; title: string }[] = [
     { key: "intro", title: labels.intro },
@@ -74,6 +75,36 @@ export default function ProductDetailTabs({
   const current = Math.min(active, visibleTabs.length - 1);
   const activeTab = visibleTabs[current];
   const currentPdf = pdfs![Math.min(pdfIdx, pdfs!.length - 1)];
+
+  // 选型表对齐：表头全部居中；型号列居中；其余列按内容长度自动判断（短参数居中、长文本居左）
+  useEffect(() => {
+    if (activeTab?.key !== "selection" || !selRef.current) return;
+    const tables = selRef.current.querySelectorAll(".product-selection-table table");
+    tables.forEach((tbl) => {
+      const rows = Array.from(tbl.querySelectorAll("tbody tr")) as HTMLTableRowElement[];
+      if (rows.length === 0) return;
+      const colCount = rows[0].cells.length;
+      // 表头全部居中
+      tbl.querySelectorAll("th").forEach((th) => {
+        (th as HTMLElement).style.textAlign = "center";
+      });
+      // 型号列（第 0 列）居中
+      rows.forEach((row) => {
+        if (row.cells[0]) row.cells[0].style.textAlign = "center";
+      });
+      // 其余列：按该列最长文本判断（>18 字符视为长文本 → 居左，否则居中）
+      for (let ci = 1; ci < colCount; ci++) {
+        let maxLen = 0;
+        rows.forEach((row) => {
+          if (row.cells[ci]) maxLen = Math.max(maxLen, (row.cells[ci].textContent || "").trim().length);
+        });
+        const align = maxLen > 18 ? "left" : "center";
+        rows.forEach((row) => {
+          if (row.cells[ci]) row.cells[ci].style.textAlign = align;
+        });
+      }
+    });
+  }, [activeTab?.key, selection]);
 
   return (
     <div>
@@ -158,7 +189,7 @@ export default function ProductDetailTabs({
             )}
 
             {activeTab.key === "selection" && (
-              <div className="rich-text">
+              <div className="rich-text" ref={selRef}>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: /<[a-z][\s\S]*>/i.test(selection ?? "")
