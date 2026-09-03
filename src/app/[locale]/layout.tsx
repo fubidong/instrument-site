@@ -7,6 +7,7 @@ import SiteLink from "next/link";
 import { getSiteSettings, getSiteCategories, getSiteBrands } from "@/lib/site";
 import { getNavTree } from "@/lib/nav";
 import SiteNav from "@/components/site-nav";
+import SiteSearch from "@/components/site-search";
 import LocaleSwitcher from "./locale-switcher";
 
 export function generateStaticParams() {
@@ -81,6 +82,10 @@ export default async function SiteLayout({
           <nav className="hidden items-center gap-1 md:flex">
             <SiteNav nodes={navTree} hrefFor={navHref} isEn={isEn} />
           </nav>
+
+          <div className="hidden md:block">
+            <SiteSearch locale={locale} isEn={isEn} />
+          </div>
 
           <Link
             href="/contact"

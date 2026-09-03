@@ -6,6 +6,7 @@ import { getSiteSettings } from "@/lib/site";
 import { getBrand, getBrandCategories } from "@/lib/brand";
 import { getNavTree } from "@/lib/nav";
 import SiteNav from "@/components/site-nav";
+import SiteSearch from "@/components/site-search";
 import { getBrandLocale, brandPath } from "@/lib/brand-locale";
 import BrandLocaleSwitcher from "./brand-locale-switcher";
 
@@ -78,6 +79,10 @@ export default async function BrandLayout({
             <nav className="hidden items-center gap-1 md:flex">
               <SiteNav nodes={navTree} hrefFor={navHref} isEn={isEn} />
             </nav>
+
+            <div className="hidden md:block">
+              <SiteSearch locale={locale} isEn={isEn} />
+            </div>
 
             <Link
               href={`${base}/contact`}
