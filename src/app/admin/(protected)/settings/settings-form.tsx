@@ -12,6 +12,7 @@ export default function SettingsForm({
     siteNameZh: string;
     siteNameEn: string;
     phone: string;
+    phoneEnabled: boolean;
     email: string;
     address: string;
     introZh: string;
@@ -70,6 +71,17 @@ export default function SettingsForm({
               className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
               placeholder="0755-8888 8888"
             />
+          </div>
+          <div className="flex items-end pb-2">
+            <label className="flex items-center gap-2 text-sm text-slate-700">
+              <input
+                type="checkbox"
+                name="contact_phone_enabled"
+                defaultChecked={initial.phoneEnabled}
+                className="h-4 w-4 rounded border-slate-300"
+              />
+              产品详情页右侧显示"咨询热线"
+            </label>
           </div>
           <div>
             <label className="mb-1 block text-sm font-medium text-slate-700">联系邮箱</label>

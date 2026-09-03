@@ -29,6 +29,7 @@ export async function saveSettingsAction(
   const siteNameZh = (formData.get("site_name_zh") as string)?.trim() || "";
   const siteNameEn = (formData.get("site_name_en") as string)?.trim() || "";
   const phone = (formData.get("contact_phone") as string)?.trim() || "";
+  const phoneEnabled = formData.get("contact_phone_enabled") === "on" ? "1" : "0";
   const email = (formData.get("contact_email") as string)?.trim() || "";
   const address = (formData.get("contact_address") as string)?.trim() || "";
   const introZh = (formData.get("company_intro_zh") as string)?.trim() || "";
@@ -40,6 +41,7 @@ export async function saveSettingsAction(
     await upsertSetting("site_name", siteNameZh, "zh");
     await upsertSetting("site_name", siteNameEn, "en");
     await upsertSetting("contact_phone", phone, null);
+    await upsertSetting("contact_phone_enabled", phoneEnabled, null);
     await upsertSetting("contact_email", email, null);
     await upsertSetting("contact_address", address, null);
     await upsertSetting("company_intro", introZh, "zh");

@@ -126,3 +126,23 @@ export async function searchMediaImagesAction(
   });
   return { items };
 }
+
+/**
+ * 搜索素材库文档（PDF 等，供"产品规格书"等选择器使用）
+ */
+export async function searchMediaDocsAction(
+  query: string
+): Promise<{ items: { id: string; path: string; filename: string; mimeType: string }[] }> {
+  await requireAdmin();
+  const q = query?.trim();
+  const items = await db.mediaAsset.findMany({
+    where: {
+      kind: "doc",
+      ...(q ? { filename: { contains: q, mode: "insensitive" } } : {}),
+    },
+    orderBy: { createdAt: "desc" },
+    take: 100,
+    select: { id: true, path: true, filename: true, mimeType: true },
+  });
+  return { items };
+}

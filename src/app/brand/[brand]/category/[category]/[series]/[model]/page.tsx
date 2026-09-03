@@ -213,6 +213,7 @@ export default async function BrandModelPage({
           summary={pt?.summary ?? null}
           highlights={highlights}
           phone={settings.phone || undefined}
+          phoneEnabled={settings.phoneEnabled}
           productId={product.id}
           productModel={product.model}
           productName={pt?.name ?? product.model}

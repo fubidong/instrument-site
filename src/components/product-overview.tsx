@@ -31,6 +31,7 @@ export default function ProductOverview({
   summary,
   highlights = [],
   phone,
+  phoneEnabled = true,
   productId,
   productModel,
   productName,
@@ -45,6 +46,7 @@ export default function ProductOverview({
   summary?: string | null;
   highlights?: HighlightItem[];
   phone?: string;
+  phoneEnabled?: boolean;
   productId: string;
   productModel: string;
   productName: string;
@@ -114,8 +116,8 @@ export default function ProductOverview({
           </div>
         )}
 
-        {/* 联系方式：电话显著展示 */}
-        {phone && (
+        {/* 联系方式：电话显著展示（后台可控制开关） */}
+        {phoneEnabled && phone && (
           <div className="mt-5 flex items-center gap-3 rounded-lg border border-sky-100 bg-sky-50/70 px-4 py-3">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5 shrink-0 text-sky-600">
               <path

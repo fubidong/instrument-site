@@ -12,6 +12,7 @@ export default async function SettingsPage() {
     siteNameZh: val(rows, "site_name", "zh"),
     siteNameEn: val(rows, "site_name", "en"),
     phone: val(rows, "contact_phone", null),
+    phoneEnabled: val(rows, "contact_phone_enabled", null) !== "0",
     email: val(rows, "contact_email", null),
     address: val(rows, "contact_address", null),
     introZh: val(rows, "company_intro", "zh"),

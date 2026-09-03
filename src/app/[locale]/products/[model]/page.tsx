@@ -255,6 +255,7 @@ export default async function ProductDetailPage({
           summary={pt[locale]?.summary ?? pt["zh"]?.summary ?? null}
           highlights={highlights}
           phone={settings.phone || undefined}
+          phoneEnabled={settings.phoneEnabled}
           productId={product.id}
           productModel={product.model}
           productName={pt[locale]?.name ?? pt["zh"]?.name ?? product.model}

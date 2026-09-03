@@ -22,6 +22,7 @@ export const getSiteSettings = cache(async (locale: string = "zh") => {
     siteName: map["site_name"] || map[`site_name:${locale}`] || map["site_name:zh"] || "仪器仪表站",
     siteNameEn: map["site_name:en"] || "Test & Measurement",
     phone: map["contact_phone"] || "",
+    phoneEnabled: map["contact_phone_enabled"] !== "0", // 详情页右侧"咨询热线"显示开关（默认开启）
     email: map["contact_email"] || "",
     address: map["contact_address"] || "",
     companyIntro: map[`company_intro:${locale}`] || map["company_intro"] || map["company_intro:zh"] || "",
