@@ -37,7 +37,10 @@ export default async function BrandModelPage({
   let curCatId: string | null = product.categoryId;
   while (curCatId) {
     ancestors.push(curCatId);
-    const cur = await db.category.findUnique({ where: { id: curCatId }, select: { parentId: true } });
+    const cur: { parentId: string | null } | null = await db.category.findUnique({
+      where: { id: curCatId },
+      select: { parentId: true },
+    });
     if (!cur) break;
     curCatId = cur.parentId;
   }
@@ -66,8 +69,11 @@ export default async function BrandModelPage({
     seen.add(k);
     return true;
   });
+  // 产品规格手册 PDF：优先产品级自选规格书（后台"产品规格书"），无则回退系列 datasheet
+  const productDsPdfs = (productMeta?.documents ?? []).filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
   const dsPdfs = mergedDocs.filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
-  const pdfs = (dsPdfs.length > 0 ? dsPdfs : mergedDocs.filter((d) => /\.pdf$/i.test(d.filePath)))
+  const pdfSource = productDsPdfs.length > 0 ? productDsPdfs : dsPdfs;
+  const pdfs = (pdfSource.length > 0 ? pdfSource : mergedDocs.filter((d) => /\.pdf$/i.test(d.filePath)))
     .sort((a, b) => {
       const rank = (x: any) => (/^https?:\/\//i.test(x.filePath) ? 1 : 0);
       return rank(a) - rank(b);
@@ -96,11 +102,10 @@ export default async function BrandModelPage({
       return { name: "", value: l };
     });
 
-  // 重点参数（3-4 个）：优先 isHighlight，否则取前 4 个参数值
+  // 重点参数：优先 isHighlight（完整显示），否则取前 4 个参数值
   const pvList = (product.paramValues as any[]) ?? [];
   let highlights = pvList
     .filter((pv) => pv.isHighlight === true)
-    .slice(0, 4)
     .map((pv) => {
       const name =
         pv.paramDefinition.translations.find((tr: any) => tr.locale === "zh")?.name ??
@@ -125,7 +130,7 @@ export default async function BrandModelPage({
     });
   if (highlights.length === 0) {
     highlights = pvList
-      .slice(0, 4)
+      .slice(0, 6)
       .map((pv) => {
         const name =
           pv.paramDefinition.translations.find((tr: any) => tr.locale === "zh")?.name ??

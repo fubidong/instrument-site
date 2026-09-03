@@ -67,7 +67,7 @@ export async function createNavAction(formData: FormData): Promise<NavActionResu
   try {
     await requireAdmin();
     const parsed = parseNavForm(formData);
-    if (!parsed.success) return { success: false, error: parsed.error.errors[0]?.message };
+    if (!parsed.success) return { success: false, error: parsed.error.issues[0]?.message };
     const d = parsed.data;
 
     // 父级存在性校验（存在且未软删除）
@@ -110,7 +110,7 @@ export async function updateNavAction(formData: FormData): Promise<NavActionResu
     const id = (formData.get("id") as string) || "";
     if (!id) return { success: false, error: "缺少菜单 id" };
     const parsed = parseNavForm(formData);
-    if (!parsed.success) return { success: false, error: parsed.error.errors[0]?.message };
+    if (!parsed.success) return { success: false, error: parsed.error.issues[0]?.message };
     const d = parsed.data;
 
     const exist = await db.navMenu.findUnique({ where: { id } });

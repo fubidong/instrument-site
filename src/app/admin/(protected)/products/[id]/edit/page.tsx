@@ -53,10 +53,12 @@ export default async function EditProductPage({
           translations: true,
           brand: { include: { translations: true } },
           category: { include: { translations: true } },
+          documents: { where: { isActive: true }, orderBy: { createdAt: "desc" } },
         },
       },
       paramValues: true,
       images: { orderBy: { sortOrder: "asc" } },
+      documents: { where: { isActive: true }, orderBy: { createdAt: "desc" } },
     },
   });
   if (!product) notFound();
@@ -122,6 +124,13 @@ export default async function EditProductPage({
           imagePath: img.imagePath,
           sortOrder: img.sortOrder,
         }))}
+        specs={product.documents
+          .filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath))
+          .map((d) => ({ id: d.id, title: d.title, filePath: d.filePath }))}
+        specCandidates={(product.productLine.documents ?? [])
+          .filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath))
+          .filter((d) => !product.documents.some((pd) => pd.title === d.title && pd.filePath === d.filePath))
+          .map((d) => ({ id: d.id, title: d.title, filePath: d.filePath }))}
       />
     </div>
   );

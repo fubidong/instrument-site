@@ -4,6 +4,7 @@ import { useActionState, useEffect, useState } from "react";
 import { saveProductAction, type ProductFormState } from "./actions";
 import ProductParamsForm, { type ParamGroupWithDefs } from "./product-params-form";
 import ProductGalleryManager from "./product-gallery-manager";
+import ProductSpecManager, { type SpecDoc } from "./product-spec-manager";
 import RichTextEditor from "@/components/rich-text-editor";
 
 const initialState: ProductFormState = {};
@@ -14,6 +15,8 @@ export default function ProductForm({
   paramGroups,
   paramValues,
   gallery,
+  specs = [],
+  specCandidates = [],
   initialProductLineId,
 }: {
   product: {
@@ -32,6 +35,8 @@ export default function ProductForm({
   paramGroups: ParamGroupWithDefs[];
   paramValues: Record<string, any>;
   gallery?: { id: string; imagePath: string; sortOrder: number }[];
+  specs?: SpecDoc[];
+  specCandidates?: SpecDoc[];
   initialProductLineId?: string;
 }) {
   const [state, formAction, pending] = useActionState(saveProductAction, initialState);
@@ -180,6 +185,23 @@ export default function ProductForm({
           coverImage={product.coverImage}
           images={gallery ?? []}
         />
+      )}
+
+      {product?.id && (
+        <section className="rounded-lg border border-slate-200 bg-white">
+          <div className="border-b border-slate-100 px-5 py-3">
+            <h2 className="text-sm font-semibold text-slate-700">
+              产品规格书 <span className="ml-1 text-xs font-normal text-slate-400">指定显示在"产品规格"选项卡的 PDF</span>
+            </h2>
+          </div>
+          <div className="p-5">
+            <ProductSpecManager
+              productId={product.id}
+              specs={specs}
+              candidates={specCandidates}
+            />
+          </div>
+        </section>
       )}
 
       <section className="rounded-lg border border-slate-200 bg-white p-5">

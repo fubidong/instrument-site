@@ -58,8 +58,9 @@ export default function ProductOverview({
     highlights: isEn ? "Key Specifications" : "关键参数",
   };
 
-  const showHighlights = highlights.slice(0, 4);
-  const palette = ["#0284c7", "#0d9488", "#7c3aed", "#d97706"];
+  // 关键参数完整显示（不限 4 个，由后台重要指标 isHighlight 控制）
+  const showHighlights = highlights;
+  const palette = ["#0284c7", "#0d9488", "#7c3aed", "#d97706", "#db2777", "#65a30d"];
 
   return (
     <div className="flex flex-col gap-8 lg:flex-row">
@@ -91,7 +92,7 @@ export default function ProductOverview({
         {showHighlights.length > 0 && (
           <div className="mt-5">
             <div className="mb-2 text-sm font-semibold text-slate-800">{I.highlights}</div>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
               {showHighlights.map((h, i) => (
                 <div
                   key={i}
@@ -99,9 +100,9 @@ export default function ProductOverview({
                 >
                   <div className="flex items-center gap-1.5 text-xs text-slate-400">
                     <MetricIcon color={palette[i % palette.length]} />
-                    <span className="truncate">{h.name}</span>
+                    <span className="line-clamp-1">{h.name}</span>
                   </div>
-                  <div className="mt-1.5 truncate text-lg font-bold text-slate-800">
+                  <div className="mt-1.5 text-lg font-bold leading-tight text-slate-800">
                     {h.value}
                     {h.unit && (
                       <span className="ml-0.5 text-xs font-normal text-slate-400">{h.unit}</span>
@@ -135,7 +136,7 @@ export default function ProductOverview({
           </div>
         )}
 
-        {/* 行动按钮组 */}
+        {/* 行动按钮组：获取报价(主) + 申请样机(主，紧邻) + 加入对比 + 收藏 */}
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <LeadDialog
             type="inquiry"
@@ -144,13 +145,6 @@ export default function ProductOverview({
             productModel={productModel}
             productName={productName}
           />
-          <CompareToggle
-            locale={locale}
-            productId={productId}
-            productModel={productModel}
-            className="rounded-md border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-600 transition hover:border-sky-400 hover:text-sky-600"
-          />
-          <ShareFavorites model={productModel} isEn={isEn} />
           {isSampleEnabled && (
             <LeadDialog
               type="sample"
@@ -158,8 +152,16 @@ export default function ProductOverview({
               productId={productId}
               productModel={productModel}
               productName={productName}
+              buttonClassName="rounded-md bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-sky-500"
             />
           )}
+          <CompareToggle
+            locale={locale}
+            productId={productId}
+            productModel={productModel}
+            className="rounded-md border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-600 transition hover:border-sky-400 hover:text-sky-600"
+          />
+          <ShareFavorites model={productModel} isEn={isEn} />
         </div>
       </div>
     </div>

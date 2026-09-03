@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { db } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth";
+import { resolveParamCategoryId } from "@/lib/params";
 
 export type ProductFormState = {
   error?: string;
@@ -126,9 +127,10 @@ export async function saveProductAction(
   const categoryId = line.categoryId;
 
   try {
-    // 收集参数值
+    // 收集参数值（模板类别沿父级向上解析，与编辑页一致，避免查空导致参数被清空）
+    const paramCatId = await resolveParamCategoryId(line.categoryId);
     const defs = await db.paramDefinition.findMany({
-      where: { categoryId: line.categoryId },
+      where: { categoryId: paramCatId },
     });
     const paramValues: ParamValueInput[] = [];
     for (const def of defs) {
@@ -437,4 +439,80 @@ export async function setCoverImageAction(formData: FormData): Promise<GalleryAc
   await db.product.update({ where: { id: productId }, data: { coverImage: imagePath } });
   revalidatePath(`/admin/products/${productId}/edit`);
   return { success: "已设为主图" };
+}
+
+// ==================== 产品规格书管理 ====================
+
+export type SpecActionState = { error?: string; success?: string };
+
+/** 添加规格书到产品：可传 docId（从系列复制）或 title+filePath（手动） */
+export async function addProductSpecAction(formData: FormData): Promise<SpecActionState> {
+  await requireAdmin();
+  const productId = (formData.get("productId") as string) || "";
+  if (!productId) return { error: "参数错误" };
+
+  const product = await db.product.findUnique({ where: { id: productId } });
+  if (!product) return { error: "产品不存在" };
+
+  const docIds = formData.getAll("docId").map(String).filter(Boolean);
+  if (docIds.length > 0) {
+    const docs = await db.document.findMany({
+      where: { id: { in: docIds }, docType: "datasheet" },
+    });
+    if (docs.length === 0) return { error: "未找到对应规格手册" };
+    for (const d of docs) {
+      const exists = await db.document.findFirst({
+        where: { productId, title: d.title, filePath: d.filePath, docType: "datasheet" },
+      });
+      if (exists) continue;
+      await db.document.create({
+        data: {
+          title: d.title,
+          docType: "datasheet",
+          filePath: d.filePath,
+          productId,
+          brandId: product.brandId,
+          productLineId: product.productLineId,
+        },
+      });
+    }
+    revalidatePath(`/admin/products/${productId}/edit`);
+    return { success: `已添加 ${docs.length} 个规格书` };
+  }
+
+  const title = (formData.get("title") as string)?.trim() || "";
+  const filePath = (formData.get("filePath") as string)?.trim() || "";
+  if (!title || !filePath) return { error: "标题和 PDF 路径不能为空" };
+
+  const exists = await db.document.findFirst({
+    where: { productId, title, filePath, docType: "datasheet" },
+  });
+  if (exists) return { error: "该规格书已存在" };
+
+  await db.document.create({
+    data: {
+      title,
+      docType: "datasheet",
+      filePath,
+      productId,
+      brandId: product.brandId,
+      productLineId: product.productLineId,
+    },
+  });
+  revalidatePath(`/admin/products/${productId}/edit`);
+  return { success: "已添加规格书" };
+}
+
+/** 移除产品规格书（仅移除该产品级关联记录） */
+export async function removeProductSpecAction(formData: FormData): Promise<SpecActionState> {
+  await requireAdmin();
+  const id = (formData.get("id") as string) || "";
+  if (!id) return { error: "参数错误" };
+  const doc = await db.document.findUnique({ where: { id } });
+  if (!doc) return { error: "规格书不存在" };
+  if (doc.productId && doc.docType === "datasheet") {
+    await db.document.delete({ where: { id } });
+  }
+  revalidatePath(`/admin/products/${doc.productId}/edit`);
+  return { success: "已移除" };
 }

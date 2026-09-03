@@ -116,9 +116,9 @@ export default function ProductParamsForm({
                 <span className="text-xs text-slate-400">{isOpen ? "收起 ▲" : "展开 ▼"}</span>
               </button>
 
-              {isOpen && (
-                <div className="divide-y divide-slate-100 border-t border-slate-100">
-                  {defs.map((d) => {
+              {/* 折叠时参数 input 保留在 DOM（hidden 隐藏）以保证保存时全部提交 */}
+              <div className={`divide-y divide-slate-100 border-t border-slate-100 ${isOpen ? "" : "hidden"}`}>
+                {defs.map((d) => {
                     const v = values[d.id];
                     const name = nameOf(d, "zh");
                     const enName = nameOf(d, "en");
@@ -234,7 +234,6 @@ export default function ProductParamsForm({
                     );
                   })}
                 </div>
-              )}
             </section>
           );
         })}

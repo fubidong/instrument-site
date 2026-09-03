@@ -13,7 +13,7 @@ export async function resolveParamCategoryId(categoryId: string): Promise<string
     visited.add(cur);
     const count = await db.paramDefinition.count({ where: { categoryId: cur } });
     if (count > 0) return cur;
-    const cat = await db.category.findUnique({
+    const cat: { parentId: string | null } | null = await db.category.findUnique({
       where: { id: cur },
       select: { parentId: true },
     });

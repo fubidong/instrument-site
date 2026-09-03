@@ -150,7 +150,7 @@ export default function NavigationManager({
           {node.permission || "-"}
         </td>
         <td className="whitespace-nowrap px-4 py-2">
-          <form action={toggleNavVisibleAction}>
+          <form action={async (fd) => { await toggleNavVisibleAction(fd); }}>
             <input type="hidden" name="id" value={node.id} />
             <input type="hidden" name="isVisible" value={String(!node.isVisible)} />
             <button

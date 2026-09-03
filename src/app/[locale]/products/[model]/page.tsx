@@ -76,7 +76,10 @@ export default async function ProductDetailPage({
   let curCatId: string | null = product.categoryId;
   while (curCatId) {
     ancestors.push(curCatId);
-    const cur = await db.category.findUnique({ where: { id: curCatId }, select: { parentId: true } });
+    const cur: { parentId: string | null } | null = await db.category.findUnique({
+      where: { id: curCatId },
+      select: { parentId: true },
+    });
     if (!cur) break;
     curCatId = cur.parentId;
   }
@@ -102,9 +105,11 @@ export default async function ProductDetailPage({
     seen.add(k);
     return true;
   });
-  // 产品规格手册 PDF 文档（仅系列规格手册 datasheet，无则回退全部 pdf）
+  // 产品规格手册 PDF：优先产品级自选规格书（后台"产品规格书"），无则回退系列 datasheet
+  const productDsPdfs = product.documents.filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
   const dsPdfs = mergedDocs.filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
-  const pdfs = (dsPdfs.length > 0 ? dsPdfs : mergedDocs.filter((d) => /\.pdf$/i.test(d.filePath)))
+  const pdfSource = productDsPdfs.length > 0 ? productDsPdfs : dsPdfs;
+  const pdfs = (pdfSource.length > 0 ? pdfSource : mergedDocs.filter((d) => /\.pdf$/i.test(d.filePath)))
     .sort((a, b) => {
       const rank = (x: any) => (/^https?:\/\//i.test(x.filePath) ? 1 : 0);
       return rank(a) - rank(b);
@@ -159,16 +164,15 @@ export default async function ProductDetailPage({
     });
   }
 
-  // 重点参数（3-4 个）：优先取核心卖点(isHighlight)，否则取每组第一个
+  // 重点参数：优先取核心卖点(isHighlight，完整显示)，否则取所有有值参数前 6 个
   let highlights = grouped
     .flatMap((g) => g.items)
-    .filter((it) => it.isHighlight)
-    .slice(0, 4);
+    .filter((it) => it.isHighlight);
   if (highlights.length === 0) {
     highlights = grouped
-      .map((g) => g.items[0])
-      .filter(Boolean)
-      .slice(0, 4);
+      .flatMap((g) => g.items)
+      .filter((it) => it.value && it.value !== "-")
+      .slice(0, 6);
   }
 
   // 选项卡参数分组
@@ -281,7 +285,7 @@ export default async function ProductDetailPage({
         />
       </div>
 
-      <CompareBar locale={locale} productId={product.id} productModel={product.model} />
+      <CompareBar locale={locale} />
     </div>
   );
 }
