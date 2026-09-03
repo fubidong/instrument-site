@@ -7,7 +7,7 @@ export type HighlightItem = { name: string; value: string; unit?: string };
 /** 测量类通用图标（关键参数卡片用） */
 function MetricIcon({ color }: { color: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5" style={{ color }}>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-4 w-4 shrink-0" style={{ color }}>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -94,19 +94,19 @@ export default function ProductOverview({
         {showHighlights.length > 0 && (
           <div className="mt-5">
             <div className="mb-2 text-sm font-semibold text-slate-800">{I.highlights}</div>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-2.5 md:grid-cols-3">
               {showHighlights.map((h, i) => (
                 <div
                   key={i}
-                  className="rounded-lg border border-slate-200 bg-white px-3 py-3 transition hover:border-sky-300 hover:shadow-sm"
+                  className="rounded-lg border border-slate-200 bg-white px-2 py-2.5 text-center transition hover:border-sky-300 hover:shadow-sm"
                 >
-                  <div className="flex items-start gap-1.5 text-xs leading-snug text-slate-400">
+                  <div className="flex items-center justify-center gap-1 text-[11px] leading-tight text-slate-400">
                     <MetricIcon color={palette[i % palette.length]} />
-                    <span className="min-w-0">{h.name}</span>
+                    <span className="whitespace-nowrap">{h.name}</span>
                   </div>
-                  <div className="mt-1.5 flex items-baseline gap-1">
-                    <span className="text-lg font-bold leading-tight text-slate-800">{h.value}</span>
-                    {h.unit && <span className="shrink-0 text-xs font-normal text-slate-400">{h.unit}</span>}
+                  <div className="mt-1 whitespace-nowrap text-base font-bold leading-tight text-slate-800">
+                    {h.value}
+                    {h.unit && <span className="ml-0.5 text-[11px] font-normal text-slate-400">{h.unit}</span>}
                   </div>
                 </div>
               ))}
