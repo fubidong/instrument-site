@@ -133,13 +133,13 @@ export default function ProductDetailTabs({
                       <tbody>
                         {g.items.map((it, idx) => (
                           <tr key={idx} className={idx % 2 === 0 ? "bg-slate-50/50" : "bg-white"}>
-                            <td className="min-w-40 whitespace-nowrap px-4 py-2.5 text-slate-500">
+                            <td className="w-1/3 whitespace-nowrap px-3 py-1.5 text-slate-500">
                               {it.name}
                               {it.zhName && it.zhName !== it.name && (
                                 <span className="ml-1 text-xs text-slate-300">{it.zhName}</span>
                               )}
                             </td>
-                            <td className="px-4 py-2.5 font-medium text-slate-800">
+                            <td className="px-3 py-1.5 font-medium text-slate-800">
                               {it.value}
                               {it.unit && <span className="ml-1 text-xs text-slate-400">{it.unit}</span>}
                             </td>

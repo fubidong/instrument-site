@@ -232,6 +232,50 @@
   font-weight: 600;
 }
 
+/* ===== 产品选型表（product-selection-table）：自适应 + 防型号换行 ===== */
+.product-selection-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0.75rem 0;
+}
+.product-selection-table table {
+  width: 100%;
+  min-width: 640px; /* 窄屏横向滚动，避免列被压扁 */
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+.product-selection-table th,
+.product-selection-table td {
+  border: 1px solid rgb(226 232 240);
+  padding: 0.5rem 0.625rem;
+  text-align: left;
+  vertical-align: middle;
+}
+.product-selection-table thead th {
+  background: rgb(248 250 252);
+  font-weight: 600;
+  white-space: nowrap;
+}
+/* 型号列：不换行 + 等宽加粗，列宽按内容自适应 */
+.product-selection-table th:first-child,
+.product-selection-table td:first-child {
+  white-space: nowrap;
+  font-weight: 600;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  min-width: 130px;
+}
+/* 其他列：长文本（精度/范围等）自动折行，避免撑爆 */
+.product-selection-table th:not(:first-child),
+.product-selection-table td:not(:first-child) {
+  min-width: 96px;
+  word-break: break-word;
+  line-height: 1.45;
+}
+.product-selection-table tbody tr:hover {
+  background: rgb(248 250 252);
+}
+
+
 /* ===== AIEditor 富文本编辑区：撑满高度（后台产品介绍编辑用） ===== */
 .aie-ht {
   min-height: 420px;
