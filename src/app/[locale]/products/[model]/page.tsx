@@ -120,7 +120,7 @@ export default async function ProductDetailPage({
   const normKey = (s: string) => s.toLowerCase().replace(/[\s\-_/+]/g, "");
   const downloads = mergedDocs
     .filter((d) => {
-      if (!["datasheet", "programming_manual", "user_manual"].includes(d.docType)) return false;
+      if (!["datasheet", "programming_manual", "user_manual", "application_note"].includes(d.docType)) return false;
       if (d.docType === "user_manual") return normKey(d.title).includes(normKey(lineCode));
       return true;
     })

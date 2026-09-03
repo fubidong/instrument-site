@@ -83,7 +83,7 @@ export default async function BrandModelPage({
   const normKey2 = (s: string) => s.toLowerCase().replace(/[\s\-_/+]/g, "");
   const downloads = mergedDocs
     .filter((d) => {
-      if (!["datasheet", "programming_manual", "user_manual"].includes(d.docType)) return false;
+      if (!["datasheet", "programming_manual", "user_manual", "application_note"].includes(d.docType)) return false;
       if (d.docType === "user_manual") return normKey2(d.title).includes(normKey2(lineCode2));
       return true;
     })

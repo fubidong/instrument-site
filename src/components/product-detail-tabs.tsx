@@ -255,6 +255,7 @@ export default function ProductDetailTabs({
                     d.docType === "datasheet" ? "数据手册"
                     : d.docType === "programming_manual" ? "编程手册"
                     : d.docType === "user_manual" ? "用户手册"
+                    : d.docType === "application_note" ? "应用笔记"
                     : "资料";
                   return (
                     <div
