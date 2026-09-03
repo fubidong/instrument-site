@@ -14,6 +14,11 @@ scripts/data/store-products.json
 scripts/data/store-matched.json
 scripts/data/siglent-raw.json
 
+# 临时采集脚本（不入库）
+/_*.ts
+/_*.cjs
+/_*.js
+
 # 上传的媒体（图片体积大，不入库；从线上可恢复）
 public/uploads/
 
