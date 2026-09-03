@@ -100,15 +100,13 @@ export default function ProductOverview({
                   key={i}
                   className="rounded-lg border border-slate-200 bg-white px-3 py-3 transition hover:border-sky-300 hover:shadow-sm"
                 >
-                  <div className="flex items-center gap-1.5 text-xs text-slate-400">
+                  <div className="flex items-start gap-1.5 text-xs leading-snug text-slate-400">
                     <MetricIcon color={palette[i % palette.length]} />
-                    <span className="line-clamp-1">{h.name}</span>
+                    <span className="min-w-0">{h.name}</span>
                   </div>
-                  <div className="mt-1.5 text-lg font-bold leading-tight text-slate-800">
-                    {h.value}
-                    {h.unit && (
-                      <span className="ml-0.5 text-xs font-normal text-slate-400">{h.unit}</span>
-                    )}
+                  <div className="mt-1.5 flex items-baseline gap-1">
+                    <span className="text-lg font-bold leading-tight text-slate-800">{h.value}</span>
+                    {h.unit && <span className="shrink-0 text-xs font-normal text-slate-400">{h.unit}</span>}
                   </div>
                 </div>
               ))}
