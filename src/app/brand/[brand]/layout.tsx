@@ -2,11 +2,12 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getSiteSettings } from "@/lib/site";
+import { getSiteSettings, getSiteBrands } from "@/lib/site";
 import { getBrand, getBrandCategories } from "@/lib/brand";
 import { getNavTree } from "@/lib/nav";
 import SiteNav from "@/components/site-nav";
 import SiteSearch from "@/components/site-search";
+import BrandSiteSwitcher from "@/components/brand-site-switcher";
 import { getBrandLocale, brandPath } from "@/lib/brand-locale";
 import BrandLocaleSwitcher from "./brand-locale-switcher";
 
@@ -35,6 +36,17 @@ export default async function BrandLayout({
   const base = brandPath(brand.code, locale);
   const navTree = await getNavTree({ brandId: brand.id, includeHidden: false });
   const navHref = (n: { path: string }) => `${base}${n.path === "/" ? "" : n.path}`;
+
+  // 品牌站点下拉列表（含当前品牌站）
+  const allBrands = await getSiteBrands("zh");
+  const brandSites = allBrands
+    .map((b) => ({
+      code: b.code,
+      name: isEn ? b.enName : b.zhName,
+      href: brandPath(b.code, locale),
+      logo: b.logo,
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name, "zh"));
 
   return (
     <NextIntlClientProvider messages={messages}>
@@ -99,12 +111,9 @@ export default async function BrandLayout({
               <SiteSearch locale={locale} isEn={isEn} />
             </div>
 
-            <Link
-              href={`${base}/contact`}
-              className="hidden rounded-md bg-sky-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-500 md:block"
-            >
-              {isEn ? "Get a Quote" : "获取报价"}
-            </Link>
+            <div className="hidden md:block">
+              <BrandSiteSwitcher brands={brandSites} isEn={isEn} currentBrand={brand.code} />
+            </div>
           </div>
         </header>
 
