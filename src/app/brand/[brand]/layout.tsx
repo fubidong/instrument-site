@@ -42,10 +42,25 @@ export default async function BrandLayout({
         {/* 顶部信息条 */}
         <div className="bg-slate-900 text-slate-300">
           <div className="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs">
-            <span>
-              {isEn ? `${brandName} · Authorized Distributor` : `${brandName} · 授权代理商`}
-            </span>
             <div className="flex items-center gap-4">
+              <Link
+                href={isEn ? "/en" : "/"}
+                className="flex shrink-0 items-center gap-1 font-medium text-white hover:text-sky-300"
+              >
+                <svg viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" aria-hidden="true">
+                  <path
+                    fillRule="evenodd"
+                    d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                {isEn ? "Main Site" : "返回总站"}
+              </Link>
+              <span className="truncate">
+                {isEn ? `${brandName} · Authorized Distributor` : `${brandName} · 授权代理商`}
+              </span>
+            </div>
+            <div className="flex shrink-0 items-center gap-4">
               {settings.phone && (
                 <span>
                   {isEn ? `Hotline: ${settings.phone}` : `服务热线：${settings.phone}`}
