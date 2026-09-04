@@ -6,7 +6,7 @@ const intlMiddleware = createMiddleware(routing);
 
 // 品牌小写 code 列表（品牌站路径）
 // 注意：需与数据库 Brand.code 对应（转小写）
-const BRAND_CODES = ["siglent", "rigol"];
+const BRAND_CODES = ["siglent", "rigol", "tektronix"];
 
 // 品牌站路径重写：
 //   /siglent/...      → /brand/siglent/...  (header x-brand-locale: zh)
