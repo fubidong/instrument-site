@@ -52,9 +52,28 @@ export default function BrandSiteSwitcher({
 
       {open && (
         <div
-          className="absolute right-0 top-full z-50 mt-1 w-52 overflow-hidden rounded-lg border border-slate-200 bg-white py-1 shadow-lg"
+          className="absolute right-0 top-full z-50 mt-1 w-56 overflow-hidden rounded-lg border border-slate-200 bg-white py-1 shadow-lg"
           role="menu"
         >
+          {/* 综合站（主站）入口 */}
+          <Link
+            href={isEn ? "/en" : "/"}
+            role="menuitem"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+          >
+            <svg viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 shrink-0 text-sky-600" aria-hidden="true">
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.42 2.58a7.5 7.5 0 01-5.08 10.09c.18.86.47 1.68.85 2.42a6.75 6.75 0 0011.14-4.77 7.5 7.5 0 01-6.91-7.74zM9 2.05a7 7 0 011.34 6.54c.63.27 1.31.42 2 .45a7 7 0 00-3.34-7z"
+                clipRule="evenodd"
+              />
+            </svg>
+            {isEn ? "Main Site" : "综合站"}
+          </Link>
+
+          <div className="my-1 border-t border-slate-100" />
+
           {brands.map((b) => {
             const active = b.code.toLowerCase() === currentBrand.toLowerCase();
             return (
