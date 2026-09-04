@@ -25,6 +25,10 @@ export default async function BrandCategoryPage({
   if (!cat) notFound();
 
   const subCats = categories.filter((c) => c.parentId === cat.id);
+  // 若当前是子分类：取其父分类下的兄弟子分类作为顶部导航（点击切换，不消失）
+  const parentCat = cat.parentId ? categories.find((c) => c.id === cat.parentId) : undefined;
+  const siblingCats = parentCat ? categories.filter((c) => c.parentId === parentCat.id) : [];
+  const navCats = siblingCats.length > 1 ? siblingCats : subCats;
   const catIds = [cat.id, ...subCats.map((s) => s.id)];
   const detail = await getBrandCategoryDetail(brand.id, catIds, locale);
 
@@ -40,24 +44,39 @@ export default async function BrandCategoryPage({
       <div className="mb-6 text-sm text-slate-500">
         <Link href={base} className="hover:text-sky-600">{brandName}</Link>
         <span className="mx-2">/</span>
+        {parentCat && (
+          <>
+            <Link href={`${base}/category/${parentCat.code.toLowerCase()}`} className="hover:text-sky-600">
+              {parentCat.name}
+            </Link>
+            <span className="mx-2">/</span>
+          </>
+        )}
         <span className="text-slate-800">{cat.name}</span>
       </div>
 
       <h1 className="text-2xl font-bold text-slate-900">{cat.name}</h1>
       <p className="mt-1 text-sm text-slate-500">{cat.enName}</p>
 
-      {/* 子分类快捷跳转 */}
-      {subCats.length > 0 && (
+      {/* 同品类系列导航（进入子分类后仍保留，方便点击切换） */}
+      {navCats.length > 1 && (
         <div className="mt-4 flex flex-wrap gap-2">
-          {subCats.map((s) => (
-            <Link
-              key={s.id}
-              href={`${base}/category/${s.code.toLowerCase()}`}
-              className="rounded-md border border-slate-200 px-3 py-1.5 text-sm text-slate-600 hover:border-sky-300 hover:text-sky-700"
-            >
-              {s.name}
-            </Link>
-          ))}
+          {navCats.map((s) => {
+            const active = s.id === cat.id;
+            return (
+              <Link
+                key={s.id}
+                href={`${base}/category/${s.code.toLowerCase()}`}
+                className={`rounded-md px-3 py-1.5 text-sm ${
+                  active
+                    ? "bg-sky-600 font-semibold text-white"
+                    : "border border-slate-200 text-slate-600 hover:border-sky-300 hover:text-sky-700"
+                }`}
+              >
+                {s.name}
+              </Link>
+            );
+          })}
         </div>
       )}
 
