@@ -4,6 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import { db } from "@/lib/db";
 import { t } from "@/lib/site";
 import { getSiteSettings } from "@/lib/site";
+import { filterTabContentBySeries } from "@/lib/tab-filter";
 import { routing } from "@/i18n/routing";
 import CompareBar from "@/components/compare-bar";
 import ProductGallery from "@/components/product-gallery";
@@ -187,7 +188,7 @@ export default async function ProductDetailPage({
     return {
       code: tab.code,
       title: tr?.title ?? tab.code,
-      content: tr?.content ?? "",
+      content: filterTabContentBySeries(tr?.content ?? "", product.productLine.code),
     };
   });
 
@@ -282,6 +283,9 @@ export default async function ProductDetailPage({
             downloads: isEn ? "Downloads" : "资料下载",
             highlight: I.highlights,
             noParams: I.noParams,
+            noTabContent: isEn
+              ? "No content available for this series yet. Contact us for selection support."
+              : "该系列暂无相关内容，欢迎联系我们获取选型支持",
           }}
         />
       </div>

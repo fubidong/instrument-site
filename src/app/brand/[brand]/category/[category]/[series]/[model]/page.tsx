@@ -5,6 +5,7 @@ import { getBrand, getBrandCategories, getBrandModel } from "@/lib/brand";
 import { getBrandLocale, brandPath } from "@/lib/brand-locale";
 import { db } from "@/lib/db";
 import { getSiteSettings } from "@/lib/site";
+import { filterTabContentBySeries } from "@/lib/tab-filter";
 import ProductGallery from "@/components/product-gallery";
 import ProductDetailTabs, { type ParamGroup } from "@/components/product-detail-tabs";
 import ProductOverview from "@/components/product-overview";
@@ -164,7 +165,7 @@ export default async function BrandModelPage({
   // 品类自定义选项卡
   const customTabs = productTabs.map((tab) => {
     const tr = tab.translations.find((x) => x.locale === locale) ?? tab.translations.find((x) => x.locale === "zh");
-    return { code: tab.code, title: tr?.title ?? tab.code, content: tr?.content ?? "" };
+    return { code: tab.code, title: tr?.title ?? tab.code, content: filterTabContentBySeries(tr?.content ?? "", product.series) };
   });
 
   const I = {
@@ -239,6 +240,9 @@ export default async function BrandModelPage({
             download: isEn ? "Download PDF" : "下载 PDF",
             downloads: isEn ? "Downloads" : "资料下载",
             noParams: I.noParams,
+            noTabContent: isEn
+              ? "No content available for this series yet. Contact us for selection support."
+              : "该系列暂无相关内容，欢迎联系我们获取选型支持",
           }}
         />
       </div>

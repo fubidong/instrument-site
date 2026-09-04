@@ -40,6 +40,7 @@ export default function ProductDetailTabs({
     noParams?: string;
     noManual?: string;
     noDownloads?: string;
+    noTabContent?: string;
   };
 }) {
   const [active, setActive] = useState(0);
@@ -298,11 +299,17 @@ export default function ProductDetailTabs({
 
             {activeTab.key.startsWith("custom-") && (
               <div className="rich-text">
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: customTabs![parseInt(activeTab.key.split("-")[1])].content,
-                  }}
-                />
+                {customTabs![parseInt(activeTab.key.split("-")[1])].content ? (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: customTabs![parseInt(activeTab.key.split("-")[1])].content,
+                    }}
+                  />
+                ) : (
+                  <div className="rounded-lg border border-dashed border-slate-200 p-8 text-center text-sm text-slate-400">
+                    {labels.noTabContent ?? "该系列暂无相关内容，欢迎联系我们获取选型支持"}
+                  </div>
+                )}
               </div>
             )}
           </motion.div>
