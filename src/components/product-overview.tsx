@@ -95,21 +95,30 @@ export default function ProductOverview({
           <div className="mt-5">
             <div className="mb-2 text-sm font-semibold text-slate-800">{I.highlights}</div>
             <div className="grid grid-cols-2 gap-2.5 md:grid-cols-3">
-              {showHighlights.map((h, i) => (
-                <div
-                  key={i}
-                  className="rounded-lg border border-slate-200 bg-white px-2 py-2.5 text-center transition hover:border-sky-300 hover:shadow-sm"
-                >
-                  <div className="flex items-center justify-center gap-1 text-[11px] leading-tight text-slate-400">
-                    <MetricIcon color={palette[i % palette.length]} />
-                    <span className="whitespace-nowrap">{h.name}</span>
+              {showHighlights.map((h, i) => {
+                const valueFull = `${h.value}${h.unit ? ` ${h.unit}` : ""}`;
+                const longVal = valueFull.length >= 10;
+                const longName = (h.name || "").length >= 8;
+                return (
+                  <div
+                    key={i}
+                    className="flex min-h-[74px] flex-col items-center justify-center rounded-lg border border-slate-200 bg-white px-2 py-2.5 text-center transition hover:border-sky-300 hover:shadow-sm"
+                  >
+                    <div className="flex w-full items-center justify-center gap-1 leading-tight">
+                      <MetricIcon color={palette[i % palette.length]} />
+                      <span className={`${longName ? "text-[10px]" : "text-[11px]"} line-clamp-1 break-all text-slate-400`}>
+                        {h.name}
+                      </span>
+                    </div>
+                    <div
+                      className={`mt-1 w-full whitespace-normal break-words leading-tight ${longVal ? "text-[13px]" : "text-base"} line-clamp-2 font-bold text-slate-800`}
+                    >
+                      {h.value}
+                      {h.unit && <span className="ml-0.5 text-[11px] font-normal text-slate-400">{h.unit}</span>}
+                    </div>
                   </div>
-                  <div className="mt-1 whitespace-nowrap text-base font-bold leading-tight text-slate-800">
-                    {h.value}
-                    {h.unit && <span className="ml-0.5 text-[11px] font-normal text-slate-400">{h.unit}</span>}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         )}
