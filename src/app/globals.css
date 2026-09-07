@@ -156,7 +156,24 @@
 }
 .rich-text h3 {
   font-size: 1.0625rem;
-  margin: 1rem 0 0.5rem;
+  margin: 1.75rem 0 0.625rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: rgb(15 23 42);
+}
+.rich-text h3::before {
+  content: "";
+  display: inline-block;
+  flex: none;
+  width: 4px;
+  height: 1.1em;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #38bdf8, #0284c7);
+}
+.rich-text h3:first-child {
+  margin-top: 0.25rem;
 }
 .rich-text p {
   margin: 0.5rem 0;
@@ -166,13 +183,17 @@
   padding-left: 1.5rem;
   margin: 0.5rem 0;
 }
+.rich-text ul li::marker {
+  color: rgb(2 132 199);
+}
 .rich-text ol {
   list-style: decimal;
   padding-left: 1.5rem;
   margin: 0.5rem 0;
 }
 .rich-text li {
-  margin: 0.25rem 0;
+  margin: 0.4rem 0;
+  line-height: 1.9;
 }
 .rich-text blockquote {
   border-left: 3px solid rgb(14 165 233);
