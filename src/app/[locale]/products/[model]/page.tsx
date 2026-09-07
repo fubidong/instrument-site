@@ -182,6 +182,45 @@ export default async function ProductDetailPage({
     items: g.items.map((it) => ({ name: it.name, zhName: it.zhName, value: it.value, unit: it.unit })),
   }));
 
+  // 回退：无结构化参数值时，从 specsOverview（"参数名行+值行"或"参数名：值"）生成参数表
+  if (paramGroups.length === 0) {
+    const isNameOnly = (l: string) => {
+      if (!l) return false;
+      if (l.includes("：") || l.includes(":")) return false;
+      if (/\d/.test(l)) return false;
+      if (/Hz|kHz|MHz|GHz|Ω|µA|uA|mA|mV|µF|uF|pF|nF|mF|kH|µH|uH|mH|%|°|dB|V/.test(l)) return false;
+      return l.length <= 40;
+    };
+    const spec = pt[locale]?.specsOverview ?? pt["zh"]?.specsOverview ?? "";
+    const rawLines = (spec ?? "").split("\n").map((l: string) => l.trim()).filter(Boolean);
+    const lines: { name: string; value: string }[] = [];
+    let pendingName = "";
+    let pendingVals: string[] = [];
+    for (const l of rawLines) {
+      const idx = l.indexOf("：");
+      if (idx > 0) {
+        if (pendingName) { lines.push({ name: pendingName, value: pendingVals.join(" / ") }); pendingName = ""; pendingVals = []; }
+        lines.push({ name: l.slice(0, idx), value: l.slice(idx + 1) });
+        continue;
+      }
+      if (isNameOnly(l)) {
+        if (pendingName) { lines.push({ name: pendingName, value: pendingVals.join(" / ") }); }
+        pendingName = l;
+        pendingVals = [];
+        continue;
+      }
+      if (pendingName) {
+        pendingVals.push(l);
+      } else if (lines.length && lines[lines.length - 1].name === "") {
+        lines[lines.length - 1].value += " / " + l;
+      } else {
+        lines.push({ name: "", value: l });
+      }
+    }
+    if (pendingName) lines.push({ name: pendingName, value: pendingVals.join(" / ") });
+    if (lines.length > 0) paramGroups.push({ groupName: "技术参数", items: lines });
+  }
+
   // 品类自定义选项卡
   const customTabs = productTabs.map((tab) => {
     const tr = tab.translations.find((x) => x.locale === locale) ?? tab.translations.find((x) => x.locale === "zh");

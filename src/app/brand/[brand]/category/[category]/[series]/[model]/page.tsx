@@ -92,16 +92,41 @@ export default async function BrandModelPage({
     .map((d) => ({ id: d.id, title: d.title, filePath: d.filePath, docType: d.docType }));
   const isSampleEnabled = productMeta?.isSampleEnabled ?? false;
 
-  // 解析 specsOverview 为参数表
+  // 解析 specsOverview 为参数表（兼容"参数名行+值行"与"参数名：值"两种格式）
   const pt = isEn ? product.en : product.zh;
-  const specLines = (pt?.specsOverview ?? "")
-    .split("\n")
-    .filter((l: string) => l.trim())
-    .map((l: string) => {
-      const idx = l.indexOf("：");
-      if (idx > 0) return { name: l.slice(0, idx), value: l.slice(idx + 1) };
-      return { name: "", value: l };
-    });
+  const isNameOnly = (l: string) => {
+    if (!l) return false;
+    if (l.includes("：") || l.includes(":")) return false;
+    if (/\d/.test(l)) return false;
+    if (/Hz|kHz|MHz|GHz|Ω|µA|uA|mA|mV|µF|uF|pF|nF|mF|kH|µH|uH|mH|%|°|dB|V/.test(l)) return false;
+    return l.length <= 40;
+  };
+  const rawLines = (pt?.specsOverview ?? "").split("\n").map((l: string) => l.trim()).filter(Boolean);
+  const specLines: { name: string; value: string }[] = [];
+  let pendingName = "";
+  let pendingVals: string[] = [];
+  for (const l of rawLines) {
+    const idx = l.indexOf("：");
+    if (idx > 0) {
+      if (pendingName) { specLines.push({ name: pendingName, value: pendingVals.join(" / ") }); pendingName = ""; pendingVals = []; }
+      specLines.push({ name: l.slice(0, idx), value: l.slice(idx + 1) });
+      continue;
+    }
+    if (isNameOnly(l)) {
+      if (pendingName) { specLines.push({ name: pendingName, value: pendingVals.join(" / ") }); }
+      pendingName = l;
+      pendingVals = [];
+      continue;
+    }
+    if (pendingName) {
+      pendingVals.push(l);
+    } else if (specLines.length && specLines[specLines.length - 1].name === "") {
+      specLines[specLines.length - 1].value += " / " + l;
+    } else {
+      specLines.push({ name: "", value: l });
+    }
+  }
+  if (pendingName) specLines.push({ name: pendingName, value: pendingVals.join(" / ") });
 
   // 重点参数：优先 isHighlight（完整显示），否则取前 4 个参数值
   const pvList = (product.paramValues as any[]) ?? [];
