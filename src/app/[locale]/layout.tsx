@@ -8,6 +8,8 @@ import { getSiteSettings, getSiteCategories, getSiteBrands } from "@/lib/site";
 import { getNavTree } from "@/lib/nav";
 import SiteNav from "@/components/site-nav";
 import SiteSearch from "@/components/site-search";
+import BrandSiteSwitcher from "@/components/brand-site-switcher";
+import { brandPath } from "@/lib/brand-locale";
 import LocaleSwitcher from "./locale-switcher";
 
 export function generateStaticParams() {
@@ -37,6 +39,15 @@ export default async function SiteLayout({
   const topCategories = categories.filter((c) => !c.parentId && c.showInNav);
   const isEn = locale === "en";
   const navHref = (n: { path: string }) => `/${locale}${n.path === "/" ? "" : n.path}`;
+  // 品牌站点下拉（进入各品牌站）
+  const brandSites = brands
+    .map((b) => ({
+      code: b.code,
+      name: isEn ? b.enName : b.zhName,
+      href: brandPath(b.code, isEn ? "en" : "zh"),
+      logo: b.logo,
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name, "zh"));
 
   return (
     <NextIntlClientProvider messages={messages}>
@@ -87,12 +98,9 @@ export default async function SiteLayout({
             <SiteSearch locale={locale} isEn={isEn} />
           </div>
 
-          <Link
-            href="/contact"
-            className="hidden rounded-md bg-sky-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-500 md:block"
-          >
-            {isEn ? "Get a Quote" : "获取报价"}
-          </Link>
+          <div className="hidden md:block">
+            <BrandSiteSwitcher brands={brandSites} isEn={isEn} currentBrand="" />
+          </div>
         </div>
       </header>
 
