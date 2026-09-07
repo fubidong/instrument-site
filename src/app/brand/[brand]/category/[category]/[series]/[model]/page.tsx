@@ -192,9 +192,9 @@ export default async function BrandModelPage({
       </div>
 
       {/* 顶部两栏：左主图 + 右产品概览 */}
-      <div className="flex flex-col gap-8 lg:flex-row">
+      <div className="flex flex-col gap-8 md:flex-row">
         {/* 左：主图（580x580） */}
-        <div className="w-full lg:w-[580px] lg:shrink-0">
+        <div className="w-full md:w-[580px] md:shrink-0">
           <ProductGallery
             coverImage={product.coverImage}
             images={product.images}
