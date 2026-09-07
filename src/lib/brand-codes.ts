@@ -6,5 +6,6 @@ export const BRAND_CODES = [
  "hypower",
  "rigol",
  "siglent",
- "tektronix"
+ "tektronix",
+ "zctek"
 ];
