@@ -257,6 +257,7 @@ export default async function BrandModelPage({
           pdfs={pdfs}
           downloads={downloads}
           customTabs={customTabs}
+          specsHtml={(pt?.specsOverview ?? "").trim().startsWith("<table") ? (pt?.specsOverview ?? "") : null}
           labels={{
             intro: I.intro,
             params: I.specs,

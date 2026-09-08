@@ -253,6 +253,21 @@
   font-weight: 600;
 }
 
+/* 官网规格表格（spec-table）：首行型号表头 + 参数列加粗 */
+.spec-table tbody tr:first-child td {
+  background: rgb(248 250 252);
+  font-weight: 600;
+  text-align: center;
+}
+.spec-table td {
+  vertical-align: top;
+}
+.spec-table tbody tr td:first-child {
+  font-weight: 500;
+  color: rgb(51 65 85);
+  white-space: nowrap;
+}
+
 /* ===== 产品选型表（product-selection-table）：自适应 + 防型号换行 ===== */
 .product-selection-table {
   overflow-x: auto;

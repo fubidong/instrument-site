@@ -20,6 +20,7 @@ export default function ProductDetailTabs({
   pdfs,
   downloads,
   customTabs,
+  specsHtml,
   labels,
 }: {
   intro?: string | null;
@@ -29,6 +30,7 @@ export default function ProductDetailTabs({
   pdfs?: PdfDoc[];
   downloads?: PdfDoc[];
   customTabs?: CustomTab[];
+  specsHtml?: string | null;
   labels: {
     intro: string;
     params: string;
@@ -151,11 +153,25 @@ export default function ProductDetailTabs({
                 ) : (
                   <div className="whitespace-pre-line text-sm leading-7 text-slate-600">{intro}</div>
                 ))}
+                {specsHtml && (
+                  <div className="rich-text overflow-x-auto">
+                    <div className="mb-2 text-sm font-semibold text-slate-700">
+                      技术参数
+                    </div>
+                    <div dangerouslySetInnerHTML={{ __html: specsHtml }} />
+                  </div>
+                )}
               </div>
             )}
 
             {activeTab.key === "params" && (
               <div className="space-y-4">
+                {specsHtml ? (
+                  <div className="rich-text overflow-x-auto">
+                    <div dangerouslySetInnerHTML={{ __html: specsHtml }} />
+                  </div>
+                ) : (
+                  <>
                 {(paramGroups ?? []).map((g, gi) => (
                   <div key={gi} className="overflow-hidden rounded-lg border border-slate-200">
                     <div className="bg-slate-50 px-4 py-2">
@@ -193,6 +209,8 @@ export default function ProductDetailTabs({
                   <div className="rounded-lg border border-dashed border-slate-200 p-8 text-center text-sm text-slate-400">
                     {labels.noParams}
                   </div>
+                )}
+                  </>
                 )}
               </div>
             )}
