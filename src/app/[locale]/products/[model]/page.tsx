@@ -122,7 +122,7 @@ export default async function ProductDetailPage({
   const downloads = mergedDocs
     .filter((d) => {
       if (!["datasheet", "programming_manual", "user_manual", "application_note"].includes(d.docType)) return false;
-      if (d.docType === "user_manual") return normKey(d.title).includes(normKey(lineCode));
+      if (d.docType === "user_manual") return normKey(d.title).includes(normKey(product.model)) || normKey(d.title).includes(normKey(lineCode));
       return true;
     })
     .sort((a, b) => (a.docType === "datasheet" ? -1 : 0) - (b.docType === "datasheet" ? -1 : 0))
