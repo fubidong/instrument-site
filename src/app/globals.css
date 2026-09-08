@@ -311,6 +311,61 @@
   background: rgb(248 250 252);
 }
 
+/* ===== ITECH 产品选型表（it-model-table / model-table）：自适应 + 短字段不换行 + 长字段折行 ===== */
+.it-model-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0.75rem 0;
+}
+.it-model-table table.model-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+.it-model-table .model-table th,
+.it-model-table .model-table td {
+  border: 1px solid rgb(226 232 240);
+  padding: 0.55rem 0.75rem;
+  vertical-align: middle;
+}
+/* 表头：浅灰底 + 居中 + 加粗 */
+.it-model-table .model-table thead th {
+  background: rgb(241 245 249);
+  font-weight: 600;
+  color: rgb(51 65 85);
+  text-align: center;
+  white-space: nowrap;
+}
+/* 短字段列（型号/电压/电流/功率）：不换行，按内容自适应 */
+.it-model-table .model-table td:nth-child(1),
+.it-model-table .model-table td:nth-child(2),
+.it-model-table .model-table td:nth-child(3),
+.it-model-table .model-table td:nth-child(4) {
+  white-space: nowrap;
+  text-align: center;
+}
+/* 型号列：等宽加粗 */
+.it-model-table .model-table td:first-child {
+  font-weight: 600;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+/* 长字段列（分辨率/精度/接口/尺寸）：允许折行，内容居左更易读 */
+.it-model-table .model-table td:nth-child(n+5) {
+  white-space: normal;
+  word-break: break-word;
+  text-align: left;
+  min-width: 110px;
+}
+/* 斑马纹 + hover */
+.it-model-table .model-table tbody tr:nth-child(even) {
+  background: rgb(248 250 252);
+}
+.it-model-table .model-table tbody tr:hover {
+  background: rgb(240 249 255);
+}
+
 
 /* ===== AIEditor 富文本编辑区：撑满高度（后台产品介绍编辑用） ===== */
 .aie-ht {

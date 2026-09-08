@@ -82,7 +82,7 @@ export default function ProductDetailTabs({
   // 选型表对齐：表头全部居中；型号列居中；其余列按内容长度自动判断（短参数居中、长文本居左）
   useEffect(() => {
     if (activeTab?.key !== "selection" || !selRef.current) return;
-    const tables = selRef.current.querySelectorAll(".product-selection-table table");
+    const tables = selRef.current.querySelectorAll(".product-selection-table table, .it-model-table table");
     tables.forEach((tbl) => {
       const rows = Array.from(tbl.querySelectorAll("tbody tr")) as HTMLTableRowElement[];
       if (rows.length === 0) return;
