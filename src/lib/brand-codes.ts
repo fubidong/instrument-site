@@ -4,6 +4,7 @@ export const BRAND_CODES = [
  "cybertek",
  "guideir",
  "hypower",
+ "itech",
  "rigol",
  "siglent",
  "tektronix",
