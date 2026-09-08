@@ -1,0 +1,31 @@
+
+> instrument-site@0.1.0 dev
+> next dev
+
+▲ Next.js 16.3.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.53:3000
+- Environments: .env
+✓ Ready in 629ms
+✓ Running next.config.ts took 109ms
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead.
+
+  To migrate automatically, run:
+  npx @next/codemod@canary middleware-to-proxy .
+
+  Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+
+ GET /zctek/category/ZC-COMPONENT/ZC2830%E7%B3%BB%E5%88%97LCR%E6%95%B0%E5%AD%97%E7%94%B5%E6%A1%A5/ZC2830 404 in 3.1s (next.js: 2.8s, proxy.ts: 96ms, application-code: 258ms)
+ GET /zh/products/ZC2776D 200 in 4.9s (next.js: 3.7s, proxy.ts: 101ms, application-code: 1063ms)
+ GET /zh 200 in 1561ms (next.js: 37ms, proxy.ts: 8ms, generate-params: 784ms, application-code: 732ms)
+ GET /zctek 200 in 1020ms (next.js: 807ms, proxy.ts: 4ms, application-code: 210ms)
+ GET /zctek 200 in 208ms (next.js: 75ms, proxy.ts: 8ms, application-code: 126ms)
+ GET /zctek/category/zc-audio 200 in 1076ms (next.js: 795ms, proxy.ts: 4ms, application-code: 277ms)
+ GET /zh 307 in 12ms (proxy.ts: 4ms)
+ GET /zh 200 in 421ms (next.js: 7ms, proxy.ts: 4ms, generate-params: 10ms, application-code: 400ms)
+ GET /zh/brands 200 in 845ms (next.js: 32ms, proxy.ts: 4ms, generate-params: 767ms, application-code: 42ms)
+ GET /zh/brands/ZCTEK 200 in 893ms (next.js: 791ms, proxy.ts: 6ms, application-code: 96ms)
+ GET /zh/brands/ZCTEK?category=ZC-SAFETY 200 in 96ms (next.js: 19ms, proxy.ts: 4ms, application-code: 73ms)
+ GET /zh/brands/ZCTEK?category=ZC-ONLINE 200 in 115ms (next.js: 25ms, proxy.ts: 4ms, application-code: 86ms)
+ GET /zh/products/ZC2516BS 200 in 491ms (next.js: 21ms, proxy.ts: 4ms, application-code: 466ms)
+ GET /zctek/category/ZC-COMPONENT/ZC2830%E7%B3%BB%E5%88%97LCR%E6%95%B0%E5%AD%97%E7%94%B5%E6%A1%A5/ZC2830 404 in 76ms (next.js: 14ms, proxy.ts: 4ms, application-code: 58ms)
