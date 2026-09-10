@@ -110,6 +110,8 @@ export async function saveProductAction(
   const summaryEn = (formData.get("summary_en") as string)?.trim() || "";
   const descriptionEn = cleanHtml(formData.get("description_en") as string);
   const selectionEn = cleanHtml(formData.get("selection_en") as string);
+  const specsZh = cleanHtml(formData.get("specsOverview_zh") as string);
+  const specsEn = cleanHtml(formData.get("specsOverview_en") as string);
 
   if (!productLineId) return { error: "请选择产品系列" };
   if (!model) return { error: "型号不能为空" };
@@ -164,12 +166,14 @@ export async function saveProductAction(
             summary: summaryZh || null,
             description: descriptionZh || null,
             selection: selectionZh || null,
+            specsOverview: specsZh || null,
           },
           update: {
             name: nameZhFinal,
             summary: summaryZh || null,
             description: descriptionZh || null,
             selection: selectionZh || null,
+            specsOverview: specsZh || null,
           },
         });
         await tx.productTranslation.upsert({
@@ -181,12 +185,14 @@ export async function saveProductAction(
             summary: summaryEn || null,
             description: descriptionEn || null,
             selection: selectionEn || null,
+            specsOverview: specsEn || null,
           },
           update: {
             name: nameEnFinal,
             summary: summaryEn || null,
             description: descriptionEn || null,
             selection: selectionEn || null,
+            specsOverview: specsEn || null,
           },
         });
         // 删除旧参数值，重建（简单可靠）
@@ -218,6 +224,7 @@ export async function saveProductAction(
                 summary: summaryZh || null,
                 description: descriptionZh || null,
                 selection: selectionZh || null,
+                specsOverview: specsZh || null,
               },
               {
                 locale: "en",
@@ -225,6 +232,7 @@ export async function saveProductAction(
                 summary: summaryEn || null,
                 description: descriptionEn || null,
                 selection: selectionEn || null,
+                specsOverview: specsEn || null,
               },
             ],
           },

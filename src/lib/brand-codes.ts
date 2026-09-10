@@ -2,6 +2,7 @@
 // middleware 无法访问数据库，故由构建时同步脚本生成此文件
 export const BRAND_CODES = [
  "cybertek",
+ "fluke",
  "guideir",
  "hypower",
  "itech",

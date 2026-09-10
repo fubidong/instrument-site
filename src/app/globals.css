@@ -274,6 +274,83 @@
   white-space: nowrap;
 }
 
+/* ===== 三列规格表（spec-3col）：功能 | 量程/分辨率 | 基本精度（对齐官网） ===== */
+.spec-3col {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0.75rem 0;
+  border: 1px solid rgb(226 232 240);
+  border-radius: 0.5rem;
+}
+.spec-3col table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+.spec-3col th,
+.spec-3col td {
+  border: 1px solid rgb(226 232 240);
+  padding: 0.45rem 0.7rem;
+  vertical-align: middle;
+}
+.spec-3col thead th {
+  background: rgb(241 245 249);
+  font-weight: 600;
+  color: rgb(51 65 85);
+  text-align: center;
+  white-space: nowrap;
+}
+.spec-3col thead th:first-child { width: 20%; }
+.spec-3col thead th:nth-child(2) { width: 56%; }
+.spec-3col thead th:last-child { width: 24%; }
+.spec-3col td.pn {
+  font-weight: 600;
+  color: rgb(51 65 85);
+  white-space: nowrap;
+}
+.spec-3col td.rng {
+  word-break: break-word;
+  line-height: 1.45;
+  color: rgb(30 41 59);
+}
+.spec-3col td.acc {
+  white-space: nowrap;
+  text-align: center;
+  color: rgb(30 64 175);
+  font-weight: 500;
+}
+.spec-3col tr.sg td {
+  background: rgb(248 250 252);
+  font-weight: 600;
+  color: rgb(30 41 59);
+}
+.spec-3col td.pn2 {
+  font-weight: 500;
+  color: rgb(51 65 85);
+  line-height: 1.55;
+  word-break: break-word;
+}
+.spec-3col tbody tr:nth-child(even) td {
+  background: rgb(250 251 252);
+}
+.spec-3col tr.sg td,
+.spec-3col thead th {
+  background: rgb(241 245 249);
+}
+.spec-3col tr.sg:nth-child(even) td {
+  background: rgb(241 245 249);
+}
+/* 覆盖 .spec-table 首列 nowrap 默认规则，避免 pn2 合并行长文本溢出 */
+.spec-table.spec-3col tbody tr td:first-child {
+  white-space: normal;
+}
+.spec-table.spec-3col tbody tr td.pn {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
 /* ===== 产品选型表（product-selection-table）：自适应 + 防型号换行 ===== */
 .product-selection-table {
   overflow-x: auto;

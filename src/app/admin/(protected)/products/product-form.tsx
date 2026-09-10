@@ -29,7 +29,7 @@ export default function ProductForm({
     isActive: boolean;
     isFeatured: boolean;
     isSampleEnabled: boolean;
-    translations: { locale: string; name: string; summary: string | null; description: string | null; selection: string | null }[];
+    translations: { locale: string; name: string; summary: string | null; description: string | null; selection: string | null; specsOverview: string | null }[];
   } | null;
   lines: { id: string; code: string; zhName: string; enName: string; brandZh: string; categoryZh: string }[];
   paramGroups: ParamGroupWithDefs[];
@@ -266,6 +266,12 @@ export default function ProductForm({
                 </label>
                 <RichTextEditor name="selection_zh" defaultValue={t["zh"]?.selection ?? ""} minHeight={360} />
               </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">
+                  技术参数（中文）<span className="ml-1 text-xs font-normal text-slate-400">“技术参数”选项卡内容，放置无规律/不便按模板渲染的参数（可粘贴官网规格表格）；按模板的参数请在产品参数区填写</span>
+                </label>
+                <RichTextEditor name="specsOverview_zh" defaultValue={t["zh"]?.specsOverview ?? ""} minHeight={420} />
+              </div>
             </>
           )}
         </div>
@@ -306,6 +312,12 @@ export default function ProductForm({
                   Product Selection (EN) <span className="ml-1 text-xs font-normal text-slate-400">Selection tab content (paste selection table here)</span>
                 </label>
                 <RichTextEditor name="selection_en" defaultValue={t["en"]?.selection ?? ""} minHeight={360} />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">
+                  Technical Specs (EN) <span className="ml-1 text-xs font-normal text-slate-400">Specifications tab content for irregular params not covered by template</span>
+                </label>
+                <RichTextEditor name="specsOverview_en" defaultValue={t["en"]?.specsOverview ?? ""} minHeight={420} />
               </div>
             </>
           )}

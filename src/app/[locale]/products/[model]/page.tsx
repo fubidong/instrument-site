@@ -110,19 +110,17 @@ export default async function ProductDetailPage({
   const productDsPdfs = product.documents.filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
   const dsPdfs = mergedDocs.filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
   const pdfSource = productDsPdfs.length > 0 ? productDsPdfs : dsPdfs;
+  // 产品规格手册 PDF：优先产品级/系列级规格书(datasheet)，无则回退该产品全部PDF（含用户手册/数据表）
   const pdfs = (pdfSource.length > 0 ? pdfSource : mergedDocs.filter((d) => /\.pdf$/i.test(d.filePath)))
     .sort((a, b) => {
       const rank = (x: any) => (/^https?:\/\//i.test(x.filePath) ? 1 : 0);
       return rank(a) - rank(b);
     })
     .map((d) => ({ id: d.id, title: d.title, filePath: d.filePath, docType: d.docType }));
-  // 资料下载选项卡：规格手册(datasheet) + 编程手册 + 系列专属用户手册
-  const lineCode = product.productLine.code;
-  const normKey = (s: string) => s.toLowerCase().replace(/[\s\-_/+]/g, "");
+  // 资料下载选项卡：全部手册（datasheet + 编程手册 + 用户手册 + 应用笔记等）
   const downloads = mergedDocs
     .filter((d) => {
-      if (!["datasheet", "programming_manual", "user_manual", "application_note"].includes(d.docType)) return false;
-      if (d.docType === "user_manual") return normKey(d.title).includes(normKey(product.model)) || normKey(d.title).includes(normKey(lineCode));
+      if (!["datasheet", "programming_manual", "user_manual", "application_note", "service_manual", "quick_guide"].includes(d.docType)) return false;
       return true;
     })
     .sort((a, b) => (a.docType === "datasheet" ? -1 : 0) - (b.docType === "datasheet" ? -1 : 0))
