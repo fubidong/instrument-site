@@ -106,12 +106,11 @@ export default async function ProductDetailPage({
     seen.add(k);
     return true;
   });
-  // 产品规格手册 PDF：优先产品级自选规格书（后台"产品规格书"），无则回退系列 datasheet
+  // 产品规格手册 PDF：只显示 datasheet（数据表），不显示用户手册
   const productDsPdfs = product.documents.filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
   const dsPdfs = mergedDocs.filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
   const pdfSource = productDsPdfs.length > 0 ? productDsPdfs : dsPdfs;
-  // 产品规格手册 PDF：优先产品级/系列级规格书(datasheet)，无则回退该产品全部PDF（含用户手册/数据表）
-  const pdfs = (pdfSource.length > 0 ? pdfSource : mergedDocs.filter((d) => /\.pdf$/i.test(d.filePath)))
+  const pdfs = pdfSource
     .sort((a, b) => {
       const rank = (x: any) => (/^https?:\/\//i.test(x.filePath) ? 1 : 0);
       return rank(a) - rank(b);
