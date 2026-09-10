@@ -153,14 +153,6 @@ export default function ProductDetailTabs({
                 ) : (
                   <div className="whitespace-pre-line text-sm leading-7 text-slate-600">{intro}</div>
                 ))}
-                {specsHtml && (
-                  <div className="rich-text overflow-x-auto">
-                    <div className="mb-2 text-sm font-semibold text-slate-700">
-                      技术参数
-                    </div>
-                    <div dangerouslySetInnerHTML={{ __html: specsHtml }} />
-                  </div>
-                )}
               </div>
             )}
 
