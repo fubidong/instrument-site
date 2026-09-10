@@ -311,7 +311,10 @@ export default async function ProductDetailPage({
           pdfs={pdfs}
           downloads={downloads}
           customTabs={customTabs}
-          specsHtml={(pt[locale]?.specsOverview ?? pt["zh"]?.specsOverview ?? "").trim().startsWith("<table") ? (pt[locale]?.specsOverview ?? pt["zh"]?.specsOverview ?? "") : null}
+          specsHtml={((): string | null => {
+            const s = (pt[locale]?.specsOverview ?? pt["zh"]?.specsOverview ?? "").trim();
+            return s && s.startsWith("<") ? s : null;
+          })()}
           labels={{
             intro: I.intro,
             params: I.params,
