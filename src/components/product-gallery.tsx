@@ -41,10 +41,9 @@ export default function ProductGallery({
     active: false,
     imgW: 1,
     imgH: 1,
-    side: "right" as "left" | "right",
   });
   const boxRef = useRef<HTMLDivElement>(null);
-  // 电商式放大镜：镜头框 + 右侧/左侧放大面板
+  // 电商式放大镜：镜头框 + 右侧放大面板
   const ZOOM = 2.5; // 放大倍数
   const PANEL = 320; // 放大面板尺寸(px)
   const LENS_PCT = 20; // 镜头框占主图比例(%)，与面板显示区域一致
@@ -65,9 +64,7 @@ export default function ProductGallery({
     if (r.width <= 0 || r.height <= 0) return;
     const x = Math.min(100, Math.max(0, ((e.clientX - r.left) / r.width) * 100));
     const y = Math.min(100, Math.max(0, ((e.clientY - r.top) / r.height) * 100));
-    // 鼠标靠近主图左半 → 放大镜放右侧；右半 → 放大镜放左侧（贴近鼠标，避免突兀/溢出）
-    const side: "left" | "right" = x >= 50 ? "left" : "right";
-    setZoom({ x, y, active: true, imgW: r.width, imgH: r.height, side });
+    setZoom({ x, y, active: true, imgW: r.width, imgH: r.height });
   };
 
   return (
@@ -104,11 +101,9 @@ export default function ProductGallery({
           )}
         </div>
 
-        {/* 放大面板：贴近鼠标一侧显示，与镜头框联动 */}
+        {/* 放大面板：固定显示在主图右侧，与镜头框联动 */}
         <div
-          className={`pointer-events-none absolute top-0 z-20 max-lg:hidden overflow-hidden rounded-lg border border-slate-100 bg-white shadow-xl ${
-            zoom.side === "right" ? "left-full ml-4" : "right-full mr-4"
-          }`}
+          className={`pointer-events-none absolute top-0 z-20 max-lg:hidden overflow-hidden rounded-lg border border-slate-100 bg-white shadow-xl left-full ml-4`}
           style={{
             width: PANEL,
             height: PANEL,

@@ -4,10 +4,16 @@ export const BRAND_CODES = [
  "cybertek",
  "fluke",
  "guideir",
+ "hioki",
  "hypower",
  "itech",
+ "precise",
+ "pssins",
  "rigol",
  "siglent",
  "tektronix",
+ "uni-t-instr",
+ "uni-t-meter",
+ "vtech",
  "zctek"
 ];

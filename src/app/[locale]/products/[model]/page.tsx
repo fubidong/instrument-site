@@ -310,6 +310,7 @@ export default async function ProductDetailPage({
           pdfs={pdfs}
           downloads={downloads}
           customTabs={customTabs}
+          coverImage={product.coverImage}
           specsHtml={((): string | null => {
             const s = (pt[locale]?.specsOverview ?? pt["zh"]?.specsOverview ?? "").trim();
             return s && s.startsWith("<") ? s : null;

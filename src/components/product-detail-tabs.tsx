@@ -21,6 +21,7 @@ export default function ProductDetailTabs({
   downloads,
   customTabs,
   specsHtml,
+  coverImage,
   labels,
 }: {
   intro?: string | null;
@@ -31,6 +32,7 @@ export default function ProductDetailTabs({
   downloads?: PdfDoc[];
   customTabs?: CustomTab[];
   specsHtml?: string | null;
+  coverImage?: string | null;
   labels: {
     intro: string;
     params: string;
@@ -108,6 +110,71 @@ export default function ProductDetailTabs({
       }
     });
   }, [activeTab?.key, selection]);
+
+  // 产品介绍图片轮播初始化
+  useEffect(() => {
+    if (activeTab?.key !== "intro") return;
+    const carousels = document.querySelectorAll(".uni-intro-carousel");
+    const timers: ReturnType<typeof setInterval>[] = [];
+    
+    carousels.forEach((carousel) => {
+      const track = carousel.querySelector(".uni-intro-carousel-track") as HTMLElement | null;
+      if (!track) return;
+      const imgs = track.querySelectorAll(".uni-intro-img");
+      if (imgs.length <= 1) return;
+      
+      // 移除旧的指示点
+      carousel.querySelectorAll(".uni-intro-carousel-dots").forEach(d => d.remove());
+      
+      // 创建指示点容器
+      const dotsContainer = document.createElement("div");
+      dotsContainer.className = "uni-intro-carousel-dots";
+      imgs.forEach((_, idx) => {
+        const dot = document.createElement("div");
+        dot.className = `uni-intro-carousel-dot${idx === 0 ? " active" : ""}`;
+        dot.addEventListener("click", () => {
+          currentIdx = idx;
+          updateSlide();
+          resetTimer();
+        });
+        dotsContainer.appendChild(dot);
+      });
+      carousel.appendChild(dotsContainer);
+      
+      let currentIdx = 0;
+      
+      const updateSlide = () => {
+        track.style.transform = `translateX(-${currentIdx * 100}%)`;
+        dotsContainer.querySelectorAll(".uni-intro-carousel-dot").forEach((dot, idx) => {
+          dot.classList.toggle("active", idx === currentIdx);
+        });
+      };
+      
+      const startTimer = () => {
+        return setInterval(() => {
+          currentIdx = (currentIdx + 1) % imgs.length;
+          updateSlide();
+        }, 3000);
+      };
+      
+      let timer = startTimer();
+      timers.push(timer);
+      
+      const resetTimer = () => {
+        clearInterval(timer);
+        timer = startTimer();
+        timers.push(timer);
+      };
+      
+      // 鼠标悬停暂停
+      carousel.addEventListener("mouseenter", () => clearInterval(timer));
+      carousel.addEventListener("mouseleave", () => { timer = startTimer(); timers.push(timer); });
+    });
+    
+    return () => {
+      timers.forEach(t => clearInterval(t));
+    };
+  }, [activeTab?.key, intro]);
 
   return (
     <div>

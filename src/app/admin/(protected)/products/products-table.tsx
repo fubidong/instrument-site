@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useTransition } from "react";
+import { useMemo, useState, useTransition, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
@@ -71,12 +71,29 @@ export default function ProductsTable({
   const [selected, setSelected] = useState<string[]>([]);
   const [pending, startTransition] = useTransition();
   const [msg, setMsg] = useState<string | null>(null);
+  // 搜索框本地状态 + 防抖
+  const [searchInput, setSearchInput] = useState(currentQ);
+  const searchTimer = useRef<NodeJS.Timeout | null>(null);
+
+  // 当外部 currentQ 变化时（如清除筛选），同步本地输入框
+  useEffect(() => {
+    setSearchInput(currentQ);
+  }, [currentQ]);
 
   function updateFilter(key: string, value: string) {
     const params = new URLSearchParams(searchParams.toString());
     if (value === "all" || value === "") params.delete(key);
     else params.set(key, value);
     router.push(`/admin/products?${params.toString()}`);
+  }
+
+  // 防抖搜索：输入后 400ms 才触发 URL 更新
+  function handleSearchChange(value: string) {
+    setSearchInput(value);
+    if (searchTimer.current) clearTimeout(searchTimer.current);
+    searchTimer.current = setTimeout(() => {
+      updateFilter("q", value);
+    }, 400);
   }
 
   // 品类深度（缩进显示层级）
@@ -299,8 +316,8 @@ export default function ProductsTable({
           <option value="inactive">停用</option>
         </select>
         <input
-          value={currentQ}
-          onChange={(e) => updateFilter("q", e.target.value)}
+          value={searchInput}
+          onChange={(e) => handleSearchChange(e.target.value)}
           placeholder="搜索型号/名称..."
           className="w-48 rounded-md border border-slate-300 px-3 py-1.5 text-sm outline-none focus:border-sky-500"
         />

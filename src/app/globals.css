@@ -489,3 +489,231 @@
 .aie-ht .aie-content {
   min-height: 320px;
 }
+
+/* ===== 技术参数表格：简洁紧凑，白色背景，与官网一致 ===== */
+.rich-text table {
+  width: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+  font-size: 12px;
+  line-height: 26px;
+  margin-left: 1rem;
+}
+.rich-text table th {
+  background: #ffffff;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+}
+.rich-text table td {
+  padding: 5px;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  color: #555;
+  background: #ffffff;
+  line-height: 26px;
+}
+.rich-text table tr {
+  background: #ffffff;
+}
+.rich-text table tr:nth-child(even) {
+  background: #ffffff;
+}
+/* pre标签：去除默认样式，与普通文本一致 */
+.rich-text table pre {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: transparent;
+}
+/* 产品选型表格：横向滚动，白色背景，美观对比 */
+.product-selection-table,
+.rich-text .tabCon1,
+.rich-text .modelCon {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #ffffff;
+}
+.product-selection-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  font-size: 12px;
+  line-height: 24px;
+  margin: 0.5rem 0;
+}
+.product-selection-table th {
+  background: #f5f5f5;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+}
+.product-selection-table td {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  color: #555;
+  background: #ffffff;
+  text-align: center;
+}
+.product-selection-table td:first-child {
+  font-weight: 600;
+  color: #333;
+}
+.product-selection-table tr:nth-child(even) {
+  background: #fafafa;
+}
+/* 产品介绍区块：白色背景，内容左对齐，字号16px */
+.rich-text {
+  background: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  line-height: 32px;
+  font-family: "Noto Sans SC", sans-serif;
+}
+.rich-text p,
+.rich-text div,
+.rich-text span,
+.rich-text li {
+  text-align: left;
+  font-size: 16px;
+  line-height: 32px;
+  font-family: "Noto Sans SC", sans-serif;
+}
+/* 优利德仪器产品介绍：左右分栏布局，和原厂一致 */
+.uni-intro-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: start;
+}
+.uni-intro-block:last-child {
+  border-bottom: none;
+}
+.uni-intro-left,
+.uni-intro-right {
+  min-width: 0;
+}
+.uni-intro-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+}
+.uni-intro-desc {
+  font-size: 16px;
+  line-height: 25px;
+  color: #333;
+}
+.uni-intro-desc p {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 25px;
+  color: #333;
+}
+.uni-intro-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.uni-intro-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* 产品介绍图片轮播 */
+.uni-intro-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+.uni-intro-carousel-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+.uni-intro-carousel-track .uni-intro-img {
+  flex-shrink: 0;
+  width: 100%;
+  object-fit: contain;
+}
+.uni-intro-carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+.uni-intro-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.uni-intro-carousel-dot.active {
+  background: #fff;
+}
+@media (max-width: 768px) {
+  .uni-intro-block {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 0;
+  }
+}
+.uni-intro-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+}
+.uni-intro-desc {
+  font-size: 16px;
+  line-height: 25px;
+  color: #333;
+}
+.uni-intro-desc p {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 25px;
+  color: #333;
+}
+.uni-intro-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.uni-intro-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* 移动端：上下布局 */
+@media (max-width: 768px) {
+  .uni-intro-block {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+}
