@@ -65,20 +65,21 @@ function consolidateCategories(cats: { id: string; name: string; children: { id:
 
 export default async function CatalogPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  const localeFilter = locale as "zh" | "en";
 
   const [brands, tags, infoRows, allCategories] = await Promise.all([
     db.brand.findMany({
       where: { isActive: true },
       orderBy: { sortOrder: "asc" },
       include: {
-        translations: { where: { locale } },
+        translations: { where: { locale: localeFilter } },
         ownCategories: {
           include: {
-            translations: { where: { locale } },
+            translations: { where: { locale: localeFilter } },
             children: {
               include: {
-                translations: { where: { locale } },
-                children: { include: { translations: { where: { locale } } } },
+                translations: { where: { locale: localeFilter } },
+                children: { include: { translations: { where: { locale: localeFilter } } } },
               },
             },
           },
@@ -90,7 +91,7 @@ export default async function CatalogPage({ params }: { params: Promise<{ locale
     db.category.findMany({
       where: { brandId: null },
       orderBy: { sortOrder: "asc" },
-      include: { translations: { where: { locale } } },
+      include: { translations: { where: { locale: localeFilter } } },
     }),
   ]);
 
@@ -138,7 +139,7 @@ export default async function CatalogPage({ params }: { params: Promise<{ locale
 
   const categoryData = allCategories.map((c: any) => {
     const ct = c.translations[0];
-    return { name: ct?.name ?? c.code };
+    return { name: ct?.name ?? c.code, sub: [] as string[] };
   });
 
   return (

@@ -14,7 +14,7 @@ export const getBrandCategoryStats = cache(async (brandId: string, locale: strin
       _count: { select: { products: { where: { isActive: true } } } },
       translations: { where: { locale } },
     },
-  });
+  }) as any[];
   const ownModels: Record<string, number> = {};
   const ownSeries: Record<string, { name: string; code: string; models: number }[]> = {};
   for (const l of lines) {

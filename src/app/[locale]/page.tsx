@@ -254,10 +254,10 @@ export default async function HomePage({
           </dl>
         </div>
         {/* Banner 大图（通栏，从配置读取） */}
-        {settings.homeBannerImage && (
+        {settings.homeBanners && settings.homeBanners.length > 0 && settings.homeBanners[0]?.imageUrl && (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={settings.homeBannerImage}
+            src={settings.homeBanners[0].imageUrl}
             alt=""
             className="h-[200px] w-full object-cover sm:h-[280px] lg:h-[420px]"
           />
