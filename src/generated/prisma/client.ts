@@ -47,6 +47,16 @@ export { Prisma }
  */
 export type Brand = Prisma.BrandModel
 /**
+ * Model CatalogTag
+ * 
+ */
+export type CatalogTag = Prisma.CatalogTagModel
+/**
+ * Model CompanyInfo
+ * 
+ */
+export type CompanyInfo = Prisma.CompanyInfoModel
+/**
  * Model BrandTranslation
  * 
  */
@@ -136,6 +146,26 @@ export type Post = Prisma.PostModel
  * 
  */
 export type PostTranslation = Prisma.PostTranslationModel
+/**
+ * Model SupportArticle
+ * 
+ */
+export type SupportArticle = Prisma.SupportArticleModel
+/**
+ * Model SupportArticlePdf
+ * 
+ */
+export type SupportArticlePdf = Prisma.SupportArticlePdfModel
+/**
+ * Model SupportArticleProduct
+ * 
+ */
+export type SupportArticleProduct = Prisma.SupportArticleProductModel
+/**
+ * Model SupportArticleTranslation
+ * 
+ */
+export type SupportArticleTranslation = Prisma.SupportArticleTranslationModel
 /**
  * Model AdminUser
  * 

@@ -33,6 +33,7 @@ export type ProductTranslationMinAggregateOutputType = {
   description: string | null
   specsOverview: string | null
   selection: string | null
+  features: string | null
 }
 
 export type ProductTranslationMaxAggregateOutputType = {
@@ -44,6 +45,7 @@ export type ProductTranslationMaxAggregateOutputType = {
   description: string | null
   specsOverview: string | null
   selection: string | null
+  features: string | null
 }
 
 export type ProductTranslationCountAggregateOutputType = {
@@ -55,6 +57,7 @@ export type ProductTranslationCountAggregateOutputType = {
   description: number
   specsOverview: number
   selection: number
+  features: number
   _all: number
 }
 
@@ -68,6 +71,7 @@ export type ProductTranslationMinAggregateInputType = {
   description?: true
   specsOverview?: true
   selection?: true
+  features?: true
 }
 
 export type ProductTranslationMaxAggregateInputType = {
@@ -79,6 +83,7 @@ export type ProductTranslationMaxAggregateInputType = {
   description?: true
   specsOverview?: true
   selection?: true
+  features?: true
 }
 
 export type ProductTranslationCountAggregateInputType = {
@@ -90,6 +95,7 @@ export type ProductTranslationCountAggregateInputType = {
   description?: true
   specsOverview?: true
   selection?: true
+  features?: true
   _all?: true
 }
 
@@ -174,6 +180,7 @@ export type ProductTranslationGroupByOutputType = {
   description: string | null
   specsOverview: string | null
   selection: string | null
+  features: string | null
   _count: ProductTranslationCountAggregateOutputType | null
   _min: ProductTranslationMinAggregateOutputType | null
   _max: ProductTranslationMaxAggregateOutputType | null
@@ -206,6 +213,7 @@ export type ProductTranslationWhereInput = {
   description?: Prisma.StringNullableFilter<"ProductTranslation"> | string | null
   specsOverview?: Prisma.StringNullableFilter<"ProductTranslation"> | string | null
   selection?: Prisma.StringNullableFilter<"ProductTranslation"> | string | null
+  features?: Prisma.StringNullableFilter<"ProductTranslation"> | string | null
   product?: Prisma.XOR<Prisma.ProductScalarRelationFilter, Prisma.ProductWhereInput>
 }
 
@@ -218,6 +226,7 @@ export type ProductTranslationOrderByWithRelationInput = {
   description?: Prisma.SortOrderInput | Prisma.SortOrder
   specsOverview?: Prisma.SortOrderInput | Prisma.SortOrder
   selection?: Prisma.SortOrderInput | Prisma.SortOrder
+  features?: Prisma.SortOrderInput | Prisma.SortOrder
   product?: Prisma.ProductOrderByWithRelationInput
 }
 
@@ -234,6 +243,7 @@ export type ProductTranslationWhereUniqueInput = Prisma.AtLeast<{
   description?: Prisma.StringNullableFilter<"ProductTranslation"> | string | null
   specsOverview?: Prisma.StringNullableFilter<"ProductTranslation"> | string | null
   selection?: Prisma.StringNullableFilter<"ProductTranslation"> | string | null
+  features?: Prisma.StringNullableFilter<"ProductTranslation"> | string | null
   product?: Prisma.XOR<Prisma.ProductScalarRelationFilter, Prisma.ProductWhereInput>
 }, "id" | "productId_locale">
 
@@ -246,6 +256,7 @@ export type ProductTranslationOrderByWithAggregationInput = {
   description?: Prisma.SortOrderInput | Prisma.SortOrder
   specsOverview?: Prisma.SortOrderInput | Prisma.SortOrder
   selection?: Prisma.SortOrderInput | Prisma.SortOrder
+  features?: Prisma.SortOrderInput | Prisma.SortOrder
   _count?: Prisma.ProductTranslationCountOrderByAggregateInput
   _max?: Prisma.ProductTranslationMaxOrderByAggregateInput
   _min?: Prisma.ProductTranslationMinOrderByAggregateInput
@@ -263,6 +274,7 @@ export type ProductTranslationScalarWhereWithAggregatesInput = {
   description?: Prisma.StringNullableWithAggregatesFilter<"ProductTranslation"> | string | null
   specsOverview?: Prisma.StringNullableWithAggregatesFilter<"ProductTranslation"> | string | null
   selection?: Prisma.StringNullableWithAggregatesFilter<"ProductTranslation"> | string | null
+  features?: Prisma.StringNullableWithAggregatesFilter<"ProductTranslation"> | string | null
 }
 
 export type ProductTranslationCreateInput = {
@@ -273,6 +285,7 @@ export type ProductTranslationCreateInput = {
   description?: string | null
   specsOverview?: string | null
   selection?: string | null
+  features?: string | null
   product: Prisma.ProductCreateNestedOneWithoutTranslationsInput
 }
 
@@ -285,6 +298,7 @@ export type ProductTranslationUncheckedCreateInput = {
   description?: string | null
   specsOverview?: string | null
   selection?: string | null
+  features?: string | null
 }
 
 export type ProductTranslationUpdateInput = {
@@ -295,6 +309,7 @@ export type ProductTranslationUpdateInput = {
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   specsOverview?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   selection?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  features?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   product?: Prisma.ProductUpdateOneRequiredWithoutTranslationsNestedInput
 }
 
@@ -307,6 +322,7 @@ export type ProductTranslationUncheckedUpdateInput = {
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   specsOverview?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   selection?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  features?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type ProductTranslationCreateManyInput = {
@@ -318,6 +334,7 @@ export type ProductTranslationCreateManyInput = {
   description?: string | null
   specsOverview?: string | null
   selection?: string | null
+  features?: string | null
 }
 
 export type ProductTranslationUpdateManyMutationInput = {
@@ -328,6 +345,7 @@ export type ProductTranslationUpdateManyMutationInput = {
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   specsOverview?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   selection?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  features?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type ProductTranslationUncheckedUpdateManyInput = {
@@ -339,6 +357,7 @@ export type ProductTranslationUncheckedUpdateManyInput = {
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   specsOverview?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   selection?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  features?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type ProductTranslationListRelationFilter = {
@@ -365,6 +384,7 @@ export type ProductTranslationCountOrderByAggregateInput = {
   description?: Prisma.SortOrder
   specsOverview?: Prisma.SortOrder
   selection?: Prisma.SortOrder
+  features?: Prisma.SortOrder
 }
 
 export type ProductTranslationMaxOrderByAggregateInput = {
@@ -376,6 +396,7 @@ export type ProductTranslationMaxOrderByAggregateInput = {
   description?: Prisma.SortOrder
   specsOverview?: Prisma.SortOrder
   selection?: Prisma.SortOrder
+  features?: Prisma.SortOrder
 }
 
 export type ProductTranslationMinOrderByAggregateInput = {
@@ -387,6 +408,7 @@ export type ProductTranslationMinOrderByAggregateInput = {
   description?: Prisma.SortOrder
   specsOverview?: Prisma.SortOrder
   selection?: Prisma.SortOrder
+  features?: Prisma.SortOrder
 }
 
 export type ProductTranslationCreateNestedManyWithoutProductInput = {
@@ -439,6 +461,7 @@ export type ProductTranslationCreateWithoutProductInput = {
   description?: string | null
   specsOverview?: string | null
   selection?: string | null
+  features?: string | null
 }
 
 export type ProductTranslationUncheckedCreateWithoutProductInput = {
@@ -449,6 +472,7 @@ export type ProductTranslationUncheckedCreateWithoutProductInput = {
   description?: string | null
   specsOverview?: string | null
   selection?: string | null
+  features?: string | null
 }
 
 export type ProductTranslationCreateOrConnectWithoutProductInput = {
@@ -489,6 +513,7 @@ export type ProductTranslationScalarWhereInput = {
   description?: Prisma.StringNullableFilter<"ProductTranslation"> | string | null
   specsOverview?: Prisma.StringNullableFilter<"ProductTranslation"> | string | null
   selection?: Prisma.StringNullableFilter<"ProductTranslation"> | string | null
+  features?: Prisma.StringNullableFilter<"ProductTranslation"> | string | null
 }
 
 export type ProductTranslationCreateManyProductInput = {
@@ -499,6 +524,7 @@ export type ProductTranslationCreateManyProductInput = {
   description?: string | null
   specsOverview?: string | null
   selection?: string | null
+  features?: string | null
 }
 
 export type ProductTranslationUpdateWithoutProductInput = {
@@ -509,6 +535,7 @@ export type ProductTranslationUpdateWithoutProductInput = {
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   specsOverview?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   selection?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  features?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type ProductTranslationUncheckedUpdateWithoutProductInput = {
@@ -519,6 +546,7 @@ export type ProductTranslationUncheckedUpdateWithoutProductInput = {
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   specsOverview?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   selection?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  features?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 export type ProductTranslationUncheckedUpdateManyWithoutProductInput = {
@@ -529,6 +557,7 @@ export type ProductTranslationUncheckedUpdateManyWithoutProductInput = {
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   specsOverview?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   selection?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  features?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
 }
 
 
@@ -542,6 +571,7 @@ export type ProductTranslationSelect<ExtArgs extends runtime.Types.Extensions.In
   description?: boolean
   specsOverview?: boolean
   selection?: boolean
+  features?: boolean
   product?: boolean | Prisma.ProductDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["productTranslation"]>
 
@@ -554,6 +584,7 @@ export type ProductTranslationSelectCreateManyAndReturn<ExtArgs extends runtime.
   description?: boolean
   specsOverview?: boolean
   selection?: boolean
+  features?: boolean
   product?: boolean | Prisma.ProductDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["productTranslation"]>
 
@@ -566,6 +597,7 @@ export type ProductTranslationSelectUpdateManyAndReturn<ExtArgs extends runtime.
   description?: boolean
   specsOverview?: boolean
   selection?: boolean
+  features?: boolean
   product?: boolean | Prisma.ProductDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["productTranslation"]>
 
@@ -578,9 +610,10 @@ export type ProductTranslationSelectScalar = {
   description?: boolean
   specsOverview?: boolean
   selection?: boolean
+  features?: boolean
 }
 
-export type ProductTranslationOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "productId" | "locale" | "name" | "summary" | "description" | "specsOverview" | "selection", ExtArgs["result"]["productTranslation"]>
+export type ProductTranslationOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "productId" | "locale" | "name" | "summary" | "description" | "specsOverview" | "selection" | "features", ExtArgs["result"]["productTranslation"]>
 export type ProductTranslationInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   product?: boolean | Prisma.ProductDefaultArgs<ExtArgs>
 }
@@ -605,6 +638,7 @@ export type $ProductTranslationPayload<ExtArgs extends runtime.Types.Extensions.
     description: string | null
     specsOverview: string | null
     selection: string | null
+    features: string | null
   }, ExtArgs["result"]["productTranslation"]>
   composites: {}
 }
@@ -1037,6 +1071,7 @@ export interface ProductTranslationFieldRefs {
   readonly description: Prisma.FieldRef<"ProductTranslation", 'String'>
   readonly specsOverview: Prisma.FieldRef<"ProductTranslation", 'String'>
   readonly selection: Prisma.FieldRef<"ProductTranslation", 'String'>
+  readonly features: Prisma.FieldRef<"ProductTranslation", 'String'>
 }
     
 

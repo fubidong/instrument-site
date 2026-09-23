@@ -65,8 +65,8 @@ export function CompareToggle({
         className ??
         `rounded-md border px-5 py-2.5 text-sm font-semibold transition ${
           inCompare
-            ? "border-sky-500 bg-sky-50 text-sky-700"
-            : "border-slate-300 text-slate-600 hover:border-sky-400 hover:text-sky-600"
+            ? "border-primary bg-slate-50 text-primary"
+            : "border-slate-300 text-slate-600 hover:border-primary hover:text-primary"
         }`
       }
     >
@@ -125,7 +125,7 @@ export default function CompareBar({ locale }: { locale: string }) {
         </div>
         <Link
           href={compareHref}
-          className="shrink-0 rounded-md bg-sky-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-500"
+          className="shrink-0 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary-hover"
         >
           {isEn ? `Compare (${list.length})` : `去对比 (${list.length})`}
         </Link>

@@ -29,7 +29,7 @@ export default function ProductForm({
     isActive: boolean;
     isFeatured: boolean;
     isSampleEnabled: boolean;
-    translations: { locale: string; name: string; summary: string | null; description: string | null; selection: string | null; specsOverview: string | null }[];
+    translations: { locale: string; name: string; summary: string | null; description: string | null; selection: string | null; specsOverview: string | null; features: string | null }[];
   } | null;
   lines: { id: string; code: string; zhName: string; enName: string; brandZh: string; categoryZh: string }[];
   paramGroups: ParamGroupWithDefs[];
@@ -256,6 +256,12 @@ export default function ProductForm({
             <>
               <div>
                 <label className="mb-1 block text-sm font-medium text-slate-700">
+                  主图下方特性文案（中文）<span className="ml-1 text-xs font-normal text-slate-400">品牌专属区块（如国仪量子），显示在主图下方，不与其他品牌冲突</span>
+                </label>
+                <RichTextEditor name="features_zh" defaultValue={t["zh"]?.features ?? ""} minHeight={180} />
+              </div>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">
                   产品介绍（中文）<span className="ml-1 text-xs font-normal text-slate-400">“产品介绍”选项卡内容，与简介分开</span>
                 </label>
                 <RichTextEditor name="description_zh" defaultValue={t["zh"]?.description ?? ""} minHeight={420} />
@@ -301,6 +307,12 @@ export default function ProductForm({
           </div>
           {mounted.en && (
             <>
+              <div>
+                <label className="mb-1 block text-sm font-medium text-slate-700">
+                  Features below main image (EN) <span className="ml-1 text-xs font-normal text-slate-400">Brand-specific block (e.g. CIQTEK), shown under main image</span>
+                </label>
+                <RichTextEditor name="features_en" defaultValue={t["en"]?.features ?? ""} minHeight={180} />
+              </div>
               <div>
                 <label className="mb-1 block text-sm font-medium text-slate-700">
                   Description (EN) <span className="ml-1 text-xs font-normal text-slate-400">Overview tab content, separate from summary</span>

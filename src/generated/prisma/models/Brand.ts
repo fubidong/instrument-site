@@ -65,6 +65,7 @@ export type BrandCountAggregateOutputType = {
   isActive: number
   createdAt: number
   updatedAt: number
+  tags: number
   _all: number
 }
 
@@ -108,6 +109,7 @@ export type BrandCountAggregateInputType = {
   isActive?: true
   createdAt?: true
   updatedAt?: true
+  tags?: true
   _all?: true
 }
 
@@ -206,6 +208,7 @@ export type BrandGroupByOutputType = {
   isActive: boolean
   createdAt: Date
   updatedAt: Date
+  tags: string[]
   _count: BrandCountAggregateOutputType | null
   _avg: BrandAvgAggregateOutputType | null
   _sum: BrandSumAggregateOutputType | null
@@ -240,6 +243,7 @@ export type BrandWhereInput = {
   isActive?: Prisma.BoolFilter<"Brand"> | boolean
   createdAt?: Prisma.DateTimeFilter<"Brand"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Brand"> | Date | string
+  tags?: Prisma.StringNullableListFilter<"Brand">
   translations?: Prisma.BrandTranslationListRelationFilter
   categories?: Prisma.BrandCategoryListRelationFilter
   ownCategories?: Prisma.CategoryListRelationFilter
@@ -247,6 +251,7 @@ export type BrandWhereInput = {
   products?: Prisma.ProductListRelationFilter
   documents?: Prisma.DocumentListRelationFilter
   navMenus?: Prisma.NavMenuListRelationFilter
+  supportArticles?: Prisma.SupportArticleListRelationFilter
 }
 
 export type BrandOrderByWithRelationInput = {
@@ -258,6 +263,7 @@ export type BrandOrderByWithRelationInput = {
   isActive?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
+  tags?: Prisma.SortOrder
   translations?: Prisma.BrandTranslationOrderByRelationAggregateInput
   categories?: Prisma.BrandCategoryOrderByRelationAggregateInput
   ownCategories?: Prisma.CategoryOrderByRelationAggregateInput
@@ -265,6 +271,7 @@ export type BrandOrderByWithRelationInput = {
   products?: Prisma.ProductOrderByRelationAggregateInput
   documents?: Prisma.DocumentOrderByRelationAggregateInput
   navMenus?: Prisma.NavMenuOrderByRelationAggregateInput
+  supportArticles?: Prisma.SupportArticleOrderByRelationAggregateInput
 }
 
 export type BrandWhereUniqueInput = Prisma.AtLeast<{
@@ -279,6 +286,7 @@ export type BrandWhereUniqueInput = Prisma.AtLeast<{
   isActive?: Prisma.BoolFilter<"Brand"> | boolean
   createdAt?: Prisma.DateTimeFilter<"Brand"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Brand"> | Date | string
+  tags?: Prisma.StringNullableListFilter<"Brand">
   translations?: Prisma.BrandTranslationListRelationFilter
   categories?: Prisma.BrandCategoryListRelationFilter
   ownCategories?: Prisma.CategoryListRelationFilter
@@ -286,6 +294,7 @@ export type BrandWhereUniqueInput = Prisma.AtLeast<{
   products?: Prisma.ProductListRelationFilter
   documents?: Prisma.DocumentListRelationFilter
   navMenus?: Prisma.NavMenuListRelationFilter
+  supportArticles?: Prisma.SupportArticleListRelationFilter
 }, "id" | "code">
 
 export type BrandOrderByWithAggregationInput = {
@@ -297,6 +306,7 @@ export type BrandOrderByWithAggregationInput = {
   isActive?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
+  tags?: Prisma.SortOrder
   _count?: Prisma.BrandCountOrderByAggregateInput
   _avg?: Prisma.BrandAvgOrderByAggregateInput
   _max?: Prisma.BrandMaxOrderByAggregateInput
@@ -316,6 +326,7 @@ export type BrandScalarWhereWithAggregatesInput = {
   isActive?: Prisma.BoolWithAggregatesFilter<"Brand"> | boolean
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"Brand"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Brand"> | Date | string
+  tags?: Prisma.StringNullableListFilter<"Brand">
 }
 
 export type BrandCreateInput = {
@@ -327,6 +338,7 @@ export type BrandCreateInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationCreateNestedManyWithoutBrandInput
   categories?: Prisma.BrandCategoryCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryCreateNestedManyWithoutBrandInput
@@ -334,6 +346,7 @@ export type BrandCreateInput = {
   products?: Prisma.ProductCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateInput = {
@@ -345,6 +358,7 @@ export type BrandUncheckedCreateInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedCreateNestedManyWithoutBrandInput
   categories?: Prisma.BrandCategoryUncheckedCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryUncheckedCreateNestedManyWithoutBrandInput
@@ -352,6 +366,7 @@ export type BrandUncheckedCreateInput = {
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUpdateInput = {
@@ -363,6 +378,7 @@ export type BrandUpdateInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUpdateManyWithoutBrandNestedInput
   categories?: Prisma.BrandCategoryUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUpdateManyWithoutBrandNestedInput
@@ -370,6 +386,7 @@ export type BrandUpdateInput = {
   products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateInput = {
@@ -381,6 +398,7 @@ export type BrandUncheckedUpdateInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedUpdateManyWithoutBrandNestedInput
   categories?: Prisma.BrandCategoryUncheckedUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUncheckedUpdateManyWithoutBrandNestedInput
@@ -388,6 +406,7 @@ export type BrandUncheckedUpdateInput = {
   products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandCreateManyInput = {
@@ -399,6 +418,7 @@ export type BrandCreateManyInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
 }
 
 export type BrandUpdateManyMutationInput = {
@@ -410,6 +430,7 @@ export type BrandUpdateManyMutationInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
 }
 
 export type BrandUncheckedUpdateManyInput = {
@@ -421,6 +442,15 @@ export type BrandUncheckedUpdateManyInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
+}
+
+export type StringNullableListFilter<$PrismaModel = never> = {
+  equals?: string[] | Prisma.ListStringFieldRefInput<$PrismaModel> | null
+  has?: string | Prisma.StringFieldRefInput<$PrismaModel> | null
+  hasEvery?: string[] | Prisma.ListStringFieldRefInput<$PrismaModel>
+  hasSome?: string[] | Prisma.ListStringFieldRefInput<$PrismaModel>
+  isEmpty?: boolean
 }
 
 export type BrandCountOrderByAggregateInput = {
@@ -432,6 +462,7 @@ export type BrandCountOrderByAggregateInput = {
   isActive?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
+  tags?: Prisma.SortOrder
 }
 
 export type BrandAvgOrderByAggregateInput = {
@@ -474,6 +505,10 @@ export type BrandNullableScalarRelationFilter = {
   isNot?: Prisma.BrandWhereInput | null
 }
 
+export type BrandCreatetagsInput = {
+  set: string[]
+}
+
 export type StringFieldUpdateOperationsInput = {
   set?: string
 }
@@ -496,6 +531,11 @@ export type BoolFieldUpdateOperationsInput = {
 
 export type DateTimeFieldUpdateOperationsInput = {
   set?: Date | string
+}
+
+export type BrandUpdatetagsInput = {
+  set?: string[]
+  push?: string | string[]
 }
 
 export type BrandCreateNestedOneWithoutTranslationsInput = {
@@ -586,6 +626,22 @@ export type BrandUpdateOneWithoutDocumentsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.BrandUpdateToOneWithWhereWithoutDocumentsInput, Prisma.BrandUpdateWithoutDocumentsInput>, Prisma.BrandUncheckedUpdateWithoutDocumentsInput>
 }
 
+export type BrandCreateNestedOneWithoutSupportArticlesInput = {
+  create?: Prisma.XOR<Prisma.BrandCreateWithoutSupportArticlesInput, Prisma.BrandUncheckedCreateWithoutSupportArticlesInput>
+  connectOrCreate?: Prisma.BrandCreateOrConnectWithoutSupportArticlesInput
+  connect?: Prisma.BrandWhereUniqueInput
+}
+
+export type BrandUpdateOneWithoutSupportArticlesNestedInput = {
+  create?: Prisma.XOR<Prisma.BrandCreateWithoutSupportArticlesInput, Prisma.BrandUncheckedCreateWithoutSupportArticlesInput>
+  connectOrCreate?: Prisma.BrandCreateOrConnectWithoutSupportArticlesInput
+  upsert?: Prisma.BrandUpsertWithoutSupportArticlesInput
+  disconnect?: Prisma.BrandWhereInput | boolean
+  delete?: Prisma.BrandWhereInput | boolean
+  connect?: Prisma.BrandWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.BrandUpdateToOneWithWhereWithoutSupportArticlesInput, Prisma.BrandUpdateWithoutSupportArticlesInput>, Prisma.BrandUncheckedUpdateWithoutSupportArticlesInput>
+}
+
 export type BrandCreateNestedOneWithoutNavMenusInput = {
   create?: Prisma.XOR<Prisma.BrandCreateWithoutNavMenusInput, Prisma.BrandUncheckedCreateWithoutNavMenusInput>
   connectOrCreate?: Prisma.BrandCreateOrConnectWithoutNavMenusInput
@@ -611,12 +667,14 @@ export type BrandCreateWithoutTranslationsInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   categories?: Prisma.BrandCategoryCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateWithoutTranslationsInput = {
@@ -628,12 +686,14 @@ export type BrandUncheckedCreateWithoutTranslationsInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   categories?: Prisma.BrandCategoryUncheckedCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryUncheckedCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandCreateOrConnectWithoutTranslationsInput = {
@@ -661,12 +721,14 @@ export type BrandUpdateWithoutTranslationsInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   categories?: Prisma.BrandCategoryUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateWithoutTranslationsInput = {
@@ -678,12 +740,14 @@ export type BrandUncheckedUpdateWithoutTranslationsInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   categories?: Prisma.BrandCategoryUncheckedUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUncheckedUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandCreateWithoutOwnCategoriesInput = {
@@ -695,12 +759,14 @@ export type BrandCreateWithoutOwnCategoriesInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationCreateNestedManyWithoutBrandInput
   categories?: Prisma.BrandCategoryCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateWithoutOwnCategoriesInput = {
@@ -712,12 +778,14 @@ export type BrandUncheckedCreateWithoutOwnCategoriesInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedCreateNestedManyWithoutBrandInput
   categories?: Prisma.BrandCategoryUncheckedCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandCreateOrConnectWithoutOwnCategoriesInput = {
@@ -745,12 +813,14 @@ export type BrandUpdateWithoutOwnCategoriesInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUpdateManyWithoutBrandNestedInput
   categories?: Prisma.BrandCategoryUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateWithoutOwnCategoriesInput = {
@@ -762,12 +832,14 @@ export type BrandUncheckedUpdateWithoutOwnCategoriesInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedUpdateManyWithoutBrandNestedInput
   categories?: Prisma.BrandCategoryUncheckedUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandCreateWithoutCategoriesInput = {
@@ -779,12 +851,14 @@ export type BrandCreateWithoutCategoriesInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateWithoutCategoriesInput = {
@@ -796,12 +870,14 @@ export type BrandUncheckedCreateWithoutCategoriesInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryUncheckedCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandCreateOrConnectWithoutCategoriesInput = {
@@ -829,12 +905,14 @@ export type BrandUpdateWithoutCategoriesInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateWithoutCategoriesInput = {
@@ -846,12 +924,14 @@ export type BrandUncheckedUpdateWithoutCategoriesInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUncheckedUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandCreateWithoutProductLinesInput = {
@@ -863,12 +943,14 @@ export type BrandCreateWithoutProductLinesInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationCreateNestedManyWithoutBrandInput
   categories?: Prisma.BrandCategoryCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateWithoutProductLinesInput = {
@@ -880,12 +962,14 @@ export type BrandUncheckedCreateWithoutProductLinesInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedCreateNestedManyWithoutBrandInput
   categories?: Prisma.BrandCategoryUncheckedCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryUncheckedCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandCreateOrConnectWithoutProductLinesInput = {
@@ -913,12 +997,14 @@ export type BrandUpdateWithoutProductLinesInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUpdateManyWithoutBrandNestedInput
   categories?: Prisma.BrandCategoryUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateWithoutProductLinesInput = {
@@ -930,12 +1016,14 @@ export type BrandUncheckedUpdateWithoutProductLinesInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedUpdateManyWithoutBrandNestedInput
   categories?: Prisma.BrandCategoryUncheckedUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUncheckedUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandCreateWithoutProductsInput = {
@@ -947,12 +1035,14 @@ export type BrandCreateWithoutProductsInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationCreateNestedManyWithoutBrandInput
   categories?: Prisma.BrandCategoryCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateWithoutProductsInput = {
@@ -964,12 +1054,14 @@ export type BrandUncheckedCreateWithoutProductsInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedCreateNestedManyWithoutBrandInput
   categories?: Prisma.BrandCategoryUncheckedCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryUncheckedCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandCreateOrConnectWithoutProductsInput = {
@@ -997,12 +1089,14 @@ export type BrandUpdateWithoutProductsInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUpdateManyWithoutBrandNestedInput
   categories?: Prisma.BrandCategoryUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateWithoutProductsInput = {
@@ -1014,12 +1108,14 @@ export type BrandUncheckedUpdateWithoutProductsInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedUpdateManyWithoutBrandNestedInput
   categories?: Prisma.BrandCategoryUncheckedUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUncheckedUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandCreateWithoutDocumentsInput = {
@@ -1031,12 +1127,14 @@ export type BrandCreateWithoutDocumentsInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationCreateNestedManyWithoutBrandInput
   categories?: Prisma.BrandCategoryCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateWithoutDocumentsInput = {
@@ -1048,12 +1146,14 @@ export type BrandUncheckedCreateWithoutDocumentsInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedCreateNestedManyWithoutBrandInput
   categories?: Prisma.BrandCategoryUncheckedCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryUncheckedCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
   navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandCreateOrConnectWithoutDocumentsInput = {
@@ -1081,12 +1181,14 @@ export type BrandUpdateWithoutDocumentsInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUpdateManyWithoutBrandNestedInput
   categories?: Prisma.BrandCategoryUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateWithoutDocumentsInput = {
@@ -1098,11 +1200,105 @@ export type BrandUncheckedUpdateWithoutDocumentsInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedUpdateManyWithoutBrandNestedInput
   categories?: Prisma.BrandCategoryUncheckedUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUncheckedUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUncheckedUpdateManyWithoutBrandNestedInput
+}
+
+export type BrandCreateWithoutSupportArticlesInput = {
+  id?: string
+  code: string
+  logo?: string | null
+  website?: string | null
+  sortOrder?: number
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
+  translations?: Prisma.BrandTranslationCreateNestedManyWithoutBrandInput
+  categories?: Prisma.BrandCategoryCreateNestedManyWithoutBrandInput
+  ownCategories?: Prisma.CategoryCreateNestedManyWithoutBrandInput
+  productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
+  products?: Prisma.ProductCreateNestedManyWithoutBrandInput
+  documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuCreateNestedManyWithoutBrandInput
+}
+
+export type BrandUncheckedCreateWithoutSupportArticlesInput = {
+  id?: string
+  code: string
+  logo?: string | null
+  website?: string | null
+  sortOrder?: number
+  isActive?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
+  translations?: Prisma.BrandTranslationUncheckedCreateNestedManyWithoutBrandInput
+  categories?: Prisma.BrandCategoryUncheckedCreateNestedManyWithoutBrandInput
+  ownCategories?: Prisma.CategoryUncheckedCreateNestedManyWithoutBrandInput
+  productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
+  products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
+  documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
+  navMenus?: Prisma.NavMenuUncheckedCreateNestedManyWithoutBrandInput
+}
+
+export type BrandCreateOrConnectWithoutSupportArticlesInput = {
+  where: Prisma.BrandWhereUniqueInput
+  create: Prisma.XOR<Prisma.BrandCreateWithoutSupportArticlesInput, Prisma.BrandUncheckedCreateWithoutSupportArticlesInput>
+}
+
+export type BrandUpsertWithoutSupportArticlesInput = {
+  update: Prisma.XOR<Prisma.BrandUpdateWithoutSupportArticlesInput, Prisma.BrandUncheckedUpdateWithoutSupportArticlesInput>
+  create: Prisma.XOR<Prisma.BrandCreateWithoutSupportArticlesInput, Prisma.BrandUncheckedCreateWithoutSupportArticlesInput>
+  where?: Prisma.BrandWhereInput
+}
+
+export type BrandUpdateToOneWithWhereWithoutSupportArticlesInput = {
+  where?: Prisma.BrandWhereInput
+  data: Prisma.XOR<Prisma.BrandUpdateWithoutSupportArticlesInput, Prisma.BrandUncheckedUpdateWithoutSupportArticlesInput>
+}
+
+export type BrandUpdateWithoutSupportArticlesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  code?: Prisma.StringFieldUpdateOperationsInput | string
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  website?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
+  translations?: Prisma.BrandTranslationUpdateManyWithoutBrandNestedInput
+  categories?: Prisma.BrandCategoryUpdateManyWithoutBrandNestedInput
+  ownCategories?: Prisma.CategoryUpdateManyWithoutBrandNestedInput
+  productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
+  products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
+  documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
+  navMenus?: Prisma.NavMenuUpdateManyWithoutBrandNestedInput
+}
+
+export type BrandUncheckedUpdateWithoutSupportArticlesInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  code?: Prisma.StringFieldUpdateOperationsInput | string
+  logo?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  website?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sortOrder?: Prisma.IntFieldUpdateOperationsInput | number
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
+  translations?: Prisma.BrandTranslationUncheckedUpdateManyWithoutBrandNestedInput
+  categories?: Prisma.BrandCategoryUncheckedUpdateManyWithoutBrandNestedInput
+  ownCategories?: Prisma.CategoryUncheckedUpdateManyWithoutBrandNestedInput
+  productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
+  products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
+  documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
   navMenus?: Prisma.NavMenuUncheckedUpdateManyWithoutBrandNestedInput
 }
 
@@ -1115,12 +1311,14 @@ export type BrandCreateWithoutNavMenusInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationCreateNestedManyWithoutBrandInput
   categories?: Prisma.BrandCategoryCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleCreateNestedManyWithoutBrandInput
 }
 
 export type BrandUncheckedCreateWithoutNavMenusInput = {
@@ -1132,12 +1330,14 @@ export type BrandUncheckedCreateWithoutNavMenusInput = {
   isActive?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  tags?: Prisma.BrandCreatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedCreateNestedManyWithoutBrandInput
   categories?: Prisma.BrandCategoryUncheckedCreateNestedManyWithoutBrandInput
   ownCategories?: Prisma.CategoryUncheckedCreateNestedManyWithoutBrandInput
   productLines?: Prisma.ProductLineUncheckedCreateNestedManyWithoutBrandInput
   products?: Prisma.ProductUncheckedCreateNestedManyWithoutBrandInput
   documents?: Prisma.DocumentUncheckedCreateNestedManyWithoutBrandInput
+  supportArticles?: Prisma.SupportArticleUncheckedCreateNestedManyWithoutBrandInput
 }
 
 export type BrandCreateOrConnectWithoutNavMenusInput = {
@@ -1165,12 +1365,14 @@ export type BrandUpdateWithoutNavMenusInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUpdateManyWithoutBrandNestedInput
   categories?: Prisma.BrandCategoryUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUpdateManyWithoutBrandNestedInput
 }
 
 export type BrandUncheckedUpdateWithoutNavMenusInput = {
@@ -1182,12 +1384,14 @@ export type BrandUncheckedUpdateWithoutNavMenusInput = {
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  tags?: Prisma.BrandUpdatetagsInput | string[]
   translations?: Prisma.BrandTranslationUncheckedUpdateManyWithoutBrandNestedInput
   categories?: Prisma.BrandCategoryUncheckedUpdateManyWithoutBrandNestedInput
   ownCategories?: Prisma.CategoryUncheckedUpdateManyWithoutBrandNestedInput
   productLines?: Prisma.ProductLineUncheckedUpdateManyWithoutBrandNestedInput
   products?: Prisma.ProductUncheckedUpdateManyWithoutBrandNestedInput
   documents?: Prisma.DocumentUncheckedUpdateManyWithoutBrandNestedInput
+  supportArticles?: Prisma.SupportArticleUncheckedUpdateManyWithoutBrandNestedInput
 }
 
 
@@ -1203,6 +1407,7 @@ export type BrandCountOutputType = {
   products: number
   documents: number
   navMenus: number
+  supportArticles: number
 }
 
 export type BrandCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -1213,6 +1418,7 @@ export type BrandCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.
   products?: boolean | BrandCountOutputTypeCountProductsArgs
   documents?: boolean | BrandCountOutputTypeCountDocumentsArgs
   navMenus?: boolean | BrandCountOutputTypeCountNavMenusArgs
+  supportArticles?: boolean | BrandCountOutputTypeCountSupportArticlesArgs
 }
 
 /**
@@ -1274,6 +1480,13 @@ export type BrandCountOutputTypeCountNavMenusArgs<ExtArgs extends runtime.Types.
   where?: Prisma.NavMenuWhereInput
 }
 
+/**
+ * BrandCountOutputType without action
+ */
+export type BrandCountOutputTypeCountSupportArticlesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.SupportArticleWhereInput
+}
+
 
 export type BrandSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -1284,6 +1497,7 @@ export type BrandSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = 
   isActive?: boolean
   createdAt?: boolean
   updatedAt?: boolean
+  tags?: boolean
   translations?: boolean | Prisma.Brand$translationsArgs<ExtArgs>
   categories?: boolean | Prisma.Brand$categoriesArgs<ExtArgs>
   ownCategories?: boolean | Prisma.Brand$ownCategoriesArgs<ExtArgs>
@@ -1291,6 +1505,7 @@ export type BrandSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = 
   products?: boolean | Prisma.Brand$productsArgs<ExtArgs>
   documents?: boolean | Prisma.Brand$documentsArgs<ExtArgs>
   navMenus?: boolean | Prisma.Brand$navMenusArgs<ExtArgs>
+  supportArticles?: boolean | Prisma.Brand$supportArticlesArgs<ExtArgs>
   _count?: boolean | Prisma.BrandCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["brand"]>
 
@@ -1303,6 +1518,7 @@ export type BrandSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensi
   isActive?: boolean
   createdAt?: boolean
   updatedAt?: boolean
+  tags?: boolean
 }, ExtArgs["result"]["brand"]>
 
 export type BrandSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -1314,6 +1530,7 @@ export type BrandSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensi
   isActive?: boolean
   createdAt?: boolean
   updatedAt?: boolean
+  tags?: boolean
 }, ExtArgs["result"]["brand"]>
 
 export type BrandSelectScalar = {
@@ -1325,9 +1542,10 @@ export type BrandSelectScalar = {
   isActive?: boolean
   createdAt?: boolean
   updatedAt?: boolean
+  tags?: boolean
 }
 
-export type BrandOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "code" | "logo" | "website" | "sortOrder" | "isActive" | "createdAt" | "updatedAt", ExtArgs["result"]["brand"]>
+export type BrandOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "code" | "logo" | "website" | "sortOrder" | "isActive" | "createdAt" | "updatedAt" | "tags", ExtArgs["result"]["brand"]>
 export type BrandInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   translations?: boolean | Prisma.Brand$translationsArgs<ExtArgs>
   categories?: boolean | Prisma.Brand$categoriesArgs<ExtArgs>
@@ -1336,6 +1554,7 @@ export type BrandInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs =
   products?: boolean | Prisma.Brand$productsArgs<ExtArgs>
   documents?: boolean | Prisma.Brand$documentsArgs<ExtArgs>
   navMenus?: boolean | Prisma.Brand$navMenusArgs<ExtArgs>
+  supportArticles?: boolean | Prisma.Brand$supportArticlesArgs<ExtArgs>
   _count?: boolean | Prisma.BrandCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type BrandIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -1351,6 +1570,7 @@ export type $BrandPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
     products: Prisma.$ProductPayload<ExtArgs>[]
     documents: Prisma.$DocumentPayload<ExtArgs>[]
     navMenus: Prisma.$NavMenuPayload<ExtArgs>[]
+    supportArticles: Prisma.$SupportArticlePayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1361,6 +1581,7 @@ export type $BrandPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs 
     isActive: boolean
     createdAt: Date
     updatedAt: Date
+    tags: string[]
   }, ExtArgs["result"]["brand"]>
   composites: {}
 }
@@ -1762,6 +1983,7 @@ export interface Prisma__BrandClient<T, Null = never, ExtArgs extends runtime.Ty
   products<T extends Prisma.Brand$productsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Brand$productsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   documents<T extends Prisma.Brand$documentsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Brand$documentsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$DocumentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   navMenus<T extends Prisma.Brand$navMenusArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Brand$navMenusArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$NavMenuPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  supportArticles<T extends Prisma.Brand$supportArticlesArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Brand$supportArticlesArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$SupportArticlePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1799,6 +2021,7 @@ export interface BrandFieldRefs {
   readonly isActive: Prisma.FieldRef<"Brand", 'Boolean'>
   readonly createdAt: Prisma.FieldRef<"Brand", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"Brand", 'DateTime'>
+  readonly tags: Prisma.FieldRef<"Brand", 'String[]'>
 }
     
 
@@ -2357,6 +2580,30 @@ export type Brand$navMenusArgs<ExtArgs extends runtime.Types.Extensions.Internal
   take?: number
   skip?: number
   distinct?: Prisma.NavMenuScalarFieldEnum | Prisma.NavMenuScalarFieldEnum[]
+}
+
+/**
+ * Brand.supportArticles
+ */
+export type Brand$supportArticlesArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the SupportArticle
+   */
+  select?: Prisma.SupportArticleSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the SupportArticle
+   */
+  omit?: Prisma.SupportArticleOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.SupportArticleInclude<ExtArgs> | null
+  where?: Prisma.SupportArticleWhereInput
+  orderBy?: Prisma.SupportArticleOrderByWithRelationInput | Prisma.SupportArticleOrderByWithRelationInput[]
+  cursor?: Prisma.SupportArticleWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.SupportArticleScalarFieldEnum | Prisma.SupportArticleScalarFieldEnum[]
 }
 
 /**

@@ -17,6 +17,10 @@ export default function SettingsForm({
     address: string;
     introZh: string;
     introEn: string;
+    logo: string;
+    favicon: string;
+    footerZh: string;
+    footerEn: string;
   };
 }) {
   const [state, formAction, pending] = useActionState(saveSettingsAction, initialState);
@@ -125,6 +129,34 @@ export default function SettingsForm({
               rows={4}
               className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="rounded-lg border border-slate-200 bg-white p-5">
+        <h2 className="mb-4 text-sm font-semibold text-slate-700">Logo 与站标</h2>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div>
+            <label className="mb-1 block text-sm font-medium text-slate-700">站点 Logo 图片 URL</label>
+            <input name="site_logo" defaultValue={initial.logo} className="w-full rounded-md border px-3 py-2 text-sm" placeholder="/uploads/logo.png" />
+          </div>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-slate-700">站标 / Favicon URL</label>
+            <input name="site_favicon" defaultValue={initial.favicon} className="w-full rounded-md border px-3 py-2 text-sm" placeholder="/favicon.ico" />
+          </div>
+        </div>
+      </section>
+
+      <section className="rounded-lg border border-slate-200 bg-white p-5">
+        <h2 className="mb-4 text-sm font-semibold text-slate-700">首页页底</h2>
+        <div className="space-y-4">
+          <div>
+            <label className="mb-1 block text-sm font-medium text-slate-700">页底文字（中文）</label>
+            <textarea name="footer_text_zh" defaultValue={initial.footerZh} rows={3} className="w-full rounded-md border px-3 py-2 text-sm" />
+          </div>
+          <div>
+            <label className="mb-1 block text-sm font-medium text-slate-700">页底文字（英文）</label>
+            <textarea name="footer_text_en" defaultValue={initial.footerEn} rows={3} className="w-full rounded-md border px-3 py-2 text-sm" />
           </div>
         </div>
       </section>

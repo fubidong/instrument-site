@@ -4,8 +4,8 @@ import { t } from "./site";
 
 /** 品牌信息 */
 export const getBrand = cache(async (code: string) => {
-  const brand = await db.brand.findUnique({
-    where: { code: code.toUpperCase() },
+  const brand = await db.brand.findFirst({
+    where: { code: { equals: code.toLowerCase(), mode: "insensitive" } },
     include: { translations: true },
   });
   if (!brand) return null;

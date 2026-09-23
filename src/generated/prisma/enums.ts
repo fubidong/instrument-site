@@ -79,3 +79,12 @@ export const PostCategory = {
 } as const
 
 export type PostCategory = (typeof PostCategory)[keyof typeof PostCategory]
+
+
+export const SupportArticleType = {
+  solution: 'solution',
+  tech: 'tech',
+  faq: 'faq'
+} as const
+
+export type SupportArticleType = (typeof SupportArticleType)[keyof typeof SupportArticleType]

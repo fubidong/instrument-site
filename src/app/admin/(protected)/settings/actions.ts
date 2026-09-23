@@ -34,6 +34,10 @@ export async function saveSettingsAction(
   const address = (formData.get("contact_address") as string)?.trim() || "";
   const introZh = (formData.get("company_intro_zh") as string)?.trim() || "";
   const introEn = (formData.get("company_intro_en") as string)?.trim() || "";
+  const logo = (formData.get("site_logo") as string)?.trim() || "";
+  const favicon = (formData.get("site_favicon") as string)?.trim() || "";
+  const footerZh = (formData.get("footer_text_zh") as string)?.trim() || "";
+  const footerEn = (formData.get("footer_text_en") as string)?.trim() || "";
 
   if (!siteNameZh && !siteNameEn) return { error: "请至少填写一种语言的站点名称" };
 
@@ -46,6 +50,10 @@ export async function saveSettingsAction(
     await upsertSetting("contact_address", address, null);
     await upsertSetting("company_intro", introZh, "zh");
     await upsertSetting("company_intro", introEn, "en");
+    await upsertSetting("site_logo", logo, null);
+    await upsertSetting("site_favicon", favicon, null);
+    await upsertSetting("footer_text", footerZh, "zh");
+    await upsertSetting("footer_text", footerEn, "en");
     revalidatePath("/admin/settings");
   } catch (e) {
     return { error: `保存失败：${e instanceof Error ? e.message : String(e)}` };

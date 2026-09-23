@@ -101,25 +101,31 @@ export default async function ProductDetailPage({
   const allDocs = [...product.documents, ...(product.productLine.documents ?? [])];
   const seen = new Set<string>();
   const mergedDocs = allDocs.filter((d) => {
-    const k = d.title + "|" + d.filePath;
+    // 去重 key 含语言：同一文件的中/英文两条（同标题同路径不同语言）需同时保留
+    const k = d.title + "|" + d.filePath + "|" + (d.language || "");
     if (seen.has(k)) return false;
     seen.add(k);
     return true;
   });
-  // 产品规格手册 PDF：只显示 datasheet（数据表），不显示用户手册
-  const productDsPdfs = product.documents.filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
-  const dsPdfs = mergedDocs.filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
+  // 产品规格手册 PDF：数据手册 + 产品单页(quick_guide)，按当前语言过滤
+  const langDoc = (d: any) => !d.language || d.language === locale;
+  const specDoc = (d: any) => (d.docType === "datasheet" || d.docType === "quick_guide") && /\.pdf$/i.test(d.filePath) && langDoc(d);
+  const productDsPdfs = product.documents.filter(specDoc);
+  const dsPdfs = mergedDocs.filter(specDoc);
   const pdfSource = productDsPdfs.length > 0 ? productDsPdfs : dsPdfs;
-  const pdfs = pdfSource
+  // 无规格书/单页时回退：所有 PDF 排除用户手册
+  const fallbackPdfs = mergedDocs.filter((d) => /\.pdf$/i.test(d.filePath) && langDoc(d) && d.docType !== "user_manual");
+  const pdfs = (pdfSource.length > 0 ? pdfSource : fallbackPdfs)
     .sort((a, b) => {
       const rank = (x: any) => (/^https?:\/\//i.test(x.filePath) ? 1 : 0);
       return rank(a) - rank(b);
     })
     .map((d) => ({ id: d.id, title: d.title, filePath: d.filePath, docType: d.docType }));
-  // 资料下载选项卡：全部手册（datasheet + 编程手册 + 用户手册 + 应用笔记等）
+  // 资料下载选项卡：全部手册（数据手册 + 单页 + 编程手册 + 用户手册 + 应用笔记等），按当前语言过滤
   const downloads = mergedDocs
     .filter((d) => {
-      if (!["datasheet", "programming_manual", "user_manual", "application_note", "service_manual", "quick_guide"].includes(d.docType)) return false;
+      if (!["datasheet", "quick_guide", "programming_manual", "user_manual", "application_note", "service_manual"].includes(d.docType)) return false;
+      if (!langDoc(d)) return false;
       return true;
     })
     .sort((a, b) => (a.docType === "datasheet" ? -1 : 0) - (b.docType === "datasheet" ? -1 : 0))
@@ -218,15 +224,41 @@ export default async function ProductDetailPage({
     if (lines.length > 0) paramGroups.push({ groupName: "技术参数", items: lines });
   }
 
-  // 品类自定义选项卡
-  const customTabs = productTabs.map((tab) => {
-    const tr = tab.translations.find((x) => x.locale === locale) ?? tab.translations.find((x) => x.locale === "zh");
-    return {
-      code: tab.code,
-      title: tr?.title ?? tab.code,
-      content: filterTabContentBySeries(tr?.content ?? "", product.productLine.code),
-    };
-  });
+  // 品类自定义选项卡（按型号/系列过滤内容；无匹配内容则不显示）
+  const customTabs = productTabs
+    .map((tab) => {
+      const tr = tab.translations.find((x) => x.locale === locale) ?? tab.translations.find((x) => x.locale === "zh");
+      return {
+        code: tab.code,
+        title: tr?.title ?? tab.code,
+        content: filterTabContentBySeries(tr?.content ?? "", product.productLine.code, product.model),
+      };
+    })
+    .filter((t) => t.content && t.content.trim().length > 0);
+
+  /** 国仪量子官网风格布局（左图右文大标题+整宽特性块），不影响其他品牌 */
+  const isCiq = product.productLine.brand.code === "CIQTEK";
+  /** 飞础科专属：版本型号放到右侧可点击选择 */
+  const isFotric = product.productLine.brand.code === "FOTRIC";
+
+  // FOTRIC：从产品介绍HTML解析"版本型号"列表（button 标签里的型号名）
+  // 同时从介绍HTML里去掉版本型号部分（已移到右侧胶囊）
+  let fotricVariants: string[] = [];
+  let introForFotric: string | null = null;
+  if (isFotric) {
+    let desc = (pt[locale]?.description ?? pt["zh"]?.description ?? "");
+    const idx = desc.indexOf("版本型号");
+    if (idx >= 0) {
+      const block = desc.slice(idx, idx + 3000);
+      fotricVariants = [...block.matchAll(/<span[^>]*>\s*([^<]+?)\s*<\/span>/g)]
+        .map((m) => m[1].trim())
+        .filter((s) => s && /\d/.test(s));
+      // 去掉介绍里的版本型号标题和后续 button 块（直到下一个标题或3000字符）
+      const endIdx = idx + 3000;
+      desc = desc.slice(0, idx) + desc.slice(endIdx);
+      introForFotric = desc;
+    }
+  }
 
   const I = {
     home: isEn ? "Home" : "首页",
@@ -255,31 +287,42 @@ export default async function ProductDetailPage({
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8">
+    <div className="ui-wrap py-8 sm:py-10">
       {/* 面包屑 */}
-      <div className="mb-6 text-sm text-slate-500">
-        <Link href="/" className="hover:text-sky-600">
+      <nav aria-label="Breadcrumb" className="mb-6 min-w-0 text-sm text-slate-500">
+        <Link href="/" className="transition-colors hover:text-primary">
           {I.home}
         </Link>
-        <span className="mx-2">/</span>
-        <Link href="/products" className="hover:text-sky-600">
+        <span className="mx-2 text-slate-300">/</span>
+        <Link href="/products" className="transition-colors hover:text-primary">
           {I.products}
         </Link>
-        <span className="mx-2">/</span>
-        <span className="text-slate-800">{product.model}</span>
-      </div>
+        <span className="mx-2 text-slate-300">/</span>
+        <span className="ui-num break-words text-slate-800">{product.model}</span>
+      </nav>
 
       {/* 顶部两栏：左主图 + 右产品概览 */}
-      <div className="flex flex-col gap-8 md:flex-row">
+      <div className={`flex gap-8 ${isCiq ? "flex-row ciq-model-hero" : "flex-col md:flex-row"}`}>
         {/* 左：主图（580x580） */}
-        <div className="w-full md:w-[580px] md:shrink-0">
+        <div className={isCiq ? "w-[380px] shrink-0 lg:w-[560px]" : "w-full md:w-[580px] md:shrink-0"}>
           <ProductGallery
             coverImage={product.coverImage}
             images={product.images}
             alt={pt[locale]?.name ?? pt["zh"]?.name ?? product.model}
             noImageText={I.noImage}
           />
-        </div>
+          {/* 品牌专属：主图下方型号对应文案（国仪量子整宽展示在下方，其他品牌保持主图下方） */}
+          {!isCiq &&
+            (() => {
+              const feat = pt[locale]?.features ?? pt["zh"]?.features ?? null;
+              if (!feat || !feat.trim()) return null;
+              return (
+                <div className="mt-6">
+                  <div className="ciq-features" dangerouslySetInnerHTML={{ __html: feat }} />
+                </div>
+              );
+            })()}
+                  </div>
 
         {/* 右：产品概览（标题/属性标签/简介/关键参数/联系方式/按钮组） */}
         <ProductOverview
@@ -297,13 +340,27 @@ export default async function ProductDetailPage({
           productModel={product.model}
           productName={pt[locale]?.name ?? pt["zh"]?.name ?? product.model}
           isSampleEnabled={product.isSampleEnabled}
+          compact={isCiq}
+          fotricVariants={isFotric ? fotricVariants : []}
         />
       </div>
 
+      {/* 国仪量子：整宽特性块（官网风格：主图下方型号对应文案） */}
+      {isCiq &&
+        (() => {
+          const feat = pt[locale]?.features ?? pt["zh"]?.features ?? null;
+          if (!feat || !feat.trim()) return null;
+          return (
+            <div className="mt-8">
+              <div className="ciq-features-wide" dangerouslySetInnerHTML={{ __html: feat }} />
+            </div>
+          );
+        })()}
+          
       {/* 选项卡：产品介绍 / 技术参数 / 产品选型 / 产品规格手册 / 品类自定义 */}
       <div className="mt-10">
         <ProductDetailTabs
-          intro={pt[locale]?.description ?? pt["zh"]?.description ?? null}
+          intro={isFotric && introForFotric ? introForFotric : (pt[locale]?.description ?? pt["zh"]?.description ?? null)}
           highlights={highlights.map((h) => ({ name: h.name, value: h.value, unit: h.unit }))}
           paramGroups={paramGroups}
           selection={selection}
@@ -311,11 +368,12 @@ export default async function ProductDetailPage({
           downloads={downloads}
           customTabs={customTabs}
           coverImage={product.coverImage}
+          ciqShell={isCiq}
           specsHtml={((): string | null => {
             const s = (pt[locale]?.specsOverview ?? pt["zh"]?.specsOverview ?? "").trim();
             return s && s.startsWith("<") ? s : null;
           })()}
-          labels={{
+                    labels={{
             intro: I.intro,
             params: I.params,
             selection: isEn ? "Product Selection" : "产品选型",

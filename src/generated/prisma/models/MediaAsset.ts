@@ -249,6 +249,7 @@ export type MediaAssetWhereInput = {
   folderId?: Prisma.StringNullableFilter<"MediaAsset"> | string | null
   createdAt?: Prisma.DateTimeFilter<"MediaAsset"> | Date | string
   folder?: Prisma.XOR<Prisma.MediaFolderNullableScalarRelationFilter, Prisma.MediaFolderWhereInput> | null
+  pdfLinks?: Prisma.SupportArticlePdfListRelationFilter
 }
 
 export type MediaAssetOrderByWithRelationInput = {
@@ -262,6 +263,7 @@ export type MediaAssetOrderByWithRelationInput = {
   folderId?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   folder?: Prisma.MediaFolderOrderByWithRelationInput
+  pdfLinks?: Prisma.SupportArticlePdfOrderByRelationAggregateInput
 }
 
 export type MediaAssetWhereUniqueInput = Prisma.AtLeast<{
@@ -278,6 +280,7 @@ export type MediaAssetWhereUniqueInput = Prisma.AtLeast<{
   folderId?: Prisma.StringNullableFilter<"MediaAsset"> | string | null
   createdAt?: Prisma.DateTimeFilter<"MediaAsset"> | Date | string
   folder?: Prisma.XOR<Prisma.MediaFolderNullableScalarRelationFilter, Prisma.MediaFolderWhereInput> | null
+  pdfLinks?: Prisma.SupportArticlePdfListRelationFilter
 }, "id" | "path">
 
 export type MediaAssetOrderByWithAggregationInput = {
@@ -322,6 +325,7 @@ export type MediaAssetCreateInput = {
   category?: string
   createdAt?: Date | string
   folder?: Prisma.MediaFolderCreateNestedOneWithoutAssetsInput
+  pdfLinks?: Prisma.SupportArticlePdfCreateNestedManyWithoutPdfAssetInput
 }
 
 export type MediaAssetUncheckedCreateInput = {
@@ -334,6 +338,7 @@ export type MediaAssetUncheckedCreateInput = {
   category?: string
   folderId?: string | null
   createdAt?: Date | string
+  pdfLinks?: Prisma.SupportArticlePdfUncheckedCreateNestedManyWithoutPdfAssetInput
 }
 
 export type MediaAssetUpdateInput = {
@@ -346,6 +351,7 @@ export type MediaAssetUpdateInput = {
   category?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   folder?: Prisma.MediaFolderUpdateOneWithoutAssetsNestedInput
+  pdfLinks?: Prisma.SupportArticlePdfUpdateManyWithoutPdfAssetNestedInput
 }
 
 export type MediaAssetUncheckedUpdateInput = {
@@ -358,6 +364,7 @@ export type MediaAssetUncheckedUpdateInput = {
   category?: Prisma.StringFieldUpdateOperationsInput | string
   folderId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pdfLinks?: Prisma.SupportArticlePdfUncheckedUpdateManyWithoutPdfAssetNestedInput
 }
 
 export type MediaAssetCreateManyInput = {
@@ -393,6 +400,11 @@ export type MediaAssetUncheckedUpdateManyInput = {
   category?: Prisma.StringFieldUpdateOperationsInput | string
   folderId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+}
+
+export type MediaAssetScalarRelationFilter = {
+  is?: Prisma.MediaAssetWhereInput
+  isNot?: Prisma.MediaAssetWhereInput
 }
 
 export type MediaAssetListRelationFilter = {
@@ -449,6 +461,20 @@ export type MediaAssetSumOrderByAggregateInput = {
   size?: Prisma.SortOrder
 }
 
+export type MediaAssetCreateNestedOneWithoutPdfLinksInput = {
+  create?: Prisma.XOR<Prisma.MediaAssetCreateWithoutPdfLinksInput, Prisma.MediaAssetUncheckedCreateWithoutPdfLinksInput>
+  connectOrCreate?: Prisma.MediaAssetCreateOrConnectWithoutPdfLinksInput
+  connect?: Prisma.MediaAssetWhereUniqueInput
+}
+
+export type MediaAssetUpdateOneRequiredWithoutPdfLinksNestedInput = {
+  create?: Prisma.XOR<Prisma.MediaAssetCreateWithoutPdfLinksInput, Prisma.MediaAssetUncheckedCreateWithoutPdfLinksInput>
+  connectOrCreate?: Prisma.MediaAssetCreateOrConnectWithoutPdfLinksInput
+  upsert?: Prisma.MediaAssetUpsertWithoutPdfLinksInput
+  connect?: Prisma.MediaAssetWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.MediaAssetUpdateToOneWithWhereWithoutPdfLinksInput, Prisma.MediaAssetUpdateWithoutPdfLinksInput>, Prisma.MediaAssetUncheckedUpdateWithoutPdfLinksInput>
+}
+
 export type MediaAssetCreateNestedManyWithoutFolderInput = {
   create?: Prisma.XOR<Prisma.MediaAssetCreateWithoutFolderInput, Prisma.MediaAssetUncheckedCreateWithoutFolderInput> | Prisma.MediaAssetCreateWithoutFolderInput[] | Prisma.MediaAssetUncheckedCreateWithoutFolderInput[]
   connectOrCreate?: Prisma.MediaAssetCreateOrConnectWithoutFolderInput | Prisma.MediaAssetCreateOrConnectWithoutFolderInput[]
@@ -491,6 +517,70 @@ export type MediaAssetUncheckedUpdateManyWithoutFolderNestedInput = {
   deleteMany?: Prisma.MediaAssetScalarWhereInput | Prisma.MediaAssetScalarWhereInput[]
 }
 
+export type MediaAssetCreateWithoutPdfLinksInput = {
+  id?: string
+  filename: string
+  path: string
+  mimeType: string
+  kind?: string
+  size?: number | null
+  category?: string
+  createdAt?: Date | string
+  folder?: Prisma.MediaFolderCreateNestedOneWithoutAssetsInput
+}
+
+export type MediaAssetUncheckedCreateWithoutPdfLinksInput = {
+  id?: string
+  filename: string
+  path: string
+  mimeType: string
+  kind?: string
+  size?: number | null
+  category?: string
+  folderId?: string | null
+  createdAt?: Date | string
+}
+
+export type MediaAssetCreateOrConnectWithoutPdfLinksInput = {
+  where: Prisma.MediaAssetWhereUniqueInput
+  create: Prisma.XOR<Prisma.MediaAssetCreateWithoutPdfLinksInput, Prisma.MediaAssetUncheckedCreateWithoutPdfLinksInput>
+}
+
+export type MediaAssetUpsertWithoutPdfLinksInput = {
+  update: Prisma.XOR<Prisma.MediaAssetUpdateWithoutPdfLinksInput, Prisma.MediaAssetUncheckedUpdateWithoutPdfLinksInput>
+  create: Prisma.XOR<Prisma.MediaAssetCreateWithoutPdfLinksInput, Prisma.MediaAssetUncheckedCreateWithoutPdfLinksInput>
+  where?: Prisma.MediaAssetWhereInput
+}
+
+export type MediaAssetUpdateToOneWithWhereWithoutPdfLinksInput = {
+  where?: Prisma.MediaAssetWhereInput
+  data: Prisma.XOR<Prisma.MediaAssetUpdateWithoutPdfLinksInput, Prisma.MediaAssetUncheckedUpdateWithoutPdfLinksInput>
+}
+
+export type MediaAssetUpdateWithoutPdfLinksInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  filename?: Prisma.StringFieldUpdateOperationsInput | string
+  path?: Prisma.StringFieldUpdateOperationsInput | string
+  mimeType?: Prisma.StringFieldUpdateOperationsInput | string
+  kind?: Prisma.StringFieldUpdateOperationsInput | string
+  size?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  category?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  folder?: Prisma.MediaFolderUpdateOneWithoutAssetsNestedInput
+}
+
+export type MediaAssetUncheckedUpdateWithoutPdfLinksInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  filename?: Prisma.StringFieldUpdateOperationsInput | string
+  path?: Prisma.StringFieldUpdateOperationsInput | string
+  mimeType?: Prisma.StringFieldUpdateOperationsInput | string
+  kind?: Prisma.StringFieldUpdateOperationsInput | string
+  size?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  category?: Prisma.StringFieldUpdateOperationsInput | string
+  folderId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+}
+
 export type MediaAssetCreateWithoutFolderInput = {
   id?: string
   filename: string
@@ -500,6 +590,7 @@ export type MediaAssetCreateWithoutFolderInput = {
   size?: number | null
   category?: string
   createdAt?: Date | string
+  pdfLinks?: Prisma.SupportArticlePdfCreateNestedManyWithoutPdfAssetInput
 }
 
 export type MediaAssetUncheckedCreateWithoutFolderInput = {
@@ -511,6 +602,7 @@ export type MediaAssetUncheckedCreateWithoutFolderInput = {
   size?: number | null
   category?: string
   createdAt?: Date | string
+  pdfLinks?: Prisma.SupportArticlePdfUncheckedCreateNestedManyWithoutPdfAssetInput
 }
 
 export type MediaAssetCreateOrConnectWithoutFolderInput = {
@@ -574,6 +666,7 @@ export type MediaAssetUpdateWithoutFolderInput = {
   size?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   category?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pdfLinks?: Prisma.SupportArticlePdfUpdateManyWithoutPdfAssetNestedInput
 }
 
 export type MediaAssetUncheckedUpdateWithoutFolderInput = {
@@ -585,6 +678,7 @@ export type MediaAssetUncheckedUpdateWithoutFolderInput = {
   size?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
   category?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  pdfLinks?: Prisma.SupportArticlePdfUncheckedUpdateManyWithoutPdfAssetNestedInput
 }
 
 export type MediaAssetUncheckedUpdateManyWithoutFolderInput = {
@@ -599,6 +693,35 @@ export type MediaAssetUncheckedUpdateManyWithoutFolderInput = {
 }
 
 
+/**
+ * Count Type MediaAssetCountOutputType
+ */
+
+export type MediaAssetCountOutputType = {
+  pdfLinks: number
+}
+
+export type MediaAssetCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  pdfLinks?: boolean | MediaAssetCountOutputTypeCountPdfLinksArgs
+}
+
+/**
+ * MediaAssetCountOutputType without action
+ */
+export type MediaAssetCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the MediaAssetCountOutputType
+   */
+  select?: Prisma.MediaAssetCountOutputTypeSelect<ExtArgs> | null
+}
+
+/**
+ * MediaAssetCountOutputType without action
+ */
+export type MediaAssetCountOutputTypeCountPdfLinksArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.SupportArticlePdfWhereInput
+}
+
 
 export type MediaAssetSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
@@ -611,6 +734,8 @@ export type MediaAssetSelect<ExtArgs extends runtime.Types.Extensions.InternalAr
   folderId?: boolean
   createdAt?: boolean
   folder?: boolean | Prisma.MediaAsset$folderArgs<ExtArgs>
+  pdfLinks?: boolean | Prisma.MediaAsset$pdfLinksArgs<ExtArgs>
+  _count?: boolean | Prisma.MediaAssetCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["mediaAsset"]>
 
 export type MediaAssetSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -654,6 +779,8 @@ export type MediaAssetSelectScalar = {
 export type MediaAssetOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "filename" | "path" | "mimeType" | "kind" | "size" | "category" | "folderId" | "createdAt", ExtArgs["result"]["mediaAsset"]>
 export type MediaAssetInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   folder?: boolean | Prisma.MediaAsset$folderArgs<ExtArgs>
+  pdfLinks?: boolean | Prisma.MediaAsset$pdfLinksArgs<ExtArgs>
+  _count?: boolean | Prisma.MediaAssetCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type MediaAssetIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   folder?: boolean | Prisma.MediaAsset$folderArgs<ExtArgs>
@@ -666,6 +793,7 @@ export type $MediaAssetPayload<ExtArgs extends runtime.Types.Extensions.Internal
   name: "MediaAsset"
   objects: {
     folder: Prisma.$MediaFolderPayload<ExtArgs> | null
+    pdfLinks: Prisma.$SupportArticlePdfPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
@@ -1072,6 +1200,7 @@ readonly fields: MediaAssetFieldRefs;
 export interface Prisma__MediaAssetClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
   folder<T extends Prisma.MediaAsset$folderArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.MediaAsset$folderArgs<ExtArgs>>): Prisma.Prisma__MediaFolderClient<runtime.Types.Result.GetResult<Prisma.$MediaFolderPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  pdfLinks<T extends Prisma.MediaAsset$pdfLinksArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.MediaAsset$pdfLinksArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$SupportArticlePdfPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
    * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1527,6 +1656,30 @@ export type MediaAsset$folderArgs<ExtArgs extends runtime.Types.Extensions.Inter
    */
   include?: Prisma.MediaFolderInclude<ExtArgs> | null
   where?: Prisma.MediaFolderWhereInput
+}
+
+/**
+ * MediaAsset.pdfLinks
+ */
+export type MediaAsset$pdfLinksArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the SupportArticlePdf
+   */
+  select?: Prisma.SupportArticlePdfSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the SupportArticlePdf
+   */
+  omit?: Prisma.SupportArticlePdfOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.SupportArticlePdfInclude<ExtArgs> | null
+  where?: Prisma.SupportArticlePdfWhereInput
+  orderBy?: Prisma.SupportArticlePdfOrderByWithRelationInput | Prisma.SupportArticlePdfOrderByWithRelationInput[]
+  cursor?: Prisma.SupportArticlePdfWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.SupportArticlePdfScalarFieldEnum | Prisma.SupportArticlePdfScalarFieldEnum[]
 }
 
 /**

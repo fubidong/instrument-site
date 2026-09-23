@@ -21,7 +21,10 @@ export default async function BrandSeriesPage({
   const base = brandPath(brand.code, locale);
 
   const categories = await getBrandCategories(brand.id, locale);
-  const cat = categories.find((c) => c.code.toLowerCase() === catCode.toLowerCase());
+  const slugOf = (code: string) => code.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  const cat = categories.find(
+    (c) => slugOf(c.code) === catCode.toLowerCase() || c.code.toLowerCase() === catCode.toLowerCase()
+  );
   if (!cat) notFound();
 
   const series = await getSeriesModels(brand.id, decodeURIComponent(seriesCode));
@@ -39,7 +42,7 @@ export default async function BrandSeriesPage({
       <div className="mb-6 text-sm text-slate-500">
         <Link href={base} className="hover:text-sky-600">{brandName}</Link>
         <span className="mx-2">/</span>
-        <Link href={`${base}/category/${cat.code.toLowerCase()}`} className="hover:text-sky-600">
+        <Link href={`${base}/category/${slugOf(cat.code)}`} className="hover:text-sky-600">
           {cat.name}
         </Link>
         <span className="mx-2">/</span>
@@ -61,7 +64,7 @@ export default async function BrandSeriesPage({
           {series.models.map((m) => (
             <Link
               key={m.id}
-              href={`${base}/category/${cat.code.toLowerCase()}/${encodeURIComponent(series.code)}/${encodeURIComponent(m.model)}`}
+              href={`${base}/category/${slugOf(cat.code)}/${encodeURIComponent(series.code)}/${encodeURIComponent(m.model)}`}
               className="group rounded-lg border border-slate-200 bg-white p-5 transition hover:border-sky-300 hover:shadow-md"
             >
               {m.coverImage ? (

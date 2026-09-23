@@ -1,0 +1,135 @@
+﻿BRAND: CEYEAR da9c309d-87d6-48c8-901c-58044fa92d93
+CAT: 微波/毫米波测量仪器 82d68771
+CAT: 光电测量仪器 696ec51d
+CAT: 通信测量仪器 fee12a74
+CAT: 基础测试仪器 3abb2eac
+CAT: 模块化仪器 254aa4a6
+PROD: 材料测试特性装置 -> 4d98f1bd | cover: Y
+PROD: 3601系列S参数测试模块 -> 4ccd4328 | cover: Y
+PROD: 1400系列倍频源 -> 656c8d3c | cover: Y
+PROD: 4000系列频谱仪扩频模块 -> 319cb0e2 | cover: Y
+PROD: 毫米波上下变频器 -> 80f92c71 | cover: Y
+PROD: 定制模块 -> 33af51d2 | cover: Y
+PROD: 1434系列信号发生器 -> c583c30b | cover: Y
+PROD: 1434V系列信号发生器 -> ed88c54e | cover: Y
+PROD: 1466系列信号发生器 -> eb3e28d2 | cover: Y
+PROD: 1466-V系列信号发生器 -> 42ab2810 | cover: Y
+PROD: 5G-A信号模拟软件 -> f7f0db13 | cover: Y
+PROD: 1465系列信号发生器 -> 8fe4324c | cover: Y
+PROD: 1465-V系列信号发生器 -> f180104c | cover: Y
+PROD: 1435系列信号发生器 -> a1fd4585 | cover: Y
+PROD: 1435-V（V）系列信号发生器 -> f8140b68 | cover: Y
+PROD: 1434系列多通道信号发生器 -> c646f28e | cover: Y
+PROD: 1433系列信号发生器 -> 4446b756 | cover: Y
+PROD: 1431A手持式射频信号发生器 -> c36cebec | cover: Y
+PROD: 1452系列捷变信号发生器 -> 3e2aeeda | cover: Y
+PROD: 78110A雷达信号模拟软件 -> fbbe6b5b | cover: Y
+PROD: 1452GA捷变信号发生器 -> 11a5f04c | cover: Y
+PROD: 4071系列信号/频谱分析仪 -> b1ca2de1 | cover: Y
+PROD: 4082系列信号/频谱分析仪 -> 062bf8af | cover: Y
+PROD: 4052系列信号/频谱分析仪 -> b78262ba | cover: Y
+PROD: 78000A 信号分析软件 -> 6ebb35ae | cover: Y
+PROD: 4025系列频谱分析仪 -> 04a35389 | cover: Y
+PROD: 4024系列频谱分析仪 -> af4c6aae | cover: Y
+PROD: 4024CA频谱分析仪 -> 4b2acce3 | cover: Y
+PROD: 4042系列频谱分析仪 -> b20e2eb3 | cover: Y
+PROD: 4141B/E/F/H信号源分析仪 -> 45d6a799 | cover: Y
+PROD: 4051A/B/C/D/E/F/G/H/L/N信号/频谱分析 -> 3e847061 | cover: Y
+PROD: 4051A/B/C/D/E–S系列信号/频谱分析仪 -> 54a4f1b6 | cover: Y
+PROD: 3926系列宽带监测接收机 -> a0ee13a2 | cover: Y
+PROD: 3927A/B/C/D/E/F/G/H测量接收机 -> 5730b57e | cover: Y
+PROD: 3916B/D/E/F/H 系列EMI测试接收机 -> ea6413ef | cover: Y
+PROD: 3943B-S监测接收机 -> bce4a350 | cover: Y
+PROD: 3681B/BU天馈线测试仪 -> f557dd79 | cover: Y
+PROD: 3622系列矢量网络分析仪 -> ee742366 | cover: Y
+PROD: 20402/20404系列电子校准件 -> 884a4992 | cover: Y
+PROD: 3674系列矢量网络分析仪 -> a67fd2fe | cover: Y
+PROD: 3657系列矢量网络分析仪 -> 3c3cb1e6 | cover: Y
+PROD: 3672系列矢量网络分析仪 -> 40c8f8ea | cover: Y
+PROD: 3671系列矢量网络分析仪 -> faa5e946 | cover: Y
+PROD: 3656系列矢量网络分析仪 -> c8b2d3ef | cover: Y
+PROD: 3650系列多端口矢量网络分析仪 -> d5da3e14 | cover: Y
+PROD: 2040X系列电子校准件 -> fc4c1055 | cover: Y
+PROD: 3680系列天馈线测试仪 -> 6191bf67 | cover: Y
+PROD: 3987系列噪声系数分析仪 -> 4f0f5754 | cover: Y
+PROD: 16613/16614/16615系列噪声源 -> 8c92abd5 | cover: Y
+PROD: 3986系列噪声系数分析仪 -> 90441981 | cover: Y
+PROD: 16603/16604系列噪声源 -> 4799673e | cover: Y
+PROD: 2439D微波功率计 -> 32bfb810 | cover: Y
+PROD: 87237系列USB热电偶功率探头 -> 0f71ef22 | cover: Y
+PROD: 87236系列USB峰值/平均功率探头 -> 959a5973 | cover: Y
+PROD: 87246系列LAN峰值/平均功率探头 -> 8dbda9ad | cover: Y
+PROD: 87245系列LAN平均功率探头 -> 9def126c | cover: Y
+PROD: 4152A/E/F调制域分析仪 -> 737c0a78 | cover: N
+PROD: 87233系列USB连续波功率探头 -> 2b306931 | cover: Y
+PROD: 87235系列USB平均功率探头 -> 29ebce40 | cover: Y
+PROD: 87234系列USB峰值/平均功率计 -> 74b59ba0 | cover: Y
+PROD: 4959系列微波综合测试仪 -> 2ff8098e | cover: Y
+PROD: 4992A无线电综合测试仪 -> 102d5b20 | cover: Y
+PROD: 4958手持式微波综合测试仪 -> fed26128 | cover: Y
+PROD: 4957系列射频微波综合测试仪 -> 83ba42b5 | cover: Y
+PROD: 固态功率放大器 -> 254c075f | cover: Y
+PROD: 3652系列变频器 -> 21ff90c7 | cover: Y
+PROD: 80704A、80705A、80719/A/B、80720/ -> b0d5ec77 | cover: Y
+PROD: 6371A光波长计 -> ce6044c2 | cover: Y
+PROD: 6362C光谱分析仪 -> 27ad70b1 | cover: Y
+PROD: 6362D光谱分析仪 -> e737a34c | cover: Y
+PROD: 6433P光波元件分析仪 -> 398584eb | cover: Y
+PROD: 6317A/B可调谐激光源 -> e3c29e75 | cover: Y
+PROD: 6433D,6433F,6433H,6433L光波元件分析仪 -> 65a3bc25 | cover: Y
+PROD: 6241F光相对强度噪声分析仪 -> 42189805 | cover: Y
+PROD: 9951Y,9951A光波测试平台 -> c3fc62e9 | cover: Y
+PROD: 6337D光功率计 -> 09838cf5 | cover: Y
+PROD: 6428A 光时域反射计 -> 3039d485 | cover: Y
+PROD: 6415B -> 159152c5 | cover: Y
+PROD: 6426A -> 6d404e2e | cover: Y
+PROD: 6415A -> 3ba6f403 | cover: Y
+PROD: 6422 -> 79b7c984 | cover: Y
+PROD: 6474B保偏光纤熔接机 -> 1ba5bb62 | cover: Y
+PROD: 6482S系列光纤熔接机 -> 038c7283 | cover: Y
+PROD: 6486A干线光纤熔接机 -> b8c00c43 | cover: Y
+PROD: 6482系列光纤熔接机 -> bb422dd1 | cover: Y
+PROD: 6481系列光纤熔接机 -> 60c673f4 | cover: Y
+PROD: 6474保偏光纤熔接机 -> 3f1e82cb | cover: Y
+PROD: 87501光纤对接器 -> beb2428a | cover: Y
+PROD: 5201M数据网络测试仪 -> 1b748435 | cover: Y
+PROD: 5201数据网络测试仪 -> a642813b | cover: Y
+PROD: 5288 SDH/PDH数字传输分析仪 -> 5089a2e8 | cover: Y
+PROD: 5233D误码测试仪 -> 235e2358 | cover: Y
+PROD: 5256GS 无线通信综测仪 -> 2859abb9 | cover: Y
+PROD: 5256GD无线通信终端综合测试仪 -> 1ae1e2d7 | cover: Y
+PROD: 5251A手持式5G装维智能检测仪 -> 75e3e768 | cover: Y
+PROD: 5258A扫频仪 -> cb33790c | cover: Y
+PROD: 5252DG外场通信测试仪 -> af6ea4f0 | cover: Y
+PROD: 5252D 5G基站测试仪 -> 2833d366 | cover: Y
+PROD: 5256C 5G终端综合测试仪 -> b09042b1 | cover: Y
+PROD: 1612A系列无线信道模拟器 -> d3967b84 | cover: Y
+PROD: 4945B/C 无线电通信综合测试仪 -> 826852cf | cover: Y
+PROD: 1650E任意波形发生器（40G 采样率机型） -> 3359a62f | cover: Y
+PROD: 1650E任意波形发生器 -> 31d58031 | cover: Y
+PROD: 1653系列函数任意波形发生器 -> 0439caa3 | cover: Y
+PROD: 1652AM任意波形发生器 -> 6a50aaa5 | cover: Y
+PROD: 1652B 函数/任意波形发生器 -> 7a74c313 | cover: Y
+PROD: 4458系列数字示波器 -> 07d062dc | cover: Y
+PROD: 4457系列数字示波器 -> adef6bd4 | cover: Y
+PROD: 4457H系列数字示波器 -> a2e788d8 | cover: Y
+PROD: 4457M系列数字示波器 -> 0909b23e | cover: Y
+PROD: 4457R系列数字示波器 -> 33609691 | cover: Y
+PROD: 4382系列数字荧光示波器 -> 1dc536c1 | cover: Y
+PROD: 6592A便携式高精度光伏电池伏安特性测试仪 -> ca8303c8 | cover: Y
+PROD: 6591A便携式光伏组串测试仪 -> c4f5233f | cover: Y
+PROD: 1763卫星帆板电源阵列模拟器 -> 576c7b49 | cover: Y
+PROD: 1768程控直流电源 -> e350dee6 | cover: Y
+PROD: 1769程控直流电源 -> 05621ecc | cover: Y
+PROD: 1765A/B/C/D/E程控直流电源 -> 1c41cdbe | cover: Y
+PROD: 1764程控直流电源 -> c201f275 | cover: Y
+PROD: 6955BA/C/E信号收发仪 -> dab3cd8d | cover: Y
+PROD: 6951E信号分析仪 -> 035ada85 | cover: Y
+PROD: 6955AC 信号收发仪 -> b37eef3e | cover: Y
+PROD: 6938A 地面微波着陆信号模拟器 -> 7ef17fdf | cover: Y
+PROD: 6938 地面仪表着陆设备信号模拟器 -> 5bd56176 | cover: Y
+PROD: 6938AA 信号模拟器 -> 412dae1a | cover: Y
+PROD: 6939 矢量信号发生器 -> 2492bcf4 | cover: Y
+PROD: 6935DE 信号发生器 -> 5e39e5ac | cover: Y
+TOTAL PRODUCTS: 127
+TOTAL DOCS: 718

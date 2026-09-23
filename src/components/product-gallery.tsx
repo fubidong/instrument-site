@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Image from "next/image";
 
 interface GalleryImage {
   id: string;
@@ -50,7 +51,7 @@ export default function ProductGallery({
 
   if (!all.length) {
     return (
-      <div className={`flex ${height} w-full items-center justify-center rounded bg-slate-50 text-slate-300`}>
+      <div className={`flex ${height} w-full items-center justify-center rounded-xl border border-slate-200 bg-[var(--ui-sunken)] text-slate-300`}>
         {noImageText}
       </div>
     );
@@ -72,15 +73,17 @@ export default function ProductGallery({
       <div className="relative">
         {/* 主图：原样显示，不缩放 */}
         <div
-          className="mx-auto aspect-square w-full max-w-[580px] overflow-hidden rounded-lg border border-slate-200 bg-white"
+          className="relative mx-auto aspect-square w-full max-w-[580px] overflow-hidden rounded-xl border border-slate-200 bg-white"
           onMouseMove={handleMove}
           onMouseLeave={() => setZoom((z) => ({ ...z, active: false }))}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={current.imagePath}
             alt={current.altText ?? alt}
-            className="h-full w-full object-contain"
+            fill
+            sizes="(max-width: 768px) 100vw, 580px"
+            className="object-contain"
+            unoptimized
           />
 
           {/* 镜头框：主图内跟随鼠标，标记放大区域 */}
@@ -138,12 +141,18 @@ export default function ProductGallery({
                 setSelected(i);
                 setZoom((z) => ({ ...z, x: 50, y: 50, active: false }));
               }}
-              className={`h-14 w-14 shrink-0 overflow-hidden rounded p-0.5 ${
-                selected === i ? "border-2 border-sky-500" : "border border-slate-200 hover:border-sky-300"
+              className={`h-14 w-14 shrink-0 overflow-hidden rounded-md p-0.5 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 ${
+                selected === i ? "border-2 border-primary" : "border border-slate-200 hover:border-slate-300"
               }`}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={img.imagePath} alt={img.altText ?? alt} className="h-full w-full object-contain" />
+              <Image
+                src={img.imagePath}
+                alt={img.altText ?? alt}
+                width={56}
+                height={56}
+                className="h-full w-full object-contain"
+                unoptimized
+              />
             </button>
           ))}
         </div>

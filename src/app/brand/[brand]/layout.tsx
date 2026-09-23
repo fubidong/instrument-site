@@ -5,11 +5,16 @@ import Link from "next/link";
 import { getSiteSettings, getSiteBrands } from "@/lib/site";
 import { getBrand, getBrandCategories } from "@/lib/brand";
 import { getNavTree } from "@/lib/nav";
-import SiteNav from "@/components/site-nav";
+import type { NavNode } from "@/lib/nav";
+import SiteNav, { type SiteNavNode } from "@/components/site-nav";
 import SiteSearch from "@/components/site-search";
 import BrandSiteSwitcher from "@/components/brand-site-switcher";
 import { getBrandLocale, brandPath } from "@/lib/brand-locale";
 import BrandLocaleSwitcher from "./brand-locale-switcher";
+import HorizontalScroll from "@/components/horizontal-scroll";
+
+const slugOf = (code: string) =>
+  code.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
 export default async function BrandLayout({
   children,
@@ -29,15 +34,20 @@ export default async function BrandLayout({
   const brandName = brand.name[locale]?.name ?? brand.name["zh"]?.name ?? brand.code;
 
   const categories = await getBrandCategories(brand.id, locale);
-  // 页脚"产品中心"列仍用品类（导航本体由 NavMenu 驱动）
   const topCats = categories.filter((c) => !c.parentId && c.showInNav);
 
   const settings = await getSiteSettings(locale);
   const base = brandPath(brand.code, locale);
   const navTree = await getNavTree({ brandId: brand.id, includeHidden: false });
   const navHref = (n: { path: string }) => `${base}${n.path === "/" ? "" : n.path}`;
+  const withHref = (ns: NavNode[]): SiteNavNode[] =>
+    ns.map((n) => ({
+      ...n,
+      href: n.isExternal ? n.path : navHref(n),
+      children: withHref(n.children),
+    }));
+  const navNodes = withHref(navTree);
 
-  // 品牌站点下拉列表（含当前品牌站）
   const allBrands = await getSiteBrands("zh");
   const brandSites = allBrands
     .map((b) => ({
@@ -51,13 +61,13 @@ export default async function BrandLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <div className="flex min-h-screen flex-col bg-white text-slate-800">
-        {/* 顶部信息条 */}
-        <div className="bg-slate-900 text-slate-300">
-          <div className="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs">
+        {/* 顶部信息条：与综合站一致的白底发丝线 */}
+        <div className="border-b border-slate-200 bg-white">
+          <div className="ui-wrap flex h-9 items-center justify-between gap-4 text-xs">
             <div className="flex items-center gap-4">
               <Link
                 href={isEn ? "/en" : "/"}
-                className="flex shrink-0 items-center gap-1 font-medium text-white hover:text-sky-300"
+                className="flex shrink-0 items-center gap-1 font-medium text-primary hover:underline"
               >
                 <svg viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" aria-hidden="true">
                   <path
@@ -68,13 +78,13 @@ export default async function BrandLayout({
                 </svg>
                 {isEn ? "Main Site" : "返回总站"}
               </Link>
-              <span className="truncate">
+              <span className="truncate text-slate-500">
                 {isEn ? `${brandName} · Authorized Distributor` : `${brandName} · 授权代理商`}
               </span>
             </div>
             <div className="flex shrink-0 items-center gap-4">
               {settings.phone && (
-                <span>
+                <span className="text-slate-600">
                   {isEn ? `Hotline: ${settings.phone}` : `服务热线：${settings.phone}`}
                 </span>
               )}
@@ -83,35 +93,33 @@ export default async function BrandLayout({
           </div>
         </div>
 
-        {/* 主导航 */}
+        {/* 主导航：与综合站一致 */}
         <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-          <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
-            <Link href={base} className="flex items-center gap-2">
+          <div className="ui-wrap flex h-16 items-center justify-between gap-3">
+            <Link href={base} className="flex shrink-0 items-center gap-2">
               {brand.logo ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={brand.logo} alt={brandName} className="h-10 object-contain" />
+                <img src={brand.logo} alt={brandName} className="h-8 object-contain" />
               ) : (
-                <div className="flex h-9 w-9 items-center justify-center rounded bg-sky-600 text-lg font-bold text-white">
+                <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">
                   {brandName.slice(0, 1)}
                 </div>
               )}
-              <div>
-                <div className="text-base font-bold leading-tight text-slate-900">{brandName}</div>
-                <div className="text-[10px] uppercase tracking-wider text-slate-400">
+              <div className="hidden leading-tight lg:block">
+                <div className="text-sm font-bold text-slate-900">{brandName}</div>
+                <div className="text-[9px] uppercase tracking-wider text-slate-400">
                   {brand.name["en"]?.name ?? brand.code}
                 </div>
               </div>
             </Link>
 
-            <nav className="hidden items-center gap-1 md:flex">
-              <SiteNav nodes={navTree} hrefFor={navHref} isEn={isEn} />
-            </nav>
+            <HorizontalScroll className="hidden flex-1 md:flex">
+              <div className="flex items-center justify-center gap-0.5">
+                <SiteNav nodes={navNodes} isEn={isEn} />
+              </div>
+            </HorizontalScroll>
 
-            <div className="hidden md:block">
-              <SiteSearch locale={locale} isEn={isEn} />
-            </div>
-
-            <div className="hidden md:block">
+            <div className="hidden shrink-0 items-center gap-2 md:flex">
               <BrandSiteSwitcher brands={brandSites} isEn={isEn} currentBrand={brand.code} />
             </div>
           </div>
@@ -119,9 +127,9 @@ export default async function BrandLayout({
 
         <main className="flex-1">{children}</main>
 
-        {/* 页脚 */}
+        {/* 页脚：与综合站一致的四列布局 */}
         <footer className="border-t border-slate-200 bg-slate-50">
-          <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="ui-wrap grid gap-8 py-10 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <div className="text-base font-bold text-slate-900">{brandName}</div>
               <p className="mt-3 text-sm leading-6 text-slate-500">
@@ -131,13 +139,16 @@ export default async function BrandLayout({
               </p>
             </div>
             <div>
-              <div className="text-sm font-semibold text-slate-800">
+              <div className="text-sm font-semibold text-slate-900">
                 {isEn ? "Products" : "产品中心"}
               </div>
-              <ul className="mt-3 space-y-2 text-sm text-slate-500">
-                {topCats.slice(0, 6).map((c) => (
+              <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-sm text-slate-500">
+                {topCats.map((c) => (
                   <li key={c.id}>
-                    <Link href={`${base}/category/${c.code.toLowerCase()}`} className="hover:text-sky-600">
+                    <Link
+                      href={`${base}/category/${slugOf(c.code)}`}
+                      className="transition-colors hover:text-primary"
+                    >
                       {c.name}
                     </Link>
                   </li>
@@ -145,17 +156,17 @@ export default async function BrandLayout({
               </ul>
             </div>
             <div>
-              <div className="text-sm font-semibold text-slate-800">
+              <div className="text-sm font-semibold text-slate-900">
                 {isEn ? "Quick Links" : "快捷入口"}
               </div>
               <ul className="mt-3 space-y-2 text-sm text-slate-500">
-                <li><Link href={base} className="hover:text-sky-600">{isEn ? "Brand Home" : "品牌首页"}</Link></li>
-                <li><Link href="/" className="hover:text-sky-600">{isEn ? "Main Site" : "综合站"}</Link></li>
-                <li><Link href="/contact" className="hover:text-sky-600">{isEn ? "Inquiry" : "在线询价"}</Link></li>
+                <li><Link href={base} className="transition-colors hover:text-primary">{isEn ? "Brand Home" : "品牌首页"}</Link></li>
+                <li><Link href="/" className="transition-colors hover:text-primary">{isEn ? "Main Site" : "综合站"}</Link></li>
+                <li><Link href="/contact" className="transition-colors hover:text-primary">{isEn ? "Inquiry" : "在线询价"}</Link></li>
               </ul>
             </div>
             <div>
-              <div className="text-sm font-semibold text-slate-800">
+              <div className="text-sm font-semibold text-slate-900">
                 {isEn ? "Contact" : "联系方式"}
               </div>
               <ul className="mt-3 space-y-2 text-sm text-slate-500">

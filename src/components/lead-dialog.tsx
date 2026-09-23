@@ -79,8 +79,8 @@ export default function LeadDialog({
         className={
           buttonClassName ??
           (isSample
-            ? "rounded-md border border-sky-300 px-5 py-2.5 text-sm font-semibold text-sky-700 hover:bg-sky-50"
-            : "rounded-md bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-sky-500")
+            ? "rounded-md border border-primary px-5 py-2.5 text-sm font-semibold text-primary hover:bg-slate-50"
+            : "rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary-hover")
         }
       >
         {isSample ? L.sample : L.quote}
@@ -131,14 +131,14 @@ export default function LeadDialog({
                     name="name"
                     placeholder={`${L.name} *`}
                     required
-                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-primary"
                   />
                 </div>
                 <div>
                   <input
                     name="company"
                     placeholder={L.company}
-                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-primary"
                   />
                 </div>
                 <div>
@@ -146,7 +146,7 @@ export default function LeadDialog({
                     name="contact"
                     placeholder={`${L.contact} *`}
                     required
-                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-primary"
                   />
                 </div>
                 <div>
@@ -154,7 +154,7 @@ export default function LeadDialog({
                     name="email"
                     type="email"
                     placeholder={L.email}
-                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-primary"
                   />
                 </div>
                 <div>
@@ -162,13 +162,13 @@ export default function LeadDialog({
                     name="message"
                     rows={3}
                     placeholder={L.message}
-                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-primary"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={pending}
-                  className="w-full rounded-md bg-sky-600 py-2.5 text-sm font-semibold text-white hover:bg-sky-500 disabled:opacity-60"
+                  className="w-full rounded-md bg-primary py-2.5 text-sm font-semibold text-white hover:bg-primary-hover disabled:opacity-60"
                 >
                   {pending ? L.submitting : L.submit}
                 </button>

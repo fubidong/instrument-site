@@ -63,6 +63,12 @@ enum PostCategory {
   announcement
 }
 
+enum SupportArticleType {
+  solution
+  tech
+  faq
+}
+
 // ============ 品牌 ============
 
 model Brand {
@@ -82,8 +88,29 @@ model Brand {
   products       Product[]
   documents      Document[]
   navMenus       NavMenu[] // 品牌站导航菜单
+  supportArticles SupportArticle[] // 支持中心文章（null=通用/不关联品牌）
+  tags          String[] @default([]) // 产品目录页标签
 }
 
+
+// ============ Catalog Tag ============
+model CatalogTag {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  color     String   @default("#0ea5e9")
+  sortOrder Int      @default(0)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ============ Company Info ============
+model CompanyInfo {
+  id        String   @id @default(uuid())
+  key       String   @unique
+  value     String   @db.Text
+  updatedAt DateTime @updatedAt
+}
 model BrandTranslation {
   id            String @id @default(uuid())
   brandId       String
@@ -206,6 +233,7 @@ model Product {
   images       ProductImage[]
   documents    Document[]
   inquiries    Inquiry[]
+  articleLinks SupportArticleProduct[]
 
   @@index([isActive, productLineId, sortOrder])
 }
@@ -219,6 +247,7 @@ model ProductTranslation {
   description   String? @db.Text
   specsOverview String? @db.Text
   selection     String? @db.Text // 产品选型内容（富文本，前台“产品选型”选项卡）
+  features      String? @db.Text // 主图下方型号对应文案（品牌专属特性区块，如国仪量子）
 
   product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
 
@@ -412,6 +441,68 @@ model PostTranslation {
   @@unique([postId, locale])
 }
 
+// ============ 支持中心（Support Center） ============
+
+model SupportArticle {
+  id          String              @id @default(uuid())
+  type        SupportArticleType  @default(tech)
+  brandId     String? // null = 通用/不关联品牌
+  coverImage  String?
+  sourceUrl   String? // 原文链接（采集时回填）
+  isPublished Boolean             @default(false)
+  publishedAt DateTime?
+  sortOrder   Int                 @default(0)
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+
+  brand        Brand?                      @relation(fields: [brandId], references: [id])
+  pdfLinks     SupportArticlePdf[]
+  productLinks SupportArticleProduct[]
+  translations SupportArticleTranslation[]
+
+  @@index([type, brandId, isPublished, publishedAt])
+}
+
+// 文章-PDF 关联（多选，每个 PDF 独立模式：download=直接下载 | lead=获客模式）
+model SupportArticlePdf {
+  id        String     @id @default(uuid())
+  articleId String
+  pdfAssetId String
+  pdfMode   String     @default("download")
+
+  article  SupportArticle @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  pdfAsset MediaAsset    @relation(fields: [pdfAssetId], references: [id], onDelete: Cascade)
+
+  @@unique([articleId, pdfAssetId])
+  @@index([articleId])
+}
+
+// 文章-商品 关联（多选）
+model SupportArticleProduct {
+  id        String @id @default(uuid())
+  articleId String
+  productId String
+
+  article SupportArticle @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  product Product       @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([articleId, productId])
+  @@index([articleId])
+}
+
+model SupportArticleTranslation {
+  id        String @id @default(uuid())
+  articleId String
+  locale    Locale
+  title     String
+  summary   String? @db.Text
+  content   String? @db.Text
+
+  article SupportArticle @relation(fields: [articleId], references: [id], onDelete: Cascade)
+
+  @@unique([articleId, locale])
+}
+
 // ============ 管理员 ============
 
 model AdminUser {
@@ -549,6 +640,7 @@ model MediaAsset {
   createdAt DateTime     @default(now())
 
   folder MediaFolder? @relation(fields: [folderId], references: [id], onDelete: SetNull)
+  pdfLinks SupportArticlePdf[]
 
   @@index([kind, category])
   @@index([folderId])

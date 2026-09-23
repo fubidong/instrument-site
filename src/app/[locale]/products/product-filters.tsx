@@ -32,10 +32,49 @@ export default function ProductFilters({
 }) {
   const router = useRouter();
   const [tempQ, setTempQ] = useState(currentQ);
-  const [expandedCats, setExpandedCats] = useState<Set<string>>(new Set());
   const isEn = locale === "en";
 
   const topCategories = categories.filter((c) => !c.parentId);
+  // 品类-品牌关联：找到当前选中品类节点（顶层或子分类）
+  const currentCatNode =
+    categories.find((c) => c.code === currentCategory) ??
+    categories.flatMap((c) => c.children).find((c) => c.code === currentCategory);
+  // 收集当前品类下实际有产品的品牌 code 集合（顶层含子分类系列，子分类用自身系列）
+  const brandCodesInCat = new Set(
+    currentCatNode
+      ? currentCatNode.parentId
+        ? currentCatNode.series.map((s) => s.brandCode)
+        : [
+            ...currentCatNode.series.map((s) => s.brandCode),
+            ...currentCatNode.children.flatMap((ch) => ch.series.map((s) => s.brandCode)),
+          ]
+      : []
+  );
+  // 品牌胶囊：选中品类时只显示该品类下实际有产品的品牌；未选中品类显示全部
+  const visibleBrands = currentCatNode
+    ? brands.filter((b) => brandCodesInCat.has(b.code))
+    : brands;
+  // 选中品牌的 code（用于系列胶囊过滤）
+  const currentBrandCode = brands.find((b) => b.id === currentBrand)?.code;
+  // 系列胶囊：选中品牌时只显示该品牌在该品类下的系列；未选品牌显示全部系列
+  const seriesInScope =
+    currentCatNode && currentBrandCode
+      ? currentCatNode.parentId
+        ? currentCatNode.series.filter((s) => s.brandCode === currentBrandCode)
+        : [
+            ...currentCatNode.series.filter((s) => s.brandCode === currentBrandCode),
+            ...currentCatNode.children.flatMap((ch) =>
+              ch.series.filter((s) => s.brandCode === currentBrandCode)
+            ),
+          ]
+      : currentCatNode
+        ? currentCatNode.parentId
+          ? currentCatNode.series
+          : [
+              ...currentCatNode.series,
+              ...currentCatNode.children.flatMap((ch) => ch.series),
+            ]
+        : [];
 
   function buildUrl(overrides: Record<string, string | undefined>) {
     const params = new URLSearchParams();
@@ -43,7 +82,7 @@ export default function ProductFilters({
     Object.entries(merged).forEach(([k, v]) => {
       if (v) params.set(k, v);
     });
-    return `/products${params.toString() ? `?${params.toString()}` : ""}`;
+    return `/${locale}/products${params.toString() ? `?${params.toString()}` : ""}`;
   }
 
   function search() {
@@ -60,127 +99,36 @@ export default function ProductFilters({
     category: isEn ? "Category" : "品类",
     brand: isEn ? "Brand" : "品牌",
     series: isEn ? "Series" : "系列",
+    subCats: isEn ? "Subcategories" : "子分类",
     allBrands: isEn ? "All Brands" : "全部品牌",
     search: isEn ? "Search model/name..." : "搜索型号/名称...",
   };
 
-  function toggleExpand(id: string) {
-    setExpandedCats((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
+  // 在品类树中查找当前选中节点（顶级或子级）
+  function findNode(nodes: CategoryNode[], code: string): CategoryNode | null {
+    for (const n of nodes) {
+      if (n.code === code) return n;
+      const found = findNode(n.children, code);
+      if (found) return found;
+    }
+    return null;
+  }
+  const current = currentCategory ? findNode(topCategories, currentCategory) : undefined;
+
+  // 顶级品类胶囊激活态：当前选中位于该顶级子树内
+  function topActive(c: CategoryNode) {
+    if (!currentCategory) return false;
+    if (c.code === currentCategory) return true;
+    return findNode(c.children, currentCategory) !== null;
   }
 
-  // 渲染分类节点（含系列，默认折叠）
-  function renderCat(c: CategoryNode, depth: number) {
-    const hasSeries = c.series.length > 0;
-    const hasChildren = c.children.length > 0;
-    const isExpanded = expandedCats.has(c.id);
-    const active = currentCategory === c.code;
-    return (
-      <div key={c.id}>
-        <div className="flex items-center">
-          <button
-            type="button"
-            onClick={() => toggleExpand(c.id)}
-            disabled={!hasSeries && !hasChildren}
-            className={`w-4 shrink-0 text-xs text-slate-400 ${hasSeries || hasChildren ? "cursor-pointer hover:text-sky-600" : "cursor-default"}`}
-          >
-            {hasSeries || hasChildren ? (isExpanded ? "▾" : "▸") : ""}
-          </button>
-          <a
-            href={`/${locale}/products?category=${c.code}`}
-            className={`block flex-1 rounded px-1 py-1.5 text-sm ${
-              active ? "bg-sky-50 font-medium text-sky-700" : "text-slate-700 hover:bg-slate-50"
-            }`}
-            style={{ marginLeft: depth * 8 }}
-          >
-            {c.name}
-          </a>
-        </div>
-        {isExpanded && (
-          <div className="ml-3 border-l border-slate-100 pl-2">
-            {c.series.length > 0 && (
-              <div className="space-y-0.5">
-                <a
-                  href={buildUrl({ line: undefined })}
-                  className={`block rounded px-2 py-1 text-xs ${
-                    !currentLine ? "bg-sky-50 font-medium text-sky-700" : "text-slate-400 hover:bg-slate-50"
-                  }`}
-                >
-                  {isEn ? "All Series" : "全部系列"}
-                </a>
-                {c.series.map((s) => (
-                  <a
-                    key={s.id}
-                    href={buildUrl({ line: s.id })}
-                    className={`block rounded px-2 py-1 text-xs ${
-                      currentLine === s.id
-                        ? "bg-sky-50 font-medium text-sky-700"
-                        : "text-slate-600 hover:bg-slate-50"
-                    }`}
-                  >
-                    {s.name}
-                    <span className="ml-1 text-[10px] text-slate-400">({s.count})</span>
-                  </a>
-                ))}
-              </div>
-            )}
-            {c.children.map((ch) => renderCat(ch, depth + 1))}
-          </div>
-        )}
-      </div>
-    );
-  }
+  const chipBase = "rounded-full border px-3 py-1 text-[13px] leading-5 transition-colors";
+  const chipIdle = "border-slate-200 bg-white text-slate-600 hover:border-primary hover:text-primary";
+  const chipActive = "border-primary bg-primary text-white";
 
   return (
-    <aside className="w-full shrink-0 space-y-4 lg:w-64">
-      <div className="rounded-lg border border-slate-200 bg-white p-4">
-        <div className="mb-3 text-sm font-semibold text-slate-800">{labels.category}</div>
-        <div className="space-y-1">
-          <a
-            href={`/${locale}/products`}
-            className={`block rounded px-3 py-1.5 text-sm ${
-              !currentCategory ? "bg-sky-50 font-medium text-sky-700" : "text-slate-600 hover:bg-slate-50"
-            }`}
-          >
-            {labels.allProducts}
-          </a>
-          {topCategories.map((c) => renderCat(c, 0))}
-        </div>
-      </div>
-
-      {/* 品牌 */}
-      <div className="rounded-lg border border-slate-200 bg-white p-4">
-        <div className="mb-3 text-sm font-semibold text-slate-800">{labels.brand}</div>
-        <div className="space-y-1">
-          <a
-            href={buildUrl({ brand: undefined })}
-            className={`block rounded px-3 py-1.5 text-sm ${
-              !currentBrand ? "bg-sky-50 font-medium text-sky-700" : "text-slate-600 hover:bg-slate-50"
-            }`}
-          >
-            {labels.allBrands}
-          </a>
-          {brands.map((b) => (
-            <a
-              key={b.id}
-              href={buildUrl({ brand: b.id })}
-              className={`block rounded px-3 py-1.5 text-sm ${
-                currentBrand === b.id
-                  ? "bg-sky-50 font-medium text-sky-700"
-                  : "text-slate-600 hover:bg-slate-50"
-              }`}
-            >
-              {b.name}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      {/* 搜索 */}
+    <aside className="w-full shrink-0 space-y-4 lg:w-72">
+      {/* 搜索（置于品类上方，支持型号/名称） */}
       <div className="rounded-lg border border-slate-200 bg-white p-4">
         <input
           value={tempQ}
@@ -189,9 +137,103 @@ export default function ProductFilters({
             if (e.key === "Enter") search();
           }}
           placeholder={labels.search}
-          className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-sky-500"
+          className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-primary"
         />
       </div>
+
+      <div className="rounded-lg border border-slate-200 bg-white p-4">
+        <div className="mb-3 text-sm font-semibold text-slate-800">{labels.category}</div>
+
+        {/* 顶级品类胶囊 */}
+        <div className="flex flex-wrap gap-1.5">
+          <a
+            href={buildUrl({ category: undefined, brand: undefined, line: undefined })}
+            className={`${chipBase} ${!currentCategory ? chipActive : chipIdle}`}
+          >
+            {labels.allProducts}
+          </a>
+          {topCategories.map((c) => (
+            <a
+              key={c.id}
+              href={buildUrl({ category: c.code, brand: undefined, line: undefined })}
+              className={`${chipBase} ${topActive(c) ? chipActive : chipIdle}`}
+            >
+              {c.name}
+            </a>
+          ))}
+        </div>
+
+        {/* 选中品类的子分类胶囊 */}
+        {current && current.children.length > 0 && (
+          <div className="mt-3 border-t border-slate-100 pt-3">
+            <div className="mb-1.5 text-xs text-slate-400">{labels.subCats}</div>
+            <div className="flex flex-wrap gap-1.5">
+              {current.children.map((ch) => (
+                <a
+                  key={ch.id}
+                  href={buildUrl({ category: ch.code, brand: undefined, line: undefined })}
+                  className={`${chipBase} ${
+                    currentCategory === ch.code ? chipActive : chipIdle
+                  }`}
+                >
+                  {ch.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* 品牌（胶囊流式布局，位于系列之前） */}
+      <div className="rounded-lg border border-slate-200 bg-white p-4">
+        <div className="mb-3 text-sm font-semibold text-slate-800">{labels.brand}</div>
+        <div className="flex flex-wrap gap-1.5">
+          <a
+            href={buildUrl({ brand: undefined })}
+            className={`${chipBase} ${
+              !currentBrand ? chipActive : chipIdle
+            }`}
+          >
+            {labels.allBrands}
+          </a>
+          {visibleBrands.map((b) => (
+            <a
+              key={b.id}
+              href={buildUrl({ brand: b.id, line: undefined })}
+              className={`${chipBase} ${
+                currentBrand === b.id ? chipActive : chipIdle
+              }`}
+            >
+              {b.name}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* 选中品类的系列胶囊（位于品牌之后，随品牌联动） */}
+      {currentCatNode && seriesInScope.length > 0 && (
+        <div className="rounded-lg border border-slate-200 bg-white p-4">
+          <div className="mb-3 text-sm font-semibold text-slate-800">{labels.series}</div>
+          <div className="flex flex-wrap gap-1.5">
+            <a
+              href={buildUrl({ line: undefined })}
+              className={`${chipBase} ${!currentLine ? chipActive : chipIdle}`}
+            >
+              {isEn ? "All Series" : "全部系列"}
+            </a>
+            {seriesInScope.map((s) => (
+              <a
+                key={s.id}
+                href={buildUrl({ line: s.id })}
+                className={`${chipBase} ${currentLine === s.id ? chipActive : chipIdle}`}
+              >
+                {s.name}
+                <span className="ml-1 opacity-70">({s.count})</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </aside>
   );
 }

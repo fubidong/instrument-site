@@ -71,8 +71,8 @@ function SeriesExplorer({
               onClick={() => setCat(t.slug)}
               className={`flex items-center gap-1.5 whitespace-nowrap rounded-full border px-4 py-1.5 text-sm transition ${
                 active
-                  ? "border-sky-600 bg-sky-600 text-white shadow"
-                  : "border-slate-200 bg-white text-slate-600 hover:border-sky-300 hover:text-sky-600"
+                  ? "border-[var(--primary)] bg-[var(--primary)] text-white"
+                  : "border-slate-200 bg-white text-slate-600 hover:border-[var(--primary)] hover:text-[var(--primary)]"
               }`}
             >
               {t.icon && <span>{t.icon}</span>}

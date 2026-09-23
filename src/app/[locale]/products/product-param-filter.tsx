@@ -119,15 +119,15 @@ export default function ProductParamFilter({
             <button
               type="button"
               onClick={() => setExpanded(!expanded)}
-              className="text-xs text-sky-600 hover:underline"
+              className="text-xs text-primary hover:underline"
             >
               {expanded ? labels.collapse : `${labels.showMore} (${filterDefs.length - 4})`}
             </button>
           )}
           {Object.keys(currentParams).some((k) => k.startsWith("p_")) && (
             <a
-              href={`${basePath}${currentCategory ? `?category=${currentCategory}` : ""}`}
-              className="text-xs text-slate-400 hover:text-sky-600"
+              href={(() => { const p = new URLSearchParams(); if (currentCategory) p.set("category", currentCategory); if (currentBrand) p.set("brand", currentBrand); if (currentLine) p.set("line", currentLine); const s = p.toString(); return `${basePath}${s ? `?${s}` : ""}`; })()}
+              className="text-xs text-slate-400 hover:text-primary"
             >
               {isEn ? "Clear" : "清除"}
             </a>
@@ -175,8 +175,8 @@ export default function ProductParamFilter({
                         onClick={() => push({ [`p_${def.key}`]: active ? undefined : o.value })}
                         className={`cursor-pointer rounded-full border px-2 py-0.5 text-[11px] transition ${
                           active
-                            ? "border-sky-500 bg-sky-50 text-sky-700"
-                            : "border-slate-200 bg-white text-slate-600 hover:border-sky-300"
+                            ? "border-primary bg-slate-50 text-primary"
+                            : "border-slate-200 bg-white text-slate-600 hover:border-primary"
                         }`}
                       >
                         {locale === "en" && o.label_en ? o.label_en : o.label_zh}
@@ -219,8 +219,8 @@ export default function ProductParamFilter({
                         key={o.value}
                         className={`cursor-pointer rounded-full border px-2 py-0.5 text-[11px] transition ${
                           checked
-                            ? "border-sky-500 bg-sky-50 text-sky-700"
-                            : "border-slate-200 bg-white text-slate-600 hover:border-sky-300"
+                            ? "border-primary bg-slate-50 text-primary"
+                            : "border-slate-200 bg-white text-slate-600 hover:border-primary"
                         }`}
                       >
                         <input
@@ -242,7 +242,7 @@ export default function ProductParamFilter({
                     type="checkbox"
                     defaultChecked={currentParams[`p_${def.key}`] === "1"}
                     onChange={(e) => push({ [`p_${def.key}`]: e.target.checked ? "1" : undefined })}
-                    className="h-3.5 w-3.5 accent-sky-600"
+                    className="h-3.5 w-3.5 accent-primary"
                   />
                   {labels.support}
                 </label>
@@ -303,7 +303,7 @@ function SliderFilter({
 
   return (
     <div>
-      <div className="mb-1 text-center text-sm font-semibold text-sky-700">
+      <div className="mb-1 text-center text-sm font-semibold text-primary">
         {isLimited ? steps[idx].value : (isEn ? "Any" : "不限")}
       </div>
       <input
@@ -313,7 +313,7 @@ function SliderFilter({
         step={1}
         value={idx}
         onChange={handleChange}
-        className="w-full accent-sky-600"
+        className="w-full accent-primary"
       />
       <div className="mt-0.5 flex justify-between text-[10px] text-slate-400">
         <span>{steps[0].value}</span>
@@ -329,7 +329,7 @@ function SliderFilter({
               if (timer.current) clearTimeout(timer.current);
               onCommit(null);
             }}
-            className="text-sky-600 hover:underline"
+            className="text-primary hover:underline"
           >
             {isEn ? "Reset" : "重置"}
           </button>

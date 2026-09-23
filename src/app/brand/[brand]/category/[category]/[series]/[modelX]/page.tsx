@@ -14,9 +14,9 @@ import CompareBar from "@/components/compare-bar";
 export default async function BrandModelPage({
   params,
 }: {
-  params: Promise<{ brand: string; category: string; series: string; model: string }>;
+  params: Promise<{ brand: string; category: string; series: string; modelX: string }>;
 }) {
-  const { brand: brandCode, category: catCode, series: seriesCode, model: modelName } = await params;
+  const { brand: brandCode, category: catCode, series: seriesCode, modelX: modelName } = await params;
   const locale = await getBrandLocale();
   setRequestLocale(locale);
   const isEn = locale === "en";
@@ -25,6 +25,8 @@ export default async function BrandModelPage({
   if (!brand || !brand.isActive) notFound();
   const brandName = brand.name[locale]?.name ?? brand.name["zh"]?.name ?? brand.code;
   const base = brandPath(brand.code, locale);
+  /** 国仪量子官网风格布局（左图右文大标题+整宽特性块），不影响其他品牌 */
+  const isCiq = brand.code === "CIQTEK";
 
   const categories = await getBrandCategories(brand.id, locale);
   const cat = categories.find((c) => c.code.toLowerCase() === catCode.toLowerCase());
@@ -65,16 +67,21 @@ export default async function BrandModelPage({
   const allDocs = [...(productMeta?.documents ?? []), ...(productMeta?.productLine?.documents ?? [])];
   const seen = new Set<string>();
   const mergedDocs = allDocs.filter((d) => {
-    const k = d.title + "|" + d.filePath;
+    // 去重 key 含语言：同一文件的中/英文两条（同标题同路径不同语言）需同时保留
+    const k = d.title + "|" + d.filePath + "|" + (d.language || "");
     if (seen.has(k)) return false;
     seen.add(k);
     return true;
   });
-  // 产品规格手册 PDF：优先产品级自选规格书（后台"产品规格书"），无则回退系列 datasheet
-  const productDsPdfs = (productMeta?.documents ?? []).filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
-  const dsPdfs = mergedDocs.filter((d) => d.docType === "datasheet" && /\.pdf$/i.test(d.filePath));
+  // 产品规格手册 PDF：数据手册 + 产品单页(quick_guide)，优先产品级自选规格书，无则回退系列；按当前语言过滤
+  const langDoc = (d: any) => !d.language || d.language === (isEn ? "en" : "zh");
+  const specDoc = (d: any) => (d.docType === "datasheet" || d.docType === "quick_guide") && /\.pdf$/i.test(d.filePath) && langDoc(d);
+  const productDsPdfs = (productMeta?.documents ?? []).filter(specDoc);
+  const dsPdfs = mergedDocs.filter(specDoc);
   const pdfSource = productDsPdfs.length > 0 ? productDsPdfs : dsPdfs;
-  const pdfs = (pdfSource.length > 0 ? pdfSource : mergedDocs.filter((d) => /\.pdf$/i.test(d.filePath)))
+  // 无规格书/单页时回退：所有 PDF 排除用户手册（保证产品规格有内容但不混入说明书）
+  const fallbackPdfs = mergedDocs.filter((d) => /\.pdf$/i.test(d.filePath) && langDoc(d) && d.docType !== "user_manual");
+  const pdfs = (pdfSource.length > 0 ? pdfSource : fallbackPdfs)
     .sort((a, b) => {
       const rank = (x: any) => (/^https?:\/\//i.test(x.filePath) ? 1 : 0);
       return rank(a) - rank(b);
@@ -84,8 +91,9 @@ export default async function BrandModelPage({
   const normKey2 = (s: string) => s.toLowerCase().replace(/[\s\-_/+]/g, "");
   const downloads = mergedDocs
     .filter((d) => {
-      if (!["datasheet", "programming_manual", "user_manual", "application_note"].includes(d.docType)) return false;
-      if (d.docType === "user_manual") return normKey2(d.title).includes(normKey2(lineCode2));
+      if (!["datasheet", "quick_guide", "programming_manual", "user_manual", "application_note", "service_manual"].includes(d.docType)) return false;
+      if (!langDoc(d)) return false;
+      if (d.docType === "user_manual" && !d.productId) return normKey2(d.title).includes(normKey2(lineCode2));
       return true;
     })
     .sort((a, b) => (a.docType === "datasheet" ? -1 : 0) - (b.docType === "datasheet" ? -1 : 0))
@@ -187,11 +195,13 @@ export default async function BrandModelPage({
       ? [{ groupName: isEn ? "Specifications" : "技术参数", items: specLines.map((r: any) => ({ name: r.name, value: r.value })) }]
       : [];
 
-  // 品类自定义选项卡
-  const customTabs = productTabs.map((tab) => {
-    const tr = tab.translations.find((x) => x.locale === locale) ?? tab.translations.find((x) => x.locale === "zh");
-    return { code: tab.code, title: tr?.title ?? tab.code, content: filterTabContentBySeries(tr?.content ?? "", product.series) };
-  });
+  // 品类自定义选项卡（按型号/系列过滤内容；无匹配内容则不显示）
+  const customTabs = productTabs
+    .map((tab) => {
+      const tr = tab.translations.find((x) => x.locale === locale) ?? tab.translations.find((x) => x.locale === "zh");
+      return { code: tab.code, title: tr?.title ?? tab.code, content: filterTabContentBySeries(tr?.content ?? "", product.series, product.model) };
+    })
+    .filter((t) => t.content && t.content.trim().length > 0);
 
   const I = {
     intro: isEn ? "Overview" : "产品介绍",
@@ -217,15 +227,26 @@ export default async function BrandModelPage({
       </div>
 
       {/* 顶部两栏：左主图 + 右产品概览 */}
-      <div className="flex flex-col gap-8 md:flex-row">
+      <div className={`flex gap-8 ${isCiq ? "flex-row ciq-model-hero" : "flex-col md:flex-row"}`}>
         {/* 左：主图（580x580） */}
-        <div className="w-full md:w-[580px] md:shrink-0">
+        <div className={isCiq ? "w-[380px] shrink-0 lg:w-[560px]" : "w-full md:w-[580px] md:shrink-0"}>
           <ProductGallery
             coverImage={product.coverImage}
             images={product.images}
             alt={product.model}
             noImageText={isEn ? "No image" : "无图"}
           />
+          {/* 品牌专属：主图下方型号对应文案（国仪量子整宽展示在下方，其他品牌保持主图下方） */}
+          {!isCiq &&
+            (() => {
+              const feat = (pt as any)?.features ?? null;
+              if (!feat || !feat.trim()) return null;
+              return (
+                <div className="mt-6">
+                  <div className="ciq-features" dangerouslySetInnerHTML={{ __html: feat }} />
+                </div>
+              );
+            })()}
         </div>
 
         {/* 右：产品概览（标题/属性标签/简介/关键参数/联系方式/按钮组） */}
@@ -244,8 +265,21 @@ export default async function BrandModelPage({
           productModel={product.model}
           productName={pt?.name ?? product.model}
           isSampleEnabled={isSampleEnabled}
+          compact={isCiq}
         />
       </div>
+
+      {/* 国仪量子：整宽特性块（官网风格：主图下方型号对应文案） */}
+      {isCiq &&
+        (() => {
+          const feat = (pt as any)?.features ?? null;
+          if (!feat || !feat.trim()) return null;
+          return (
+            <div className="mt-8">
+              <div className="ciq-features-wide" dangerouslySetInnerHTML={{ __html: feat }} />
+            </div>
+          );
+        })()}
 
       {/* 选项卡：产品介绍 / 技术参数 / 产品选型 / 产品规格手册 / 品类自定义 */}
       <div className="mt-10">
@@ -257,7 +291,8 @@ export default async function BrandModelPage({
           pdfs={pdfs}
           downloads={downloads}
           customTabs={customTabs}
-          specsHtml={(pt?.specsOverview ?? "").trim().startsWith("<table") ? (pt?.specsOverview ?? "") : null}
+          specsHtml={/<table[\s>]/i.test(pt?.specsOverview ?? "") ? (pt?.specsOverview ?? "") : null}
+          ciqShell={isCiq}
           labels={{
             intro: I.intro,
             params: I.specs,

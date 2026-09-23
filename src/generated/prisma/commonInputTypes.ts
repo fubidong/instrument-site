@@ -361,6 +361,23 @@ export type EnumPostCategoryWithAggregatesFilter<$PrismaModel = never> = {
   _max?: Prisma.NestedEnumPostCategoryFilter<$PrismaModel>
 }
 
+export type EnumSupportArticleTypeFilter<$PrismaModel = never> = {
+  equals?: $Enums.SupportArticleType | Prisma.EnumSupportArticleTypeFieldRefInput<$PrismaModel>
+  in?: $Enums.SupportArticleType[] | Prisma.ListEnumSupportArticleTypeFieldRefInput<$PrismaModel>
+  notIn?: $Enums.SupportArticleType[] | Prisma.ListEnumSupportArticleTypeFieldRefInput<$PrismaModel>
+  not?: Prisma.NestedEnumSupportArticleTypeFilter<$PrismaModel> | $Enums.SupportArticleType
+}
+
+export type EnumSupportArticleTypeWithAggregatesFilter<$PrismaModel = never> = {
+  equals?: $Enums.SupportArticleType | Prisma.EnumSupportArticleTypeFieldRefInput<$PrismaModel>
+  in?: $Enums.SupportArticleType[] | Prisma.ListEnumSupportArticleTypeFieldRefInput<$PrismaModel>
+  notIn?: $Enums.SupportArticleType[] | Prisma.ListEnumSupportArticleTypeFieldRefInput<$PrismaModel>
+  not?: Prisma.NestedEnumSupportArticleTypeWithAggregatesFilter<$PrismaModel> | $Enums.SupportArticleType
+  _count?: Prisma.NestedIntFilter<$PrismaModel>
+  _min?: Prisma.NestedEnumSupportArticleTypeFilter<$PrismaModel>
+  _max?: Prisma.NestedEnumSupportArticleTypeFilter<$PrismaModel>
+}
+
 export type NestedStringFilter<$PrismaModel = never> = {
   equals?: string | Prisma.StringFieldRefInput<$PrismaModel>
   in?: string[] | Prisma.ListStringFieldRefInput<$PrismaModel>
@@ -708,6 +725,23 @@ export type NestedEnumPostCategoryWithAggregatesFilter<$PrismaModel = never> = {
   _count?: Prisma.NestedIntFilter<$PrismaModel>
   _min?: Prisma.NestedEnumPostCategoryFilter<$PrismaModel>
   _max?: Prisma.NestedEnumPostCategoryFilter<$PrismaModel>
+}
+
+export type NestedEnumSupportArticleTypeFilter<$PrismaModel = never> = {
+  equals?: $Enums.SupportArticleType | Prisma.EnumSupportArticleTypeFieldRefInput<$PrismaModel>
+  in?: $Enums.SupportArticleType[] | Prisma.ListEnumSupportArticleTypeFieldRefInput<$PrismaModel>
+  notIn?: $Enums.SupportArticleType[] | Prisma.ListEnumSupportArticleTypeFieldRefInput<$PrismaModel>
+  not?: Prisma.NestedEnumSupportArticleTypeFilter<$PrismaModel> | $Enums.SupportArticleType
+}
+
+export type NestedEnumSupportArticleTypeWithAggregatesFilter<$PrismaModel = never> = {
+  equals?: $Enums.SupportArticleType | Prisma.EnumSupportArticleTypeFieldRefInput<$PrismaModel>
+  in?: $Enums.SupportArticleType[] | Prisma.ListEnumSupportArticleTypeFieldRefInput<$PrismaModel>
+  notIn?: $Enums.SupportArticleType[] | Prisma.ListEnumSupportArticleTypeFieldRefInput<$PrismaModel>
+  not?: Prisma.NestedEnumSupportArticleTypeWithAggregatesFilter<$PrismaModel> | $Enums.SupportArticleType
+  _count?: Prisma.NestedIntFilter<$PrismaModel>
+  _min?: Prisma.NestedEnumSupportArticleTypeFilter<$PrismaModel>
+  _max?: Prisma.NestedEnumSupportArticleTypeFilter<$PrismaModel>
 }
 
 

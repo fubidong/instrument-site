@@ -50,7 +50,7 @@ export default function ShareFavorites({
   }
 
   const btn =
-    "inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-300 bg-white text-slate-500 transition hover:border-sky-400 hover:text-sky-600";
+    "inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-300 bg-white text-slate-500 transition hover:border-primary hover:text-primary";
 
   return (
     <div className="flex items-center gap-2">

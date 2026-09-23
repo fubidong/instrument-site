@@ -26,6 +26,7 @@ export const getSiteSettings = cache(async (locale: string = "zh") => {
     email: map["contact_email"] || "",
     address: map["contact_address"] || "",
     companyIntro: map[`company_intro:${locale}`] || map["company_intro"] || map["company_intro:zh"] || "",
+    homeBanners: map["home_banners"] ? JSON.parse(map["home_banners"]) : [],
   };
 });
 

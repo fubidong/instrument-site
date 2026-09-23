@@ -17,6 +17,10 @@ export default async function SettingsPage() {
     address: val(rows, "contact_address", null),
     introZh: val(rows, "company_intro", "zh"),
     introEn: val(rows, "company_intro", "en"),
+    logo: val(rows, "site_logo", null),
+    favicon: val(rows, "site_favicon", null),
+    footerZh: val(rows, "footer_text", "zh"),
+    footerEn: val(rows, "footer_text", "en"),
   };
 
   return (

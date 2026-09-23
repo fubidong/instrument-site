@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
@@ -8,6 +9,7 @@ import { routing } from "@/i18n/routing";
 import BrandCategoryTree, { type BrandCatNode } from "../brand-filter";
 import ProductParamFilter from "../../products/product-param-filter";
 import ProductGrid from "../../products/product-grid";
+import { ArrowRight, ShieldCheck, BadgeCheck, ArrowUpRight } from "lucide-react";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -74,9 +76,9 @@ export default async function BrandDetailPage({
   const brandName = bt[locale]?.name ?? bt["zh"]?.name ?? brand.code;
   const basePath = `/brands/${brand.code}`;
 
-  // 品牌分类树（含系列统计）
+  // 品牌分类树（含系列统计）——仅启用中的分类
   const cats = await db.category.findMany({
-    where: { brandId: brand.id },
+    where: { brandId: brand.id, showInNav: true },
     include: {
       translations: true,
       productLines: {
@@ -149,8 +151,8 @@ export default async function BrandDetailPage({
     }
     return null;
   };
-  const categoryCode = sp.category && findNode(categoryTree, sp.category) ? sp.category : categoryTree[0]?.code;
-  const currentTop = findNode(categoryTree, categoryCode) ?? categoryTree[0];
+  const categoryCode = sp.category && findNode(categoryTree, sp.category) ? sp.category : (categoryTree.find((n) => n.count > 0) ?? categoryTree[0])?.code;
+  const currentTop = findNode(categoryTree, categoryCode) ?? categoryTree.find((n) => n.count > 0) ?? categoryTree[0];
   const catScope = new Set<string>();
   const collectScope = (c: BrandCatNode) => {
     catScope.add(c.id);
@@ -285,57 +287,122 @@ export default async function BrandDetailPage({
     .sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0) || a.model.localeCompare(b.model))
     .slice(0, 100);
 
+  const brandDesc = bt[locale]?.description || bt["zh"]?.description || "";
+  const trustBadges = [
+    { icon: ShieldCheck, label: isEn ? "Authorized Partner" : "授权代理" },
+    { icon: BadgeCheck, label: isEn ? "Genuine Products" : "原厂正品" },
+  ];
+
   return (
-    <div className="mx-auto max-w-7xl px-4 py-10">
-      <div className="mb-6 text-sm text-slate-500">
-        <Link href="/" className="hover:text-sky-600">
+    <div className="ui-wrap py-10 sm:py-14">
+      {/* 面包屑 */}
+      <div className="mb-6 flex flex-wrap items-center gap-1 font-mono text-sm text-[var(--ui-mute)]">
+        <Link href="/" className="transition-colors hover:text-[var(--primary)]">
           {isEn ? "Home" : "首页"}
         </Link>
-        <span className="mx-2">/</span>
-        <Link href="/brands" className="hover:text-sky-600">
+        <span className="mx-1">/</span>
+        <Link href="/brands" className="transition-colors hover:text-[var(--primary)]">
           {isEn ? "Brands" : "代理品牌"}
         </Link>
-        <span className="mx-2">/</span>
-        <span className="text-slate-800">{brandName}</span>
+        <span className="mx-1">/</span>
+        <span className="break-words text-[var(--ui-ink)]">{brandName}</span>
       </div>
 
-      <div className="rounded-lg border border-slate-200 bg-white p-8">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
+      {/* 品牌头部：logo + 定位 + 信任徽章 + CTA */}
+      <div className="ui-card ui-card-pad">
+        <div className="flex flex-wrap items-start justify-between gap-6">
+          <div className="flex min-w-0 items-center gap-5">
             {brand.logo && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={brand.logo} alt={brandName} className="h-16 object-contain" />
+              <div className="relative h-16 w-24 shrink-0">
+                <Image
+                  src={brand.logo}
+                  alt={brandName}
+                  fill
+                  sizes="96px"
+                  unoptimized
+                  className="object-contain"
+                />
+              </div>
             )}
-            <div>
-              <h1 className="text-2xl font-bold text-slate-900">{brandName}</h1>
-              <div className="text-sm text-slate-400">
+            <div className="min-w-0">
+              <div className="text-[11px] uppercase tracking-[0.15em] text-[var(--ui-mute)]">
+                {brand.code}
+              </div>
+              <h1 className="mt-1.5 break-words text-2xl font-bold tracking-tight text-[var(--ui-ink)] sm:text-3xl">
+                {brandName}
+              </h1>
+              <div className="mt-1 break-words text-sm text-[var(--ui-mute)]">
                 {bt["en"]?.name ?? ""}
                 {brand.website && (
                   <a
                     href={brand.website}
                     target="_blank"
                     rel="noreferrer"
-                    className="ml-3 text-sky-600 hover:underline"
+                    className="ml-3 inline-flex items-center gap-0.5 text-[var(--primary)] transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
                   >
-                    {isEn ? "Official Site" : "访问官网"} ↗
+                    {isEn ? "Official Site" : "访问官网"}
+                    <ArrowUpRight className="h-3.5 w-3.5" />
                   </a>
                 )}
               </div>
             </div>
           </div>
-          <Link
-            href="/contact"
-            className="rounded-md bg-sky-600 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-500"
-          >
-            {isEn ? `Get ${brandName} Quote` : `获取 ${brandName} 产品报价`}
-          </Link>
+
+          <div className="flex shrink-0 flex-wrap items-center gap-2.5">
+            <a href="#products" className="ui-btn-primary">
+              {isEn ? "Browse Products" : "浏览产品"}
+              <ArrowRight className="h-4 w-4" />
+            </a>
+            <Link href="/contact" className="ui-btn-ghost">
+              {isEn ? "Get Quote" : "获取报价"}
+            </Link>
+          </div>
         </div>
-        {bt[locale]?.description && (
-          <p className="mt-4 text-sm leading-6 text-slate-600">{bt[locale].description}</p>
+
+        {brandDesc && (
+          <p className="mt-5 max-w-3xl text-sm leading-7 text-[var(--ui-mute)]">{brandDesc}</p>
         )}
+
+        <div className="mt-5 flex flex-wrap gap-2.5">
+          {trustBadges.map(({ icon: Icon, label }) => (
+            <span key={label} className="ui-badge ui-badge-trust">
+              <Icon className="h-3.5 w-3.5" strokeWidth={2} />
+              {label}
+            </span>
+          ))}
+          <span className="ui-badge border-[var(--ui-line)] text-[var(--ui-mute)]">
+            <span className="font-medium text-[var(--ui-ink)]">{productsAll.length}</span>{" "}
+            {isEn ? "active products" : "款在售产品"}
+          </span>
+        </div>
       </div>
 
-      <div className="mt-8 flex flex-col gap-6 lg:flex-row">
+      {/* 核心品类概览网格 */}
+      {categoryTree.length > 0 && (
+        <section className="mt-10">
+          <h2 className="ui-h3">{isEn ? "Core Categories" : "核心品类"}</h2>
+          <div className="mt-4 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-[var(--ui-line)] bg-[var(--ui-line)] sm:grid-cols-2 lg:grid-cols-3">
+            {categoryTree.map((node) => (
+              <Link
+                key={node.id}
+                href={`${basePath}?category=${node.code}`}
+                className="group flex items-center justify-between gap-4 bg-white p-5 transition-colors duration-200 hover:bg-[var(--ui-sunken)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[var(--primary)]"
+              >
+                <div className="min-w-0">
+                  <div className="truncate font-medium text-[var(--ui-ink)]">{node.name}</div>
+                  <div className="mt-1 text-xs text-[var(--ui-mute)]">
+                    <span>{node.count}</span>{" "}
+                    {isEn ? "products" : "款"}
+                  </div>
+                </div>
+                <ArrowRight className="h-4 w-4 shrink-0 text-[var(--ui-mute)] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-[var(--primary)]" />
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <div className="mt-10 flex flex-col gap-6 lg:flex-row">
         {/* 左：品类 → 系列 联动折叠树 */}
         <BrandCategoryTree
           categories={categoryTree}
@@ -346,7 +413,7 @@ export default async function BrandDetailPage({
         />
 
         {/* 右：重要指标筛选 + 产品 */}
-        <div className="flex-1">
+        <div className="flex-1" id="products">
           <ProductParamFilter
             locale={locale}
             filterDefs={filterDefs.map((d) => ({
@@ -367,16 +434,16 @@ export default async function BrandDetailPage({
             basePath={basePath}
           />
           <div className="mb-4 flex items-center justify-between gap-3">
-            <h1 className="text-xl font-bold text-slate-900">
+            <h2 className="min-w-0 break-words text-xl font-bold text-[var(--ui-ink)]">
               {currentTop?.name ?? brandName}
-              <span className="ml-2 text-sm font-normal text-slate-400">
+              <span className="ml-2 text-sm font-normal text-[var(--ui-mute)]">
                 {isEn ? `Total ${products.length}` : `共 ${products.length} 款`}
               </span>
-            </h1>
+            </h2>
             {filters.length > 0 && (
               <Link
                 href={`${basePath}?category=${currentTop?.code ?? ""}`}
-                className="text-sm text-sky-600 hover:underline"
+                className="shrink-0 text-sm text-[var(--primary)] transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
               >
                 {isEn ? "Clear Filters" : "清除参数筛选"}
               </Link>

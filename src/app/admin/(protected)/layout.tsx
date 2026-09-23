@@ -12,8 +12,11 @@ const navItems: NavItem[] = [
   { href: "/admin/products", label: "产品管理", icon: "📦" },
   { href: "/admin/params", label: "参数模板", icon: "⚙" },
   { href: "/admin/documents", label: "资料管理", icon: "📄" },
+  { href: "/admin/support-articles", label: "支持中心", icon: "💬" },
   { href: "/admin/media", label: "素材库", icon: "🖼" },
   { href: "/admin/posts", label: "内容管理", icon: "📝" },
+  { href: "/admin/catalog", label: "产品目录", icon: "📚" },
+  { href: "/admin/home-config", label: "首页配置", icon: "🎨" },
   { href: "/admin/settings", label: "站点设置", icon: "🔧" },
   { href: "/admin/login-log", label: "登录日志", icon: "📋" },
 ];

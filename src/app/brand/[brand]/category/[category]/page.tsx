@@ -21,7 +21,10 @@ export default async function BrandCategoryPage({
   const base = brandPath(brand.code, locale);
 
   const categories = await getBrandCategories(brand.id, locale);
-  const cat = categories.find((c) => c.code.toLowerCase() === catCode.toLowerCase());
+  const slugOf = (code: string) => code.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  const cat = categories.find(
+    (c) => slugOf(c.code) === catCode.toLowerCase() || c.code.toLowerCase() === catCode.toLowerCase()
+  );
   if (!cat) notFound();
 
   const subCats = categories.filter((c) => c.parentId === cat.id);
@@ -46,7 +49,7 @@ export default async function BrandCategoryPage({
         <span className="mx-2">/</span>
         {parentCat && (
           <>
-            <Link href={`${base}/category/${parentCat.code.toLowerCase()}`} className="hover:text-sky-600">
+            <Link href={`${base}/category/${slugOf(parentCat.code)}`} className="hover:text-sky-600">
               {parentCat.name}
             </Link>
             <span className="mx-2">/</span>
@@ -66,7 +69,7 @@ export default async function BrandCategoryPage({
             return (
               <Link
                 key={s.id}
-                href={`${base}/category/${s.code.toLowerCase()}`}
+                href={`${base}/category/${slugOf(s.code)}`}
                 className={`rounded-md px-3 py-1.5 text-sm ${
                   active
                     ? "bg-sky-600 font-semibold text-white"
@@ -99,7 +102,7 @@ export default async function BrandCategoryPage({
               </div>
               {series.models.length > 0 && (
                 <Link
-                  href={`${base}/category/${cat.code.toLowerCase()}/${encodeURIComponent(series.code)}`}
+                  href={`${base}/category/${slugOf(cat.code)}/${encodeURIComponent(series.code)}`}
                   className="rounded-md bg-sky-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-sky-500"
                 >
                   {I.allModels}
@@ -120,7 +123,7 @@ export default async function BrandCategoryPage({
                       {series.models.map((m) => (
                         <td key={m.id} className="min-w-[130px] border-r border-slate-50 px-3 py-2 text-center align-top">
                           <Link
-                            href={`${base}/category/${cat.code.toLowerCase()}/${encodeURIComponent(series.code)}/${encodeURIComponent(m.model)}`}
+                            href={`${base}/category/${slugOf(cat.code)}/${encodeURIComponent(series.code)}/${encodeURIComponent(m.model)}`}
                             className="block"
                           >
                             {m.coverImage ? (

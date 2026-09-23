@@ -52,6 +52,8 @@ export const AnyNull = runtime.AnyNull
 
 export const ModelName = {
   Brand: 'Brand',
+  CatalogTag: 'CatalogTag',
+  CompanyInfo: 'CompanyInfo',
   BrandTranslation: 'BrandTranslation',
   Category: 'Category',
   CategoryTranslation: 'CategoryTranslation',
@@ -70,6 +72,10 @@ export const ModelName = {
   Inquiry: 'Inquiry',
   Post: 'Post',
   PostTranslation: 'PostTranslation',
+  SupportArticle: 'SupportArticle',
+  SupportArticlePdf: 'SupportArticlePdf',
+  SupportArticleProduct: 'SupportArticleProduct',
+  SupportArticleTranslation: 'SupportArticleTranslation',
   AdminUser: 'AdminUser',
   LoginLog: 'LoginLog',
   NavMenu: 'NavMenu',
@@ -105,10 +111,34 @@ export const BrandScalarFieldEnum = {
   sortOrder: 'sortOrder',
   isActive: 'isActive',
   createdAt: 'createdAt',
-  updatedAt: 'updatedAt'
+  updatedAt: 'updatedAt',
+  tags: 'tags'
 } as const
 
 export type BrandScalarFieldEnum = (typeof BrandScalarFieldEnum)[keyof typeof BrandScalarFieldEnum]
+
+
+export const CatalogTagScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  color: 'color',
+  sortOrder: 'sortOrder',
+  isActive: 'isActive',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type CatalogTagScalarFieldEnum = (typeof CatalogTagScalarFieldEnum)[keyof typeof CatalogTagScalarFieldEnum]
+
+
+export const CompanyInfoScalarFieldEnum = {
+  id: 'id',
+  key: 'key',
+  value: 'value',
+  updatedAt: 'updatedAt'
+} as const
+
+export type CompanyInfoScalarFieldEnum = (typeof CompanyInfoScalarFieldEnum)[keyof typeof CompanyInfoScalarFieldEnum]
 
 
 export const BrandTranslationScalarFieldEnum = {
@@ -211,7 +241,8 @@ export const ProductTranslationScalarFieldEnum = {
   summary: 'summary',
   description: 'description',
   specsOverview: 'specsOverview',
-  selection: 'selection'
+  selection: 'selection',
+  features: 'features'
 } as const
 
 export type ProductTranslationScalarFieldEnum = (typeof ProductTranslationScalarFieldEnum)[keyof typeof ProductTranslationScalarFieldEnum]
@@ -372,6 +403,53 @@ export const PostTranslationScalarFieldEnum = {
 } as const
 
 export type PostTranslationScalarFieldEnum = (typeof PostTranslationScalarFieldEnum)[keyof typeof PostTranslationScalarFieldEnum]
+
+
+export const SupportArticleScalarFieldEnum = {
+  id: 'id',
+  type: 'type',
+  brandId: 'brandId',
+  coverImage: 'coverImage',
+  sourceUrl: 'sourceUrl',
+  isPublished: 'isPublished',
+  publishedAt: 'publishedAt',
+  sortOrder: 'sortOrder',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type SupportArticleScalarFieldEnum = (typeof SupportArticleScalarFieldEnum)[keyof typeof SupportArticleScalarFieldEnum]
+
+
+export const SupportArticlePdfScalarFieldEnum = {
+  id: 'id',
+  articleId: 'articleId',
+  pdfAssetId: 'pdfAssetId',
+  pdfMode: 'pdfMode'
+} as const
+
+export type SupportArticlePdfScalarFieldEnum = (typeof SupportArticlePdfScalarFieldEnum)[keyof typeof SupportArticlePdfScalarFieldEnum]
+
+
+export const SupportArticleProductScalarFieldEnum = {
+  id: 'id',
+  articleId: 'articleId',
+  productId: 'productId'
+} as const
+
+export type SupportArticleProductScalarFieldEnum = (typeof SupportArticleProductScalarFieldEnum)[keyof typeof SupportArticleProductScalarFieldEnum]
+
+
+export const SupportArticleTranslationScalarFieldEnum = {
+  id: 'id',
+  articleId: 'articleId',
+  locale: 'locale',
+  title: 'title',
+  summary: 'summary',
+  content: 'content'
+} as const
+
+export type SupportArticleTranslationScalarFieldEnum = (typeof SupportArticleTranslationScalarFieldEnum)[keyof typeof SupportArticleTranslationScalarFieldEnum]
 
 
 export const AdminUserScalarFieldEnum = {

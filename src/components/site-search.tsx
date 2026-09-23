@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { Search, X } from "lucide-react";
 
 type SearchItem = {
   model: string;
@@ -80,17 +81,14 @@ export default function SiteSearch({ locale, isEn }: { locale: string; isEn: boo
   const placeholder = isEn ? "Search model..." : "搜索型号...";
 
   return (
-    <div ref={wrapRef} className="relative w-44 lg:w-60">
-      <div className="relative">
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={1.8}
-          className="pointer-events-none absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-        </svg>
+    <div ref={wrapRef} className="relative w-48 lg:w-64">
+      <div className="relative flex h-9 items-center">
+        <Search
+          width={15}
+          height={15}
+          aria-hidden="true"
+          className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400"
+        />
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
@@ -99,7 +97,7 @@ export default function SiteSearch({ locale, isEn }: { locale: string; isEn: boo
             if (e.key === "Enter" && q.trim()) submit(q);
           }}
           placeholder={placeholder}
-          className="w-full rounded-full border border-slate-200 bg-slate-50 py-1.5 pl-8 pr-3 text-sm text-slate-700 outline-none transition focus:border-sky-400 focus:bg-white focus:ring-2 focus:ring-sky-100"
+          className="h-9 w-full rounded-md border border-slate-200 bg-white pl-8 pr-8 text-sm text-slate-700 outline-none transition-colors placeholder:text-slate-400 focus:border-primary focus:ring-2 focus:ring-primary/30"
         />
         {q && (
           <button
@@ -109,18 +107,16 @@ export default function SiteSearch({ locale, isEn }: { locale: string; isEn: boo
               setItems([]);
               setOpen(false);
             }}
-            className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-0.5 text-slate-400 transition-colors hover:text-slate-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
             aria-label="clear"
           >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-3.5 w-3.5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
+            <X width={14} height={14} />
           </button>
         )}
       </div>
 
       {open && q.trim() && (
-        <div className="absolute left-0 right-0 top-full z-50 mt-1.5 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg">
+        <div className="absolute left-0 right-0 top-full z-50 mt-1.5 overflow-hidden rounded-lg border border-slate-200 bg-white shadow-lg">
           {loading ? (
             <div className="px-4 py-3 text-sm text-slate-400">
               {isEn ? "Searching..." : "搜索中..."}
@@ -141,7 +137,7 @@ export default function SiteSearch({ locale, isEn }: { locale: string; isEn: boo
                     key={it.model}
                     type="button"
                     onClick={() => goModel(it.model)}
-                    className="flex w-full items-center gap-3 px-3 py-2 text-left transition hover:bg-sky-50"
+                    className="flex w-full items-center gap-3 px-3 py-2 text-left transition hover:bg-slate-50"
                   >
                     {it.coverImage ? (
                       // eslint-disable-next-line @next/next/no-img-element
@@ -161,7 +157,7 @@ export default function SiteSearch({ locale, isEn }: { locale: string; isEn: boo
               <button
                 type="button"
                 onClick={() => submit(q)}
-                className="block w-full border-t border-slate-100 bg-slate-50 px-4 py-2 text-center text-xs text-sky-600 hover:bg-sky-50"
+                className="block w-full border-t border-slate-100 bg-slate-50 px-4 py-2 text-center text-xs text-primary hover:bg-slate-50"
               >
                 {isEn ? `View all results for "${q}"` : `查看 "${q}" 的全部结果`}
               </button>

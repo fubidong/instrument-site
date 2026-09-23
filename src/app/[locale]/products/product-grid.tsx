@@ -105,43 +105,40 @@ export default function ProductGrid({
           return (
             <div
               key={p.id}
-              className={`group relative overflow-hidden rounded-lg border bg-white transition hover:shadow-md ${
-                isSelected ? "border-sky-400 ring-2 ring-sky-200" : "border-slate-200 hover:border-sky-300"
+              className={`group relative overflow-hidden border border-slate-200 bg-white transition-all hover:border-slate-300 hover:shadow-sm ${
+                isSelected ? "border-primary ring-1 ring-primary" : ""
               }`}
             >
               <Link
                 href={`/products/${encodeURIComponent(p.model)}`}
                 className="block"
               >
-                <div className="relative">
+                <div className="relative bg-gradient-to-b from-slate-50 to-white">
                   {p.coverImage ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={p.coverImage}
                       alt={pt[locale]?.name ?? pt["zh"]?.name ?? p.model}
-                      className="h-40 w-full bg-white object-contain"
+                      className="h-44 w-full object-contain p-4 transition-transform group-hover:scale-[1.02]"
                     />
                   ) : (
-                    <div className="flex h-40 w-full items-center justify-center bg-slate-50 text-slate-300">
+                    <div className="flex h-44 w-full items-center justify-center text-slate-300">
                       {L.noImage}
                     </div>
                   )}
                   {p.isFeatured && (
-                    <span className="absolute left-2 top-2 rounded bg-rose-500 px-1.5 py-0.5 text-xs font-medium text-white">
+                    <span className="absolute left-3 top-3 border border-slate-200 bg-white/90 px-2 py-0.5 text-xs font-medium text-slate-600">
                       {L.featured}
                     </span>
                   )}
                 </div>
-                <div className="p-4">
-                  <div className="font-mono text-base font-bold text-slate-900">{p.model}</div>
-                  <div className="mt-0.5 text-sm text-slate-600">
+                <div className="border-t border-slate-100 p-4">
+                  <div className="text-base font-semibold text-slate-900">{p.model}</div>
+                  <div className="mt-1 text-sm text-slate-600">
                     {pt[locale]?.name ?? pt["zh"]?.name}
                   </div>
                   <div className="mt-2 text-xs text-slate-400">
-                    {bt[locale]?.name ?? bt["zh"]?.name ?? ""} · {p.productLine.code}
-                  </div>
-                  <div className="mt-3 text-sm font-medium text-sky-600 group-hover:text-sky-700">
-                    {L.viewDetail} →
+                    {bt[locale]?.name ?? bt["zh"]?.name ?? ""}
                   </div>
                 </div>
               </Link>
@@ -156,8 +153,8 @@ export default function ProductGrid({
                 aria-pressed={isSelected}
                 className={`absolute right-2 top-2 flex items-center gap-1 rounded-full border px-2 py-1 text-[11px] font-medium transition ${
                   isSelected
-                    ? "border-sky-500 bg-sky-500 text-white"
-                    : "border-slate-200 bg-white text-slate-500 hover:border-sky-300 hover:text-sky-600"
+                    ? "border-primary bg-primary text-white"
+                    : "border-slate-200 bg-white text-slate-500 hover:border-primary hover:text-primary"
                 }`}
               >
                 <span
@@ -187,7 +184,7 @@ export default function ProductGrid({
           </span>
           <Link
             href={`/compare?ids=${selected.map((s) => s.id).join(",")}`}
-            className="rounded-full bg-sky-600 px-4 py-1.5 text-sm font-semibold text-white hover:bg-sky-500"
+            className="rounded-full bg-primary px-4 py-1.5 text-sm font-semibold text-white hover:bg-primary-hover"
           >
             {L.toCompare}
           </Link>

@@ -39,15 +39,41 @@ export default function DocumentFilters({
     router.push(`/documents${params.toString() ? `?${params.toString()}` : ""}`);
   }
 
+  const chipBase = "rounded-full border px-3 py-1 text-[13px] leading-5 transition-colors";
+  const chipIdle = "border-slate-200 bg-white text-slate-600 hover:border-sky-300 hover:text-sky-600";
+  const chipActive = "border-sky-600 bg-sky-600 text-white";
+
   return (
-    <div className="mt-6 rounded-lg border border-slate-200 bg-white p-4">
+    <div className="mt-6 space-y-3 rounded-lg border border-slate-200 bg-white p-4">
+      {/* 品牌胶囊（位于全部类型上方） */}
+      <div className="flex flex-wrap items-center gap-2">
+        <button
+          type="button"
+          onClick={() => apply(currentType, undefined, q)}
+          className={`${chipBase} ${!currentBrand ? chipActive : chipIdle}`}
+        >
+          {isEn ? "All Brands" : "全部品牌"}
+        </button>
+        {brands.map((b) => (
+          <button
+            key={b.id}
+            type="button"
+            onClick={() => apply(currentType, b.id, q)}
+            className={`${chipBase} ${
+              currentBrand === b.id ? chipActive : chipIdle
+            }`}
+          >
+            {b.name}
+          </button>
+        ))}
+      </div>
+
+      {/* 类型胶囊 + 搜索（右侧） */}
       <div className="flex flex-wrap items-center gap-2">
         <button
           type="button"
           onClick={() => apply(undefined, currentBrand, q)}
-          className={`rounded-md px-3 py-1.5 text-sm ${
-            !currentType ? "bg-sky-600 text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-          }`}
+          className={`${chipBase} ${!currentType ? chipActive : chipIdle}`}
         >
           {isEn ? "All Types" : "全部类型"}
         </button>
@@ -56,29 +82,13 @@ export default function DocumentFilters({
             key={d.value}
             type="button"
             onClick={() => apply(d.value, currentBrand, q)}
-            className={`rounded-md px-3 py-1.5 text-sm ${
-              currentType === d.value
-                ? "bg-sky-600 text-white"
-                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+            className={`${chipBase} ${
+              currentType === d.value ? chipActive : chipIdle
             }`}
           >
             {docTypeLabels[d.value]}
           </button>
         ))}
-
-        <select
-          value={currentBrand ?? ""}
-          onChange={(e) => apply(currentType, e.target.value || undefined, q)}
-          className="ml-2 rounded-md border border-slate-300 px-2 py-1.5 text-sm"
-        >
-          <option value="">{isEn ? "All Brands" : "全部品牌"}</option>
-          {brands.map((b) => (
-            <option key={b.id} value={b.id}>
-              {b.name}
-            </option>
-          ))}
-        </select>
-
         <div className="ml-auto flex gap-2">
           <input
             value={q}

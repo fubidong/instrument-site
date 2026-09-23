@@ -369,6 +369,7 @@ export default async function ProductsPage({
             currentCategory={categoryCode}
             currentBrand={brandId}
             currentLine={lineId}
+            basePath={`/${locale}/products`}
           />
           <div className="mb-4 flex items-center justify-between gap-3">
             <h1 className="text-xl font-bold text-slate-900">
@@ -388,7 +389,7 @@ export default async function ProductsPage({
               )}
               {filters.length > 0 && (
                 <a
-                  href={`/${locale}/products${categoryCode ? `?category=${categoryCode}` : ""}`}
+                  href={(() => { const p = new URLSearchParams(); if (categoryCode) p.set("category", categoryCode); if (brandId) p.set("brand", brandId); if (lineId) p.set("line", lineId); const s = p.toString(); return `/${locale}/products${s ? `?${s}` : ""}`; })()}
                   className="text-sm text-sky-600 hover:underline"
                 >
                   {I.clearFilter}
